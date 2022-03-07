@@ -1,0 +1,323 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>Annex E Examples - SpatialStructure_3 - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>Annex E Examples - SpatialStructure_3</h1>
+<h2><a id="Example-overview"></a>
+    Example overview
+<a href="SpatialStructure_3.html#Example-overview"><i data-feather="link"></i></a></h2>
+<h2><a id="SpatialStructure-3"></a>SpatialStructure_3<a href="SpatialStructure_3.html#SpatialStructure-3"><i data-feather="link"></i></a></h2>
+<h3><a id="Intent"></a>Intent<a href="SpatialStructure_3.html#Intent"><i data-feather="link"></i></a></h3>
+<p>This UT establishes a simple spatial structure for a level crossing (road/railway).</p>
+<p>It is based on the storyline <a href="https://app.box.com/folder/119147119179?s=q1x0vz7yqq7otrlet7dm2dx4u44s8fks">SLLC-DD</a>.</p>
+<h3><a id="Prerequisites"></a>Prerequisites<a href="SpatialStructure_3.html#Prerequisites"><i data-feather="link"></i></a></h3>
+<p>This scenario builds upon following other scenarios:
+- ProjectSetup_1</p>
+<h3><a id="Content"></a>Content<a href="SpatialStructure_3.html#Content"><i data-feather="link"></i></a></h3>
+<p>This scenario covers the following concepts and/or IFC entities:
+- spatial structure
+  - <code><a href="../lexical/IfcSite.htm">IfcSite</a></code>
+  - <code><a href="../lexical/IfcRailway.htm">IfcRailway</a></code>
+  - <code><a href="../lexical/IfcRoad.htm">IfcRoad</a></code>
+  - <code><a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a></code> with correct <code>PredefinedType</code>
+  - <code><a href="../lexical/IfcRelInterferesElements.htm">IfcRelInterferesElements</a></code></p>
+<h4><a id="Situation"></a>Situation<a href="SpatialStructure_3.html#Situation"><i data-feather="link"></i></a></h4>
+<figure><a id="Figure-020db9be-7185-419a-98cb-c7ae0b1502cf"></a><img alt="" src="http://localhost/IFC/RELEASE/IFC4x3/HTML/annex_e/201%20-%20situation.png"/><figcaption>Figure 020db9be-7185-419a-98cb-c7ae0b1502cf<a href="SpatialStructure_3.html#Figure-020db9be-7185-419a-98cb-c7ae0b1502cf"><i data-feather="link"></i></a></figcaption></figure>
+<h4><a id="Project-Breakdown"></a>Project Breakdown<a href="SpatialStructure_3.html#Project-Breakdown"><i data-feather="link"></i></a></h4>
+<p>To represent the project breakdown for this unit test, we envision the following project structure:</p>
+<ul>
+<li>A. <a href="../lexical/IfcProject.htm">IfcProject</a></li>
+<li>A.a <a href="../lexical/IfcSite.htm">IfcSite</a><ul>
+<li>IfcGeoModel (or similar representing terrain - optional for this unit test)</li>
+<li>A.a.1 <a href="../lexical/IfcRoad.htm">IfcRoad</a></li>
+<li><a href="../lexical/IfcAlignment.htm">IfcAlignment</a> (optional for this unit test)</li>
+<li>A.a.1.1 <a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a><ul>
+<li>PredefinedType*=<a href="../lexical/IfcRoadPartTypeEnum.htm">IfcRoadPartTypeEnum</a>.ROADSEGMENT</li>
+<li>UsageType=LONGITUDINAL</li>
+</ul>
+</li>
+<li>A.a.1.2 <a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a><ul>
+<li>PredefinedType*=<a href="../lexical/IfcFacilityPartCommonTypeEnum.htm">IfcFacilityPartCommonTypeEnum</a>.LEVELCROSSING</li>
+<li>UsageType=LONGITUDINAL</li>
+</ul>
+</li>
+<li>A.a.1.3 <a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a><ul>
+<li>PredefinedType*=<a href="../lexical/IfcRoadPartTypeEnum.htm">IfcRoadPartTypeEnum</a>.ROADSEGMENT</li>
+<li>UsageType=LONGITUDINAL</li>
+</ul>
+</li>
+<li>A.a.2 <a href="../lexical/IfcRailway.htm">IfcRailway</a></li>
+<li><a href="../lexical/IfcAlignment.htm">IfcAlignment</a> (optional for this unit test)</li>
+<li>A.a.2.1 <a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a><ul>
+<li>PredefinedType*=<a href="../lexical/IfcRailwayPartTypeEnum.htm">IfcRailwayPartTypeEnum</a>.TRACKSTUCTUREPART</li>
+<li>UsageType=LONGITUDINAL</li>
+</ul>
+</li>
+<li>A.a.2.2 <a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a><ul>
+<li>PredefinedType*=<a href="../lexical/IfcFacilityPartCommonTypeEnum.htm">IfcFacilityPartCommonTypeEnum</a>.LEVELCROSSING</li>
+<li>UsageType=LONGITUDINAL</li>
+</ul>
+</li>
+<li>A.a.2.3 <a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a><ul>
+<li>PredefinedType*=<a href="../lexical/IfcRailwayPartTypeEnum.htm">IfcRailwayPartTypeEnum</a>.TRACKSTRUCTUREPART</li>
+<li>UsageType=LONGITUDINAL</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="../lexical/IfcRelInterferesElements.htm">IfcRelInterferesElements</a> </li>
+<li>InterferenceType="Crosses"</li>
+<li>RelatingElement=#A.a.1.2</li>
+<li>RelatedElement=#A.a.2.2</li>
+<li>InterferenceGeometry=optional for this unit test</li>
+</ul>
+<p><em>* the PredefinedType enumeration is selected through "IfcFacilityPartTypeSelect"</em>.</p>
+<hr/>
+<h4><a id="Expected-Results"></a>Expected Results<a href="SpatialStructure_3.html#Expected-Results"><i data-feather="link"></i></a></h4>
+<p>The aim of this Unit Test, as explained above, is to test the implementation of the project breakdown through the spatial structure concepts of IFC 4.3.</p>
+<p>As such, the expected results are:</p>
+<ol>
+<li>Screen-shot of the spatial structure breakdown as represented in the native application,</li>
+<li>The resulting IFC file containing the spatial structure requested.</li>
+</ol>
+<p>For example, the application should be able to display something like what is shown in the picture below: </p>
+<figure><a id="Figure-75aceb0f-17aa-4586-9773-13e47b94dedc"></a><img alt="" src="http://localhost/IFC/RELEASE/IFC4x3/HTML/annex_e/202%20-%20result.png"/><figcaption>Figure 75aceb0f-17aa-4586-9773-13e47b94dedc<a href="SpatialStructure_3.html#Figure-75aceb0f-17aa-4586-9773-13e47b94dedc"><i data-feather="link"></i></a></figcaption></figure>
+<h3><a id="Supporting-files"></a>Supporting files<a href="SpatialStructure_3.html#Supporting-files"><i data-feather="link"></i></a></h3>
+<p>Following files correspond to this scenario:</p>
+<figure><a id="Table-92da0799-8c4d-4a6a-9ff6-825c7be29dd3"></a><table>
+<thead>
+<tr>
+<th>Filename</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SpatialStructure_3.ifc</code></td>
+<td>IFC file with the content</td>
+</tr>
+<tr>
+<td><code>Figure 1 - Situation.png</code></td>
+<td>picture showing a map view of the situation</td>
+</tr>
+<tr>
+<td><code>Figure 2 - result.png</code></td>
+<td>picture showing possible result</td>
+</tr>
+<tr>
+<td><code>IFCTreeView.png</code></td>
+<td>picture showing file structure in IFCTreeView</td>
+</tr>
+</tbody>
+</table><figcaption>Table 92da0799-8c4d-4a6a-9ff6-825c7be29dd3<a href="SpatialStructure_3.html#Table-92da0799-8c4d-4a6a-9ff6-825c7be29dd3"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="Images"></a>
+    Images
+<a href="SpatialStructure_3.html#Images"><i data-feather="link"></i></a></h2>
+<ul class="thumbnails">
+<li><figure><a id="Figure-6e51623c-3f12-4ebc-97db-cb97ce9ad6ea"></a><a href="../examples/SpatialStructure_3/Figure&#32;2&#32;-&#32;result.png"><img src="../examples/SpatialStructure_3/Figure&#32;2&#32;-&#32;result.png"/></a><figcaption>Figure 6e51623c-3f12-4ebc-97db-cb97ce9ad6ea<a href="SpatialStructure_3.html#Figure-6e51623c-3f12-4ebc-97db-cb97ce9ad6ea"><i data-feather="link"></i></a></figcaption></figure></li>
+<li><figure><a id="Figure-12634890-c6de-4055-a638-816b860e134a"></a><a href="../examples/SpatialStructure_3/Figure&#32;1&#32;-&#32;situation.png"><img src="../examples/SpatialStructure_3/Figure&#32;1&#32;-&#32;situation.png"/></a><figcaption>Figure 12634890-c6de-4055-a638-816b860e134a<a href="SpatialStructure_3.html#Figure-12634890-c6de-4055-a638-816b860e134a"><i data-feather="link"></i></a></figcaption></figure></li>
+<li><figure><a id="Figure-4ad623fc-9d78-4d91-a3d5-2a67a92c5a8c"></a><a href="../examples/SpatialStructure_3/IFCTreeView.PNG"><img src="../examples/SpatialStructure_3/IFCTreeView.PNG"/></a><figcaption>Figure 4ad623fc-9d78-4d91-a3d5-2a67a92c5a8c<a href="SpatialStructure_3.html#Figure-4ad623fc-9d78-4d91-a3d5-2a67a92c5a8c"><i data-feather="link"></i></a></figcaption></figure></li>
+<li><figure><a id="Figure-c981f006-0175-477f-a1d4-090e2b0ebc4b"></a><a href="../examples/SpatialStructure_3/thumb.png"><img src="../examples/SpatialStructure_3/thumb.png"/></a><figcaption>Figure c981f006-0175-477f-a1d4-090e2b0ebc4b<a href="SpatialStructure_3.html#Figure-c981f006-0175-477f-a1d4-090e2b0ebc4b"><i data-feather="link"></i></a></figcaption></figure></li>
+</ul>
+<h2><a id="IFC-SPF-source"></a>
+    IFC-SPF source
+<a href="SpatialStructure_3.html#IFC-SPF-source"><i data-feather="link"></i></a></h2>
+<pre><code class="language-step21 hljs">ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('ViewDefinition [Ifc4X3NotAssigned]'),'2;1');
+FILE_NAME(
+/* name */ 'UT_RSS_2_RD.ifc',
+/* time_stamp */ '2020-11-24T08:45:25',
+/* author */ ('lars'),
+/* organization */ ('Unknown'),
+/* preprocessor_version */ 'GeometryGymIFC v0.1.4.0 by Geometry Gym Pty Ltd built 2020-11-12T09:32:58',
+/* originating_system */ 'UT_RSS_2 v1.0.0.0',
+/* authorization */ 'None');
+
+FILE_SCHEMA (('IFC4X3_RC2'));
+ENDSEC;
+
+DATA;
+#1= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#2= IFCAXIS2PLACEMENT3D(#1,$,$);
+#3= IFCLOCALPLACEMENT($,#2);
+#4= IFCSITE('3aT5HrPXr7ngZste8y1Cys',#10,'A.a Site',$,$,#3,$,$,$,$,$,$,$,$);
+#5= IFCPERSON('lars','lars',$,$,$,$,$,$);
+#6= IFCORGANIZATION($,'Unknown',$,$,$);
+#7= IFCPERSONANDORGANIZATION(#5,#6,$);
+#8= IFCAPPLICATION(#9,'0.1.4.0','UT_RSS_2 v1.0.0.0','UT_RSS_2 v1.0.0.0');
+#9= IFCORGANIZATION($,'Geometry Gym Pty Ltd',$,$,$);
+#10= IFCOWNERHISTORY(#7,#8,$,.ADDED.,1606203924,$,$,1606203924);
+#11= IFCPROJECT('2JbM09ptr5SRkGdojkjLdj',#10,'UT_RSS_2',$,$,$,$,(#24),#12);
+#12= IFCUNITASSIGNMENT((#13,#14,#15,#16,#17));
+#13= IFCSIUNIT(*,.LENGTHUNIT.,$,.METRE.);
+#14= IFCSIUNIT(*,.AREAUNIT.,$,.SQUARE_METRE.);
+#15= IFCSIUNIT(*,.VOLUMEUNIT.,$,.CUBIC_METRE.);
+#16= IFCSIUNIT(*,.PLANEANGLEUNIT.,$,.RADIAN.);
+#17= IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
+#18= IFCRELAGGREGATES('22oqctZZ95DRRIKQ5FlGRP',#10,$,$,#11,(#4));
+#19= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#20= IFCDIRECTION((0.0,0.0,1.0));
+#21= IFCDIRECTION((1.0,0.0,0.0));
+#22= IFCAXIS2PLACEMENT3D(#19,#20,#21);
+#23= IFCDIRECTION((1.0,0.0,0.0));
+#24= IFCGEOMETRICREPRESENTATIONCONTEXT('Model',$,3,0.00000001,#22,#25);
+#25= IFCDIRECTION((0.0,1.0));
+#26= IFCROAD('2ThS5Zzgr6meykdTzXJWSw',#10,'A.a.1 Road',$,$,#3,$,$,$);
+#27= IFCRELAGGREGATES('1hoOjrxzz0APVTkiZGpE3s',#10,$,$,#4,(#26,#41));
+#28= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#29= IFCAXIS2PLACEMENT3D(#28,$,$);
+#30= IFCLOCALPLACEMENT(#3,#29);
+#31= IFCFACILITYPART('1HDSYpfy9ErgGeNoKHiIlP',#10,'A.a.1.1',$,$,#30,$,$,$,IFCROADPARTTYPEENUM(.ROADSEGMENT.),.LONGITUDINAL.);
+#32= IFCRELAGGREGATES('3eu1iTqoH3RgpRX$osb8Sf',#10,$,$,#26,(#31,#36,#40));
+#33= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#34= IFCAXIS2PLACEMENT3D(#33,$,$);
+#35= IFCLOCALPLACEMENT(#3,#34);
+#36= IFCFACILITYPART('3t6Tql5cT8oAB9Q3DyUyls',#10,'A.a.1.2',$,$,#35,$,$,$,IFCFACILITYPARTCOMMONTYPEENUM(.LEVELCROSSING.),.LONGITUDINAL.);
+#37= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#38= IFCAXIS2PLACEMENT3D(#37,$,$);
+#39= IFCLOCALPLACEMENT(#3,#38);
+#40= IFCFACILITYPART('2nvZS4udzFE9Nw_J5VXqJ3',#10,'A.a.1.3',$,$,#39,$,$,$,IFCROADPARTTYPEENUM(.ROADSEGMENT.),.LONGITUDINAL.);
+#41= IFCRAILWAY('3kjzYIOwPCTxLYbGVHb6tk',#10,'A.a.2 Railway',$,$,#3,$,$,$);
+#42= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#43= IFCAXIS2PLACEMENT3D(#42,$,$);
+#44= IFCLOCALPLACEMENT(#3,#43);
+#45= IFCFACILITYPART('063C1pbAr4DPfZ0j_Nv0aS',#10,'A.a.2.1',$,$,#44,$,$,$,IFCRAILWAYPARTTYPEENUM(.TRACKSTRUCTUREPART.),.LONGITUDINAL.);
+#46= IFCRELAGGREGATES('0Z0tiCSHj8z8mfjiCJk1M8',#10,$,$,#41,(#45,#50,#54));
+#47= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#48= IFCAXIS2PLACEMENT3D(#47,$,$);
+#49= IFCLOCALPLACEMENT(#3,#48);
+#50= IFCFACILITYPART('3k4A9vX2r8Pwg2Qwwxsk23',#10,'A.a.2.2',$,$,#49,$,$,$,IFCFACILITYPARTCOMMONTYPEENUM(.LEVELCROSSING.),.LONGITUDINAL.);
+#51= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#52= IFCAXIS2PLACEMENT3D(#51,$,$);
+#53= IFCLOCALPLACEMENT(#3,#52);
+#54= IFCFACILITYPART('1H0wLuVEf6BOm6m611WE4V',#10,'A.a.2.3',$,$,#53,$,$,$,IFCRAILWAYPARTTYPEENUM(.TRACKSTRUCTUREPART.),.LONGITUDINAL.);
+#55= IFCRELINTERFERESELEMENTS('2ZxY1voD9ENfzHS6C$5ONf',#10,$,$,#36,#50,$,'Crosses',.U.);
+ENDSEC;
+
+END-ISO-10303-21;
+
+</code></pre>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': 'IFC 4.3/SpatialStructure_3/readme.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/Sample-Test-Files',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

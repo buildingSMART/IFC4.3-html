@@ -1,0 +1,343 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>8.16 IfcPropertyResource - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a class="current" href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+<a class="sublink-1" href="../ifcactorresource/content.html">
+                            8.1 IfcActorResource
+                        </a>
+<a class="sublink-1" href="../ifcapprovalresource/content.html">
+                            8.2 IfcApprovalResource
+                        </a>
+<a class="sublink-1" href="../ifcconstraintresource/content.html">
+                            8.3 IfcConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifccostresource/content.html">
+                            8.4 IfcCostResource
+                        </a>
+<a class="sublink-1" href="../ifcdatetimeresource/content.html">
+                            8.5 IfcDateTimeResource
+                        </a>
+<a class="sublink-1" href="../ifcexternalreferenceresource/content.html">
+                            8.6 IfcExternalReferenceResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricconstraintresource/content.html">
+                            8.7 IfcGeometricConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricmodelresource/content.html">
+                            8.8 IfcGeometricModelResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometryresource/content.html">
+                            8.9 IfcGeometryResource
+                        </a>
+<a class="sublink-1" href="../ifcmaterialresource/content.html">
+                            8.10 IfcMaterialResource
+                        </a>
+<a class="sublink-1" href="../ifcmeasureresource/content.html">
+                            8.11 IfcMeasureResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationappearanceresource/content.html">
+                            8.12 IfcPresentationAppearanceResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationdefinitionresource/content.html">
+                            8.13 IfcPresentationDefinitionResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationorganizationresource/content.html">
+                            8.14 IfcPresentationOrganizationResource
+                        </a>
+<a class="sublink-1" href="../ifcprofileresource/content.html">
+                            8.15 IfcProfileResource
+                        </a>
+<a class="sublink-1 current" href="content.html">
+                            8.16 IfcPropertyResource
+                        </a>
+<a class="sublink-1" href="../ifcquantityresource/content.html">
+                            8.17 IfcQuantityResource
+                        </a>
+<a class="sublink-1" href="../ifcrepresentationresource/content.html">
+                            8.18 IfcRepresentationResource
+                        </a>
+<a class="sublink-1" href="../ifcstructuralloadresource/content.html">
+                            8.19 IfcStructuralLoadResource
+                        </a>
+<a class="sublink-1" href="../ifctopologyresource/content.html">
+                            8.20 IfcTopologyResource
+                        </a>
+<a class="sublink-1" href="../ifcutilityresource/content.html">
+                            8.21 IfcUtilityResource
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>8.16 IfcPropertyResource</h1>
+<h2><a id="8.16.1-Schema-definition"></a>
+    8.16.1 Schema definition
+<a href="content.html#8.16.1-Schema-definition"><i data-feather="link"></i></a></h2>
+<p>The <em>IfcPropertyResource</em> defines a basic set of property types that can be associated with occurrence objects (subtypes of <em><a href="../lexical/IfcObject.htm">IfcObject</a></em>) and type objects (subtypes of <em><a href="../lexical/IfcTypeObject.htm">IfcTypeObject</a></em>) through the <em><a href="../lexical/IfcPropertySet.htm">IfcPropertySet</a></em> (defined in the <em>IfcKernel</em> schema). These properties are used to assign property definitions that are semantically defined by a name string and are extensible in terms of their definitions.</p>
+<aside class="aside-note"><mark>NOTE</mark>  Frequently, there is a need to extend the attributes that are attached to an individual object or group of objects. Yet it may not be necessary to extend the attributes for every object within the same class. Using the same capabilities as for types of an element, it is possible to define such sets of attributes and associate them with individual objects.</aside>
+<p>The association of attributes to objects can be defined by two different ways:</p>
+<ul>
+<li>by defining a type object (<em><a href="../lexical/IfcTypeObject.htm">IfcTypeObject</a></em>) which defines a specific object information (including the relevant properties) that is assigned to all instances (or occurrences) of the type object (via the <em><a href="../lexical/IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> relationship).</li>
+<li>by defining a property set (<em><a href="../lexical/IfcPropertySet.htm">IfcPropertySet</a></em>, a logical grouping of related properties) which defines the common property information for an individual instance (or occurrence), this is done via the <em><a href="../lexical/IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em> relationship.</li>
+</ul>
+<p>The semantic information of what an individual property denotes has to be given by the <em>Name</em> attribute. The <em>Name</em> is human interpretable and can also be computer interpretable by convention. This convention has to be established by implementers' agreements.</p>
+<aside class="aside-note"><mark>NOTE</mark>  The IFC specification defines a set of property sets, which provides a recommended usage of property sets for objects in the IFC model. In addition to the IFC property set specification also regional or project specific definitions of property sets are possible. Thereby property sets provide an mechanism to localize IFC definitions.</aside>
+<p>All subtypes of <em><a href="../lexical/IfcProperty.htm">IfcProperty</a></em> are referenced later by the <em><a href="../lexical/IfcPropertySet.htm">IfcPropertySet</a></em>. Thereby the <em><a href="../lexical/IfcPropertySet.htm">IfcPropertySet</a></em> establishes a tree of property definitions through the <em><a href="../lexical/IfcSimpleProperty.htm">IfcSimpleProperty</a></em> (and its subtypes) and <em><a href="../lexical/IfcComplexProperty.htm">IfcComplexProperty</a></em>. Any instance of <em><a href="../lexical/IfcSimpleProperty.htm">IfcSimpleProperty</a></em> within this tree shall only be referenced once (by either <em><a href="../lexical/IfcPropertySet.htm">IfcPropertySet</a></em> or <em><a href="../lexical/IfcComplexProperty.htm">IfcComplexProperty</a></em>).</p>
+<aside class="aside-note"><mark>NOTE</mark>  The property set attached to an object shall have a tree structure, therefore all properties (either <em><a href="../lexical/IfcSimpleProperty.htm">IfcSimpleProperty</a></em> -and subtypes- or <em><a href="../lexical/IfcComplexProperty.htm">IfcComplexProperty</a></em>) shall be used only once within that structure.</aside>
+<h2><a id="8.16.2-Types"></a>
+    8.16.2 Types
+<a href="content.html#8.16.2-Types"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="8.16.2.1">
+<a href="../lexical/IfcCurveInterpolationEnum.htm">
+        
+            IfcCurveInterpolationEnum
+        
+        </a>
+</li><li number="8.16.2.2">
+<a href="../lexical/IfcObjectReferenceSelect.htm">
+        
+            IfcObjectReferenceSelect
+        
+        </a>
+</li>
+</ol>
+<h2><a id="8.16.3-Entities"></a>
+    8.16.3 Entities
+<a href="content.html#8.16.3-Entities"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="8.16.3.1">
+<a href="../lexical/IfcComplexProperty.htm">
+        
+            IfcComplexProperty
+        
+        </a>
+</li><li number="8.16.3.2">
+<a href="../lexical/IfcExtendedProperties.htm">
+        
+            IfcExtendedProperties
+        
+        </a>
+</li><li number="8.16.3.3">
+<a href="../lexical/IfcPreDefinedProperties.htm">
+        
+            IfcPreDefinedProperties
+        
+        </a>
+</li><li number="8.16.3.4">
+<a href="../lexical/IfcProperty.htm">
+        
+            IfcProperty
+        
+        </a>
+</li><li number="8.16.3.5">
+<a href="../lexical/IfcPropertyAbstraction.htm">
+        
+            IfcPropertyAbstraction
+        
+        </a>
+</li><li number="8.16.3.6">
+<a href="../lexical/IfcPropertyBoundedValue.htm">
+        
+            IfcPropertyBoundedValue
+        
+        </a>
+</li><li number="8.16.3.7">
+<a href="../lexical/IfcPropertyDependencyRelationship.htm">
+        
+            IfcPropertyDependencyRelationship
+        
+        </a>
+</li><li number="8.16.3.8">
+<a href="../lexical/IfcPropertyEnumeratedValue.htm">
+        
+            IfcPropertyEnumeratedValue
+        
+        </a>
+</li><li number="8.16.3.9">
+<a href="../lexical/IfcPropertyEnumeration.htm">
+        
+            IfcPropertyEnumeration
+        
+        </a>
+</li><li number="8.16.3.10">
+<a href="../lexical/IfcPropertyListValue.htm">
+        
+            IfcPropertyListValue
+        
+        </a>
+</li><li number="8.16.3.11">
+<a href="../lexical/IfcPropertyReferenceValue.htm">
+        
+            IfcPropertyReferenceValue
+        
+        </a>
+</li><li number="8.16.3.12">
+<a href="../lexical/IfcPropertySingleValue.htm">
+        
+            IfcPropertySingleValue
+        
+        </a>
+</li><li number="8.16.3.13">
+<a href="../lexical/IfcPropertyTableValue.htm">
+        
+            IfcPropertyTableValue
+        
+        </a>
+</li><li number="8.16.3.14">
+<a href="../lexical/IfcSimpleProperty.htm">
+        
+            IfcSimpleProperty
+        
+        </a>
+</li>
+</ol>
+<h2><a id="8.16.4-Property-Sets"></a>
+    8.16.4 Property Sets
+<a href="content.html#8.16.4-Property-Sets"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+<h2><a id="8.16.5-Quantity-Sets"></a>
+    8.16.5 Quantity Sets
+<a href="content.html#8.16.5-Quantity-Sets"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+<h2><a id="8.16.6-Functions"></a>
+    8.16.6 Functions
+<a href="content.html#8.16.6-Functions"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+<h2><a id="8.16.7-Rules"></a>
+    8.16.7 Rules
+<a href="content.html#8.16.7-Rules"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+<h2><a id="8.16.8-PropertyEnumerations"></a>
+    8.16.8 PropertyEnumerations
+<a href="content.html#8.16.8-PropertyEnumerations"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/resource/IfcPropertyResource/README.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

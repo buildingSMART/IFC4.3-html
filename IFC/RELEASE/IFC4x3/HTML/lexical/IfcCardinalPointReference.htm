@@ -1,0 +1,245 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>8.10.2.1 IfcCardinalPointReference - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a class="current" href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+<a class="sublink-1" href="../ifcactorresource/content.html">
+                            8.1 IfcActorResource
+                        </a>
+<a class="sublink-1" href="../ifcapprovalresource/content.html">
+                            8.2 IfcApprovalResource
+                        </a>
+<a class="sublink-1" href="../ifcconstraintresource/content.html">
+                            8.3 IfcConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifccostresource/content.html">
+                            8.4 IfcCostResource
+                        </a>
+<a class="sublink-1" href="../ifcdatetimeresource/content.html">
+                            8.5 IfcDateTimeResource
+                        </a>
+<a class="sublink-1" href="../ifcexternalreferenceresource/content.html">
+                            8.6 IfcExternalReferenceResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricconstraintresource/content.html">
+                            8.7 IfcGeometricConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricmodelresource/content.html">
+                            8.8 IfcGeometricModelResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometryresource/content.html">
+                            8.9 IfcGeometryResource
+                        </a>
+<a class="sublink-1 current" href="../ifcmaterialresource/content.html">
+                            8.10 IfcMaterialResource
+                        </a>
+<a class="sublink-1" href="../ifcmeasureresource/content.html">
+                            8.11 IfcMeasureResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationappearanceresource/content.html">
+                            8.12 IfcPresentationAppearanceResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationdefinitionresource/content.html">
+                            8.13 IfcPresentationDefinitionResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationorganizationresource/content.html">
+                            8.14 IfcPresentationOrganizationResource
+                        </a>
+<a class="sublink-1" href="../ifcprofileresource/content.html">
+                            8.15 IfcProfileResource
+                        </a>
+<a class="sublink-1" href="../ifcpropertyresource/content.html">
+                            8.16 IfcPropertyResource
+                        </a>
+<a class="sublink-1" href="../ifcquantityresource/content.html">
+                            8.17 IfcQuantityResource
+                        </a>
+<a class="sublink-1" href="../ifcrepresentationresource/content.html">
+                            8.18 IfcRepresentationResource
+                        </a>
+<a class="sublink-1" href="../ifcstructuralloadresource/content.html">
+                            8.19 IfcStructuralLoadResource
+                        </a>
+<a class="sublink-1" href="../ifctopologyresource/content.html">
+                            8.20 IfcTopologyResource
+                        </a>
+<a class="sublink-1" href="../ifcutilityresource/content.html">
+                            8.21 IfcUtilityResource
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>8.10.2.1 IfcCardinalPointReference</h1>
+<h2><a id="8.10.2.1.1-Semantic-definition"></a>
+    8.10.2.1.1 Semantic definition
+<a href="IfcCardinalPointReference.htm#8.10.2.1.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p>An <em><a href="IfcCardinalPointReference.htm">IfcCardinalPointReference</a></em> is an index reference to significant points of a section profile. This index is used to describe the spatial relationship between the section of a member and a reference axis of the same member.</p>
+<aside class="aside-history"><mark>HISTORY</mark>  New Type in IFC4.</aside>
+<p>Indexes 1...9 refer to points at the bounding box of a profile. Indexes 10...19 refer to points defined by geometric centroid (usually centre of gravity) and shear centre, and their combinations with bounding box coordinates. In particular, the following index values are specified in this specification:</p>
+<ol>
+<li>bottom left</li>
+<li>bottom centre</li>
+<li>bottom right</li>
+<li>mid-depth left</li>
+<li>mid-depth centre</li>
+<li>mid-depth right</li>
+<li>top left</li>
+<li>top centre</li>
+<li>top right</li>
+<li>geometric centroid</li>
+<li>bottom in line with the geometric centroid</li>
+<li>left in line with the geometric centroid</li>
+<li>right in line with the geometric centroid</li>
+<li>top in line with the geometric centroid</li>
+<li>shear centre</li>
+<li>bottom in line with the shear centre</li>
+<li>left in line with the shear centre</li>
+<li>right in line with the shear centre</li>
+<li>top in line with the shear centre</li>
+<li>Lowest point inside of pipe or channel profile (centre of flat bottom)</li>
+</ol>
+<p>Other index values are possible but outside the scope of this specification.</p>
+<p>Figure 1 illustrates cardinal point values.</p>
+<figure><a id="Figure-8.10.2.1.B-illustrates-an-example-extrusion-shape-with-arbitrary-profile-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArbitraryClosedProfileDef.htm'&gt;IfcArbitraryClosedProfileDef&lt;/a&gt;-aligned-mid-depth-right-on-the-member-axis.-The-line-of-sight-follows-the-extrusion-direction-Z-which-points-into-the-drawing-plane-of-above-illustration.-Hence-left-is-in-the-positive-X-direction-of-the-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm'&gt;IfcProfileDef&lt;/a&gt;.-Top-is-in-the-positive-Y-direction-of-the-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm'&gt;IfcProfileDef&lt;/a&gt;."></a><img alt="arbitrary profile with cardinal points" src="../figures/ifccardinalpointreference-01.png" title="Figure 1 — Cardinal point values"/><figcaption>Figure 8.10.2.1.B illustrates an example extrusion shape with arbitrary profile (<em><a href="IfcArbitraryClosedProfileDef.htm">IfcArbitraryClosedProfileDef</a></em>), aligned "mid-depth right" on the member axis. The line of sight follows the extrusion direction Z which points into the drawing plane of above illustration. Hence, "left" is in the positive X direction of the <em><a href="IfcProfileDef.htm">IfcProfileDef</a></em>. "Top" is in the positive Y direction of the <em><a href="IfcProfileDef.htm">IfcProfileDef</a></em>.<a href="IfcCardinalPointReference.htm#Figure-8.10.2.1.B-illustrates-an-example-extrusion-shape-with-arbitrary-profile-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcArbitraryClosedProfileDef.htm'&gt;IfcArbitraryClosedProfileDef&lt;/a&gt;-aligned-mid-depth-right-on-the-member-axis.-The-line-of-sight-follows-the-extrusion-direction-Z-which-points-into-the-drawing-plane-of-above-illustration.-Hence-left-is-in-the-positive-X-direction-of-the-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm'&gt;IfcProfileDef&lt;/a&gt;.-Top-is-in-the-positive-Y-direction-of-the-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcProfileDef.htm'&gt;IfcProfileDef&lt;/a&gt;."><i data-feather="link"></i></a></figcaption></figure>
+<figure><a id="Figure-8.10.2.1.B-Cardinal-point-extrusion"></a><img alt="extrusion shape with arbitrary profile and alignment" src="../figures/ifccardinalpointreference-02.png" title="Figure 8.10.2.1.B — Cardinal point extrusion"/><figcaption>Figure 8.10.2.1.B — Cardinal point extrusion<a href="IfcCardinalPointReference.htm#Figure-8.10.2.1.B-Cardinal-point-extrusion"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.10.2.1.2-Formal-Propositions"></a>
+    8.10.2.1.2 Formal Propositions
+<a href="IfcCardinalPointReference.htm#8.10.2.1.2-Formal-Propositions"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-8.10.2.1.A"></a><table>
+<tr>
+<td>GreaterThanZero</td><td>&lt;html&gt;&lt;body&gt;&lt;p&gt;Cardinal point reference shall be greater than zero.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;<br/><pre>SELF &gt; 0</pre>
+</td></tr>
+</table><figcaption>Table 8.10.2.1.A<a href="IfcCardinalPointReference.htm#Table-8.10.2.1.A"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.10.2.1.3-Formal-representation"></a>
+    8.10.2.1.3 Formal representation
+<a href="IfcCardinalPointReference.htm#8.10.2.1.3-Formal-representation"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">TYPE <a href="IfcCardinalPointReference.htm">IfcCardinalPointReference</a> = INTEGER;
+ WHERE
+	 GreaterThanZero : SELF &gt; 0;
+END_TYPE;</code></pre>
+<h2><a id="8.10.2.1.4-References"></a>
+    8.10.2.1.4 References
+<a href="IfcCardinalPointReference.htm#8.10.2.1.4-References"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="IfcMaterialProfileSetUsage.htm">IfcMaterialProfileSetUsage</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcMaterialProfileSetUsageTapering.htm">IfcMaterialProfileSetUsageTapering</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/resource/IfcMaterialResource/Types/IfcCardinalPointReference.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

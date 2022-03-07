@@ -1,0 +1,636 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>6.2 IfcSharedBldgServiceElements - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a class="current" href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a class="sublink-1" href="../ifcsharedbldgelements/content.html">
+                            6.1 IfcSharedBldgElements
+                        </a>
+<a class="sublink-1 current" href="content.html">
+                            6.2 IfcSharedBldgServiceElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedcomponentelements/content.html">
+                            6.3 IfcSharedComponentElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedfacilitieselements/content.html">
+                            6.4 IfcSharedFacilitiesElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedmgmtelements/content.html">
+                            6.5 IfcSharedMgmtElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedinfrastructureelements/content.html">
+                            6.6 IfcSharedInfrastructureElements
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>6.2 IfcSharedBldgServiceElements</h1>
+<h2><a id="6.2.1-Schema-definition"></a>
+    6.2.1 Schema definition
+<a href="content.html#6.2.1-Schema-definition"><i data-feather="link"></i></a></h2>
+<p>The <em>IfcSharedBldgServiceElements</em> schema in the interoperability layer defines basic concepts required for interoperability primarily between Building Service domain extensions, notably <em>IfcHvacDomain</em>, <em>IfcPlumbingFireProtectionDomain</em>, <em>IfcElectricalDomain</em> and <em>IfcBuildingControlsDomain</em>. This schema includes concepts such as basic type and occurrence definitions for flow and distribution systems and property sets for common building service scenarios such as fluid-flow properties, electrical properties, and space thermal properties.</p>
+<p>Figure 6.2.A illustrates the concepts of type, occurrence and performance. Types are specializations of <em><a href="../lexical/IfcDistributionElementType.htm">IfcDistributionElementType</a></em> while occurrences are specializations of <em><a href="../lexical/IfcDistributionElement.htm">IfcDistributionElement</a></em>. A third theme, defined in the <em>IfcControlExtension</em> schema, relates to the performance characteristics of an occurrence using instances of the <em><a href="../lexical/IfcPerformanceHistory.htm">IfcPerformanceHistory</a></em> entity.</p>
+<p>A type can have zero or many occurrences. Each occurrence can have many performance history entities associated with it, allowing data that is specific to a certain phase of the lifecycle to be captured and maintained throughout the life of the dataset.</p>
+<figure><a id="Figure-6.2.A-Building-service-lifecycle"></a><img alt="type, occurrence and performance history concepts" src="../figures/ifcdistributionport_conceptslide2.gif" title="Figure 6.2.A — Building service lifecycle"/><figcaption>Figure 6.2.A — Building service lifecycle<a href="content.html#Figure-6.2.A-Building-service-lifecycle"><i data-feather="link"></i></a></figcaption></figure>
+<p>The <em>IfcSharedBldgServiceElements</em> schema specializes building services concepts symmetrically for occurrences and types, with the <em>primary</em> functional role of the entity determining its classification into the following generic concepts:</p>
+<ul>
+<li><strong>Distribution Chamber</strong>: a formed volume used in a distribution system, such as a sump, trench or manhole.</li>
+<li><strong>Energy Conversion Device</strong>: a building systems device that converts energy from one form into another such as a boiler (combusting gas to heat water), chiller (using a refrigeration cycle to cool a liquid), or a cooling coil (using the phase-change characteristics of a refrigerant to cool air).</li>
+<li><strong>Flow Controller</strong>: a device that regulates flow within a distribution system, such as a valve in a piping system, modulating damper in an air distribution system, or electrical switch in an electrical distribution system.</li>
+<li><strong>Flow Fitting</strong>: a device that is used to interconnect flow segments or other fittings within a distribution system, such as a tee in a ducted system that branches flow into two directions, or a junction box in an electrical distribution system.</li>
+<li><strong>Flow Moving Device</strong>: a device that is used to produce a pressure differential in a distribution system, such as a pump, fan, or compressor.</li>
+<li><strong>Flow Segment</strong>: a section of a distribution system, such as a duct, pipe, or conduit.</li>
+<li><strong>Flow Storage Device</strong>: a device used for the temporary storage of a substance (solid, liquid, or gas) such as a tank, or the voltage potential induced by the induced electron flow (a battery).</li>
+<li><strong>Flow Terminal</strong>: acts as a terminus or beginning element in a distribution system such as a ceiling register in a ducted air distribution system, a sink in a waste-water system, or a light fixture in an electrical lighting system.</li>
+<li><strong>Flow Treatment Device</strong>: a device used to change the physical properties of the medium, such as an air, oil or water filter (used to remove particulates from the fluid), or a duct silencer (used to attenuate noise).</li>
+</ul>
+<p>Refer to the domain schemas where types and occurrences are further elaborated using <em>PredefinedType</em> enumerations for examples of the range of supported concepts within these broad classifications. If a new type is needed within this classification, extend using the ElementType attribute. However, if a completely new concept is required that does not fit within this classification, use instances of the generic <em><a href="../lexical/IfcDistributionElementType.htm">IfcDistributionElementType</a></em> and <em><a href="../lexical/IfcDistributionElement.htm">IfcDistributionElement</a></em> entities for the type/occurrence objects as needed.</p>
+<p>Occurrences in a distribution system are typically coupled together using instances of <em><a href="../lexical/IfcDistributionPort.htm">IfcDistributionPort</a></em>. This is also where concepts such as mass-flow properties are applied based on performance characteristics. Refer to the <em><a href="../lexical/IfcDistributionPort.htm">IfcDistributionPort</a></em> documentation within this schema for further elaboration on coupling together components in a distribution system and tracking the flow characteristics across the port boundaries.</p>
+<aside class="aside-history"><mark>HISTORY</mark> This schema has been significantly modified in IFC2x2. Refer to the change log and issues resolution database for details.</aside>
+<h2><a id="6.2.2-Types"></a>
+    6.2.2 Types
+<a href="content.html#6.2.2-Types"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="6.2.2.1">
+<a href="../lexical/IfcDistributionChamberElementTypeEnum.htm">
+        
+            IfcDistributionChamberElementTypeEnum
+        
+        </a>
+</li><li number="6.2.2.2">
+<a href="../lexical/IfcDistributionPortTypeEnum.htm">
+        
+            IfcDistributionPortTypeEnum
+        
+        </a>
+</li><li number="6.2.2.3">
+<a href="../lexical/IfcDistributionSystemEnum.htm">
+        
+            IfcDistributionSystemEnum
+        
+        </a>
+</li><li number="6.2.2.4">
+<a href="../lexical/IfcFlowDirectionEnum.htm">
+        
+            IfcFlowDirectionEnum
+        
+        </a>
+</li>
+</ol>
+<h2><a id="6.2.3-Entities"></a>
+    6.2.3 Entities
+<a href="content.html#6.2.3-Entities"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="6.2.3.1">
+<a href="../lexical/IfcDistributionChamberElement.htm">
+        
+            IfcDistributionChamberElement
+        
+        </a>
+</li><li number="6.2.3.2">
+<a href="../lexical/IfcDistributionChamberElementType.htm">
+        
+            IfcDistributionChamberElementType
+        
+        </a>
+</li><li number="6.2.3.3">
+<a href="../lexical/IfcDistributionCircuit.htm">
+        
+            IfcDistributionCircuit
+        
+        </a>
+</li><li number="6.2.3.4">
+<a href="../lexical/IfcDistributionControlElement.htm">
+        
+            IfcDistributionControlElement
+        
+        </a>
+</li><li number="6.2.3.5">
+<a href="../lexical/IfcDistributionControlElementType.htm">
+        
+            IfcDistributionControlElementType
+        
+        </a>
+</li><li number="6.2.3.6">
+<a href="../lexical/IfcDistributionFlowElement.htm">
+        
+            IfcDistributionFlowElement
+        
+        </a>
+</li><li number="6.2.3.7">
+<a href="../lexical/IfcDistributionFlowElementType.htm">
+        
+            IfcDistributionFlowElementType
+        
+        </a>
+</li><li number="6.2.3.8">
+<a href="../lexical/IfcDistributionPort.htm">
+        
+            IfcDistributionPort
+        
+        </a>
+</li><li number="6.2.3.9">
+<a href="../lexical/IfcDistributionSystem.htm">
+        
+            IfcDistributionSystem
+        
+        </a>
+</li><li number="6.2.3.10">
+<a href="../lexical/IfcEnergyConversionDevice.htm">
+        
+            IfcEnergyConversionDevice
+        
+        </a>
+</li><li number="6.2.3.11">
+<a href="../lexical/IfcEnergyConversionDeviceType.htm">
+        
+            IfcEnergyConversionDeviceType
+        
+        </a>
+</li><li number="6.2.3.12">
+<a href="../lexical/IfcFlowController.htm">
+        
+            IfcFlowController
+        
+        </a>
+</li><li number="6.2.3.13">
+<a href="../lexical/IfcFlowControllerType.htm">
+        
+            IfcFlowControllerType
+        
+        </a>
+</li><li number="6.2.3.14">
+<a href="../lexical/IfcFlowFitting.htm">
+        
+            IfcFlowFitting
+        
+        </a>
+</li><li number="6.2.3.15">
+<a href="../lexical/IfcFlowFittingType.htm">
+        
+            IfcFlowFittingType
+        
+        </a>
+</li><li number="6.2.3.16">
+<a href="../lexical/IfcFlowMovingDevice.htm">
+        
+            IfcFlowMovingDevice
+        
+        </a>
+</li><li number="6.2.3.17">
+<a href="../lexical/IfcFlowMovingDeviceType.htm">
+        
+            IfcFlowMovingDeviceType
+        
+        </a>
+</li><li number="6.2.3.18">
+<a href="../lexical/IfcFlowSegment.htm">
+        
+            IfcFlowSegment
+        
+        </a>
+</li><li number="6.2.3.19">
+<a href="../lexical/IfcFlowSegmentType.htm">
+        
+            IfcFlowSegmentType
+        
+        </a>
+</li><li number="6.2.3.20">
+<a href="../lexical/IfcFlowStorageDevice.htm">
+        
+            IfcFlowStorageDevice
+        
+        </a>
+</li><li number="6.2.3.21">
+<a href="../lexical/IfcFlowStorageDeviceType.htm">
+        
+            IfcFlowStorageDeviceType
+        
+        </a>
+</li><li number="6.2.3.22">
+<a href="../lexical/IfcFlowTerminal.htm">
+        
+            IfcFlowTerminal
+        
+        </a>
+</li><li number="6.2.3.23">
+<a href="../lexical/IfcFlowTerminalType.htm">
+        
+            IfcFlowTerminalType
+        
+        </a>
+</li><li number="6.2.3.24">
+<a href="../lexical/IfcFlowTreatmentDevice.htm">
+        
+            IfcFlowTreatmentDevice
+        
+        </a>
+</li><li number="6.2.3.25">
+<a href="../lexical/IfcFlowTreatmentDeviceType.htm">
+        
+            IfcFlowTreatmentDeviceType
+        
+        </a>
+</li><li number="6.2.3.26">
+<a href="../lexical/IfcRelFlowControlElements.htm">
+        
+            IfcRelFlowControlElements
+        
+        </a>
+</li>
+</ol>
+<h2><a id="6.2.4-Property-Sets"></a>
+    6.2.4 Property Sets
+<a href="content.html#6.2.4-Property-Sets"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="6.2.4.1">
+<a href="../lexical/Pset_AirSideSystemInformation.htm">
+        
+            Pset_AirSideSystemInformation
+        
+        </a>
+</li><li number="6.2.4.2">
+<a href="../lexical/Pset_DistributionChamberElementCommon.htm">
+        
+            Pset_DistributionChamberElementCommon
+        
+        </a>
+</li><li number="6.2.4.3">
+<a href="../lexical/Pset_DistributionChamberElementTypeFormedDuct.htm">
+        
+            Pset_DistributionChamberElementTypeFormedDuct
+        
+        </a>
+</li><li number="6.2.4.4">
+<a href="../lexical/Pset_DistributionChamberElementTypeInspectionChamber.htm">
+        
+            Pset_DistributionChamberElementTypeInspectionChamber
+        
+        </a>
+</li><li number="6.2.4.5">
+<a href="../lexical/Pset_DistributionChamberElementTypeInspectionPit.htm">
+        
+            Pset_DistributionChamberElementTypeInspectionPit
+        
+        </a>
+</li><li number="6.2.4.6">
+<a href="../lexical/Pset_DistributionChamberElementTypeManhole.htm">
+        
+            Pset_DistributionChamberElementTypeManhole
+        
+        </a>
+</li><li number="6.2.4.7">
+<a href="../lexical/Pset_DistributionChamberElementTypeMeterChamber.htm">
+        
+            Pset_DistributionChamberElementTypeMeterChamber
+        
+        </a>
+</li><li number="6.2.4.8">
+<a href="../lexical/Pset_DistributionChamberElementTypeSump.htm">
+        
+            Pset_DistributionChamberElementTypeSump
+        
+        </a>
+</li><li number="6.2.4.9">
+<a href="../lexical/Pset_DistributionChamberElementTypeTrench.htm">
+        
+            Pset_DistributionChamberElementTypeTrench
+        
+        </a>
+</li><li number="6.2.4.10">
+<a href="../lexical/Pset_DistributionChamberElementTypeValveChamber.htm">
+        
+            Pset_DistributionChamberElementTypeValveChamber
+        
+        </a>
+</li><li number="6.2.4.11">
+<a href="../lexical/Pset_DistributionPortCommon.htm">
+        
+            Pset_DistributionPortCommon
+        
+        </a>
+</li><li number="6.2.4.12">
+<a href="../lexical/Pset_DistributionPortPHistoryCable.htm">
+        
+            Pset_DistributionPortPHistoryCable
+        
+        </a>
+</li><li number="6.2.4.13">
+<a href="../lexical/Pset_DistributionPortPHistoryDuct.htm">
+        
+            Pset_DistributionPortPHistoryDuct
+        
+        </a>
+</li><li number="6.2.4.14">
+<a href="../lexical/Pset_DistributionPortPHistoryPipe.htm">
+        
+            Pset_DistributionPortPHistoryPipe
+        
+        </a>
+</li><li number="6.2.4.15">
+<a href="../lexical/Pset_DistributionPortTypeCable.htm">
+        
+            Pset_DistributionPortTypeCable
+        
+        </a>
+</li><li number="6.2.4.16">
+<a href="../lexical/Pset_DistributionPortTypeDuct.htm">
+        
+            Pset_DistributionPortTypeDuct
+        
+        </a>
+</li><li number="6.2.4.17">
+<a href="../lexical/Pset_DistributionPortTypePipe.htm">
+        
+            Pset_DistributionPortTypePipe
+        
+        </a>
+</li><li number="6.2.4.18">
+<a href="../lexical/Pset_DistributionSystemCommon.htm">
+        
+            Pset_DistributionSystemCommon
+        
+        </a>
+</li><li number="6.2.4.19">
+<a href="../lexical/Pset_DistributionSystemTypeElectrical.htm">
+        
+            Pset_DistributionSystemTypeElectrical
+        
+        </a>
+</li><li number="6.2.4.20">
+<a href="../lexical/Pset_DistributionSystemTypeVentilation.htm">
+        
+            Pset_DistributionSystemTypeVentilation
+        
+        </a>
+</li><li number="6.2.4.21">
+<a href="../lexical/Pset_OutsideDesignCriteria.htm">
+        
+            Pset_OutsideDesignCriteria
+        
+        </a>
+</li><li number="6.2.4.22">
+<a href="../lexical/Pset_SoundAttenuation.htm">
+        
+            Pset_SoundAttenuation
+        
+        </a>
+</li><li number="6.2.4.23">
+<a href="../lexical/Pset_SoundGeneration.htm">
+        
+            Pset_SoundGeneration
+        
+        </a>
+</li><li number="6.2.4.24">
+<a href="../lexical/Pset_SpaceAirHandlingDimensioning.htm">
+        
+            Pset_SpaceAirHandlingDimensioning
+        
+        </a>
+</li><li number="6.2.4.25">
+<a href="../lexical/Pset_SpaceThermalLoad.htm">
+        
+            Pset_SpaceThermalLoad
+        
+        </a>
+</li><li number="6.2.4.26">
+<a href="../lexical/Pset_SpaceThermalLoadPHistory.htm">
+        
+            Pset_SpaceThermalLoadPHistory
+        
+        </a>
+</li><li number="6.2.4.27">
+<a href="../lexical/Pset_ThermalLoad.htm">
+        
+            Pset_ThermalLoad
+        
+        </a>
+</li><li number="6.2.4.28">
+<a href="../lexical/Pset_UtilityConsumptionPHistory.htm">
+        
+            Pset_UtilityConsumptionPHistory
+        
+        </a>
+</li>
+</ol>
+<h2><a id="6.2.5-Quantity-Sets"></a>
+    6.2.5 Quantity Sets
+<a href="content.html#6.2.5-Quantity-Sets"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="6.2.5.1">
+<a href="../lexical/Qto_DistributionChamberElementBaseQuantities.htm">
+        
+            Qto_DistributionChamberElementBaseQuantities
+        
+        </a>
+</li>
+</ol>
+<h2><a id="6.2.6-Functions"></a>
+    6.2.6 Functions
+<a href="content.html#6.2.6-Functions"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+<h2><a id="6.2.7-Rules"></a>
+    6.2.7 Rules
+<a href="content.html#6.2.7-Rules"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+<h2><a id="6.2.8-PropertyEnumerations"></a>
+    6.2.8 PropertyEnumerations
+<a href="content.html#6.2.8-PropertyEnumerations"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="6.2.8.1">
+<a href="../lexical/PEnum_AirSideSystemDistributionType.htm">
+        
+            PEnum_AirSideSystemDistributionType
+        
+        </a>
+</li><li number="6.2.8.2">
+<a href="../lexical/PEnum_AirSideSystemType.htm">
+        
+            PEnum_AirSideSystemType
+        
+        </a>
+</li><li number="6.2.8.3">
+<a href="../lexical/PEnum_BuildingThermalExposure.htm">
+        
+            PEnum_BuildingThermalExposure
+        
+        </a>
+</li><li number="6.2.8.4">
+<a href="../lexical/PEnum_DistributionPortElectricalType.htm">
+        
+            PEnum_DistributionPortElectricalType
+        
+        </a>
+</li><li number="6.2.8.5">
+<a href="../lexical/PEnum_DistributionPortGender.htm">
+        
+            PEnum_DistributionPortGender
+        
+        </a>
+</li><li number="6.2.8.6">
+<a href="../lexical/PEnum_DistributionSystemElectricalCategory.htm">
+        
+            PEnum_DistributionSystemElectricalCategory
+        
+        </a>
+</li><li number="6.2.8.7">
+<a href="../lexical/PEnum_DistributionSystemElectricalType.htm">
+        
+            PEnum_DistributionSystemElectricalType
+        
+        </a>
+</li><li number="6.2.8.8">
+<a href="../lexical/PEnum_DuctConnectionType.htm">
+        
+            PEnum_DuctConnectionType
+        
+        </a>
+</li><li number="6.2.8.9">
+<a href="../lexical/PEnum_DuctSizingMethod.htm">
+        
+            PEnum_DuctSizingMethod
+        
+        </a>
+</li><li number="6.2.8.10">
+<a href="../lexical/PEnum_PipeEndStyleTreatment.htm">
+        
+            PEnum_PipeEndStyleTreatment
+        
+        </a>
+</li><li number="6.2.8.11">
+<a href="../lexical/PEnum_SoundScale.htm">
+        
+            PEnum_SoundScale
+        
+        </a>
+</li><li number="6.2.8.12">
+<a href="../lexical/PEnum_TypeOfShaft.htm">
+        
+            PEnum_TypeOfShaft
+        
+        </a>
+</li>
+</ol>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/shared/IfcSharedBldgServiceElements/README.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

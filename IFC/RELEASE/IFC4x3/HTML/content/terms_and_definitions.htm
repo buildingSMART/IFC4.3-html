@@ -1,0 +1,264 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>3 Terms, definitions, and abbreviated terms - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="foreword.htm">
+                             Foreword
+                        </a>
+<a href="introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="scope.htm">
+                            1 Scope
+                        </a>
+<a href="normative_references.htm">
+                            2 Normative references
+                        </a>
+<a class="current" href="terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>3 Terms, definitions, and abbreviated terms</h1>
+<p>For the purpose of this document, the following definitions apply.</p>
+<h2><a id="3.1.1-actor"></a>3.1.1 actor<a href="terms_and_definitions.htm#3.1.1-actor"><i data-feather="link"></i></a></h2>
+<p>person, an organization, or person acting on behalf of an organization</p>
+<aside class="aside-note"><mark>NOTE</mark> A specialization of the general term object.</aside>
+<h2><a id="3.1.2-attribute"></a>3.1.2 attribute<a href="terms_and_definitions.htm#3.1.2-attribute"><i data-feather="link"></i></a></h2>
+<p>unit of information within an entity, defined by a particular type or reference to a particular entity</p>
+<aside class="aside-note"><mark>NOTE</mark> There are three kinds of attributes: direct attributes, inverse attributes and derived attributes.</aside>
+<h2><a id="3.1.2.1-direct-attribute"></a>3.1.2.1 direct attribute<a href="terms_and_definitions.htm#3.1.2.1-direct-attribute"><i data-feather="link"></i></a></h2>
+<p>scalar values or collections including Set (unordered, unique), List (ordered), or Array (ordered, sparse) as defined in [ISO 10303-11]</p>
+<aside class="aside-note"><mark>NOTE</mark> Similar to the term "field" in common programming languages.</aside>
+<h2><a id="3.1.2.2-inverse-attribute"></a>3.1.2.2 inverse attribute<a href="terms_and_definitions.htm#3.1.2.2-inverse-attribute"><i data-feather="link"></i></a></h2>
+<p>unit of information defining queries for obtaining related data and enforcing referential integrity</p>
+<aside class="aside-note"><mark>NOTE</mark> Similar to the term "navigation property" in entity-relational programming frameworks.</aside>
+<h2><a id="3.1.2.3-derived-attribute"></a>3.1.2.3 derived attribute<a href="terms_and_definitions.htm#3.1.2.3-derived-attribute"><i data-feather="link"></i></a></h2>
+<p>unit of information computed from other attributes using an expression defined in the schema</p>
+<h2><a id="3.1.2.4-constraints-on-attributes"></a>3.1.2.4 constraints on attributes<a href="terms_and_definitions.htm#3.1.2.4-constraints-on-attributes"><i data-feather="link"></i></a></h2>
+<p>data type restricting the values of attributes</p>
+<aside class="aside-note"><mark>NOTE</mark> The most general constraint is about the existence of attribute values. There are basically two types: mandatory and optional attributes. Values of mandatory attributes must be provided whereas values of optional attributes may be omitted.</aside><aside class="aside-note"><mark>NOTE</mark> For aggregation data types such as Set, List, or Array, the existence constraint is often refined by a minimal and maximal number of elements, which is also known as cardinality.</aside>
+<h2><a id="3.1.3-classification"></a>3.1.3 classification<a href="terms_and_definitions.htm#3.1.3-classification"><i data-feather="link"></i></a></h2>
+<p>categorization, the act of distributing things into classes or categories of the same type</p>
+<h2><a id="3.1.4-constraint"></a>3.1.4 constraint<a href="terms_and_definitions.htm#3.1.4-constraint"><i data-feather="link"></i></a></h2>
+<p>restriction for a specified reason</p>
+<aside class="aside-note"><mark>NOTE</mark> A specialization of the general term control.</aside>
+<h2><a id="3.1.5-control"></a>3.1.5 control<a href="terms_and_definitions.htm#3.1.5-control"><i data-feather="link"></i></a></h2>
+<p>directive to meet specified requirements such as for scope, time, or cost</p>
+<aside class="aside-note"><mark>NOTE</mark> A specialization of the general term object.</aside>
+<h2><a id="3.1.6-dictionary"></a>3.1.6 dictionary<a href="terms_and_definitions.htm#3.1.6-dictionary"><i data-feather="link"></i></a></h2>
+<p>collection of words, terms or concepts, with their definition</p>
+<h2><a id="3.1.7-element"></a>3.1.7 element<a href="terms_and_definitions.htm#3.1.7-element"><i data-feather="link"></i></a></h2>
+<p>tangible physical product that can be described by its shape representation, material representations, and other properties</p>
+<aside class="aside-note"><mark>NOTE</mark> A specialization of the general term product.</aside>
+<h2><a id="3.1.7.1-element-occurrence"></a>3.1.7.1 element occurrence<a href="terms_and_definitions.htm#3.1.7.1-element-occurrence"><i data-feather="link"></i></a></h2>
+<p>element's position within the project coordinate system and its containment within the spatial structure</p>
+<h2><a id="3.1.8-entity"></a>3.1.8 entity<a href="terms_and_definitions.htm#3.1.8-entity"><i data-feather="link"></i></a></h2>
+<p>class of information defined by common attributes and constraints as defined in ISO 10303-11</p>
+<aside class="aside-note"><mark>NOTE</mark> Similar to the term "class" in common programming languages but describing data structure only (not behavior such as methods).</aside>
+<h2><a id="3.1.9-external-reference"></a>3.1.9 external reference<a href="terms_and_definitions.htm#3.1.9-external-reference"><i data-feather="link"></i></a></h2>
+<p>link to information outside the data set, with direct relevance to the specific information the link originates from inside the data set</p>
+<h2><a id="3.1.10-feature"></a>3.1.10 feature<a href="terms_and_definitions.htm#3.1.10-feature"><i data-feather="link"></i></a></h2>
+<p>parametric information and additional property information modifying the shape representation of an element to which it applies</p>
+<h2><a id="3.1.11-group"></a>3.1.11 group<a href="terms_and_definitions.htm#3.1.11-group"><i data-feather="link"></i></a></h2>
+<p>collection of information that fulfills a specified purpose</p>
+<aside class="aside-note"><mark>NOTE</mark> A specialization of the general term object.</aside>
+<h2><a id="3.1.12-identification"></a>3.1.12 identification<a href="terms_and_definitions.htm#3.1.12-identification"><i data-feather="link"></i></a></h2>
+<p>capability to find, retrieve, report, change, or delete specific instances without ambiguity</p>
+<h2><a id="3.1.13-instance"></a>3.1.13 instance<a href="terms_and_definitions.htm#3.1.13-instance"><i data-feather="link"></i></a></h2>
+<p>occurrence of an entity</p>
+<aside class="aside-note"><mark>NOTE</mark> Similar to the term "instance of a class" in object oriented programming.</aside>
+<h2><a id="3.1.14-library"></a>3.1.14 library<a href="terms_and_definitions.htm#3.1.14-library"><i data-feather="link"></i></a></h2>
+<p>catalogue, database or holder of data, that is relevant to information in the data set</p>
+<aside class="aside-note"><mark>NOTE</mark> It is information referenced from an external source that is not copied into the data set.</aside>
+<h2><a id="3.1.15-model"></a>3.1.15 model<a href="terms_and_definitions.htm#3.1.15-model"><i data-feather="link"></i></a></h2>
+<p>a data set, governed by the structure of an underlying schema, to meet certain data requirements</p>
+<aside class="aside-note"><mark>NOTE</mark>  Information models and building information models are examples for a model.</aside><aside class="aside-note"><mark>NOTE</mark>  In scope of this standard IFC models are populations of the IFC schema.</aside>
+<h2><a id="3.1.16-model-view"></a>3.1.16 model view<a href="terms_and_definitions.htm#3.1.16-model-view"><i data-feather="link"></i></a></h2>
+<p>subset of a schema, representing the data structure required to fulfill the data requirements within one or several exchange scenarios</p>
+<aside class="aside-note"><mark>NOTE</mark>  Beside being a subset of a schema, a model view (or model view definition) may also impose additional constraints to the population of the subset schema</aside>
+<h2><a id="3.1.16.1-concept"></a>3.1.16.1 concept<a href="terms_and_definitions.htm#3.1.16.1-concept"><i data-feather="link"></i></a></h2>
+<p>rules on using a subset of the schema structure identified as a concept template to enable a certain functionality within the context of a concept root contained in a model view</p>
+<aside class="aside-note"><mark>NOTE</mark>  The utilization of material definitions for a particular concept root representing a wall is an example of a concept.</aside>
+<h2><a id="3.1.16.2-concept-template"></a>3.1.16.2 concept template<a href="terms_and_definitions.htm#3.1.16.2-concept-template"><i data-feather="link"></i></a></h2>
+<p>the specification of a subset of the schema structure to enable a certain unit of functionality</p>
+<aside class="aside-note"><mark>NOTE</mark>  The identification of the entities, attributes and constraints needed to express a material definition independently on how it is utilized later in the context of a wall is an example of a concept template.</aside>
+<h2><a id="3.1.16.3-concept-root"></a>3.1.16.3 concept root<a href="terms_and_definitions.htm#3.1.16.3-concept-root"><i data-feather="link"></i></a></h2>
+<p>an entity of a schema used to assign concepts to describe the required functionality</p>
+<aside class="aside-note"><mark>NOTE</mark>  A root concept often describes a model element, such as wall, air outlet, construction task, or similar, that is the root of a graph of connected entities and attributes defining the specific information items required, such as geometry, material, breakdown structure, etc.</aside>
+<h2><a id="3.1.17-object"></a>3.1.17 object<a href="terms_and_definitions.htm#3.1.17-object"><i data-feather="link"></i></a></h2>
+<p>anything perceivable or conceivable that has a distinct existence, albeit not material</p>
+<h2><a id="3.1.17.1-object-occurrence"></a>3.1.17.1 object occurrence<a href="terms_and_definitions.htm#3.1.17.1-object-occurrence"><i data-feather="link"></i></a></h2>
+<p>characteristics of an object as an individual</p>
+<aside class="aside-note"><mark>NOTE</mark> Similar to "object", "instance", "individual" in other publications.</aside>
+<h2><a id="3.1.17.2-object-type"></a>3.1.17.2 object type<a href="terms_and_definitions.htm#3.1.17.2-object-type"><i data-feather="link"></i></a></h2>
+<p>common characteristics shared by multiple object-occurrences</p>
+<aside class="aside-note"><mark>NOTE</mark> Similar to "class", "template", "type" in other publications.</aside>
+<h2><a id="3.1.18-process"></a>3.1.18 process<a href="terms_and_definitions.htm#3.1.18-process"><i data-feather="link"></i></a></h2>
+<p>object-occurrence located in time, indicating "when"</p>
+<h2><a id="3.1.19-product"></a>3.1.19 product<a href="terms_and_definitions.htm#3.1.19-product"><i data-feather="link"></i></a></h2>
+<p>physical or conceptual object that occurs in space</p>
+<aside class="aside-note"><mark>NOTE</mark> It is specialization of the general term object.</aside>
+<h2><a id="3.1.20-project"></a>3.1.20 project<a href="terms_and_definitions.htm#3.1.20-project"><i data-feather="link"></i></a></h2>
+<p>encapsulation of related information for a particular purpose providing context for information contained within</p>
+<aside class="aside-note"><mark>NOTE</mark> Context information may include default measurement units or representation context and precision.</aside>
+<h2><a id="3.1.21-property"></a>3.1.21 property<a href="terms_and_definitions.htm#3.1.21-property"><i data-feather="link"></i></a></h2>
+<p>unit of information that is dynamically defined as a particular entity instance</p>
+<aside class="aside-note"><mark>NOTE</mark> Similar to "late-bound" or "run-time" in programming terminology.</aside>
+<h2><a id="3.1.21.1-property-occurrence"></a>3.1.21.1 property occurrence<a href="terms_and_definitions.htm#3.1.21.1-property-occurrence"><i data-feather="link"></i></a></h2>
+<p>unit of information providing a value for a property identified by name</p>
+<h2><a id="3.1.21.2-property-template"></a>3.1.21.2 property template<a href="terms_and_definitions.htm#3.1.21.2-property-template"><i data-feather="link"></i></a></h2>
+<p>metadata for a property including name, description, and data type</p>
+<aside class="aside-note"><mark>NOTE</mark> Similar in concept to "extension property" in common programming languages.</aside>
+<h2><a id="3.1.21.3-property-set-occurrence"></a>3.1.21.3 property set occurrence<a href="terms_and_definitions.htm#3.1.21.3-property-set-occurrence"><i data-feather="link"></i></a></h2>
+<p>unit of information containing a set of property occurrences, each having a unique name within the property set</p>
+<h2><a id="3.1.21.4-property-set-template"></a>3.1.21.4 property set template<a href="terms_and_definitions.htm#3.1.21.4-property-set-template"><i data-feather="link"></i></a></h2>
+<p>set of property templates serving a common purpose and having applicability to objects of a particular entity</p>
+<aside class="aside-note"><mark>NOTE</mark> Similar in concept to "extension class" in common programming languages.</aside>
+<h2><a id="3.1.22-proxy"></a>3.1.22 proxy<a href="terms_and_definitions.htm#3.1.22-proxy"><i data-feather="link"></i></a></h2>
+<p>object that does not hold a specific object type information</p>
+<aside class="aside-note"><mark>NOTE</mark> a specialization of object occurrence.</aside>
+<h2><a id="3.1.23-quantity"></a>3.1.23 quantity<a href="terms_and_definitions.htm#3.1.23-quantity"><i data-feather="link"></i></a></h2>
+<p>measurement of a scope-based metric, specifically length, area, volume, weight, count, or time</p>
+<h2><a id="3.1.24-relationship"></a>3.1.24 relationship<a href="terms_and_definitions.htm#3.1.24-relationship"><i data-feather="link"></i></a></h2>
+<p>unit of information describing an interaction between items</p>
+<h2><a id="3.1.25-representation"></a>3.1.25 representation<a href="terms_and_definitions.htm#3.1.25-representation"><i data-feather="link"></i></a></h2>
+<p>unit of information describing how an object is displayed, such as physical shape or topology</p>
+<h2><a id="3.1.26-resource"></a>3.1.26 resource<a href="terms_and_definitions.htm#3.1.26-resource"><i data-feather="link"></i></a></h2>
+<p>entity with limited availability such as materials, labor, or equipment</p>
+<aside class="aside-note"><mark>NOTE</mark> a specialization of the general term object.</aside><aside class="aside-note"><mark>NOTE</mark> the "resource definition data schemas" section is unrelated to this concept.</aside>
+<h2><a id="3.1.27-schema"></a>3.1.27 schema<a href="terms_and_definitions.htm#3.1.27-schema"><i data-feather="link"></i></a></h2>
+<p>the definition of the structure to organize data for storage, exchange and sharing, using a formal language</p>
+<aside class="aside-note"><mark>NOTE</mark>  The formal languages EXPRESS ISO 10303-11 and XML Schema W3C Recommendation are currently used to define the schemata of this standard</aside>
+<h2><a id="3.1.28-space"></a>3.1.28 space<a href="terms_and_definitions.htm#3.1.28-space"><i data-feather="link"></i></a></h2>
+<p>area or volume bounded actually or theoretically</p>
+<aside class="aside-note"><mark>NOTE</mark> a specialization of the general term product.</aside>
+<h2><a id="3.1.29-type"></a>3.1.29 type<a href="terms_and_definitions.htm#3.1.29-type"><i data-feather="link"></i></a></h2>
+<p>basic information construct derived from a primitive, an enumeration, or a select of entities</p>
+<aside class="aside-note"><mark>NOTE</mark> Similar to the "Type" construct as defined in ISO 10303-11.</aside><aside class="aside-note"><mark>NOTE</mark> Similar in concept to "typedef" or "value type" in common programming languages.</aside>
+<h2><a id="3.1.29.1-select"></a>3.1.29.1 select<a href="terms_and_definitions.htm#3.1.29.1-select"><i data-feather="link"></i></a></h2>
+<p>construct that allows an attribute value to be one of multiple types or entities</p>
+<aside class="aside-note"><mark>NOTE</mark> Similar to the "Select" construct as defined in ISO 10303-11.</aside><aside class="aside-note"><mark>NOTE</mark> Similar to a "marker interface" in common programming languages.</aside>
+<h2><a id="3.1.29.2-enumeration"></a>3.1.29.2 enumeration<a href="terms_and_definitions.htm#3.1.29.2-enumeration"><i data-feather="link"></i></a></h2>
+<p>construct that allows an attribute value to be one of multiple predefined values identified by name</p>
+<aside class="aside-note"><mark>NOTE</mark> Similar to the "Enumeration" construct as defined in ISO 10303-11.</aside><aside class="aside-note"><mark>NOTE</mark> Similar in concept to "enum" in common programming languages.</aside>
+<ul>
+<li>AEC: Architecture, Engineering, and Construction</li>
+<li>AEC-FM: Architecture, Engineering, Construction, and Facilities Management</li>
+<li>BIM: Building Information Modeling</li>
+<li>GUID: Globally Unique Identifier</li>
+<li>IFC: Industry Foundation Classes</li>
+<li>IFD: International Framework for Dictionaries</li>
+<li>MVD: Model View Definition</li>
+<li>SPF or SPFF: STEP Physical File</li>
+<li>STEP: STandard for the Exchange of Product data</li>
+<li>URI: Uniform Resource Identifier</li>
+<li>UUID: Universally Unique Identifier</li>
+<li>XML: Extensible Markup Language</li>
+</ul>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/content/terms_and_definitions.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

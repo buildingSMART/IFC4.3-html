@@ -1,0 +1,1313 @@
+<html lang="en">
+<head>
+<link href="../../../../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../../../../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>4.4.4.4 Port Nesting - IFC4.3.0.0 Documentation</title>
+<link href="../../../../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../../../../toc.html">
+                             Contents
+                        </a>
+<a href="../../../../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../../../../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../../../../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../../../../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../../../../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a class="current" href="../../../content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../../../../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../../../../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../../../../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a href="../../../../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../../../../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../../../../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../../../../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../../../../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../../../../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../../../../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../../../../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../../../../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>4.4.4.4 Port Nesting</h1>
+<p>Ports indicate possible connections to other objects according to specified system types, flow direction, and connection properties. Ports are typically connected between devices via cables, pipes, or ducts.</p>
+<p>Ports may have placement defined indicating the position and outward orientation of the port relative to the product or product type. Ports may also have material profile sets defined indicating the flow area and connection enclosure.</p>
+<p>
+    The following diagram shows the generic classes and relationships used when applying this concept.
+    
+    In addition, concepts may have particular importance to common or standardised industry practices and scenarios. For these specific usage scenarios, the tables below shows a recommended list of general usage patterns that users may adopt.
+    
+</p>
+<figure><a id="Figure-4.4.4.4.A"></a><svg height="876px" viewbox="0.00 0.00 2018.00 1168.50" width="1512px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="graph" id="graph0" transform="scale(1 1) rotate(0) translate(4 1164.5)">
+<title>G</title>
+<polygon fill="transparent" points="-4,4 -4,-1164.5 2014,-1164.5 2014,4 -4,4" stroke="transparent"></polygon>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionElement.htm'>IfcDistributionElement</a> -->
+<g class="node" id="node1">
+<title><a href="../../../../lexical/IfcDistributionElement.htm">IfcDistributionElement</a></title>
+<polygon fill="#1976d2" points="8.5,-1129 8.5,-1156 258.5,-1156 258.5,-1129 8.5,-1129" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1129 258.5,-1129 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="14.5" y="-1139.8"><a href="../../../../lexical/IfcDistributionElement.htm">IfcDistributionElement</a></text>
+<polygon fill="#1976d2" points="258.5,-1129 258.5,-1156 297.5,-1156 297.5,-1129 258.5,-1129" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1129 297.5,-1129 " stroke="#000000"></polyline>
+<polygon fill="#ffffff" points="8.5,-1102 8.5,-1129 258.5,-1129 258.5,-1102 8.5,-1102" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1102 258.5,-1102 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-1111.8">GlobalId</text>
+<polygon fill="#ffffff" points="258.5,-1102 258.5,-1129 297.5,-1129 297.5,-1102 258.5,-1102" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1102 297.5,-1102 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-1111.8">[1:1]</text>
+<polygon fill="#ffffff" points="8.5,-1075 8.5,-1102 258.5,-1102 258.5,-1075 8.5,-1075" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1075 258.5,-1075 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-1084.8">OwnerHistory</text>
+<polygon fill="#ffffff" points="258.5,-1075 258.5,-1102 297.5,-1102 297.5,-1075 258.5,-1075" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1075 297.5,-1075 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-1084.8">[0:1]</text>
+<polygon fill="#ffffff" points="8.5,-1048 8.5,-1075 258.5,-1075 258.5,-1048 8.5,-1048" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1048 258.5,-1048 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-1057.8">Name</text>
+<polygon fill="#ffffff" points="258.5,-1048 258.5,-1075 297.5,-1075 297.5,-1048 258.5,-1048" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1048 297.5,-1048 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-1057.8">[0:1]</text>
+<polygon fill="#ffffff" points="8.5,-1021 8.5,-1048 258.5,-1048 258.5,-1021 8.5,-1021" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1021 258.5,-1021 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-1030.8">Description</text>
+<polygon fill="#ffffff" points="258.5,-1021 258.5,-1048 297.5,-1048 297.5,-1021 258.5,-1021" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1021 297.5,-1021 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-1030.8">[0:1]</text>
+<polygon fill="#ffffff" points="8.5,-994 8.5,-1021 258.5,-1021 258.5,-994 8.5,-994" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-994 258.5,-994 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-1003.8">HasAssignments</text>
+<polygon fill="#ffffff" points="258.5,-994 258.5,-1021 297.5,-1021 297.5,-994 258.5,-994" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-994 297.5,-994 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-1003.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-967 8.5,-994 258.5,-994 258.5,-967 8.5,-967" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-967 258.5,-967 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-976.8">Nests</text>
+<polygon fill="#ffffff" points="258.5,-967 258.5,-994 297.5,-994 297.5,-967 258.5,-967" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-967 297.5,-967 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-976.8">[0:1]</text>
+<polygon fill="#dddddd" points="8.5,-940 8.5,-967 258.5,-967 258.5,-940 8.5,-940" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-940 258.5,-940 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-949.8">IsNestedBy</text>
+<polygon fill="#dddddd" points="258.5,-940 258.5,-967 297.5,-967 297.5,-940 258.5,-940" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-940 297.5,-940 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-949.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-913 8.5,-940 258.5,-940 258.5,-913 8.5,-913" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-913 258.5,-913 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-922.8">HasContext</text>
+<polygon fill="#ffffff" points="258.5,-913 258.5,-940 297.5,-940 297.5,-913 258.5,-913" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-913 297.5,-913 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-922.8">[0:1]</text>
+<polygon fill="#ffffff" points="8.5,-886 8.5,-913 258.5,-913 258.5,-886 8.5,-886" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-886 258.5,-886 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-895.8">IsDecomposedBy</text>
+<polygon fill="#ffffff" points="258.5,-886 258.5,-913 297.5,-913 297.5,-886 258.5,-886" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-886 297.5,-886 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-895.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-859 8.5,-886 258.5,-886 258.5,-859 8.5,-859" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-859 258.5,-859 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-868.8">Decomposes</text>
+<polygon fill="#ffffff" points="258.5,-859 258.5,-886 297.5,-886 297.5,-859 258.5,-859" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-859 297.5,-859 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-868.8">[0:1]</text>
+<polygon fill="#ffffff" points="8.5,-832 8.5,-859 258.5,-859 258.5,-832 8.5,-832" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-832 258.5,-832 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-841.8">HasAssociations</text>
+<polygon fill="#ffffff" points="258.5,-832 258.5,-859 297.5,-859 297.5,-832 258.5,-832" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-832 297.5,-832 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-841.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-805 8.5,-832 258.5,-832 258.5,-805 8.5,-805" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-805 258.5,-805 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-814.8">ObjectType</text>
+<polygon fill="#ffffff" points="258.5,-805 258.5,-832 297.5,-832 297.5,-805 258.5,-805" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-805 297.5,-805 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-814.8">[0:1]</text>
+<polygon fill="#ffffff" points="8.5,-778 8.5,-805 258.5,-805 258.5,-778 8.5,-778" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-778 258.5,-778 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-787.8">IsDeclaredBy</text>
+<polygon fill="#ffffff" points="258.5,-778 258.5,-805 297.5,-805 297.5,-778 258.5,-778" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-778 297.5,-778 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-787.8">[0:1]</text>
+<polygon fill="#ffffff" points="8.5,-751 8.5,-778 258.5,-778 258.5,-751 8.5,-751" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-751 258.5,-751 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-760.8">Declares</text>
+<polygon fill="#ffffff" points="258.5,-751 258.5,-778 297.5,-778 297.5,-751 258.5,-751" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-751 297.5,-751 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-760.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-724 8.5,-751 258.5,-751 258.5,-724 8.5,-724" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-724 258.5,-724 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-733.8">IsTypedBy</text>
+<polygon fill="#ffffff" points="258.5,-724 258.5,-751 297.5,-751 297.5,-724 258.5,-724" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-724 297.5,-724 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-733.8">[0:1]</text>
+<polygon fill="#ffffff" points="8.5,-697 8.5,-724 258.5,-724 258.5,-697 8.5,-697" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-697 258.5,-697 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-706.8">IsDefinedBy</text>
+<polygon fill="#ffffff" points="258.5,-697 258.5,-724 297.5,-724 297.5,-697 258.5,-697" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-697 297.5,-697 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-706.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-670 8.5,-697 258.5,-697 258.5,-670 8.5,-670" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-670 258.5,-670 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-679.8">ObjectPlacement</text>
+<polygon fill="#ffffff" points="258.5,-670 258.5,-697 297.5,-697 297.5,-670 258.5,-670" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-670 297.5,-670 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-679.8">[0:1]</text>
+<polygon fill="#ffffff" points="8.5,-643 8.5,-670 258.5,-670 258.5,-643 8.5,-643" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-643 258.5,-643 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-652.8">Representation</text>
+<polygon fill="#ffffff" points="258.5,-643 258.5,-670 297.5,-670 297.5,-643 258.5,-643" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-643 297.5,-643 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-652.8">[0:1]</text>
+<polygon fill="#ffffff" points="8.5,-616 8.5,-643 258.5,-643 258.5,-616 8.5,-616" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-616 258.5,-616 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-625.8">ReferencedBy</text>
+<polygon fill="#ffffff" points="258.5,-616 258.5,-643 297.5,-643 297.5,-616 258.5,-616" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-616 297.5,-616 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-625.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-589 8.5,-616 258.5,-616 258.5,-589 8.5,-589" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-589 258.5,-589 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-598.8">PositionedRelativeTo</text>
+<polygon fill="#ffffff" points="258.5,-589 258.5,-616 297.5,-616 297.5,-589 258.5,-589" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-589 297.5,-589 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-598.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-562 8.5,-589 258.5,-589 258.5,-562 8.5,-562" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-562 258.5,-562 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-571.8">ReferencedInStructures</text>
+<polygon fill="#ffffff" points="258.5,-562 258.5,-589 297.5,-589 297.5,-562 258.5,-562" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-562 297.5,-562 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-571.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-535 8.5,-562 258.5,-562 258.5,-535 8.5,-535" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-535 258.5,-535 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-544.8">Tag</text>
+<polygon fill="#ffffff" points="258.5,-535 258.5,-562 297.5,-562 297.5,-535 258.5,-535" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-535 297.5,-535 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-544.8">[0:1]</text>
+<polygon fill="#ffffff" points="8.5,-508 8.5,-535 258.5,-535 258.5,-508 8.5,-508" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-508 258.5,-508 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-517.8">FillsVoids</text>
+<polygon fill="#ffffff" points="258.5,-508 258.5,-535 297.5,-535 297.5,-508 258.5,-508" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-508 297.5,-508 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-517.8">[0:1]</text>
+<polygon fill="#ffffff" points="8.5,-481 8.5,-508 258.5,-508 258.5,-481 8.5,-481" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-481 258.5,-481 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-490.8">ConnectedTo</text>
+<polygon fill="#ffffff" points="258.5,-481 258.5,-508 297.5,-508 297.5,-481 258.5,-481" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-481 297.5,-481 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-490.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-454 8.5,-481 258.5,-481 258.5,-454 8.5,-454" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-454 258.5,-454 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-463.8">IsInterferedByElements</text>
+<polygon fill="#ffffff" points="258.5,-454 258.5,-481 297.5,-481 297.5,-454 258.5,-454" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-454 297.5,-454 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-463.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-427 8.5,-454 258.5,-454 258.5,-427 8.5,-427" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-427 258.5,-427 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-436.8">InterferesElements</text>
+<polygon fill="#ffffff" points="258.5,-427 258.5,-454 297.5,-454 297.5,-427 258.5,-427" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-427 297.5,-427 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-436.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-400 8.5,-427 258.5,-427 258.5,-400 8.5,-400" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-400 258.5,-400 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-409.8">HasProjections</text>
+<polygon fill="#ffffff" points="258.5,-400 258.5,-427 297.5,-427 297.5,-400 258.5,-400" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-400 297.5,-400 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-409.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-373 8.5,-400 258.5,-400 258.5,-373 8.5,-373" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-373 258.5,-373 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-382.8">HasOpenings</text>
+<polygon fill="#ffffff" points="258.5,-373 258.5,-400 297.5,-400 297.5,-373 258.5,-373" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-373 297.5,-373 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-382.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-346 8.5,-373 258.5,-373 258.5,-346 8.5,-346" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-346 258.5,-346 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-355.8">IsConnectionRealization</text>
+<polygon fill="#ffffff" points="258.5,-346 258.5,-373 297.5,-373 297.5,-346 258.5,-346" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-346 297.5,-346 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-355.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-319 8.5,-346 258.5,-346 258.5,-319 8.5,-319" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-319 258.5,-319 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-328.8">ProvidesBoundaries</text>
+<polygon fill="#ffffff" points="258.5,-319 258.5,-346 297.5,-346 297.5,-319 258.5,-319" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-319 297.5,-319 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-328.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-292 8.5,-319 258.5,-319 258.5,-292 8.5,-292" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-292 258.5,-292 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-301.8">ConnectedFrom</text>
+<polygon fill="#ffffff" points="258.5,-292 258.5,-319 297.5,-319 297.5,-292 258.5,-292" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-292 297.5,-292 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-301.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-265 8.5,-292 258.5,-292 258.5,-265 8.5,-265" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-265 258.5,-265 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-274.8">ContainedInStructure</text>
+<polygon fill="#ffffff" points="258.5,-265 258.5,-292 297.5,-292 297.5,-265 258.5,-265" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-265 297.5,-265 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-274.8">[0:1]</text>
+<polygon fill="#ffffff" points="8.5,-238 8.5,-265 258.5,-265 258.5,-238 8.5,-238" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-238 258.5,-238 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-247.8">HasCoverings</text>
+<polygon fill="#ffffff" points="258.5,-238 258.5,-265 297.5,-265 297.5,-238 258.5,-238" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-238 297.5,-238 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-247.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-211 8.5,-238 258.5,-238 258.5,-211 8.5,-211" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-211 258.5,-211 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-220.8">HasSurfaceFeatures</text>
+<polygon fill="#ffffff" points="258.5,-211 258.5,-238 297.5,-238 297.5,-211 258.5,-211" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-211 297.5,-211 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-220.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-184 8.5,-211 258.5,-211 258.5,-184 8.5,-184" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-184 258.5,-184 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-193.8">HasPorts</text>
+<polygon fill="#ffffff" points="258.5,-184 258.5,-211 297.5,-211 297.5,-184 258.5,-184" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-184 297.5,-184 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-193.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-157 8.5,-184 258.5,-184 258.5,-157 8.5,-157" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-157 258.5,-157 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-166.8">...</text>
+<polygon fill="#ffffff" points="258.5,-157 258.5,-184 297.5,-184 297.5,-157 258.5,-157" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-157 297.5,-157 " stroke="#000000"></polyline>
+<polygon fill="#eeeeee" points="8.5,-130 8.5,-157 258.5,-157 258.5,-130 8.5,-130" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-130 258.5,-130 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="87" y="-140.8">PredefinedType</text>
+<polygon fill="#eeeeee" points="258.5,-130 258.5,-157 297.5,-157 297.5,-130 258.5,-130" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-130 297.5,-130 " stroke="#000000"></polyline>
+<polygon fill="#eeeeee" points="8.5,-103 8.5,-130 258.5,-130 258.5,-103 8.5,-103" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-103 258.5,-103 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-112.8">PredefinedType</text>
+<polygon fill="#eeeeee" points="258.5,-103 258.5,-130 297.5,-130 297.5,-103 258.5,-103" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-103 297.5,-103 " stroke="#000000"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm'>IfcRelNests</a> -->
+<g class="node" id="node2">
+<title><a href="../../../../lexical/IfcRelNests.htm">IfcRelNests</a></title>
+<polygon fill="#1976d2" points="349.5,-1076 349.5,-1103 599.5,-1103 599.5,-1076 349.5,-1076" stroke="transparent"></polygon>
+<polyline fill="none" points="349.5,-1076 599.5,-1076 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="355.5" y="-1086.8"><a href="../../../../lexical/IfcRelNests.htm">IfcRelNests</a></text>
+<polygon fill="#1976d2" points="599.5,-1076 599.5,-1103 638.5,-1103 638.5,-1076 599.5,-1076" stroke="transparent"></polygon>
+<polyline fill="none" points="599.5,-1076 638.5,-1076 " stroke="#000000"></polyline>
+<polygon fill="#ffffff" points="349.5,-1049 349.5,-1076 599.5,-1076 599.5,-1049 349.5,-1049" stroke="transparent"></polygon>
+<polyline fill="none" points="349.5,-1049 599.5,-1049 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="355.5" y="-1058.8">GlobalId</text>
+<polygon fill="#ffffff" points="599.5,-1049 599.5,-1076 638.5,-1076 638.5,-1049 599.5,-1049" stroke="transparent"></polygon>
+<polyline fill="none" points="599.5,-1049 638.5,-1049 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="605.5" y="-1058.8">[1:1]</text>
+<polygon fill="#ffffff" points="349.5,-1022 349.5,-1049 599.5,-1049 599.5,-1022 349.5,-1022" stroke="transparent"></polygon>
+<polyline fill="none" points="349.5,-1022 599.5,-1022 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="355.5" y="-1031.8">OwnerHistory</text>
+<polygon fill="#ffffff" points="599.5,-1022 599.5,-1049 638.5,-1049 638.5,-1022 599.5,-1022" stroke="transparent"></polygon>
+<polyline fill="none" points="599.5,-1022 638.5,-1022 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="605.5" y="-1031.8">[0:1]</text>
+<polygon fill="#ffffff" points="349.5,-995 349.5,-1022 599.5,-1022 599.5,-995 349.5,-995" stroke="transparent"></polygon>
+<polyline fill="none" points="349.5,-995 599.5,-995 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="355.5" y="-1004.8">Name</text>
+<polygon fill="#ffffff" points="599.5,-995 599.5,-1022 638.5,-1022 638.5,-995 599.5,-995" stroke="transparent"></polygon>
+<polyline fill="none" points="599.5,-995 638.5,-995 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="605.5" y="-1004.8">[0:1]</text>
+<polygon fill="#ffffff" points="349.5,-968 349.5,-995 599.5,-995 599.5,-968 349.5,-968" stroke="transparent"></polygon>
+<polyline fill="none" points="349.5,-968 599.5,-968 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="355.5" y="-977.8">Description</text>
+<polygon fill="#ffffff" points="599.5,-968 599.5,-995 638.5,-995 638.5,-968 599.5,-968" stroke="transparent"></polygon>
+<polyline fill="none" points="599.5,-968 638.5,-968 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="605.5" y="-977.8">[0:1]</text>
+<polygon fill="#dddddd" points="349.5,-941 349.5,-968 599.5,-968 599.5,-941 349.5,-941" stroke="transparent"></polygon>
+<polyline fill="none" points="349.5,-941 599.5,-941 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="355.5" y="-950.8">RelatingObject</text>
+<polygon fill="#dddddd" points="599.5,-941 599.5,-968 638.5,-968 638.5,-941 599.5,-941" stroke="transparent"></polygon>
+<polyline fill="none" points="599.5,-941 638.5,-941 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="605.5" y="-950.8">[1:1]</text>
+<polygon fill="#dddddd" points="349.5,-914 349.5,-941 599.5,-941 599.5,-914 349.5,-914" stroke="transparent"></polygon>
+<polyline fill="none" points="349.5,-914 599.5,-914 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="355.5" y="-923.8">RelatedObjects</text>
+<polygon fill="#dddddd" points="599.5,-914 599.5,-941 638.5,-941 638.5,-914 599.5,-914" stroke="transparent"></polygon>
+<polyline fill="none" points="599.5,-914 638.5,-914 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="606.5" y="-923.8">[1:?]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionElement.htm'>IfcDistributionElement</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm'>IfcRelNests</a> -->
+<g class="edge" id="edge1">
+<title><a href="../../../../lexical/IfcDistributionElement.htm">IfcDistributionElement</a>:IsNestedBy1-&gt;<a href="../../../../lexical/IfcRelNests.htm">IfcRelNests</a>:RelatingObject0</title>
+<path d="M307.5261,-954C322.6367,-954 349.5,-954 349.5,-954" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="307.5,-950.5001 297.5,-954 307.5,-957.5001 307.5,-950.5001" stroke="#000000"></polygon>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionPort.htm'>IfcDistributionPort</a> -->
+<g class="node" id="node3">
+<title><a href="../../../../lexical/IfcDistributionPort.htm">IfcDistributionPort</a></title>
+<polygon fill="#1976d2" points="690.5,-913 690.5,-940 940.5,-940 940.5,-913 690.5,-913" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-913 940.5,-913 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="696.5" y="-923.8"><a href="../../../../lexical/IfcDistributionPort.htm">IfcDistributionPort</a></text>
+<polygon fill="#1976d2" points="940.5,-913 940.5,-940 979.5,-940 979.5,-913 940.5,-913" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-913 979.5,-913 " stroke="#000000"></polyline>
+<polygon fill="#ffffff" points="690.5,-886 690.5,-913 940.5,-913 940.5,-886 690.5,-886" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-886 940.5,-886 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-895.8">GlobalId</text>
+<polygon fill="#ffffff" points="940.5,-886 940.5,-913 979.5,-913 979.5,-886 940.5,-886" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-886 979.5,-886 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="946.5" y="-895.8">[1:1]</text>
+<polygon fill="#ffffff" points="690.5,-859 690.5,-886 940.5,-886 940.5,-859 690.5,-859" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-859 940.5,-859 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-868.8">OwnerHistory</text>
+<polygon fill="#ffffff" points="940.5,-859 940.5,-886 979.5,-886 979.5,-859 940.5,-859" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-859 979.5,-859 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="946.5" y="-868.8">[0:1]</text>
+<polygon fill="#eeeeee" points="690.5,-832 690.5,-859 940.5,-859 940.5,-832 690.5,-832" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-832 940.5,-832 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="785" y="-842.8">PortName</text>
+<polygon fill="#eeeeee" points="940.5,-832 940.5,-859 979.5,-859 979.5,-832 940.5,-832" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-832 979.5,-832 " stroke="#000000"></polyline>
+<polygon fill="#dddddd" points="690.5,-805 690.5,-832 940.5,-832 940.5,-805 690.5,-805" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-805 940.5,-805 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-814.8">Name</text>
+<polygon fill="#dddddd" points="940.5,-805 940.5,-832 979.5,-832 979.5,-805 940.5,-805" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-805 979.5,-805 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="946.5" y="-814.8">[0:1]</text>
+<polygon fill="#ffffff" points="690.5,-778 690.5,-805 940.5,-805 940.5,-778 690.5,-778" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-778 940.5,-778 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-787.8">Description</text>
+<polygon fill="#ffffff" points="940.5,-778 940.5,-805 979.5,-805 979.5,-778 940.5,-778" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-778 979.5,-778 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="946.5" y="-787.8">[0:1]</text>
+<polygon fill="#ffffff" points="690.5,-751 690.5,-778 940.5,-778 940.5,-751 690.5,-751" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-751 940.5,-751 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-760.8">HasAssignments</text>
+<polygon fill="#ffffff" points="940.5,-751 940.5,-778 979.5,-778 979.5,-751 940.5,-751" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-751 979.5,-751 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="947.5" y="-760.8">[0:?]</text>
+<polygon fill="#ffffff" points="690.5,-724 690.5,-751 940.5,-751 940.5,-724 690.5,-724" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-724 940.5,-724 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-733.8">Nests</text>
+<polygon fill="#ffffff" points="940.5,-724 940.5,-751 979.5,-751 979.5,-724 940.5,-724" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-724 979.5,-724 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="946.5" y="-733.8">[0:1]</text>
+<polygon fill="#ffffff" points="690.5,-697 690.5,-724 940.5,-724 940.5,-697 690.5,-697" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-697 940.5,-697 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-706.8">IsNestedBy</text>
+<polygon fill="#ffffff" points="940.5,-697 940.5,-724 979.5,-724 979.5,-697 940.5,-697" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-697 979.5,-697 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="947.5" y="-706.8">[0:?]</text>
+<polygon fill="#ffffff" points="690.5,-670 690.5,-697 940.5,-697 940.5,-670 690.5,-670" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-670 940.5,-670 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-679.8">HasContext</text>
+<polygon fill="#ffffff" points="940.5,-670 940.5,-697 979.5,-697 979.5,-670 940.5,-670" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-670 979.5,-670 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="946.5" y="-679.8">[0:1]</text>
+<polygon fill="#ffffff" points="690.5,-643 690.5,-670 940.5,-670 940.5,-643 690.5,-643" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-643 940.5,-643 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-652.8">IsDecomposedBy</text>
+<polygon fill="#ffffff" points="940.5,-643 940.5,-670 979.5,-670 979.5,-643 940.5,-643" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-643 979.5,-643 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="947.5" y="-652.8">[0:?]</text>
+<polygon fill="#ffffff" points="690.5,-616 690.5,-643 940.5,-643 940.5,-616 690.5,-616" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-616 940.5,-616 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-625.8">Decomposes</text>
+<polygon fill="#ffffff" points="940.5,-616 940.5,-643 979.5,-643 979.5,-616 940.5,-616" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-616 979.5,-616 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="946.5" y="-625.8">[0:1]</text>
+<polygon fill="#ffffff" points="690.5,-589 690.5,-616 940.5,-616 940.5,-589 690.5,-589" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-589 940.5,-589 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-598.8">HasAssociations</text>
+<polygon fill="#ffffff" points="940.5,-589 940.5,-616 979.5,-616 979.5,-589 940.5,-589" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-589 979.5,-589 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="947.5" y="-598.8">[0:?]</text>
+<polygon fill="#ffffff" points="690.5,-562 690.5,-589 940.5,-589 940.5,-562 690.5,-562" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-562 940.5,-562 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-571.8">ObjectType</text>
+<polygon fill="#ffffff" points="940.5,-562 940.5,-589 979.5,-589 979.5,-562 940.5,-562" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-562 979.5,-562 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="946.5" y="-571.8">[0:1]</text>
+<polygon fill="#ffffff" points="690.5,-535 690.5,-562 940.5,-562 940.5,-535 690.5,-535" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-535 940.5,-535 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-544.8">IsDeclaredBy</text>
+<polygon fill="#ffffff" points="940.5,-535 940.5,-562 979.5,-562 979.5,-535 940.5,-535" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-535 979.5,-535 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="946.5" y="-544.8">[0:1]</text>
+<polygon fill="#ffffff" points="690.5,-508 690.5,-535 940.5,-535 940.5,-508 690.5,-508" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-508 940.5,-508 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-517.8">Declares</text>
+<polygon fill="#ffffff" points="940.5,-508 940.5,-535 979.5,-535 979.5,-508 940.5,-508" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-508 979.5,-508 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="947.5" y="-517.8">[0:?]</text>
+<polygon fill="#ffffff" points="690.5,-481 690.5,-508 940.5,-508 940.5,-481 690.5,-481" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-481 940.5,-481 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-490.8">IsTypedBy</text>
+<polygon fill="#ffffff" points="940.5,-481 940.5,-508 979.5,-508 979.5,-481 940.5,-481" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-481 979.5,-481 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="946.5" y="-490.8">[0:1]</text>
+<polygon fill="#ffffff" points="690.5,-454 690.5,-481 940.5,-481 940.5,-454 690.5,-454" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-454 940.5,-454 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-463.8">IsDefinedBy</text>
+<polygon fill="#ffffff" points="940.5,-454 940.5,-481 979.5,-481 979.5,-454 940.5,-454" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-454 979.5,-454 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="947.5" y="-463.8">[0:?]</text>
+<polygon fill="#dddddd" points="690.5,-427 690.5,-454 940.5,-454 940.5,-427 690.5,-427" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-427 940.5,-427 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-436.8">ObjectPlacement</text>
+<polygon fill="#dddddd" points="940.5,-427 940.5,-454 979.5,-454 979.5,-427 940.5,-427" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-427 979.5,-427 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="946.5" y="-436.8">[0:1]</text>
+<polygon fill="#ffffff" points="690.5,-400 690.5,-427 940.5,-427 940.5,-400 690.5,-400" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-400 940.5,-400 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-409.8">Representation</text>
+<polygon fill="#ffffff" points="940.5,-400 940.5,-427 979.5,-427 979.5,-400 940.5,-400" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-400 979.5,-400 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="946.5" y="-409.8">[0:1]</text>
+<polygon fill="#ffffff" points="690.5,-373 690.5,-400 940.5,-400 940.5,-373 690.5,-373" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-373 940.5,-373 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-382.8">ReferencedBy</text>
+<polygon fill="#ffffff" points="940.5,-373 940.5,-400 979.5,-400 979.5,-373 940.5,-373" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-373 979.5,-373 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="947.5" y="-382.8">[0:?]</text>
+<polygon fill="#ffffff" points="690.5,-346 690.5,-373 940.5,-373 940.5,-346 690.5,-346" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-346 940.5,-346 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-355.8">PositionedRelativeTo</text>
+<polygon fill="#ffffff" points="940.5,-346 940.5,-373 979.5,-373 979.5,-346 940.5,-346" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-346 979.5,-346 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="947.5" y="-355.8">[0:?]</text>
+<polygon fill="#ffffff" points="690.5,-319 690.5,-346 940.5,-346 940.5,-319 690.5,-319" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-319 940.5,-319 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-328.8">ReferencedInStructures</text>
+<polygon fill="#ffffff" points="940.5,-319 940.5,-346 979.5,-346 979.5,-319 940.5,-319" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-319 979.5,-319 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="947.5" y="-328.8">[0:?]</text>
+<polygon fill="#ffffff" points="690.5,-292 690.5,-319 940.5,-319 940.5,-292 690.5,-292" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-292 940.5,-292 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-301.8">ContainedIn</text>
+<polygon fill="#ffffff" points="940.5,-292 940.5,-319 979.5,-319 979.5,-292 940.5,-292" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-292 979.5,-292 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="946.5" y="-301.8">[0:1]</text>
+<polygon fill="#ffffff" points="690.5,-265 690.5,-292 940.5,-292 940.5,-265 690.5,-265" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-265 940.5,-265 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-274.8">ConnectedFrom</text>
+<polygon fill="#ffffff" points="940.5,-265 940.5,-292 979.5,-292 979.5,-265 940.5,-265" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-265 979.5,-265 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="946.5" y="-274.8">[0:1]</text>
+<polygon fill="#ffffff" points="690.5,-238 690.5,-265 940.5,-265 940.5,-238 690.5,-238" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-238 940.5,-238 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-247.8">ConnectedTo</text>
+<polygon fill="#ffffff" points="940.5,-238 940.5,-265 979.5,-265 979.5,-238 940.5,-238" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-238 979.5,-238 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="946.5" y="-247.8">[0:1]</text>
+<polygon fill="#eeeeee" points="690.5,-211 690.5,-238 940.5,-238 940.5,-211 690.5,-211" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-211 940.5,-211 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="801" y="-221.8">Flow</text>
+<polygon fill="#eeeeee" points="940.5,-211 940.5,-238 979.5,-238 979.5,-211 940.5,-211" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-211 979.5,-211 " stroke="#000000"></polyline>
+<polygon fill="#dddddd" points="690.5,-184 690.5,-211 940.5,-211 940.5,-184 690.5,-184" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-184 940.5,-184 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-193.8">FlowDirection</text>
+<polygon fill="#dddddd" points="940.5,-184 940.5,-211 979.5,-211 979.5,-184 940.5,-184" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-184 979.5,-184 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="946.5" y="-193.8">[0:1]</text>
+<polygon fill="#dddddd" points="690.5,-157 690.5,-184 940.5,-184 940.5,-157 690.5,-157" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-157 940.5,-157 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-166.8">PredefinedType</text>
+<polygon fill="#dddddd" points="940.5,-157 940.5,-184 979.5,-184 979.5,-157 940.5,-157" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-157 979.5,-157 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="946.5" y="-166.8">[0:1]</text>
+<polygon fill="#eeeeee" points="690.5,-130 690.5,-157 940.5,-157 940.5,-130 690.5,-130" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-130 940.5,-130 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="779.5" y="-140.8">SystemType</text>
+<polygon fill="#eeeeee" points="940.5,-130 940.5,-157 979.5,-157 979.5,-130 940.5,-130" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-130 979.5,-130 " stroke="#000000"></polyline>
+<polygon fill="#dddddd" points="690.5,-103 690.5,-130 940.5,-130 940.5,-103 690.5,-103" stroke="transparent"></polygon>
+<polyline fill="none" points="690.5,-103 940.5,-103 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="696.5" y="-112.8">SystemType</text>
+<polygon fill="#dddddd" points="940.5,-103 940.5,-130 979.5,-130 979.5,-103 940.5,-103" stroke="transparent"></polygon>
+<polyline fill="none" points="940.5,-103 979.5,-103 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="946.5" y="-112.8">[0:1]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRelNests.htm'>IfcRelNests</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionPort.htm'>IfcDistributionPort</a> -->
+<g class="edge" id="edge2">
+<title><a href="../../../../lexical/IfcRelNests.htm">IfcRelNests</a>:RelatedObjects1-&gt;<a href="../../../../lexical/IfcDistributionPort.htm">IfcDistributionPort</a>:IfcDistributionPort0</title>
+<path d="M619.5,-914C619.5,-914 646,-914 646,-914 646,-914 667.5139,-920.285 680.624,-924.1149" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="679.9197,-927.5554 690.5,-927 681.8827,-920.8362 679.9197,-927.5554" stroke="#000000"></polygon>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm'>IfcLabel</a> -->
+<g class="node" id="node4">
+<title><a href="../../../../lexical/IfcLabel.htm">IfcLabel</a></title>
+<polygon fill="#1976d2" points="1040.5,-806 1040.5,-833 1290.5,-833 1290.5,-806 1040.5,-806" stroke="transparent"></polygon>
+<polyline fill="none" points="1040.5,-806 1290.5,-806 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1046.5" y="-816.8"><a href="../../../../lexical/IfcLabel.htm">IfcLabel</a></text>
+<polygon fill="#1976d2" points="1290.5,-806 1290.5,-833 1310.5,-833 1310.5,-806 1290.5,-806" stroke="transparent"></polygon>
+<polyline fill="none" points="1290.5,-806 1310.5,-806 " stroke="#000000"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionPort.htm'>IfcDistributionPort</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLabel.htm'>IfcLabel</a> -->
+<g class="edge" id="edge3">
+<title><a href="../../../../lexical/IfcDistributionPort.htm">IfcDistributionPort</a>:Name1-&gt;<a href="../../../../lexical/IfcLabel.htm">IfcLabel</a>:IfcLabel0</title>
+<path d="M979.5,-819C979.5,-819 1013.1014,-819 1030.4271,-819" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1030.5,-822.5001 1040.5,-819 1030.5,-815.5001 1030.5,-822.5001" stroke="#000000"></polygon>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFlowDirectionEnum.htm'>IfcFlowDirectionEnum</a> -->
+<g class="node" id="node5">
+<title><a href="../../../../lexical/IfcFlowDirectionEnum.htm">IfcFlowDirectionEnum</a></title>
+<polygon fill="#1976d2" points="1040.5,-200 1040.5,-227 1290.5,-227 1290.5,-200 1040.5,-200" stroke="transparent"></polygon>
+<polyline fill="none" points="1040.5,-200 1290.5,-200 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1046.5" y="-210.8"><a href="../../../../lexical/IfcFlowDirectionEnum.htm">IfcFlowDirectionEnum</a></text>
+<polygon fill="#1976d2" points="1290.5,-200 1290.5,-227 1310.5,-227 1310.5,-200 1290.5,-200" stroke="transparent"></polygon>
+<polyline fill="none" points="1290.5,-200 1310.5,-200 " stroke="#000000"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionPort.htm'>IfcDistributionPort</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcFlowDirectionEnum.htm'>IfcFlowDirectionEnum</a> -->
+<g class="edge" id="edge4">
+<title><a href="../../../../lexical/IfcDistributionPort.htm">IfcDistributionPort</a>:FlowDirection1-&gt;<a href="../../../../lexical/IfcFlowDirectionEnum.htm">IfcFlowDirectionEnum</a>:IfcFlowDirectionEnum0</title>
+<path d="M979.5,-197C979.5,-197 1013.456,-205.9065 1030.6993,-210.4293" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1029.9392,-213.8483 1040.5,-213 1031.7152,-207.0773 1029.9392,-213.8483" stroke="#000000"></polygon>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionSystemEnum.htm'>IfcDistributionSystemEnum</a> -->
+<g class="node" id="node6">
+<title><a href="../../../../lexical/IfcDistributionSystemEnum.htm">IfcDistributionSystemEnum</a></title>
+<polygon fill="#1976d2" points="1040.5,-114 1040.5,-141 1290.5,-141 1290.5,-114 1040.5,-114" stroke="transparent"></polygon>
+<polyline fill="none" points="1040.5,-114 1290.5,-114 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1046.5" y="-124.8"><a href="../../../../lexical/IfcDistributionSystemEnum.htm">IfcDistributionSystemEnum</a></text>
+<polygon fill="#1976d2" points="1290.5,-114 1290.5,-141 1310.5,-141 1310.5,-114 1290.5,-114" stroke="transparent"></polygon>
+<polyline fill="none" points="1290.5,-114 1310.5,-114 " stroke="#000000"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionPort.htm'>IfcDistributionPort</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionSystemEnum.htm'>IfcDistributionSystemEnum</a> -->
+<g class="edge" id="edge5">
+<title><a href="../../../../lexical/IfcDistributionPort.htm">IfcDistributionPort</a>:SystemType1-&gt;<a href="../../../../lexical/IfcDistributionSystemEnum.htm">IfcDistributionSystemEnum</a>:IfcDistributionSystemEnum0</title>
+<path d="M979.5,-143C979.5,-143 1013.456,-134.0935 1030.6993,-129.5707" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1031.7152,-132.9227 1040.5,-127 1029.9392,-126.1517 1031.7152,-132.9227" stroke="#000000"></polygon>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm'>IfcLocalPlacement</a> -->
+<g class="node" id="node7">
+<title><a href="../../../../lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></title>
+<polygon fill="#1976d2" points="1031.5,-426 1031.5,-453 1281.5,-453 1281.5,-426 1031.5,-426" stroke="transparent"></polygon>
+<polyline fill="none" points="1031.5,-426 1281.5,-426 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1037.5" y="-436.8"><a href="../../../../lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a></text>
+<polygon fill="#1976d2" points="1281.5,-426 1281.5,-453 1320.5,-453 1320.5,-426 1281.5,-426" stroke="transparent"></polygon>
+<polyline fill="none" points="1281.5,-426 1320.5,-426 " stroke="#000000"></polyline>
+<polygon fill="#ffffff" points="1031.5,-399 1031.5,-426 1281.5,-426 1281.5,-399 1031.5,-399" stroke="transparent"></polygon>
+<polyline fill="none" points="1031.5,-399 1281.5,-399 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1037.5" y="-408.8">PlacementRelTo</text>
+<polygon fill="#ffffff" points="1281.5,-399 1281.5,-426 1320.5,-426 1320.5,-399 1281.5,-399" stroke="transparent"></polygon>
+<polyline fill="none" points="1281.5,-399 1320.5,-399 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1287.5" y="-408.8">[0:1]</text>
+<polygon fill="#ffffff" points="1031.5,-372 1031.5,-399 1281.5,-399 1281.5,-372 1031.5,-372" stroke="transparent"></polygon>
+<polyline fill="none" points="1031.5,-372 1281.5,-372 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1037.5" y="-381.8">PlacesObject</text>
+<polygon fill="#ffffff" points="1281.5,-372 1281.5,-399 1320.5,-399 1320.5,-372 1281.5,-372" stroke="transparent"></polygon>
+<polyline fill="none" points="1281.5,-372 1320.5,-372 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1288.5" y="-381.8">[0:?]</text>
+<polygon fill="#ffffff" points="1031.5,-345 1031.5,-372 1281.5,-372 1281.5,-345 1031.5,-345" stroke="transparent"></polygon>
+<polyline fill="none" points="1031.5,-345 1281.5,-345 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1037.5" y="-354.8">ReferencedByPlacements</text>
+<polygon fill="#ffffff" points="1281.5,-345 1281.5,-372 1320.5,-372 1320.5,-345 1281.5,-345" stroke="transparent"></polygon>
+<polyline fill="none" points="1281.5,-345 1320.5,-345 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1288.5" y="-354.8">[0:?]</text>
+<polygon fill="#dddddd" points="1031.5,-318 1031.5,-345 1281.5,-345 1281.5,-318 1031.5,-318" stroke="transparent"></polygon>
+<polyline fill="none" points="1031.5,-318 1281.5,-318 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1037.5" y="-327.8">RelativePlacement</text>
+<polygon fill="#dddddd" points="1281.5,-318 1281.5,-345 1320.5,-345 1320.5,-318 1281.5,-318" stroke="transparent"></polygon>
+<polyline fill="none" points="1281.5,-318 1320.5,-318 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1287.5" y="-327.8">[1:1]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionPort.htm'>IfcDistributionPort</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm'>IfcLocalPlacement</a> -->
+<g class="edge" id="edge6">
+<title><a href="../../../../lexical/IfcDistributionPort.htm">IfcDistributionPort</a>:ObjectPlacement1-&gt;<a href="../../../../lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a>:IfcLocalPlacement0</title>
+<path d="M979.5,-440C979.5,-440 1006.3633,-440 1021.4739,-440" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1021.5,-443.5001 1031.5,-440 1021.5,-436.5001 1021.5,-443.5001" stroke="#000000"></polygon>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionPortTypeEnum.htm'>IfcDistributionPortTypeEnum</a> -->
+<g class="node" id="node8">
+<title><a href="../../../../lexical/IfcDistributionPortTypeEnum.htm">IfcDistributionPortTypeEnum</a></title>
+<polygon fill="#1976d2" points="1040.5,-157 1040.5,-184 1290.5,-184 1290.5,-157 1040.5,-157" stroke="transparent"></polygon>
+<polyline fill="none" points="1040.5,-157 1290.5,-157 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1046.5" y="-167.8"><a href="../../../../lexical/IfcDistributionPortTypeEnum.htm">IfcDistributionPortTypeEnum</a></text>
+<polygon fill="#1976d2" points="1290.5,-157 1290.5,-184 1310.5,-184 1310.5,-157 1290.5,-157" stroke="transparent"></polygon>
+<polyline fill="none" points="1290.5,-157 1310.5,-157 " stroke="#000000"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionPort.htm'>IfcDistributionPort</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDistributionPortTypeEnum.htm'>IfcDistributionPortTypeEnum</a> -->
+<g class="edge" id="edge7">
+<title><a href="../../../../lexical/IfcDistributionPort.htm">IfcDistributionPort</a>:PredefinedType1-&gt;<a href="../../../../lexical/IfcDistributionPortTypeEnum.htm">IfcDistributionPortTypeEnum</a>:IfcDistributionPortTypeEnum0</title>
+<path d="M979.5,-170C979.5,-170 1013.1014,-170 1030.4271,-170" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1030.5,-173.5001 1040.5,-170 1030.5,-166.5001 1030.5,-173.5001" stroke="#000000"></polygon>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm'>IfcAxis2Placement3D</a> -->
+<g class="node" id="node9">
+<title><a href="../../../../lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></title>
+<polygon fill="#1976d2" points="1372.5,-317 1372.5,-344 1622.5,-344 1622.5,-317 1372.5,-317" stroke="transparent"></polygon>
+<polyline fill="none" points="1372.5,-317 1622.5,-317 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1378.5" y="-327.8"><a href="../../../../lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></text>
+<polygon fill="#1976d2" points="1622.5,-317 1622.5,-344 1661.5,-344 1661.5,-317 1622.5,-317" stroke="transparent"></polygon>
+<polyline fill="none" points="1622.5,-317 1661.5,-317 " stroke="#000000"></polyline>
+<polygon fill="#ffffff" points="1372.5,-290 1372.5,-317 1622.5,-317 1622.5,-290 1372.5,-290" stroke="transparent"></polygon>
+<polyline fill="none" points="1372.5,-290 1622.5,-290 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1378.5" y="-299.8">LayerAssignment</text>
+<polygon fill="#ffffff" points="1622.5,-290 1622.5,-317 1661.5,-317 1661.5,-290 1622.5,-290" stroke="transparent"></polygon>
+<polyline fill="none" points="1622.5,-290 1661.5,-290 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1628.5" y="-299.8">[0:1]</text>
+<polygon fill="#ffffff" points="1372.5,-263 1372.5,-290 1622.5,-290 1622.5,-263 1372.5,-263" stroke="transparent"></polygon>
+<polyline fill="none" points="1372.5,-263 1622.5,-263 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1378.5" y="-272.8">StyledByItem</text>
+<polygon fill="#ffffff" points="1622.5,-263 1622.5,-290 1661.5,-290 1661.5,-263 1622.5,-263" stroke="transparent"></polygon>
+<polyline fill="none" points="1622.5,-263 1661.5,-263 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1628.5" y="-272.8">[0:1]</text>
+<polygon fill="#dddddd" points="1372.5,-236 1372.5,-263 1622.5,-263 1622.5,-236 1372.5,-236" stroke="transparent"></polygon>
+<polyline fill="none" points="1372.5,-236 1622.5,-236 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1378.5" y="-245.8">Location</text>
+<polygon fill="#dddddd" points="1622.5,-236 1622.5,-263 1661.5,-263 1661.5,-236 1622.5,-236" stroke="transparent"></polygon>
+<polyline fill="none" points="1622.5,-236 1661.5,-236 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1628.5" y="-245.8">[1:1]</text>
+<polygon fill="#dddddd" points="1372.5,-209 1372.5,-236 1622.5,-236 1622.5,-209 1372.5,-209" stroke="transparent"></polygon>
+<polyline fill="none" points="1372.5,-209 1622.5,-209 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1378.5" y="-218.8">Axis</text>
+<polygon fill="#dddddd" points="1622.5,-209 1622.5,-236 1661.5,-236 1661.5,-209 1622.5,-209" stroke="transparent"></polygon>
+<polyline fill="none" points="1622.5,-209 1661.5,-209 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1628.5" y="-218.8">[0:1]</text>
+<polygon fill="#dddddd" points="1372.5,-182 1372.5,-209 1622.5,-209 1622.5,-182 1372.5,-182" stroke="transparent"></polygon>
+<polyline fill="none" points="1372.5,-182 1622.5,-182 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1378.5" y="-191.8">RefDirection</text>
+<polygon fill="#dddddd" points="1622.5,-182 1622.5,-209 1661.5,-209 1661.5,-182 1622.5,-182" stroke="transparent"></polygon>
+<polyline fill="none" points="1622.5,-182 1661.5,-182 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1628.5" y="-191.8">[0:1]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLocalPlacement.htm'>IfcLocalPlacement</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm'>IfcAxis2Placement3D</a> -->
+<g class="edge" id="edge8">
+<title><a href="../../../../lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a>:RelativePlacement1-&gt;<a href="../../../../lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a>:IfcAxis2Placement3D0</title>
+<path d="M1320.5,-331C1320.5,-331 1347.3633,-331 1362.4739,-331" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1362.5,-334.5001 1372.5,-331 1362.5,-327.5001 1362.5,-334.5001" stroke="#000000"></polygon>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm'>IfcCartesianPoint</a> -->
+<g class="node" id="node10">
+<title><a href="../../../../lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a></title>
+<polygon fill="#1976d2" points="1713.5,-331 1713.5,-358 1963.5,-358 1963.5,-331 1713.5,-331" stroke="transparent"></polygon>
+<polyline fill="none" points="1713.5,-331 1963.5,-331 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1719.5" y="-341.8"><a href="../../../../lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a></text>
+<polygon fill="#1976d2" points="1963.5,-331 1963.5,-358 2002.5,-358 2002.5,-331 1963.5,-331" stroke="transparent"></polygon>
+<polyline fill="none" points="1963.5,-331 2002.5,-331 " stroke="#000000"></polyline>
+<polygon fill="#ffffff" points="1713.5,-304 1713.5,-331 1963.5,-331 1963.5,-304 1713.5,-304" stroke="transparent"></polygon>
+<polyline fill="none" points="1713.5,-304 1963.5,-304 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1719.5" y="-313.8">LayerAssignment</text>
+<polygon fill="#ffffff" points="1963.5,-304 1963.5,-331 2002.5,-331 2002.5,-304 1963.5,-304" stroke="transparent"></polygon>
+<polyline fill="none" points="1963.5,-304 2002.5,-304 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1969.5" y="-313.8">[0:1]</text>
+<polygon fill="#ffffff" points="1713.5,-277 1713.5,-304 1963.5,-304 1963.5,-277 1713.5,-277" stroke="transparent"></polygon>
+<polyline fill="none" points="1713.5,-277 1963.5,-277 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1719.5" y="-286.8">StyledByItem</text>
+<polygon fill="#ffffff" points="1963.5,-277 1963.5,-304 2002.5,-304 2002.5,-277 1963.5,-277" stroke="transparent"></polygon>
+<polyline fill="none" points="1963.5,-277 2002.5,-277 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1969.5" y="-286.8">[0:1]</text>
+<polygon fill="#ffffff" points="1713.5,-250 1713.5,-277 1963.5,-277 1963.5,-250 1713.5,-250" stroke="transparent"></polygon>
+<polyline fill="none" points="1713.5,-250 1963.5,-250 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1719.5" y="-259.8">Coordinates</text>
+<polygon fill="#ffffff" points="1963.5,-250 1963.5,-277 2002.5,-277 2002.5,-250 1963.5,-250" stroke="transparent"></polygon>
+<polyline fill="none" points="1963.5,-250 2002.5,-250 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1969.5" y="-259.8">[1:3]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm'>IfcAxis2Placement3D</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCartesianPoint.htm'>IfcCartesianPoint</a> -->
+<g class="edge" id="edge9">
+<title><a href="../../../../lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a>:Location1-&gt;<a href="../../../../lexical/IfcCartesianPoint.htm">IfcCartesianPoint</a>:IfcCartesianPoint0</title>
+<path d="M1661.5,-249C1661.5,-249 1695.8281,-312.375 1708.7012,-336.1406" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1705.6596,-337.8741 1713.5,-345 1711.8146,-334.5401 1705.6596,-337.8741" stroke="#000000"></polygon>
+</g>
+<!-- IfcDirection_0 -->
+<g class="node" id="node11">
+<title>IfcDirection_0</title>
+<polygon fill="#1976d2" points="1713.5,-208 1713.5,-235 1963.5,-235 1963.5,-208 1713.5,-208" stroke="transparent"></polygon>
+<polyline fill="none" points="1713.5,-208 1963.5,-208 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1719.5" y="-218.8"><a href="../../../../lexical/IfcDirection.htm">IfcDirection</a></text>
+<polygon fill="#1976d2" points="1963.5,-208 1963.5,-235 2002.5,-235 2002.5,-208 1963.5,-208" stroke="transparent"></polygon>
+<polyline fill="none" points="1963.5,-208 2002.5,-208 " stroke="#000000"></polyline>
+<polygon fill="#ffffff" points="1713.5,-181 1713.5,-208 1963.5,-208 1963.5,-181 1713.5,-181" stroke="transparent"></polygon>
+<polyline fill="none" points="1713.5,-181 1963.5,-181 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1719.5" y="-190.8">LayerAssignment</text>
+<polygon fill="#ffffff" points="1963.5,-181 1963.5,-208 2002.5,-208 2002.5,-181 1963.5,-181" stroke="transparent"></polygon>
+<polyline fill="none" points="1963.5,-181 2002.5,-181 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1969.5" y="-190.8">[0:1]</text>
+<polygon fill="#ffffff" points="1713.5,-154 1713.5,-181 1963.5,-181 1963.5,-154 1713.5,-154" stroke="transparent"></polygon>
+<polyline fill="none" points="1713.5,-154 1963.5,-154 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1719.5" y="-163.8">StyledByItem</text>
+<polygon fill="#ffffff" points="1963.5,-154 1963.5,-181 2002.5,-181 2002.5,-154 1963.5,-154" stroke="transparent"></polygon>
+<polyline fill="none" points="1963.5,-154 2002.5,-154 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1969.5" y="-163.8">[0:1]</text>
+<polygon fill="#ffffff" points="1713.5,-127 1713.5,-154 1963.5,-154 1963.5,-127 1713.5,-127" stroke="transparent"></polygon>
+<polyline fill="none" points="1713.5,-127 1963.5,-127 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1719.5" y="-136.8">DirectionRatios</text>
+<polygon fill="#ffffff" points="1963.5,-127 1963.5,-154 2002.5,-154 2002.5,-127 1963.5,-127" stroke="transparent"></polygon>
+<polyline fill="none" points="1963.5,-127 2002.5,-127 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1969.5" y="-136.8">[2:3]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm'>IfcAxis2Placement3D</a>&#45;&gt;IfcDirection_0 -->
+<g class="edge" id="edge10">
+<title><a href="../../../../lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a>:Axis1-&gt;IfcDirection_0:IfcDirection0</title>
+<path d="M1661.5,-222C1661.5,-222 1688.3633,-222 1703.4739,-222" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1703.5,-225.5001 1713.5,-222 1703.5,-218.5001 1703.5,-225.5001" stroke="#000000"></polygon>
+</g>
+<!-- IfcDirection_1 -->
+<g class="node" id="node12">
+<title>IfcDirection_1</title>
+<polygon fill="#1976d2" points="1713.5,-85 1713.5,-112 1963.5,-112 1963.5,-85 1713.5,-85" stroke="transparent"></polygon>
+<polyline fill="none" points="1713.5,-85 1963.5,-85 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1719.5" y="-95.8"><a href="../../../../lexical/IfcDirection.htm">IfcDirection</a></text>
+<polygon fill="#1976d2" points="1963.5,-85 1963.5,-112 2002.5,-112 2002.5,-85 1963.5,-85" stroke="transparent"></polygon>
+<polyline fill="none" points="1963.5,-85 2002.5,-85 " stroke="#000000"></polyline>
+<polygon fill="#ffffff" points="1713.5,-58 1713.5,-85 1963.5,-85 1963.5,-58 1713.5,-58" stroke="transparent"></polygon>
+<polyline fill="none" points="1713.5,-58 1963.5,-58 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1719.5" y="-67.8">LayerAssignment</text>
+<polygon fill="#ffffff" points="1963.5,-58 1963.5,-85 2002.5,-85 2002.5,-58 1963.5,-58" stroke="transparent"></polygon>
+<polyline fill="none" points="1963.5,-58 2002.5,-58 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1969.5" y="-67.8">[0:1]</text>
+<polygon fill="#ffffff" points="1713.5,-31 1713.5,-58 1963.5,-58 1963.5,-31 1713.5,-31" stroke="transparent"></polygon>
+<polyline fill="none" points="1713.5,-31 1963.5,-31 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1719.5" y="-40.8">StyledByItem</text>
+<polygon fill="#ffffff" points="1963.5,-31 1963.5,-58 2002.5,-58 2002.5,-31 1963.5,-31" stroke="transparent"></polygon>
+<polyline fill="none" points="1963.5,-31 2002.5,-31 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1969.5" y="-40.8">[0:1]</text>
+<polygon fill="#ffffff" points="1713.5,-4 1713.5,-31 1963.5,-31 1963.5,-4 1713.5,-4" stroke="transparent"></polygon>
+<polyline fill="none" points="1713.5,-4 1963.5,-4 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1719.5" y="-13.8">DirectionRatios</text>
+<polygon fill="#ffffff" points="1963.5,-4 1963.5,-31 2002.5,-31 2002.5,-4 1963.5,-4" stroke="transparent"></polygon>
+<polyline fill="none" points="1963.5,-4 2002.5,-4 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1969.5" y="-13.8">[2:3]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcAxis2Placement3D.htm'>IfcAxis2Placement3D</a>&#45;&gt;IfcDirection_1 -->
+<g class="edge" id="edge11">
+<title><a href="../../../../lexical/IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a>:RefDirection1-&gt;IfcDirection_1:IfcDirection0</title>
+<path d="M1661.5,-195C1661.5,-195 1695.8281,-131.625 1708.7012,-107.8594" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1711.8146,-109.4599 1713.5,-99 1705.6596,-106.1259 1711.8146,-109.4599" stroke="#000000"></polygon>
+</g>
+</g>
+</svg><figcaption>Figure 4.4.4.4.A<a href="content.html#Figure-4.4.4.4.A"><i data-feather="link"></i></a></figcaption></figure>
+<h3><a id="General-Usage"></a>General Usage<a href="content.html#General-Usage"><i data-feather="link"></i></a></h3><figure><a id="Table-4.4.4.4.B"></a><table>
+<thead>
+<tr><th>ApplicableEntity<br/> </th><th>PredefinedType<br/> </th><th>PortName<br/><a href="../../../../lexical/IfcDistributionPort.htm">IfcDistributionPort</a>.Name  </th><th>Flow<br/><a href="../../../../lexical/IfcDistributionPort.htm">IfcDistributionPort</a>.FlowDirection  </th></tr>
+</thead>
+<tbody>
+<tr><td><a href="../../../../lexical/IfcActuator.htm">IfcActuator</a> </td><td>SIGNAL              </td><td>Input                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAirTerminalBox.htm">IfcAirTerminalBox</a> </td><td>AIRCONDITIONING     </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAirTerminalBox.htm">IfcAirTerminalBox</a> </td><td>AIRCONDITIONING     </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcAirTerminal.htm">IfcAirTerminal</a> </td><td>AIRCONDITIONING     </td><td>Air                                   </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAirTerminal.htm">IfcAirTerminal</a> </td><td>GRILLE              </td><td>Air                                   </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcAirTerminal.htm">IfcAirTerminal</a> </td><td>AIRCONDITIONING     </td><td>Air                                   </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAirToAirHeatRecovery.htm">IfcAirToAirHeatRecovery</a> </td><td>AIRCONDITIONING     </td><td>AirInlet                              </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAirToAirHeatRecovery.htm">IfcAirToAirHeatRecovery</a> </td><td>AIRCONDITIONING     </td><td>AirOutlet                             </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcAirToAirHeatRecovery.htm">IfcAirToAirHeatRecovery</a> </td><td>AIRCONDITIONING     </td><td>ExhaustInlet                          </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAirToAirHeatRecovery.htm">IfcAirToAirHeatRecovery</a> </td><td>AIRCONDITIONING     </td><td>ExhaustOutlet                         </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcAlarm.htm">IfcAlarm</a> </td><td>SIGNAL              </td><td>Input                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>ELECTRICAL          </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>AUDIOVISUAL         </td><td>Input                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>AMPLIFIER           </td><td>Speakers                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>ELECTRICAL          </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>CAMERA              </td><td>Control                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>CAMERA              </td><td>Network                               </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>AUDIOVISUAL         </td><td>Output                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>DISPLAY             </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>CONTROL             </td><td>Control                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>DISPLAY             </td><td>Input#1                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>DISPLAY             </td><td>Input#2                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>AUDIOVISUAL         </td><td>Input#3                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>DISPLAY             </td><td>Input#4                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>DISPLAY             </td><td>Input#5                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>AUDIOVISUAL         </td><td>Input#6                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>DISPLAY             </td><td>Input#7                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>DISPLAY             </td><td>Input#8                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>ELECTRICAL          </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>AUDIOVISUAL         </td><td>Output                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>ELECTRICAL          </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>CONTROL             </td><td>Control                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>AUDIOVISUAL         </td><td>Output                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>ELECTRICAL          </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>CONTROL             </td><td>Control                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>AUDIOVISUAL         </td><td>Output                                </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>ELECTRICAL          </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>CONTROL             </td><td>Control                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>RECEIVER            </td><td>Network                               </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>RECEIVER            </td><td>Input#1                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>AUDIOVISUAL         </td><td>Input#2                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>RECEIVER            </td><td>Input#3                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>AUDIOVISUAL         </td><td>Input#4                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>RECEIVER            </td><td>Input#5                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>AUDIOVISUAL         </td><td>Input#6                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>RECEIVER            </td><td>Input#7                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>RECEIVER            </td><td>Input#8                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>AUDIOVISUAL         </td><td>Output#1                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>RECEIVER            </td><td>Output#2                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>RECEIVER            </td><td>Speakers#1                            </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>RECEIVER            </td><td>Speakers#2                            </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>SPEAKER             </td><td>Input                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>SWITCHER            </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>CONTROL             </td><td>Control                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>SWITCHER            </td><td>Network                               </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>AUDIOVISUAL         </td><td>Input#1                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>AUDIOVISUAL         </td><td>Input#2                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>AUDIOVISUAL         </td><td>Input#3                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>AUDIOVISUAL         </td><td>Input#4                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>SWITCHER            </td><td>Input#5                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>AUDIOVISUAL         </td><td>Input#6                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>AUDIOVISUAL         </td><td>Input#7                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>AUDIOVISUAL         </td><td>Input#8                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>AUDIOVISUAL         </td><td>Output#1                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>AUDIOVISUAL         </td><td>Output#2                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>SWITCHER            </td><td>Output#3                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>AUDIOVISUAL         </td><td>Output#4                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>SWITCHER            </td><td>Output#5                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>SWITCHER            </td><td>Output#6                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>SWITCHER            </td><td>Output#7                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>SWITCHER            </td><td>Output#8                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>ELECTRICAL          </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>TELEPHONE           </td><td>Phone                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>ELECTRICAL          </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>CONTROL             </td><td>Control                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>TUNER               </td><td>Input                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcAudioVisualAppliance.htm">IfcAudioVisualAppliance</a> </td><td>TUNER               </td><td>Output                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcBoiler.htm">IfcBoiler</a> </td><td>GAS                 </td><td>Gas                                   </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcBoiler.htm">IfcBoiler</a> </td><td>EXHAUST             </td><td>Exhaust                               </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcBoiler.htm">IfcBoiler</a> </td><td>CONDENSERWATER      </td><td>Condenser                             </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcBoiler.htm">IfcBoiler</a> </td><td>STEAM               </td><td>Heating                               </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcBoiler.htm">IfcBoiler</a> </td><td>WATER               </td><td>Gas                                   </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcBoiler.htm">IfcBoiler</a> </td><td>EXHAUST             </td><td>Exhaust                               </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcBoiler.htm">IfcBoiler</a> </td><td>WATER               </td><td>ColdWater                             </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcBoiler.htm">IfcBoiler</a> </td><td>DOMESTICHOTWATER    </td><td>HotWater                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcBurner.htm">IfcBurner</a> </td><td>GAS                 </td><td>Gas                                   </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableCarrierFitting.htm">IfcCableCarrierFitting</a> </td><td>NOTDEFINED          </td><td>Head                                  </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableCarrierFitting.htm">IfcCableCarrierFitting</a> </td><td>NOTDEFINED          </td><td>Tail                                  </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableCarrierFitting.htm">IfcCableCarrierFitting</a> </td><td>NOTDEFINED          </td><td>Head                                  </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableCarrierFitting.htm">IfcCableCarrierFitting</a> </td><td>NOTDEFINED          </td><td>Tail                                  </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableCarrierFitting.htm">IfcCableCarrierFitting</a> </td><td>JUNCTION            </td><td>Left                                  </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableCarrierFitting.htm">IfcCableCarrierFitting</a> </td><td>JUNCTION            </td><td>Right                                 </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableCarrierFitting.htm">IfcCableCarrierFitting</a> </td><td>NOTDEFINED          </td><td>Head                                  </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableCarrierFitting.htm">IfcCableCarrierFitting</a> </td><td>NOTDEFINED          </td><td>Tail                                  </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableCarrierFitting.htm">IfcCableCarrierFitting</a> </td><td>NOTDEFINED          </td><td>Head                                  </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableCarrierFitting.htm">IfcCableCarrierFitting</a> </td><td>TEE                 </td><td>Left                                  </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableCarrierFitting.htm">IfcCableCarrierFitting</a> </td><td>TEE                 </td><td>Right                                 </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableCarrierSegment.htm">IfcCableCarrierSegment</a> </td><td>NOTDEFINED          </td><td>Head                                  </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableCarrierSegment.htm">IfcCableCarrierSegment</a> </td><td>NOTDEFINED          </td><td>Tail                                  </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableFitting.htm">IfcCableFitting</a> </td><td>CONNECTOR           </td><td>Input                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableFitting.htm">IfcCableFitting</a> </td><td>NOTDEFINED          </td><td>Output                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableFitting.htm">IfcCableFitting</a> </td><td>NOTDEFINED          </td><td>Output                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableFitting.htm">IfcCableFitting</a> </td><td>EXIT                </td><td>Input                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableFitting.htm">IfcCableFitting</a> </td><td>JUNCTION            </td><td>Input                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableFitting.htm">IfcCableFitting</a> </td><td>JUNCTION            </td><td>Output#1                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableFitting.htm">IfcCableFitting</a> </td><td>JUNCTION            </td><td>Output#2                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableFitting.htm">IfcCableFitting</a> </td><td>NOTDEFINED          </td><td>Input                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableFitting.htm">IfcCableFitting</a> </td><td>NOTDEFINED          </td><td>Output                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableSegment.htm">IfcCableSegment</a> </td><td>NOTDEFINED          </td><td>Input                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCableSegment.htm">IfcCableSegment</a> </td><td>NOTDEFINED          </td><td>Output                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcChiller.htm">IfcChiller</a> </td><td>ELECTRICAL          </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcChiller.htm">IfcChiller</a> </td><td>CONTROL             </td><td>Control                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcChiller.htm">IfcChiller</a> </td><td>CHILLEDWATER        </td><td>ChilledWaterIn                        </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcChiller.htm">IfcChiller</a> </td><td>CHILLEDWATER        </td><td>ChilledWaterOut                       </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcChiller.htm">IfcChiller</a> </td><td>AIRCOOLED           </td><td>VentilationIn                         </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcChiller.htm">IfcChiller</a> </td><td>VENTILATION         </td><td>VentilationOut                        </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcChiller.htm">IfcChiller</a> </td><td>WATERCOOLED         </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcChiller.htm">IfcChiller</a> </td><td>WATERCOOLED         </td><td>Control                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcChiller.htm">IfcChiller</a> </td><td>CHILLEDWATER        </td><td>ChilledWaterIn                        </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcChiller.htm">IfcChiller</a> </td><td>WATERCOOLED         </td><td>ChilledWaterOut                       </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcChiller.htm">IfcChiller</a> </td><td>CONDENSERWATER      </td><td>CondenserWaterIn                      </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcChiller.htm">IfcChiller</a> </td><td>CONDENSERWATER      </td><td>CondenserWaterOut                     </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCoil.htm">IfcCoil</a> </td><td>REFRIGERATION       </td><td>RefrigerantIn                         </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCoil.htm">IfcCoil</a> </td><td>DXCOOLINGCOIL       </td><td>RefrigerantOut                        </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCoil.htm">IfcCoil</a> </td><td>DXCOOLINGCOIL       </td><td>AirIn                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCoil.htm">IfcCoil</a> </td><td>AIRCONDITIONING     </td><td>AirOut                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCoil.htm">IfcCoil</a> </td><td>WATERCOOLINGCOIL    </td><td>ChilledWaterIn                        </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCoil.htm">IfcCoil</a> </td><td>WATERCOOLINGCOIL    </td><td>ChilledWaterOut                       </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCoil.htm">IfcCoil</a> </td><td>WATERCOOLINGCOIL    </td><td>AirIn                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCoil.htm">IfcCoil</a> </td><td>WATERCOOLINGCOIL    </td><td>AirOut                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCoil.htm">IfcCoil</a> </td><td>HEATING             </td><td>HeatingIn                             </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCoil.htm">IfcCoil</a> </td><td>HEATING             </td><td>HeatingOut                            </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCoil.htm">IfcCoil</a> </td><td>WATERHEATINGCOIL    </td><td>AirIn                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCoil.htm">IfcCoil</a> </td><td>WATERHEATINGCOIL    </td><td>AirOut                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>ELECTRICAL          </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>SIGNAL              </td><td>Radio                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>SIGNAL              </td><td>Signal                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>ELECTRICAL          </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>DATA                </td><td>Network                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>CONTROL             </td><td>Device                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>COMPUTER            </td><td>Display                               </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>FAX                 </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>FAX                 </td><td>Phone                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>ELECTRICAL          </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>MODEM               </td><td>Signal                                </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>MODEM               </td><td>Internet                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>TV                  </td><td>Television                            </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>TELEPHONE           </td><td>Telephone                             </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>PRINTER             </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>DATA                </td><td>Network                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>PRINTER             </td><td>Phone                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>REPEATER            </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>SIGNAL              </td><td>Input                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>REPEATER            </td><td>Output                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>ROUTER              </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>ROUTER              </td><td>Uplink                                </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>ROUTER              </td><td>WiFi                                  </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>ROUTER              </td><td>Link#1                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>ROUTER              </td><td>Link#2                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>DATA                </td><td>Link#3                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>ROUTER              </td><td>Link#4                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>DATA                </td><td>Link#5                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>ROUTER              </td><td>Link#6                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>DATA                </td><td>Link#7                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCommunicationsAppliance.htm">IfcCommunicationsAppliance</a> </td><td>DATA                </td><td>Link#8                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCompressor.htm">IfcCompressor</a> </td><td>REFRIGERATION       </td><td>RefrigerantIn                         </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCompressor.htm">IfcCompressor</a> </td><td>REFRIGERATION       </td><td>RefrigerantOut                        </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCondenser.htm">IfcCondenser</a> </td><td>REFRIGERATION       </td><td>RefrigerantIn                         </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCondenser.htm">IfcCondenser</a> </td><td>REFRIGERATION       </td><td>RefrigerantOut                        </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCondenser.htm">IfcCondenser</a> </td><td>AIRCOOLED           </td><td>CompressedAirIn                       </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCondenser.htm">IfcCondenser</a> </td><td>COMPRESSEDAIR       </td><td>CompressedAirOut                      </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCondenser.htm">IfcCondenser</a> </td><td>EVAPORATIVECOOLED   </td><td>RefrigerantIn                         </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCondenser.htm">IfcCondenser</a> </td><td>REFRIGERATION       </td><td>RefrigerantOut                        </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCondenser.htm">IfcCondenser</a> </td><td>EVAPORATIVECOOLED   </td><td>CondenserWaterIn                      </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCondenser.htm">IfcCondenser</a> </td><td>CONDENSERWATER      </td><td>CondenserWaterOut                     </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCondenser.htm">IfcCondenser</a> </td><td>VENTILATION         </td><td>VentilationIn                         </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCondenser.htm">IfcCondenser</a> </td><td>EVAPORATIVECOOLED   </td><td>VentilationOut                        </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCondenser.htm">IfcCondenser</a> </td><td>WATERCOOLED         </td><td>RefrigerantIn                         </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCondenser.htm">IfcCondenser</a> </td><td>WATERCOOLED         </td><td>RefrigerantOut                        </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCondenser.htm">IfcCondenser</a> </td><td>CONDENSERWATER      </td><td>CondenserWaterIn                      </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCondenser.htm">IfcCondenser</a> </td><td>WATERCOOLED         </td><td>CondenserWaterOut                     </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcController.htm">IfcController</a> </td><td>FLOATING            </td><td>Input                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcController.htm">IfcController</a> </td><td>FLOATING            </td><td>Modifier                              </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcController.htm">IfcController</a> </td><td>SIGNAL              </td><td>Output                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcController.htm">IfcController</a> </td><td>SIGNAL              </td><td>Input                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcController.htm">IfcController</a> </td><td>SIGNAL              </td><td>Modifier                              </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcController.htm">IfcController</a> </td><td>MULTIPOSITION       </td><td>Output                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcController.htm">IfcController</a> </td><td>PROGRAMMABLE        </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcController.htm">IfcController</a> </td><td>PROGRAMMABLE        </td><td>Control                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcController.htm">IfcController</a> </td><td>DATA                </td><td>Data                                  </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcController.htm">IfcController</a> </td><td>SIGNAL              </td><td>Input#1                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcController.htm">IfcController</a> </td><td>PROGRAMMABLE        </td><td>Output#1                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcController.htm">IfcController</a> </td><td>PROPORTIONAL        </td><td>Input                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcController.htm">IfcController</a> </td><td>SIGNAL              </td><td>Modifier                              </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcController.htm">IfcController</a> </td><td>PROPORTIONAL        </td><td>Output                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcController.htm">IfcController</a> </td><td>TWOPOSITION         </td><td>Input                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcController.htm">IfcController</a> </td><td>TWOPOSITION         </td><td>Modifier                              </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcController.htm">IfcController</a> </td><td>TWOPOSITION         </td><td>Output                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCooledBeam.htm">IfcCooledBeam</a> </td><td>CHILLEDWATER        </td><td>ChilledWaterIn                        </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCooledBeam.htm">IfcCooledBeam</a> </td><td>CHILLEDWATER        </td><td>ChilledWaterOut                       </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcCoolingTower.htm">IfcCoolingTower</a> </td><td>CONDENSERWATER      </td><td>CondenserWaterIn                      </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcCoolingTower.htm">IfcCoolingTower</a> </td><td>CONDENSERWATER      </td><td>CondenserWaterOut                     </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcDamper.htm">IfcDamper</a> </td><td>AIRCONDITIONING     </td><td>AirIn                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcDamper.htm">IfcDamper</a> </td><td>AIRCONDITIONING     </td><td>AirOut                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcDuctFitting.htm">IfcDuctFitting</a> </td><td>NOTDEFINED          </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcDuctFitting.htm">IfcDuctFitting</a> </td><td>NOTDEFINED          </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcDuctFitting.htm">IfcDuctFitting</a> </td><td>CONNECTOR           </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcDuctFitting.htm">IfcDuctFitting</a> </td><td>NOTDEFINED          </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcDuctFitting.htm">IfcDuctFitting</a> </td><td>NOTDEFINED          </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcDuctFitting.htm">IfcDuctFitting</a> </td><td>EXIT                </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcDuctFitting.htm">IfcDuctFitting</a> </td><td>JUNCTION            </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcDuctFitting.htm">IfcDuctFitting</a> </td><td>JUNCTION            </td><td>Outlet#1                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcDuctFitting.htm">IfcDuctFitting</a> </td><td>JUNCTION            </td><td>Outlet#2                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcDuctFitting.htm">IfcDuctFitting</a> </td><td>NOTDEFINED          </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcDuctFitting.htm">IfcDuctFitting</a> </td><td>NOTDEFINED          </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcDuctSegment.htm">IfcDuctSegment</a> </td><td>NOTDEFINED          </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcDuctSegment.htm">IfcDuctSegment</a> </td><td>NOTDEFINED          </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcDuctSilencer.htm">IfcDuctSilencer</a> </td><td>AIRCONDITIONING     </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcDuctSilencer.htm">IfcDuctSilencer</a> </td><td>AIRCONDITIONING     </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricAppliance.htm">IfcElectricAppliance</a> </td><td>DISHWASHER          </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricAppliance.htm">IfcElectricAppliance</a> </td><td>DISHWASHER          </td><td>HotWater                              </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricAppliance.htm">IfcElectricAppliance</a> </td><td>DRAINAGE            </td><td>Drainage                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricAppliance.htm">IfcElectricAppliance</a> </td><td>ELECTRICAL          </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricAppliance.htm">IfcElectricAppliance</a> </td><td>FREEZER             </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricAppliance.htm">IfcElectricAppliance</a> </td><td>FRIDGE_FREEZER      </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricAppliance.htm">IfcElectricAppliance</a> </td><td>DOMESTICCOLDWATER   </td><td>ColdWater                             </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricAppliance.htm">IfcElectricAppliance</a> </td><td>HANDDRYER           </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricAppliance.htm">IfcElectricAppliance</a> </td><td>MICROWAVE           </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricAppliance.htm">IfcElectricAppliance</a> </td><td>ELECTRICAL          </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricAppliance.htm">IfcElectricAppliance</a> </td><td>ELECTRICAL          </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricAppliance.htm">IfcElectricAppliance</a> </td><td>GAS                 </td><td>Gas                                   </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricAppliance.htm">IfcElectricAppliance</a> </td><td>TUMBLEDRYER         </td><td>Exhaust                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricAppliance.htm">IfcElectricAppliance</a> </td><td>ELECTRICAL          </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricAppliance.htm">IfcElectricAppliance</a> </td><td>WASHINGMACHINE      </td><td>ColdWater                             </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricAppliance.htm">IfcElectricAppliance</a> </td><td>WASHINGMACHINE      </td><td>HotWater                              </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricAppliance.htm">IfcElectricAppliance</a> </td><td>WASHINGMACHINE      </td><td>Drainage                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricDistributionBoard.htm">IfcElectricDistributionBoard</a></td><td>CONSUMERUNIT        </td><td>Line                                  </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricDistributionBoard.htm">IfcElectricDistributionBoard</a></td><td>CONSUMERUNIT        </td><td>Ground                                </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricDistributionBoard.htm">IfcElectricDistributionBoard</a></td><td>ELECTRICAL          </td><td>Circuit#1                             </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricDistributionBoard.htm">IfcElectricDistributionBoard</a></td><td>CONSUMERUNIT        </td><td>Circuit#2                             </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricDistributionBoard.htm">IfcElectricDistributionBoard</a></td><td>CONSUMERUNIT        </td><td>Circuit#3                             </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricDistributionBoard.htm">IfcElectricDistributionBoard</a></td><td>ELECTRICAL          </td><td>Circuit#4                             </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricDistributionBoard.htm">IfcElectricDistributionBoard</a></td><td>ELECTRICAL          </td><td>Circuit#5                             </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricDistributionBoard.htm">IfcElectricDistributionBoard</a></td><td>ELECTRICAL          </td><td>Circuit#6                             </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricDistributionBoard.htm">IfcElectricDistributionBoard</a></td><td>ELECTRICAL          </td><td>Circuit#7                             </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricDistributionBoard.htm">IfcElectricDistributionBoard</a></td><td>CONSUMERUNIT        </td><td>Circuit#8                             </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricFlowStorageDevice.htm">IfcElectricFlowStorageDevice</a></td><td>ELECTRICAL          </td><td>Line                                  </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricFlowStorageDevice.htm">IfcElectricFlowStorageDevice</a></td><td>ELECTRICAL          </td><td>Load                                  </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricGenerator.htm">IfcElectricGenerator</a> </td><td>ELECTRICAL          </td><td>Load                                  </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricMotor.htm">IfcElectricMotor</a> </td><td>ELECTRICAL          </td><td>Line                                  </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricMotor.htm">IfcElectricMotor</a> </td><td>NOTDEFINED          </td><td>Drive                                 </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricTimeControl.htm">IfcElectricTimeControl</a> </td><td>ELECTRICAL          </td><td>Line                                  </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcElectricTimeControl.htm">IfcElectricTimeControl</a> </td><td>ELECTRICAL          </td><td>Drive                                 </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcEngine.htm">IfcEngine</a> </td><td>GAS                 </td><td>Fuel                                  </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcEngine.htm">IfcEngine</a> </td><td>NOTDEFINED          </td><td>Drive                                 </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcEvaporativeCooler.htm">IfcEvaporativeCooler</a> </td><td>DOMESTICCOLDWATER   </td><td>WaterIn                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcEvaporativeCooler.htm">IfcEvaporativeCooler</a> </td><td>AIRCONDITIONING     </td><td>AirIn                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcEvaporativeCooler.htm">IfcEvaporativeCooler</a> </td><td>AIRCONDITIONING     </td><td>AirOut                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcEvaporator.htm">IfcEvaporator</a> </td><td>DIRECTEXPANSION     </td><td>RefrigerantIn                         </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcEvaporator.htm">IfcEvaporator</a> </td><td>DIRECTEXPANSION     </td><td>RefrigerantOut                        </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcEvaporator.htm">IfcEvaporator</a> </td><td>DIRECTEXPANSION     </td><td>AirIn                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcEvaporator.htm">IfcEvaporator</a> </td><td>DIRECTEXPANSION     </td><td>AirOut                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcEvaporator.htm">IfcEvaporator</a> </td><td>FLOODEDSHELLANDTUBE </td><td>RefrigerantIn                         </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcEvaporator.htm">IfcEvaporator</a> </td><td>REFRIGERATION       </td><td>RefrigerantOut                        </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcEvaporator.htm">IfcEvaporator</a> </td><td>FLOODEDSHELLANDTUBE </td><td>ChilledWaterIn                        </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcEvaporator.htm">IfcEvaporator</a> </td><td>FLOODEDSHELLANDTUBE </td><td>ChilledWaterOut                       </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcEvaporator.htm">IfcEvaporator</a> </td><td>SHELLANDCOIL        </td><td>RefrigerantIn                         </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcEvaporator.htm">IfcEvaporator</a> </td><td>SHELLANDCOIL        </td><td>RefrigerantOut                        </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcEvaporator.htm">IfcEvaporator</a> </td><td>CHILLEDWATER        </td><td>ChilledWaterIn                        </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcEvaporator.htm">IfcEvaporator</a> </td><td>FLOODEDSHELLANDTUBE </td><td>ChilledWaterOut                       </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcFan.htm">IfcFan</a> </td><td>NOTDEFINED          </td><td>AirIn                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcFan.htm">IfcFan</a> </td><td>NOTDEFINED          </td><td>AirOut                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcFilter.htm">IfcFilter</a> </td><td>AIRPARTICLEFILTER   </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcFilter.htm">IfcFilter</a> </td><td>AIRPARTICLEFILTER   </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcFilter.htm">IfcFilter</a> </td><td>COMPRESSEDAIR       </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcFilter.htm">IfcFilter</a> </td><td>COMPRESSEDAIRFILTER </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcFilter.htm">IfcFilter</a> </td><td>ODORFILTER          </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcFilter.htm">IfcFilter</a> </td><td>EXHAUST             </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcFilter.htm">IfcFilter</a> </td><td>OIL                 </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcFilter.htm">IfcFilter</a> </td><td>OILFILTER           </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcFilter.htm">IfcFilter</a> </td><td>DRAINAGE            </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcFilter.htm">IfcFilter</a> </td><td>STRAINER            </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcFilter.htm">IfcFilter</a> </td><td>WATERFILTER         </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcFilter.htm">IfcFilter</a> </td><td>WATERFILTER         </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcFireSuppressionTerminal.htm">IfcFireSuppressionTerminal</a> </td><td>FIREHYDRANT         </td><td>Line                                  </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcFireSuppressionTerminal.htm">IfcFireSuppressionTerminal</a> </td><td>FIREHYDRANT         </td><td>Hose                                  </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcFireSuppressionTerminal.htm">IfcFireSuppressionTerminal</a> </td><td>FIREPROTECTION      </td><td>Line                                  </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcFlowInstrument.htm">IfcFlowInstrument</a> </td><td>SIGNAL              </td><td>Input                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcFlowMeter.htm">IfcFlowMeter</a> </td><td>ELECTRICAL          </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcFlowMeter.htm">IfcFlowMeter</a> </td><td>ENERGYMETER         </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcFlowMeter.htm">IfcFlowMeter</a> </td><td>GAS                 </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcFlowMeter.htm">IfcFlowMeter</a> </td><td>GASMETER            </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcFlowMeter.htm">IfcFlowMeter</a> </td><td>OILMETER            </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcFlowMeter.htm">IfcFlowMeter</a> </td><td>OIL                 </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcFlowMeter.htm">IfcFlowMeter</a> </td><td>DOMESTICCOLDWATER   </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcFlowMeter.htm">IfcFlowMeter</a> </td><td>WATERMETER          </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcHeatExchanger.htm">IfcHeatExchanger</a> </td><td>NOTDEFINED          </td><td>HeatingInlet                          </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcHeatExchanger.htm">IfcHeatExchanger</a> </td><td>NOTDEFINED          </td><td>HeatingOutlet                         </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcHeatExchanger.htm">IfcHeatExchanger</a> </td><td>NOTDEFINED          </td><td>CoolingInlet                          </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcHeatExchanger.htm">IfcHeatExchanger</a> </td><td>NOTDEFINED          </td><td>CoolingOutlet                         </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcHumidifier.htm">IfcHumidifier</a> </td><td>DOMESTICCOLDWATER   </td><td>WaterIn                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcHumidifier.htm">IfcHumidifier</a> </td><td>AIRCONDITIONING     </td><td>AirIn                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcHumidifier.htm">IfcHumidifier</a> </td><td>AIRCONDITIONING     </td><td>AirOut                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcInterceptor.htm">IfcInterceptor</a> </td><td>DRAINAGE            </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcInterceptor.htm">IfcInterceptor</a> </td><td>DRAINAGE            </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcLamp.htm">IfcLamp</a> </td><td>LIGHTING            </td><td>Socket                                </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcLightFixture.htm">IfcLightFixture</a> </td><td>POINTSOURCE         </td><td>Line                                  </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcLightFixture.htm">IfcLightFixture</a> </td><td>POINTSOURCE         </td><td>Socket                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcLightFixture.htm">IfcLightFixture</a> </td><td>ELECTRICAL          </td><td>Line                                  </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcLightFixture.htm">IfcLightFixture</a> </td><td>LIGHTING            </td><td>Socket#1                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcLightFixture.htm">IfcLightFixture</a> </td><td>DIRECTIONSOURCE     </td><td>Socket#2                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcLightFixture.htm">IfcLightFixture</a> </td><td>DIRECTIONSOURCE     </td><td>Socket#3                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcLightFixture.htm">IfcLightFixture</a> </td><td>DIRECTIONSOURCE     </td><td>Socket#4                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcMedicalDevice.htm">IfcMedicalDevice</a> </td><td>ELECTRICAL          </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcMedicalDevice.htm">IfcMedicalDevice</a> </td><td>VACUUM              </td><td>Vacuum                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcMotorConnection.htm">IfcMotorConnection</a> </td><td>NOTDEFINED          </td><td>Motor                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcMotorConnection.htm">IfcMotorConnection</a> </td><td>NOTDEFINED          </td><td>Motor                                 </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcOutlet.htm">IfcOutlet</a> </td><td>DATAOUTLET          </td><td>Line#1                                </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcOutlet.htm">IfcOutlet</a> </td><td>DATAOUTLET          </td><td>Line#2                                </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcOutlet.htm">IfcOutlet</a> </td><td>DATAOUTLET          </td><td>Jack#1                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcOutlet.htm">IfcOutlet</a> </td><td>DATA                </td><td>Jack#2                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcOutlet.htm">IfcOutlet</a> </td><td>ELECTRICAL          </td><td>Line#1                                </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcOutlet.htm">IfcOutlet</a> </td><td>POWEROUTLET         </td><td>Jack#1                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcOutlet.htm">IfcOutlet</a> </td><td>ELECTRICAL          </td><td>Jack#1                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcOutlet.htm">IfcOutlet</a> </td><td>TELEPHONEOUTLET     </td><td>Line#1                                </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcOutlet.htm">IfcOutlet</a> </td><td>TELEPHONE           </td><td>Line#2                                </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcOutlet.htm">IfcOutlet</a> </td><td>TELEPHONEOUTLET     </td><td>Jack#1                                </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcOutlet.htm">IfcOutlet</a> </td><td>TELEPHONEOUTLET     </td><td>Jack#2                                </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcPipeFitting.htm">IfcPipeFitting</a> </td><td>NOTDEFINED          </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcPipeFitting.htm">IfcPipeFitting</a> </td><td>BEND                </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcPipeFitting.htm">IfcPipeFitting</a> </td><td>NOTDEFINED          </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcPipeFitting.htm">IfcPipeFitting</a> </td><td>NOTDEFINED          </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcPipeFitting.htm">IfcPipeFitting</a> </td><td>ENTRY               </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcPipeFitting.htm">IfcPipeFitting</a> </td><td>EXIT                </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcPipeFitting.htm">IfcPipeFitting</a> </td><td>NOTDEFINED          </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcPipeFitting.htm">IfcPipeFitting</a> </td><td>NOTDEFINED          </td><td>Outlet#1                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcPipeFitting.htm">IfcPipeFitting</a> </td><td>NOTDEFINED          </td><td>Outlet#2                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcPipeFitting.htm">IfcPipeFitting</a> </td><td>OBSTRUCTION         </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcPipeFitting.htm">IfcPipeFitting</a> </td><td>NOTDEFINED          </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcPipeSegment.htm">IfcPipeSegment</a> </td><td>NOTDEFINED          </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcPipeSegment.htm">IfcPipeSegment</a> </td><td>NOTDEFINED          </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcProtectiveDevice.htm">IfcProtectiveDevice</a> </td><td>ELECTRICAL          </td><td>Line                                  </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcProtectiveDevice.htm">IfcProtectiveDevice</a> </td><td>ELECTRICAL          </td><td>Load                                  </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcPump.htm">IfcPump</a> </td><td>ELECTRICAL          </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcPump.htm">IfcPump</a> </td><td>NOTDEFINED          </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcPump.htm">IfcPump</a> </td><td>NOTDEFINED          </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcSanitaryTerminal.htm">IfcSanitaryTerminal</a> </td><td>BATH                </td><td>Drainage                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcSanitaryTerminal.htm">IfcSanitaryTerminal</a> </td><td>BIDET               </td><td>ColdWater                             </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcSanitaryTerminal.htm">IfcSanitaryTerminal</a> </td><td>BIDET               </td><td>HotWater                              </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcSanitaryTerminal.htm">IfcSanitaryTerminal</a> </td><td>DRAINAGE            </td><td>Drainage                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcSanitaryTerminal.htm">IfcSanitaryTerminal</a> </td><td>CISTERN             </td><td>ColdWater                             </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcSanitaryTerminal.htm">IfcSanitaryTerminal</a> </td><td>DOMESTICHOTWATER    </td><td>HotWater                              </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcSanitaryTerminal.htm">IfcSanitaryTerminal</a> </td><td>CISTERN             </td><td>Drainage                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcSanitaryTerminal.htm">IfcSanitaryTerminal</a> </td><td>SANITARYFOUNTAIN    </td><td>ColdWater                             </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcSanitaryTerminal.htm">IfcSanitaryTerminal</a> </td><td>SANITARYFOUNTAIN    </td><td>HotWater                              </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcSanitaryTerminal.htm">IfcSanitaryTerminal</a> </td><td>DRAINAGE            </td><td>Drainage                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcSanitaryTerminal.htm">IfcSanitaryTerminal</a> </td><td>SHOWER              </td><td>Drainage                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcSanitaryTerminal.htm">IfcSanitaryTerminal</a> </td><td>SINK                </td><td>Drainage                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcSanitaryTerminal.htm">IfcSanitaryTerminal</a> </td><td>DOMESTICCOLDWATER   </td><td>ColdWater                             </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcSanitaryTerminal.htm">IfcSanitaryTerminal</a> </td><td>DRAINAGE            </td><td>Drainage                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcSanitaryTerminal.htm">IfcSanitaryTerminal</a> </td><td>DOMESTICCOLDWATER   </td><td>ColdWater                             </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcSanitaryTerminal.htm">IfcSanitaryTerminal</a> </td><td>URINAL              </td><td>Drainage                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcSanitaryTerminal.htm">IfcSanitaryTerminal</a> </td><td>WASHHANDBASIN       </td><td>ColdWater                             </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcSanitaryTerminal.htm">IfcSanitaryTerminal</a> </td><td>DOMESTICHOTWATER    </td><td>HotWater                              </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcSanitaryTerminal.htm">IfcSanitaryTerminal</a> </td><td>WASHHANDBASIN       </td><td>Drainage                              </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcSensor.htm">IfcSensor</a> </td><td>SIGNAL              </td><td>Output                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcSolarDevice.htm">IfcSolarDevice</a> </td><td>HEATING             </td><td>Inlet                                 </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcSolarDevice.htm">IfcSolarDevice</a> </td><td>HEATING             </td><td>Outlet                                </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcSolarDevice.htm">IfcSolarDevice</a> </td><td>SOLARPANEL          </td><td>Load                                  </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcSpaceHeater.htm">IfcSpaceHeater</a> </td><td>ELECTRICAL          </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcSpaceHeater.htm">IfcSpaceHeater</a> </td><td>HEATING             </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcSpaceHeater.htm">IfcSpaceHeater</a> </td><td>RADIATOR            </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcStackTerminal.htm">IfcStackTerminal</a> </td><td>BIRDCAGE            </td><td>Exhaust                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcStackTerminal.htm">IfcStackTerminal</a> </td><td>COWL                </td><td>Exhaust                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcStackTerminal.htm">IfcStackTerminal</a> </td><td>RAINWATERHOPPER     </td><td>Rain                                  </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcSwitchingDevice.htm">IfcSwitchingDevice</a> </td><td>ELECTRICAL          </td><td>Line                                  </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcSwitchingDevice.htm">IfcSwitchingDevice</a> </td><td>ELECTRICAL          </td><td>Load                                  </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcTank.htm">IfcTank</a> </td><td>NOTDEFINED          </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcTank.htm">IfcTank</a> </td><td>NOTDEFINED          </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcTransformer.htm">IfcTransformer</a> </td><td>ELECTRICAL          </td><td>Line                                  </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcTransformer.htm">IfcTransformer</a> </td><td>ELECTRICAL          </td><td>Load                                  </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcTubeBundle.htm">IfcTubeBundle</a> </td><td>NOTDEFINED          </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcTubeBundle.htm">IfcTubeBundle</a> </td><td>NOTDEFINED          </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcUnitaryControlElement.htm">IfcUnitaryControlElement</a> </td><td>CONTROL             </td><td>Control                               </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcUnitaryEquipment.htm">IfcUnitaryEquipment</a> </td><td>AIRCONDITIONING     </td><td>ReturnAirIn                           </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcUnitaryEquipment.htm">IfcUnitaryEquipment</a> </td><td>AIRHANDLER          </td><td>SupplyAirOut                          </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcUnitaryEquipment.htm">IfcUnitaryEquipment</a> </td><td>VENTILATION         </td><td>OutsideAirIn                          </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcUnitaryEquipment.htm">IfcUnitaryEquipment</a> </td><td>AIRHANDLER          </td><td>ExhaustAirOut                         </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcUnitaryEquipment.htm">IfcUnitaryEquipment</a> </td><td>AIRHANDLER          </td><td>ChilledWaterIn                        </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcUnitaryEquipment.htm">IfcUnitaryEquipment</a> </td><td>AIRHANDLER          </td><td>ChilledWaterOut                       </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcUnitaryEquipment.htm">IfcUnitaryEquipment</a> </td><td>AIRHANDLER          </td><td>HeatingIn                             </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcUnitaryEquipment.htm">IfcUnitaryEquipment</a> </td><td>AIRHANDLER          </td><td>HeatingOut                            </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcUnitaryEquipment.htm">IfcUnitaryEquipment</a> </td><td>AIRHANDLER          </td><td>Power                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcUnitaryEquipment.htm">IfcUnitaryEquipment</a> </td><td>AIRHANDLER          </td><td>Control                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>AIRHANDLER          </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>NOTDEFINED          </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>CHANGEOVER          </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>CHANGEOVER          </td><td>Outlet#1                              </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>NOTDEFINED          </td><td>Outlet#2                              </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>NOTDEFINED          </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>NOTDEFINED          </td><td>Outlet                                </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>NOTDEFINED          </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>COMMISSIONING       </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>DIVERTING           </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>NOTDEFINED          </td><td>Outlet#1                              </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>NOTDEFINED          </td><td>Outlet#2                              </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>DOUBLECHECK         </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>DOUBLECHECK         </td><td>Outlet                                </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>DOUBLEREGULATING    </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>DOUBLEREGULATING    </td><td>Outlet                                </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>NOTDEFINED          </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>FAUCET              </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>NOTDEFINED          </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>NOTDEFINED          </td><td>Outlet                                </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>GAS                 </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>GASTAP              </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>ISOLATING           </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>ISOLATING           </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>MIXING              </td><td>Inlet#1                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>NOTDEFINED          </td><td>Inlet#2                               </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>MIXING              </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>PRESSUREREDUCING    </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>PRESSUREREDUCING    </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>PRESSURERELIEF      </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>REGULATING          </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>REGULATING          </td><td>Inlet                                 </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>NOTDEFINED          </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>SAFETYCUTOFF        </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>STEAMTRAP           </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>STEAMTRAP           </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcValve.htm">IfcValve</a> </td><td>STOPCOCK            </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcWasteTerminal.htm">IfcWasteTerminal</a> </td><td>DRAINAGE            </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcWasteTerminal.htm">IfcWasteTerminal</a> </td><td>FLOORTRAP           </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcWasteTerminal.htm">IfcWasteTerminal</a> </td><td>FLOORWASTE          </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcWasteTerminal.htm">IfcWasteTerminal</a> </td><td>FLOORWASTE          </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcWasteTerminal.htm">IfcWasteTerminal</a> </td><td>GULLYSUMP           </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcWasteTerminal.htm">IfcWasteTerminal</a> </td><td>GULLYSUMP           </td><td>Inlet                                 </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcWasteTerminal.htm">IfcWasteTerminal</a> </td><td>GULLYTRAP           </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcWasteTerminal.htm">IfcWasteTerminal</a> </td><td>GULLYTRAP           </td><td>Inlet                                 </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcWasteTerminal.htm">IfcWasteTerminal</a> </td><td>ROOFDRAIN           </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcWasteTerminal.htm">IfcWasteTerminal</a> </td><td>WASTEDISPOSALUNIT   </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcWasteTerminal.htm">IfcWasteTerminal</a> </td><td>WASTEDISPOSALUNIT   </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+<tr><td><a href="../../../../lexical/IfcWasteTerminal.htm">IfcWasteTerminal</a> </td><td>WASTETRAP           </td><td>Inlet                                 </td><td>SINK                                       </td></tr>
+<tr><td><a href="../../../../lexical/IfcWasteTerminal.htm">IfcWasteTerminal</a> </td><td>WASTETRAP           </td><td>Outlet                                </td><td>SOURCE                                     </td></tr>
+</tbody>
+</table><figcaption>Table 4.4.4.4.B<a href="content.html#Table-4.4.4.4.B"><i data-feather="link"></i></a></figcaption></figure>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/templates/Object Composition/Nesting/Port Nesting/README.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../../../../assets/js/highlight.min.js"></script>
+<script src="../../../../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../../../../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

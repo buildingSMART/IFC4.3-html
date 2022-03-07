@@ -1,0 +1,873 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>7.1.3.1 IfcDoorLiningProperties - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a class="current" href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a class="sublink-1 current" href="../ifcarchitecturedomain/content.html">
+                            7.1 IfcArchitectureDomain
+                        </a>
+<a class="sublink-1" href="../ifcbuildingcontrolsdomain/content.html">
+                            7.2 IfcBuildingControlsDomain
+                        </a>
+<a class="sublink-1" href="../ifcconstructionmgmtdomain/content.html">
+                            7.3 IfcConstructionMgmtDomain
+                        </a>
+<a class="sublink-1" href="../ifcelectricaldomain/content.html">
+                            7.4 IfcElectricalDomain
+                        </a>
+<a class="sublink-1" href="../ifchvacdomain/content.html">
+                            7.5 IfcHvacDomain
+                        </a>
+<a class="sublink-1" href="../ifcplumbingfireprotectiondomain/content.html">
+                            7.6 IfcPlumbingFireProtectionDomain
+                        </a>
+<a class="sublink-1" href="../ifcportsandwaterwaysdomain/content.html">
+                            7.7 IfcPortsAndWaterwaysDomain
+                        </a>
+<a class="sublink-1" href="../ifcraildomain/content.html">
+                            7.8 IfcRailDomain
+                        </a>
+<a class="sublink-1" href="../ifcroaddomain/content.html">
+                            7.9 IfcRoadDomain
+                        </a>
+<a class="sublink-1" href="../ifcstructuralanalysisdomain/content.html">
+                            7.10 IfcStructuralAnalysisDomain
+                        </a>
+<a class="sublink-1" href="../ifcstructuralelementsdomain/content.html">
+                            7.11 IfcStructuralElementsDomain
+                        </a>
+<a href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>7.1.3.1 IfcDoorLiningProperties</h1>
+<h2><a id="7.1.3.1.1-Semantic-definition"></a>
+    7.1.3.1.1 Semantic definition
+<a href="IfcDoorLiningProperties.htm#7.1.3.1.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p>The door lining is the frame which enables the door leaf to be fixed in position. The door lining is used to hang the door leaf. The parameters of the door lining define the geometrically relevant parameter of the lining.</p>
+<aside class="aside-note"><mark>NOTE</mark>  The <em><a href="IfcDoorLiningProperties.htm">IfcDoorLiningProperties</a></em> shall only be applied by the receiving application to parametrically define the 3D shape of a door, if the attribute <em><a href="IfcDoorType.htm">IfcDoorType</a></em>.ParameterTakesPrecedence is set TRUE.</aside>
+<p>The <em><a href="IfcDoorLiningProperties.htm">IfcDoorLiningProperties</a></em> are included in the list of properties of <em><a href="IfcDoorType.htm">IfcDoorType</a></em>.HasPropertySets. More information about the door lining can be included in the same list of the <em>IfcDoorTyype</em> using another <em><a href="IfcPropertySet.htm">IfcPropertySet</a></em> for dynamic extensions.</p>
+<p>The <em><a href="IfcDoorLiningProperties.htm">IfcDoorLiningProperties</a></em> does not hold its own geometric representation. However it defines parameters which can be used to create the shape of the door type (which is inserted by the <em><a href="IfcDoor.htm">IfcDoor</a></em> into the spatial context of the project) as described below. The parameters of the <em><a href="IfcDoorLiningProperties.htm">IfcDoorLiningProperties</a></em> define a standard door lining, including (if given) a threshold and a transom. The outer boundary of the lining is determined by the 'Profile' shape representation assigned to the <em><a href="IfcDoor.htm">IfcDoor</a></em>, which inserts the <em><a href="IfcDoorType.htm">IfcDoorType</a></em>.</p>
+<figure><a id="Figure-7.1.3.1.A"></a><img alt="lining 1" src="../figures/ifcdoorliningproperties-fig01.png"/><figcaption>Figure 7.1.3.1.A<a href="IfcDoorLiningProperties.htm#Figure-7.1.3.1.A"><i data-feather="link"></i></a></figcaption></figure>
+<p>The lining is applied to the left, right and upper side of the opening reveal. The parameters are:</p>
+<ul>
+<li>LiningDepth, if omitted, equal to wall thickness - this only takes effect if a value for <em>LiningThickness</em> is given. If both parameters are not given, then there is no lining.</li>
+<li>LiningThickness</li>
+<li>LiningToPanelOffsetX</li>
+<li>LiningToPanelOffsetY</li>
+</ul>
+<aside class="aside-note"><mark>NOTE</mark> The parameters <em>LiningToPanelOffsetX</em> and <em>LiningToPanelOffsetY</em> are added in IFC4.</aside>
+<figure><a id="Figure-7.1.3.1.B"></a><img alt="lining 2" src="../figures/ifcdoorliningproperties-fig02.png"/><figcaption>Figure 7.1.3.1.B<a href="IfcDoorLiningProperties.htm#Figure-7.1.3.1.B"><i data-feather="link"></i></a></figcaption></figure>
+<p>The lining can only cover part of the opening reveal.</p>
+<ul>
+<li>LiningOffset, given if lining edge has an offset to the x axis of the local placement.</li>
+</ul>
+<aside class="aside-note"><mark>NOTE</mark> In addition to the <em>LiningOffset</em>, the local placement of the <em><a href="IfcDoor.htm">IfcDoor</a></em> can already have an offset to the wall edge and thereby shift the lining along the y axis. The actual position of the lining is calculated from the origin of the local placement along the positive y axis with the distance given by <em>LiningOffset</em>.</aside>
+<figure><a id="Figure-7.1.3.1.C"></a><img alt="lining 3" src="../figures/ifcdoorliningproperties-fig03.png"/><figcaption>Figure 7.1.3.1.C<a href="IfcDoorLiningProperties.htm#Figure-7.1.3.1.C"><i data-feather="link"></i></a></figcaption></figure>
+<p>The lining may include a casing, which covers part of the wall faces around the opening. The casing covers the left, right and upper side of the lining on both sides of the wall. The parameters are:</p>
+<ul>
+<li>CasingDepth</li>
+<li>CasingThickness</li>
+</ul>
+<figure><a id="Figure-7.1.3.1.D"></a><img alt="lining 4" src="../figures/ifcdoorliningproperties-fig04.png"/><figcaption>Figure 7.1.3.1.D<a href="IfcDoorLiningProperties.htm#Figure-7.1.3.1.D"><i data-feather="link"></i></a></figcaption></figure>
+<p>The lining may include a threshold, which covers the bottom side of the opening. The parameters are:</p>
+<ul>
+<li>ThresholdDepth, if omitted, equal to wall thickness - this only takes effect if a value for <em>ThresholdThickness</em> is given. If both parameters are not given, then there is no threshold.</li>
+<li>ThresholdThickness</li>
+<li>ThresholdOffset (not shown in figure), given, if the threshold edge has an offset to the x axis of the local placement.</li>
+</ul>
+<figure><a id="Figure-7.1.3.1.E"></a><img alt="lining 5" src="../figures/ifcdoorliningproperties-fig05.png"/><figcaption>Figure 7.1.3.1.E<a href="IfcDoorLiningProperties.htm#Figure-7.1.3.1.E"><i data-feather="link"></i></a></figcaption></figure>
+<p>The lining may have a transom which separates the door panel from a window panel. The transom, if given, is defined by:</p>
+<ul>
+<li>TransomOffset, a parallel edge to the x axis of the local placement</li>
+<li>TransomThickness</li>
+</ul>
+<p>The depth of the transom is identical to the depth of the lining and not given as separate parameter.</p>
+<aside class="aside-note"><mark>NOTE</mark> <em>LiningDepth</em> describes the length of the lining along the reveal of the door opening. It can be given by an absolute value if the door lining has a specific depth depending on the door style. However often it is equal to the wall thickness. If the same door style is used (like the same type of single swing door), but inserted into different walls with different thicknesses, it would be necessary to create a special door style for each wall thickness. Therefore several CAD systems allow to set the value to "automatically aligned" to wall thickness. This should be exchanged by leaving the optional attribute LiningDepth unassigned. The same agreement applies to <em>ThresholdDepth</em>.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2.0. Has been renamed from <em>IfcDoorLining</em> in IFC2x.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The following attributes have been added <em>LiningToPanelOffsetX</em>, <em>LiningToPanelOffsetY</em>. The attribute <em>ShapeAspectStyle</em> is deprecated and shall no longer be used. Supertype changed to new <em><a href="IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a></em>.</aside>
+<h2><a id="7.1.3.1.2-Entity-inheritance"></a>
+    7.1.3.1.2 Entity inheritance
+<a href="IfcDoorLiningProperties.htm#7.1.3.1.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
+<ol class="tier">
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcRoot.htm">IfcRoot</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcPropertyDefinition.htm">IfcPropertyDefinition</a></li>
+<li class="abstract"><a href="IfcObjectDefinition.htm">IfcObjectDefinition</a></li>
+<li class="abstract"><a href="IfcRelationship.htm">IfcRelationship</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></li>
+<li class="abstract"><a href="IfcPropertyTemplateDefinition.htm">IfcPropertyTemplateDefinition</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a></li>
+<li class=""><a href="IfcPropertySet.htm">IfcPropertySet</a></li>
+<li class="abstract"><a href="IfcQuantitySet.htm">IfcQuantitySet</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="current ancestor"><a href="IfcDoorLiningProperties.htm">IfcDoorLiningProperties</a></li>
+<li class=""><a href="IfcDoorPanelProperties.htm">IfcDoorPanelProperties</a></li>
+<li class=""><a href="IfcPermeableCoveringProperties.htm">IfcPermeableCoveringProperties</a></li>
+<li class=""><a href="IfcReinforcementDefinitionProperties.htm">IfcReinforcementDefinitionProperties</a></li>
+<li class=""><a href="IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a></li>
+<li class=""><a href="IfcWindowPanelProperties.htm">IfcWindowPanelProperties</a></li>
+</ul>
+</li>
+</ol>
+<h2><a id="7.1.3.1.3-Attributes"></a>
+    7.1.3.1.3 Attributes
+<a href="IfcDoorLiningProperties.htm#7.1.3.1.3-Attributes"><i data-feather="link"></i></a></h2>
+<!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
+<figure><a id="Table-7.1.3.1.F"></a><table class="striped grouped attributes">
+<colgroup>
+<col style="width: 20px;"/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcRoot.htm">IfcRoot</a>
+<small>(4)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                GlobalId
+                
+            </td>
+<td data-label="Type"><a href="IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a></td>
+<td data-label="Description">
+<p>Assignment of a globally unique identifier within the entire software world.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                OwnerHistory
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
+<td data-label="Description">
+<p>Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,</p>
+<aside class="aside-note"><mark>NOTE</mark>  only the last modification in stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The attribute has been changed to be OPTIONAL.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>Optional name for use by the participating software systems or users. For some subtypes of <a href="IfcRoot.htm">IfcRoot</a> the insertion of the Name attribute may be required. This would be enforced by a where rule.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>Optional description, provided for exchanging informative comments.</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcPropertyDefinition.htm">IfcPropertyDefinition</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasContext</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="IfcRelDeclares.htm">IfcRelDeclares</a> FOR RelatedDefinitions</td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasAssociations</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcRelAssociates.htm">IfcRelAssociates</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>Reference to the relationship <a href="IfcRelAssociates.htm">IfcRelAssociates</a> and thus to those externally defined concepts, like classifications, documents, or library information, which are associated to the property definition.</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>
+<small>(3)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>DefinesType</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcTypeObject.htm">IfcTypeObject</a> FOR HasPropertySets</td>
+<td data-label="Description">
+<p>The type object to which the property set is assigned. The property set acts as a shared property set to all occurrences of the type object.</p>
+<aside class="aside-note"><mark>NOTE</mark>  The relationship between the <em><a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></em> and the <em><a href="IfcTypeObject.htm">IfcTypeObject</a></em> is a direct relationship, not utilizing <em><a href="IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em>, for maintaining compatibility with earlier releases of this standard.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The cardinality has been changed from 0:1 to 0:? with upward compatibility for file based exchange.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>IsDefinedBy</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcRelDefinesByTemplate.htm">IfcRelDefinesByTemplate</a> FOR RelatedPropertySets</td>
+<td data-label="Description">
+<p>Relation to the property set template, via the objectified relationship <em><a href="IfcRelDefinesByTemplate.htm">IfcRelDefinesByTemplate</a></em>, that, if given, provides the definition template for the property set or quantity set and its properties.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  New inverse relationship, change made with upward compatibility for file based exchange.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>DefinesOccurrence</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a> FOR RelatingPropertyDefinition</td>
+<td data-label="Description">
+<p>Reference to the relation to one or many object occurrences that are characterized by the property set definition. A single property set can be assigned to multiple object occurrences using the objectified relationship <em>IfcRefDefinesByProperties</em>.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark> Inverse attribute renamed from PropertyDefinitionOf with upward compatibility for file-based exchange.</aside>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to show 9 hidden inherited attributes
+                </small>
+<small class="hide-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to hide 9 inherited attributes
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="4">
+<a href="IfcDoorLiningProperties.htm">IfcDoorLiningProperties</a>
+<small>(13)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                LiningDepth
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>Depth of the door lining, measured perpendicular to the plane of the door lining. If omitted (and with a given value to lining thickness) it indicates an adjustable depth (i.e. a depth that adjusts to the thickness of the wall into which the occurrence of this door style is inserted).</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                LiningThickness
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
+<td data-label="Description">
+<p>Thickness of the door lining as explained in the figure above. If <em>LiningThickness</em> value is 0. (zero) it denotes a door without a lining (all other lining parameters shall be set to NIL in this case). If the <em>LiningThickness</em> is NIL it denotes that the value is not available.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  Data type modified to be <em><a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></em>.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                ThresholdDepth
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>Depth (dimension in plane perpendicular to door leaf) of the door threshold. Only given if the door lining includes a threshold. If omitted (and with a given value to threshold thickness) it indicates an adjustable depth (i.e. a depth that adjusts to the thickness of the wall into which the occurrence of this door style is inserted).</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">8</td>
+<td data-label="Name">
+                
+                ThresholdThickness
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
+<td data-label="Description">
+<p>Thickness of the door threshold as explained in the figure above. If <em>ThresholdThickness</em> value is 0. (zero) it denotes a door without a threshold (<em>ThresholdDepth</em> shall be set to NIL in this case). If the <em>ThresholdThickness</em> is NIL it denotes that the information about a threshold is not available.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  Data type modified to be <em><a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></em>.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">9</td>
+<td data-label="Name">
+                
+                TransomThickness
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
+<td data-label="Description">
+<p>Thickness (width in plane parallel to door leaf) of the transom (if provided - that is, if the <em>TransomOffset</em> attribute is set), which divides the door leaf from a glazing (or window) above.
+If the <em>TransomThickness</em> is set to zero (and the <em>TransomOffset</em> set to a positive length), then the door is divided vertically into a leaf and transom window area without a physical frame.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  Data type changed to <em><a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></em>.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">10</td>
+<td data-label="Name">
+                
+                TransomOffset
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
+<td data-label="Description">
+<p>Offset of the transom (if given) which divides the door leaf from a glazing (or window) above. The offset is given from the bottom of the door opening.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">11</td>
+<td data-label="Name">
+                
+                LiningOffset
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
+<td data-label="Description">
+<p>Offset (dimension in plane perpendicular to door leaf) of the door lining. The offset is given as distance to the x axis of the local placement.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">12</td>
+<td data-label="Name">
+                
+                ThresholdOffset
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
+<td data-label="Description">
+<p>Offset (dimension in plane perpendicular to door leaf) of the door threshold. The offset is given as distance to the x axis of the local placement. Only given if the door lining includes a threshold and the parameter is known.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">13</td>
+<td data-label="Name">
+                
+                CasingThickness
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>Thickness of the casing (dimension in plane of the door leaf). If given it is applied equally to all four sides of the adjacent wall.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">14</td>
+<td data-label="Name">
+                
+                CasingDepth
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>Depth of the casing (dimension in plane perpendicular to door leaf). If given it is applied equally to all four sides of the adjacent wall.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">15</td>
+<td data-label="Name">
+                
+                ShapeAspectStyle
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcShapeAspect.htm">IfcShapeAspect</a></td>
+<td data-label="Description">
+<p>Pointer to the shape aspect, if given. The shape aspect reflects the part of the door shape, which represents the door lining.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  The attribute is deprecated and shall no longer be used, i.e. the value shall be NIL ($).</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">16</td>
+<td data-label="Name">
+                
+                LiningToPanelOffsetX
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
+<td data-label="Description">
+<p>Offset between the lining and the window panel measured along the x-axis of the local placement.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  New attribute added at the end of the entity definition.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">17</td>
+<td data-label="Name">
+                
+                LiningToPanelOffsetY
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
+<td data-label="Description">
+<p>Offset between the lining and the door panel measured along the y-axis of the local placement.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  New attribute added at the end of the entity definition.</aside>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 7.1.3.1.F<a href="IfcDoorLiningProperties.htm#Table-7.1.3.1.F"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="7.1.3.1.4-Formal-propositions"></a>
+    7.1.3.1.4 Formal propositions
+<a href="IfcDoorLiningProperties.htm#7.1.3.1.4-Formal-propositions"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-7.1.3.1.G"></a><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WR31</td>
+<td>
+<p>Either both parameter, <em>LiningDepth</em> and <em>LiningThickness</em> are given, or only the <em>LiningThickness</em>, then the <em>LiningDepth</em> is variable. It is not valid to only assert the <em>LiningDepth</em>.</p>
+<aside class="aside-note"><mark>NOTE</mark>  A <em>LiningDepth</em> with NIL ($) value indicates a door style with a lining equal to the wall thickness.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  Rule corrected.</aside>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">NOT(EXISTS(LiningDepth) AND NOT(EXISTS(LiningThickness)))</code></pre>
+</td>
+</tr>
+<tr>
+<td>WR32</td>
+<td>
+<p>Either both parameter, <em>ThresholdDepth</em> and <em>ThresholdThickness</em> are given, or only the <em>ThresholdThickness</em>, then the <em>ThresholdDepth</em> is variable. It is not valid to only assert the <em>ThresholdDepth</em>.</p>
+<aside class="aside-note"><mark>NOTE</mark>  A <em>ThresholdDepth</em> with NIL ($) value indicates a door style with a lining equal to the wall thickness.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  Rule corrected.</aside>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">NOT(EXISTS(ThresholdDepth) AND NOT(EXISTS(ThresholdThickness)))</code></pre>
+</td>
+</tr>
+<tr>
+<td>WR33</td>
+<td>
+<p>Either both parameter, <em>TransomDepth</em> and <em>TransomThickness</em> are given, or none of them.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">(EXISTS(TransomOffset) AND EXISTS(TransomThickness)) XOR
+(NOT(EXISTS(TransomOffset)) AND NOT(EXISTS(TransomThickness)))</code></pre>
+</td>
+</tr>
+<tr>
+<td>WR34</td>
+<td>
+<p>Either both parameter, the <em>CasingDepth</em> and the <em>CasingThickness</em>, are given, or none of them.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">(EXISTS(CasingDepth) AND EXISTS(CasingThickness)) XOR
+(NOT(EXISTS(CasingDepth)) AND NOT(EXISTS(CasingThickness)))</code></pre>
+</td>
+</tr>
+<tr>
+<td>WR35</td>
+<td>
+<p>The <em><a href="IfcDoorLiningProperties.htm">IfcDoorLiningProperties</a></em> shall only be used in the context of an <em><a href="IfcDoorType.htm">IfcDoorType</a></em>.</p>
+<aside class="aside-note"><mark>NOTE</mark>  The deprecated entity <em>IfcDoorStyle</em> is applicable as well.</aside>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">(EXISTS(SELF\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])) 
+AND 
+(
+ ('IFC4X3.IFCDOORTYPE' IN TYPEOF(SELF\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]))
+  OR
+ ('IFC4X3.IFCDOORSTYLE' IN TYPEOF(SELF\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]))
+)</code></pre>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 7.1.3.1.G<a href="IfcDoorLiningProperties.htm#Table-7.1.3.1.G"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="7.1.3.1.5-Concept-usage"></a>
+    7.1.3.1.5 Concept usage
+<a href="IfcDoorLiningProperties.htm#7.1.3.1.5-Concept-usage"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-7.1.3.1.H"></a><table class="striped grouped concepts">
+<thead>
+<tr>
+<th>Concept</th>
+<th>Usage</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="IfcRoot.htm">IfcRoot</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>Ownership, history, and merge state is captured using <a href="IfcOwnerHistory.htm">IfcOwnerHistory</a>.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p><a href="IfcRoot.htm">IfcRoot</a> assigns the globally unique ID. In addition it may provide for a name and a description about the concept.</p>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    Click to show 2 hidden inherited concepts
+                </small>
+<small class="hide-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    Click to hide 2 inherited concepts
+                </small>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 7.1.3.1.H<a href="IfcDoorLiningProperties.htm#Table-7.1.3.1.H"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="7.1.3.1.6-Formal-representation"></a>
+    7.1.3.1.6 Formal representation
+<a href="IfcDoorLiningProperties.htm#7.1.3.1.6-Formal-representation"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">ENTITY <a href="IfcDoorLiningProperties.htm">IfcDoorLiningProperties</a>
+ SUBTYPE OF (<a href="IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a>);
+	LiningDepth : OPTIONAL <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a>;
+	LiningThickness : OPTIONAL <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>;
+	ThresholdDepth : OPTIONAL <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a>;
+	ThresholdThickness : OPTIONAL <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>;
+	TransomThickness : OPTIONAL <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>;
+	TransomOffset : OPTIONAL <a href="IfcLengthMeasure.htm">IfcLengthMeasure</a>;
+	LiningOffset : OPTIONAL <a href="IfcLengthMeasure.htm">IfcLengthMeasure</a>;
+	ThresholdOffset : OPTIONAL <a href="IfcLengthMeasure.htm">IfcLengthMeasure</a>;
+	CasingThickness : OPTIONAL <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a>;
+	CasingDepth : OPTIONAL <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a>;
+	ShapeAspectStyle : OPTIONAL <a href="IfcShapeAspect.htm">IfcShapeAspect</a>;
+	LiningToPanelOffsetX : OPTIONAL <a href="IfcLengthMeasure.htm">IfcLengthMeasure</a>;
+	LiningToPanelOffsetY : OPTIONAL <a href="IfcLengthMeasure.htm">IfcLengthMeasure</a>;
+ WHERE
+	WR31 : NOT(EXISTS(LiningDepth) AND NOT(EXISTS(LiningThickness)));
+	WR32 : NOT(EXISTS(ThresholdDepth) AND NOT(EXISTS(ThresholdThickness)));
+	WR33 : (EXISTS(TransomOffset) AND EXISTS(TransomThickness)) XOR
+(NOT(EXISTS(TransomOffset)) AND NOT(EXISTS(TransomThickness)));
+	WR34 : (EXISTS(CasingDepth) AND EXISTS(CasingThickness)) XOR
+(NOT(EXISTS(CasingDepth)) AND NOT(EXISTS(CasingThickness)));
+	WR35 : (EXISTS(SELF\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])) 
+AND 
+(
+ ('IFC4X3.IFCDOORTYPE' IN TYPEOF(SELF\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]))
+  OR
+ ('IFC4X3.IFCDOORSTYLE' IN TYPEOF(SELF\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]))
+);
+END_ENTITY;</code></pre>
+<h2><a id="7.1.3.1.7-References"></a>
+    7.1.3.1.7 References
+<a href="IfcDoorLiningProperties.htm#7.1.3.1.7-References"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+<div class="changelog">
+<h3><a id="7.1.3.1.8-Changelog"></a>
+                        7.1.3.1.8 Changelog
+                    <a href="IfcDoorLiningProperties.htm#7.1.3.1.8-Changelog"><i data-feather="link"></i></a></h3>
+<h4 class="collapsed"><a id="7.1.3.1.8.1-IFC4"></a>
+                        7.1.3.1.8.1 IFC4
+                    <a href="IfcDoorLiningProperties.htm#7.1.3.1.8.1-IFC4"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                attributes,
+                                LiningToPanelOffsetX
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                attributes,
+                                LiningToPanelOffsetY
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where_rules,
+                                WR31
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where_rules,
+                                WR32
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where_rules,
+                                WR35
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="x-square"></i>
+                                
+                                
+                                where_rules,
+                                WR31
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="x-square"></i>
+                                
+                                
+                                where_rules,
+                                WR32
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="x-square"></i>
+                                
+                                
+                                where_rules,
+                                WR35
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes LiningThickness definition,
+                                Changed from <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a> to <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>
+</small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes ThresholdThickness definition,
+                                Changed from <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a> to <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>
+</small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes TransomThickness definition,
+                                Changed from <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a> to <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>
+</small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                supertype,
+                                Changed from <a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a> to <a href="IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a>
+</small>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/domain/IfcArchitectureDomain/Entities/IfcDoorLiningProperties.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

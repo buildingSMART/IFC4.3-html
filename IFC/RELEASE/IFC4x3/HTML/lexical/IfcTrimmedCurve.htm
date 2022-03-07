@@ -1,0 +1,587 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>8.9.3.75 IfcTrimmedCurve - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a class="current" href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+<a class="sublink-1" href="../ifcactorresource/content.html">
+                            8.1 IfcActorResource
+                        </a>
+<a class="sublink-1" href="../ifcapprovalresource/content.html">
+                            8.2 IfcApprovalResource
+                        </a>
+<a class="sublink-1" href="../ifcconstraintresource/content.html">
+                            8.3 IfcConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifccostresource/content.html">
+                            8.4 IfcCostResource
+                        </a>
+<a class="sublink-1" href="../ifcdatetimeresource/content.html">
+                            8.5 IfcDateTimeResource
+                        </a>
+<a class="sublink-1" href="../ifcexternalreferenceresource/content.html">
+                            8.6 IfcExternalReferenceResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricconstraintresource/content.html">
+                            8.7 IfcGeometricConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricmodelresource/content.html">
+                            8.8 IfcGeometricModelResource
+                        </a>
+<a class="sublink-1 current" href="../ifcgeometryresource/content.html">
+                            8.9 IfcGeometryResource
+                        </a>
+<a class="sublink-1" href="../ifcmaterialresource/content.html">
+                            8.10 IfcMaterialResource
+                        </a>
+<a class="sublink-1" href="../ifcmeasureresource/content.html">
+                            8.11 IfcMeasureResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationappearanceresource/content.html">
+                            8.12 IfcPresentationAppearanceResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationdefinitionresource/content.html">
+                            8.13 IfcPresentationDefinitionResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationorganizationresource/content.html">
+                            8.14 IfcPresentationOrganizationResource
+                        </a>
+<a class="sublink-1" href="../ifcprofileresource/content.html">
+                            8.15 IfcProfileResource
+                        </a>
+<a class="sublink-1" href="../ifcpropertyresource/content.html">
+                            8.16 IfcPropertyResource
+                        </a>
+<a class="sublink-1" href="../ifcquantityresource/content.html">
+                            8.17 IfcQuantityResource
+                        </a>
+<a class="sublink-1" href="../ifcrepresentationresource/content.html">
+                            8.18 IfcRepresentationResource
+                        </a>
+<a class="sublink-1" href="../ifcstructuralloadresource/content.html">
+                            8.19 IfcStructuralLoadResource
+                        </a>
+<a class="sublink-1" href="../ifctopologyresource/content.html">
+                            8.20 IfcTopologyResource
+                        </a>
+<a class="sublink-1" href="../ifcutilityresource/content.html">
+                            8.21 IfcUtilityResource
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>8.9.3.75 IfcTrimmedCurve</h1>
+<h2><a id="8.9.3.75.1-Semantic-definition"></a>
+    8.9.3.75.1 Semantic definition
+<a href="IfcTrimmedCurve.htm#8.9.3.75.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p>An <em><a href="IfcTrimmedCurve.htm">IfcTrimmedCurve</a></em> is a bounded curve that is trimmed at both ends. The trimming points may be provided by a Cartesian point or by a parameter value, based on the parameterization of the <em>BasisCurve</em>. The <em>SenseAgreement</em> attribute indicates whether the direction of the <em><a href="IfcTrimmedCurve.htm">IfcTrimmedCurve</a></em> agrees with or is opposed to the direction of the <em>BasisCurve</em>.</p>
+<aside class="aside-note"><mark>NOTE</mark>  In case of the <em>BasisCurve</em> being a closed curve, such as an <em><a href="IfcCircle.htm">IfcCircle</a></em> or <em><a href="IfcEllipse.htm">IfcEllipse</a></em>, the <em>SenseAgreement</em> affects the geometric shape of the <em><a href="IfcTrimmedCurve.htm">IfcTrimmedCurve</a></em>.</aside>
+<figure><a id="Figure-8.9.3.75.A-shows-the-four-arcs-dashed-blue-and-green-lines-with-arrow-showing-different-orientations-that-can-be-defined-by-the-same-BasisCurve-of-type-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCircle.htm'&gt;IfcCircle&lt;/a&gt;-and-the-same-trimming-points-given-by-Cartesian-points-and-parameter-values-by-using-different-assignments-to-Trim1-and-Trim2-and-SenseAgreement."></a><img alt="curve parameterization" src="../figures/ifctrimmedcurve_parameterization.png" title="Figure 8.9.3.75.A — Trimmed curve parameterization"/><figcaption>Figure 8.9.3.75.A shows the four arcs (dashed blue and green lines with arrow showing different orientations) that can be defined by the same <em>BasisCurve</em> (of type <em><a href="IfcCircle.htm">IfcCircle</a></em>) and the same trimming points (given by Cartesian points and parameter values) by using different assignments to <em>Trim1</em> and <em>Trim2</em> and <em>SenseAgreement</em>.<a href="IfcTrimmedCurve.htm#Figure-8.9.3.75.A-shows-the-four-arcs-dashed-blue-and-green-lines-with-arrow-showing-different-orientations-that-can-be-defined-by-the-same-BasisCurve-of-type-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcCircle.htm'&gt;IfcCircle&lt;/a&gt;-and-the-same-trimming-points-given-by-Cartesian-points-and-parameter-values-by-using-different-assignments-to-Trim1-and-Trim2-and-SenseAgreement."><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-note"><mark>NOTE</mark>  Since the <em>BasisCurve</em> is closed (type <em><a href="IfcCircle.htm">IfcCircle</a></em>), the exception of the informal proposition IP3 applies, i.e. the sense flag is not required to be consistent with the parameter values of <em>Trim1</em> and <em>Trim1</em>, so the rule (sense = parameter 1 &lt; parameter 2) may not be fulfilled.</aside><aside class="aside-note"><mark>NOTE</mark> Definition according to ISO/CD 10303-42:1992
+A trimmed curve is a bounded curve which is created by taking a selected portion, between two identified points, of the associated basis curve. The basis curve itself is unaltered and more than one trimmed curve may reference the same basis curve. Trimming points for the curve may be identified by:</aside>
+<p>At least one of these shall be specified at each end of the curve. The <em>SenseAgreement</em> makes it possible to unambiguously define any segment of a closed curve such as a circle. The combinations of sense and ordered end points make it possible to define four distinct directed segments connecting two different points on a circle or other closed curve. For this purpose cyclic properties of the parameter range are assumed; for example, 370 degrees is equivalent to 10 degrees.</p>
+<blockquote>
+<p>The <em><a href="IfcTrimmedCurve.htm">IfcTrimmedCurve</a></em> has a parameterization which is inherited from the particular basis curve reference. More precisely the parameter s of the trimmed curve is derived from the parameter of the basis curve as follows:</p>
+<ul>
+<li>if <em>SenseAgreement</em> is TRUE: <em>s = t - t~1~</em></li>
+<li>if <em>SenseAgreement</em> is FALSE: <em>s = t~2~ - t</em></li>
+</ul>
+</blockquote>
+<p>In the above equations t~1~ is the value given by <em>Trim1</em> or the parameter value corresponding to point 1 and t~2~ is the value given by <em>Trim2</em> or the parameter value corresponding to point 2. The resultant <em><a href="IfcTrimmedCurve.htm">IfcTrimmedCurve</a></em> has a parameter ranging from 0 at the first trimming point to |t~2~ - t~1~| at the second trimming point.</p>
+<aside class="aside-note"><mark>NOTE</mark>  In case of a closed curve, it may be necessary to increment t1 or t2 by the parametric length for consistency with the sense flag.</aside><aside class="aside-note"><mark>NOTE</mark> Entity adapted from <strong>trimmed_curve</strong> defined in ISO 10303-42</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC1.0</aside>
+<p>Informal Propositions:</p>
+<ol>
+<li>Where both the parameter value and the Cartesian point exist for <em>Trim1</em> and <em>Trim2</em> they shall be consistent. (i.e., the <em>BasisCurve</em> evaluated at the parameter value shall coincide with the specified point).</li>
+<li>When a Cartesian point is specified by <em>Trim1</em> or by <em>Trim2</em> it shall lie on the <em>BasisCurve</em>.</li>
+<li>Except the case of a closed <em>BasisCurve</em> where both parameter 1 and parameter 2 exist, they shall be consistent with the sense flag, i.e., (sense = parameter 1 &lt; parameter 2). Or, for every open curve where both parameter 1 and parameter 2 exist, they shall be consistent with the <em>SenseAgreement</em>, i.e., <em>SenseAgreement</em> = (parameter 1 &lt; parameter 2).</li>
+<li>If both parameter 1 and parameter 2 exist, then parameter 1 &lt;&gt; parameter 2. For a closed base curve, e.g. <em><a href="IfcCircle.htm">IfcCircle</a></em> or <em><a href="IfcEllipse.htm">IfcEllipse</a></em>, this also applies to the cyclic properties, as 360' is equal to 0', parameter 1 = 360' and parameter 2 = 0' are treated as being equal and therefore violating this proposition.</li>
+<li>When a parameter value is specified by <em>Trim1</em> or <em>Trim2</em> it shall lie within the parametric range of the <em>BasisCurve</em>.</li>
+</ol>
+<h2><a id="8.9.3.75.2-Entity-inheritance"></a>
+    8.9.3.75.2 Entity inheritance
+<a href="IfcTrimmedCurve.htm#8.9.3.75.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
+<ol class="tier">
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcRepresentationItem.htm">IfcRepresentationItem</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcGeometricRepresentationItem.htm">IfcGeometricRepresentationItem</a></li>
+<li class=""><a href="IfcMappedItem.htm">IfcMappedItem</a></li>
+<li class=""><a href="IfcStyledItem.htm">IfcStyledItem</a></li>
+<li class="abstract"><a href="IfcTopologicalRepresentationItem.htm">IfcTopologicalRepresentationItem</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcCurve.htm">IfcCurve</a></li>
+<li class=""><a href="IfcAnnotationFillArea.htm">IfcAnnotationFillArea</a></li>
+<li class=""><a href="IfcBooleanResult.htm">IfcBooleanResult</a></li>
+<li class=""><a href="IfcBoundingBox.htm">IfcBoundingBox</a></li>
+<li class="abstract"><a href="IfcCartesianPointList.htm">IfcCartesianPointList</a></li>
+<li class="abstract"><a href="IfcCartesianTransformationOperator.htm">IfcCartesianTransformationOperator</a></li>
+<li class="abstract"><a href="IfcCsgPrimitive3D.htm">IfcCsgPrimitive3D</a></li>
+<li class=""><a href="IfcDirection.htm">IfcDirection</a></li>
+<li class=""><a href="IfcFaceBasedSurfaceModel.htm">IfcFaceBasedSurfaceModel</a></li>
+<li class=""><a href="IfcFillAreaStyleHatching.htm">IfcFillAreaStyleHatching</a></li>
+<li class=""><a href="IfcFillAreaStyleTiles.htm">IfcFillAreaStyleTiles</a></li>
+<li class=""><a href="IfcGeometricSet.htm">IfcGeometricSet</a></li>
+<li class=""><a href="IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a></li>
+<li class="abstract"><a href="IfcLightSource.htm">IfcLightSource</a></li>
+<li class="abstract"><a href="IfcPlacement.htm">IfcPlacement</a></li>
+<li class=""><a href="IfcPlanarExtent.htm">IfcPlanarExtent</a></li>
+<li class="abstract"><a href="IfcPoint.htm">IfcPoint</a></li>
+<li class=""><a href="IfcSectionedSpine.htm">IfcSectionedSpine</a></li>
+<li class="abstract"><a href="IfcSegment.htm">IfcSegment</a></li>
+<li class=""><a href="IfcShellBasedSurfaceModel.htm">IfcShellBasedSurfaceModel</a></li>
+<li class="abstract"><a href="IfcSolidModel.htm">IfcSolidModel</a></li>
+<li class="abstract"><a href="IfcSurface.htm">IfcSurface</a></li>
+<li class="abstract"><a href="IfcTessellatedItem.htm">IfcTessellatedItem</a></li>
+<li class=""><a href="IfcTextLiteral.htm">IfcTextLiteral</a></li>
+<li class=""><a href="IfcVector.htm">IfcVector</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcBoundedCurve.htm">IfcBoundedCurve</a></li>
+<li class="abstract"><a href="IfcConic.htm">IfcConic</a></li>
+<li class=""><a href="IfcLine.htm">IfcLine</a></li>
+<li class="abstract"><a href="IfcOffsetCurve.htm">IfcOffsetCurve</a></li>
+<li class=""><a href="IfcPcurve.htm">IfcPcurve</a></li>
+<li class=""><a href="IfcPolynomialCurve.htm">IfcPolynomialCurve</a></li>
+<li class="abstract"><a href="IfcSpiral.htm">IfcSpiral</a></li>
+<li class=""><a href="IfcSurfaceCurve.htm">IfcSurfaceCurve</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="current ancestor"><a href="IfcTrimmedCurve.htm">IfcTrimmedCurve</a></li>
+<li class="abstract"><a href="IfcBSplineCurve.htm">IfcBSplineCurve</a></li>
+<li class=""><a href="IfcCompositeCurve.htm">IfcCompositeCurve</a></li>
+<li class=""><a href="IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a></li>
+<li class=""><a href="IfcPolyline.htm">IfcPolyline</a></li>
+</ul>
+</li>
+</ol>
+<h2><a id="8.9.3.75.3-Attributes"></a>
+    8.9.3.75.3 Attributes
+<a href="IfcTrimmedCurve.htm#8.9.3.75.3-Attributes"><i data-feather="link"></i></a></h2>
+<!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
+<figure><a id="Table-8.9.3.75.B"></a><table class="striped grouped attributes">
+<colgroup>
+<col style="width: 20px;"/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcRepresentationItem.htm">IfcRepresentationItem</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>LayerAssignment</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
+<td data-label="Description">
+<p>Assignment of the representation item to a single or multiple layer(s). The <em>LayerAssignments</em> can override a <em>LayerAssignments</em> of the <em><a href="IfcRepresentation.htm">IfcRepresentation</a></em> it is used  within the list of <em>Items</em>.</p>
+<aside class="aside-change"><mark>IFC2x3-CHANGE</mark>  The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>StyledByItem</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
+<td data-label="Description">
+<p>Reference to the <em><a href="IfcStyledItem.htm">IfcStyledItem</a></em> that provides presentation information to the representation, e.g. a curve style, including colour and thickness to a geometric curve.</p>
+<aside class="aside-change"><mark>IFC2x3-CHANGE</mark>  The inverse attribute <em>StyledByItem</em> has been added.</aside>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcCurve.htm">IfcCurve</a>
+<small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>Dim</em>
+</td>
+<td data-label="Type"><a href="IfcDimensionCount.htm">IfcDimensionCount</a></td>
+<td data-label="Description">
+<p>
+                    This attribute is formally derived.
+                </p>
+<pre><code class="language-express hljs"><a href="IfcCurveDim.htm">IfcCurveDim</a>(SELF)</code></pre>
+<p>The space dimensionality of this abstract class, defined differently for all subtypes, i.e. for <a href="IfcLine.htm">IfcLine</a>, <a href="IfcConic.htm">IfcConic</a> and <a href="IfcBoundedCurve.htm">IfcBoundedCurve</a>.</p>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to show 3 hidden inherited attributes
+                </small>
+<small class="hide-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to hide 3 inherited attributes
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="4">
+<a href="IfcTrimmedCurve.htm">IfcTrimmedCurve</a>
+<small>(5)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                BasisCurve
+                
+            </td>
+<td data-label="Type"><a href="IfcCurve.htm">IfcCurve</a></td>
+<td data-label="Description">
+<p>The curve to be trimmed. For curves with multiple representations any parameter values given as Trim1 or Trim2 refer to the master representation of the BasisCurve only.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Trim1
+                
+            </td>
+<td data-label="Type">SET [1:2] OF <a href="IfcTrimmingSelect.htm">IfcTrimmingSelect</a></td>
+<td data-label="Description">
+<p>The first trimming point which may be specified as a Cartesian point, as a real parameter or both.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Trim2
+                
+            </td>
+<td data-label="Type">SET [1:2] OF <a href="IfcTrimmingSelect.htm">IfcTrimmingSelect</a></td>
+<td data-label="Description">
+<p>The second trimming point which may be specified as a Cartesian point, as a real parameter or both.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                SenseAgreement
+                
+            </td>
+<td data-label="Type"><a href="IfcBoolean.htm">IfcBoolean</a></td>
+<td data-label="Description">
+<p>Flag to indicate whether the direction of the trimmed curve agrees with or is opposed to the direction of the basis curve.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                MasterRepresentation
+                
+            </td>
+<td data-label="Type"><a href="IfcTrimmingPreference.htm">IfcTrimmingPreference</a></td>
+<td data-label="Description">
+<p>Where both parameter and point are present at either end of the curve this indicates the preferred form.</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.9.3.75.B<a href="IfcTrimmedCurve.htm#Table-8.9.3.75.B"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.9.3.75.4-Formal-propositions"></a>
+    8.9.3.75.4 Formal propositions
+<a href="IfcTrimmedCurve.htm#8.9.3.75.4-Formal-propositions"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-8.9.3.75.C"></a><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NoTrimOfBoundedCurves</td>
+<td>
+<p>Already bounded curves shall not be trimmed.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">NOT('IFC4X3.IFCBOUNDEDCURVE' IN TYPEOF(BasisCurve))</code></pre>
+</td>
+</tr>
+<tr>
+<td>Trim1ValuesConsistent</td>
+<td>
+<p>Either a single value is specified for Trim1, or the two trimming values are of different type (point and parameter)</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">(HIINDEX(Trim1) = 1) OR (TYPEOF(Trim1[1]) &lt;&gt; TYPEOF(Trim1[2]))</code></pre>
+</td>
+</tr>
+<tr>
+<td>Trim2ValuesConsistent</td>
+<td>
+<p>Either a single value is specified for Trim2, or the two trimming values are of different type (point and parameter)</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">(HIINDEX(Trim2) = 1) OR (TYPEOF(Trim2[1]) &lt;&gt; TYPEOF(Trim2[2]))</code></pre>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.9.3.75.C<a href="IfcTrimmedCurve.htm#Table-8.9.3.75.C"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.9.3.75.5-Formal-representation"></a>
+    8.9.3.75.5 Formal representation
+<a href="IfcTrimmedCurve.htm#8.9.3.75.5-Formal-representation"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">ENTITY <a href="IfcTrimmedCurve.htm">IfcTrimmedCurve</a>
+ SUBTYPE OF (<a href="IfcBoundedCurve.htm">IfcBoundedCurve</a>);
+	BasisCurve : <a href="IfcCurve.htm">IfcCurve</a>;
+	Trim1 : SET [1:2] OF <a href="IfcTrimmingSelect.htm">IfcTrimmingSelect</a>;
+	Trim2 : SET [1:2] OF <a href="IfcTrimmingSelect.htm">IfcTrimmingSelect</a>;
+	SenseAgreement : <a href="IfcBoolean.htm">IfcBoolean</a>;
+	MasterRepresentation : <a href="IfcTrimmingPreference.htm">IfcTrimmingPreference</a>;
+ WHERE
+	NoTrimOfBoundedCurves : NOT('IFC4X3.IFCBOUNDEDCURVE' IN TYPEOF(BasisCurve));
+	Trim1ValuesConsistent : (HIINDEX(Trim1) = 1) OR (TYPEOF(Trim1[1]) &lt;&gt; TYPEOF(Trim1[2]));
+	Trim2ValuesConsistent : (HIINDEX(Trim2) = 1) OR (TYPEOF(Trim2[1]) &lt;&gt; TYPEOF(Trim2[2]));
+END_ENTITY;</code></pre>
+<h2><a id="8.9.3.75.6-References"></a>
+    8.9.3.75.6 References
+<a href="IfcTrimmedCurve.htm#8.9.3.75.6-References"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="IfcBoundedCurve.htm">IfcBoundedCurve</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcCurveDim.htm">IfcCurveDim</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+<div class="changelog">
+<h3><a id="8.9.3.75.7-Changelog"></a>
+                        8.9.3.75.7 Changelog
+                    <a href="IfcTrimmedCurve.htm#8.9.3.75.7-Changelog"><i data-feather="link"></i></a></h3>
+<h4 class="collapsed"><a id="8.9.3.75.7.1-IFC4"></a>
+                        8.9.3.75.7.1 IFC4
+                    <a href="IfcTrimmedCurve.htm#8.9.3.75.7.1-IFC4"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where_rules,
+                                NoTrimOfBoundedCurves
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where_rules,
+                                Trim1ValuesConsistent
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where_rules,
+                                Trim2ValuesConsistent
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="x-square"></i>
+                                
+                                
+                                where_rules,
+                                WR41
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="x-square"></i>
+                                
+                                
+                                where_rules,
+                                WR42
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="x-square"></i>
+                                
+                                
+                                where_rules,
+                                WR43
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes SenseAgreement definition,
+                                Changed from boolean to <a href="IfcBoolean.htm">IfcBoolean</a>
+</small>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/resource/IfcGeometryResource/Entities/IfcTrimmedCurve.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

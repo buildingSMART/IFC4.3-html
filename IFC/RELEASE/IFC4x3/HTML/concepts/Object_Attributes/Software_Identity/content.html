@@ -1,0 +1,203 @@
+<html lang="en">
+<head>
+<link href="../../../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../../../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>4.3.8 Software Identity - IFC4.3.0.0 Documentation</title>
+<link href="../../../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../../../toc.html">
+                             Contents
+                        </a>
+<a href="../../../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../../../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../../../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../../../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../../../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a class="current" href="../../content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../../../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../../../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../../../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a href="../../../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../../../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../../../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../../../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../../../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../../../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../../../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../../../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../../../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>4.3.8 Software Identity</h1>
+<p>An object needs to be identifiable for accurate processing by both human and automated processes. Identification may be through several attributes such as Identification, Name, Description or GUID. The GUID is compressed for the purpose of being exchanged within an IFC data set - the compressed GUID is referred to as "IFC-GUID". While the IFC-GUID is normally generated automatically and has to be persistent, the Identification may relate to other informal registers but should be unique within the set of objects of the same type. The Name and Description should allow any object to be identified in the context of the project or facility being modelled.</p>
+<p>Various objects may have additional identifications that may be human-readable and/or may be structured through classification association. Various file formats may use additional identifications of instances for serialization purposes, however there is no requirement or guarantee for such identifications to remain the same between revisions or across applications. For example, the IFC-SPF file format lists each instance with a 64-bit integer that is unique within the particular file.</p>
+<p>
+    The following diagram shows the generic classes and relationships used when applying this concept.
+    
+    In addition, concepts may have particular importance to common or standardised industry practices and scenarios. For these specific usage scenarios, the tables below shows a recommended list of general usage patterns that users may adopt.
+    
+</p>
+<figure><a id="Figure-4.3.8.A"></a><svg height="132px" viewbox="0.00 0.00 635.00 178.00" width="474px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="graph" id="graph0" transform="scale(1 1) rotate(0) translate(4 174)">
+<title>G</title>
+<polygon fill="transparent" points="-4,4 -4,-174 631,-174 631,4 -4,4" stroke="transparent"></polygon>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm'>IfcRoot</a> -->
+<g class="node" id="node1">
+<title><a href="../../../lexical/IfcRoot.htm">IfcRoot</a></title>
+<polygon fill="#1976d2" points="8.5,-139 8.5,-166 258.5,-166 258.5,-139 8.5,-139" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-139 258.5,-139 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="14.5" y="-149.8"><a href="../../../lexical/IfcRoot.htm">IfcRoot</a></text>
+<polygon fill="#1976d2" points="258.5,-139 258.5,-166 297.5,-166 297.5,-139 258.5,-139" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-139 297.5,-139 " stroke="#000000"></polyline>
+<polygon fill="#eeeeee" points="8.5,-112 8.5,-139 258.5,-139 258.5,-112 8.5,-112" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-112 258.5,-112 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="115" y="-122.8">GUID</text>
+<polygon fill="#eeeeee" points="258.5,-112 258.5,-139 297.5,-139 297.5,-112 258.5,-112" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-112 297.5,-112 " stroke="#000000"></polyline>
+<polygon fill="#dddddd" points="8.5,-85 8.5,-112 258.5,-112 258.5,-85 8.5,-85" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-85 258.5,-85 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-94.8">GlobalId</text>
+<polygon fill="#dddddd" points="258.5,-85 258.5,-112 297.5,-112 297.5,-85 258.5,-85" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-85 297.5,-85 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-94.8">[1:1]</text>
+<polygon fill="#ffffff" points="8.5,-58 8.5,-85 258.5,-85 258.5,-58 8.5,-58" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-58 258.5,-58 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-67.8">OwnerHistory</text>
+<polygon fill="#ffffff" points="258.5,-58 258.5,-85 297.5,-85 297.5,-58 258.5,-58" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-58 297.5,-58 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-67.8">[0:1]</text>
+<polygon fill="#ffffff" points="8.5,-31 8.5,-58 258.5,-58 258.5,-31 8.5,-31" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-31 258.5,-31 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-40.8">Name</text>
+<polygon fill="#ffffff" points="258.5,-31 258.5,-58 297.5,-58 297.5,-31 258.5,-31" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-31 297.5,-31 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-40.8">[0:1]</text>
+<polygon fill="#ffffff" points="8.5,-4 8.5,-31 258.5,-31 258.5,-4 8.5,-4" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-4 258.5,-4 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-13.8">Description</text>
+<polygon fill="#ffffff" points="258.5,-4 258.5,-31 297.5,-31 297.5,-4 258.5,-4" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-4 297.5,-4 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-13.8">[0:1]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGloballyUniqueId.htm'>IfcGloballyUniqueId</a> -->
+<g class="node" id="node2">
+<title><a href="../../../lexical/IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a></title>
+<polygon fill="#1976d2" points="349,-86 349,-113 599,-113 599,-86 349,-86" stroke="transparent"></polygon>
+<polyline fill="none" points="349,-86 599,-86 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="355" y="-96.8"><a href="../../../lexical/IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a></text>
+<polygon fill="#1976d2" points="599,-86 599,-113 619,-113 619,-86 599,-86" stroke="transparent"></polygon>
+<polyline fill="none" points="599,-86 619,-86 " stroke="#000000"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm'>IfcRoot</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcGloballyUniqueId.htm'>IfcGloballyUniqueId</a> -->
+<g class="edge" id="edge1">
+<title><a href="../../../lexical/IfcRoot.htm">IfcRoot</a>:GlobalId1-&gt;<a href="../../../lexical/IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a>:IfcGloballyUniqueId0</title>
+<path d="M297.5,-99C297.5,-99 323.8166,-99 338.8253,-99" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="339,-102.5001 349,-99 339,-95.5001 339,-102.5001" stroke="#000000"></polygon>
+</g>
+</g>
+</svg><figcaption>Figure 4.3.8.A<a href="content.html#Figure-4.3.8.A"><i data-feather="link"></i></a></figcaption></figure>
+<h3><a id="General-Usage"></a>General Usage<a href="content.html#General-Usage"><i data-feather="link"></i></a></h3><figure><a id="Table-4.3.8.B"></a><table>
+<thead>
+<tr><th>ApplicableEntity<br/> </th></tr>
+</thead>
+<tbody>
+<tr><td><a href="../../../lexical/IfcRoot.htm">IfcRoot</a> </td></tr>
+</tbody>
+</table><figcaption>Table 4.3.8.B<a href="content.html#Table-4.3.8.B"><i data-feather="link"></i></a></figcaption></figure>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/templates/Object Attributes/Software Identity/README.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../../../assets/js/highlight.min.js"></script>
+<script src="../../../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../../../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

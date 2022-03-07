@@ -1,0 +1,412 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>8.7.2.2 IfcAlignmentHorizontalSegmentTypeEnum - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a class="current" href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+<a class="sublink-1" href="../ifcactorresource/content.html">
+                            8.1 IfcActorResource
+                        </a>
+<a class="sublink-1" href="../ifcapprovalresource/content.html">
+                            8.2 IfcApprovalResource
+                        </a>
+<a class="sublink-1" href="../ifcconstraintresource/content.html">
+                            8.3 IfcConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifccostresource/content.html">
+                            8.4 IfcCostResource
+                        </a>
+<a class="sublink-1" href="../ifcdatetimeresource/content.html">
+                            8.5 IfcDateTimeResource
+                        </a>
+<a class="sublink-1" href="../ifcexternalreferenceresource/content.html">
+                            8.6 IfcExternalReferenceResource
+                        </a>
+<a class="sublink-1 current" href="../ifcgeometricconstraintresource/content.html">
+                            8.7 IfcGeometricConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricmodelresource/content.html">
+                            8.8 IfcGeometricModelResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometryresource/content.html">
+                            8.9 IfcGeometryResource
+                        </a>
+<a class="sublink-1" href="../ifcmaterialresource/content.html">
+                            8.10 IfcMaterialResource
+                        </a>
+<a class="sublink-1" href="../ifcmeasureresource/content.html">
+                            8.11 IfcMeasureResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationappearanceresource/content.html">
+                            8.12 IfcPresentationAppearanceResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationdefinitionresource/content.html">
+                            8.13 IfcPresentationDefinitionResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationorganizationresource/content.html">
+                            8.14 IfcPresentationOrganizationResource
+                        </a>
+<a class="sublink-1" href="../ifcprofileresource/content.html">
+                            8.15 IfcProfileResource
+                        </a>
+<a class="sublink-1" href="../ifcpropertyresource/content.html">
+                            8.16 IfcPropertyResource
+                        </a>
+<a class="sublink-1" href="../ifcquantityresource/content.html">
+                            8.17 IfcQuantityResource
+                        </a>
+<a class="sublink-1" href="../ifcrepresentationresource/content.html">
+                            8.18 IfcRepresentationResource
+                        </a>
+<a class="sublink-1" href="../ifcstructuralloadresource/content.html">
+                            8.19 IfcStructuralLoadResource
+                        </a>
+<a class="sublink-1" href="../ifctopologyresource/content.html">
+                            8.20 IfcTopologyResource
+                        </a>
+<a class="sublink-1" href="../ifcutilityresource/content.html">
+                            8.21 IfcUtilityResource
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>8.7.2.2 IfcAlignmentHorizontalSegmentTypeEnum</h1>
+<h2><a id="8.7.2.2.1-Semantic-definition"></a>
+    8.7.2.2.1 Semantic definition
+<a href="IfcAlignmentHorizontalSegmentTypeEnum.htm#8.7.2.2.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p>The <a href="IfcAlignmentHorizontalSegmentTypeEnum.htm">IfcAlignmentHorizontalSegmentTypeEnum</a> indicates the type of a segment of a horizontal alignment segment (<a href="IfcAlignmentHorizontalSegment.htm">IfcAlignmentHorizontalSegment</a>). Horizontal segments can be viewed from a geometric perspective and from a kinematic perspective. In recent times the kinematic perspective gained importance. The enumerations are detailed according to this development especially in modern track design.</p>
+<p><strong>Kinematic perspective on horizontal alignment segments</strong></p>
+<p>The central parameter of the kinematic perspective is lateral acceleration of the vehicle induced by change of direction while driving. In the horizontal layout this is the represented by the curvature of the segment. According to the curvature value the following categorization can be made:</p>
+<figure><a id="Table-8.7.2.2.A"></a><table>
+<thead>
+<tr>
+<th align="left">Curvature</th>
+<th align="left">Segmenttype</th>
+<th align="left">Enumeration Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0</td>
+<td align="left">straight line</td>
+<td align="left">LINE</td>
+</tr>
+<tr>
+<td align="left">constant in the complete segment, &lt;&gt; 0</td>
+<td align="left">Circular arc</td>
+<td align="left">CIRCULARARC</td>
+</tr>
+<tr>
+<td align="left">variation along the segment</td>
+<td align="left">Transition with linear curvature variation</td>
+<td align="left">CLOTHOID, CUBIC</td>
+</tr>
+<tr>
+<td align="left">variation along the segment</td>
+<td align="left">Transition with non-linear curvature variation</td>
+<td align="left">HELMERTCURVE, BLOSSCURVE, COSINECURVE, SINECURVE, VIENNESEBEND</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.7.2.2.A<a href="IfcAlignmentHorizontalSegmentTypeEnum.htm#Table-8.7.2.2.A"><i data-feather="link"></i></a></figcaption></figure>
+<p><strong>Geometric perspective on horizontal alignment segments</strong></p>
+<p>The traditional view is denoted by the geometric perspective in the context of the business terminology related <a href="IfcAlignment.htm">IfcAlignment</a> documentation. Before the availability of modern computers alignment design was performed using "traditional" drawing techniques. In the first phase of computerization this origin led to a representation in the x,y space first and a check of safety related properties in a second step. This can still be seen in regulations which have been put into effect 1980 or earlier. Of course designs which have been produced on basis of these regulations reflect the "good enough" attitude in the precision of the documentation.</p>
+<p>In a later phase an increasing importance of the kinematic perspective can be observed. Here precise control of the lateral acceleration (horizontal and cant layout) and vertical acceleration (vertical layout) became prevalent. Designers started to use high performance transition bends especially in high speed scenarios. In the kinematic perspective precise curvature fitting between consecutive segments needs to be better than in the "good enough" approach of traditional geometric perspective. Central terms are e.g. "jerks", "theoretical cant" or "cant deficiency".</p>
+<p><strong>Generic calculation of intrinsic x, y-coordinates for a given curvature</strong></p>
+<p>For each horizontal alignment segment with a known curvature formula a generic method to calculate segment intrinsic coordinates exists.</p>
+<p>$$\displaylines{ \varphi(s) = \int d \varphi = \int \kappa(s) \ d s \\
+x(s) = \int cos \ \varphi(s) \ d s = \int cos( \int \kappa(s) \ d s \ ) d s \\
+y(s) = \int sin \ \varphi(s) \ d s = \int \sin( \int \kappa(s) \ d s\ ) d s }$$</p>
+<aside class="aside-note"><mark>NOTE</mark> While it is possible to apply the generic calculation also for trivial cases like LINE or CIRCULARARC it is much more efficient to use available formulas.</aside>
+<p><strong>Word of warning</strong></p>
+<p>"Good enough" traditional designs have to be carefully checked before being included into a high precision 3D model. Intermediate corrections might be necessary. Fortunately the clothoid works very well with comparable documentation quality both in the classic geometric perspective and in the more recent kinematic perspective. Fortunately the vast majority of horizontal transition bends are designed and implemented as clothoids.</p>
+<p><strong>Recommendation</strong></p>
+<p>Check the relevant regulations for the network in question. Alignment designs as such are very stable over the lifetime of the road or track. Especially for old designs quality and precision of available documentation has to be checked very carefully. A clear understanding of limitations should be established before implementing automated data flows between high precision BIM environments and legacy documentation systems. This applies both to legacy, central databases and to legacy, individual documents.</p>
+<p><strong>Used Symbols and their meaning</strong></p>
+<figure><a id="Table-8.7.2.2.B"></a><table>
+<thead>
+<tr>
+<th align="left">Symbol</th>
+<th align="left">meaning</th>
+<th align="left">Unit, value range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">L</td>
+<td align="left">full length of segment</td>
+<td align="left">positive length  L &gt; 0</td>
+</tr>
+<tr>
+<td align="left">s</td>
+<td align="left">current position on segment</td>
+<td align="left">0 &lt; s &lt; L</td>
+</tr>
+<tr>
+<td align="left">ξ</td>
+<td align="left">= s / L  (Greek "xi") standardised, dimensionless path length along the alignment / track centre line</td>
+<td align="left">0 &lt; ξ &lt; 1</td>
+</tr>
+<tr>
+<td align="left">κ</td>
+<td align="left">(Greek "kappa") Curvature (inverse radius) of the alignment / track centre line in plan view (horizontal layout).</td>
+<td align="left">1/radius</td>
+</tr>
+<tr>
+<td align="left">κ<sub>1</sub></td>
+<td align="left">Curvature (inverse radius) at beginning of the alignment / track centre line in plan view (horizontal layout).</td>
+<td align="left">1/radius</td>
+</tr>
+<tr>
+<td align="left">h</td>
+<td align="left">height of the gravity center line used for calculation above the track centreline in the ground plan.</td>
+<td align="left">length</td>
+</tr>
+<tr>
+<td align="left">ψ</td>
+<td align="left">(Greek "psi") Angle of cant (cross slope angle, bank angle)</td>
+<td align="left">rad</td>
+</tr>
+<tr>
+<td align="left">φ</td>
+<td align="left">(Greek "phi") Directional angle (azimuth, bearing)</td>
+<td align="left">rad</td>
+</tr>
+<tr>
+<td align="left">x(s)</td>
+<td align="left">variable longitudinal coordinate of the projection of the alignment / track centreline into the ground plan.</td>
+<td align="left">length</td>
+</tr>
+<tr>
+<td align="left">y(s)</td>
+<td align="left">variable transverse coordinate of the projection of the alignment / track centreline into the ground plan.</td>
+<td align="left">length</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.7.2.2.B<a href="IfcAlignmentHorizontalSegmentTypeEnum.htm#Table-8.7.2.2.B"><i data-feather="link"></i></a></figcaption></figure>
+<p><strong>Terminology</strong></p>
+<p><strong>Intrinsic coordinate, intrinisc coordinate system of an alignment segment:</strong></p>
+<p>The origin of an intrinsic coordinate system is the start of the segment. The direction of the positive x-axis is the start direction of the segments.</p>
+<h2><a id="8.7.2.2.2-Type-values"></a>
+    8.7.2.2.2 Type values
+<a href="IfcAlignmentHorizontalSegmentTypeEnum.htm#8.7.2.2.2-Type-values"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-8.7.2.2.C"></a><table class="striped type-values">
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Name"><code>BLOSSCURVE</code>
+</td><td data-label="Description">
+<p>The Bloss transition is a more recent form of a high performance transition bend. Proposed in 1936. it is now in use in several railway networks. There is no established rough geometric approximation.</p><aside class="aside-note"><mark>NOTE</mark> Further reading: Constantin Ciobanu, BLOSS TRANSITION – A SHORT DESIGN GUIDE</aside><p><strong>Base formula (Curvature)</strong></p><p>$$ \displaylines{
+    \xi = \frac{s}{L} \\
+    \kappa(s) = \kappa_{1} + (3 - 2\xi) \   \xi^2 \  \Delta \kappa
+} $$</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>CIRCULARARC</code>
+</td><td data-label="Description">
+<p>In the geometric perspective, it denotes a connection between two points that follows a circular path. In the dynamic perspective, it denotes a segment with constant lateral acceleration on the moving vehicle, i.e. constant curvature.</p><p><strong>Base formula (Curvature) </strong></p><p>$$ \kappa = const, \kappa &lt;&gt; 0 $$</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>CLOTHOID</code>
+</td><td data-label="Description">
+<p>In the geometric perspective, a clothoid denotes a connection between two points where the radius of curvature changes along the segment at a constant rate. The clothoid was an early achievement of geometry, also known as Euler's spiral or Cornu's spiral. It became very popular in road and rail design even before the widespread availability of computers because of the availability of tabulations of the normalized clothoid. Proper application of the so called clothoid constant provided fast solutions for all relevant parameters necessary to integrate clothoid segments between two consecutive segments with constant curvature. In most cases the clothoid smooths the curvature between a straight line and a circular arc. <br/></p><p>In the dynamic perspective, it denotes a segment with constant rate of lateral acceleration change induced by the curvature. The kinematic properties of the clothoid both reduce the exerted forces on the track by a train, improve the travel experience of train passengers and also reduce the stress of a car driver by avoiding sudden movements of the steering wheel.<br/></p><p>The kinematic advantages of the clothoid as a smoothing segment are true also for all the other transition bends currently in use.</p><p><strong>Base formula (Curvature)</strong></p><p>$$ \displaylines{ \xi = \frac{s}{L} \\
+\kappa(s) = \kappa_{1} + \xi  \Delta \kappa }$$</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>COSINECURVE</code>
+</td><td data-label="Description">
+<p>Cosine transition. The cosine transition was already discussed in 1868. Width the advent of high-speed rail it was applied  in production designs. It is e.g. installed on Japanese high speed lines</p><p><strong>Base formula (Curvature)</strong></p><p>$$ \displaylines{
+    \xi = \frac{s}{L} \\
+    \kappa(s) = \kappa_{1} + \frac{1}{2}(1- cos(\pi\xi) \  ) \Delta \kappa
+} $$</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>CUBIC</code>
+</td><td data-label="Description">
+<p>In IFC CUBIC denotes a transition segment where x and y coordinates obey a cubic formula.</p><p><strong>General formula</strong></p><p>$$ y = a \cdot x^3 + b \cdot x^2 + c \cdot x + d $$</p><p>It was discovered very early that setting <strong>a</strong> to "1 / 6RL" and <strong>b</strong>, <strong>c</strong> and <strong>d</strong> to 0 yields a good enough approximation of the clothoid in many situations.</p><p><strong>Cubic formula for alignment</strong></p><p>$$ y = \frac{x^3}{6 \cdot R \cdot L} $$</p><p>Since the manual computation of cubics was considerable easier compared to the theoretically sound clothoid, cubic transitions became very popular as "good enough" replacement curves.</p><p>Cubic transition bends can still be found in many legacy alignments based on earlier design regulations. There also exist regulations containing cubic transitions for new designs.</p><p>It is obvious that simple approximations cannot fulfil all requirements for a kinematically correct track design. For example, the requirement of tangential continuity has often been neglected in favour of lower design costs by using sufficiently good cubic curves.</p><p>The cubic is known in two variants as <strong>Cubic Parabola</strong> or <strong>Cubic Spiral</strong> setting either the sinus or the cosinus of the deflection angle to 0.</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>HELMERTCURVE</code>
+</td><td data-label="Description">
+<p>The Helmert curve or Helmert transition is an early example of a high performance transition bend. It is now widely accepted in relevant science and engineering that the linear change of the clothoid induces unwanted kinematic influences to a running train at speeds higher than 125 km/h.</p><p>In the geometry perspective the Helmert segment is the assembly of two parts of same length which mirror the same change in radius of curvature. A rough approximation is known as the biquadratic parabola.</p><aside class="aside-note"><mark>NOTE</mark>  also referred to as Schramm curve.</aside><p><strong>Base formula (Curvature)</strong></p><p>$$ \displaylines{
+    \xi = \frac{s}{L} \\
+    \text{First half: } \kappa(s) = \kappa_{1} + 2\xi^2  \Delta \kappa \\
+    \text{Second half: } \kappa(s) = \kappa_{1} + ( 1 -  2  (1 - \xi)^2)  \Delta \kappa
+} $$</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>LINE</code>
+</td><td data-label="Description">
+<p>In the geometry perspective it denotes a straight connection between two points. In the dynamic perspective, it denotes a segment with a curvature with a value of 0. This means that no lateral acceleration acts on the moving vehicle.</p><p><strong>Base formula (Curvature) </strong></p><p>$$ \kappa=0 $$</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>SINECURVE</code>
+</td><td data-label="Description">
+<p>Sine transition or sinusoidal transition was suggested 1937. The curvature function is built up of one period of a sine function. The sine curve is characterised by particularly advantageous smoothing properties at the end points. Compared to the clothoid, it is twice as long.</p><aside class="aside-note"><mark>NOTE</mark>  also referred to as Klein curve.</aside><p><strong>Base formula (Curvature)</strong></p><p>$$ \displaylines{
+    \xi = \frac{s}{L} \\
+    \kappa(s) = \kappa_{1} + ( \xi - \frac{1}{2\pi}sin(2\pi\xi) \  ) \Delta \kappa
+} $$</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>VIENNESEBEND</code>
+</td><td data-label="Description">
+<p>The Viennese Bend (R) is an innovative track geometry transition element. Instead of analyzing the vehicle movement at the track plane the optimization efforts target a gravity center line at a defined height above the rails.</p><p>As a consequence the path of the horizontal alignment center line is also influenced by the cant layout. The first part of the curvature formula is assembled from the basic function like the other transition bends. The additional term contains the bank angle "ψ" and the gravity center line height "h" and is unique to the Viennes Bend (R). This term causes a small movement contrary to the main direction in the x,y layout.</p><p><strong>Curvature formula</strong></p><p>$$ \displaylines{
+    \xi = \frac{s}{L} \\
+    \psi(s) = \psi_1 + \Delta\psi \cdot \xi^4 \cdot (35-84\xi + 70\xi^2-20\xi^3) \\
+    \kappa(s) = \kappa_{1} +  ( \Delta \kappa  \cdot \xi^2  \cdot (35-84\xi + 70\xi^2-20\xi^3) \\
+    \hspace{3em}   -420  \cdot \frac{h \Delta\psi}{L^2}  \cdot (1 - 4\xi + 5\xi^2 - 2\xi^3)) \cdot \xi^2
+} $$</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.7.2.2.C<a href="IfcAlignmentHorizontalSegmentTypeEnum.htm#Table-8.7.2.2.C"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.7.2.2.3-Formal-representation"></a>
+    8.7.2.2.3 Formal representation
+<a href="IfcAlignmentHorizontalSegmentTypeEnum.htm#8.7.2.2.3-Formal-representation"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">TYPE <a href="IfcAlignmentHorizontalSegmentTypeEnum.htm">IfcAlignmentHorizontalSegmentTypeEnum</a> = ENUMERATION OF
+	(BLOSSCURVE
+	,CIRCULARARC
+	,CLOTHOID
+	,COSINECURVE
+	,CUBIC
+	,HELMERTCURVE
+	,LINE
+	,SINECURVE
+	,VIENNESEBEND);
+END_TYPE;</code></pre>
+<h2><a id="8.7.2.2.4-References"></a>
+    8.7.2.2.4 References
+<a href="IfcAlignmentHorizontalSegmentTypeEnum.htm#8.7.2.2.4-References"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="IfcAlignmentHorizontalSegment.htm">IfcAlignmentHorizontalSegment</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/resource/IfcGeometricConstraintResource/Types/IfcAlignmentHorizontalSegmentTypeEnum.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

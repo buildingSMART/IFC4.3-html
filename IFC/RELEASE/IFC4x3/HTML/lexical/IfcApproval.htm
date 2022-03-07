@@ -1,0 +1,678 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>8.2.3.1 IfcApproval - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a class="current" href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+<a class="sublink-1" href="../ifcactorresource/content.html">
+                            8.1 IfcActorResource
+                        </a>
+<a class="sublink-1 current" href="../ifcapprovalresource/content.html">
+                            8.2 IfcApprovalResource
+                        </a>
+<a class="sublink-1" href="../ifcconstraintresource/content.html">
+                            8.3 IfcConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifccostresource/content.html">
+                            8.4 IfcCostResource
+                        </a>
+<a class="sublink-1" href="../ifcdatetimeresource/content.html">
+                            8.5 IfcDateTimeResource
+                        </a>
+<a class="sublink-1" href="../ifcexternalreferenceresource/content.html">
+                            8.6 IfcExternalReferenceResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricconstraintresource/content.html">
+                            8.7 IfcGeometricConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricmodelresource/content.html">
+                            8.8 IfcGeometricModelResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometryresource/content.html">
+                            8.9 IfcGeometryResource
+                        </a>
+<a class="sublink-1" href="../ifcmaterialresource/content.html">
+                            8.10 IfcMaterialResource
+                        </a>
+<a class="sublink-1" href="../ifcmeasureresource/content.html">
+                            8.11 IfcMeasureResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationappearanceresource/content.html">
+                            8.12 IfcPresentationAppearanceResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationdefinitionresource/content.html">
+                            8.13 IfcPresentationDefinitionResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationorganizationresource/content.html">
+                            8.14 IfcPresentationOrganizationResource
+                        </a>
+<a class="sublink-1" href="../ifcprofileresource/content.html">
+                            8.15 IfcProfileResource
+                        </a>
+<a class="sublink-1" href="../ifcpropertyresource/content.html">
+                            8.16 IfcPropertyResource
+                        </a>
+<a class="sublink-1" href="../ifcquantityresource/content.html">
+                            8.17 IfcQuantityResource
+                        </a>
+<a class="sublink-1" href="../ifcrepresentationresource/content.html">
+                            8.18 IfcRepresentationResource
+                        </a>
+<a class="sublink-1" href="../ifcstructuralloadresource/content.html">
+                            8.19 IfcStructuralLoadResource
+                        </a>
+<a class="sublink-1" href="../ifctopologyresource/content.html">
+                            8.20 IfcTopologyResource
+                        </a>
+<a class="sublink-1" href="../ifcutilityresource/content.html">
+                            8.21 IfcUtilityResource
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>8.2.3.1 IfcApproval</h1>
+<h2><a id="8.2.3.1.1-Semantic-definition"></a>
+    8.2.3.1.1 Semantic definition
+<a href="IfcApproval.htm#8.2.3.1.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p>An <em><a href="IfcApproval.htm">IfcApproval</a></em> represents information about approval processes such as for a plan, a design, a proposal, or a change order in a construction or facilities management project. <em><a href="IfcApproval.htm">IfcApproval</a></em> is referenced by <em><a href="IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a></em> in <em>IfcControlExtension</em> schema, and thereby can be related to all subtypes of <em><a href="IfcRoot.htm">IfcRoot</a></em>. An approval may also be given to resource objects using <em><a href="IfcResourceApprovalRelationship.htm">IfcResourceApprovalRelationship</a></em></p>
+<aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2.0</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  Attributes Identifier and Name made optional, where rule added to require at least one of them being asserted. Inverse attributes ApprovedObjects, ApprovedResources and HasExternalReferences added. Inverse attribute Properties deleted (more general relationship via inverse ApprovedResources to be used instead).</aside>
+<h2><a id="8.2.3.1.2-Entity-inheritance"></a>
+    8.2.3.1.2 Entity inheritance
+<a href="IfcApproval.htm#8.2.3.1.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
+<ol class="tier">
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="current ancestor"><a href="IfcApproval.htm">IfcApproval</a></li>
+</ul>
+</li>
+</ol>
+<h2><a id="8.2.3.1.3-Attributes"></a>
+    8.2.3.1.3 Attributes
+<a href="IfcApproval.htm#8.2.3.1.3-Attributes"><i data-feather="link"></i></a></h2>
+<!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
+<figure><a id="Table-8.2.3.1.A"></a><table class="striped grouped attributes">
+<colgroup>
+<col style="width: 20px;"/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group">
+<td colspan="4">
+<a href="IfcApproval.htm">IfcApproval</a>
+<small>(14)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Identifier
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcIdentifier.htm">IfcIdentifier</a></td>
+<td data-label="Description">
+<p>A computer interpretable identifier by which the approval is known.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>A human readable name given to an approval.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>A general textual description of a design, work task, plan, etc. that is being approved for.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                TimeOfApproval
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcDateTime.htm">IfcDateTime</a></td>
+<td data-label="Description">
+<p>Date and time when the result of the approval process is produced.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  Attribute data type changed to <em><a href="IfcDateTime.htm">IfcDateTime</a></em> using ISO 8601 representation, renamed from ApprovalDateTime and made OPTIONAL.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                Status
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>The result or current status of the approval, e.g. Requested, Processed, Approved, Not Approved.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                Level
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>Level of the approval e.g. Draft v.s. Completed design.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                Qualifier
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>Textual description of special constraints or conditions for the approval.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">8</td>
+<td data-label="Name">
+                
+                RequestingApproval
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcActorSelect.htm">IfcActorSelect</a></td>
+<td data-label="Description">
+<p>The actor that is acting in the role specified at <em><a href="IfcOrganization.htm">IfcOrganization</a></em> or individually at <em><a href="IfcPerson.htm">IfcPerson</a></em> and requesting an approval.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  New attribute for approval request replacing IfcApprovalActorRelationship (being deleted).</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">9</td>
+<td data-label="Name">
+                
+                GivingApproval
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcActorSelect.htm">IfcActorSelect</a></td>
+<td data-label="Description">
+<p>The actor that is acting in the role specified at <em><a href="IfcOrganization.htm">IfcOrganization</a></em> or individually at <em><a href="IfcPerson.htm">IfcPerson</a></em> and giving an approval.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  New attribute for approval provision replacing IfcApprovalActorRelationship (being deleted).</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasExternalReferences</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
+<td data-label="Description">
+<p>Reference to external references, e.g. library, classification, or document information, that are associated to the Approval.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  New inverse attribute.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>ApprovedObjects</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a> FOR RelatingApproval</td>
+<td data-label="Description">
+<p>Reference to the <em><a href="IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a></em> instances associating this approval to objects (subtypes of <em><a href="IfcRoot.htm">IfcRoot</a></em></p>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>ApprovedResources</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcResourceApprovalRelationship.htm">IfcResourceApprovalRelationship</a> FOR RelatingApproval</td>
+<td data-label="Description">
+<p>The set of relationships by which resource objects that are are approved by this approval are known.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>IsRelatedWith</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcApprovalRelationship.htm">IfcApprovalRelationship</a> FOR RelatedApprovals</td>
+<td data-label="Description">
+<p>The set of relationships by which this approval is related to others.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>Relates</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcApprovalRelationship.htm">IfcApprovalRelationship</a> FOR RelatingApproval</td>
+<td data-label="Description">
+<p>The set of relationships by which other approvals are related to this one.</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.2.3.1.A<a href="IfcApproval.htm#Table-8.2.3.1.A"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.2.3.1.4-Formal-propositions"></a>
+    8.2.3.1.4 Formal propositions
+<a href="IfcApproval.htm#8.2.3.1.4-Formal-propositions"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-8.2.3.1.B"></a><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HasIdentifierOrName</td>
+<td>
+<p>Either Identifier or Name (or both) by which the approval is known shall be given.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">EXISTS (Identifier) OR EXISTS (Name)</code></pre>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.2.3.1.B<a href="IfcApproval.htm#Table-8.2.3.1.B"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.2.3.1.5-Formal-representation"></a>
+    8.2.3.1.5 Formal representation
+<a href="IfcApproval.htm#8.2.3.1.5-Formal-representation"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">ENTITY <a href="IfcApproval.htm">IfcApproval</a>;
+	Identifier : OPTIONAL <a href="IfcIdentifier.htm">IfcIdentifier</a>;
+	Name : OPTIONAL <a href="IfcLabel.htm">IfcLabel</a>;
+	Description : OPTIONAL <a href="IfcText.htm">IfcText</a>;
+	TimeOfApproval : OPTIONAL <a href="IfcDateTime.htm">IfcDateTime</a>;
+	Status : OPTIONAL <a href="IfcLabel.htm">IfcLabel</a>;
+	Level : OPTIONAL <a href="IfcLabel.htm">IfcLabel</a>;
+	Qualifier : OPTIONAL <a href="IfcText.htm">IfcText</a>;
+	RequestingApproval : OPTIONAL <a href="IfcActorSelect.htm">IfcActorSelect</a>;
+	GivingApproval : OPTIONAL <a href="IfcActorSelect.htm">IfcActorSelect</a>;
+ INVERSE
+	HasExternalReferences : SET [0:?] OF <a href="IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects;
+	ApprovedObjects : SET [0:?] OF <a href="IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a> FOR RelatingApproval;
+	ApprovedResources : SET [0:?] OF <a href="IfcResourceApprovalRelationship.htm">IfcResourceApprovalRelationship</a> FOR RelatingApproval;
+	IsRelatedWith : SET [0:?] OF <a href="IfcApprovalRelationship.htm">IfcApprovalRelationship</a> FOR RelatedApprovals;
+	Relates : SET [0:?] OF <a href="IfcApprovalRelationship.htm">IfcApprovalRelationship</a> FOR RelatingApproval;
+ WHERE
+	HasIdentifierOrName : EXISTS (Identifier) OR EXISTS (Name);
+END_ENTITY;</code></pre>
+<h2><a id="8.2.3.1.6-References"></a>
+    8.2.3.1.6 References
+<a href="IfcApproval.htm#8.2.3.1.6-References"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="IfcApprovalRelationship.htm">IfcApprovalRelationship</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcResourceApprovalRelationship.htm">IfcResourceApprovalRelationship</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcResourceObjectSelect.htm">IfcResourceObjectSelect</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+<div class="changelog">
+<h3><a id="8.2.3.1.7-Changelog"></a>
+                        8.2.3.1.7 Changelog
+                    <a href="IfcApproval.htm#8.2.3.1.7-Changelog"><i data-feather="link"></i></a></h3>
+<h4 class="collapsed"><a id="8.2.3.1.7.1-IFC4"></a>
+                        8.2.3.1.7.1 IFC4
+                    <a href="IfcApproval.htm#8.2.3.1.7.1-IFC4"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                attributes,
+                                GivingApproval
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                attributes,
+                                Identifier
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                attributes,
+                                RequestingApproval
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                inverses,
+                                ApprovedResources
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                inverses,
+                                IsRelatedWith
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where_rules,
+                                HasIdentifierOrName
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="x-square"></i>
+                                
+                                
+                                attributes,
+                                ApprovalStatus
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes ApprovalDateTime definition,
+                                Changed from IfcDateTimeSelect to <a href="IfcLabel.htm">IfcLabel</a>
+</small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes ApprovalDateTime is_optional,
+                                Changed from False to True
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes ApprovalDateTime name,
+                                Changed from ApprovalDateTime to Name
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes ApprovalLevel definition,
+                                Changed from <a href="IfcLabel.htm">IfcLabel</a> to <a href="IfcDateTime.htm">IfcDateTime</a>
+</small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes ApprovalLevel name,
+                                Changed from ApprovalLevel to TimeOfApproval
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes ApprovalQualifier definition,
+                                Changed from <a href="IfcText.htm">IfcText</a> to <a href="IfcLabel.htm">IfcLabel</a>
+</small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes ApprovalQualifier name,
+                                Changed from ApprovalQualifier to Status
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes Identifier definition,
+                                Changed from <a href="IfcIdentifier.htm">IfcIdentifier</a> to <a href="IfcText.htm">IfcText</a>
+</small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes Identifier is_optional,
+                                Changed from False to True
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes Identifier name,
+                                Changed from Identifier to Qualifier
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes Name is_optional,
+                                Changed from False to True
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes Name name,
+                                Changed from Name to Level
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                inverses Actors definition,
+                                Changed from SET OF [0:?] IfcApprovalActorRelationship FOR Approval to SET OF [0:?] <a href="IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                inverses Actors name,
+                                Changed from Actors to HasExternalReferences
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                inverses IsRelatedWith definition,
+                                Changed from SET OF [0:?] <a href="IfcApprovalRelationship.htm">IfcApprovalRelationship</a> FOR RelatedApproval to SET OF [0:?] <a href="IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a> FOR RelatingApproval
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                inverses IsRelatedWith name,
+                                Changed from IsRelatedWith to ApprovedObjects
+                                
+                            </small>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/resource/IfcApprovalResource/Entities/IfcApproval.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

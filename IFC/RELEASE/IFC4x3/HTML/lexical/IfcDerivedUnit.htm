@@ -1,0 +1,567 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>8.11.3.4 IfcDerivedUnit - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a class="current" href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+<a class="sublink-1" href="../ifcactorresource/content.html">
+                            8.1 IfcActorResource
+                        </a>
+<a class="sublink-1" href="../ifcapprovalresource/content.html">
+                            8.2 IfcApprovalResource
+                        </a>
+<a class="sublink-1" href="../ifcconstraintresource/content.html">
+                            8.3 IfcConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifccostresource/content.html">
+                            8.4 IfcCostResource
+                        </a>
+<a class="sublink-1" href="../ifcdatetimeresource/content.html">
+                            8.5 IfcDateTimeResource
+                        </a>
+<a class="sublink-1" href="../ifcexternalreferenceresource/content.html">
+                            8.6 IfcExternalReferenceResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricconstraintresource/content.html">
+                            8.7 IfcGeometricConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricmodelresource/content.html">
+                            8.8 IfcGeometricModelResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometryresource/content.html">
+                            8.9 IfcGeometryResource
+                        </a>
+<a class="sublink-1" href="../ifcmaterialresource/content.html">
+                            8.10 IfcMaterialResource
+                        </a>
+<a class="sublink-1 current" href="../ifcmeasureresource/content.html">
+                            8.11 IfcMeasureResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationappearanceresource/content.html">
+                            8.12 IfcPresentationAppearanceResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationdefinitionresource/content.html">
+                            8.13 IfcPresentationDefinitionResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationorganizationresource/content.html">
+                            8.14 IfcPresentationOrganizationResource
+                        </a>
+<a class="sublink-1" href="../ifcprofileresource/content.html">
+                            8.15 IfcProfileResource
+                        </a>
+<a class="sublink-1" href="../ifcpropertyresource/content.html">
+                            8.16 IfcPropertyResource
+                        </a>
+<a class="sublink-1" href="../ifcquantityresource/content.html">
+                            8.17 IfcQuantityResource
+                        </a>
+<a class="sublink-1" href="../ifcrepresentationresource/content.html">
+                            8.18 IfcRepresentationResource
+                        </a>
+<a class="sublink-1" href="../ifcstructuralloadresource/content.html">
+                            8.19 IfcStructuralLoadResource
+                        </a>
+<a class="sublink-1" href="../ifctopologyresource/content.html">
+                            8.20 IfcTopologyResource
+                        </a>
+<a class="sublink-1" href="../ifcutilityresource/content.html">
+                            8.21 IfcUtilityResource
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>8.11.3.4 IfcDerivedUnit</h1>
+<h2><a id="8.11.3.4.1-Semantic-definition"></a>
+    8.11.3.4.1 Semantic definition
+<a href="IfcDerivedUnit.htm#8.11.3.4.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p>A derived unit is a unit that is formed from an expression of other units.</p>
+<figure><a id="Figure-8.11.3.4.A-An-example-of-how-to-assign-miles-per-hour-as-a-derived-unit"></a><svg height="407px" viewbox="0.00 0.00 766.00 407.00" width="766px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="graph" id="graph0" transform="scale(1 1) rotate(0) translate(4 403)">
+<title>dot_neato</title>
+<polygon fill="transparent" points="-4,4 -4,-403 762,-403 762,4 -4,4" stroke="transparent"></polygon>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm'>IfcUnitAssignment</a> -->
+<g class="node" id="node1">
+<title><a href="IfcUnitAssignment.htm">IfcUnitAssignment</a></title>
+<g id="a_node1"><a xlink:href="http://localhost/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm" xlink:title="IfcUnitAssignment">
+<polygon fill="#1976d2" points="451,-399 307,-399 307,-363 451,-363 451,-399" stroke="#000000" stroke-width=".2"></polygon>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="379" y="-377.3"><a href="IfcUnitAssignment.htm">IfcUnitAssignment</a></text>
+</a>
+</g>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedUnit.htm'>IfcDerivedUnit</a> -->
+<g class="node" id="node2">
+<title><a href="IfcDerivedUnit.htm">IfcDerivedUnit</a></title>
+<polygon fill="#1976d2" points="266.5,-280.5 266.5,-341.5 491.5,-341.5 491.5,-280.5 266.5,-280.5" stroke="#000000" stroke-width=".2"></polygon>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="337.5" y="-326.3"><a href="IfcDerivedUnit.htm">IfcDerivedUnit</a></text>
+<polyline fill="none" points="266.5,-318.5 491.5,-318.5 " stroke="#000000" stroke-width=".2"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="274.5" y="-303.3">UnitType: LINEARVELOCITYUNIT</text>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="346" y="-288.3">Name: mph</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm'>IfcUnitAssignment</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedUnit.htm'>IfcDerivedUnit</a> -->
+<g class="edge" id="edge1">
+<title><a href="IfcUnitAssignment.htm">IfcUnitAssignment</a>-&gt;<a href="IfcDerivedUnit.htm">IfcDerivedUnit</a></title>
+<path d="M379,-362.9733C379,-357.7071 379,-351.7646 379,-345.8286" fill="none" stroke="#000000"></path>
+<ellipse cx="379" cy="-343.7285" fill="#000000" rx="2" ry="2" stroke="#000000"></ellipse>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="364" y="-343.2009">Units</text>
+</g>
+<!-- IfcDerivedUnitElement_0 -->
+<g class="node" id="node3">
+<title>IfcDerivedUnitElement_0</title>
+<polygon fill="#1976d2" points="206.5,-218 206.5,-264 351.5,-264 351.5,-218 206.5,-218" stroke="#000000" stroke-width=".2"></polygon>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="214.5" y="-248.8"><a href="IfcDerivedUnitElement.htm">IfcDerivedUnitElement</a></text>
+<polyline fill="none" points="206.5,-241 351.5,-241 " stroke="#000000" stroke-width=".2"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="245.5" y="-225.8">Exponent: 1</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedUnit.htm'>IfcDerivedUnit</a>&#45;&gt;IfcDerivedUnitElement_0 -->
+<g class="edge" id="edge2">
+<title><a href="IfcDerivedUnit.htm">IfcDerivedUnit</a>-&gt;IfcDerivedUnitElement_0</title>
+<path d="M335.1385,-280.297C328.5853,-275.7097 321.8893,-271.0225 315.51,-266.557" fill="none" stroke="#000000"></path>
+<ellipse cx="313.6399" cy="-265.2479" fill="#000000" rx="2" ry="2" stroke="#000000"></ellipse>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="283.0247" y="-268.1696">Elements[1]</text>
+</g>
+<!-- IfcDerivedUnitElement_1 -->
+<g class="node" id="node4">
+<title>IfcDerivedUnitElement_1</title>
+<polygon fill="#1976d2" points="406.5,-218 406.5,-264 551.5,-264 551.5,-218 406.5,-218" stroke="#000000" stroke-width=".2"></polygon>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="414.5" y="-248.8"><a href="IfcDerivedUnitElement.htm">IfcDerivedUnitElement</a></text>
+<polyline fill="none" points="406.5,-241 551.5,-241 " stroke="#000000" stroke-width=".2"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="443.5" y="-225.8">Exponent: -1</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedUnit.htm'>IfcDerivedUnit</a>&#45;&gt;IfcDerivedUnitElement_1 -->
+<g class="edge" id="edge3">
+<title><a href="IfcDerivedUnit.htm">IfcDerivedUnit</a>-&gt;IfcDerivedUnitElement_1</title>
+<path d="M422.8615,-280.297C429.4147,-275.7097 436.1107,-271.0225 442.49,-266.557" fill="none" stroke="#000000"></path>
+<ellipse cx="444.3601" cy="-265.2479" fill="#000000" rx="2" ry="2" stroke="#000000"></ellipse>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="474.9753" y="-268.1696">Elements[2]</text>
+</g>
+<!-- IfcConversionBasedUnit_0 -->
+<g class="node" id="node5">
+<title>IfcConversionBasedUnit_0</title>
+<polygon fill="#1976d2" points="98,-140.5 98,-201.5 260,-201.5 260,-140.5 98,-140.5" stroke="#000000" stroke-width=".2"></polygon>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="111.5" y="-186.3"><a href="IfcConversionBasedUnit.htm">IfcConversionBasedUnit</a></text>
+<polyline fill="none" points="98,-178.5 260,-178.5 " stroke="#000000" stroke-width=".2"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="106" y="-163.3">UnitType: LENGTHUNIT</text>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="146" y="-148.3">Name: mile</text>
+</g>
+<!-- IfcDerivedUnitElement_0&#45;&gt;IfcConversionBasedUnit_0 -->
+<g class="edge" id="edge4">
+<title>IfcDerivedUnitElement_0-&gt;IfcConversionBasedUnit_0</title>
+<path d="M245.9791,-217.8854C239.6234,-213.4364 232.8524,-208.6967 226.1498,-204.0049" fill="none" stroke="#000000"></path>
+<ellipse cx="224.5056" cy="-202.8539" fill="#000000" rx="2" ry="2" stroke="#000000"></ellipse>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="193.8904" y="-205.7756">Unit</text>
+</g>
+<!-- IfcConversionBasedUnit_1 -->
+<g class="node" id="node9">
+<title>IfcConversionBasedUnit_1</title>
+<polygon fill="#1976d2" points="503.5,-140.5 503.5,-201.5 654.5,-201.5 654.5,-140.5 503.5,-140.5" stroke="#000000" stroke-width=".2"></polygon>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="511.5" y="-186.3"><a href="IfcConversionBasedUnit.htm">IfcConversionBasedUnit</a></text>
+<polyline fill="none" points="503.5,-178.5 654.5,-178.5 " stroke="#000000" stroke-width=".2"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="516" y="-163.3">UnitType: TIMEUNIT</text>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="546" y="-148.3">Name: hour</text>
+</g>
+<!-- IfcDerivedUnitElement_1&#45;&gt;IfcConversionBasedUnit_1 -->
+<g class="edge" id="edge8">
+<title>IfcDerivedUnitElement_1-&gt;IfcConversionBasedUnit_1</title>
+<path d="M512.0209,-217.8854C518.3766,-213.4364 525.1476,-208.6967 531.8502,-204.0049" fill="none" stroke="#000000"></path>
+<ellipse cx="533.4944" cy="-202.8539" fill="#000000" rx="2" ry="2" stroke="#000000"></ellipse>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="564.1096" y="-205.7756">Unit</text>
+</g>
+<!-- IfcDimensionalExponents_0 -->
+<g class="node" id="node6">
+<title>IfcDimensionalExponents_0</title>
+<polygon fill="#1976d2" points="0,-78 0,-124 158,-124 158,-78 0,-78" stroke="#000000" stroke-width=".2"></polygon>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="8" y="-108.8"><a href="IfcDimensionalExponents.htm">IfcDimensionalExponents</a></text>
+<polyline fill="none" points="0,-101 158,-101 " stroke="#000000" stroke-width=".2"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="26.5" y="-85.8">LengthExponent: 1</text>
+</g>
+<!-- IfcConversionBasedUnit_0&#45;&gt;IfcDimensionalExponents_0 -->
+<g class="edge" id="edge5">
+<title>IfcConversionBasedUnit_0-&gt;IfcDimensionalExponents_0</title>
+<path d="M135.1385,-140.297C128.5853,-135.7097 121.8893,-131.0225 115.51,-126.557" fill="none" stroke="#000000"></path>
+<ellipse cx="113.6399" cy="-125.2479" fill="#000000" rx="2" ry="2" stroke="#000000"></ellipse>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="83.0247" y="-128.1696">Dimensions</text>
+</g>
+<!-- IfcMeasureWithUnit_0 -->
+<g class="node" id="node7">
+<title>IfcMeasureWithUnit_0</title>
+<polygon fill="#1976d2" points="205.5,-78 205.5,-124 352.5,-124 352.5,-78 205.5,-78" stroke="#000000" stroke-width=".2"></polygon>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="221.5" y="-108.8"><a href="IfcMeasureWithUnit.htm">IfcMeasureWithUnit</a></text>
+<polyline fill="none" points="205.5,-101 352.5,-101 " stroke="#000000" stroke-width=".2"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="213.5" y="-85.8">ValueComponent: 1609</text>
+</g>
+<!-- IfcConversionBasedUnit_0&#45;&gt;IfcMeasureWithUnit_0 -->
+<g class="edge" id="edge6">
+<title>IfcConversionBasedUnit_0-&gt;IfcMeasureWithUnit_0</title>
+<path d="M222.8615,-140.297C229.4147,-135.7097 236.1107,-131.0225 242.49,-126.557" fill="none" stroke="#000000"></path>
+<ellipse cx="244.3601" cy="-125.2479" fill="#000000" rx="2" ry="2" stroke="#000000"></ellipse>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="274.9753" y="-128.1696">ConversionFactor</text>
+</g>
+<!-- IfcSIUnit_0 -->
+<g class="node" id="node8">
+<title>IfcSIUnit_0</title>
+<polygon fill="#1976d2" points="198,-.5 198,-61.5 360,-61.5 360,-.5 198,-.5" stroke="#000000" stroke-width=".2"></polygon>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="253" y="-46.3"><a href="IfcSIUnit.htm">IfcSIUnit</a></text>
+<polyline fill="none" points="198,-38.5 360,-38.5 " stroke="#000000" stroke-width=".2"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="206" y="-23.3">UnitType: LENGTHUNIT</text>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="235" y="-8.3">Name: METRE</text>
+</g>
+<!-- IfcMeasureWithUnit_0&#45;&gt;IfcSIUnit_0 -->
+<g class="edge" id="edge7">
+<title>IfcMeasureWithUnit_0-&gt;IfcSIUnit_0</title>
+<path d="M279,-77.691C279,-73.8729 279,-69.8452 279,-65.8206" fill="none" stroke="#000000"></path>
+<ellipse cx="279" cy="-63.8049" fill="#000000" rx="2" ry="2" stroke="#000000"></ellipse>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="239.6077" y="-65.0508">UnitComponent</text>
+</g>
+<!-- IfcDimensionalExponents_1 -->
+<g class="node" id="node10">
+<title>IfcDimensionalExponents_1</title>
+<polygon fill="#1976d2" points="600,-78 600,-124 758,-124 758,-78 600,-78" stroke="#000000" stroke-width=".2"></polygon>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="608" y="-108.8"><a href="IfcDimensionalExponents.htm">IfcDimensionalExponents</a></text>
+<polyline fill="none" points="600,-101 758,-101 " stroke="#000000" stroke-width=".2"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="631" y="-85.8">TimeExponent: 1</text>
+</g>
+<!-- IfcConversionBasedUnit_1&#45;&gt;IfcDimensionalExponents_1 -->
+<g class="edge" id="edge9">
+<title>IfcConversionBasedUnit_1-&gt;IfcDimensionalExponents_1</title>
+<path d="M622.8615,-140.297C629.4147,-135.7097 636.1107,-131.0225 642.49,-126.557" fill="none" stroke="#000000"></path>
+<ellipse cx="644.3601" cy="-125.2479" fill="#000000" rx="2" ry="2" stroke="#000000"></ellipse>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="674.9753" y="-128.1696">Dimensions</text>
+</g>
+<!-- IfcMeasureWithUnit_1 -->
+<g class="node" id="node11">
+<title>IfcMeasureWithUnit_1</title>
+<polygon fill="#1976d2" points="405.5,-78 405.5,-124 552.5,-124 552.5,-78 405.5,-78" stroke="#000000" stroke-width=".2"></polygon>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="421.5" y="-108.8"><a href="IfcMeasureWithUnit.htm">IfcMeasureWithUnit</a></text>
+<polyline fill="none" points="405.5,-101 552.5,-101 " stroke="#000000" stroke-width=".2"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="413.5" y="-85.8">ValueComponent: 3600</text>
+</g>
+<!-- IfcConversionBasedUnit_1&#45;&gt;IfcMeasureWithUnit_1 -->
+<g class="edge" id="edge10">
+<title>IfcConversionBasedUnit_1-&gt;IfcMeasureWithUnit_1</title>
+<path d="M535.1385,-140.297C528.5853,-135.7097 521.8893,-131.0225 515.51,-126.557" fill="none" stroke="#000000"></path>
+<ellipse cx="513.6399" cy="-125.2479" fill="#000000" rx="2" ry="2" stroke="#000000"></ellipse>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="483.0247" y="-128.1696">ConversionFactor</text>
+</g>
+<!-- IfcSIUnit_1 -->
+<g class="node" id="node12">
+<title>IfcSIUnit_1</title>
+<polygon fill="#1976d2" points="407,-.5 407,-61.5 551,-61.5 551,-.5 407,-.5" stroke="#000000" stroke-width=".2"></polygon>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="453" y="-46.3"><a href="IfcSIUnit.htm">IfcSIUnit</a></text>
+<polyline fill="none" points="407,-38.5 551,-38.5 " stroke="#000000" stroke-width=".2"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="416" y="-23.3">UnitType: TIMEUNIT</text>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="431.5" y="-8.3">Name: SECOND</text>
+</g>
+<!-- IfcMeasureWithUnit_1&#45;&gt;IfcSIUnit_1 -->
+<g class="edge" id="edge11">
+<title>IfcMeasureWithUnit_1-&gt;IfcSIUnit_1</title>
+<path d="M479,-77.691C479,-73.8729 479,-69.8452 479,-65.8206" fill="none" stroke="#000000"></path>
+<ellipse cx="479" cy="-63.8049" fill="#000000" rx="2" ry="2" stroke="#000000"></ellipse>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="439.6077" y="-65.0508">UnitComponent</text>
+</g>
+</g>
+</svg><figcaption>Figure 8.11.3.4.A — An example of how to assign miles per hour as a derived unit<a href="IfcDerivedUnit.htm#Figure-8.11.3.4.A-An-example-of-how-to-assign-miles-per-hour-as-a-derived-unit"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-reference"><mark>REFERENCE</mark>  Definition according to ISO/CD 10303-41:1992 of <code>derived_unit</code>.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC1.5.1.</aside>
+<h2><a id="8.11.3.4.2-Entity-inheritance"></a>
+    8.11.3.4.2 Entity inheritance
+<a href="IfcDerivedUnit.htm#8.11.3.4.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
+<ol class="tier">
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="current ancestor"><a href="IfcDerivedUnit.htm">IfcDerivedUnit</a></li>
+</ul>
+</li>
+</ol>
+<h2><a id="8.11.3.4.3-Attributes"></a>
+    8.11.3.4.3 Attributes
+<a href="IfcDerivedUnit.htm#8.11.3.4.3-Attributes"><i data-feather="link"></i></a></h2>
+<!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
+<figure><a id="Table-8.11.3.4.B"></a><table class="striped grouped attributes">
+<colgroup>
+<col style="width: 20px;"/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group">
+<td colspan="4">
+<a href="IfcDerivedUnit.htm">IfcDerivedUnit</a>
+<small>(5)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Elements
+                
+            </td>
+<td data-label="Type">SET [1:?] OF <a href="IfcDerivedUnitElement.htm">IfcDerivedUnitElement</a></td>
+<td data-label="Description">
+<p>The group of units and their exponents that define the derived unit.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                UnitType
+                
+            </td>
+<td data-label="Type"><a href="IfcDerivedUnitEnum.htm">IfcDerivedUnitEnum</a></td>
+<td data-label="Description">
+<p>Type of the derived unit chosen from an enumeration of derived unit types for use in IFC models.</p>
+<aside class="aside-example"><mark>EXAMPLE</mark> The imperial unit name for a velosity measure is miles per hour, or mph, with a UnitType of .LINEARVELOCITYUNIT.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                UserDefinedType
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>Type of the derived unit if the UnitType attribute is set to USERDEFINED.</p>
+<aside class="aside-note"><mark>NOTE</mark> The UserDefinedType shall only be used if the unit type is not available in UnitType.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>Name of the unit in addition to the unit type, particularly when the derived unit elements refer to conversion or context based units.</p>
+<aside class="aside-example"><mark>EXAMPLE</mark> The imperial unit name for a velosity measure is miles per hour, or MPH, with a <em>Name</em> of 'MPH'.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>Dimensions</em>
+</td>
+<td data-label="Type"><a href="IfcDimensionalExponents.htm">IfcDimensionalExponents</a></td>
+<td data-label="Description">
+<p>
+                    This attribute is formally derived.
+                </p>
+<pre><code class="language-express hljs"><a href="IfcDeriveDimensionalExponents.htm">IfcDeriveDimensionalExponents</a>(Elements)</code></pre>
+<p>Dimensional exponents derived using the function IfcDerivedDimensionalExponents using (SELF) as the input value.</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.11.3.4.B<a href="IfcDerivedUnit.htm#Table-8.11.3.4.B"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.11.3.4.4-Formal-propositions"></a>
+    8.11.3.4.4 Formal propositions
+<a href="IfcDerivedUnit.htm#8.11.3.4.4-Formal-propositions"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-8.11.3.4.C"></a><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WR1</td>
+<td>
+<p>Units as such shall not be re-defined as derived units.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">(SIZEOF (Elements) &gt; 1) OR ((SIZEOF (Elements) = 1) AND (Elements[1].Exponent &lt;&gt; 1 ))</code></pre>
+</td>
+</tr>
+<tr>
+<td>WR2</td>
+<td>
+<p>When attribute UnitType has enumeration value USERDEFINED
+then attribute UserDefinedType shall also have a value.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">(UnitType &lt;&gt; <a href="IfcDerivedUnitEnum.htm">IfcDerivedUnitEnum</a>.USERDEFINED) OR
+((UnitType = <a href="IfcDerivedUnitEnum.htm">IfcDerivedUnitEnum</a>.USERDEFINED) AND 
+ (EXISTS(SELF.UserDefinedType)))</code></pre>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.11.3.4.C<a href="IfcDerivedUnit.htm#Table-8.11.3.4.C"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.11.3.4.5-Formal-representation"></a>
+    8.11.3.4.5 Formal representation
+<a href="IfcDerivedUnit.htm#8.11.3.4.5-Formal-representation"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">ENTITY <a href="IfcDerivedUnit.htm">IfcDerivedUnit</a>;
+	Elements : SET [1:?] OF <a href="IfcDerivedUnitElement.htm">IfcDerivedUnitElement</a>;
+	UnitType : <a href="IfcDerivedUnitEnum.htm">IfcDerivedUnitEnum</a>;
+	UserDefinedType : OPTIONAL <a href="IfcLabel.htm">IfcLabel</a>;
+	Name : OPTIONAL <a href="IfcLabel.htm">IfcLabel</a>;
+ DERIVE
+	 Dimensions : <a href="IfcDimensionalExponents.htm">IfcDimensionalExponents</a> := <a href="IfcDeriveDimensionalExponents.htm">IfcDeriveDimensionalExponents</a>(Elements);
+ WHERE
+	WR1 : (SIZEOF (Elements) &gt; 1) OR ((SIZEOF (Elements) = 1) AND (Elements[1].Exponent &lt;&gt; 1 ));
+	WR2 : (UnitType &lt;&gt; <a href="IfcDerivedUnitEnum.htm">IfcDerivedUnitEnum</a>.USERDEFINED) OR
+((UnitType = <a href="IfcDerivedUnitEnum.htm">IfcDerivedUnitEnum</a>.USERDEFINED) AND 
+ (EXISTS(SELF.UserDefinedType)));
+END_ENTITY;</code></pre>
+<h2><a id="8.11.3.4.6-References"></a>
+    8.11.3.4.6 References
+<a href="IfcDerivedUnit.htm#8.11.3.4.6-References"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="IfcCorrectUnitAssignment.htm">IfcCorrectUnitAssignment</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcUnit.htm">IfcUnit</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+<div class="changelog">
+<h3><a id="8.11.3.4.7-Changelog"></a>
+                        8.11.3.4.7 Changelog
+                    <a href="IfcDerivedUnit.htm#8.11.3.4.7-Changelog"><i data-feather="link"></i></a></h3>
+<h4 class="collapsed"><a id="8.11.3.4.7.1-IFC4.3"></a>
+                        8.11.3.4.7.1 IFC4.3
+                    <a href="IfcDerivedUnit.htm#8.11.3.4.7.1-IFC4.3"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                attributes,
+                                Name
+                                
+                            </small>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/resource/IfcMeasureResource/Entities/IfcDerivedUnit.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

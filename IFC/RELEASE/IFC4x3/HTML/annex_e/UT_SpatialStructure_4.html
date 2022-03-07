@@ -1,0 +1,708 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>Annex E Examples - UT_SpatialStructure_4 - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>Annex E Examples - UT_SpatialStructure_4</h1>
+<h2><a id="Example-overview"></a>
+    Example overview
+<a href="UT_SpatialStructure_4.html#Example-overview"><i data-feather="link"></i></a></h2>
+<h2><a id="UT-SpatialStructure-4"></a>UT_SpatialStructure_4<a href="UT_SpatialStructure_4.html#UT-SpatialStructure-4"><i data-feather="link"></i></a></h2>
+<h3><a id="Intent"></a>Intent<a href="UT_SpatialStructure_4.html#Intent"><i data-feather="link"></i></a></h3>
+<p>This UT establishes a spatial structure for the level crossing storyline. The intention is to serve as a skeleton for upcoming unit tests for this storyline.</p>
+<p>It is based on the storylines <a href="https://app.box.com/folder/119147119179?s=q1x0vz7yqq7otrlet7dm2dx4u44s8fks">SLLC-DD</a> (IFC Rail phase 2) and <a href="https://app.box.com/folder/122373280942?s=x9q3q62tcc77hdqpdw0vjncj7bg3byay">bSFi_IR_SLRD_DD</a> (IFC Infra Deployment)</p>
+<h3><a id="Prerequisites"></a>Prerequisites<a href="UT_SpatialStructure_4.html#Prerequisites"><i data-feather="link"></i></a></h3>
+<p>None</p>
+<h3><a id="Content"></a>Content<a href="UT_SpatialStructure_4.html#Content"><i data-feather="link"></i></a></h3>
+<p>This scenario covers the following concepts and/or IFC entities:
+- Georeferencing
+  - <code><a href="../lexical/IfcProjectedCRS.htm">IfcProjectedCRS</a></code>
+  - <code><a href="../lexical/IfcMapConversion.htm">IfcMapConversion</a></code>
+- Spatial structure
+  - <code><a href="../lexical/IfcSite.htm">IfcSite</a></code>
+  - <code><a href="../lexical/IfcRailway.htm">IfcRailway</a></code>
+  - <code><a href="../lexical/IfcRoad.htm">IfcRoad</a></code>
+  - <code><a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a></code> with correct <code>PredefinedType</code>
+  - <code><a href="../lexical/IfcRelInterferesElements.htm">IfcRelInterferesElements</a></code>
+- Geometry
+  - <code><a href="../lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></code>
+  - <code><a href="../lexical/IfcBoundingBox.htm">IfcBoundingBox</a></code></p>
+<h4><a id="Situation"></a>Situation<a href="UT_SpatialStructure_4.html#Situation"><i data-feather="link"></i></a></h4>
+<p>The figure below shows the extent of the <a href="../lexical/IfcSite.htm">IfcSite</a> and its georeferenced location.</p>
+<figure><a id="Figure-8755e4c2-4683-45fd-bfda-a0544930e780"></a><img alt="" src="http://localhost/IFC/RELEASE/IFC4x3/HTML/annex_e/201%20-%20Situation.PNG"/><figcaption>Figure 8755e4c2-4683-45fd-bfda-a0544930e780<a href="UT_SpatialStructure_4.html#Figure-8755e4c2-4683-45fd-bfda-a0544930e780"><i data-feather="link"></i></a></figcaption></figure>
+<p>The figures below shows the spatial breakdown of the project into <a href="../lexical/IfcFacility.htm">IfcFacility</a> (blue) and <a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a> (turkoise).</p>
+<figure><a id="Figure-88ade7bd-21a0-41d5-84f1-ebfee3f8401a"></a><img alt="" src="http://localhost/IFC/RELEASE/IFC4x3/HTML/annex_e/202%20-%20Toivola_area_borders.JPG"/><figcaption>Figure 88ade7bd-21a0-41d5-84f1-ebfee3f8401a<a href="UT_SpatialStructure_4.html#Figure-88ade7bd-21a0-41d5-84f1-ebfee3f8401a"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a id="Figure-9a813062-af80-41bf-9252-27ad0c6b983c"></a><img alt="" src="http://localhost/IFC/RELEASE/IFC4x3/HTML/annex_e/203%20-%20Toivola_area_borders2.JPG"/><figcaption>Figure 9a813062-af80-41bf-9252-27ad0c6b983c<a href="UT_SpatialStructure_4.html#Figure-9a813062-af80-41bf-9252-27ad0c6b983c"><i data-feather="link"></i></a></figcaption></figure>
+<h4><a id="Project-Breakdown"></a>Project Breakdown<a href="UT_SpatialStructure_4.html#Project-Breakdown"><i data-feather="link"></i></a></h4>
+<p>To represent the project breakdown for this unit test, we envision the following project structure:</p>
+<ul>
+<li>A. <a href="../lexical/IfcProject.htm">IfcProject</a></li>
+<li>A.a <a href="../lexical/IfcSite.htm">IfcSite</a> <ul>
+<li>Representation=<a href="../lexical/IfcBoundingBox.htm">IfcBoundingBox</a></li>
+<li>A.a.1 <a href="../lexical/IfcRoad.htm">IfcRoad</a> (Sammalammintie)</li>
+<li>Representation=<a href="../lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></li>
+<li>A.a.1.1 <a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a> (Sammalammintie segment 150 - 230)<ul>
+<li>Representation=<a href="../lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></li>
+<li>PredefinedType*=<a href="../lexical/IfcRoadPartTypeEnum.htm">IfcRoadPartTypeEnum</a>.ROADSEGMENT</li>
+<li>UsageType=LONGITUDINAL</li>
+</ul>
+</li>
+<li>A.a.1.2 <a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a> (Sammalammintie Päijänteentie intersection)<ul>
+<li>Representation=<a href="../lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></li>
+<li>PredefinedType*=<a href="../lexical/IfcFacilityPartCommonTypeEnum.htm">IfcFacilityPartCommonTypeEnum</a>.INTERSECTION</li>
+<li>UsageType=LONGITUDINAL</li>
+</ul>
+</li>
+<li>A.a.1.3 <a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a> (Sammalammintie segment 247 - 270)<ul>
+<li>Representation=<a href="../lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></li>
+<li>PredefinedType*=<a href="../lexical/IfcRoadPartTypeEnum.htm">IfcRoadPartTypeEnum</a>.ROADSEGMENT</li>
+<li>UsageType=LONGITUDINAL</li>
+</ul>
+</li>
+<li>A.a.1.4 <a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a> (Sammalammintie safety equipment road intersection)<ul>
+<li>Representation=<a href="../lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></li>
+<li>PredefinedType*=<a href="../lexical/IfcRoadPartTypeEnum.htm">IfcRoadPartTypeEnum</a>.INTERSECTION</li>
+<li>UsageType=LONGITUDINAL</li>
+</ul>
+</li>
+<li>A.a.1.5 <a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a> (Sammalamminitie level crossing)<ul>
+<li>Representation=<a href="../lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></li>
+<li>PredefinedType*=<a href="../lexical/IfcRoadPartTypeEnum.htm">IfcRoadPartTypeEnum</a>.RAILWAYCROSSING</li>
+<li>UsageType=LONGITUDINAL</li>
+</ul>
+</li>
+<li>A.a.1.6 <a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a> (Sammalammimtie segment 315 - 358)<ul>
+<li>Representation=<a href="../lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></li>
+<li>PredefinedType*=<a href="../lexical/IfcRoadPartTypeEnum.htm">IfcRoadPartTypeEnum</a>.ROADSEGMENT</li>
+<li>UsageType=LONGITUDINAL</li>
+</ul>
+</li>
+<li>A.a.1.7 <a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a> (Sammalammintie Road2 intersection)<ul>
+<li>Representation=<a href="../lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></li>
+<li>PredefinedType*=<a href="../lexical/IfcRoadPartTypeEnum.htm">IfcRoadPartTypeEnum</a>.INTERSECTION</li>
+<li>UsageType=LONGITUDINAL</li>
+</ul>
+</li>
+<li>A.a.1.8 <a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a> (Sammalammintie segment 386 - 620)<ul>
+<li>Representation=<a href="../lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></li>
+<li>PredefinedType*=<a href="../lexical/IfcRoadPartTypeEnum.htm">IfcRoadPartTypeEnum</a>.ROADSEGMENT</li>
+<li>UsageType=LONGITUDINAL</li>
+</ul>
+</li>
+<li>A.a.2 <a href="../lexical/IfcRoad.htm">IfcRoad</a> (Safety equipment road)</li>
+<li>Representation=<a href="../lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></li>
+<li>A.a.2.1 <a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a> (Safety equipment terminal)<ul>
+<li>Representation=<a href="../lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></li>
+<li>PredefinedType*=<a href="../lexical/IfcFacilityPartCommonTypeEnum.htm">IfcFacilityPartCommonTypeEnum</a>.TERMINAL</li>
+<li>UsageType=LONGITUDINAL</li>
+</ul>
+</li>
+<li>A.a.2.2 <a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a> (Sammalammintie safety equipment road intersection)<ul>
+<li>Representation=<a href="../lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a> - Shared with A.a.1.4</li>
+<li>PredefinedType*=<a href="../lexical/IfcRoadPartTypeEnum.htm">IfcRoadPartTypeEnum</a>.INTERSECTION</li>
+<li>UsageType=LONGITUDINAL</li>
+<li><a href="../lexical/IfcRelInterferesElements.htm">IfcRelInterferesElements</a></li>
+<li>InterferenceType=Crosses</li>
+<li>RelatingElement=#A.a.1.4</li>
+<li>RelatedElement=#A.a.2.2</li>
+</ul>
+</li>
+<li>A.a.3 <a href="../lexical/IfcRoad.htm">IfcRoad</a> (Road2)</li>
+<li>Representation=<a href="../lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></li>
+<li>A.a.3.1 <a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a> (Road2 segment 18 - 36)<ul>
+<li>Representation=<a href="../lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></li>
+<li>PredefinedType*=<a href="../lexical/IfcRoadPartTypeEnum.htm">IfcRoadPartTypeEnum</a>.ROADSEGMENT</li>
+<li>UsageType=LONGITUDINAL</li>
+</ul>
+</li>
+<li>A.a.3.2 <a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a> (Sammalammintie Road2 intersection)<ul>
+<li>Representation=<a href="../lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a> - Shared with A.a.1.7</li>
+<li>PredefinedType*=<a href="../lexical/IfcRoadPartTypeEnum.htm">IfcRoadPartTypeEnum</a>.INTERSECTION</li>
+<li>UsageType=LONGITUDINAL</li>
+<li><a href="../lexical/IfcRelInterferesElements.htm">IfcRelInterferesElements</a></li>
+<li>InterferenceType=Crosses</li>
+<li>RelatingElement=#A.a.1.7</li>
+<li>RelatedElement=#A.a.3.2</li>
+</ul>
+</li>
+<li>A.a.4 <a href="../lexical/IfcRailway.htm">IfcRailway</a> (Railway)</li>
+<li><a href="../lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></li>
+<li>A.a.4.1 <a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a> (Railway part 1)<ul>
+<li>Representation=-</li>
+<li>PredefinedType*=<a href="../lexical/IfcRailwayPartTypeEnum.htm">IfcRailwayPartTypeEnum</a>.TRACKSTUCTUREPART</li>
+<li>UsageType=LONGITUDINAL</li>
+</ul>
+</li>
+<li>A.a.4.2 <a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a> (Sammalamminitie level crossing)<ul>
+<li>Representation=<a href="../lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a> - Shared with A.a.1.5</li>
+<li>PredefinedType*=<a href="../lexical/IfcFacilityPartCommonTypeEnum.htm">IfcFacilityPartCommonTypeEnum</a>.LEVELCROSSING</li>
+<li>UsageType=LONGITUDINAL</li>
+<li><a href="../lexical/IfcRelInterferesElements.htm">IfcRelInterferesElements</a></li>
+<li>InterferenceType=Crosses</li>
+<li>RelatingElement=#A.a.1.5</li>
+<li>RelatedElement=#A.a.4.2</li>
+</ul>
+</li>
+<li>A.a.4.3 <a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a> (Railway part 3)<ul>
+<li>Representation=-</li>
+<li>PredefinedType*=<a href="../lexical/IfcRailwayPartTypeEnum.htm">IfcRailwayPartTypeEnum</a>.TRACKSTUCTUREPART</li>
+<li>UsageType=LONGITUDINAL</li>
+</ul>
+</li>
+<li>A.a.4.4 <a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a> (Turvalaite Terminal)<ul>
+<li>Representation=<a href="../lexical/IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a> - Shared with A.1.2.1</li>
+<li>PredefinedType*=<a href="../lexical/IfcFacilityPartCommonTypeEnum.htm">IfcFacilityPartCommonTypeEnum</a>.TERMINAL</li>
+<li>UsageType=LONGITUDINAL</li>
+<li><a href="../lexical/IfcRelInterferesElements.htm">IfcRelInterferesElements</a></li>
+<li>InterferenceType=Crosses</li>
+<li>RelatingElement=#A.a.2.1</li>
+<li>RelatedElement=#A.a.4.4</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h4><a id="Expected-Results"></a>Expected Results<a href="UT_SpatialStructure_4.html#Expected-Results"><i data-feather="link"></i></a></h4>
+<p>The aim of this Unit Test, as explained above, is to test the implementation of the project breakdown through the spatial structure concepts of IFC 4.3.</p>
+<p>As such, the expected results are:</p>
+<ol>
+<li>Screen-shot of the spatial structure breakdown as represented in the native application,</li>
+<li>The resulting IFC file containing the spatial structure requested.</li>
+</ol>
+<p>For example, the application should be able to display something like what is shown in the picture below: </p>
+<figure><a id="Figure-6844a716-78db-4778-8191-82fcc12b8a3e"></a><img alt="" src="http://localhost/IFC/RELEASE/IFC4x3/HTML/annex_e/204%20-%20result.png"/><figcaption>Figure 6844a716-78db-4778-8191-82fcc12b8a3e<a href="UT_SpatialStructure_4.html#Figure-6844a716-78db-4778-8191-82fcc12b8a3e"><i data-feather="link"></i></a></figcaption></figure>
+<h3><a id="Supporting-files"></a>Supporting files<a href="UT_SpatialStructure_4.html#Supporting-files"><i data-feather="link"></i></a></h3>
+<p>Following files correspond to this scenario:</p>
+<figure><a id="Table-92f42067-b393-4a4f-be04-ca5d2282c150"></a><table>
+<thead>
+<tr>
+<th>Filename</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UT_SpatialStructure_4.ifc</code></td>
+<td>IFC file with the content</td>
+</tr>
+<tr>
+<td><code>Figure 1 - Situation.png</code></td>
+<td>picture showing a map view of the situation</td>
+</tr>
+<tr>
+<td><code>Figure 2 - Toivola_area_borders.JPG</code></td>
+<td>picture showing a map over different facilities and parts - part1</td>
+</tr>
+<tr>
+<td><code>Figure 3 - Toivola_area_borders2.JPG</code></td>
+<td>picture showing a map over different facilities and parts - part 2</td>
+</tr>
+<tr>
+<td><code>Figure 4 - result.png</code></td>
+<td>picture showing possible result</td>
+</tr>
+<tr>
+<td><code>Toivola_area_borders.dwg</code></td>
+<td>dwg file as basis for figures 2 and 3</td>
+</tr>
+<tr>
+<td><code>IFCTreeView.png</code></td>
+<td>picture showing file structure in IFCTreeView</td>
+</tr>
+</tbody>
+</table><figcaption>Table 92f42067-b393-4a4f-be04-ca5d2282c150<a href="UT_SpatialStructure_4.html#Table-92f42067-b393-4a4f-be04-ca5d2282c150"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="Images"></a>
+    Images
+<a href="UT_SpatialStructure_4.html#Images"><i data-feather="link"></i></a></h2>
+<ul class="thumbnails">
+<li><figure><a id="Figure-eb1a3da7-dd0f-47db-8b35-e1f9ac626c7f"></a><a href="../examples/UT_SpatialStructure_4/Figure&#32;2&#32;-&#32;Toivola_area_borders.JPG"><img src="../examples/UT_SpatialStructure_4/Figure&#32;2&#32;-&#32;Toivola_area_borders.JPG"/></a><figcaption>Figure eb1a3da7-dd0f-47db-8b35-e1f9ac626c7f<a href="UT_SpatialStructure_4.html#Figure-eb1a3da7-dd0f-47db-8b35-e1f9ac626c7f"><i data-feather="link"></i></a></figcaption></figure></li>
+<li><figure><a id="Figure-9480b3f0-03a6-47f5-8c5f-5c331b2557fa"></a><a href="../examples/UT_SpatialStructure_4/IFCTreeView.PNG"><img src="../examples/UT_SpatialStructure_4/IFCTreeView.PNG"/></a><figcaption>Figure 9480b3f0-03a6-47f5-8c5f-5c331b2557fa<a href="UT_SpatialStructure_4.html#Figure-9480b3f0-03a6-47f5-8c5f-5c331b2557fa"><i data-feather="link"></i></a></figcaption></figure></li>
+<li><figure><a id="Figure-8b7f112c-f1e1-4660-b0a1-b6552a19b170"></a><a href="../examples/UT_SpatialStructure_4/Figure&#32;3&#32;-&#32;Toivola_area_borders2.JPG"><img src="../examples/UT_SpatialStructure_4/Figure&#32;3&#32;-&#32;Toivola_area_borders2.JPG"/></a><figcaption>Figure 8b7f112c-f1e1-4660-b0a1-b6552a19b170<a href="UT_SpatialStructure_4.html#Figure-8b7f112c-f1e1-4660-b0a1-b6552a19b170"><i data-feather="link"></i></a></figcaption></figure></li>
+<li><figure><a id="Figure-14042e23-e4e8-4e0f-9c63-8352e55bee94"></a><a href="../examples/UT_SpatialStructure_4/Figure&#32;1&#32;-&#32;Situation.PNG"><img src="../examples/UT_SpatialStructure_4/Figure&#32;1&#32;-&#32;Situation.PNG"/></a><figcaption>Figure 14042e23-e4e8-4e0f-9c63-8352e55bee94<a href="UT_SpatialStructure_4.html#Figure-14042e23-e4e8-4e0f-9c63-8352e55bee94"><i data-feather="link"></i></a></figcaption></figure></li>
+<li><figure><a id="Figure-5b7afb47-7d8d-40e7-8a4a-667c488d7419"></a><a href="../examples/UT_SpatialStructure_4/Figure&#32;4&#32;-&#32;result.png"><img src="../examples/UT_SpatialStructure_4/Figure&#32;4&#32;-&#32;result.png"/></a><figcaption>Figure 5b7afb47-7d8d-40e7-8a4a-667c488d7419<a href="UT_SpatialStructure_4.html#Figure-5b7afb47-7d8d-40e7-8a4a-667c488d7419"><i data-feather="link"></i></a></figcaption></figure></li>
+<li><figure><a id="Figure-8bceea29-94ee-4eb8-ac52-1a57c7f9e3da"></a><a href="../examples/UT_SpatialStructure_4/thumb.png"><img src="../examples/UT_SpatialStructure_4/thumb.png"/></a><figcaption>Figure 8bceea29-94ee-4eb8-ac52-1a57c7f9e3da<a href="UT_SpatialStructure_4.html#Figure-8bceea29-94ee-4eb8-ac52-1a57c7f9e3da"><i data-feather="link"></i></a></figcaption></figure></li>
+</ul>
+<h2><a id="IFC-SPF-source"></a>
+    IFC-SPF source
+<a href="UT_SpatialStructure_4.html#IFC-SPF-source"><i data-feather="link"></i></a></h2>
+<pre><code class="language-step21 hljs">ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('ViewDefinition [Ifc4X3NotAssigned]'),'2;1');
+FILE_NAME(
+/* name */ 'UT_SpatialStructure_4.ifc',
+/* time_stamp */ '2021-01-21T14:36:20',
+/* author */ ('lars'),
+/* organization */ ('Unknown'),
+/* preprocessor_version */ 'GeometryGymIFC v0.1.4.0 by Geometry Gym Pty Ltd built 2020-11-12T09:32:58',
+/* originating_system */ 'UT_RSS_4 v1.0.0.0',
+/* authorization */ 'None');
+
+FILE_SCHEMA (('IFC4X3_RC2'));
+ENDSEC;
+
+DATA;
+#1= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#2= IFCAXIS2PLACEMENT3D(#1,$,$);
+#3= IFCLOCALPLACEMENT($,#2);
+#4= IFCSITE('2NjC27sCn3gwpGGryTu_CQ',#10,'Site',$,$,#3,#31,$,$,$,$,$,$,$);
+#5= IFCPERSON('lars','lars',$,$,$,$,$,$);
+#6= IFCORGANIZATION($,'Unknown',$,$,$);
+#7= IFCPERSONANDORGANIZATION(#5,#6,$);
+#8= IFCAPPLICATION(#9,'0.1.4.0','UT_RSS_2 v1.0.0.0','UT_RSS_2 v1.0.0.0');
+#9= IFCORGANIZATION($,'Geometry Gym Pty Ltd',$,$,$);
+#10= IFCOWNERHISTORY(#7,#8,$,.ADDED.,1611236179,$,$,1611236179);
+#11= IFCPROJECT('3NPL0sHqL37h1Ybzl4hNSg',#10,'Spatial structure skeleton for Level crossing storyline',$,$,$,$,(#24),#12);
+#12= IFCUNITASSIGNMENT((#13,#14,#15,#16,#17));
+#13= IFCSIUNIT(*,.LENGTHUNIT.,$,.METRE.);
+#14= IFCSIUNIT(*,.AREAUNIT.,$,.SQUARE_METRE.);
+#15= IFCSIUNIT(*,.VOLUMEUNIT.,$,.CUBIC_METRE.);
+#16= IFCSIUNIT(*,.PLANEANGLEUNIT.,$,.RADIAN.);
+#17= IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
+#18= IFCRELAGGREGATES('0cZel8fzP8kQOdCyKs2vlv',#10,$,$,#11,(#4));
+#19= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#20= IFCDIRECTION((0.0,0.0,1.0));
+#21= IFCDIRECTION((1.0,0.0,0.0));
+#22= IFCAXIS2PLACEMENT3D(#19,#20,#21);
+#23= IFCDIRECTION((1.0,0.0,0.0));
+#24= IFCGEOMETRICREPRESENTATIONCONTEXT($,'Model',3,0.00000001,#22,#25);
+#25= IFCDIRECTION((0.0,1.0));
+#26= IFCPROJECTEDCRS('EPSG:3878',$,'European Terrestrial Reference System 1989','N2000',$,$,$);
+#27= IFCMAPCONVERSION(#24,#26,24525000.0,6876000.0,0.0,1.0,0.0,1.0);
+#28= IFCCARTESIANPOINT((400.0,700.0,100.0));
+#29= IFCBOUNDINGBOX(#28,415.0,337.0,40.0);
+#30= IFCSHAPEREPRESENTATION(#24,'Box','BoundingBox',(#29));
+#31= IFCPRODUCTDEFINITIONSHAPE($,$,(#30));
+#32= IFCROAD('3ZHPGICrH2Fu60GMv0tD4H',#10,'Sammalammintie',$,$,#3,#55,$,$);
+#33= IFCCARTESIANPOINT((425.883,926.168));
+#34= IFCCARTESIANPOINT((425.849,945.975));
+#35= IFCCARTESIANPOINT((495.835,954.723));
+#36= IFCCARTESIANPOINT((594.173,939.512));
+#37= IFCCARTESIANPOINT((623.792,932.47));
+#38= IFCCARTESIANPOINT((653.055,922.201));
+#39= IFCCARTESIANPOINT((693.281,894.012));
+#40= IFCCARTESIANPOINT((749.574,786.526));
+#41= IFCCARTESIANPOINT((802.3,729.938));
+#42= IFCCARTESIANPOINT((786.196,713.887));
+#43= IFCCARTESIANPOINT((710.153,794.224));
+#44= IFCCARTESIANPOINT((648.204,891.377));
+#45= IFCCARTESIANPOINT((630.467,899.733));
+#46= IFCCARTESIANPOINT((522.074,916.146));
+#47= IFCCARTESIANPOINT((425.833,926.168));
+#48= IFCPOLYLINE((#33,#34,#35,#36,#37,#38,#39,#40,#41,#42,#43,#44,#45,#46,#47));
+#49= IFCARBITRARYCLOSEDPROFILEDEF(.AREA.,'Sammalammintie area',#48);
+#50= IFCCARTESIANPOINT((0.0,0.0,100.0));
+#51= IFCAXIS2PLACEMENT3D(#50,$,$);
+#52= IFCDIRECTION((0.0,0.0,1.0));
+#53= IFCEXTRUDEDAREASOLID(#49,#51,#52,40.0);
+#54= IFCSHAPEREPRESENTATION(#24,'Body','SweptSolid',(#53));
+#55= IFCPRODUCTDEFINITIONSHAPE($,$,(#54));
+#56= IFCRELAGGREGATES('3nLbaREiP08x82o5a7A6Z0',#10,$,$,#4,(#32,#217,#258,#300));
+#57= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#58= IFCAXIS2PLACEMENT3D(#57,$,$);
+#59= IFCLOCALPLACEMENT(#3,#58);
+#60= IFCFACILITYPART('0BjWByapHE6gMux88pT_gs',#10,'Sammalammintie segment 150 - 230',$,$,#59,#74,$,$,IFCROADPARTTYPEENUM(.ROADSEGMENT.),.LONGITUDINAL.);
+#61= IFCRELAGGREGATES('22pDz_ExT1pRk2eDPQPTNa',#10,$,$,#32,(#60,#78,#95,#112,#129,#146,#165,#187));
+#62= IFCCARTESIANPOINT((426.881,927.17));
+#63= IFCCARTESIANPOINT((426.85,944.977));
+#64= IFCCARTESIANPOINT((496.852,945.098));
+#65= IFCCARTESIANPOINT((496.882,927.291));
+#66= IFCCARTESIANPOINT((426.881,927.17));
+#67= IFCPOLYLINE((#62,#63,#64,#65,#66));
+#68= IFCARBITRARYCLOSEDPROFILEDEF(.AREA.,'Sammalammintie segment 150 - 230 area',#67);
+#69= IFCCARTESIANPOINT((0.0,0.0,100.0));
+#70= IFCAXIS2PLACEMENT3D(#69,$,$);
+#71= IFCDIRECTION((0.0,0.0,1.0));
+#72= IFCEXTRUDEDAREASOLID(#68,#70,#71,40.0);
+#73= IFCSHAPEREPRESENTATION(#24,'Body','SweptSolid',(#72));
+#74= IFCPRODUCTDEFINITIONSHAPE($,$,(#73));
+#75= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#76= IFCAXIS2PLACEMENT3D(#75,$,$);
+#77= IFCLOCALPLACEMENT(#3,#76);
+#78= IFCFACILITYPART('28dpdn0vn3ce8IlyaoznfL',#10,'Sammalammintie P\X2\00E4\X0\ij\X2\00E4\X0\nteentie intersection',$,$,#77,#91,$,$,IFCROADPARTTYPEENUM(.INTERSECTION.),.LONGITUDINAL.);
+#79= IFCCARTESIANPOINT((496.889,927.291));
+#80= IFCCARTESIANPOINT((496.837,953.497));
+#81= IFCCARTESIANPOINT((525.502,946.633));
+#82= IFCCARTESIANPOINT((521.238,917.378));
+#83= IFCCARTESIANPOINT((496.889,927.291));
+#84= IFCPOLYLINE((#79,#80,#81,#82,#83));
+#85= IFCARBITRARYCLOSEDPROFILEDEF(.AREA.,'Sammalammintie P\X2\00E4\X0\ij\X2\00E4\X0\nteentie intersection area',#84);
+#86= IFCCARTESIANPOINT((0.0,0.0,100.0));
+#87= IFCAXIS2PLACEMENT3D(#86,$,$);
+#88= IFCDIRECTION((0.0,0.0,1.0));
+#89= IFCEXTRUDEDAREASOLID(#85,#87,#88,40.0);
+#90= IFCSHAPEREPRESENTATION(#24,'Body','SweptSolid',(#89));
+#91= IFCPRODUCTDEFINITIONSHAPE($,$,(#90));
+#92= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#93= IFCAXIS2PLACEMENT3D(#92,$,$);
+#94= IFCLOCALPLACEMENT(#3,#93);
+#95= IFCFACILITYPART('2B5vbxWpv7KOcdJoB2Pp_7',#10,'Sammalammintie segment 247 - 270',$,$,#94,#108,$,$,IFCROADPARTTYPEENUM(.ROADSEGMENT.),.LONGITUDINAL.);
+#96= IFCCARTESIANPOINT((521.907,922.13));
+#97= IFCCARTESIANPOINT((524.835,942.895));
+#98= IFCCARTESIANPOINT((547.74,939.666));
+#99= IFCCARTESIANPOINT((544.813,918.901));
+#100= IFCCARTESIANPOINT((521.907,922.13));
+#101= IFCPOLYLINE((#96,#97,#98,#99,#100));
+#102= IFCARBITRARYCLOSEDPROFILEDEF(.AREA.,'Sammalammintie segment 247 - 270 area',#101);
+#103= IFCCARTESIANPOINT((0.0,0.0,100.0));
+#104= IFCAXIS2PLACEMENT3D(#103,$,$);
+#105= IFCDIRECTION((0.0,0.0,1.0));
+#106= IFCEXTRUDEDAREASOLID(#102,#104,#105,40.0);
+#107= IFCSHAPEREPRESENTATION(#24,'Body','SweptSolid',(#106));
+#108= IFCPRODUCTDEFINITIONSHAPE($,$,(#107));
+#109= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#110= IFCAXIS2PLACEMENT3D(#109,$,$);
+#111= IFCLOCALPLACEMENT(#3,#110);
+#112= IFCFACILITYPART('235tSjkXT6bxgGk4RyA_dk',#10,'Sammalammintie safety equipment road intersection',$,$,#111,#125,$,$,IFCROADPARTTYPEENUM(.INTERSECTION.),.LONGITUDINAL.);
+#113= IFCCARTESIANPOINT((544.68,917.959));
+#114= IFCCARTESIANPOINT((547.95,941.155));
+#115= IFCCARTESIANPOINT((570.844,937.928));
+#116= IFCCARTESIANPOINT((567.575,914.732));
+#117= IFCCARTESIANPOINT((544.68,917.959));
+#118= IFCPOLYLINE((#113,#114,#115,#116,#117));
+#119= IFCARBITRARYCLOSEDPROFILEDEF(.AREA.,'Sammalammintie safety equipment road intersection area',#118);
+#120= IFCCARTESIANPOINT((0.0,0.0,100.0));
+#121= IFCAXIS2PLACEMENT3D(#120,$,$);
+#122= IFCDIRECTION((0.0,0.0,1.0));
+#123= IFCEXTRUDEDAREASOLID(#119,#121,#122,40.0);
+#124= IFCSHAPEREPRESENTATION(#24,'Body','SweptSolid',(#123));
+#125= IFCPRODUCTDEFINITIONSHAPE($,$,(#124));
+#126= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#127= IFCAXIS2PLACEMENT3D(#126,$,$);
+#128= IFCLOCALPLACEMENT(#3,#127);
+#129= IFCFACILITYPART('0y4DVUY9n2rx2gP$zcuP6l',#10,'Sammalamminitie level crossing',$,$,#128,#142,$,$,IFCROADPARTTYPEENUM(.RAILWAYCROSSING.),.LONGITUDINAL.);
+#130= IFCCARTESIANPOINT((567.67,915.406));
+#131= IFCCARTESIANPOINT((571.39,941.709));
+#132= IFCCARTESIANPOINT((593.043,938.661));
+#133= IFCCARTESIANPOINT((589.335,912.352));
+#134= IFCCARTESIANPOINT((567.67,915.406));
+#135= IFCPOLYLINE((#130,#131,#132,#133,#134));
+#136= IFCARBITRARYCLOSEDPROFILEDEF(.AREA.,'Sammalamminitie level crossing area',#135);
+#137= IFCCARTESIANPOINT((0.0,0.0,100.0));
+#138= IFCAXIS2PLACEMENT3D(#137,$,$);
+#139= IFCDIRECTION((0.0,0.0,1.0));
+#140= IFCEXTRUDEDAREASOLID(#136,#138,#139,40.0);
+#141= IFCSHAPEREPRESENTATION(#24,'Body','SweptSolid',(#140));
+#142= IFCPRODUCTDEFINITIONSHAPE($,$,(#141));
+#143= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#144= IFCAXIS2PLACEMENT3D(#143,$,$);
+#145= IFCLOCALPLACEMENT(#3,#144);
+#146= IFCFACILITYPART('28J3XJCgj2Vg8u5oyIfIxn',#10,'Sammalammimtie segment 315 - 358',$,$,#145,#161,$,$,IFCROADPARTTYPEENUM(.ROADSEGMENT.),.LONGITUDINAL.);
+#147= IFCCARTESIANPOINT((589.489,913.442));
+#148= IFCCARTESIANPOINT((592.647,935.851));
+#149= IFCCARTESIANPOINT((623.554,931.491));
+#150= IFCCARTESIANPOINT((637.194,926.708));
+#151= IFCCARTESIANPOINT((630.002,906.214));
+#152= IFCCARTESIANPOINT((622.793,908.747));
+#153= IFCCARTESIANPOINT((589.489,913.442));
+#154= IFCPOLYLINE((#147,#148,#149,#150,#151,#152,#153));
+#155= IFCARBITRARYCLOSEDPROFILEDEF(.AREA.,'Sammalammimtie segment 315 - 358 area',#154);
+#156= IFCCARTESIANPOINT((0.0,0.0,100.0));
+#157= IFCAXIS2PLACEMENT3D(#156,$,$);
+#158= IFCDIRECTION((0.0,0.0,1.0));
+#159= IFCEXTRUDEDAREASOLID(#155,#157,#158,40.0);
+#160= IFCSHAPEREPRESENTATION(#24,'Body','SweptSolid',(#159));
+#161= IFCPRODUCTDEFINITIONSHAPE($,$,(#160));
+#162= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#163= IFCAXIS2PLACEMENT3D(#162,$,$);
+#164= IFCLOCALPLACEMENT(#3,#163);
+#165= IFCFACILITYPART('28OcnhqhjAwQb_r7iirS2V',#10,'Sammalammintie Road2 intersection',$,$,#164,#183,$,$,IFCROADPARTTYPEENUM(.INTERSECTION.),.LONGITUDINAL.);
+#166= IFCCARTESIANPOINT((630.002,906.214));
+#167= IFCCARTESIANPOINT((637.194,926.708));
+#168= IFCCARTESIANPOINT((652.593,921.304));
+#169= IFCCARTESIANPOINT((663.834,913.389));
+#170= IFCCARTESIANPOINT((651.804,895.266));
+#171= IFCCARTESIANPOINT((650.426,896.181));
+#172= IFCCARTESIANPOINT((647.878,892.636));
+#173= IFCCARTESIANPOINT((631.677,900.268));
+#174= IFCCARTESIANPOINT((633.164,905.102));
+#175= IFCCARTESIANPOINT((630.002,906.214));
+#176= IFCPOLYLINE((#166,#167,#168,#169,#170,#171,#172,#173,#174,#175));
+#177= IFCARBITRARYCLOSEDPROFILEDEF(.AREA.,'Sammalammintie Road2 intersection area',#176);
+#178= IFCCARTESIANPOINT((0.0,0.0,100.0));
+#179= IFCAXIS2PLACEMENT3D(#178,$,$);
+#180= IFCDIRECTION((0.0,0.0,1.0));
+#181= IFCEXTRUDEDAREASOLID(#177,#179,#180,40.0);
+#182= IFCSHAPEREPRESENTATION(#24,'Body','SweptSolid',(#181));
+#183= IFCPRODUCTDEFINITIONSHAPE($,$,(#182));
+#184= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#185= IFCAXIS2PLACEMENT3D(#184,$,$);
+#186= IFCLOCALPLACEMENT(#3,#185);
+#187= IFCFACILITYPART('1_wCCpOyP73xUqV9rwGlcy',#10,'Sammalammintie segment 386 - 620',$,$,#186,#216,$,$,IFCROADPARTTYPEENUM(.ROADSEGMENT.),.LONGITUDINAL.);
+#188= IFCCARTESIANPOINT((651.804,895.266));
+#189= IFCCARTESIANPOINT((663.834,913.389));
+#190= IFCCARTESIANPOINT((676.669,904.432));
+#191= IFCCARTESIANPOINT((691.413,889.716));
+#192= IFCCARTESIANPOINT((704.997,869.481));
+#193= IFCCARTESIANPOINT((713.554,850.839));
+#194= IFCCARTESIANPOINT((720.745,831.983));
+#195= IFCCARTESIANPOINT((727.675,814.228));
+#196= IFCCARTESIANPOINT((735.77,799.321));
+#197= IFCCARTESIANPOINT((748.84,785.846));
+#198= IFCCARTESIANPOINT((800.991,729.938));
+#199= IFCCARTESIANPOINT((786.28,715.383));
+#200= IFCCARTESIANPOINT((733.381,770.639));
+#201= IFCCARTESIANPOINT((718.609,786.744));
+#202= IFCCARTESIANPOINT((705.403,804.231));
+#203= IFCCARTESIANPOINT((696.083,823.575));
+#204= IFCCARTESIANPOINT((689.918,842.55));
+#205= IFCCARTESIANPOINT((683.327,859.279));
+#206= IFCCARTESIANPOINT((673.793,874.277));
+#207= IFCCARTESIANPOINT((661.709,887.379));
+#208= IFCCARTESIANPOINT((651.804,895.266));
+#209= IFCPOLYLINE((#188,#189,#190,#191,#192,#193,#194,#195,#196,#197,#198,#199,#200,#201,#202,#203,#204,#205,#206,#207,#208));
+#210= IFCARBITRARYCLOSEDPROFILEDEF(.AREA.,'Sammalammintie segment 386 - 620 area',#209);
+#211= IFCCARTESIANPOINT((0.0,0.0,100.0));
+#212= IFCAXIS2PLACEMENT3D(#211,$,$);
+#213= IFCDIRECTION((0.0,0.0,1.0));
+#214= IFCEXTRUDEDAREASOLID(#210,#212,#213,40.0);
+#215= IFCSHAPEREPRESENTATION(#24,'Body','SweptSolid',(#214));
+#216= IFCPRODUCTDEFINITIONSHAPE($,$,(#215));
+#217= IFCROAD('1o8KjZ6v9CNAPrdumHWA_F',#10,'Safety equipment road',$,$,#3,#232,$,$);
+#218= IFCCARTESIANPOINT((543.551,917.108));
+#219= IFCCARTESIANPOINT((547.1,942.285));
+#220= IFCCARTESIANPOINT((556.134,941.011));
+#221= IFCCARTESIANPOINT((557.797,952.54));
+#222= IFCCARTESIANPOINT((573.633,950.255));
+#223= IFCCARTESIANPOINT((568.423,913.581));
+#224= IFCCARTESIANPOINT((543.551,917.108));
+#225= IFCPOLYLINE((#218,#219,#220,#221,#222,#223,#224));
+#226= IFCARBITRARYCLOSEDPROFILEDEF(.AREA.,'Safety equipment road area',#225);
+#227= IFCCARTESIANPOINT((0.0,0.0,100.0));
+#228= IFCAXIS2PLACEMENT3D(#227,$,$);
+#229= IFCDIRECTION((0.0,0.0,1.0));
+#230= IFCEXTRUDEDAREASOLID(#226,#228,#229,40.0);
+#231= IFCSHAPEREPRESENTATION(#24,'Body','SweptSolid',(#230));
+#232= IFCPRODUCTDEFINITIONSHAPE($,$,(#231));
+#233= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#234= IFCAXIS2PLACEMENT3D(#233,$,$);
+#235= IFCLOCALPLACEMENT(#3,#234);
+#236= IFCFACILITYPART('3RG7s1uWfBcBvmbxRdE$7l',#10,'Safety equipment terminal',$,$,#235,#250,$,$,IFCFACILITYPARTCOMMONTYPEENUM(.TERMINAL.),.LONGITUDINAL.);
+#237= IFCRELAGGREGATES('1lEnire$DFVfnakY0Mxm_g',#10,$,$,#217,(#236,#254));
+#238= IFCCARTESIANPOINT((556.981,939.882));
+#239= IFCCARTESIANPOINT((558.644,951.408));
+#240= IFCCARTESIANPOINT((572.501,949.408));
+#241= IFCCARTESIANPOINT((570.844,937.928));
+#242= IFCCARTESIANPOINT((556.981,939.882));
+#243= IFCPOLYLINE((#238,#239,#240,#241,#242));
+#244= IFCARBITRARYCLOSEDPROFILEDEF(.AREA.,'Safety equipment terminal area',#243);
+#245= IFCCARTESIANPOINT((0.0,0.0,100.0));
+#246= IFCAXIS2PLACEMENT3D(#245,$,$);
+#247= IFCDIRECTION((0.0,0.0,1.0));
+#248= IFCEXTRUDEDAREASOLID(#244,#246,#247,40.0);
+#249= IFCSHAPEREPRESENTATION(#24,'Body','SweptSolid',(#248));
+#250= IFCPRODUCTDEFINITIONSHAPE($,$,(#249));
+#251= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#252= IFCAXIS2PLACEMENT3D(#251,$,$);
+#253= IFCLOCALPLACEMENT(#3,#252);
+#254= IFCFACILITYPART('0m2ccjR$r5leaAaTc93cz4',#10,'Sammalammintie safety equipment road intersection',$,$,#253,#256,$,$,IFCROADPARTTYPEENUM(.INTERSECTION.),.LONGITUDINAL.);
+#255= IFCSHAPEREPRESENTATION(#24,'Body','SweptSolid',(#123));
+#256= IFCPRODUCTDEFINITIONSHAPE($,$,(#255));
+#257= IFCRELINTERFERESELEMENTS('19zglBh$b12ecc0p1bgaKn',#10,$,$,#112,#254,$,'Crosses',.U.);
+#258= IFCROAD('22WEdPeHj1QhDP4vm5srTv',#10,'Road2',$,$,#3,#274,$,$);
+#259= IFCCARTESIANPOINT((624.813,881.346));
+#260= IFCCARTESIANPOINT((628.727,905.602));
+#261= IFCCARTESIANPOINT((636.581,927.982));
+#262= IFCCARTESIANPOINT((653.055,922.201));
+#263= IFCCARTESIANPOINT((665.205,913.646));
+#264= IFCCARTESIANPOINT((652.084,893.88));
+#265= IFCCARTESIANPOINT((636.899,875.651));
+#266= IFCCARTESIANPOINT((624.813,881.346));
+#267= IFCPOLYLINE((#259,#260,#261,#262,#263,#264,#265,#266));
+#268= IFCARBITRARYCLOSEDPROFILEDEF(.AREA.,'Road2 area',#267);
+#269= IFCCARTESIANPOINT((0.0,0.0,100.0));
+#270= IFCAXIS2PLACEMENT3D(#269,$,$);
+#271= IFCDIRECTION((0.0,0.0,1.0));
+#272= IFCEXTRUDEDAREASOLID(#268,#270,#271,40.0);
+#273= IFCSHAPEREPRESENTATION(#24,'Body','SweptSolid',(#272));
+#274= IFCPRODUCTDEFINITIONSHAPE($,$,(#273));
+#275= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#276= IFCAXIS2PLACEMENT3D(#275,$,$);
+#277= IFCLOCALPLACEMENT(#3,#276);
+#278= IFCFACILITYPART('3$v5XmQF9CQ8BnRbaINbu8',#10,'Road2 segment 18 - 36',$,$,#277,#292,$,$,IFCROADPARTTYPEENUM(.ROADSEGMENT.),.LONGITUDINAL.);
+#279= IFCRELAGGREGATES('1Jwt9sRwLEY9aOH9JXtCNX',#10,$,$,#258,(#278,#296));
+#280= IFCCARTESIANPOINT((626.024,881.881));
+#281= IFCCARTESIANPOINT((631.677,900.268));
+#282= IFCCARTESIANPOINT((647.878,892.636));
+#283= IFCCARTESIANPOINT((636.573,876.91));
+#284= IFCCARTESIANPOINT((626.024,881.881));
+#285= IFCPOLYLINE((#280,#281,#282,#283,#284));
+#286= IFCARBITRARYCLOSEDPROFILEDEF(.AREA.,'Road2 segment 18 - 36 area',#285);
+#287= IFCCARTESIANPOINT((0.0,0.0,100.0));
+#288= IFCAXIS2PLACEMENT3D(#287,$,$);
+#289= IFCDIRECTION((0.0,0.0,1.0));
+#290= IFCEXTRUDEDAREASOLID(#286,#288,#289,40.0);
+#291= IFCSHAPEREPRESENTATION(#24,'Body','SweptSolid',(#290));
+#292= IFCPRODUCTDEFINITIONSHAPE($,$,(#291));
+#293= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#294= IFCAXIS2PLACEMENT3D(#293,$,$);
+#295= IFCLOCALPLACEMENT(#3,#294);
+#296= IFCFACILITYPART('0FnkJcf_jAaf2IwREplWr3',#10,'Sammalammintie Road2 intersection',$,$,#295,#298,$,$,IFCROADPARTTYPEENUM(.INTERSECTION.),.LONGITUDINAL.);
+#297= IFCSHAPEREPRESENTATION(#24,'Body','SweptSolid',(#181));
+#298= IFCPRODUCTDEFINITIONSHAPE($,$,(#297));
+#299= IFCRELINTERFERESELEMENTS('1kVMJXnhj5$QuvcpWbeJxM',#10,$,$,#165,#296,$,'Crosses',.U.);
+#300= IFCRAILWAY('1CWLdx$bDBleY2a_KBTJBy',#10,'Railway',$,$,#3,#314,$,$);
+#301= IFCCARTESIANPOINT((560.762,875.053));
+#302= IFCCARTESIANPOINT((576.255,982.428));
+#303= IFCCARTESIANPOINT((599.756,979.115));
+#304= IFCCARTESIANPOINT((594.173,939.512));
+#305= IFCCARTESIANPOINT((584.602,871.613));
+#306= IFCCARTESIANPOINT((560.762,875.053));
+#307= IFCPOLYLINE((#301,#302,#303,#304,#305,#306));
+#308= IFCARBITRARYCLOSEDPROFILEDEF(.AREA.,'Railway area',#307);
+#309= IFCCARTESIANPOINT((0.0,0.0,100.0));
+#310= IFCAXIS2PLACEMENT3D(#309,$,$);
+#311= IFCDIRECTION((0.0,0.0,1.0));
+#312= IFCEXTRUDEDAREASOLID(#308,#310,#311,40.0);
+#313= IFCSHAPEREPRESENTATION(#24,'Body','SweptSolid',(#312));
+#314= IFCPRODUCTDEFINITIONSHAPE($,$,(#313));
+#315= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#316= IFCAXIS2PLACEMENT3D(#315,$,$);
+#317= IFCLOCALPLACEMENT(#3,#316);
+#318= IFCFACILITYPART('3fka4UEY94gPadfNSYUCtf',#10,'Railway part 1',$,$,#317,$,$,$,IFCRAILWAYPARTTYPEENUM(.TRACKSTRUCTUREPART.),.LONGITUDINAL.);
+#319= IFCRELAGGREGATES('3qVDiRciXE6v9qvzat9TK_',#10,$,$,#300,(#318,#323,#329,#334));
+#320= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#321= IFCAXIS2PLACEMENT3D(#320,$,$);
+#322= IFCLOCALPLACEMENT(#3,#321);
+#323= IFCFACILITYPART('1kP4loal5FfAVrs$7Up$sn',#10,'Sammalamminitie level crossing',$,$,#322,#325,$,$,IFCFACILITYPARTCOMMONTYPEENUM(.LEVELCROSSING.),.LONGITUDINAL.);
+#324= IFCSHAPEREPRESENTATION(#24,'Body','SweptSolid',(#140));
+#325= IFCPRODUCTDEFINITIONSHAPE($,$,(#324));
+#326= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#327= IFCAXIS2PLACEMENT3D(#326,$,$);
+#328= IFCLOCALPLACEMENT(#3,#327);
+#329= IFCFACILITYPART('2ZOqRSqLb0KxLgfklcZOIS',#10,'Railway part 3',$,$,#328,$,$,$,IFCRAILWAYPARTTYPEENUM(.TRACKSTRUCTUREPART.),.LONGITUDINAL.);
+#330= IFCRELINTERFERESELEMENTS('20bWx6nEf42ACBHvWuy8$g',#10,$,$,#129,#323,$,'Crosses',.U.);
+#331= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#332= IFCAXIS2PLACEMENT3D(#331,$,$);
+#333= IFCLOCALPLACEMENT(#3,#332);
+#334= IFCFACILITYPART('2edfO2yIDB8Rl_8nwsK0i_',#10,'Turvalaite Terminal',$,$,#333,#336,$,$,IFCFACILITYPARTCOMMONTYPEENUM(.TERMINAL.),.LONGITUDINAL.);
+#335= IFCSHAPEREPRESENTATION(#24,'Body','SweptSolid',(#248));
+#336= IFCPRODUCTDEFINITIONSHAPE($,$,(#335));
+#337= IFCRELINTERFERESELEMENTS('2AooRPOALAABK$zyUgG1pd',#10,$,$,#236,#334,$,'Crosses',.U.);
+ENDSEC;
+
+END-ISO-10303-21;
+
+</code></pre>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': 'IFC 4.3/UT_SpatialStructure_4/Readme.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/Sample-Test-Files',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

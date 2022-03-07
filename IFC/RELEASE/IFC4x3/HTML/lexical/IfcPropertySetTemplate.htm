@@ -1,0 +1,493 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>5.1.3.16 IfcPropertySetTemplate - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a class="current" href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a class="sublink-1 current" href="../ifckernel/content.html">
+                            5.1 IfcKernel
+                        </a>
+<a class="sublink-1" href="../ifccontrolextension/content.html">
+                            5.2 IfcControlExtension
+                        </a>
+<a class="sublink-1" href="../ifcprocessextension/content.html">
+                            5.3 IfcProcessExtension
+                        </a>
+<a class="sublink-1" href="../ifcproductextension/content.html">
+                            5.4 IfcProductExtension
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>5.1.3.16 IfcPropertySetTemplate</h1>
+<h2><a id="5.1.3.16.1-Semantic-definition"></a>
+    5.1.3.16.1 Semantic definition
+<a href="IfcPropertySetTemplate.htm#5.1.3.16.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p><em><a href="IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a></em> defines the template for all dynamically extensible property sets represented by <em><a href="IfcPropertySet.htm">IfcPropertySet</a></em>. The property set template is a container of property templates within a property tree. The individual property templates are interpreted according to their <em>Name</em> attribute and shall have no values assigned.</p>
+<aside class="aside-note"><mark>NOTE</mark>  By convention an <em><a href="IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a></em> can also be used as a template for an <em><a href="IfcElementQuantity.htm">IfcElementQuantity</a></em>, being a particular type of a property set definition.</aside>
+<p>Property set templates can form part of a property library used and declared within a project. Depending on the <em>TemplateType</em> the <em><a href="IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a></em> defines a template for:</p>
+<ul>
+<li>"Pset_" - occurrences of <em><a href="IfcPropertySet.htm">IfcPropertySet</a></em></li>
+<li>"Qto_" - occurrences of <em><a href="IfcElementQuantity.htm">IfcElementQuantity</a></em></li>
+</ul>
+<p>The inherited <em>HasContext</em> inverse relation to <em><a href="IfcRelDeclares.htm">IfcRelDeclares</a></em> is used to declare the <em><a href="IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a></em> within a project library. If included in an exchange data set it can then be traversed through the <em><a href="IfcProjectLibrary.htm">IfcProjectLibrary</a></em>. The <em>Defines</em> inverse relation to <em><a href="IfcRelDefinesByTemplate.htm">IfcRelDefinesByTemplate</a></em> is provided to keep the definition relationship between the <em><a href="IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a></em> and the one to many <em><a href="IfcPropertySet.htm">IfcPropertySet</a></em>'s, for which it provides the template. Figure 5.1.3.16.A illustrates relationships used for property set templates.</p>
+<figure><a id="Figure-5.1.3.16.A-Property-set-template-relationships"></a><img alt="property set template" src="../figures/ifcpropertysettemplate_fig-1.png" title="Figure 5.1.3.16.A — Property set template relationships"/><figcaption>Figure 5.1.3.16.A — Property set template relationships<a href="IfcPropertySetTemplate.htm#Figure-5.1.3.16.A-Property-set-template-relationships"><i data-feather="link"></i></a></figcaption></figure>
+<p>Between <em><a href="IfcProperty.htm">IfcProperty</a></em>'s within the <em>HasProperties</em> set of <em><a href="IfcPropertySet.htm">IfcPropertySet</a></em> having the same <em>Name</em> attribute value as the <em><a href="IfcPropertyTemplate.htm">IfcPropertyTemplate</a></em>'s within the <em>HasPropertyTemplates</em> set of <em><a href="IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a></em> an implicit definition relationship is established that assigns the template to the individual properties.</p>
+<aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC4.</aside>
+<h2><a id="5.1.3.16.2-Entity-inheritance"></a>
+    5.1.3.16.2 Entity inheritance
+<a href="IfcPropertySetTemplate.htm#5.1.3.16.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
+<ol class="tier">
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcRoot.htm">IfcRoot</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcPropertyDefinition.htm">IfcPropertyDefinition</a></li>
+<li class="abstract"><a href="IfcObjectDefinition.htm">IfcObjectDefinition</a></li>
+<li class="abstract"><a href="IfcRelationship.htm">IfcRelationship</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcPropertyTemplateDefinition.htm">IfcPropertyTemplateDefinition</a></li>
+<li class="abstract"><a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="current ancestor"><a href="IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a></li>
+<li class="abstract"><a href="IfcPropertyTemplate.htm">IfcPropertyTemplate</a></li>
+</ul>
+</li>
+</ol>
+<h2><a id="5.1.3.16.3-Attributes"></a>
+    5.1.3.16.3 Attributes
+<a href="IfcPropertySetTemplate.htm#5.1.3.16.3-Attributes"><i data-feather="link"></i></a></h2>
+<!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
+<figure><a id="Table-5.1.3.16.B"></a><table class="striped grouped attributes">
+<colgroup>
+<col style="width: 20px;"/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcRoot.htm">IfcRoot</a>
+<small>(4)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                GlobalId
+                
+            </td>
+<td data-label="Type"><a href="IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a></td>
+<td data-label="Description">
+<p>Assignment of a globally unique identifier within the entire software world.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                OwnerHistory
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
+<td data-label="Description">
+<p>Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,</p>
+<aside class="aside-note"><mark>NOTE</mark>  only the last modification in stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The attribute has been changed to be OPTIONAL.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>Optional name for use by the participating software systems or users. For some subtypes of <a href="IfcRoot.htm">IfcRoot</a> the insertion of the Name attribute may be required. This would be enforced by a where rule.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>Optional description, provided for exchanging informative comments.</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcPropertyDefinition.htm">IfcPropertyDefinition</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasContext</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="IfcRelDeclares.htm">IfcRelDeclares</a> FOR RelatedDefinitions</td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasAssociations</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcRelAssociates.htm">IfcRelAssociates</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>Reference to the relationship <a href="IfcRelAssociates.htm">IfcRelAssociates</a> and thus to those externally defined concepts, like classifications, documents, or library information, which are associated to the property definition.</p>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to show 6 hidden inherited attributes
+                </small>
+<small class="hide-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to hide 6 inherited attributes
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="4">
+<a href="IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a>
+<small>(4)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                TemplateType
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcPropertySetTemplateTypeEnum.htm">IfcPropertySetTemplateTypeEnum</a></td>
+<td data-label="Description">
+<p>Property set type defining whether the property set is applicable to a type (subtypes of <em><a href="IfcTypeObject.htm">IfcTypeObject</a></em>), to an occurrence (subtypes of <em><a href="IfcObject.htm">IfcObject</a></em>), or as a special case to a performance history.</p>
+<p>The attribute <em>ApplicableEntity</em> may further refine the applicability to a single or multiple entity type(s).</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                ApplicableEntity
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcIdentifier.htm">IfcIdentifier</a></td>
+<td data-label="Description">
+<p>The attribute optionally defines the data type of the applicable type or occurrence object, to which the assigned property set template can relate. If not present, no instruction is given to which type or occurrence object the property set template is applicable. The following conventions are used:
+* The IFC entity name of the applicable entity using the IFC naming convention, CamelCase with IFC prefix
+* It can be optionally followed by the predefined type after the separator "/" (forward slash), using upper case
+* If a performance history object of a particular distribution object is attributes by the property set template, then the entity name (and potentially amended by the predefined type) is expanded by adding '[PerformanceHistory]'
+* If one property set template is applicable to many type and/or occurrence objects, then those object names should be separate by comma "," forming a comma separated string.</p>
+<aside class="aside-example"><mark>EXAMPLE</mark> Referring to a boiler type as applicable entity would be expressed as '<a href="IfcBoilerType.htm">IfcBoilerType</a>', referring to a steam boiler type as applicable entity would be expressed as '<a href="IfcBoilerType.htm">IfcBoilerType</a>/STEAM', referring to a wall and a wall type would be expressed as '<a href="IfcWall.htm">IfcWall</a>, <a href="IfcWallType.htm">IfcWallType</a>'. An applicable <em><a href="IfcPerformanceHistory.htm">IfcPerformanceHistory</a></em> assigned to an occurrence or type object would be indicated by <a href="IfcBoilerType.htm">IfcBoilerType</a>[PerformanceHistory], or respectively <a href="IfcBoilerType.htm">IfcBoilerType</a>/STEAM[PerformanceHistory].</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                HasPropertyTemplates
+                
+            </td>
+<td data-label="Type">SET [1:?] OF <a href="IfcPropertyTemplate.htm">IfcPropertyTemplate</a></td>
+<td data-label="Description">
+<p>Set of <em><a href="IfcPropertyTemplate.htm">IfcPropertyTemplate</a></em>'s that are defined within the scope of the <em><a href="IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a></em>.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>Defines</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcRelDefinesByTemplate.htm">IfcRelDefinesByTemplate</a> FOR RelatingTemplate</td>
+<td data-label="Description">
+<p>Relation to the property sets, via the objectified relationship <em><a href="IfcRelDefinesByTemplate.htm">IfcRelDefinesByTemplate</a></em>, that, if given, utilize the definition template.</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 5.1.3.16.B<a href="IfcPropertySetTemplate.htm#Table-5.1.3.16.B"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="5.1.3.16.4-Formal-propositions"></a>
+    5.1.3.16.4 Formal propositions
+<a href="IfcPropertySetTemplate.htm#5.1.3.16.4-Formal-propositions"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-5.1.3.16.C"></a><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ExistsName</td>
+<td>
+<p>The <em>Name</em> attribute has to be provided. The attribute is used to specify the signifier of the property set template. The properties that are allowed to be attached to a particular property set template may be given within the property set definition part of the IFC specification.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">EXISTS(SELF\<a href="IfcRoot.htm">IfcRoot</a>.Name)</code></pre>
+</td>
+</tr>
+<tr>
+<td>UniquePropertyNames</td>
+<td>
+<p>Every individual <em><a href="IfcPropertyTemplate.htm">IfcPropertyTemplate</a></em> within the property set template shall have a unique <em>Name</em> attribute value.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs"><a href="IfcUniquePropertyTemplateNames.htm">IfcUniquePropertyTemplateNames</a>(HasPropertyTemplates)</code></pre>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 5.1.3.16.C<a href="IfcPropertySetTemplate.htm#Table-5.1.3.16.C"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="5.1.3.16.5-Concept-usage"></a>
+    5.1.3.16.5 Concept usage
+<a href="IfcPropertySetTemplate.htm#5.1.3.16.5-Concept-usage"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-5.1.3.16.D"></a><table class="striped grouped concepts">
+<thead>
+<tr>
+<th>Concept</th>
+<th>Usage</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="IfcRoot.htm">IfcRoot</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>Ownership, history, and merge state is captured using <a href="IfcOwnerHistory.htm">IfcOwnerHistory</a>.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p><a href="IfcRoot.htm">IfcRoot</a> assigns the globally unique ID. In addition it may provide for a name and a description about the concept.</p>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    Click to show 2 hidden inherited concepts
+                </small>
+<small class="hide-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    Click to hide 2 inherited concepts
+                </small>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 5.1.3.16.D<a href="IfcPropertySetTemplate.htm#Table-5.1.3.16.D"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="5.1.3.16.6-Formal-representation"></a>
+    5.1.3.16.6 Formal representation
+<a href="IfcPropertySetTemplate.htm#5.1.3.16.6-Formal-representation"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">ENTITY <a href="IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a>
+ SUBTYPE OF (<a href="IfcPropertyTemplateDefinition.htm">IfcPropertyTemplateDefinition</a>);
+	TemplateType : OPTIONAL <a href="IfcPropertySetTemplateTypeEnum.htm">IfcPropertySetTemplateTypeEnum</a>;
+	ApplicableEntity : OPTIONAL <a href="IfcIdentifier.htm">IfcIdentifier</a>;
+	HasPropertyTemplates : SET [1:?] OF <a href="IfcPropertyTemplate.htm">IfcPropertyTemplate</a>;
+ INVERSE
+	Defines : SET [0:?] OF <a href="IfcRelDefinesByTemplate.htm">IfcRelDefinesByTemplate</a> FOR RelatingTemplate;
+ WHERE
+	ExistsName : EXISTS(SELF\<a href="IfcRoot.htm">IfcRoot</a>.Name);
+	UniquePropertyNames : <a href="IfcUniquePropertyTemplateNames.htm">IfcUniquePropertyTemplateNames</a>(HasPropertyTemplates);
+END_ENTITY;</code></pre>
+<h2><a id="5.1.3.16.7-References"></a>
+    5.1.3.16.7 References
+<a href="IfcPropertySetTemplate.htm#5.1.3.16.7-References"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="IfcPropertyTemplate.htm">IfcPropertyTemplate</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcPropertyTemplateDefinition.htm">IfcPropertyTemplateDefinition</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcRelDefinesByTemplate.htm">IfcRelDefinesByTemplate</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+<div class="changelog">
+<h3><a id="5.1.3.16.8-Changelog"></a>
+                        5.1.3.16.8 Changelog
+                    <a href="IfcPropertySetTemplate.htm#5.1.3.16.8-Changelog"><i data-feather="link"></i></a></h3>
+<h4 class="collapsed"><a id="5.1.3.16.8.1-IFC4"></a>
+                        5.1.3.16.8.1 IFC4
+                    <a href="IfcPropertySetTemplate.htm#5.1.3.16.8.1-IFC4"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                New resource
+                                
+                            </small>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/core/IfcKernel/Entities/IfcPropertySetTemplate.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

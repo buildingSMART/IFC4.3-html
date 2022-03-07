@@ -1,0 +1,300 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>6.2.4.19 Pset_DistributionSystemTypeElectrical - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a class="current" href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a class="sublink-1" href="../ifcsharedbldgelements/content.html">
+                            6.1 IfcSharedBldgElements
+                        </a>
+<a class="sublink-1 current" href="../ifcsharedbldgserviceelements/content.html">
+                            6.2 IfcSharedBldgServiceElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedcomponentelements/content.html">
+                            6.3 IfcSharedComponentElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedfacilitieselements/content.html">
+                            6.4 IfcSharedFacilitiesElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedmgmtelements/content.html">
+                            6.5 IfcSharedMgmtElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedinfrastructureelements/content.html">
+                            6.6 IfcSharedInfrastructureElements
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>6.2.4.19 Pset_DistributionSystemTypeElectrical</h1>
+<h2><a id="6.2.4.19.1-Semantic-definition"></a>
+    6.2.4.19.1 Semantic definition
+<a href="Pset_DistributionSystemTypeElectrical.htm#6.2.4.19.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p>Properties of electrical circuits.</p>
+<h2><a id="6.2.4.19.2-Applicable-entities"></a>
+    6.2.4.19.2 Applicable entities
+<a href="Pset_DistributionSystemTypeElectrical.htm#6.2.4.19.2-Applicable-entities"><i data-feather="link"></i></a></h2>
+<aside>
+<mark>PSET_OCCURRENCEDRIVEN</mark>
+    The property sets defined by this <a href="IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> can only be assigned to subtypes of <a href="IfcObject.htm">IfcObject</a>.
+</aside>
+<ul>
+<li><a href="IfcDistributionSystem.htm">IfcDistributionSystem</a>/ELECTRICAL</li>
+</ul>
+<h2><a id="6.2.4.19.3-Properties"></a>
+    6.2.4.19.3 Properties
+<a href="Pset_DistributionSystemTypeElectrical.htm#6.2.4.19.3-Properties"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-6.2.4.19.A"></a><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Property Type</th>
+<th>Data Type</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ElectricalSystemType</td>
+<td><a href="IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a></td>
+<td><a href="PEnum_DistributionSystemElectricalType.htm">PEnum_DistributionSystemElectricalType</a></td>
+<td>
+<p>For certain purposes of electrical regulations, IEC 60364 defines types of system using type identifiers. Assignment of identifiers depends upon the relationship of the source, and of exposed conductive parts of the installation, to Ground (Earth).   Identifiers that may be assigned through IEC 60364 are:</p>
+<p>•TN type system, a system having one or more points of the source of energy directly earthed, the exposed conductive parts of the installation being connected to that point by protective conductors,
+•TN C type system, a TN type system in which neutral and protective functions are combined in a single conductor throughout the system,
+•TN S type system, a TN type system having separate neutral and protective conductors throughout the system,
+•TN C S type system, a TN type system in which neutral and protective functions are combined in a single conductor in part of the system,
+•TT type system, a system having one point of the source of energy directly earthed, the exposed conductive parts of the installation being connected to earth electrodes electrically independent of the earth electrodes of the source,
+•IT type system, a system having no direct connection between live parts and Earth, the exposed conductive parts of the electrical installation being earthed.</p>
+</td>
+<td><a class="button" href="../property/ElectricalSystemType.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
+</tr>
+<tr>
+<td>ElectricalSystemCategory</td>
+<td><a href="IfcPropertyEnumeratedValue.htm">IfcPropertyEnumeratedValue</a></td>
+<td><a href="PEnum_DistributionSystemElectricalCategory.htm">PEnum_DistributionSystemElectricalCategory</a></td>
+<td>
+<p>Designates the voltage range of the circuit, according to IEC.  HIGHVOLTAGE indicates &gt;1000V AC or &gt;1500V DV; LOWVOLTAGE indicates 50-1000V AC or 120-1500V DC; EXTRALOWVOLTAGE indicates &lt;50V AC or &lt;120V DC.</p>
+</td>
+<td><a class="button" href="../property/ElectricalSystemCategory.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
+</tr>
+<tr>
+<td>Diversity</td>
+<td><a href="IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
+<td><a href="IfcPositiveRatioMeasure.htm">IfcPositiveRatioMeasure</a></td>
+<td>
+<p>The ratio, expressed as a numerical
+value or as a percentage, of the
+simultaneous maximum demand of
+a group of electrical appliances or
+consumers within a specified period,
+to the sum of their individual maximum
+demands within the same
+period. The group of electrical appliances is in this case connected to this circuit. Definition from IEC 60050, IEV 691-10-04
+NOTE1: It is often not desirable to size each conductor in a distribution system to support the total connected load at that point in the network. Diversity is applied on the basis of the anticipated loadings that are likely to result from all loads not being connected at the same time.
+NOTE2: Diversity is applied to final circuits only, not to sub-main circuits supplying other DBs.</p>
+</td>
+<td><a class="button" href="../property/Diversity.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
+</tr>
+<tr>
+<td>NumberOfLiveConductors</td>
+<td><a href="IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
+<td><a href="IfcCountMeasure.htm">IfcCountMeasure</a></td>
+<td>
+<p>Number of live conductors within this circuit. Either this property or the ConductorFunction property (if only one) may be asserted.</p>
+</td>
+<td><a class="button" href="../property/NumberOfLiveConductors.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
+</tr>
+<tr>
+<td>MaximumAllowedVoltageDrop</td>
+<td><a href="IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
+<td><a href="IfcElectricVoltageMeasure.htm">IfcElectricVoltageMeasure</a></td>
+<td>
+<p>The maximum voltage drop across the circuit that must not be exceeded.
+There are two  voltage drop limit settings that may be applied; one for sub-main circuits, and one in each Distribution Board or Consumer Unit for final circuits connected to that board. The settings should limit the overall voltage drop to the required level. Default settings of 1.5% for sub-main circuits and 2.5% for final circuits, giving an overall limit of 4% may be applied.
+NOTE: This value may also be specified as a constraint within an IFC model if required but is included within the property set at this stage pending implementation of the required capabilities within software applications.</p>
+</td>
+<td><a class="button" href="../property/MaximumAllowedVoltageDrop.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
+</tr>
+<tr>
+<td>NetImpedance</td>
+<td><a href="IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
+<td><a href="IfcElectricResistanceMeasure.htm">IfcElectricResistanceMeasure</a></td>
+<td>
+<p>The maximum earth loop impedance upstream of a circuit (typically stated as the variable Zs). This value is for 55o C (130oF) Celsius usage.</p>
+</td>
+<td><a class="button" href="../property/NetImpedance.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
+</tr>
+<tr>
+<td>RatedVoltageRange</td>
+<td><a href="IfcPropertyBoundedValue.htm">IfcPropertyBoundedValue</a></td>
+<td><a href="IfcElectricVoltageMeasure.htm">IfcElectricVoltageMeasure</a></td>
+<td>
+<p>Voltage range as declared by the manufacturer expressed by its lower and upper rated voltages [Source : IEC 62368-1:2010, 3.3.10.5].</p>
+</td>
+<td><a class="button" href="../property/RatedVoltageRange.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
+</tr>
+</tbody>
+</table><figcaption>Table 6.2.4.19.A<a href="Pset_DistributionSystemTypeElectrical.htm#Table-6.2.4.19.A"><i data-feather="link"></i></a></figcaption></figure>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+<div class="changelog">
+<h3><a id="6.2.4.19.4-Changelog"></a>
+                        6.2.4.19.4 Changelog
+                    <a href="Pset_DistributionSystemTypeElectrical.htm#6.2.4.19.4-Changelog"><i data-feather="link"></i></a></h3>
+<h4 class="collapsed"><a id="6.2.4.19.4.1-IFC4"></a>
+                        6.2.4.19.4.1 IFC4
+                    <a href="Pset_DistributionSystemTypeElectrical.htm#6.2.4.19.4.1-IFC4"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                New resource
+                                
+                            </small>
+</li>
+</ul>
+<h4 class="collapsed"><a id="6.2.4.19.4.2-IFC4.3"></a>
+                        6.2.4.19.4.2 IFC4.3
+                    <a href="Pset_DistributionSystemTypeElectrical.htm#6.2.4.19.4.2-IFC4.3"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                property,
+                                RatedVoltageRange
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                property NumberOfLiveConductors,
+                                Changed from single <a href="IfcInteger.htm">IfcInteger</a> to single <a href="IfcCountMeasure.htm">IfcCountMeasure</a>
+</small>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/shared/IfcSharedBldgServiceElements/PropertySets/Pset_DistributionSystemTypeElectrical.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

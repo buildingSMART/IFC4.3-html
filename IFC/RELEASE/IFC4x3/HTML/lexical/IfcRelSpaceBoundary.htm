@@ -1,0 +1,611 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>5.4.3.59 IfcRelSpaceBoundary - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a class="current" href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a class="sublink-1" href="../ifckernel/content.html">
+                            5.1 IfcKernel
+                        </a>
+<a class="sublink-1" href="../ifccontrolextension/content.html">
+                            5.2 IfcControlExtension
+                        </a>
+<a class="sublink-1" href="../ifcprocessextension/content.html">
+                            5.3 IfcProcessExtension
+                        </a>
+<a class="sublink-1 current" href="../ifcproductextension/content.html">
+                            5.4 IfcProductExtension
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>5.4.3.59 IfcRelSpaceBoundary</h1>
+<h2><a id="5.4.3.59.1-Semantic-definition"></a>
+    5.4.3.59.1 Semantic definition
+<a href="IfcRelSpaceBoundary.htm#5.4.3.59.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p>The space boundary defines the physical or virtual delimiter of a space by the relationship <em><a href="IfcRelSpaceBoundary.htm">IfcRelSpaceBoundary</a></em> to the surrounding elements.</p>
+<ul>
+<li>In the case of a physical space boundary, the placement and shape of the boundary may be given, and the building element, providing the boundary, is referenced,</li>
+<li>In the case of a virtual space boundary, the placement and shape of the boundary may be given, and a virtual element is referenced.</li>
+</ul>
+<p>The <em><a href="IfcRelSpaceBoundary.htm">IfcRelSpaceBoundary</a></em> is defined as an objectified relationship that handles the element to space relationship by objectifying the relationship between an element and the space it bounds. It is given as a one-to-one relationship, but allows each element (including virtual elements and openings) to define many such relationship and each space to be defined by many such relationships.</p>
+<p>Space boundaries are always defined as seen from the space. In general two basic types of space boundaries are distinguished:</p>
+<ul>
+<li>1<sup>st</sup> level space boundary: defined as boundaries of the space, not taking into account any change in building element or spaces on the other side.</li>
+<li>2<sup>nd</sup> level space boundary: defined as boundary taking any change in building element or spaces on the other side into account. It can be further distinguished into<ul>
+<li>2<sup>nd</sup> level type A: There is a space on the other side.</li>
+<li>2<sup>nd</sup> level type B: There is a building element on the other side.</li>
+</ul>
+</li>
+</ul>
+<p>The exact definition of how space boundaries are broken down depends on the view definition, more detailed conventions on how space boundaries are decomposed can only be given at the domain or application type level.</p>
+<ul>
+<li>In an architectural or FM related view, a space boundary is defined totally from inside the space. This is a 1<sup>st</sup> level space boundary.</li>
+<li>In a thermal view, the decomposition of the space boundary depends on the material of the providing building element and the adjacent spaces behind. This is a 2<sup>nd</sup> level space boundary.</li>
+</ul>
+<figure><a id="Figure-5.4.3.59.E.4.3.59.A-Space-boundary-at-first-level"></a><img alt="1st level" src="../figures/ifcrelspaceboundary_1stlevel.png"/><figcaption>
+Figure 5.4.3.59.E.4.3.59.A — Space boundary at first level<a href="IfcRelSpaceBoundary.htm#Figure-5.4.3.59.E.4.3.59.A-Space-boundary-at-first-level"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a id="Figure-5.4.3.59.E.4.3.59.B-Space-boundary-at-second-level"></a><img alt="2nd level" src="../figures/ifcrelspaceboundary_2ndlevel.png"/><figcaption>
+Figure 5.4.3.59.E.4.3.59.B — Space boundary at second level<a href="IfcRelSpaceBoundary.htm#Figure-5.4.3.59.E.4.3.59.B-Space-boundary-at-second-level"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a id="Figure-5.4.3.59.E.4.3.59.C-Space-boundary-at-second-level-type-A"></a><img alt="2nd level type a" src="../figures/ifcrelspaceboundary_2ndlevel_typea.png"/><figcaption>
+Figure 5.4.3.59.E.4.3.59.C — Space boundary at second level type A<a href="IfcRelSpaceBoundary.htm#Figure-5.4.3.59.E.4.3.59.C-Space-boundary-at-second-level-type-A"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a id="Figure-5.4.3.59.E.4.3.59.D-Space-boundary-at-second-level-type-B"></a><img alt="2nd level type b" src="../figures/ifcrelspaceboundary_2ndlevel_typeb.png"/><figcaption>
+Figure 5.4.3.59.E.4.3.59.D — Space boundary at second level type B<a href="IfcRelSpaceBoundary.htm#Figure-5.4.3.59.E.4.3.59.D-Space-boundary-at-second-level-type-B"><i data-feather="link"></i></a></figcaption></figure>
+<p>The differences between the 1<sup>st</sup> and 2<sup>nd</sup> level space boundaries is identified by:</p>
+<ul>
+<li><strong>1<sup>st</sup> level:</strong>   SELF\<a href="IfcRoot.htm">IfcRoot</a>.Name = "1stLevel"   SELF\IfcRootDescription = NIL</li>
+<li><strong>2<sup>nd</sup> level:</strong>   SELF\<a href="IfcRoot.htm">IfcRoot</a>.Name = "2ndLevel"   SELF\IfcRootDescription = "2a", or "2b"</li>
+</ul>
+<p>Differentiation between physical and virtual space boundary is illustrated in Figure 5.4.3.59.E and Figure 5.4.3.59.F.</p>
+<p>As shown in Figure 5.4.3.59.E, if the <em><a href="IfcRelSpaceBoundary.htm">IfcRelSpaceBoundary</a></em> is used to express a virtual boundary, the attribute <em>PhysicalOrVirtualBoundary</em> has to be set to VIRTUAL. The attribute <em>RelatedBuildingElement</em> shall point to an instance of <em><a href="IfcVirtualElement.htm">IfcVirtualElement</a></em>. If the correct location is of interest, the attribute <em>ConnectionGeometry</em> is required.</p>
+<aside class="aside-note"><mark>NOTE</mark>  The connection geometry, either by a 2D curve or a 3D surface, is used to describe the portion of the "virtual wall" that separates the two spaces. All instances of <em><a href="IfcRelSpaceBoundary.htm">IfcRelSpaceBoundary</a></em> given at the adjacent spaces share the same instance of <em><a href="IfcVirtualElement.htm">IfcVirtualElement</a></em>. Each instance of <em><a href="IfcRelSpaceBoundary.htm">IfcRelSpaceBoundary</a></em> provides in addition the <em>ConnectionGeometry</em> given within the local placement of each space.</aside>
+<figure><a id="Figure-5.4.3.59.E-Space-boundary-of-virtual-element"></a><img alt="IfcRelSpaceBoundary_virtual (35K)" src="../figures/ifcrelspaceboundary_virtual.png" title="Figure 5.4.3.59.E — Space boundary of virtual element"/><figcaption>Figure 5.4.3.59.E — Space boundary of virtual element<a href="IfcRelSpaceBoundary.htm#Figure-5.4.3.59.E-Space-boundary-of-virtual-element"><i data-feather="link"></i></a></figcaption></figure>
+<p>As shown in Figure 5.4.3.59.F, if the <em><a href="IfcRelSpaceBoundary.htm">IfcRelSpaceBoundary</a></em> is used to express a physical boundary between two spaces, the attribute <em>PhysicalOrVirtualBoundary</em> has to be set to PHYSICAL. The attribute <em>RelatedBuildingElement</em> has to be given and points to the element providing the space boundary. The attribute <em>ConnectionGeometry</em> may be inserted, in this case it describes the physical space boundary geometically, or it may be omited, in that case it describes a physical space boundary logically.</p>
+<figure><a id="Figure-5.4.3.59.F-Space-boundary-of-physical-element"></a><img alt="IfcRelSpaceBoundary_physical (35K)" src="../figures/ifcrelspaceboundary_physical.png" title="Figure 5.4.3.59.F — Space boundary of physical element"/><figcaption>Figure 5.4.3.59.F — Space boundary of physical element<a href="IfcRelSpaceBoundary.htm#Figure-5.4.3.59.F-Space-boundary-of-physical-element"><i data-feather="link"></i></a></figcaption></figure>
+<p>The <em><a href="IfcRelSpaceBoundary.htm">IfcRelSpaceBoundary</a></em> may have geometry attached. If geometry is not attached, the relationship between space and building element is handled only on a logical level. If geometry is attached, it is given within the local coordinate systems of the space.</p>
+<aside class="aside-note"><mark>NOTE</mark>  The attributes <em>CurveOnRelatingElement</em> at <em><a href="IfcConnectionCurveGeometry.htm">IfcConnectionCurveGeometry</a></em> or <em>SurfaceOnRelatingElement</em> at <em><a href="IfcConnectionSurfaceGeometry.htm">IfcConnectionSurfaceGeometry</a></em> provide the geometry within the local coordinate system of the <em><a href="IfcSpace.htm">IfcSpace</a></em>, whereas the attributes <em>CurveOnRelatedElement</em> at <em><a href="IfcConnectionCurveGeometry.htm">IfcConnectionCurveGeometry</a></em> or <em>SurfaceOnRelatedElement</em> at <em><a href="IfcConnectionSurfaceGeometry.htm">IfcConnectionSurfaceGeometry</a></em> provide the geometry within the local coordinate system of the subtype of <em><a href="IfcElement.htm">IfcElement</a></em></aside><aside class="aside-note"><mark>NOTE</mark>  In most view definitions the connection geometry for the related <em><a href="IfcElement.htm">IfcElement</a></em> is not provided.</aside>
+<p>The geometric representation (through the <em>ConnectionGeometry</em> attribute) is defined using either 2D curve geometry or 3D surface geometry for space boundaries. In most view definitions the 3D connection surface geometry is required.</p>
+<ul>
+<li>1<sup>st</sup> level space boundary:<ul>
+<li>only connection geometry for related space shall be provided</li>
+<li>only surface connection geometry shall be provided</li>
+<li>only the following surface representations are supported:<ul>
+<li><em><a href="IfcSurfaceOfLinearExtrusion.htm">IfcSurfaceOfLinearExtrusion</a></em></li>
+<li><em><a href="IfcCurveBoundedPlane.htm">IfcCurveBoundedPlane</a></em></li>
+<li><em><a href="IfcCurveBoundedSurface.htm">IfcCurveBoundedSurface</a></em></li>
+<li><em><a href="IfcFaceBasedSurfaceModel.htm">IfcFaceBasedSurfaceModel</a></em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>2<sup>nd</sup> level space boundary:<ul>
+<li>only connection geometry for related space shall be provided</li>
+<li>only surface connection geometry shall be provided</li>
+<li>only the following surface representations are supported:<ul>
+<li><em><a href="IfcCurveBoundedPlane.htm">IfcCurveBoundedPlane</a></em> with restrictions to have polygonal boundaries only</li>
+<li><em><a href="IfcFaceBasedSurfaceModel.htm">IfcFaceBasedSurfaceModel</a></em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Surface connection geometry</strong></p>
+<p>The following constraints apply to the surface connection geometry representation:</p>
+<ul>
+<li>planar boundaries:<ul>
+<li><em><a href="IfcSurfaceOfLinearExtrusion.htm">IfcSurfaceOfLinearExtrusion</a></em> defined by a <em>SweptCurve</em> being an <em><a href="IfcArbitraryOpenProfileDef.htm">IfcArbitraryOpenProfileDef</a></em> with straight segments, or</li>
+<li><em><a href="IfcCurveBoundedPlane.htm">IfcCurveBoundedPlane</a></em></li>
+</ul>
+</li>
+<li>curved boundaries<ul>
+<li><em><a href="IfcSurfaceOfLinearExtrusion.htm">IfcSurfaceOfLinearExtrusion</a></em> defined by a <em>SweptCurve</em> being an <em><a href="IfcArbitraryOpenProfileDef.htm">IfcArbitraryOpenProfileDef</a></em> with curves segments, or</li>
+<li><em><a href="IfcCurveBoundedSurface.htm">IfcCurveBoundedSurface</a></em> with a <em>BasisSurface</em> being a non planar surface, such as <em><a href="IfcCylindricalSurface.htm">IfcCylindricalSurface</a></em>, or</li>
+<li><em><a href="IfcFaceBasedSurfaceModel.htm">IfcFaceBasedSurfaceModel</a></em> if already faceted.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Curve connection geometry</strong></p>
+<p>The following constraints apply to the 2D curve representation:</p>
+<ul>
+<li>Curve: <em><a href="IfcPolyline.htm">IfcPolyline</a></em>, <em><a href="IfcTrimmedCurve.htm">IfcTrimmedCurve</a></em> or <em><a href="IfcCompositeCurve.htm">IfcCompositeCurve</a></em></li>
+</ul>
+<aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC1.5, the entity has been modified in IFC2x.</aside><aside class="aside-change"><mark>IFC2x-CHANGE</mark> The data type of the attribute_RelatedBuildingElement_ has been changed from <em>IfcBuildingElement</em> to its supertype <em><a href="IfcElement.htm">IfcElement</a></em>. The data type of the attribute <em>ConnectionGeometry</em> has been changed from <em><a href="IfcConnectionSurfaceGeometry.htm">IfcConnectionSurfaceGeometry</a></em> to its supertype <em><a href="IfcConnectionGeometry.htm">IfcConnectionGeometry</a></em>.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark> The attribute <em>RelatedBuildingElement</em> has been made mandatory. For virtual boundaries the reference to <em><a href="IfcVirtualElement.htm">IfcVirtualElement</a></em> is now mandatory.</aside>
+<h2><a id="5.4.3.59.2-Entity-inheritance"></a>
+    5.4.3.59.2 Entity inheritance
+<a href="IfcRelSpaceBoundary.htm#5.4.3.59.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
+<ol class="tier">
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcRoot.htm">IfcRoot</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcRelationship.htm">IfcRelationship</a></li>
+<li class="abstract"><a href="IfcObjectDefinition.htm">IfcObjectDefinition</a></li>
+<li class="abstract"><a href="IfcPropertyDefinition.htm">IfcPropertyDefinition</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcRelConnects.htm">IfcRelConnects</a></li>
+<li class="abstract"><a href="IfcRelAssigns.htm">IfcRelAssigns</a></li>
+<li class="abstract"><a href="IfcRelAssociates.htm">IfcRelAssociates</a></li>
+<li class=""><a href="IfcRelDeclares.htm">IfcRelDeclares</a></li>
+<li class="abstract"><a href="IfcRelDecomposes.htm">IfcRelDecomposes</a></li>
+<li class="abstract"><a href="IfcRelDefines.htm">IfcRelDefines</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="current ancestor"><a href="IfcRelSpaceBoundary.htm">IfcRelSpaceBoundary</a></li>
+<li class=""><a href="IfcRelConnectsElements.htm">IfcRelConnectsElements</a></li>
+<li class="deprecated"><a href="IfcRelConnectsPortToElement.htm">IfcRelConnectsPortToElement</a></li>
+<li class=""><a href="IfcRelConnectsPorts.htm">IfcRelConnectsPorts</a></li>
+<li class=""><a href="IfcRelConnectsStructuralActivity.htm">IfcRelConnectsStructuralActivity</a></li>
+<li class=""><a href="IfcRelConnectsStructuralMember.htm">IfcRelConnectsStructuralMember</a></li>
+<li class=""><a href="IfcRelContainedInSpatialStructure.htm">IfcRelContainedInSpatialStructure</a></li>
+<li class=""><a href="IfcRelCoversBldgElements.htm">IfcRelCoversBldgElements</a></li>
+<li class=""><a href="IfcRelCoversSpaces.htm">IfcRelCoversSpaces</a></li>
+<li class=""><a href="IfcRelFillsElement.htm">IfcRelFillsElement</a></li>
+<li class=""><a href="IfcRelFlowControlElements.htm">IfcRelFlowControlElements</a></li>
+<li class=""><a href="IfcRelInterferesElements.htm">IfcRelInterferesElements</a></li>
+<li class=""><a href="IfcRelPositions.htm">IfcRelPositions</a></li>
+<li class=""><a href="IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a></li>
+<li class=""><a href="IfcRelSequence.htm">IfcRelSequence</a></li>
+<li class="deprecated"><a href="IfcRelServicesBuildings.htm">IfcRelServicesBuildings</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes">
+<li class=""><a href="IfcRelSpaceBoundary1stLevel.htm">IfcRelSpaceBoundary1stLevel</a></li>
+</ul>
+</li>
+</ol>
+<h2><a id="5.4.3.59.3-Attributes"></a>
+    5.4.3.59.3 Attributes
+<a href="IfcRelSpaceBoundary.htm#5.4.3.59.3-Attributes"><i data-feather="link"></i></a></h2>
+<!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
+<figure><a id="Table-5.4.3.59.E.4.3.59.G"></a><table class="striped grouped attributes">
+<colgroup>
+<col style="width: 20px;"/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcRoot.htm">IfcRoot</a>
+<small>(4)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                GlobalId
+                
+            </td>
+<td data-label="Type"><a href="IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a></td>
+<td data-label="Description">
+<p>Assignment of a globally unique identifier within the entire software world.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                OwnerHistory
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
+<td data-label="Description">
+<p>Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,</p>
+<aside class="aside-note"><mark>NOTE</mark>  only the last modification in stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The attribute has been changed to be OPTIONAL.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>Optional name for use by the participating software systems or users. For some subtypes of <a href="IfcRoot.htm">IfcRoot</a> the insertion of the Name attribute may be required. This would be enforced by a where rule.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>Optional description, provided for exchanging informative comments.</p>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to show 4 hidden inherited attributes
+                </small>
+<small class="hide-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to hide 4 inherited attributes
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="4">
+<a href="IfcRelSpaceBoundary.htm">IfcRelSpaceBoundary</a>
+<small>(5)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                RelatingSpace
+                
+            </td>
+<td data-label="Type"><a href="IfcSpaceBoundarySelect.htm">IfcSpaceBoundarySelect</a></td>
+<td data-label="Description">
+<p>Reference to one spaces that is delimited by this boundary.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                RelatedBuildingElement
+                
+            </td>
+<td data-label="Type"><a href="IfcElement.htm">IfcElement</a></td>
+<td data-label="Description">
+<p>Reference to ~~Building~~ Element, that defines the Space Boundaries.</p>
+<aside class="aside-change"><mark>IFC2x-CHANGE</mark>  The data type has been changed from <em>IfcBuildingElement</em> to <em><a href="IfcElement.htm">IfcElement</a></em> with upward compatibility for file based exchange.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The attribute has been changed to be mandatory.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                ConnectionGeometry
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcConnectionGeometry.htm">IfcConnectionGeometry</a></td>
+<td data-label="Description">
+<p>Physical representation of the space boundary. Provided as a <strong>curve or</strong> surface given within the LCS of the space.</p>
+<aside class="aside-change"><mark>IFC2x-CHANGE</mark>  The data type has been changed from <em><a href="IfcConnectionSurfaceGeometry.htm">IfcConnectionSurfaceGeometry</a></em> to <em><a href="IfcConnectionGeometry.htm">IfcConnectionGeometry</a></em> with upward compatibility for file based exchange.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">8</td>
+<td data-label="Name">
+                
+                PhysicalOrVirtualBoundary
+                
+            </td>
+<td data-label="Type"><a href="IfcPhysicalOrVirtualEnum.htm">IfcPhysicalOrVirtualEnum</a></td>
+<td data-label="Description">
+<p>Defines, whether the Space Boundary is physical (Physical) or virtual (Virtual).</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">9</td>
+<td data-label="Name">
+                
+                InternalOrExternalBoundary
+                
+            </td>
+<td data-label="Type"><a href="IfcInternalOrExternalEnum.htm">IfcInternalOrExternalEnum</a></td>
+<td data-label="Description">
+<p>Defines, whether the Space Boundary is internal (Internal), or external, i.e. adjacent to open space (that can be an partially enclosed space, such as terrace (External).</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 5.4.3.59.E.4.3.59.G<a href="IfcRelSpaceBoundary.htm#Table-5.4.3.59.E.4.3.59.G"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="5.4.3.59.4-Formal-propositions"></a>
+    5.4.3.59.4 Formal propositions
+<a href="IfcRelSpaceBoundary.htm#5.4.3.59.4-Formal-propositions"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-5.4.3.59.E.4.3.59.H"></a><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CorrectPhysOrVirt</td>
+<td>
+<p>If the space boundary is physical, it shall be provided by an element (i.e. excluding a virtual element). If the space boundary is virtual, it shall either have a virtual element or an opening providing the space boundary. If the space boundary <em>PhysicalOrVirtualBoundary</em> attribute is not defined, no restrictions are imposed.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark> Where rule corrected to accept an <em><a href="IfcOpeningElement.htm">IfcOpeningElement</a></em> for a virtual space boundary.</aside>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">((PhysicalOrVirtualBoundary = <a href="IfcPhysicalOrVirtualEnum.htm">IfcPhysicalOrVirtualEnum</a>.Physical) 
+  AND (NOT('IFC4X3.IFCVIRTUALELEMENT' IN TYPEOF(RelatedBuildingElement)))) 
+OR 
+((PhysicalOrVirtualBoundary = <a href="IfcPhysicalOrVirtualEnum.htm">IfcPhysicalOrVirtualEnum</a>.Virtual) 
+  AND (('IFC4X3.IFCVIRTUALELEMENT' IN TYPEOF(RelatedBuildingElement)) 
+  OR   ('IFC4X3.IFCOPENINGELEMENT' IN TYPEOF(RelatedBuildingElement)))) 
+OR 
+(PhysicalOrVirtualBoundary = <a href="IfcPhysicalOrVirtualEnum.htm">IfcPhysicalOrVirtualEnum</a>.NotDefined)</code></pre>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 5.4.3.59.E.4.3.59.H<a href="IfcRelSpaceBoundary.htm#Table-5.4.3.59.E.4.3.59.H"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="5.4.3.59.5-Concept-usage"></a>
+    5.4.3.59.5 Concept usage
+<a href="IfcRelSpaceBoundary.htm#5.4.3.59.5-Concept-usage"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-5.4.3.59.E.4.3.59.I"></a><table class="striped grouped concepts">
+<thead>
+<tr>
+<th>Concept</th>
+<th>Usage</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="IfcRoot.htm">IfcRoot</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>Ownership, history, and merge state is captured using <a href="IfcOwnerHistory.htm">IfcOwnerHistory</a>.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p><a href="IfcRoot.htm">IfcRoot</a> assigns the globally unique ID. In addition it may provide for a name and a description about the concept.</p>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    Click to show 2 hidden inherited concepts
+                </small>
+<small class="hide-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    Click to hide 2 inherited concepts
+                </small>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 5.4.3.59.E.4.3.59.I<a href="IfcRelSpaceBoundary.htm#Table-5.4.3.59.E.4.3.59.I"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="5.4.3.59.6-Formal-representation"></a>
+    5.4.3.59.6 Formal representation
+<a href="IfcRelSpaceBoundary.htm#5.4.3.59.6-Formal-representation"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">ENTITY <a href="IfcRelSpaceBoundary.htm">IfcRelSpaceBoundary</a>
+ SUPERTYPE OF (ONEOF
+	(<a href="IfcRelSpaceBoundary1stLevel.htm">IfcRelSpaceBoundary1stLevel</a>))
+ SUBTYPE OF (<a href="IfcRelConnects.htm">IfcRelConnects</a>);
+	RelatingSpace : <a href="IfcSpaceBoundarySelect.htm">IfcSpaceBoundarySelect</a>;
+	RelatedBuildingElement : <a href="IfcElement.htm">IfcElement</a>;
+	ConnectionGeometry : OPTIONAL <a href="IfcConnectionGeometry.htm">IfcConnectionGeometry</a>;
+	PhysicalOrVirtualBoundary : <a href="IfcPhysicalOrVirtualEnum.htm">IfcPhysicalOrVirtualEnum</a>;
+	InternalOrExternalBoundary : <a href="IfcInternalOrExternalEnum.htm">IfcInternalOrExternalEnum</a>;
+ WHERE
+	CorrectPhysOrVirt : ((PhysicalOrVirtualBoundary = <a href="IfcPhysicalOrVirtualEnum.htm">IfcPhysicalOrVirtualEnum</a>.Physical) 
+  AND (NOT('IFC4X3.IFCVIRTUALELEMENT' IN TYPEOF(RelatedBuildingElement)))) 
+OR 
+((PhysicalOrVirtualBoundary = <a href="IfcPhysicalOrVirtualEnum.htm">IfcPhysicalOrVirtualEnum</a>.Virtual) 
+  AND (('IFC4X3.IFCVIRTUALELEMENT' IN TYPEOF(RelatedBuildingElement)) 
+  OR   ('IFC4X3.IFCOPENINGELEMENT' IN TYPEOF(RelatedBuildingElement)))) 
+OR 
+(PhysicalOrVirtualBoundary = <a href="IfcPhysicalOrVirtualEnum.htm">IfcPhysicalOrVirtualEnum</a>.NotDefined);
+END_ENTITY;</code></pre>
+<h2><a id="5.4.3.59.7-References"></a>
+    5.4.3.59.7 References
+<a href="IfcRelSpaceBoundary.htm#5.4.3.59.7-References"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="IfcElement.htm">IfcElement</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcExternalSpatialElement.htm">IfcExternalSpatialElement</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcRelConnects.htm">IfcRelConnects</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcRelSpaceBoundary1stLevel.htm">IfcRelSpaceBoundary1stLevel</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcRelSpaceBoundary2ndLevel.htm">IfcRelSpaceBoundary2ndLevel</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcSpace.htm">IfcSpace</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+<div class="changelog">
+<h3><a id="5.4.3.59.8-Changelog"></a>
+                        5.4.3.59.8 Changelog
+                    <a href="IfcRelSpaceBoundary.htm#5.4.3.59.8-Changelog"><i data-feather="link"></i></a></h3>
+<h4 class="collapsed"><a id="5.4.3.59.8.1-IFC4"></a>
+                        5.4.3.59.8.1 IFC4
+                    <a href="IfcRelSpaceBoundary.htm#5.4.3.59.8.1-IFC4"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where_rules,
+                                CorrectPhysOrVirt
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="x-square"></i>
+                                
+                                
+                                where_rules,
+                                WR1
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes RelatedBuildingElement is_optional,
+                                Changed from True to False
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes RelatingSpace definition,
+                                Changed from <a href="IfcSpace.htm">IfcSpace</a> to <a href="IfcSpaceBoundarySelect.htm">IfcSpaceBoundarySelect</a>
+</small>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/core/IfcProductExtension/Entities/IfcRelSpaceBoundary.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

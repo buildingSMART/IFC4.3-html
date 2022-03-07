@@ -1,0 +1,1933 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>7.2.3.10 IfcSensorType - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a class="current" href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a class="sublink-1" href="../ifcarchitecturedomain/content.html">
+                            7.1 IfcArchitectureDomain
+                        </a>
+<a class="sublink-1 current" href="../ifcbuildingcontrolsdomain/content.html">
+                            7.2 IfcBuildingControlsDomain
+                        </a>
+<a class="sublink-1" href="../ifcconstructionmgmtdomain/content.html">
+                            7.3 IfcConstructionMgmtDomain
+                        </a>
+<a class="sublink-1" href="../ifcelectricaldomain/content.html">
+                            7.4 IfcElectricalDomain
+                        </a>
+<a class="sublink-1" href="../ifchvacdomain/content.html">
+                            7.5 IfcHvacDomain
+                        </a>
+<a class="sublink-1" href="../ifcplumbingfireprotectiondomain/content.html">
+                            7.6 IfcPlumbingFireProtectionDomain
+                        </a>
+<a class="sublink-1" href="../ifcportsandwaterwaysdomain/content.html">
+                            7.7 IfcPortsAndWaterwaysDomain
+                        </a>
+<a class="sublink-1" href="../ifcraildomain/content.html">
+                            7.8 IfcRailDomain
+                        </a>
+<a class="sublink-1" href="../ifcroaddomain/content.html">
+                            7.9 IfcRoadDomain
+                        </a>
+<a class="sublink-1" href="../ifcstructuralanalysisdomain/content.html">
+                            7.10 IfcStructuralAnalysisDomain
+                        </a>
+<a class="sublink-1" href="../ifcstructuralelementsdomain/content.html">
+                            7.11 IfcStructuralElementsDomain
+                        </a>
+<a href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>7.2.3.10 IfcSensorType</h1>
+<h2><a id="7.2.3.10.1-Semantic-definition"></a>
+    7.2.3.10.1 Semantic definition
+<a href="IfcSensorType.htm#7.2.3.10.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p>The distribution control element type <strong><a href="IfcSensorType.htm">IfcSensorType</a></strong> defines commonly shared information for occurrences of sensors. The set of shared information may include:</p>
+<ul>
+<li>common properties with shared property sets</li>
+<li>common representations</li>
+<li>common materials</li>
+<li>common composition of elements</li>
+<li>common ports</li>
+</ul>
+<p>It is used to define a sensor type specification indicating the specific product information that is common to all occurrences of that product type. The <strong><a href="IfcSensorType.htm">IfcSensorType</a></strong> may be declared within <em><a href="IfcProject.htm">IfcProject</a></em> or <em><a href="IfcProjectLibrary.htm">IfcProjectLibrary</a></em> using <em><a href="IfcRelDeclares.htm">IfcRelDeclares</a></em> and may be exchanged with or without occurrences of the type. Occurrences of <strong><a href="IfcSensorType.htm">IfcSensorType</a></strong> are represented by instances of <em><a href="IfcSensor.htm">IfcSensor</a></em>. Refer to the documentation at <em><a href="IfcSensor.htm">IfcSensor</a></em> for supported property sets, materials, composition, and ports.</p>
+<aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x2</aside>
+<h2><a id="7.2.3.10.2-Entity-inheritance"></a>
+    7.2.3.10.2 Entity inheritance
+<a href="IfcSensorType.htm#7.2.3.10.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
+<ol class="tier">
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcRoot.htm">IfcRoot</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcObjectDefinition.htm">IfcObjectDefinition</a></li>
+<li class="abstract"><a href="IfcPropertyDefinition.htm">IfcPropertyDefinition</a></li>
+<li class="abstract"><a href="IfcRelationship.htm">IfcRelationship</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="ancestor"><a href="IfcTypeObject.htm">IfcTypeObject</a></li>
+<li class="abstract"><a href="IfcContext.htm">IfcContext</a></li>
+<li class="abstract"><a href="IfcObject.htm">IfcObject</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="ancestor"><a href="IfcTypeProduct.htm">IfcTypeProduct</a></li>
+<li class="abstract"><a href="IfcTypeProcess.htm">IfcTypeProcess</a></li>
+<li class="abstract"><a href="IfcTypeResource.htm">IfcTypeResource</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcElementType.htm">IfcElementType</a></li>
+<li class="abstract"><a href="IfcSpatialElementType.htm">IfcSpatialElementType</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="ancestor"><a href="IfcDistributionElementType.htm">IfcDistributionElementType</a></li>
+<li class=""><a href="IfcBuiltElementType.htm">IfcBuiltElementType</a></li>
+<li class="deprecated"><a href="IfcCivilElementType.htm">IfcCivilElementType</a></li>
+<li class=""><a href="IfcElementAssemblyType.htm">IfcElementAssemblyType</a></li>
+<li class="abstract"><a href="IfcElementComponentType.htm">IfcElementComponentType</a></li>
+<li class=""><a href="IfcFurnishingElementType.htm">IfcFurnishingElementType</a></li>
+<li class=""><a href="IfcGeographicElementType.htm">IfcGeographicElementType</a></li>
+<li class="abstract"><a href="IfcTransportationDeviceType.htm">IfcTransportationDeviceType</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcDistributionControlElementType.htm">IfcDistributionControlElementType</a></li>
+<li class="abstract"><a href="IfcDistributionFlowElementType.htm">IfcDistributionFlowElementType</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="current ancestor"><a href="IfcSensorType.htm">IfcSensorType</a></li>
+<li class=""><a href="IfcActuatorType.htm">IfcActuatorType</a></li>
+<li class=""><a href="IfcAlarmType.htm">IfcAlarmType</a></li>
+<li class=""><a href="IfcControllerType.htm">IfcControllerType</a></li>
+<li class=""><a href="IfcFlowInstrumentType.htm">IfcFlowInstrumentType</a></li>
+<li class=""><a href="IfcProtectiveDeviceTrippingUnitType.htm">IfcProtectiveDeviceTrippingUnitType</a></li>
+<li class=""><a href="IfcUnitaryControlElementType.htm">IfcUnitaryControlElementType</a></li>
+</ul>
+</li>
+</ol>
+<h2><a id="7.2.3.10.3-Attributes"></a>
+    7.2.3.10.3 Attributes
+<a href="IfcSensorType.htm#7.2.3.10.3-Attributes"><i data-feather="link"></i></a></h2>
+<!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
+<figure><a id="Table-7.2.3.10.A"></a><table class="striped grouped attributes">
+<colgroup>
+<col style="width: 20px;"/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcRoot.htm">IfcRoot</a>
+<small>(4)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                GlobalId
+                
+            </td>
+<td data-label="Type"><a href="IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a></td>
+<td data-label="Description">
+<p>Assignment of a globally unique identifier within the entire software world.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                OwnerHistory
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
+<td data-label="Description">
+<p>Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,</p>
+<aside class="aside-note"><mark>NOTE</mark>  only the last modification in stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The attribute has been changed to be OPTIONAL.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>Optional name for use by the participating software systems or users. For some subtypes of <a href="IfcRoot.htm">IfcRoot</a> the insertion of the Name attribute may be required. This would be enforced by a where rule.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>Optional description, provided for exchanging informative comments.</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcObjectDefinition.htm">IfcObjectDefinition</a>
+<small>(7)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasAssignments</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcRelAssigns.htm">IfcRelAssigns</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>Reference to the relationship objects, that assign (by an association relationship) other subtypes of <a href="IfcObject.htm">IfcObject</a> to this object instance. Examples are the association to products, processes, controls, resources or groups.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>Nests</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="IfcRelNests.htm">IfcRelNests</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>References to the decomposition relationship being a nesting. It determines that this object definition is a part within an ordered whole/part decomposition relationship. An object occurrence or type can only be part of a single decomposition (to allow hierarchical strutures only).</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  The inverse attribute datatype has been added and separated from <em>Decomposes</em> defined at <em><a href="IfcObjectDefinition.htm">IfcObjectDefinition</a></em>.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>IsNestedBy</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcRelNests.htm">IfcRelNests</a> FOR RelatingObject</td>
+<td data-label="Description">
+<p>References to the decomposition relationship being a nesting. It determines that this object definition is the whole within an ordered whole/part decomposition relationship. An object or object type can be nested by several other objects (occurrences or types).</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  The inverse attribute datatype has been added and separated from <em>IsDecomposedBy</em> defined at <em><a href="IfcObjectDefinition.htm">IfcObjectDefinition</a></em>.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasContext</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="IfcRelDeclares.htm">IfcRelDeclares</a> FOR RelatedDefinitions</td>
+<td data-label="Description">
+<p>References to the context providing context information such as project unit or representation context. It should only be asserted for the uppermost non-spatial object.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  The inverse attribute datatype has been added.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>IsDecomposedBy</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcRelAggregates.htm">IfcRelAggregates</a> FOR RelatingObject</td>
+<td data-label="Description">
+<p>References to the decomposition relationship being an aggregation. It determines that this object definition is whole within an unordered whole/part decomposition relationship. An object definitions can be aggregated by several other objects (occurrences or parts).</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  The inverse attribute datatype has been changed from the supertype <em><a href="IfcRelDecomposes.htm">IfcRelDecomposes</a></em> to subtype <em><a href="IfcRelAggregates.htm">IfcRelAggregates</a></em>.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>Decomposes</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="IfcRelAggregates.htm">IfcRelAggregates</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>References to the decomposition relationship being an aggregation. It determines that this object definition is a part within an unordered whole/part decomposition relationship. An object definitions can only be part of a single decomposition (to allow hierarchical strutures only).</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  The inverse attribute datatype has been changed from the supertype <em><a href="IfcRelDecomposes.htm">IfcRelDecomposes</a></em> to subtype <em><a href="IfcRelAggregates.htm">IfcRelAggregates</a></em>.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasAssociations</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcRelAssociates.htm">IfcRelAssociates</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>Reference to the relationship objects, that associates external references or other resource definitions to the object.. Examples are the association to library, documentation or classification.</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcTypeObject.htm">IfcTypeObject</a>
+<small>(3)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                ApplicableOccurrence
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcIdentifier.htm">IfcIdentifier</a></td>
+<td data-label="Description">
+<p>The attribute optionally defines the data type of the occurrence object, to which the assigned type object can relate. If not present, no instruction is given to which occurrence object the type object is applicable. The following conventions are used:
+* The IFC entity name of the applicable occurrence using the IFC naming convention, CamelCase with IFC prefix
+* It can be optionally followed by the predefined type after the separator "/" (forward slash), using uppercase
+* If one type object is applicable to many occurrence objects, then those occurrence object names should be separate by comma "," forming a comma separated string.</p>
+<aside class="aside-example"><mark>EXAMPLE</mark> Referring to a furniture as applicable occurrence entity would be expressed as '<a href="IfcFurnishingElement.htm">IfcFurnishingElement</a>', referring to a brace as applicable entity would be expressed as '<a href="IfcMember.htm">IfcMember</a>/BRACE'.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                HasPropertySets
+                
+            </td>
+<td data-label="Type">OPTIONAL SET [1:?] OF <a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></td>
+<td data-label="Description">
+<p>Set ~~list~~ of unique property sets, that are associated with the object type and are common to all object occurrences referring to this object type.</p>
+<aside class="aside-change"><mark>IFC2x3-CHANGE</mark>  The attribute aggregate type has been changed from LIST to SET.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>Types</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="IfcRelDefinesByType.htm">IfcRelDefinesByType</a> FOR RelatingType</td>
+<td data-label="Description">
+<p>Reference to the relationship IfcRelDefinedByType and thus to those occurrence objects, which are defined by this type.</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcTypeProduct.htm">IfcTypeProduct</a>
+<small>(3)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                RepresentationMaps
+                
+            </td>
+<td data-label="Type">OPTIONAL LIST [1:?] OF UNIQUE <a href="IfcRepresentationMap.htm">IfcRepresentationMap</a></td>
+<td data-label="Description">
+<p>List of unique representation maps. Each representation map describes a block definition of the shape of the product style. By providing more than one representation map, a multi-view block definition can be given.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">8</td>
+<td data-label="Name">
+                
+                Tag
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>The tag (or label) identifier at the particular type of a product, e.g. the article number (like the EAN). It is the identifier at the specific level.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>ReferencedBy</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcRelAssignsToProduct.htm">IfcRelAssignsToProduct</a> FOR RelatingProduct</td>
+<td data-label="Description">
+<p>Reference to the <em><a href="IfcRelAssignsToProduct.htm">IfcRelAssignsToProduct</a></em> relationship, by which other products, processes, controls, resources or actors (as subtypes of <em><a href="IfcObjectDefinition.htm">IfcObjectDefinition</a></em>) can be related to this product type.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  New inverse relationship.</aside>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcElementType.htm">IfcElementType</a>
+<small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">9</td>
+<td data-label="Name">
+                
+                ElementType
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute 'PredefinedType' is set to USERDEFINED.</p>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to show 18 hidden inherited attributes
+                </small>
+<small class="hide-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to hide 18 inherited attributes
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="4">
+<a href="IfcSensorType.htm">IfcSensorType</a>
+<small>(1)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">10</td>
+<td data-label="Name">
+                
+                PredefinedType
+                
+            </td>
+<td data-label="Type"><a href="IfcSensorTypeEnum.htm">IfcSensorTypeEnum</a></td>
+<td data-label="Description">
+<p>Identifies the predefined types of sensor from which the type required may be set.</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 7.2.3.10.A<a href="IfcSensorType.htm#Table-7.2.3.10.A"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="7.2.3.10.4-Formal-propositions"></a>
+    7.2.3.10.4 Formal propositions
+<a href="IfcSensorType.htm#7.2.3.10.4-Formal-propositions"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-7.2.3.10.C"></a><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CorrectPredefinedType</td>
+<td>
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">(PredefinedType &lt;&gt; <a href="IfcSensorTypeEnum.htm">IfcSensorTypeEnum</a>.USERDEFINED) OR
+ ((PredefinedType = <a href="IfcSensorTypeEnum.htm">IfcSensorTypeEnum</a>.USERDEFINED) AND EXISTS (SELF\<a href="IfcElementType.htm">IfcElementType</a>.ElementType))</code></pre>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 7.2.3.10.C<a href="IfcSensorType.htm#Table-7.2.3.10.C"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="7.2.3.10.5-Property-sets"></a>
+    7.2.3.10.5 Property sets
+<a href="IfcSensorType.htm#7.2.3.10.5-Property-sets"><i data-feather="link"></i></a></h2>
+<p>
+</p><ul class="psets">
+<li>
+<a href="Pset_AxleCountingEquipment.htm">Pset_AxleCountingEquipment</a>
+<code>WHEELSENSOR</code>
+<ul>
+<li>FailureInformation</li>
+<li>DetectionRange</li>
+<li>OperationalTemperatureRange</li>
+<li>NominalWeight</li>
+<li>AxleCountingEquipmentType</li>
+<li>ImpactParameter</li>
+<li>RatedVoltage</li>
+<li>InsulationResistance</li>
+<li>AxleCounterResponseTime</li>
+<li>MaximumVibration</li>
+</ul>
+</li>
+<li>
+<a href="Pset_Condition.htm">Pset_Condition</a>
+<ul>
+<li>AssessmentDate</li>
+<li>AssessmentCondition</li>
+<li>AssessmentDescription</li>
+<li>AssessmentType</li>
+<li>AssessmentMethod</li>
+<li>LastAssessmentReport</li>
+<li>NextAssessmentDate</li>
+<li>AssessmentFrequency</li>
+</ul>
+</li>
+<li>
+<a href="Pset_ConstructionAdministration.htm">Pset_ConstructionAdministration</a>
+<ul>
+<li>ProcurementMethod</li>
+<li>SpecificationSectionNumber</li>
+<li>SubmittalIdentifer</li>
+</ul>
+</li>
+<li>
+<a href="Pset_ElectricalDeviceCommon.htm">Pset_ElectricalDeviceCommon</a>
+<ul>
+<li>RatedCurrent</li>
+<li>RatedVoltage</li>
+<li>NominalFrequencyRange</li>
+<li>PowerFactor</li>
+<li>ConductorFunction</li>
+<li>NumberOfPoles</li>
+<li>HasProtectiveEarth</li>
+<li>InsulationStandardClass</li>
+<li>IP_Code</li>
+<li>IK_Code</li>
+<li>EarthingStyle</li>
+<li>HeatDissipation</li>
+<li>Power</li>
+<li>NominalPowerConsumption</li>
+<li>NumberOfPowerSupplyPorts</li>
+</ul>
+</li>
+<li>
+<a href="Pset_ElectricalDeviceCompliance.htm">Pset_ElectricalDeviceCompliance</a>
+<ul>
+<li>ElectroMagneticStandardsCompliance</li>
+<li>ExplosiveAtmosphereStandardsCompliance</li>
+<li>FireProofingStandardsCompliance</li>
+<li>LightningProtectionStandardsCompliance</li>
+</ul>
+</li>
+<li>
+<a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
+<ul>
+<li>CyclicPath</li>
+<li>CyclicRange</li>
+<li>LinearPath</li>
+<li>LinearRange</li>
+<li>MaximumAngularVelocity</li>
+<li>MaximumConstantSpeed</li>
+<li>MinimumTime</li>
+</ul>
+</li>
+<li>
+<a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
+<ul>
+<li>CyclicPath</li>
+<li>CyclicRange</li>
+<li>LinearPath</li>
+<li>LinearRange</li>
+<li>MaximumAngularVelocity</li>
+<li>MaximumConstantSpeed</li>
+<li>MinimumTime</li>
+</ul>
+</li>
+<li>
+<a href="Pset_EnergyRequirements.htm">Pset_EnergyRequirements</a>
+<ul>
+<li>EnergyConsumption</li>
+<li>PowerDemand</li>
+<li>EnergySourceLabel</li>
+<li>EnergyConversionEfficiency</li>
+</ul>
+</li>
+<li>
+<a href="Pset_EnergyRequirements.htm">Pset_EnergyRequirements</a>
+<ul>
+<li>EnergyConsumption</li>
+<li>PowerDemand</li>
+<li>EnergySourceLabel</li>
+<li>EnergyConversionEfficiency</li>
+</ul>
+</li>
+<li>
+<a href="Pset_EnvironmentalCondition.htm">Pset_EnvironmentalCondition</a>
+<ul>
+<li>ReferenceAirRelativeHumidity</li>
+<li>ReferenceEnvironmentTemperature</li>
+<li>MaximumAtmosphericPressure</li>
+<li>StorageTemperatureRange</li>
+<li>MaximumWindSpeed</li>
+<li>OperationalTemperatureRange</li>
+<li>MaximumRainIntensity</li>
+<li>SaltMistLevel</li>
+<li>SeismicResistance</li>
+<li>SmokeLevel</li>
+<li>MaximumSolarRadiation</li>
+</ul>
+</li>
+<li>
+<a href="Pset_EnvironmentalEmissions.htm">Pset_EnvironmentalEmissions</a>
+<ul>
+<li>CarbonDioxideEmissions</li>
+<li>SulphurDioxideEmissions</li>
+<li>NitrogenOxidesEmissions</li>
+<li>ParticulateMatterEmissions</li>
+<li>NoiseEmissions</li>
+</ul>
+</li>
+<li>
+<a href="Pset_EnvironmentalEmissions.htm">Pset_EnvironmentalEmissions</a>
+<ul>
+<li>CarbonDioxideEmissions</li>
+<li>SulphurDioxideEmissions</li>
+<li>NitrogenOxidesEmissions</li>
+<li>ParticulateMatterEmissions</li>
+<li>NoiseEmissions</li>
+</ul>
+</li>
+<li>
+<a href="Pset_EnvironmentalImpactIndicators.htm">Pset_EnvironmentalImpactIndicators</a>
+<ul>
+<li>Reference</li>
+<li>FunctionalUnitReference</li>
+<li>IndicatorsUnit</li>
+<li>LifeCyclePhase</li>
+<li>ExpectedServiceLife</li>
+<li>TotalPrimaryEnergyConsumptionPerUnit</li>
+<li>WaterConsumptionPerUnit</li>
+<li>HazardousWastePerUnit</li>
+<li>NonHazardousWastePerUnit</li>
+<li>ClimateChangePerUnit</li>
+<li>AtmosphericAcidificationPerUnit</li>
+<li>RenewableEnergyConsumptionPerUnit</li>
+<li>NonRenewableEnergyConsumptionPerUnit</li>
+<li>ResourceDepletionPerUnit</li>
+<li>InertWastePerUnit</li>
+<li>RadioactiveWastePerUnit</li>
+<li>StratosphericOzoneLayerDestructionPerUnit</li>
+<li>PhotochemicalOzoneFormationPerUnit</li>
+<li>EutrophicationPerUnit</li>
+</ul>
+</li>
+<li>
+<a href="Pset_EnvironmentalImpactValues.htm">Pset_EnvironmentalImpactValues</a>
+<ul>
+<li>TotalPrimaryEnergyConsumption</li>
+<li>WaterConsumption</li>
+<li>HazardousWaste</li>
+<li>NonHazardousWaste</li>
+<li>ClimateChange</li>
+<li>AtmosphericAcidification</li>
+<li>RenewableEnergyConsumption</li>
+<li>NonRenewableEnergyConsumption</li>
+<li>ResourceDepletion</li>
+<li>InertWaste</li>
+<li>RadioactiveWaste</li>
+<li>StratosphericOzoneLayerDestruction</li>
+<li>PhotochemicalOzoneFormation</li>
+<li>Eutrophication</li>
+<li>LeadInTime</li>
+<li>Duration</li>
+<li>LeadOutTime</li>
+</ul>
+</li>
+<li>
+<a href="Pset_MaintenanceStrategy.htm">Pset_MaintenanceStrategy</a>
+<ul>
+<li>AssetCriticality</li>
+<li>AssetFrailty</li>
+<li>AssetPriority</li>
+<li>MonitoringType</li>
+<li>AccidentResponse</li>
+</ul>
+</li>
+<li>
+<a href="Pset_MaintenanceTriggerCondition.htm">Pset_MaintenanceTriggerCondition</a>
+<ul>
+<li>ConditionTargetPerformance</li>
+<li>ConditionMaintenanceLevel</li>
+<li>ConditionReplacementLevel</li>
+<li>ConditionDisposalLevel</li>
+</ul>
+</li>
+<li>
+<a href="Pset_MaintenanceTriggerDuration.htm">Pset_MaintenanceTriggerDuration</a>
+<ul>
+<li>DurationTargetPerformance</li>
+<li>DurationMaintenanceLevel</li>
+<li>DurationReplacementLevel</li>
+<li>DurationDisposalLevel</li>
+</ul>
+</li>
+<li>
+<a href="Pset_MaintenanceTriggerPerformance.htm">Pset_MaintenanceTriggerPerformance</a>
+<ul>
+<li>TargetPerformance</li>
+<li>PerformanceMaintenanceLevel</li>
+<li>ReplacementLevel</li>
+<li>DisposalLevel</li>
+</ul>
+</li>
+<li>
+<a href="Pset_ManufacturerTypeInformation.htm">Pset_ManufacturerTypeInformation</a>
+<ul>
+<li>GlobalTradeItemNumber</li>
+<li>ArticleNumber</li>
+<li>ModelReference</li>
+<li>ModelLabel</li>
+<li>Manufacturer</li>
+<li>ProductionYear</li>
+<li>AssemblyPlace</li>
+<li>OperationalDocument</li>
+<li>SafetyDocument</li>
+<li>PerformanceCertificate</li>
+</ul>
+</li>
+<li>
+<a href="Pset_Risk.htm">Pset_Risk</a>
+<ul>
+<li>RiskName</li>
+<li>RiskType</li>
+<li>NatureOfRisk</li>
+<li>RiskAssessmentMethodology</li>
+<li>UnmitigatedRiskLikelihood</li>
+<li>UnmitigatedRiskConsequence</li>
+<li>UnmitigatedRiskSignificance</li>
+<li>MitigationPlanned</li>
+<li>MitigatedRiskLikelihood</li>
+<li>MitigatedRiskConsequence</li>
+<li>MitigatedRiskSignificance</li>
+<li>MitigationProposed</li>
+<li>AssociatedProduct</li>
+<li>AssociatedActivity</li>
+<li>AssociatedLocation</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeCO2Sensor.htm">Pset_SensorTypeCO2Sensor</a>
+<code>CO2SENSOR</code>
+<ul>
+<li>SetPointCO2Concentration</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeCommon.htm">Pset_SensorTypeCommon</a>
+<ul>
+<li>Reference</li>
+<li>Status</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeConductanceSensor.htm">Pset_SensorTypeConductanceSensor</a>
+<code>CONDUCTANCESENSOR</code>
+<ul>
+<li>SetPointConductance</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeContactSensor.htm">Pset_SensorTypeContactSensor</a>
+<code>CONTACTSENSOR</code>
+<ul>
+<li>SetPointContact</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeEarthquakeSensor.htm">Pset_SensorTypeEarthquakeSensor</a>
+<code>EARTHQUAKESENSOR</code>
+<ul>
+<li>MarginOfError</li>
+<li>LinearVelocityResolution</li>
+<li>SamplingFrequency</li>
+<li>WorkingState</li>
+<li>DataCollectionType</li>
+<li>DegreeOfLinearity</li>
+<li>DynamicRange</li>
+<li>EarthquakeSensorRange</li>
+<li>FullScaleOutput</li>
+<li>SerialInterfaceType</li>
+<li>TransverseSensitivityRatio</li>
+<li>EarthquakeSensorType</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeFireSensor.htm">Pset_SensorTypeFireSensor</a>
+<code>FIRESENSOR</code>
+<ul>
+<li>FireSensorSetPoint</li>
+<li>AccuracyOfFireSensor</li>
+<li>TimeConstant</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeFlowSensor.htm">Pset_SensorTypeFlowSensor</a>
+<code>FLOWSENSOR</code>
+<ul>
+<li>SetPointFlow</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeForeignObjectDetectionSensor.htm">Pset_SensorTypeForeignObjectDetectionSensor</a>
+<code>FOREIGNOBJECTDETECTIONSENSOR</code>
+<ul>
+<li>WorkingState</li>
+<li>SerialInterfaceType</li>
+<li>ForeignObjectDetectionSensorType</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeFrostSensor.htm">Pset_SensorTypeFrostSensor</a>
+<code>FROSTSENSOR</code>
+<ul>
+<li>SetPointFrost</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeGasSensor.htm">Pset_SensorTypeGasSensor</a>
+<code>GASSENSOR</code>
+<ul>
+<li>GasDetected</li>
+<li>SetPointConcentration</li>
+<li>CoverageArea</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeHeatSensor.htm">Pset_SensorTypeHeatSensor</a>
+<code>HEATSENSOR</code>
+<ul>
+<li>CoverageArea</li>
+<li>SetPointTemperature</li>
+<li>RateOfTemperatureRise</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeHumiditySensor.htm">Pset_SensorTypeHumiditySensor</a>
+<code>HUMIDITYSENSOR</code>
+<ul>
+<li>SetPointHumidity</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeIdentifierSensor.htm">Pset_SensorTypeIdentifierSensor</a>
+<code>IDENTIFIERSENSOR</code>
+<ul>
+<li>SetPointIdentifier</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeIonConcentrationSensor.htm">Pset_SensorTypeIonConcentrationSensor</a>
+<code>IONCONCENTRATIONSENSOR</code>
+<ul>
+<li>SubstanceDetected</li>
+<li>SetPointIonConcentration</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeLevelSensor.htm">Pset_SensorTypeLevelSensor</a>
+<code>LEVELSENSOR</code>
+<ul>
+<li>SetPointLevel</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeLightSensor.htm">Pset_SensorTypeLightSensor</a>
+<code>LIGHTSENSOR</code>
+<ul>
+<li>SetPointIlluminance</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeMoistureSensor.htm">Pset_SensorTypeMoistureSensor</a>
+<code>MOISTURESENSOR</code>
+<ul>
+<li>SetPointMoisture</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeMovementSensor.htm">Pset_SensorTypeMovementSensor</a>
+<code>MOVEMENTSENSOR</code>
+<ul>
+<li>MovementSensingType</li>
+<li>SetPointMovement</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypePHSensor.htm">Pset_SensorTypePHSensor</a>
+<code>PHSENSOR</code>
+<ul>
+<li>SetPointPH</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypePressureSensor.htm">Pset_SensorTypePressureSensor</a>
+<code>PRESSURESENSOR</code>
+<ul>
+<li>SetPointPressure</li>
+<li>IsSwitch</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeRadiationSensor.htm">Pset_SensorTypeRadiationSensor</a>
+<code>RADIATIONSENSOR</code>
+<ul>
+<li>SetPointRadiation</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeRadioactivitySensor.htm">Pset_SensorTypeRadioactivitySensor</a>
+<code>RADIOACTIVITYSENSOR</code>
+<ul>
+<li>SetPointRadioactivity</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeRainSensor.htm">Pset_SensorTypeRainSensor</a>
+<code>RAINSENSOR</code>
+<ul>
+<li>MarginOfError</li>
+<li>SamplingFrequency</li>
+<li>WorkingState</li>
+<li>DataCollectionType</li>
+<li>LengthMeasureResolution</li>
+<li>SerialInterfaceType</li>
+<li>RainMeasureRange</li>
+<li>RainSensorType</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeSmokeSensor.htm">Pset_SensorTypeSmokeSensor</a>
+<code>SMOKESENSOR</code>
+<ul>
+<li>CoverageArea</li>
+<li>SetPointConcentration</li>
+<li>HasBuiltInAlarm</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeSnowSensor.htm">Pset_SensorTypeSnowSensor</a>
+<code>SNOWDEPTHSENSOR</code>
+<ul>
+<li>MarginOfError</li>
+<li>SamplingFrequency</li>
+<li>DataCollectionType</li>
+<li>ImageResolution</li>
+<li>ImageShootingMode</li>
+<li>SerialInterfaceType</li>
+<li>LengthMeasureResolution</li>
+<li>SnowSensorMeasureRange</li>
+<li>SnowSensorType</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeSoundSensor.htm">Pset_SensorTypeSoundSensor</a>
+<code>SOUNDSENSOR</code>
+<ul>
+<li>SetPointSound</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeTemperatureSensor.htm">Pset_SensorTypeTemperatureSensor</a>
+<code>TEMPERATURESENSOR</code>
+<ul>
+<li>TemperatureSensorType</li>
+<li>SetPointTemperature</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeTurnoutClosureSensor.htm">Pset_SensorTypeTurnoutClosureSensor</a>
+<code>TURNOUTCLOSURESENSOR</code>
+<ul>
+<li>DetectionRange</li>
+<li>IndicationRodMovementRange</li>
+</ul>
+</li>
+<li>
+<a href="Pset_SensorTypeWindSensor.htm">Pset_SensorTypeWindSensor</a>
+<code>WINDSENSOR</code>
+<ul>
+<li>WindSensorType</li>
+<li>SetPointSpeed</li>
+<li>DampingRatio</li>
+<li>SerialInterfaceType</li>
+<li>MarginOfError</li>
+<li>LinearVelocityResolution</li>
+<li>SamplingFrequency</li>
+<li>StartingWindSpeed</li>
+<li>WorkingState</li>
+<li>TimeConstant</li>
+<li>DataCollectionType</li>
+<li>WindAngleRange</li>
+<li>WindSpeedRange</li>
+</ul>
+</li>
+<li>
+<a href="Pset_ServiceLife.htm">Pset_ServiceLife</a>
+<ul>
+<li>ServiceLifeDuration</li>
+<li>MeanTimeBetweenFailure</li>
+</ul>
+</li>
+<li>
+<a href="Pset_Tolerance.htm">Pset_Tolerance</a>
+<ul>
+<li>ToleranceDescription</li>
+<li>ToleranceBasis</li>
+<li>OverallTolerance</li>
+<li>HorizontalTolerance</li>
+<li>OrthogonalTolerance</li>
+<li>VerticalTolerance</li>
+<li>PlanarFlatness</li>
+<li>HorizontalFlatness</li>
+<li>ElevationalFlatness</li>
+<li>SideFlatness</li>
+<li>OverallOrthogonality</li>
+<li>HorizontalOrthogonality</li>
+<li>OrthogonalOrthogonality</li>
+<li>VerticalOrthogonality</li>
+<li>OverallStraightness</li>
+<li>HorizontalStraightness</li>
+<li>OrthogonalStraightness</li>
+<li>VerticalStraightness</li>
+</ul>
+</li>
+<li>
+<a href="Pset_Uncertainty.htm">Pset_Uncertainty</a>
+<ul>
+<li>UncertaintyBasis</li>
+<li>UncertaintyDescription</li>
+<li>HorizontalUncertainty</li>
+<li>LinearUncertainty</li>
+<li>OrthogonalUncertainty</li>
+<li>VerticalUncertainty</li>
+</ul>
+</li>
+<li>
+<a href="Pset_Warranty.htm">Pset_Warranty</a>
+<ul>
+<li>WarrantyIdentifier</li>
+<li>WarrantyStartDate</li>
+<li>IsExtendedWarranty</li>
+<li>WarrantyPeriod</li>
+<li>WarrantyContent</li>
+<li>PointOfContact</li>
+<li>Exclusions</li>
+</ul>
+</li>
+<li>
+<a href="Qto_SensorBaseQuantities.htm">Qto_SensorBaseQuantities</a>
+<ul>
+<li>GrossWeight</li>
+</ul>
+</li>
+</ul>
+<p>
+</p><h2><a id="7.2.3.10.6-Concept-usage"></a>
+    7.2.3.10.6 Concept usage
+<a href="IfcSensorType.htm#7.2.3.10.6-Concept-usage"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-7.2.3.10.D"></a><table class="striped grouped concepts">
+<thead>
+<tr>
+<th>Concept</th>
+<th>Usage</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="IfcRoot.htm">IfcRoot</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>Ownership, history, and merge state is captured using <a href="IfcOwnerHistory.htm">IfcOwnerHistory</a>.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p><a href="IfcRoot.htm">IfcRoot</a> assigns the globally unique ID. In addition it may provide for a name and a description about the concept.</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="IfcObjectDefinition.htm">IfcObjectDefinition</a>
+<small>(9)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Composition/Aggregation/content.html">Aggregation</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Association/Approval_Association/content.html">Approval Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>Any object occurrence or object type can have a reference to a specific classification reference, i.e. to a particular facet within a classification system.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Association/Constraint_Association/content.html">Constraint Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Association/Document_Association/content.html">Document Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Association/Library_Association/content.html">Library Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Association/Material_Association/content.html">Material Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Association/Material_Association/Material_Single/content.html">Material Single</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Composition/Nesting/content.html">Nesting</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="IfcTypeObject.htm">IfcTypeObject</a>
+<small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Property_Sets/Property_Sets_for_Types/content.html">Property Sets for Types</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="IfcTypeProduct.htm">IfcTypeProduct</a>
+<small>(7)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Product_Type_Shape/Product_Type_Geometric_Representation/content.html">Product Type Geometric Representation</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Product_Type_Shape/content.html">Product Type Shape</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>The RepresentationMaps define the type product shape and multiple geometric representations can be assigned. If a product occurrence is assigned to the type by using the <a href="IfcRelDefinesByType.htm">IfcRelDefinesByType</a> relationship, then these occurrences have to reference the representation maps. The reference is created by one or multiple <a href="IfcShapeRepresentation.htm">IfcShapeRepresentation</a>'s having an <a href="IfcMappedItem.htm">IfcMappedItem</a> as Items, that places the <a href="IfcRepresentationMap.htm">IfcRepresentationMap</a> of the type product into the spatial contexts, i.e. by using an Cartesian transformation operator to transform the <a href="IfcRepresentationMap.htm">IfcRepresentationMap</a> into the object coordinate system of the product occurrence.</p>
+<p>Figure 1 illustrates an example of referencing a representation map by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling.</p>
+<figure><a id="Figure-7.2.3.10.B-illustrates-an-example-of-referencing-a-representation-multiple-times-map-by-the-shape-representation-of-a-product-occurrence.-Here-the-Cartesian-transformation-operator-only-uses-translation-but-no-rotation-mirroring-or-scaling.-The-different-translation-values-determine-the-pattern-of-the-multiple-placement."></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-1.png" title="Figure 1 — Product type geometry with single placement"/><figcaption>Figure 7.2.3.10.B illustrates an example of referencing a representation multiple times map by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling. The different translation values determine the pattern of the multiple placement.<a href="IfcSensorType.htm#Figure-7.2.3.10.B-illustrates-an-example-of-referencing-a-representation-multiple-times-map-by-the-shape-representation-of-a-product-occurrence.-Here-the-Cartesian-transformation-operator-only-uses-translation-but-no-rotation-mirroring-or-scaling.-The-different-translation-values-determine-the-pattern-of-the-multiple-placement."><i data-feather="link"></i></a></figcaption></figure>
+<figure><a id="Figure-7.2.3.10.B-Product-type-geometry-with-multiple-placement"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-2.png" title="Figure 7.2.3.10.B — Product type geometry with multiple placement"/><figcaption>Figure 7.2.3.10.B — Product type geometry with multiple placement<a href="IfcSensorType.htm#Figure-7.2.3.10.B-Product-type-geometry-with-multiple-placement"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Property_Sets/Property_Sets_for_Objects/content.html">Property Sets for Objects</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>This concept can be applied to the following resources:</p>
+<ul>
+<li>
+<a href="Pset_Risk.htm">Pset_Risk</a>
+</li>
+<li>
+<a href="Pset_Tolerance.htm">Pset_Tolerance</a>
+</li>
+<li>
+<a href="Pset_Uncertainty.htm">Pset_Uncertainty</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Product_Type_Shape/Product_Type_Geometric_Representation/Type_Body_Geometry/Type_Body_AdvancedBrep_Geometry/content.html">Type Body AdvancedBrep Geometry</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Product_Type_Shape/Product_Type_Geometric_Representation/Type_Body_Geometry/Type_Body_Brep_Geometry/content.html">Type Body Brep Geometry</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Product_Type_Shape/Product_Type_Geometric_Representation/Type_Body_Geometry/Type_Body_CSG_Geometry/content.html">Type Body CSG Geometry</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Product_Type_Shape/Product_Type_Geometric_Representation/Type_Body_Geometry/content.html">Type Body Geometry</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="IfcElementType.htm">IfcElementType</a>
+<small>(5)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Attributes/Object_Type_Predefined_Type/Element_Type_Predefined_Type/content.html">Element Type Predefined Type</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Property_Sets/Property_Sets_for_Objects/content.html">Property Sets for Objects</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>This concept can be applied to the following resources:</p>
+<ul>
+<li>
+<a href="Pset_Condition.htm">Pset_Condition</a>
+</li>
+<li>
+<a href="Pset_MaintenanceStrategy.htm">Pset_MaintenanceStrategy</a>
+</li>
+<li>
+<a href="Pset_MaintenanceTriggerCondition.htm">Pset_MaintenanceTriggerCondition</a>
+</li>
+<li>
+<a href="Pset_MaintenanceTriggerDuration.htm">Pset_MaintenanceTriggerDuration</a>
+</li>
+<li>
+<a href="Pset_MaintenanceTriggerPerformance.htm">Pset_MaintenanceTriggerPerformance</a>
+</li>
+<li>
+<a href="Pset_ConstructionAdministration.htm">Pset_ConstructionAdministration</a>
+</li>
+<li>
+<a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
+</li>
+<li>
+<a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
+</li>
+<li>
+<a href="Pset_EnvironmentalCondition.htm">Pset_EnvironmentalCondition</a>
+</li>
+<li>
+<a href="Pset_EnvironmentalImpactIndicators.htm">Pset_EnvironmentalImpactIndicators</a>
+</li>
+<li>
+<a href="Pset_EnvironmentalImpactValues.htm">Pset_EnvironmentalImpactValues</a>
+</li>
+<li>
+<a href="Pset_ManufacturerTypeInformation.htm">Pset_ManufacturerTypeInformation</a>
+</li>
+<li>
+<a href="Pset_ServiceLife.htm">Pset_ServiceLife</a>
+</li>
+<li>
+<a href="Pset_Warranty.htm">Pset_Warranty</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Product_Type_Shape/Product_Type_Geometric_Representation/Type_Body_Geometry/Type_Body_Tessellated_Geometry/content.html">Type Body Tessellated Geometry</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Composition/Type_Element_Aggregation/content.html">Type Element Aggregation</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Composition/Nesting/Type_Element_Nesting/content.html">Type Element Nesting</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="IfcDistributionElementType.htm">IfcDistributionElementType</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Property_Sets/Property_Sets_for_Objects/content.html">Property Sets for Objects</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        This is a further elaboration on an inherited concept.
+                    </small>
+</aside>
+<p>This concept can be applied to the following resources:</p>
+<ul>
+<li>
+<a href="Pset_ElectricalDeviceCommon.htm">Pset_ElectricalDeviceCommon</a>
+</li>
+<li>
+<a href="Pset_ElectricalDeviceCompliance.htm">Pset_ElectricalDeviceCompliance</a>
+</li>
+<li>
+<a href="Pset_EnergyRequirements.htm">Pset_EnergyRequirements</a>
+</li>
+<li>
+<a href="Pset_EnergyRequirements.htm">Pset_EnergyRequirements</a>
+</li>
+<li>
+<a href="Pset_EnvironmentalEmissions.htm">Pset_EnvironmentalEmissions</a>
+</li>
+<li>
+<a href="Pset_EnvironmentalEmissions.htm">Pset_EnvironmentalEmissions</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Composition/Nesting/Type_Port_Nesting/content.html">Type Port Nesting</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="IfcDistributionControlElementType.htm">IfcDistributionControlElementType</a>
+<small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Assignment/Product_Type_Assignment/content.html">Product Type Assignment</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>This concept can be applied to the following resources:</p>
+<ul>
+<li>
+<a href="IfcTaskType.htm">IfcTaskType</a>
+</li>
+<li>
+<a href="IfcProcedureType.htm">IfcProcedureType</a>
+</li>
+<li>
+<a href="IfcEventType.htm">IfcEventType</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    Click to show 27 hidden inherited concepts
+                </small>
+<small class="hide-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    Click to hide 27 inherited concepts
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="3">
+<a href="IfcSensorType.htm">IfcSensorType</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Property_Sets/Property_Sets_for_Objects/content.html">Property Sets for Objects</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        This is a further elaboration on an inherited concept.
+                    </small>
+</aside>
+<p>This concept can be applied to the following resources:</p>
+<ul>
+<li>
+<a href="Pset_SensorTypeCommon.htm">Pset_SensorTypeCommon</a>
+</li>
+<li>
+<a href="Pset_SensorTypeLevelSensor.htm">Pset_SensorTypeLevelSensor</a>
+                        
+                        (only applies to <code>LEVELSENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeCO2Sensor.htm">Pset_SensorTypeCO2Sensor</a>
+                        
+                        (only applies to <code>CO2SENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeConductanceSensor.htm">Pset_SensorTypeConductanceSensor</a>
+                        
+                        (only applies to <code>CONDUCTANCESENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeContactSensor.htm">Pset_SensorTypeContactSensor</a>
+                        
+                        (only applies to <code>CONTACTSENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeEarthquakeSensor.htm">Pset_SensorTypeEarthquakeSensor</a>
+                        
+                        (only applies to <code>EARTHQUAKESENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeFireSensor.htm">Pset_SensorTypeFireSensor</a>
+                        
+                        (only applies to <code>FIRESENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeFlowSensor.htm">Pset_SensorTypeFlowSensor</a>
+                        
+                        (only applies to <code>FLOWSENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeForeignObjectDetectionSensor.htm">Pset_SensorTypeForeignObjectDetectionSensor</a>
+                        
+                        (only applies to <code>FOREIGNOBJECTDETECTIONSENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeFrostSensor.htm">Pset_SensorTypeFrostSensor</a>
+                        
+                        (only applies to <code>FROSTSENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeGasSensor.htm">Pset_SensorTypeGasSensor</a>
+                        
+                        (only applies to <code>GASSENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeHeatSensor.htm">Pset_SensorTypeHeatSensor</a>
+                        
+                        (only applies to <code>HEATSENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeHumiditySensor.htm">Pset_SensorTypeHumiditySensor</a>
+                        
+                        (only applies to <code>HUMIDITYSENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeIdentifierSensor.htm">Pset_SensorTypeIdentifierSensor</a>
+                        
+                        (only applies to <code>IDENTIFIERSENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeIonConcentrationSensor.htm">Pset_SensorTypeIonConcentrationSensor</a>
+                        
+                        (only applies to <code>IONCONCENTRATIONSENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeLightSensor.htm">Pset_SensorTypeLightSensor</a>
+                        
+                        (only applies to <code>LIGHTSENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeMoistureSensor.htm">Pset_SensorTypeMoistureSensor</a>
+                        
+                        (only applies to <code>MOISTURESENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeMovementSensor.htm">Pset_SensorTypeMovementSensor</a>
+                        
+                        (only applies to <code>MOVEMENTSENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypePHSensor.htm">Pset_SensorTypePHSensor</a>
+                        
+                        (only applies to <code>PHSENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypePressureSensor.htm">Pset_SensorTypePressureSensor</a>
+                        
+                        (only applies to <code>PRESSURESENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeRadiationSensor.htm">Pset_SensorTypeRadiationSensor</a>
+                        
+                        (only applies to <code>RADIATIONSENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeRadioactivitySensor.htm">Pset_SensorTypeRadioactivitySensor</a>
+                        
+                        (only applies to <code>RADIOACTIVITYSENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeRainSensor.htm">Pset_SensorTypeRainSensor</a>
+                        
+                        (only applies to <code>RAINSENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeSmokeSensor.htm">Pset_SensorTypeSmokeSensor</a>
+                        
+                        (only applies to <code>SMOKESENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeSnowSensor.htm">Pset_SensorTypeSnowSensor</a>
+                        
+                        (only applies to <code>SNOWDEPTHSENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeSoundSensor.htm">Pset_SensorTypeSoundSensor</a>
+                        
+                        (only applies to <code>SOUNDSENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeTemperatureSensor.htm">Pset_SensorTypeTemperatureSensor</a>
+                        
+                        (only applies to <code>TEMPERATURESENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeTurnoutClosureSensor.htm">Pset_SensorTypeTurnoutClosureSensor</a>
+                        
+                        (only applies to <code>TURNOUTCLOSURESENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_AxleCountingEquipment.htm">Pset_AxleCountingEquipment</a>
+                        
+                        (only applies to <code>WHEELSENSOR)
+                        
+                        
+                    </code></li>
+<li>
+<a href="Pset_SensorTypeWindSensor.htm">Pset_SensorTypeWindSensor</a>
+                        
+                        (only applies to <code>WINDSENSOR)
+                        
+                        
+                    </code></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Quantity_Sets/content.html">Quantity Sets</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>This concept can be applied to the following resources:</p>
+<ul>
+<li>
+<a href="Qto_SensorBaseQuantities.htm">Qto_SensorBaseQuantities</a>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 7.2.3.10.D<a href="IfcSensorType.htm#Table-7.2.3.10.D"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="7.2.3.10.7-Formal-representation"></a>
+    7.2.3.10.7 Formal representation
+<a href="IfcSensorType.htm#7.2.3.10.7-Formal-representation"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">ENTITY <a href="IfcSensorType.htm">IfcSensorType</a>
+ SUBTYPE OF (<a href="IfcDistributionControlElementType.htm">IfcDistributionControlElementType</a>);
+	PredefinedType : <a href="IfcSensorTypeEnum.htm">IfcSensorTypeEnum</a>;
+ WHERE
+	CorrectPredefinedType : (PredefinedType &lt;&gt; <a href="IfcSensorTypeEnum.htm">IfcSensorTypeEnum</a>.USERDEFINED) OR
+ ((PredefinedType = <a href="IfcSensorTypeEnum.htm">IfcSensorTypeEnum</a>.USERDEFINED) AND EXISTS (SELF\<a href="IfcElementType.htm">IfcElementType</a>.ElementType));
+END_ENTITY;</code></pre>
+<h2><a id="7.2.3.10.8-References"></a>
+    7.2.3.10.8 References
+<a href="IfcSensorType.htm#7.2.3.10.8-References"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="IfcDistributionControlElementType.htm">IfcDistributionControlElementType</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+<div class="changelog">
+<h3><a id="7.2.3.10.9-Changelog"></a>
+                        7.2.3.10.9 Changelog
+                    <a href="IfcSensorType.htm#7.2.3.10.9-Changelog"><i data-feather="link"></i></a></h3>
+<h4 class="collapsed"><a id="7.2.3.10.9.1-IFC4"></a>
+                        7.2.3.10.9.1 IFC4
+                    <a href="IfcSensorType.htm#7.2.3.10.9.1-IFC4"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where_rules,
+                                CorrectPredefinedType
+                                
+                            </small>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/domain/IfcBuildingControlsDomain/Entities/IfcSensorType.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

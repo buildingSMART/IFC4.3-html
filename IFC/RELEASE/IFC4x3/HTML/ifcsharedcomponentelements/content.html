@@ -1,0 +1,367 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>6.3 IfcSharedComponentElements - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a class="current" href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a class="sublink-1" href="../ifcsharedbldgelements/content.html">
+                            6.1 IfcSharedBldgElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedbldgserviceelements/content.html">
+                            6.2 IfcSharedBldgServiceElements
+                        </a>
+<a class="sublink-1 current" href="content.html">
+                            6.3 IfcSharedComponentElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedfacilitieselements/content.html">
+                            6.4 IfcSharedFacilitiesElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedmgmtelements/content.html">
+                            6.5 IfcSharedMgmtElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedinfrastructureelements/content.html">
+                            6.6 IfcSharedInfrastructureElements
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>6.3 IfcSharedComponentElements</h1>
+<h2><a id="6.3.1-Schema-definition"></a>
+    6.3.1 Schema definition
+<a href="content.html#6.3.1-Schema-definition"><i data-feather="link"></i></a></h2>
+<p>The schema <em>IfcSharedComponentElements</em> provides the ability to represent different kinds of small parts, such as various accessories and fasteners. The schema contains the entity <em><a href="../lexical/IfcElementComponent.htm">IfcElementComponent</a></em>, a subtype of <em><a href="../lexical/IfcElement.htm">IfcElement</a></em> from schema <em>IfcProductExtensions</em>, and relevant subtypes for fasteners, mechanical fasteners and discrete accessories along with their corresponding type objects.</p>
+<aside class="aside-history"><mark>HISTORY</mark>  New schema in IFC2x2.</aside>
+<h2><a id="6.3.2-Types"></a>
+    6.3.2 Types
+<a href="content.html#6.3.2-Types"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="6.3.2.1">
+<a href="../lexical/IfcBuildingElementPartTypeEnum.htm">
+        
+            IfcBuildingElementPartTypeEnum
+        
+        </a>
+</li><li number="6.3.2.2">
+<a href="../lexical/IfcDiscreteAccessoryTypeEnum.htm">
+        
+            IfcDiscreteAccessoryTypeEnum
+        
+        </a>
+</li><li number="6.3.2.3">
+<a href="../lexical/IfcFastenerTypeEnum.htm">
+        
+            IfcFastenerTypeEnum
+        
+        </a>
+</li><li number="6.3.2.4">
+<a href="../lexical/IfcMechanicalFastenerTypeEnum.htm">
+        
+            IfcMechanicalFastenerTypeEnum
+        
+        </a>
+</li><li number="6.3.2.5">
+<a href="../lexical/IfcVibrationDamperTypeEnum.htm">
+        
+            IfcVibrationDamperTypeEnum
+        
+        </a>
+</li>
+</ol>
+<h2><a id="6.3.3-Entities"></a>
+    6.3.3 Entities
+<a href="content.html#6.3.3-Entities"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="6.3.3.1">
+<a href="../lexical/IfcBuildingElementPart.htm">
+        
+            IfcBuildingElementPart
+        
+        </a>
+</li><li number="6.3.3.2">
+<a href="../lexical/IfcBuildingElementPartType.htm">
+        
+            IfcBuildingElementPartType
+        
+        </a>
+</li><li number="6.3.3.3">
+<a href="../lexical/IfcDiscreteAccessory.htm">
+        
+            IfcDiscreteAccessory
+        
+        </a>
+</li><li number="6.3.3.4">
+<a href="../lexical/IfcDiscreteAccessoryType.htm">
+        
+            IfcDiscreteAccessoryType
+        
+        </a>
+</li><li number="6.3.3.5">
+<a href="../lexical/IfcElementComponent.htm">
+        
+            IfcElementComponent
+        
+        </a>
+</li><li number="6.3.3.6">
+<a href="../lexical/IfcElementComponentType.htm">
+        
+            IfcElementComponentType
+        
+        </a>
+</li><li number="6.3.3.7">
+<a href="../lexical/IfcFastener.htm">
+        
+            IfcFastener
+        
+        </a>
+</li><li number="6.3.3.8">
+<a href="../lexical/IfcFastenerType.htm">
+        
+            IfcFastenerType
+        
+        </a>
+</li><li number="6.3.3.9">
+<a href="../lexical/IfcMechanicalFastener.htm">
+        
+            IfcMechanicalFastener
+        
+        </a>
+</li><li number="6.3.3.10">
+<a href="../lexical/IfcMechanicalFastenerType.htm">
+        
+            IfcMechanicalFastenerType
+        
+        </a>
+</li>
+</ol>
+<h2><a id="6.3.4-Property-Sets"></a>
+    6.3.4 Property Sets
+<a href="content.html#6.3.4-Property-Sets"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="6.3.4.1">
+<a href="../lexical/Pset_DiscreteAccessoryColumnShoe.htm">
+        
+            Pset_DiscreteAccessoryColumnShoe
+        
+        </a>
+</li><li number="6.3.4.2">
+<a href="../lexical/Pset_DiscreteAccessoryCornerFixingPlate.htm">
+        
+            Pset_DiscreteAccessoryCornerFixingPlate
+        
+        </a>
+</li><li number="6.3.4.3">
+<a href="../lexical/Pset_DiscreteAccessoryDiagonalTrussConnector.htm">
+        
+            Pset_DiscreteAccessoryDiagonalTrussConnector
+        
+        </a>
+</li><li number="6.3.4.4">
+<a href="../lexical/Pset_DiscreteAccessoryEdgeFixingPlate.htm">
+        
+            Pset_DiscreteAccessoryEdgeFixingPlate
+        
+        </a>
+</li><li number="6.3.4.5">
+<a href="../lexical/Pset_DiscreteAccessoryFixingSocket.htm">
+        
+            Pset_DiscreteAccessoryFixingSocket
+        
+        </a>
+</li><li number="6.3.4.6">
+<a href="../lexical/Pset_DiscreteAccessoryLadderTrussConnector.htm">
+        
+            Pset_DiscreteAccessoryLadderTrussConnector
+        
+        </a>
+</li><li number="6.3.4.7">
+<a href="../lexical/Pset_DiscreteAccessoryStandardFixingPlate.htm">
+        
+            Pset_DiscreteAccessoryStandardFixingPlate
+        
+        </a>
+</li><li number="6.3.4.8">
+<a href="../lexical/Pset_DiscreteAccessoryWireLoop.htm">
+        
+            Pset_DiscreteAccessoryWireLoop
+        
+        </a>
+</li><li number="6.3.4.9">
+<a href="../lexical/Pset_ElementComponentCommon.htm">
+        
+            Pset_ElementComponentCommon
+        
+        </a>
+</li><li number="6.3.4.10">
+<a href="../lexical/Pset_FastenerWeld.htm">
+        
+            Pset_FastenerWeld
+        
+        </a>
+</li><li number="6.3.4.11">
+<a href="../lexical/Pset_MechanicalFastenerAnchorBolt.htm">
+        
+            Pset_MechanicalFastenerAnchorBolt
+        
+        </a>
+</li><li number="6.3.4.12">
+<a href="../lexical/Pset_MechanicalFastenerBolt.htm">
+        
+            Pset_MechanicalFastenerBolt
+        
+        </a>
+</li>
+</ol>
+<h2><a id="6.3.5-Quantity-Sets"></a>
+    6.3.5 Quantity Sets
+<a href="content.html#6.3.5-Quantity-Sets"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+<h2><a id="6.3.6-Functions"></a>
+    6.3.6 Functions
+<a href="content.html#6.3.6-Functions"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+<h2><a id="6.3.7-Rules"></a>
+    6.3.7 Rules
+<a href="content.html#6.3.7-Rules"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+<h2><a id="6.3.8-PropertyEnumerations"></a>
+    6.3.8 PropertyEnumerations
+<a href="content.html#6.3.8-PropertyEnumerations"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="6.3.8.1">
+<a href="../lexical/PEnum_ElementComponentCorrosionTreatment.htm">
+        
+            PEnum_ElementComponentCorrosionTreatment
+        
+        </a>
+</li><li number="6.3.8.2">
+<a href="../lexical/PEnum_ElementComponentDeliveryType.htm">
+        
+            PEnum_ElementComponentDeliveryType
+        
+        </a>
+</li>
+</ol>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/shared/IfcSharedComponentElements/README.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

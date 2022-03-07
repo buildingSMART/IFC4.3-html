@@ -1,0 +1,200 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>1 Scope - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="foreword.htm">
+                             Foreword
+                        </a>
+<a href="introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a class="current" href="scope.htm">
+                            1 Scope
+                        </a>
+<a href="normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>1 Scope</h1>
+<p>The Industry Foundation Classes, IFC, are an open international standard for Building Information Model (BIM) data that are exchanged and shared among software applications used by the various participants in the construction or facility management industry sector. The standard includes definitions that cover data required for buildings and bridges over their life cycle. This release, and upcoming releases, extend the scope to include data definitions for infrastructure assets over their life cycle as well.</p>
+<p>The Industry Foundation Classes specify a data schema and an exchange file format structure.
+The data schema is defined in a UML Class diagram, <a href="https://github.com/buildingSMART/IFC4.3.x-development/tree/master/schemas">available as XMI file</a>.
+Computer interpretable <a href="https://github.com/buildingSMART/IFC4.3.x-output">schemas are being generated</a> as:</p>
+<ul>
+<li><a href="https://github.com/buildingSMART/IFC4.3.x-output/blob/master/IFC.exp">EXPRESS data specification language</a>, defined in ISO 10303-11,</li>
+<li>XML Schema definition language (XSD) (under development),</li>
+<li>RDF/OWL Schema  (under development),</li>
+<li>JavaScript Object Notation Schema (under development),</li>
+<li>JSON structured <a href="https://github.com/buildingSMART/IFC4.3.x-output/blob/master/IFC.json">taxonomy</a> of entities, predefined types and properties.</li>
+</ul>
+<p>The exchange file formats for exchanging and sharing data according to the conceptual schema are</p>
+<ul>
+<li>Clear text encoding of the exchange structure, defined in ISO 10303-21,</li>
+<li>Extensible Markup Language (XML), defined in XML Schema W3C Recommendation with IFC specific translations,</li>
+<li>RDF/OWL, defined by W3C and the buildingSMART projects,</li>
+<li>JSON JavaScript Object Notation, defined by the buildingSMART projects.</li>
+</ul>
+<p>An overview of the file formats can be seen on <a href="https://technical.buildingsmart.org/standards/ifc/ifc-formats/">the technical website</a>,
+Alternative exchange file formats may be used if they conform to the data schemas.</p>
+<p>This release of IFC consists of the data schemas (represented in different formats), and reference data, represented as definitions of property and quantity names, and formal and informative descriptions (available in Markdown and HTML).</p>
+<p>The full IFC standard is used to define one or many recognized workflows in the construction and facility management industry sector. Such an exchange scenario definition of the IFC data schema and referenced data is referred to as a Model View Definition (MVD). Each MVD identifies data exchange requirements for software applications. Conforming software applications need to identity the model view definition they conform to to apply for Software Certification.</p>
+<h2><a id="General-use"></a>General use<a href="scope.htm#General-use"><i data-feather="link"></i></a></h2>
+<p>The following are within the entire scope of this release of IFC:</p>
+<ol>
+<li>
+<p>BIM exchange format definitions that are required during the life cycle phases of buildings:</p>
+<ul>
+<li>demonstrating the need;</li>
+<li>conception of need;</li>
+<li>outline feasibility;</li>
+<li>substantive feasibility study and outline financial authority;</li>
+<li>outline conceptual design;</li>
+<li>full conceptual design;</li>
+<li>coordinated design;</li>
+<li>procurement and full financial authority;</li>
+<li>production information;</li>
+<li>construction;</li>
+<li>operation and maintenance.</li>
+</ul>
+</li>
+<li>
+<p>BIM exchange format definitions that are required by the various disciplines involved within the life cycle phases:</p>
+<ul>
+<li>architecture;</li>
+<li>building service;</li>
+<li>structural engineering;</li>
+<li>procurement;</li>
+<li>construction planning;</li>
+<li>facility management;</li>
+<li>project management;</li>
+<li>client requirement management;</li>
+<li>building authority for permits and approval.</li>
+<li>BIM exchange format definitions including:</li>
+<li>project structure;</li>
+<li>physical components;</li>
+<li>spatial components;</li>
+<li>analysis items;</li>
+<li>processes;</li>
+<li>resources;</li>
+<li>controls;</li>
+<li>actors;</li>
+<li>context definition.</li>
+</ul>
+</li>
+</ol>
+<p>The following are outside the scope of this release of IFC:</p>
+<ul>
+<li>exchange format definitions outside of the domain of construction and facility maintenance;</li>
+<li>full project structure and component breakdown structures outside of building engineering, but providing a baseline for civil engineering to be extended in future releases;</li>
+<li>behavioral aspects of components and other information items.</li>
+</ul>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/content/scope.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

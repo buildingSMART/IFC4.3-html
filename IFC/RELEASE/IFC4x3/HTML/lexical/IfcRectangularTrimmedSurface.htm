@@ -1,0 +1,639 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>8.9.3.56 IfcRectangularTrimmedSurface - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a class="current" href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+<a class="sublink-1" href="../ifcactorresource/content.html">
+                            8.1 IfcActorResource
+                        </a>
+<a class="sublink-1" href="../ifcapprovalresource/content.html">
+                            8.2 IfcApprovalResource
+                        </a>
+<a class="sublink-1" href="../ifcconstraintresource/content.html">
+                            8.3 IfcConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifccostresource/content.html">
+                            8.4 IfcCostResource
+                        </a>
+<a class="sublink-1" href="../ifcdatetimeresource/content.html">
+                            8.5 IfcDateTimeResource
+                        </a>
+<a class="sublink-1" href="../ifcexternalreferenceresource/content.html">
+                            8.6 IfcExternalReferenceResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricconstraintresource/content.html">
+                            8.7 IfcGeometricConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricmodelresource/content.html">
+                            8.8 IfcGeometricModelResource
+                        </a>
+<a class="sublink-1 current" href="../ifcgeometryresource/content.html">
+                            8.9 IfcGeometryResource
+                        </a>
+<a class="sublink-1" href="../ifcmaterialresource/content.html">
+                            8.10 IfcMaterialResource
+                        </a>
+<a class="sublink-1" href="../ifcmeasureresource/content.html">
+                            8.11 IfcMeasureResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationappearanceresource/content.html">
+                            8.12 IfcPresentationAppearanceResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationdefinitionresource/content.html">
+                            8.13 IfcPresentationDefinitionResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationorganizationresource/content.html">
+                            8.14 IfcPresentationOrganizationResource
+                        </a>
+<a class="sublink-1" href="../ifcprofileresource/content.html">
+                            8.15 IfcProfileResource
+                        </a>
+<a class="sublink-1" href="../ifcpropertyresource/content.html">
+                            8.16 IfcPropertyResource
+                        </a>
+<a class="sublink-1" href="../ifcquantityresource/content.html">
+                            8.17 IfcQuantityResource
+                        </a>
+<a class="sublink-1" href="../ifcrepresentationresource/content.html">
+                            8.18 IfcRepresentationResource
+                        </a>
+<a class="sublink-1" href="../ifcstructuralloadresource/content.html">
+                            8.19 IfcStructuralLoadResource
+                        </a>
+<a class="sublink-1" href="../ifctopologyresource/content.html">
+                            8.20 IfcTopologyResource
+                        </a>
+<a class="sublink-1" href="../ifcutilityresource/content.html">
+                            8.21 IfcUtilityResource
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>8.9.3.56 IfcRectangularTrimmedSurface</h1>
+<h2><a id="8.9.3.56.1-Semantic-definition"></a>
+    8.9.3.56.1 Semantic definition
+<a href="IfcRectangularTrimmedSurface.htm#8.9.3.56.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p>The <em><a href="IfcRectangularTrimmedSurface.htm">IfcRectangularTrimmedSurface</a></em> is a surface created by bounding its <em>BasisSurface</em> along two pairs of parallel curves defined within the parametric space of the referenced surface.</p>
+<aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO/CD 10303-42:1992
+The trimmed surface is a simple bounded surface in which the boundaries are the constant parametric lines <em>u</em>~1~ = u1, <em>u</em>~2~ = u2, <em>v</em>~1~ = v1 and <em>v</em>~2~ = v2. All these values shall be within the parametric range of the referenced surface. Cyclic properties of the parameter range are assumed. The rectangular trimmed surface inherits its parameterization directly from the basis surface and has parameter ranges from 0 to |<em>u</em>~2~ - <em>u</em>~1~| and 0 to|<em>v</em>~2~-<em>v</em>~1~|.</aside><aside class="aside-note"><mark>NOTE</mark>  If the surface is closed in a given parametric direction, the values of <em>u</em>~2~ or <em>v</em>~2~ may require to be increased by the cyclic range.</aside><aside class="aside-example"><mark>EXAMPLE</mark>  370 degrees is equivalent to 10 degrees, for those surfaces whose parametric form is defined using circular functions (sine and cosine).</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>rectangular_trimmed_surface</strong> in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x.</aside>
+<p>Informal Propositions:</p>
+<ol>
+<li>The domain of the trimmed surface shall be within the domain of the surface being trimmed.</li>
+</ol>
+<h2><a id="8.9.3.56.2-Entity-inheritance"></a>
+    8.9.3.56.2 Entity inheritance
+<a href="IfcRectangularTrimmedSurface.htm#8.9.3.56.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
+<ol class="tier">
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcRepresentationItem.htm">IfcRepresentationItem</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcGeometricRepresentationItem.htm">IfcGeometricRepresentationItem</a></li>
+<li class=""><a href="IfcMappedItem.htm">IfcMappedItem</a></li>
+<li class=""><a href="IfcStyledItem.htm">IfcStyledItem</a></li>
+<li class="abstract"><a href="IfcTopologicalRepresentationItem.htm">IfcTopologicalRepresentationItem</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcSurface.htm">IfcSurface</a></li>
+<li class=""><a href="IfcAnnotationFillArea.htm">IfcAnnotationFillArea</a></li>
+<li class=""><a href="IfcBooleanResult.htm">IfcBooleanResult</a></li>
+<li class=""><a href="IfcBoundingBox.htm">IfcBoundingBox</a></li>
+<li class="abstract"><a href="IfcCartesianPointList.htm">IfcCartesianPointList</a></li>
+<li class="abstract"><a href="IfcCartesianTransformationOperator.htm">IfcCartesianTransformationOperator</a></li>
+<li class="abstract"><a href="IfcCsgPrimitive3D.htm">IfcCsgPrimitive3D</a></li>
+<li class="abstract"><a href="IfcCurve.htm">IfcCurve</a></li>
+<li class=""><a href="IfcDirection.htm">IfcDirection</a></li>
+<li class=""><a href="IfcFaceBasedSurfaceModel.htm">IfcFaceBasedSurfaceModel</a></li>
+<li class=""><a href="IfcFillAreaStyleHatching.htm">IfcFillAreaStyleHatching</a></li>
+<li class=""><a href="IfcFillAreaStyleTiles.htm">IfcFillAreaStyleTiles</a></li>
+<li class=""><a href="IfcGeometricSet.htm">IfcGeometricSet</a></li>
+<li class=""><a href="IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a></li>
+<li class="abstract"><a href="IfcLightSource.htm">IfcLightSource</a></li>
+<li class="abstract"><a href="IfcPlacement.htm">IfcPlacement</a></li>
+<li class=""><a href="IfcPlanarExtent.htm">IfcPlanarExtent</a></li>
+<li class="abstract"><a href="IfcPoint.htm">IfcPoint</a></li>
+<li class=""><a href="IfcSectionedSpine.htm">IfcSectionedSpine</a></li>
+<li class="abstract"><a href="IfcSegment.htm">IfcSegment</a></li>
+<li class=""><a href="IfcShellBasedSurfaceModel.htm">IfcShellBasedSurfaceModel</a></li>
+<li class="abstract"><a href="IfcSolidModel.htm">IfcSolidModel</a></li>
+<li class="abstract"><a href="IfcTessellatedItem.htm">IfcTessellatedItem</a></li>
+<li class=""><a href="IfcTextLiteral.htm">IfcTextLiteral</a></li>
+<li class=""><a href="IfcVector.htm">IfcVector</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcBoundedSurface.htm">IfcBoundedSurface</a></li>
+<li class="abstract"><a href="IfcElementarySurface.htm">IfcElementarySurface</a></li>
+<li class=""><a href="IfcSectionedSurface.htm">IfcSectionedSurface</a></li>
+<li class="abstract"><a href="IfcSweptSurface.htm">IfcSweptSurface</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="current ancestor"><a href="IfcRectangularTrimmedSurface.htm">IfcRectangularTrimmedSurface</a></li>
+<li class="abstract"><a href="IfcBSplineSurface.htm">IfcBSplineSurface</a></li>
+<li class=""><a href="IfcCurveBoundedPlane.htm">IfcCurveBoundedPlane</a></li>
+<li class=""><a href="IfcCurveBoundedSurface.htm">IfcCurveBoundedSurface</a></li>
+</ul>
+</li>
+</ol>
+<h2><a id="8.9.3.56.3-Attributes"></a>
+    8.9.3.56.3 Attributes
+<a href="IfcRectangularTrimmedSurface.htm#8.9.3.56.3-Attributes"><i data-feather="link"></i></a></h2>
+<!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
+<figure><a id="Table-8.9.3.56.A"></a><table class="striped grouped attributes">
+<colgroup>
+<col style="width: 20px;"/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcRepresentationItem.htm">IfcRepresentationItem</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>LayerAssignment</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
+<td data-label="Description">
+<p>Assignment of the representation item to a single or multiple layer(s). The <em>LayerAssignments</em> can override a <em>LayerAssignments</em> of the <em><a href="IfcRepresentation.htm">IfcRepresentation</a></em> it is used  within the list of <em>Items</em>.</p>
+<aside class="aside-change"><mark>IFC2x3-CHANGE</mark>  The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>StyledByItem</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
+<td data-label="Description">
+<p>Reference to the <em><a href="IfcStyledItem.htm">IfcStyledItem</a></em> that provides presentation information to the representation, e.g. a curve style, including colour and thickness to a geometric curve.</p>
+<aside class="aside-change"><mark>IFC2x3-CHANGE</mark>  The inverse attribute <em>StyledByItem</em> has been added.</aside>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcSurface.htm">IfcSurface</a>
+<small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>Dim</em>
+</td>
+<td data-label="Type"><a href="IfcDimensionCount.htm">IfcDimensionCount</a></td>
+<td data-label="Description">
+<p>
+                    This attribute is formally derived.
+                </p>
+<pre><code class="language-express hljs">3</code></pre>
+<p>The space dimensionality of <a href="IfcSurface.htm">IfcSurface</a>. It is always a three-dimensional geometric representation item.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark> Derived attribute promoted from subtypes.</aside>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to show 3 hidden inherited attributes
+                </small>
+<small class="hide-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to hide 3 inherited attributes
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="4">
+<a href="IfcRectangularTrimmedSurface.htm">IfcRectangularTrimmedSurface</a>
+<small>(7)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                BasisSurface
+                
+            </td>
+<td data-label="Type"><a href="IfcSurface.htm">IfcSurface</a></td>
+<td data-label="Description">
+<p>Surface being trimmed.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                U1
+                
+            </td>
+<td data-label="Type"><a href="IfcParameterValue.htm">IfcParameterValue</a></td>
+<td data-label="Description">
+<p>First u parametric value.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                V1
+                
+            </td>
+<td data-label="Type"><a href="IfcParameterValue.htm">IfcParameterValue</a></td>
+<td data-label="Description">
+<p>First v parametric value.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                U2
+                
+            </td>
+<td data-label="Type"><a href="IfcParameterValue.htm">IfcParameterValue</a></td>
+<td data-label="Description">
+<p>Second u parametric value.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                V2
+                
+            </td>
+<td data-label="Type"><a href="IfcParameterValue.htm">IfcParameterValue</a></td>
+<td data-label="Description">
+<p>Second v parametric value.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                Usense
+                
+            </td>
+<td data-label="Type"><a href="IfcBoolean.htm">IfcBoolean</a></td>
+<td data-label="Description">
+<p>Flag to indicate whether the direction of the first parameter of the trimmed surface agrees with or opposes the sense of u in the basis surface.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                Vsense
+                
+            </td>
+<td data-label="Type"><a href="IfcBoolean.htm">IfcBoolean</a></td>
+<td data-label="Description">
+<p>Flag to indicate whether the direction of the second parameter of the trimmed surface agrees with or opposes the sense of v in the basis surface.</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.9.3.56.A<a href="IfcRectangularTrimmedSurface.htm#Table-8.9.3.56.A"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.9.3.56.4-Formal-propositions"></a>
+    8.9.3.56.4 Formal propositions
+<a href="IfcRectangularTrimmedSurface.htm#8.9.3.56.4-Formal-propositions"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-8.9.3.56.B"></a><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>U1AndU2Different</td>
+<td>
+<p>U1 and U2 shall have different values.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">U1 &lt;&gt; U2</code></pre>
+</td>
+</tr>
+<tr>
+<td>UsenseCompatible</td>
+<td>
+<p>With exception of those surfaces closed in the U parameter, direction Usense shall be compatible with the ordered parameter values for U.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">(('IFC4X3.IFCELEMENTARYSURFACE' IN TYPEOF(BasisSurface)) AND
+         (NOT ('IFC4X3.IFCPLANE' IN TYPEOF(BasisSurface)))) OR
+         ('IFC4X3.IFCSURFACEOFREVOLUTION' IN TYPEOF(BasisSurface)) OR
+         (Usense = (U2 &gt; U1))</code></pre>
+</td>
+</tr>
+<tr>
+<td>V1AndV2Different</td>
+<td>
+<p>V1 and V2 shall have different values.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">V1 &lt;&gt; V2</code></pre>
+</td>
+</tr>
+<tr>
+<td>VsenseCompatible</td>
+<td>
+<p>Vsense shall be compatible with the ordered parameter values for V.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">Vsense = (V2 &gt; V1)</code></pre>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.9.3.56.B<a href="IfcRectangularTrimmedSurface.htm#Table-8.9.3.56.B"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.9.3.56.5-Formal-representation"></a>
+    8.9.3.56.5 Formal representation
+<a href="IfcRectangularTrimmedSurface.htm#8.9.3.56.5-Formal-representation"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">ENTITY <a href="IfcRectangularTrimmedSurface.htm">IfcRectangularTrimmedSurface</a>
+ SUBTYPE OF (<a href="IfcBoundedSurface.htm">IfcBoundedSurface</a>);
+	BasisSurface : <a href="IfcSurface.htm">IfcSurface</a>;
+	U1 : <a href="IfcParameterValue.htm">IfcParameterValue</a>;
+	V1 : <a href="IfcParameterValue.htm">IfcParameterValue</a>;
+	U2 : <a href="IfcParameterValue.htm">IfcParameterValue</a>;
+	V2 : <a href="IfcParameterValue.htm">IfcParameterValue</a>;
+	Usense : <a href="IfcBoolean.htm">IfcBoolean</a>;
+	Vsense : <a href="IfcBoolean.htm">IfcBoolean</a>;
+ WHERE
+	U1AndU2Different : U1 &lt;&gt; U2;
+	UsenseCompatible : (('IFC4X3.IFCELEMENTARYSURFACE' IN TYPEOF(BasisSurface)) AND
+         (NOT ('IFC4X3.IFCPLANE' IN TYPEOF(BasisSurface)))) OR
+         ('IFC4X3.IFCSURFACEOFREVOLUTION' IN TYPEOF(BasisSurface)) OR
+         (Usense = (U2 &gt; U1));
+	V1AndV2Different : V1 &lt;&gt; V2;
+	VsenseCompatible : Vsense = (V2 &gt; V1);
+END_ENTITY;</code></pre>
+<h2><a id="8.9.3.56.6-References"></a>
+    8.9.3.56.6 References
+<a href="IfcRectangularTrimmedSurface.htm#8.9.3.56.6-References"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="IfcBoundedSurface.htm">IfcBoundedSurface</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+<div class="changelog">
+<h3><a id="8.9.3.56.7-Changelog"></a>
+                        8.9.3.56.7 Changelog
+                    <a href="IfcRectangularTrimmedSurface.htm#8.9.3.56.7-Changelog"><i data-feather="link"></i></a></h3>
+<h4 class="collapsed"><a id="8.9.3.56.7.1-IFC4"></a>
+                        8.9.3.56.7.1 IFC4
+                    <a href="IfcRectangularTrimmedSurface.htm#8.9.3.56.7.1-IFC4"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where_rules,
+                                U1AndU2Different
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where_rules,
+                                UsenseCompatible
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where_rules,
+                                V1AndV2Different
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where_rules,
+                                VsenseCompatible
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="x-square"></i>
+                                
+                                
+                                where_rules,
+                                WR1
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="x-square"></i>
+                                
+                                
+                                where_rules,
+                                WR2
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="x-square"></i>
+                                
+                                
+                                where_rules,
+                                WR3
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="x-square"></i>
+                                
+                                
+                                where_rules,
+                                WR4
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes Usense definition,
+                                Changed from boolean to <a href="IfcBoolean.htm">IfcBoolean</a>
+</small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes Vsense definition,
+                                Changed from boolean to <a href="IfcBoolean.htm">IfcBoolean</a>
+</small>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/resource/IfcGeometryResource/Entities/IfcRectangularTrimmedSurface.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

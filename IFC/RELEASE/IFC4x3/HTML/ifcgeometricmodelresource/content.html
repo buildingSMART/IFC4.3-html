@@ -1,0 +1,570 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>8.8 IfcGeometricModelResource - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a class="current" href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+<a class="sublink-1" href="../ifcactorresource/content.html">
+                            8.1 IfcActorResource
+                        </a>
+<a class="sublink-1" href="../ifcapprovalresource/content.html">
+                            8.2 IfcApprovalResource
+                        </a>
+<a class="sublink-1" href="../ifcconstraintresource/content.html">
+                            8.3 IfcConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifccostresource/content.html">
+                            8.4 IfcCostResource
+                        </a>
+<a class="sublink-1" href="../ifcdatetimeresource/content.html">
+                            8.5 IfcDateTimeResource
+                        </a>
+<a class="sublink-1" href="../ifcexternalreferenceresource/content.html">
+                            8.6 IfcExternalReferenceResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricconstraintresource/content.html">
+                            8.7 IfcGeometricConstraintResource
+                        </a>
+<a class="sublink-1 current" href="content.html">
+                            8.8 IfcGeometricModelResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometryresource/content.html">
+                            8.9 IfcGeometryResource
+                        </a>
+<a class="sublink-1" href="../ifcmaterialresource/content.html">
+                            8.10 IfcMaterialResource
+                        </a>
+<a class="sublink-1" href="../ifcmeasureresource/content.html">
+                            8.11 IfcMeasureResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationappearanceresource/content.html">
+                            8.12 IfcPresentationAppearanceResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationdefinitionresource/content.html">
+                            8.13 IfcPresentationDefinitionResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationorganizationresource/content.html">
+                            8.14 IfcPresentationOrganizationResource
+                        </a>
+<a class="sublink-1" href="../ifcprofileresource/content.html">
+                            8.15 IfcProfileResource
+                        </a>
+<a class="sublink-1" href="../ifcpropertyresource/content.html">
+                            8.16 IfcPropertyResource
+                        </a>
+<a class="sublink-1" href="../ifcquantityresource/content.html">
+                            8.17 IfcQuantityResource
+                        </a>
+<a class="sublink-1" href="../ifcrepresentationresource/content.html">
+                            8.18 IfcRepresentationResource
+                        </a>
+<a class="sublink-1" href="../ifcstructuralloadresource/content.html">
+                            8.19 IfcStructuralLoadResource
+                        </a>
+<a class="sublink-1" href="../ifctopologyresource/content.html">
+                            8.20 IfcTopologyResource
+                        </a>
+<a class="sublink-1" href="../ifcutilityresource/content.html">
+                            8.21 IfcUtilityResource
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>8.8 IfcGeometricModelResource</h1>
+<h2><a id="8.8.1-Schema-definition"></a>
+    8.8.1 Schema definition
+<a href="content.html#8.8.1-Schema-definition"><i data-feather="link"></i></a></h2>
+<p>The schema <em>IfcGeometricModelResource</em> defines the resources used for geometric model representations. The primary application of this resource is for representation of the shape or geometric form of a product model.</p>
+<p>The following is within the scope of the geometric model representation in the current version of the geometric model resource:</p>
+<ul>
+<li>data describing the precise geometric form of three-dimensional solid objects;</li>
+<li>constructive solid geometry (CSG) models;</li>
+<li>definition of half-spaces;</li>
+<li>creation of solid models by sweeping operations;</li>
+<li>manifold boundary representation (brep) models;</li>
+<li>surface models;</li>
+<li>tessellated models;</li>
+<li>geometric sets.</li>
+</ul>
+<aside class="aside-note"><mark>NOTE</mark>  Many definitions of this schema are adapted from definitions defined within <a href="../content/bibliography.htm#iso-10303-42">ISO 10303-42</a>. The <em>IfcGeometricModelResource</em> refers to the clause 6, "Geometric Model" of <a href="../content/bibliography.htm#iso-10303-42">ISO 10303-42</a>. The definitions of geometric and topological representation, when quoted from <a href="../content/bibliography.htm#iso-10303-42">ISO 10303-42</a>, are explicitly excluded from the copyright of this specification.</aside><aside class="aside-reference"><mark>REFERENCE</mark>  Definition according to ISO 10303-42</aside>
+<p>The constructive solid geometry models are represented by their component primitives and the sequence of Boolean operations (union, intersection, or difference) used in their construction. The entity which communicates the logical sequence of Boolean operations is the boolean result (<em><a href="../lexical/IfcBooleanResult.htm">IfcBooleanResult</a></em>) which identifies an operator and two operands. Since the operands can themselves be Boolean results thus enabling nested operations. Swept solids and half-space solids are permissible Boolean operands. The swept solids are the solid of revolution and the solid of linear extrusion. The swept solids are obtained by extruding or sweeping a planar face which may contain holes. The half space solid is essentially defined as a semi-infinite solid on one side of a surface; it may be limited by a box domain.</p>
+<aside class="aside-reference"><mark>REFERENCE</mark>  Definition according to ISO 10303-42</aside>
+<p>Brep models are represented by the set of shells defining the exterior or interior boundaries. The faceted brep is restricted to represent breps in which all faces are planar and every loop is a poly loop. For such a solid this entity provides a more efficient form of representation. The shell based surface model, the face based surface model and the geometric set entities do not enforce the integrity checks of the manifold solid brep and can be used for the communication of incomplete models (including two-dimensional models).</p>
+<h2><a id="8.8.2-Types"></a>
+    8.8.2 Types
+<a href="content.html#8.8.2-Types"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="8.8.2.1">
+<a href="../lexical/IfcBooleanOperand.htm">
+        
+            IfcBooleanOperand
+        
+        </a>
+</li><li number="8.8.2.2">
+<a href="../lexical/IfcBooleanOperator.htm">
+        
+            IfcBooleanOperator
+        
+        </a>
+</li><li number="8.8.2.3">
+<a href="../lexical/IfcCsgSelect.htm">
+        
+            IfcCsgSelect
+        
+        </a>
+</li><li number="8.8.2.4">
+<a href="../lexical/IfcGeometricSetSelect.htm">
+        
+            IfcGeometricSetSelect
+        
+        </a>
+</li>
+</ol>
+<h2><a id="8.8.3-Entities"></a>
+    8.8.3 Entities
+<a href="content.html#8.8.3-Entities"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="8.8.3.1">
+<a href="../lexical/IfcAdvancedBrep.htm">
+        
+            IfcAdvancedBrep
+        
+        </a>
+</li><li number="8.8.3.2">
+<a href="../lexical/IfcAdvancedBrepWithVoids.htm">
+        
+            IfcAdvancedBrepWithVoids
+        
+        </a>
+</li><li number="8.8.3.3">
+<a href="../lexical/IfcBlock.htm">
+        
+            IfcBlock
+        
+        </a>
+</li><li number="8.8.3.4">
+<a href="../lexical/IfcBooleanClippingResult.htm">
+        
+            IfcBooleanClippingResult
+        
+        </a>
+</li><li number="8.8.3.5">
+<a href="../lexical/IfcBooleanResult.htm">
+        
+            IfcBooleanResult
+        
+        </a>
+</li><li number="8.8.3.6">
+<a href="../lexical/IfcBoundingBox.htm">
+        
+            IfcBoundingBox
+        
+        </a>
+</li><li number="8.8.3.7">
+<a href="../lexical/IfcBoxedHalfSpace.htm">
+        
+            IfcBoxedHalfSpace
+        
+        </a>
+</li><li number="8.8.3.8">
+<a href="../lexical/IfcCartesianPointList.htm">
+        
+            IfcCartesianPointList
+        
+        </a>
+</li><li number="8.8.3.9">
+<a href="../lexical/IfcCartesianPointList2D.htm">
+        
+            IfcCartesianPointList2D
+        
+        </a>
+</li><li number="8.8.3.10">
+<a href="../lexical/IfcCartesianPointList3D.htm">
+        
+            IfcCartesianPointList3D
+        
+        </a>
+</li><li number="8.8.3.11">
+<a href="../lexical/IfcCsgPrimitive3D.htm">
+        
+            IfcCsgPrimitive3D
+        
+        </a>
+</li><li number="8.8.3.12">
+<a href="../lexical/IfcCsgSolid.htm">
+        
+            IfcCsgSolid
+        
+        </a>
+</li><li number="8.8.3.13">
+<a href="../lexical/IfcDirectrixDerivedReferenceSweptAreaSolid.htm">
+        
+            IfcDirectrixDerivedReferenceSweptAreaSolid
+        
+        </a>
+</li><li number="8.8.3.14">
+<a href="../lexical/IfcExtrudedAreaSolid.htm">
+        
+            IfcExtrudedAreaSolid
+        
+        </a>
+</li><li number="8.8.3.15">
+<a href="../lexical/IfcExtrudedAreaSolidTapered.htm">
+        
+            IfcExtrudedAreaSolidTapered
+        
+        </a>
+</li><li number="8.8.3.16">
+<a href="../lexical/IfcFaceBasedSurfaceModel.htm">
+        
+            IfcFaceBasedSurfaceModel
+        
+        </a>
+</li><li number="8.8.3.17">
+<a href="../lexical/IfcFacetedBrep.htm">
+        
+            IfcFacetedBrep
+        
+        </a>
+</li><li number="8.8.3.18">
+<a href="../lexical/IfcFacetedBrepWithVoids.htm">
+        
+            IfcFacetedBrepWithVoids
+        
+        </a>
+</li><li number="8.8.3.19">
+<a href="../lexical/IfcFixedReferenceSweptAreaSolid.htm">
+        
+            IfcFixedReferenceSweptAreaSolid
+        
+        </a>
+</li><li number="8.8.3.20">
+<a href="../lexical/IfcGeometricCurveSet.htm">
+        
+            IfcGeometricCurveSet
+        
+        </a>
+</li><li number="8.8.3.21">
+<a href="../lexical/IfcGeometricSet.htm">
+        
+            IfcGeometricSet
+        
+        </a>
+</li><li number="8.8.3.22">
+<a href="../lexical/IfcHalfSpaceSolid.htm">
+        
+            IfcHalfSpaceSolid
+        
+        </a>
+</li><li number="8.8.3.23">
+<a href="../lexical/IfcIndexedPolygonalFace.htm">
+        
+            IfcIndexedPolygonalFace
+        
+        </a>
+</li><li number="8.8.3.24">
+<a href="../lexical/IfcIndexedPolygonalFaceWithVoids.htm">
+        
+            IfcIndexedPolygonalFaceWithVoids
+        
+        </a>
+</li><li number="8.8.3.25">
+<a href="../lexical/IfcManifoldSolidBrep.htm">
+        
+            IfcManifoldSolidBrep
+        
+        </a>
+</li><li number="8.8.3.26">
+<a href="../lexical/IfcPolygonalBoundedHalfSpace.htm">
+        
+            IfcPolygonalBoundedHalfSpace
+        
+        </a>
+</li><li number="8.8.3.27">
+<a href="../lexical/IfcPolygonalFaceSet.htm">
+        
+            IfcPolygonalFaceSet
+        
+        </a>
+</li><li number="8.8.3.28">
+<a href="../lexical/IfcRectangularPyramid.htm">
+        
+            IfcRectangularPyramid
+        
+        </a>
+</li><li number="8.8.3.29">
+<a href="../lexical/IfcRevolvedAreaSolid.htm">
+        
+            IfcRevolvedAreaSolid
+        
+        </a>
+</li><li number="8.8.3.30">
+<a href="../lexical/IfcRevolvedAreaSolidTapered.htm">
+        
+            IfcRevolvedAreaSolidTapered
+        
+        </a>
+</li><li number="8.8.3.31">
+<a href="../lexical/IfcRightCircularCone.htm">
+        
+            IfcRightCircularCone
+        
+        </a>
+</li><li number="8.8.3.32">
+<a href="../lexical/IfcRightCircularCylinder.htm">
+        
+            IfcRightCircularCylinder
+        
+        </a>
+</li><li number="8.8.3.33">
+<a href="../lexical/IfcSectionedSolid.htm">
+        
+            IfcSectionedSolid
+        
+        </a>
+</li><li number="8.8.3.34">
+<a href="../lexical/IfcSectionedSolidHorizontal.htm">
+        
+            IfcSectionedSolidHorizontal
+        
+        </a>
+</li><li number="8.8.3.35">
+<a href="../lexical/IfcSectionedSpine.htm">
+        
+            IfcSectionedSpine
+        
+        </a>
+</li><li number="8.8.3.36">
+<a href="../lexical/IfcSectionedSurface.htm">
+        
+            IfcSectionedSurface
+        
+        </a>
+</li><li number="8.8.3.37">
+<a href="../lexical/IfcShellBasedSurfaceModel.htm">
+        
+            IfcShellBasedSurfaceModel
+        
+        </a>
+</li><li number="8.8.3.38">
+<a href="../lexical/IfcSolidModel.htm">
+        
+            IfcSolidModel
+        
+        </a>
+</li><li number="8.8.3.39">
+<a href="../lexical/IfcSphere.htm">
+        
+            IfcSphere
+        
+        </a>
+</li><li number="8.8.3.40">
+<a href="../lexical/IfcSurfaceCurveSweptAreaSolid.htm">
+        
+            IfcSurfaceCurveSweptAreaSolid
+        
+        </a>
+</li><li number="8.8.3.41">
+<a href="../lexical/IfcSweptAreaSolid.htm">
+        
+            IfcSweptAreaSolid
+        
+        </a>
+</li><li number="8.8.3.42">
+<a href="../lexical/IfcSweptDiskSolid.htm">
+        
+            IfcSweptDiskSolid
+        
+        </a>
+</li><li number="8.8.3.43">
+<a href="../lexical/IfcSweptDiskSolidPolygonal.htm">
+        
+            IfcSweptDiskSolidPolygonal
+        
+        </a>
+</li><li number="8.8.3.44">
+<a href="../lexical/IfcTessellatedFaceSet.htm">
+        
+            IfcTessellatedFaceSet
+        
+        </a>
+</li><li number="8.8.3.45">
+<a href="../lexical/IfcTessellatedItem.htm">
+        
+            IfcTessellatedItem
+        
+        </a>
+</li><li number="8.8.3.46">
+<a href="../lexical/IfcTriangulatedFaceSet.htm">
+        
+            IfcTriangulatedFaceSet
+        
+        </a>
+</li><li number="8.8.3.47">
+<a href="../lexical/IfcTriangulatedIrregularNetwork.htm">
+        
+            IfcTriangulatedIrregularNetwork
+        
+        </a>
+</li>
+</ol>
+<h2><a id="8.8.4-Property-Sets"></a>
+    8.8.4 Property Sets
+<a href="content.html#8.8.4-Property-Sets"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+<h2><a id="8.8.5-Quantity-Sets"></a>
+    8.8.5 Quantity Sets
+<a href="content.html#8.8.5-Quantity-Sets"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+<h2><a id="8.8.6-Functions"></a>
+    8.8.6 Functions
+<a href="content.html#8.8.6-Functions"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="8.8.6.1">
+<a href="../lexical/IfcPointListDim.htm">
+        
+            IfcPointListDim
+        
+        </a>
+</li><li number="8.8.6.2">
+<a href="../lexical/IfcTaperedSweptAreaProfiles.htm">
+        
+            IfcTaperedSweptAreaProfiles
+        
+        </a>
+</li>
+</ol>
+<h2><a id="8.8.7-Rules"></a>
+    8.8.7 Rules
+<a href="content.html#8.8.7-Rules"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+<h2><a id="8.8.8-PropertyEnumerations"></a>
+    8.8.8 PropertyEnumerations
+<a href="content.html#8.8.8-PropertyEnumerations"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/resource/IfcGeometricModelResource/README.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,957 @@
+<html lang="en">
+<head>
+<link href="../../../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../../../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>4.10.7 Project Units - IFC4.3.0.0 Documentation</title>
+<link href="../../../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../../../toc.html">
+                             Contents
+                        </a>
+<a href="../../../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../../../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../../../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../../../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../../../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a class="current" href="../../content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../../../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../../../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../../../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a href="../../../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../../../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../../../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../../../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../../../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../../../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../../../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../../../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../../../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>4.10.7 Project Units</h1>
+<p>The project context includes the definition of the default units within the IFC data set. They are declared once for the context of the whole data set. Default units are those units that apply:</p>
+<ul>
+<li>to all geometric representation items within the geometric representation contexts;</li>
+<li>to all attributes with a defined datatype indicating a measure datatype;</li>
+<li>to all properties and quantities with a defined datatype indicating a measure datatype and with no local unit definitions provided.</li>
+</ul>
+<p>Default units are defined as either:</p>
+<ul>
+<li>SI Units with SI unit name and prefix</li>
+<li>Conversion based units with a conversion factor to its SI unit</li>
+<li>Derived units, consisting of one-to-many unit elements, being SI units or conversion based units</li>
+<li>Monetary unit as a special case of a unit to hold the currency name</li>
+</ul>
+<aside class="aside-example"><mark>EXAMPLE</mark>  Meter is an SI unit without prefix, milli meter is an SI unit with prefix, inch and foot are conversion based units to be declared with a conversion factor to the SI unit (here meter), heat flux density (W/m2) is a derived unit with the unit elements Power (W) and Area (m2), and Euro is a monetary unit.</aside>
+<p>
+    The following diagram shows the generic classes and relationships used when applying this concept.
+    
+    In addition, concepts may have particular importance to common or standardised industry practices and scenarios. For these specific usage scenarios, the tables below shows a recommended list of general usage patterns that users may adopt.
+    
+</p>
+<figure><a id="Figure-4.10.7.A"></a><svg height="1164px" viewbox="0.00 0.00 1676.00 1552.00" width="1257px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="graph" id="graph0" transform="scale(1 1) rotate(0) translate(4 1548)">
+<title>G</title>
+<polygon fill="transparent" points="-4,4 -4,-1548 1672,-1548 1672,4 -4,4" stroke="transparent"></polygon>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcContext.htm'>IfcContext</a> -->
+<g class="node" id="node1">
+<title><a href="../../../lexical/IfcContext.htm">IfcContext</a></title>
+<polygon fill="#1976d2" points="8.5,-1513 8.5,-1540 258.5,-1540 258.5,-1513 8.5,-1513" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1513 258.5,-1513 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="14.5" y="-1523.8"><a href="../../../lexical/IfcContext.htm">IfcContext</a></text>
+<polygon fill="#1976d2" points="258.5,-1513 258.5,-1540 297.5,-1540 297.5,-1513 258.5,-1513" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1513 297.5,-1513 " stroke="#000000"></polyline>
+<polygon fill="#ffffff" points="8.5,-1486 8.5,-1513 258.5,-1513 258.5,-1486 8.5,-1486" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1486 258.5,-1486 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-1495.8">GlobalId</text>
+<polygon fill="#ffffff" points="258.5,-1486 258.5,-1513 297.5,-1513 297.5,-1486 258.5,-1486" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1486 297.5,-1486 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-1495.8">[1:1]</text>
+<polygon fill="#ffffff" points="8.5,-1459 8.5,-1486 258.5,-1486 258.5,-1459 8.5,-1459" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1459 258.5,-1459 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-1468.8">OwnerHistory</text>
+<polygon fill="#ffffff" points="258.5,-1459 258.5,-1486 297.5,-1486 297.5,-1459 258.5,-1459" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1459 297.5,-1459 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-1468.8">[0:1]</text>
+<polygon fill="#ffffff" points="8.5,-1432 8.5,-1459 258.5,-1459 258.5,-1432 8.5,-1432" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1432 258.5,-1432 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-1441.8">Name</text>
+<polygon fill="#ffffff" points="258.5,-1432 258.5,-1459 297.5,-1459 297.5,-1432 258.5,-1432" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1432 297.5,-1432 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-1441.8">[0:1]</text>
+<polygon fill="#ffffff" points="8.5,-1405 8.5,-1432 258.5,-1432 258.5,-1405 8.5,-1405" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1405 258.5,-1405 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-1414.8">Description</text>
+<polygon fill="#ffffff" points="258.5,-1405 258.5,-1432 297.5,-1432 297.5,-1405 258.5,-1405" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1405 297.5,-1405 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-1414.8">[0:1]</text>
+<polygon fill="#ffffff" points="8.5,-1378 8.5,-1405 258.5,-1405 258.5,-1378 8.5,-1378" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1378 258.5,-1378 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-1387.8">HasAssignments</text>
+<polygon fill="#ffffff" points="258.5,-1378 258.5,-1405 297.5,-1405 297.5,-1378 258.5,-1378" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1378 297.5,-1378 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-1387.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-1351 8.5,-1378 258.5,-1378 258.5,-1351 8.5,-1351" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1351 258.5,-1351 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-1360.8">Nests</text>
+<polygon fill="#ffffff" points="258.5,-1351 258.5,-1378 297.5,-1378 297.5,-1351 258.5,-1351" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1351 297.5,-1351 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-1360.8">[0:1]</text>
+<polygon fill="#ffffff" points="8.5,-1324 8.5,-1351 258.5,-1351 258.5,-1324 8.5,-1324" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1324 258.5,-1324 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-1333.8">IsNestedBy</text>
+<polygon fill="#ffffff" points="258.5,-1324 258.5,-1351 297.5,-1351 297.5,-1324 258.5,-1324" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1324 297.5,-1324 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-1333.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-1297 8.5,-1324 258.5,-1324 258.5,-1297 8.5,-1297" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1297 258.5,-1297 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-1306.8">HasContext</text>
+<polygon fill="#ffffff" points="258.5,-1297 258.5,-1324 297.5,-1324 297.5,-1297 258.5,-1297" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1297 297.5,-1297 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-1306.8">[0:1]</text>
+<polygon fill="#ffffff" points="8.5,-1270 8.5,-1297 258.5,-1297 258.5,-1270 8.5,-1270" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1270 258.5,-1270 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-1279.8">IsDecomposedBy</text>
+<polygon fill="#ffffff" points="258.5,-1270 258.5,-1297 297.5,-1297 297.5,-1270 258.5,-1270" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1270 297.5,-1270 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-1279.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-1243 8.5,-1270 258.5,-1270 258.5,-1243 8.5,-1243" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1243 258.5,-1243 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-1252.8">Decomposes</text>
+<polygon fill="#ffffff" points="258.5,-1243 258.5,-1270 297.5,-1270 297.5,-1243 258.5,-1243" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1243 297.5,-1243 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-1252.8">[0:1]</text>
+<polygon fill="#ffffff" points="8.5,-1216 8.5,-1243 258.5,-1243 258.5,-1216 8.5,-1216" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1216 258.5,-1216 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-1225.8">HasAssociations</text>
+<polygon fill="#ffffff" points="258.5,-1216 258.5,-1243 297.5,-1243 297.5,-1216 258.5,-1216" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1216 297.5,-1216 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-1225.8">[0:?]</text>
+<polygon fill="#dddddd" points="8.5,-1189 8.5,-1216 258.5,-1216 258.5,-1189 8.5,-1189" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1189 258.5,-1189 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-1198.8">ObjectType</text>
+<polygon fill="#dddddd" points="258.5,-1189 258.5,-1216 297.5,-1216 297.5,-1189 258.5,-1189" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1189 297.5,-1189 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-1198.8">[0:1]</text>
+<polygon fill="#dddddd" points="8.5,-1162 8.5,-1189 258.5,-1189 258.5,-1162 8.5,-1162" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1162 258.5,-1162 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-1171.8">LongName</text>
+<polygon fill="#dddddd" points="258.5,-1162 258.5,-1189 297.5,-1189 297.5,-1162 258.5,-1162" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1162 297.5,-1162 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-1171.8">[0:1]</text>
+<polygon fill="#dddddd" points="8.5,-1135 8.5,-1162 258.5,-1162 258.5,-1135 8.5,-1135" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1135 258.5,-1135 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-1144.8">Phase</text>
+<polygon fill="#dddddd" points="258.5,-1135 258.5,-1162 297.5,-1162 297.5,-1135 258.5,-1135" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1135 297.5,-1135 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-1144.8">[0:1]</text>
+<polygon fill="#ffffff" points="8.5,-1108 8.5,-1135 258.5,-1135 258.5,-1108 8.5,-1108" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1108 258.5,-1108 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-1117.8">RepresentationContexts</text>
+<polygon fill="#ffffff" points="258.5,-1108 258.5,-1135 297.5,-1135 297.5,-1108 258.5,-1108" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1108 297.5,-1108 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-1117.8">[1:?]</text>
+<polygon fill="#eeeeee" points="8.5,-1081 8.5,-1108 258.5,-1108 258.5,-1081 8.5,-1081" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1081 258.5,-1081 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="106" y="-1091.8">HasUnits</text>
+<polygon fill="#eeeeee" points="258.5,-1081 258.5,-1108 297.5,-1108 297.5,-1081 258.5,-1081" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1081 297.5,-1081 " stroke="#000000"></polyline>
+<polygon fill="#dddddd" points="8.5,-1054 8.5,-1081 258.5,-1081 258.5,-1054 8.5,-1054" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1054 258.5,-1054 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-1063.8">UnitsInContext</text>
+<polygon fill="#dddddd" points="258.5,-1054 258.5,-1081 297.5,-1081 297.5,-1054 258.5,-1054" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1054 297.5,-1054 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="264.5" y="-1063.8">[0:1]</text>
+<polygon fill="#ffffff" points="8.5,-1027 8.5,-1054 258.5,-1054 258.5,-1027 8.5,-1027" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1027 258.5,-1027 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-1036.8">IsDefinedBy</text>
+<polygon fill="#ffffff" points="258.5,-1027 258.5,-1054 297.5,-1054 297.5,-1027 258.5,-1027" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1027 297.5,-1027 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-1036.8">[0:?]</text>
+<polygon fill="#ffffff" points="8.5,-1000 8.5,-1027 258.5,-1027 258.5,-1000 8.5,-1000" stroke="transparent"></polygon>
+<polyline fill="none" points="8.5,-1000 258.5,-1000 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="14.5" y="-1009.8">Declares</text>
+<polygon fill="#ffffff" points="258.5,-1000 258.5,-1027 297.5,-1027 297.5,-1000 258.5,-1000" stroke="transparent"></polygon>
+<polyline fill="none" points="258.5,-1000 297.5,-1000 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="265.5" y="-1009.8">[0:?]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm'>IfcUnitAssignment</a> -->
+<g class="node" id="node2">
+<title><a href="../../../lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a></title>
+<polygon fill="#1976d2" points="349,-1053 349,-1080 599,-1080 599,-1053 349,-1053" stroke="transparent"></polygon>
+<polyline fill="none" points="349,-1053 599,-1053 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="355" y="-1063.8"><a href="../../../lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a></text>
+<polygon fill="#1976d2" points="599,-1053 599,-1080 637,-1080 637,-1053 599,-1053" stroke="transparent"></polygon>
+<polyline fill="none" points="599,-1053 637,-1053 " stroke="#000000"></polyline>
+<polygon fill="#dddddd" points="349,-1026 349,-1053 599,-1053 599,-1026 349,-1026" stroke="transparent"></polygon>
+<polyline fill="none" points="349,-1026 599,-1026 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="355" y="-1035.8">Units</text>
+<polygon fill="#dddddd" points="599,-1026 599,-1053 637,-1053 637,-1026 599,-1026" stroke="transparent"></polygon>
+<polyline fill="none" points="599,-1026 637,-1026 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="605" y="-1035.8">[1:?]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcContext.htm'>IfcContext</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm'>IfcUnitAssignment</a> -->
+<g class="edge" id="edge1">
+<title><a href="../../../lexical/IfcContext.htm">IfcContext</a>:UnitsInContext1-&gt;<a href="../../../lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a>:IfcUnitAssignment0</title>
+<path d="M297.5,-1067C297.5,-1067 323.8166,-1067 338.8253,-1067" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="339,-1070.5001 349,-1067 339,-1063.5001 339,-1070.5001" stroke="#000000"></polygon>
+</g>
+<!-- IfcLabel_4 -->
+<g class="node" id="node3">
+<title>IfcLabel_4</title>
+<polygon fill="#1976d2" points="358,-1119 358,-1146 608,-1146 608,-1119 358,-1119" stroke="transparent"></polygon>
+<polyline fill="none" points="358,-1119 608,-1119 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="364" y="-1129.8"><a href="../../../lexical/IfcLabel.htm">IfcLabel</a></text>
+<polygon fill="#1976d2" points="608,-1119 608,-1146 628,-1146 628,-1119 608,-1119" stroke="transparent"></polygon>
+<polyline fill="none" points="608,-1119 628,-1119 " stroke="#000000"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcContext.htm'>IfcContext</a>&#45;&gt;IfcLabel_4 -->
+<g class="edge" id="edge2">
+<title><a href="../../../lexical/IfcContext.htm">IfcContext</a>:Phase1-&gt;IfcLabel_4:IfcLabel0</title>
+<path d="M297.5,-1148C297.5,-1148 331.1777,-1139.0935 348.2796,-1134.5707" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="349.2272,-1137.9405 358,-1132 347.4375,-1131.1731 349.2272,-1137.9405" stroke="#000000"></polygon>
+</g>
+<!-- IfcLabel_5 -->
+<g class="node" id="node4">
+<title>IfcLabel_5</title>
+<polygon fill="#1976d2" points="358,-1205 358,-1232 608,-1232 608,-1205 358,-1205" stroke="transparent"></polygon>
+<polyline fill="none" points="358,-1205 608,-1205 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="364" y="-1215.8"><a href="../../../lexical/IfcLabel.htm">IfcLabel</a></text>
+<polygon fill="#1976d2" points="608,-1205 608,-1232 628,-1232 628,-1205 608,-1205" stroke="transparent"></polygon>
+<polyline fill="none" points="608,-1205 628,-1205 " stroke="#000000"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcContext.htm'>IfcContext</a>&#45;&gt;IfcLabel_5 -->
+<g class="edge" id="edge3">
+<title><a href="../../../lexical/IfcContext.htm">IfcContext</a>:ObjectType1-&gt;IfcLabel_5:IfcLabel0</title>
+<path d="M297.5,-1202C297.5,-1202 331.1777,-1210.9065 348.2796,-1215.4293" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="347.4375,-1218.8269 358,-1218 349.2272,-1212.0595 347.4375,-1218.8269" stroke="#000000"></polygon>
+</g>
+<!-- IfcLabel_6 -->
+<g class="node" id="node5">
+<title>IfcLabel_6</title>
+<polygon fill="#1976d2" points="358,-1162 358,-1189 608,-1189 608,-1162 358,-1162" stroke="transparent"></polygon>
+<polyline fill="none" points="358,-1162 608,-1162 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="364" y="-1172.8"><a href="../../../lexical/IfcLabel.htm">IfcLabel</a></text>
+<polygon fill="#1976d2" points="608,-1162 608,-1189 628,-1189 628,-1162 608,-1162" stroke="transparent"></polygon>
+<polyline fill="none" points="608,-1162 628,-1162 " stroke="#000000"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcContext.htm'>IfcContext</a>&#45;&gt;IfcLabel_6 -->
+<g class="edge" id="edge4">
+<title><a href="../../../lexical/IfcContext.htm">IfcContext</a>:LongName1-&gt;IfcLabel_6:IfcLabel0</title>
+<path d="M297.5,-1175C297.5,-1175 330.4761,-1175 347.737,-1175" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="348,-1178.5001 358,-1175 348,-1171.5001 348,-1178.5001" stroke="#000000"></polygon>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedUnit.htm'>IfcDerivedUnit</a> -->
+<g class="node" id="node6">
+<title><a href="../../../lexical/IfcDerivedUnit.htm">IfcDerivedUnit</a></title>
+<polygon fill="#1976d2" points="689.5,-1272 689.5,-1299 939.5,-1299 939.5,-1272 689.5,-1272" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-1272 939.5,-1272 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="695.5" y="-1282.8"><a href="../../../lexical/IfcDerivedUnit.htm">IfcDerivedUnit</a></text>
+<polygon fill="#1976d2" points="939.5,-1272 939.5,-1299 978.5,-1299 978.5,-1272 939.5,-1272" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-1272 978.5,-1272 " stroke="#000000"></polyline>
+<polygon fill="#dddddd" points="689.5,-1245 689.5,-1272 939.5,-1272 939.5,-1245 689.5,-1245" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-1245 939.5,-1245 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="695.5" y="-1254.8">Elements</text>
+<polygon fill="#dddddd" points="939.5,-1245 939.5,-1272 978.5,-1272 978.5,-1245 939.5,-1245" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-1245 978.5,-1245 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="946.5" y="-1254.8">[1:?]</text>
+<polygon fill="#eeeeee" points="689.5,-1218 689.5,-1245 939.5,-1245 939.5,-1218 689.5,-1218" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-1218 939.5,-1218 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="764" y="-1228.8">DerivedUnitType</text>
+<polygon fill="#eeeeee" points="939.5,-1218 939.5,-1245 978.5,-1245 978.5,-1218 939.5,-1218" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-1218 978.5,-1218 " stroke="#000000"></polyline>
+<polygon fill="#dddddd" points="689.5,-1191 689.5,-1218 939.5,-1218 939.5,-1191 689.5,-1191" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-1191 939.5,-1191 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="695.5" y="-1200.8">UnitType</text>
+<polygon fill="#dddddd" points="939.5,-1191 939.5,-1218 978.5,-1218 978.5,-1191 939.5,-1191" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-1191 978.5,-1191 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="945.5" y="-1200.8">[1:1]</text>
+<polygon fill="#dddddd" points="689.5,-1164 689.5,-1191 939.5,-1191 939.5,-1164 689.5,-1164" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-1164 939.5,-1164 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="695.5" y="-1173.8">UserDefinedType</text>
+<polygon fill="#dddddd" points="939.5,-1164 939.5,-1191 978.5,-1191 978.5,-1164 939.5,-1164" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-1164 978.5,-1164 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="945.5" y="-1173.8">[0:1]</text>
+<polygon fill="#ffffff" points="689.5,-1137 689.5,-1164 939.5,-1164 939.5,-1137 689.5,-1137" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-1137 939.5,-1137 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="695.5" y="-1146.8">Name</text>
+<polygon fill="#ffffff" points="939.5,-1137 939.5,-1164 978.5,-1164 978.5,-1137 939.5,-1137" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-1137 978.5,-1137 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="945.5" y="-1146.8">[0:1]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm'>IfcUnitAssignment</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedUnit.htm'>IfcDerivedUnit</a> -->
+<g class="edge" id="edge5">
+<title><a href="../../../lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a>:Units1-&gt;<a href="../../../lexical/IfcDerivedUnit.htm">IfcDerivedUnit</a>:IfcDerivedUnit0</title>
+<path d="M637,-1039C637,-1039 677.555,-1229.8016 687.3769,-1276.0114" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="683.9973,-1276.9462 689.5,-1286 690.8444,-1275.4908 683.9973,-1276.9462" stroke="#000000"></polygon>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMonetaryUnit.htm'>IfcMonetaryUnit</a> -->
+<g class="node" id="node7">
+<title><a href="../../../lexical/IfcMonetaryUnit.htm">IfcMonetaryUnit</a></title>
+<polygon fill="#1976d2" points="689.5,-1095 689.5,-1122 939.5,-1122 939.5,-1095 689.5,-1095" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-1095 939.5,-1095 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="695.5" y="-1105.8"><a href="../../../lexical/IfcMonetaryUnit.htm">IfcMonetaryUnit</a></text>
+<polygon fill="#1976d2" points="939.5,-1095 939.5,-1122 978.5,-1122 978.5,-1095 939.5,-1095" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-1095 978.5,-1095 " stroke="#000000"></polyline>
+<polygon fill="#dddddd" points="689.5,-1068 689.5,-1095 939.5,-1095 939.5,-1068 689.5,-1068" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-1068 939.5,-1068 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="695.5" y="-1077.8">Currency</text>
+<polygon fill="#dddddd" points="939.5,-1068 939.5,-1095 978.5,-1095 978.5,-1068 939.5,-1068" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-1068 978.5,-1068 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="945.5" y="-1077.8">[1:1]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm'>IfcUnitAssignment</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMonetaryUnit.htm'>IfcMonetaryUnit</a> -->
+<g class="edge" id="edge6">
+<title><a href="../../../lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a>:Units1-&gt;<a href="../../../lexical/IfcMonetaryUnit.htm">IfcMonetaryUnit</a>:IfcMonetaryUnit0</title>
+<path d="M637,-1039C637,-1039 669.6875,-1082.5834 683.4776,-1100.9701" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="680.7,-1103.1 689.5,-1109 686.3,-1098.9 680.7,-1103.1" stroke="#000000"></polygon>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSIUnit.htm'>IfcSIUnit</a> -->
+<g class="node" id="node8">
+<title><a href="../../../lexical/IfcSIUnit.htm">IfcSIUnit</a></title>
+<polygon fill="#1976d2" points="689.5,-1025 689.5,-1052 939.5,-1052 939.5,-1025 689.5,-1025" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-1025 939.5,-1025 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="695.5" y="-1035.8"><a href="../../../lexical/IfcSIUnit.htm">IfcSIUnit</a></text>
+<polygon fill="#1976d2" points="939.5,-1025 939.5,-1052 978.5,-1052 978.5,-1025 939.5,-1025" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-1025 978.5,-1025 " stroke="#000000"></polyline>
+<polygon fill="#ffffff" points="689.5,-998 689.5,-1025 939.5,-1025 939.5,-998 689.5,-998" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-998 939.5,-998 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="695.5" y="-1007.8">Dimensions</text>
+<polygon fill="#ffffff" points="939.5,-998 939.5,-1025 978.5,-1025 978.5,-998 939.5,-998" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-998 978.5,-998 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="945.5" y="-1007.8">[1:1]</text>
+<polygon fill="#eeeeee" points="689.5,-971 689.5,-998 939.5,-998 939.5,-971 689.5,-971" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-971 939.5,-971 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="780.5" y="-981.8">SIUnitType</text>
+<polygon fill="#eeeeee" points="939.5,-971 939.5,-998 978.5,-998 978.5,-971 939.5,-971" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-971 978.5,-971 " stroke="#000000"></polyline>
+<polygon fill="#dddddd" points="689.5,-944 689.5,-971 939.5,-971 939.5,-944 689.5,-944" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-944 939.5,-944 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="695.5" y="-953.8">UnitType</text>
+<polygon fill="#dddddd" points="939.5,-944 939.5,-971 978.5,-971 978.5,-944 939.5,-944" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-944 978.5,-944 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="945.5" y="-953.8">[1:1]</text>
+<polygon fill="#dddddd" points="689.5,-917 689.5,-944 939.5,-944 939.5,-917 689.5,-917" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-917 939.5,-917 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="695.5" y="-926.8">Prefix</text>
+<polygon fill="#dddddd" points="939.5,-917 939.5,-944 978.5,-944 978.5,-917 939.5,-917" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-917 978.5,-917 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="945.5" y="-926.8">[0:1]</text>
+<polygon fill="#eeeeee" points="689.5,-890 689.5,-917 939.5,-917 939.5,-890 689.5,-890" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-890 939.5,-890 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="778" y="-900.8">SIUnitName</text>
+<polygon fill="#eeeeee" points="939.5,-890 939.5,-917 978.5,-917 978.5,-890 939.5,-890" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-890 978.5,-890 " stroke="#000000"></polyline>
+<polygon fill="#dddddd" points="689.5,-863 689.5,-890 939.5,-890 939.5,-863 689.5,-863" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-863 939.5,-863 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="695.5" y="-872.8">Name</text>
+<polygon fill="#dddddd" points="939.5,-863 939.5,-890 978.5,-890 978.5,-863 939.5,-863" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-863 978.5,-863 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="945.5" y="-872.8">[1:1]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm'>IfcUnitAssignment</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSIUnit.htm'>IfcSIUnit</a> -->
+<g class="edge" id="edge7">
+<title><a href="../../../lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a>:Units1-&gt;<a href="../../../lexical/IfcSIUnit.htm">IfcSIUnit</a>:IfcSIUnit0</title>
+<path d="M637,-1039C637,-1039 664.1216,-1039 679.3775,-1039" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="679.5,-1042.5001 689.5,-1039 679.5,-1035.5001 679.5,-1042.5001" stroke="#000000"></polygon>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConversionBasedUnit.htm'>IfcConversionBasedUnit</a> -->
+<g class="node" id="node9">
+<title><a href="../../../lexical/IfcConversionBasedUnit.htm">IfcConversionBasedUnit</a></title>
+<polygon fill="#1976d2" points="689.5,-692 689.5,-719 939.5,-719 939.5,-692 689.5,-692" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-692 939.5,-692 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="695.5" y="-702.8"><a href="../../../lexical/IfcConversionBasedUnit.htm">IfcConversionBasedUnit</a></text>
+<polygon fill="#1976d2" points="939.5,-692 939.5,-719 978.5,-719 978.5,-692 939.5,-692" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-692 978.5,-692 " stroke="#000000"></polyline>
+<polygon fill="#dddddd" points="689.5,-665 689.5,-692 939.5,-692 939.5,-665 689.5,-665" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-665 939.5,-665 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="695.5" y="-674.8">Dimensions</text>
+<polygon fill="#dddddd" points="939.5,-665 939.5,-692 978.5,-692 978.5,-665 939.5,-665" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-665 978.5,-665 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="945.5" y="-674.8">[1:1]</text>
+<polygon fill="#eeeeee" points="689.5,-638 689.5,-665 939.5,-665 939.5,-638 689.5,-638" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-638 939.5,-638 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="754" y="-648.8">ConversionUnitType</text>
+<polygon fill="#eeeeee" points="939.5,-638 939.5,-665 978.5,-665 978.5,-638 939.5,-638" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-638 978.5,-638 " stroke="#000000"></polyline>
+<polygon fill="#dddddd" points="689.5,-611 689.5,-638 939.5,-638 939.5,-611 689.5,-611" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-611 939.5,-611 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="695.5" y="-620.8">UnitType</text>
+<polygon fill="#dddddd" points="939.5,-611 939.5,-638 978.5,-638 978.5,-611 939.5,-611" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-611 978.5,-611 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="945.5" y="-620.8">[1:1]</text>
+<polygon fill="#eeeeee" points="689.5,-584 689.5,-611 939.5,-611 939.5,-584 689.5,-584" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-584 939.5,-584 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="751" y="-594.8">ConversionUnitName</text>
+<polygon fill="#eeeeee" points="939.5,-584 939.5,-611 978.5,-611 978.5,-584 939.5,-584" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-584 978.5,-584 " stroke="#000000"></polyline>
+<polygon fill="#dddddd" points="689.5,-557 689.5,-584 939.5,-584 939.5,-557 689.5,-557" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-557 939.5,-557 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="695.5" y="-566.8">Name</text>
+<polygon fill="#dddddd" points="939.5,-557 939.5,-584 978.5,-584 978.5,-557 939.5,-557" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-557 978.5,-557 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="945.5" y="-566.8">[1:1]</text>
+<polygon fill="#dddddd" points="689.5,-530 689.5,-557 939.5,-557 939.5,-530 689.5,-530" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-530 939.5,-530 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="695.5" y="-539.8">ConversionFactor</text>
+<polygon fill="#dddddd" points="939.5,-530 939.5,-557 978.5,-557 978.5,-530 939.5,-530" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-530 978.5,-530 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="945.5" y="-539.8">[1:1]</text>
+<polygon fill="#ffffff" points="689.5,-503 689.5,-530 939.5,-530 939.5,-503 689.5,-503" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-503 939.5,-503 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="695.5" y="-512.8">HasExternalReference</text>
+<polygon fill="#ffffff" points="939.5,-503 939.5,-530 978.5,-530 978.5,-503 939.5,-503" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-503 978.5,-503 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="946.5" y="-512.8">[0:?]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm'>IfcUnitAssignment</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConversionBasedUnit.htm'>IfcConversionBasedUnit</a> -->
+<g class="edge" id="edge8">
+<title><a href="../../../lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a>:Units1-&gt;<a href="../../../lexical/IfcConversionBasedUnit.htm">IfcConversionBasedUnit</a>:IfcConversionBasedUnit0</title>
+<path d="M618,-1026C618,-1026 675.2133,-769.9404 687.2817,-715.9279" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="690.7351,-716.5226 689.5,-706 683.9035,-714.9961 690.7351,-716.5226" stroke="#000000"></polygon>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConversionBasedUnitWithOffset.htm'>IfcConversionBasedUnitWithOffset</a> -->
+<g class="node" id="node10">
+<title><a href="../../../lexical/IfcConversionBasedUnitWithOffset.htm">IfcConversionBasedUnitWithOffset</a></title>
+<polygon fill="#1976d2" points="689.5,-233 689.5,-260 939.5,-260 939.5,-233 689.5,-233" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-233 939.5,-233 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="695.5" y="-243.8"><a href="../../../lexical/IfcConversionBasedUnitWithOffset.htm">IfcConversionBasedUnitWithOffset</a></text>
+<polygon fill="#1976d2" points="939.5,-233 939.5,-260 978.5,-260 978.5,-233 939.5,-233" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-233 978.5,-233 " stroke="#000000"></polyline>
+<polygon fill="#dddddd" points="689.5,-206 689.5,-233 939.5,-233 939.5,-206 689.5,-206" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-206 939.5,-206 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="695.5" y="-215.8">Dimensions</text>
+<polygon fill="#dddddd" points="939.5,-206 939.5,-233 978.5,-233 978.5,-206 939.5,-206" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-206 978.5,-206 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="945.5" y="-215.8">[1:1]</text>
+<polygon fill="#dddddd" points="689.5,-179 689.5,-206 939.5,-206 939.5,-179 689.5,-179" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-179 939.5,-179 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="695.5" y="-188.8">UnitType</text>
+<polygon fill="#dddddd" points="939.5,-179 939.5,-206 978.5,-206 978.5,-179 939.5,-179" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-179 978.5,-179 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="945.5" y="-188.8">[1:1]</text>
+<polygon fill="#dddddd" points="689.5,-152 689.5,-179 939.5,-179 939.5,-152 689.5,-152" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-152 939.5,-152 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="695.5" y="-161.8">Name</text>
+<polygon fill="#dddddd" points="939.5,-152 939.5,-179 978.5,-179 978.5,-152 939.5,-152" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-152 978.5,-152 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="945.5" y="-161.8">[1:1]</text>
+<polygon fill="#dddddd" points="689.5,-125 689.5,-152 939.5,-152 939.5,-125 689.5,-125" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-125 939.5,-125 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="695.5" y="-134.8">ConversionFactor</text>
+<polygon fill="#dddddd" points="939.5,-125 939.5,-152 978.5,-152 978.5,-125 939.5,-125" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-125 978.5,-125 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="945.5" y="-134.8">[1:1]</text>
+<polygon fill="#ffffff" points="689.5,-98 689.5,-125 939.5,-125 939.5,-98 689.5,-98" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-98 939.5,-98 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="695.5" y="-107.8">HasExternalReference</text>
+<polygon fill="#ffffff" points="939.5,-98 939.5,-125 978.5,-125 978.5,-98 939.5,-98" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-98 978.5,-98 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="946.5" y="-107.8">[0:?]</text>
+<polygon fill="#dddddd" points="689.5,-71 689.5,-98 939.5,-98 939.5,-71 689.5,-71" stroke="transparent"></polygon>
+<polyline fill="none" points="689.5,-71 939.5,-71 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="695.5" y="-80.8">ConversionOffset</text>
+<polygon fill="#dddddd" points="939.5,-71 939.5,-98 978.5,-98 978.5,-71 939.5,-71" stroke="transparent"></polygon>
+<polyline fill="none" points="939.5,-71 978.5,-71 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="945.5" y="-80.8">[1:1]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcUnitAssignment.htm'>IfcUnitAssignment</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConversionBasedUnitWithOffset.htm'>IfcConversionBasedUnitWithOffset</a> -->
+<g class="edge" id="edge9">
+<title><a href="../../../lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a>:Units1-&gt;<a href="../../../lexical/IfcConversionBasedUnitWithOffset.htm">IfcConversionBasedUnitWithOffset</a>:IfcConversionBasedUnitWithOffset0</title>
+<path d="M618,-1026C618,-1026 680.1889,-348.4454 688.5698,-257.1343" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="692.0713,-257.2781 689.5,-247 685.1006,-256.6382 692.0713,-257.2781" stroke="#000000"></polygon>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedUnitEnum.htm'>IfcDerivedUnitEnum</a> -->
+<g class="node" id="node11">
+<title><a href="../../../lexical/IfcDerivedUnitEnum.htm">IfcDerivedUnitEnum</a></title>
+<polygon fill="#1976d2" points="1039.5,-1191 1039.5,-1218 1289.5,-1218 1289.5,-1191 1039.5,-1191" stroke="transparent"></polygon>
+<polyline fill="none" points="1039.5,-1191 1289.5,-1191 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1045.5" y="-1201.8"><a href="../../../lexical/IfcDerivedUnitEnum.htm">IfcDerivedUnitEnum</a></text>
+<polygon fill="#1976d2" points="1289.5,-1191 1289.5,-1218 1309.5,-1218 1309.5,-1191 1289.5,-1191" stroke="transparent"></polygon>
+<polyline fill="none" points="1289.5,-1191 1309.5,-1191 " stroke="#000000"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedUnit.htm'>IfcDerivedUnit</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedUnitEnum.htm'>IfcDerivedUnitEnum</a> -->
+<g class="edge" id="edge10">
+<title><a href="../../../lexical/IfcDerivedUnit.htm">IfcDerivedUnit</a>:UnitType1-&gt;<a href="../../../lexical/IfcDerivedUnitEnum.htm">IfcDerivedUnitEnum</a>:IfcDerivedUnitEnum0</title>
+<path d="M978.5,-1204C978.5,-1204 1012.1014,-1204 1029.4271,-1204" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1029.5,-1207.5001 1039.5,-1204 1029.5,-1200.5001 1029.5,-1207.5001" stroke="#000000"></polygon>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedUnitElement.htm'>IfcDerivedUnitElement</a> -->
+<g class="node" id="node12">
+<title><a href="../../../lexical/IfcDerivedUnitElement.htm">IfcDerivedUnitElement</a></title>
+<polygon fill="#1976d2" points="1030.5,-1288 1030.5,-1315 1280.5,-1315 1280.5,-1288 1030.5,-1288" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-1288 1280.5,-1288 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1036.5" y="-1298.8"><a href="../../../lexical/IfcDerivedUnitElement.htm">IfcDerivedUnitElement</a></text>
+<polygon fill="#1976d2" points="1280.5,-1288 1280.5,-1315 1319.5,-1315 1319.5,-1288 1280.5,-1288" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-1288 1319.5,-1288 " stroke="#000000"></polyline>
+<polygon fill="#dddddd" points="1030.5,-1261 1030.5,-1288 1280.5,-1288 1280.5,-1261 1030.5,-1261" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-1261 1280.5,-1261 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1036.5" y="-1270.8">Unit</text>
+<polygon fill="#dddddd" points="1280.5,-1261 1280.5,-1288 1319.5,-1288 1319.5,-1261 1280.5,-1261" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-1261 1319.5,-1261 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1286.5" y="-1270.8">[1:1]</text>
+<polygon fill="#ffffff" points="1030.5,-1234 1030.5,-1261 1280.5,-1261 1280.5,-1234 1030.5,-1234" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-1234 1280.5,-1234 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1036.5" y="-1243.8">Exponent</text>
+<polygon fill="#ffffff" points="1280.5,-1234 1280.5,-1261 1319.5,-1261 1319.5,-1234 1280.5,-1234" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-1234 1319.5,-1234 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1286.5" y="-1243.8">[1:1]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedUnit.htm'>IfcDerivedUnit</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedUnitElement.htm'>IfcDerivedUnitElement</a> -->
+<g class="edge" id="edge11">
+<title><a href="../../../lexical/IfcDerivedUnit.htm">IfcDerivedUnit</a>:Elements1-&gt;<a href="../../../lexical/IfcDerivedUnitElement.htm">IfcDerivedUnitElement</a>:IfcDerivedUnitElement0</title>
+<path d="M978.5,-1259C978.5,-1259 1007.75,-1283.1875 1022.375,-1295.2813" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1020.5631,-1298.3246 1030.5,-1302 1025.024,-1292.9301 1020.5631,-1298.3246" stroke="#000000"></polygon>
+</g>
+<!-- IfcLabel_0 -->
+<g class="node" id="node13">
+<title>IfcLabel_0</title>
+<polygon fill="#1976d2" points="1039.5,-1148 1039.5,-1175 1289.5,-1175 1289.5,-1148 1039.5,-1148" stroke="transparent"></polygon>
+<polyline fill="none" points="1039.5,-1148 1289.5,-1148 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1045.5" y="-1158.8"><a href="../../../lexical/IfcLabel.htm">IfcLabel</a></text>
+<polygon fill="#1976d2" points="1289.5,-1148 1289.5,-1175 1309.5,-1175 1309.5,-1148 1289.5,-1148" stroke="transparent"></polygon>
+<polyline fill="none" points="1289.5,-1148 1309.5,-1148 " stroke="#000000"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedUnit.htm'>IfcDerivedUnit</a>&#45;&gt;IfcLabel_0 -->
+<g class="edge" id="edge12">
+<title><a href="../../../lexical/IfcDerivedUnit.htm">IfcDerivedUnit</a>:UserDefinedType1-&gt;IfcLabel_0:IfcLabel0</title>
+<path d="M978.5,-1177C978.5,-1177 1012.456,-1168.0935 1029.6993,-1163.5707" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1030.7152,-1166.9227 1039.5,-1161 1028.9392,-1160.1517 1030.7152,-1166.9227" stroke="#000000"></polygon>
+</g>
+<!-- IfcLabel_1 -->
+<g class="node" id="node15">
+<title>IfcLabel_1</title>
+<polygon fill="#1976d2" points="1039.5,-1068 1039.5,-1095 1289.5,-1095 1289.5,-1068 1039.5,-1068" stroke="transparent"></polygon>
+<polyline fill="none" points="1039.5,-1068 1289.5,-1068 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1045.5" y="-1078.8"><a href="../../../lexical/IfcLabel.htm">IfcLabel</a></text>
+<polygon fill="#1976d2" points="1289.5,-1068 1289.5,-1095 1309.5,-1095 1309.5,-1068 1289.5,-1068" stroke="transparent"></polygon>
+<polyline fill="none" points="1289.5,-1068 1309.5,-1068 " stroke="#000000"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcMonetaryUnit.htm'>IfcMonetaryUnit</a>&#45;&gt;IfcLabel_1 -->
+<g class="edge" id="edge14">
+<title><a href="../../../lexical/IfcMonetaryUnit.htm">IfcMonetaryUnit</a>:Currency1-&gt;IfcLabel_1:IfcLabel0</title>
+<path d="M978.5,-1081C978.5,-1081 1012.1014,-1081 1029.4271,-1081" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1029.5,-1084.5001 1039.5,-1081 1029.5,-1077.5001 1029.5,-1084.5001" stroke="#000000"></polygon>
+</g>
+<!-- IfcUnitEnum_0 -->
+<g class="node" id="node16">
+<title>IfcUnitEnum_0</title>
+<polygon fill="#1976d2" points="1039.5,-960 1039.5,-987 1289.5,-987 1289.5,-960 1039.5,-960" stroke="transparent"></polygon>
+<polyline fill="none" points="1039.5,-960 1289.5,-960 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1045.5" y="-970.8"><a href="../../../lexical/IfcUnitEnum.htm">IfcUnitEnum</a></text>
+<polygon fill="#1976d2" points="1289.5,-960 1289.5,-987 1309.5,-987 1309.5,-960 1289.5,-960" stroke="transparent"></polygon>
+<polyline fill="none" points="1289.5,-960 1309.5,-960 " stroke="#000000"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSIUnit.htm'>IfcSIUnit</a>&#45;&gt;IfcUnitEnum_0 -->
+<g class="edge" id="edge15">
+<title><a href="../../../lexical/IfcSIUnit.htm">IfcSIUnit</a>:UnitType1-&gt;IfcUnitEnum_0:IfcUnitEnum0</title>
+<path d="M978.5,-957C978.5,-957 1012.456,-965.9065 1029.6993,-970.4293" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1028.9392,-973.8483 1039.5,-973 1030.7152,-967.0773 1028.9392,-973.8483" stroke="#000000"></polygon>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSIPrefix.htm'>IfcSIPrefix</a> -->
+<g class="node" id="node17">
+<title><a href="../../../lexical/IfcSIPrefix.htm">IfcSIPrefix</a></title>
+<polygon fill="#1976d2" points="1039.5,-917 1039.5,-944 1289.5,-944 1289.5,-917 1039.5,-917" stroke="transparent"></polygon>
+<polyline fill="none" points="1039.5,-917 1289.5,-917 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1045.5" y="-927.8"><a href="../../../lexical/IfcSIPrefix.htm">IfcSIPrefix</a></text>
+<polygon fill="#1976d2" points="1289.5,-917 1289.5,-944 1309.5,-944 1309.5,-917 1289.5,-917" stroke="transparent"></polygon>
+<polyline fill="none" points="1289.5,-917 1309.5,-917 " stroke="#000000"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSIUnit.htm'>IfcSIUnit</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSIPrefix.htm'>IfcSIPrefix</a> -->
+<g class="edge" id="edge16">
+<title><a href="../../../lexical/IfcSIUnit.htm">IfcSIUnit</a>:Prefix1-&gt;<a href="../../../lexical/IfcSIPrefix.htm">IfcSIPrefix</a>:IfcSIPrefix0</title>
+<path d="M978.5,-930C978.5,-930 1012.1014,-930 1029.4271,-930" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1029.5,-933.5001 1039.5,-930 1029.5,-926.5001 1029.5,-933.5001" stroke="#000000"></polygon>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSIUnitName.htm'>IfcSIUnitName</a> -->
+<g class="node" id="node18">
+<title><a href="../../../lexical/IfcSIUnitName.htm">IfcSIUnitName</a></title>
+<polygon fill="#1976d2" points="1039.5,-874 1039.5,-901 1289.5,-901 1289.5,-874 1039.5,-874" stroke="transparent"></polygon>
+<polyline fill="none" points="1039.5,-874 1289.5,-874 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1045.5" y="-884.8"><a href="../../../lexical/IfcSIUnitName.htm">IfcSIUnitName</a></text>
+<polygon fill="#1976d2" points="1289.5,-874 1289.5,-901 1309.5,-901 1309.5,-874 1289.5,-874" stroke="transparent"></polygon>
+<polyline fill="none" points="1289.5,-874 1309.5,-874 " stroke="#000000"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSIUnit.htm'>IfcSIUnit</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcSIUnitName.htm'>IfcSIUnitName</a> -->
+<g class="edge" id="edge17">
+<title><a href="../../../lexical/IfcSIUnit.htm">IfcSIUnit</a>:Name1-&gt;<a href="../../../lexical/IfcSIUnitName.htm">IfcSIUnitName</a>:IfcSIUnitName0</title>
+<path d="M978.5,-876C978.5,-876 1012.1014,-882.0593 1029.4271,-885.1836" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1029.0376,-888.6697 1039.5,-887 1030.2799,-881.7808 1029.0376,-888.6697" stroke="#000000"></polygon>
+</g>
+<!-- IfcDimensionalExponents_0 -->
+<g class="node" id="node19">
+<title>IfcDimensionalExponents_0</title>
+<polygon fill="#1976d2" points="1030.5,-832 1030.5,-859 1280.5,-859 1280.5,-832 1030.5,-832" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-832 1280.5,-832 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1036.5" y="-842.8"><a href="../../../lexical/IfcDimensionalExponents.htm">IfcDimensionalExponents</a></text>
+<polygon fill="#1976d2" points="1280.5,-832 1280.5,-859 1319.5,-859 1319.5,-832 1280.5,-832" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-832 1319.5,-832 " stroke="#000000"></polyline>
+<polygon fill="#ffffff" points="1030.5,-805 1030.5,-832 1280.5,-832 1280.5,-805 1030.5,-805" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-805 1280.5,-805 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1036.5" y="-814.8">LengthExponent</text>
+<polygon fill="#ffffff" points="1280.5,-805 1280.5,-832 1319.5,-832 1319.5,-805 1280.5,-805" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-805 1319.5,-805 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1286.5" y="-814.8">[1:1]</text>
+<polygon fill="#ffffff" points="1030.5,-778 1030.5,-805 1280.5,-805 1280.5,-778 1030.5,-778" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-778 1280.5,-778 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1036.5" y="-787.8">MassExponent</text>
+<polygon fill="#ffffff" points="1280.5,-778 1280.5,-805 1319.5,-805 1319.5,-778 1280.5,-778" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-778 1319.5,-778 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1286.5" y="-787.8">[1:1]</text>
+<polygon fill="#ffffff" points="1030.5,-751 1030.5,-778 1280.5,-778 1280.5,-751 1030.5,-751" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-751 1280.5,-751 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1036.5" y="-760.8">TimeExponent</text>
+<polygon fill="#ffffff" points="1280.5,-751 1280.5,-778 1319.5,-778 1319.5,-751 1280.5,-751" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-751 1319.5,-751 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1286.5" y="-760.8">[1:1]</text>
+<polygon fill="#ffffff" points="1030.5,-724 1030.5,-751 1280.5,-751 1280.5,-724 1030.5,-724" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-724 1280.5,-724 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1036.5" y="-733.8">ElectricCurrentExponent</text>
+<polygon fill="#ffffff" points="1280.5,-724 1280.5,-751 1319.5,-751 1319.5,-724 1280.5,-724" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-724 1319.5,-724 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1286.5" y="-733.8">[1:1]</text>
+<polygon fill="#ffffff" points="1030.5,-697 1030.5,-724 1280.5,-724 1280.5,-697 1030.5,-697" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-697 1280.5,-697 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1036.5" y="-706.8">ThermodynamicTemperatureExponent</text>
+<polygon fill="#ffffff" points="1280.5,-697 1280.5,-724 1319.5,-724 1319.5,-697 1280.5,-697" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-697 1319.5,-697 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1286.5" y="-706.8">[1:1]</text>
+<polygon fill="#ffffff" points="1030.5,-670 1030.5,-697 1280.5,-697 1280.5,-670 1030.5,-670" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-670 1280.5,-670 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1036.5" y="-679.8">AmountOfSubstanceExponent</text>
+<polygon fill="#ffffff" points="1280.5,-670 1280.5,-697 1319.5,-697 1319.5,-670 1280.5,-670" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-670 1319.5,-670 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1286.5" y="-679.8">[1:1]</text>
+<polygon fill="#ffffff" points="1030.5,-643 1030.5,-670 1280.5,-670 1280.5,-643 1030.5,-643" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-643 1280.5,-643 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1036.5" y="-652.8">LuminousIntensityExponent</text>
+<polygon fill="#ffffff" points="1280.5,-643 1280.5,-670 1319.5,-670 1319.5,-643 1280.5,-643" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-643 1319.5,-643 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1286.5" y="-652.8">[1:1]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConversionBasedUnit.htm'>IfcConversionBasedUnit</a>&#45;&gt;IfcDimensionalExponents_0 -->
+<g class="edge" id="edge18">
+<title><a href="../../../lexical/IfcConversionBasedUnit.htm">IfcConversionBasedUnit</a>:Dimensions1-&gt;IfcDimensionalExponents_0:IfcDimensionalExponents0</title>
+<path d="M978.5,-679C978.5,-679 1016.2083,-800.1015 1027.4029,-836.0535" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1024.1852,-837.4927 1030.5,-846 1030.8687,-835.4116 1024.1852,-837.4927" stroke="#000000"></polygon>
+</g>
+<!-- IfcUnitEnum_1 -->
+<g class="node" id="node20">
+<title>IfcUnitEnum_1</title>
+<polygon fill="#1976d2" points="1039.5,-600 1039.5,-627 1289.5,-627 1289.5,-600 1039.5,-600" stroke="transparent"></polygon>
+<polyline fill="none" points="1039.5,-600 1289.5,-600 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1045.5" y="-610.8"><a href="../../../lexical/IfcUnitEnum.htm">IfcUnitEnum</a></text>
+<polygon fill="#1976d2" points="1289.5,-600 1289.5,-627 1309.5,-627 1309.5,-600 1289.5,-600" stroke="transparent"></polygon>
+<polyline fill="none" points="1289.5,-600 1309.5,-600 " stroke="#000000"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConversionBasedUnit.htm'>IfcConversionBasedUnit</a>&#45;&gt;IfcUnitEnum_1 -->
+<g class="edge" id="edge19">
+<title><a href="../../../lexical/IfcConversionBasedUnit.htm">IfcConversionBasedUnit</a>:UnitType1-&gt;IfcUnitEnum_1:IfcUnitEnum0</title>
+<path d="M978.5,-625C978.5,-625 1012.1014,-618.3899 1029.4271,-614.9816" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1030.3637,-618.3645 1039.5,-613 1029.0124,-611.4961 1030.3637,-618.3645" stroke="#000000"></polygon>
+</g>
+<!-- IfcLabel_2 -->
+<g class="node" id="node21">
+<title>IfcLabel_2</title>
+<polygon fill="#1976d2" points="1039.5,-557 1039.5,-584 1289.5,-584 1289.5,-557 1039.5,-557" stroke="transparent"></polygon>
+<polyline fill="none" points="1039.5,-557 1289.5,-557 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1045.5" y="-567.8"><a href="../../../lexical/IfcLabel.htm">IfcLabel</a></text>
+<polygon fill="#1976d2" points="1289.5,-557 1289.5,-584 1309.5,-584 1309.5,-557 1289.5,-557" stroke="transparent"></polygon>
+<polyline fill="none" points="1289.5,-557 1309.5,-557 " stroke="#000000"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConversionBasedUnit.htm'>IfcConversionBasedUnit</a>&#45;&gt;IfcLabel_2 -->
+<g class="edge" id="edge20">
+<title><a href="../../../lexical/IfcConversionBasedUnit.htm">IfcConversionBasedUnit</a>:Name1-&gt;IfcLabel_2:IfcLabel0</title>
+<path d="M978.5,-570C978.5,-570 1012.1014,-570 1029.4271,-570" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1029.5,-573.5001 1039.5,-570 1029.5,-566.5001 1029.5,-573.5001" stroke="#000000"></polygon>
+</g>
+<!-- IfcMeasureWithUnit_0 -->
+<g class="node" id="node22">
+<title>IfcMeasureWithUnit_0</title>
+<polygon fill="#1976d2" points="1030.5,-514 1030.5,-541 1280.5,-541 1280.5,-514 1030.5,-514" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-514 1280.5,-514 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1036.5" y="-524.8"><a href="../../../lexical/IfcMeasureWithUnit.htm">IfcMeasureWithUnit</a></text>
+<polygon fill="#1976d2" points="1280.5,-514 1280.5,-541 1319.5,-541 1319.5,-514 1280.5,-514" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-514 1319.5,-514 " stroke="#000000"></polyline>
+<polygon fill="#ffffff" points="1030.5,-487 1030.5,-514 1280.5,-514 1280.5,-487 1030.5,-487" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-487 1280.5,-487 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1036.5" y="-496.8">ValueComponent</text>
+<polygon fill="#ffffff" points="1280.5,-487 1280.5,-514 1319.5,-514 1319.5,-487 1280.5,-487" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-487 1319.5,-487 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1286.5" y="-496.8">[1:1]</text>
+<polygon fill="#ffffff" points="1030.5,-460 1030.5,-487 1280.5,-487 1280.5,-460 1030.5,-460" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-460 1280.5,-460 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1036.5" y="-469.8">UnitComponent</text>
+<polygon fill="#ffffff" points="1280.5,-460 1280.5,-487 1319.5,-487 1319.5,-460 1280.5,-460" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-460 1319.5,-460 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1286.5" y="-469.8">[1:1]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConversionBasedUnit.htm'>IfcConversionBasedUnit</a>&#45;&gt;IfcMeasureWithUnit_0 -->
+<g class="edge" id="edge21">
+<title><a href="../../../lexical/IfcConversionBasedUnit.htm">IfcConversionBasedUnit</a>:ConversionFactor1-&gt;IfcMeasureWithUnit_0:IfcMeasureWithUnit0</title>
+<path d="M978.5,-543C978.5,-543 1005.3633,-535.251 1020.4739,-530.8922" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1021.8618,-534.1346 1030.5,-528 1019.9217,-527.4088 1021.8618,-534.1346" stroke="#000000"></polygon>
+</g>
+<!-- IfcDimensionalExponents_1 -->
+<g class="node" id="node23">
+<title>IfcDimensionalExponents_1</title>
+<polygon fill="#1976d2" points="1030.5,-419 1030.5,-446 1280.5,-446 1280.5,-419 1030.5,-419" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-419 1280.5,-419 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1036.5" y="-429.8"><a href="../../../lexical/IfcDimensionalExponents.htm">IfcDimensionalExponents</a></text>
+<polygon fill="#1976d2" points="1280.5,-419 1280.5,-446 1319.5,-446 1319.5,-419 1280.5,-419" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-419 1319.5,-419 " stroke="#000000"></polyline>
+<polygon fill="#ffffff" points="1030.5,-392 1030.5,-419 1280.5,-419 1280.5,-392 1030.5,-392" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-392 1280.5,-392 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1036.5" y="-401.8">LengthExponent</text>
+<polygon fill="#ffffff" points="1280.5,-392 1280.5,-419 1319.5,-419 1319.5,-392 1280.5,-392" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-392 1319.5,-392 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1286.5" y="-401.8">[1:1]</text>
+<polygon fill="#ffffff" points="1030.5,-365 1030.5,-392 1280.5,-392 1280.5,-365 1030.5,-365" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-365 1280.5,-365 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1036.5" y="-374.8">MassExponent</text>
+<polygon fill="#ffffff" points="1280.5,-365 1280.5,-392 1319.5,-392 1319.5,-365 1280.5,-365" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-365 1319.5,-365 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1286.5" y="-374.8">[1:1]</text>
+<polygon fill="#ffffff" points="1030.5,-338 1030.5,-365 1280.5,-365 1280.5,-338 1030.5,-338" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-338 1280.5,-338 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1036.5" y="-347.8">TimeExponent</text>
+<polygon fill="#ffffff" points="1280.5,-338 1280.5,-365 1319.5,-365 1319.5,-338 1280.5,-338" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-338 1319.5,-338 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1286.5" y="-347.8">[1:1]</text>
+<polygon fill="#ffffff" points="1030.5,-311 1030.5,-338 1280.5,-338 1280.5,-311 1030.5,-311" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-311 1280.5,-311 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1036.5" y="-320.8">ElectricCurrentExponent</text>
+<polygon fill="#ffffff" points="1280.5,-311 1280.5,-338 1319.5,-338 1319.5,-311 1280.5,-311" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-311 1319.5,-311 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1286.5" y="-320.8">[1:1]</text>
+<polygon fill="#ffffff" points="1030.5,-284 1030.5,-311 1280.5,-311 1280.5,-284 1030.5,-284" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-284 1280.5,-284 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1036.5" y="-293.8">ThermodynamicTemperatureExponent</text>
+<polygon fill="#ffffff" points="1280.5,-284 1280.5,-311 1319.5,-311 1319.5,-284 1280.5,-284" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-284 1319.5,-284 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1286.5" y="-293.8">[1:1]</text>
+<polygon fill="#ffffff" points="1030.5,-257 1030.5,-284 1280.5,-284 1280.5,-257 1030.5,-257" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-257 1280.5,-257 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1036.5" y="-266.8">AmountOfSubstanceExponent</text>
+<polygon fill="#ffffff" points="1280.5,-257 1280.5,-284 1319.5,-284 1319.5,-257 1280.5,-257" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-257 1319.5,-257 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1286.5" y="-266.8">[1:1]</text>
+<polygon fill="#ffffff" points="1030.5,-230 1030.5,-257 1280.5,-257 1280.5,-230 1030.5,-230" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-230 1280.5,-230 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1036.5" y="-239.8">LuminousIntensityExponent</text>
+<polygon fill="#ffffff" points="1280.5,-230 1280.5,-257 1319.5,-257 1319.5,-230 1280.5,-230" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-230 1319.5,-230 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1286.5" y="-239.8">[1:1]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConversionBasedUnitWithOffset.htm'>IfcConversionBasedUnitWithOffset</a>&#45;&gt;IfcDimensionalExponents_1 -->
+<g class="edge" id="edge22">
+<title><a href="../../../lexical/IfcConversionBasedUnitWithOffset.htm">IfcConversionBasedUnitWithOffset</a>:Dimensions1-&gt;IfcDimensionalExponents_1:IfcDimensionalExponents0</title>
+<path d="M978.5,-220C978.5,-220 1017.7811,-380.9014 1028.0617,-423.0123" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1024.7281,-424.1154 1030.5,-433 1031.5284,-422.4552 1024.7281,-424.1154" stroke="#000000"></polygon>
+</g>
+<!-- IfcUnitEnum_2 -->
+<g class="node" id="node24">
+<title>IfcUnitEnum_2</title>
+<polygon fill="#1976d2" points="1039.5,-187 1039.5,-214 1289.5,-214 1289.5,-187 1039.5,-187" stroke="transparent"></polygon>
+<polyline fill="none" points="1039.5,-187 1289.5,-187 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1045.5" y="-197.8"><a href="../../../lexical/IfcUnitEnum.htm">IfcUnitEnum</a></text>
+<polygon fill="#1976d2" points="1289.5,-187 1289.5,-214 1309.5,-214 1309.5,-187 1289.5,-187" stroke="transparent"></polygon>
+<polyline fill="none" points="1289.5,-187 1309.5,-187 " stroke="#000000"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConversionBasedUnitWithOffset.htm'>IfcConversionBasedUnitWithOffset</a>&#45;&gt;IfcUnitEnum_2 -->
+<g class="edge" id="edge23">
+<title><a href="../../../lexical/IfcConversionBasedUnitWithOffset.htm">IfcConversionBasedUnitWithOffset</a>:UnitType1-&gt;IfcUnitEnum_2:IfcUnitEnum0</title>
+<path d="M978.5,-193C978.5,-193 1012.1014,-196.8559 1029.4271,-198.8441" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1029.1661,-202.337 1039.5,-200 1029.9642,-195.3827 1029.1661,-202.337" stroke="#000000"></polygon>
+</g>
+<!-- IfcLabel_3 -->
+<g class="node" id="node25">
+<title>IfcLabel_3</title>
+<polygon fill="#1976d2" points="1039.5,-144 1039.5,-171 1289.5,-171 1289.5,-144 1039.5,-144" stroke="transparent"></polygon>
+<polyline fill="none" points="1039.5,-144 1289.5,-144 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1045.5" y="-154.8"><a href="../../../lexical/IfcLabel.htm">IfcLabel</a></text>
+<polygon fill="#1976d2" points="1289.5,-144 1289.5,-171 1309.5,-171 1309.5,-144 1289.5,-144" stroke="transparent"></polygon>
+<polyline fill="none" points="1289.5,-144 1309.5,-144 " stroke="#000000"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConversionBasedUnitWithOffset.htm'>IfcConversionBasedUnitWithOffset</a>&#45;&gt;IfcLabel_3 -->
+<g class="edge" id="edge24">
+<title><a href="../../../lexical/IfcConversionBasedUnitWithOffset.htm">IfcConversionBasedUnitWithOffset</a>:Name1-&gt;IfcLabel_3:IfcLabel0</title>
+<path d="M978.5,-165C978.5,-165 1012.1014,-160.5933 1029.4271,-158.321" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1030.0401,-161.7707 1039.5,-157 1029.1298,-154.8301 1030.0401,-161.7707" stroke="#000000"></polygon>
+</g>
+<!-- IfcMeasureWithUnit_1 -->
+<g class="node" id="node26">
+<title>IfcMeasureWithUnit_1</title>
+<polygon fill="#1976d2" points="1030.5,-101 1030.5,-128 1280.5,-128 1280.5,-101 1030.5,-101" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-101 1280.5,-101 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1036.5" y="-111.8"><a href="../../../lexical/IfcMeasureWithUnit.htm">IfcMeasureWithUnit</a></text>
+<polygon fill="#1976d2" points="1280.5,-101 1280.5,-128 1319.5,-128 1319.5,-101 1280.5,-101" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-101 1319.5,-101 " stroke="#000000"></polyline>
+<polygon fill="#ffffff" points="1030.5,-74 1030.5,-101 1280.5,-101 1280.5,-74 1030.5,-74" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-74 1280.5,-74 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1036.5" y="-83.8">ValueComponent</text>
+<polygon fill="#ffffff" points="1280.5,-74 1280.5,-101 1319.5,-101 1319.5,-74 1280.5,-74" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-74 1319.5,-74 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1286.5" y="-83.8">[1:1]</text>
+<polygon fill="#ffffff" points="1030.5,-47 1030.5,-74 1280.5,-74 1280.5,-47 1030.5,-47" stroke="transparent"></polygon>
+<polyline fill="none" points="1030.5,-47 1280.5,-47 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1036.5" y="-56.8">UnitComponent</text>
+<polygon fill="#ffffff" points="1280.5,-47 1280.5,-74 1319.5,-74 1319.5,-47 1280.5,-47" stroke="transparent"></polygon>
+<polyline fill="none" points="1280.5,-47 1319.5,-47 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1286.5" y="-56.8">[1:1]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConversionBasedUnitWithOffset.htm'>IfcConversionBasedUnitWithOffset</a>&#45;&gt;IfcMeasureWithUnit_1 -->
+<g class="edge" id="edge25">
+<title><a href="../../../lexical/IfcConversionBasedUnitWithOffset.htm">IfcConversionBasedUnitWithOffset</a>:ConversionFactor1-&gt;IfcMeasureWithUnit_1:IfcMeasureWithUnit0</title>
+<path d="M978.5,-138C978.5,-138 1005.9504,-125.8585 1020.9624,-119.2186" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1022.7704,-122.246 1030.5,-115 1019.9388,-115.8442 1022.7704,-122.246" stroke="#000000"></polygon>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm'>IfcReal</a> -->
+<g class="node" id="node27">
+<title><a href="../../../lexical/IfcReal.htm">IfcReal</a></title>
+<polygon fill="#1976d2" points="1039.5,-4 1039.5,-31 1289.5,-31 1289.5,-4 1039.5,-4" stroke="transparent"></polygon>
+<polyline fill="none" points="1039.5,-4 1289.5,-4 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1045.5" y="-14.8"><a href="../../../lexical/IfcReal.htm">IfcReal</a></text>
+<polygon fill="#1976d2" points="1289.5,-4 1289.5,-31 1309.5,-31 1309.5,-4 1289.5,-4" stroke="transparent"></polygon>
+<polyline fill="none" points="1289.5,-4 1309.5,-4 " stroke="#000000"></polyline>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcConversionBasedUnitWithOffset.htm'>IfcConversionBasedUnitWithOffset</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReal.htm'>IfcReal</a> -->
+<g class="edge" id="edge26">
+<title><a href="../../../lexical/IfcConversionBasedUnitWithOffset.htm">IfcConversionBasedUnitWithOffset</a>:ConversionOffset1-&gt;<a href="../../../lexical/IfcReal.htm">IfcReal</a>:IfcReal0</title>
+<path d="M978.5,-84C978.5,-84 1016.8568,-41.8704 1032.7389,-24.4262" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1035.3558,-26.7507 1039.5,-17 1030.1797,-22.0381 1035.3558,-26.7507" stroke="#000000"></polygon>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNamedUnit.htm'>IfcNamedUnit</a> -->
+<g class="node" id="node14">
+<title><a href="../../../lexical/IfcNamedUnit.htm">IfcNamedUnit</a></title>
+<polygon fill="#1976d2" points="1371.5,-1260 1371.5,-1287 1621.5,-1287 1621.5,-1260 1371.5,-1260" stroke="transparent"></polygon>
+<polyline fill="none" points="1371.5,-1260 1621.5,-1260 " stroke="#000000"></polyline>
+<text fill="#ffffff" font-family="Times,serif" font-size="14.00" font-weight="bold" text-anchor="start" x="1377.5" y="-1270.8"><a href="../../../lexical/IfcNamedUnit.htm">IfcNamedUnit</a></text>
+<polygon fill="#1976d2" points="1621.5,-1260 1621.5,-1287 1660.5,-1287 1660.5,-1260 1621.5,-1260" stroke="transparent"></polygon>
+<polyline fill="none" points="1621.5,-1260 1660.5,-1260 " stroke="#000000"></polyline>
+<polygon fill="#ffffff" points="1371.5,-1233 1371.5,-1260 1621.5,-1260 1621.5,-1233 1371.5,-1233" stroke="transparent"></polygon>
+<polyline fill="none" points="1371.5,-1233 1621.5,-1233 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1377.5" y="-1242.8">Dimensions</text>
+<polygon fill="#ffffff" points="1621.5,-1233 1621.5,-1260 1660.5,-1260 1660.5,-1233 1621.5,-1233" stroke="transparent"></polygon>
+<polyline fill="none" points="1621.5,-1233 1660.5,-1233 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1627.5" y="-1242.8">[1:1]</text>
+<polygon fill="#ffffff" points="1371.5,-1206 1371.5,-1233 1621.5,-1233 1621.5,-1206 1371.5,-1206" stroke="transparent"></polygon>
+<polyline fill="none" points="1371.5,-1206 1621.5,-1206 " stroke="#000000"></polyline>
+<text fill="#333333" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1377.5" y="-1215.8">UnitType</text>
+<polygon fill="#ffffff" points="1621.5,-1206 1621.5,-1233 1660.5,-1233 1660.5,-1206 1621.5,-1206" stroke="transparent"></polygon>
+<polyline fill="none" points="1621.5,-1206 1660.5,-1206 " stroke="#000000"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="1627.5" y="-1215.8">[1:1]</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcDerivedUnitElement.htm'>IfcDerivedUnitElement</a>&#45;&gt;<a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcNamedUnit.htm'>IfcNamedUnit</a> -->
+<g class="edge" id="edge13">
+<title><a href="../../../lexical/IfcDerivedUnitElement.htm">IfcDerivedUnitElement</a>:Unit1-&gt;<a href="../../../lexical/IfcNamedUnit.htm">IfcNamedUnit</a>:IfcNamedUnit0</title>
+<path d="M1319.5,-1274C1319.5,-1274 1346.3633,-1274 1361.4739,-1274" fill="none" stroke="#000000"></path>
+<polygon fill="#000000" points="1361.5,-1277.5001 1371.5,-1274 1361.5,-1270.5001 1361.5,-1277.5001" stroke="#000000"></polygon>
+</g>
+</g>
+</svg><figcaption>Figure 4.10.7.A<a href="content.html#Figure-4.10.7.A"><i data-feather="link"></i></a></figcaption></figure>
+<h3><a id="General-Usage"></a>General Usage<a href="content.html#General-Usage"><i data-feather="link"></i></a></h3><figure><a id="Table-4.10.7.B"></a><table>
+<thead>
+<tr><th>ApplicableEntity<br/> </th></tr>
+</thead>
+<tbody>
+<tr><td><a href="../../../lexical/IfcProject.htm">IfcProject</a> </td></tr>
+</tbody>
+</table><figcaption>Table 4.10.7.B<a href="content.html#Table-4.10.7.B"><i data-feather="link"></i></a></figcaption></figure>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/templates/Project Context/Project Units/README.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../../../assets/js/highlight.min.js"></script>
+<script src="../../../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../../../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

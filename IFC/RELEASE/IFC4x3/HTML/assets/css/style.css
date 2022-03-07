@@ -1,0 +1,600 @@
+:root {
+    --fore-color: #333333;
+    --blue: #1976d2;
+    --dark: #444444;
+    --green: #308732;
+    --red: #d32f2f;
+    --yellow: #f57c00;
+    --universal-border-radius: 5px;
+    --link: #336699;
+    --link-hover: #66ccff;
+}
+html {
+    /* Is this a good idea? Perhaps. */
+     font-size: 0.95rem;
+}
+header {
+    width: 100%;
+    margin-bottom: var(--universal-margin);
+}
+header p {
+    float: left;
+}
+header ul {
+    float: right;
+}
+header ul>li {
+    display: inline-block;
+    font-size: .75em;
+    border-left: 1px solid var(--secondary-border-color);
+    padding-left: calc(2 * var(--universal-padding));
+    padding-right: calc(2 * var(--universal-padding));
+}
+header ul>li a svg {
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+}
+nav div {
+    border-bottom: 1px solid var(--border-color);
+}
+nav div:last-child {
+    border-bottom: 0px;
+}
+nav div a.current {
+    background-color: var(--blue);
+    color: #fff;
+    border-left: 0px;
+}
+nav div a.sublink-1 {
+    /* Equivalent to <small> */
+    font-size: .75em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+nav div a.sublink-1.current {
+    background-color: transparent;
+    color: var(--link);
+    border-left: 3px solid var(--blue);
+    border-radius: 0px;
+}
+nav div a.sublink-1:before {
+    border: 0px;
+}
+footer {
+    width: 100%;
+    margin-top: var(--universal-margin);
+}
+footer p {
+    float: left;
+}
+footer img {
+    display: inline-block;
+    float: left;
+    margin: var(--universal-margin);
+    margin-right: calc(2 * var(--universal-margin));
+}
+h1 {
+    margin-top: 3px;
+}
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--link-hover);
+}
+img {
+    box-shadow:var(--generic-box-shadow) !important;
+}
+pre {
+    padding: var(--universal-padding);
+    border: solid 1px var(--border-color);
+    border-radius: var(--universal-border-radius);
+    background: #eee;
+}
+code, code * {
+    font-size: 10pt !important;
+    font-family: monospace !important;
+}
+svg text {
+    font-size: 75%;
+}
+svg g.edge text {
+    font-size: 60%;
+}
+/* Make the concept table borders lighter */
+svg g.node polygon[stroke="black"] {
+    stroke: var(--secondary-border-color);
+}
+mark {
+    text-transform: uppercase;
+}
+aside {
+    border: 1px solid var(--secondary-border-color);
+    padding: var(--universal-padding);
+    border-radius: var(--universal-border-radius);
+    margin: var(--universal-margin);
+}
+aside mark {
+    margin-right: var(--universal-margin);
+}
+aside.inherited {
+    text-align: center;
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0, #EEEEEE), color-stop(0.25, #EEEEEE), color-stop(0.25, var(--secondary-border-color)), color-stop(0.5, var(--secondary-border-color)), color-stop(0.5, #EEEEEE), color-stop(0.75, #EEEEEE), color-stop(0.75, var(--secondary-border-color)));
+    background-size: 20px 20px;
+}
+aside.inherited svg {
+    color: var(--border-color);
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+}
+aside.aside-example mark {
+    background-color: var(--green);
+}
+aside.aside-reference mark {
+    background-color: var(--dark);
+}
+aside.aside-change mark {
+    background-color: var(--yellow);
+}
+aside.aside-deprecation mark {
+    background-color: var(--red);
+}
+aside.aside-history mark {
+    background-color: #444;
+}
+table {
+    width: 100%;
+    max-height: 10000px !important;
+    display: table;
+    padding: 0;
+    border: 1px solid var(--border-color);
+    border-radius: var(--universal-border-radius);
+}
+table thead {
+    display: table-header-group;
+}
+table tbody {
+    display: table-row-group;
+}
+table tr {
+    display: table-row;
+}
+table th:first-child {
+    border-top-left-radius: var(--universal-border-radius);
+}
+table th:last-child {
+    border-top-right-radius: var(--universal-border-radius);
+}
+table td {
+    padding: var(--universal-padding);
+    vertical-align: top;
+}
+h5 {
+    /* Same size as h4, because it starts getting unpleasantly tiny */
+    font-size: calc(1rem * var(--heading-ratio));
+    font-style: italic;
+}
+h2:hover, h3:hover, h4:hover, h5:hover {
+    cursor: pointer;
+}
+h2:hover a:first-child, h3:hover:first-child a, h4:hover:first-child a, h5:hover:first-child a {
+    color: var(--link-hover);
+}
+figure {
+    text-align: center;
+}
+code {
+  line-height: inherit;
+}
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: 1px solid var(--border-color);
+    color: var(--border-color);
+    padding: 15px;
+    border-radius: var(--universal-border-radius);
+}
+.popup {
+    position: absolute;
+    background: white;
+    padding: 10px;
+    box-shadow:var(--generic-box-shadow);
+    border-radius: var(--universal-border-radius);
+    width: 500px;
+    max-height: 300px;
+    overflow-x: hide;
+    overflow-y: scroll;
+    z-index: 9999999;
+}
+.popup table td {
+    background: white;
+}
+h4 a:hover {
+    text-decoration: none;
+}
+ul, ol {
+    /* The default in mini.css is padding-left: calc(4 * var(--universal-margin));
+     * However in some of our ols we fake our own number, so let's double the indentation
+     * by default and later on we can override it back to 2 * where we use fake numbers */
+    padding-left: calc(4 * var(--universal-margin));
+}
+ul.adoption-help {
+    text-align: center;
+}
+ul.adoption-help>li {
+    display: inline-block;
+    font-size: .75em;
+    border-left: 1px solid var(--secondary-border-color);
+    padding-left: calc(2 * var(--universal-padding));
+    padding-right: calc(2 * var(--universal-padding));
+}
+ul.adoption-help>li:first-child {
+    border-left: 0px;
+    padding-left: 0px;
+}
+ul.adoption-help>li a svg {
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+}
+ul.adoption {
+    padding: 0px;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+ul.adoption>li {
+    font-size: .75em;
+    display: inline-block;
+    width: 100px;
+    vertical-align: top;
+    text-align: center;
+}
+ul.adoption>li>span {
+    padding-top: var(--universal-padding);
+    padding-bottom: var(--universal-padding);
+    display: block;
+}
+ul.adoption>li:nth-child(even) {
+    background-color: var(--table-body-alt-back-color);
+}
+ul.adoption>li:nth-child(odd) {
+    background-color: var(--table-body-back-color);
+}
+ul.adoption ol {
+    margin: 0px;
+    padding: 0px;
+}
+ul.adoption ol>li {
+    font-size: .75em;
+    margin: 0px;
+    margin-bottom: 3px;
+    padding-top: var(--universal-padding);
+    padding-bottom: var(--universal-padding);
+    /*padding: var(--universal-padding);*/
+    width: 100px;
+    display: block;
+    text-align: center;
+    color: white;
+}
+ul.adoption ol>li.supported {
+    background-color: var(--green);
+}
+ul.adoption ol>li.partially-supported {
+    background-color: var(--yellow);
+}
+ul.adoption ol>li.not-supported {
+    background-color: var(--red);
+}
+ul.references li {
+    list-style-type: none;
+}
+ul.references svg {
+    color: var(--border-color);
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+}
+ul.examples {
+    padding-left: 0px;
+}
+ul.examples>li {
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+}
+ul.examples img {
+    max-width: 150px;
+    max-height: 150px;
+    vertical-align: bottom;
+}
+ul.examples p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+ul.thumbnails {
+    padding-left: 0px;
+}
+ul.thumbnails>li {
+    display: block;
+}
+ul.thumbnails img {
+    max-width: 300px;
+    max-height: 300px;
+    vertical-align: bottom;
+}
+ul.psets>li {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    border-top: 1px solid var(--secondary-border-color);
+    padding: var(--universal-padding);
+}
+ul.psets>li>ul {
+    padding: 0px;
+    margin: 0px;
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    max-height:  50px;
+    overflow:hidden;
+}
+ul.psets>li>ul>li {
+    font-size: .75em;
+    list-style-type: none;
+}
+ol.referenced-list {
+    padding-left: calc(2 * var(--universal-margin));
+    list-style: none;
+}
+ol.referenced-list.small {
+    padding-left: 0px;
+    margin-bottom: calc(2 * var(--universal-margin));
+}
+ol.referenced-list.small>li:before {
+    font-size: .75em;
+}
+ol.referenced-list.small>li {
+    font-size: .75em;
+}
+ol.referenced-list>li:before {
+    content: attr(number);
+    margin-right: var(--universal-margin);
+}
+ol.dictionary>li:before {
+    width: 5rem;
+    display: inline-block;
+}
+ol.tier>li {
+    display: block;
+    border-bottom: 1px solid var(--secondary-border-color);
+}
+ol.tier>li:last-child {
+    border-bottom: 0px;
+}
+ol.tier>li>.feather-arrow-up {
+    position: absolute;
+    margin-top: calc(-12px - var(--universal-margin));
+    background-color: var(--back-color);
+    color: var(--blue);
+    margin-left: 75px;
+}
+ol.tier>li:first-child>.feather-arrow-up {
+    display: none;
+}
+ul.classes {
+    padding-left: calc(2 * var(--universal-margin));
+}
+ul.classes-in-chain {
+    margin-left: 153px;
+}
+ul.classes:hover li {
+    opacity: 1;
+}
+ul.classes:hover li a:hover {
+    outline: 2px solid var(--blue);
+}
+ul.classes-in-chain li:first-child {
+    margin-left: -152px;
+    opacity: 1;
+}
+ul.classes li {
+    display: inline-block;
+    margin: var(--universal-margin);
+    margin-left: 0px;
+    vertical-align: middle;
+    opacity: 0.5;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+ul.classes li a {
+    /* Equivalent to <small> */
+    font-size: .75em;
+    border-radius: var(--universal-border-radius);
+    padding: var(--universal-padding);
+    color: #fff;
+    background-color: #333;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+ul.classes li.ancestor a {
+    border: 2px solid var(--blue);
+}
+ul.classes li.abstract a {
+    background-color: #444;
+    background-color: #CCC;
+    color: #000;
+    font-style: italic;
+}
+ul.classes li.deprecated a {
+    background-color: var(--red);
+    color: #fff;
+}
+ul.classes li.current a {
+    background-color: var(--blue);
+    color: #fff;
+}
+td p:nth-child(1) {
+    /* So that paragraphs in tds and simple tds line up */
+    margin-top: 0px;
+}
+div.changelog {
+    opacity: 0.2;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+div.changelog:hover {
+    opacity: 1;
+}
+ul.changelog {
+    list-style: none;
+}
+ul.changelog>li {
+    padding-left: 30px;
+    word-break: break-word;
+    margin-bottom: var(--universal-margin);
+}
+ul.changelog>li .feather {
+    vertical-align: middle;
+    position: absolute;
+    margin-left: -30px;
+}
+table.type-values thead tr th:nth-child(1) {
+    width: 20%;
+}
+table.attributes>thead>tr>th:nth-child(1), table.attributes>tbody>tr>td:nth-child(1) {
+    text-align: center;
+}
+table.changelog>thead>tr>th:nth-child(1), table.changelog>tbody>tr>td:nth-child(1) {
+    text-align: center;
+}
+table.changelog td {
+    word-break: break-word;
+}
+table.grouped tr.group-inherited td {
+    background: var(--dark);
+    background: #CCC;
+    text-align: left !important;
+}
+table.grouped tr.group td {
+    background: var(--blue);
+    color: #fff;
+    text-align: left !important;
+}
+table.grouped tr.group td a, table.grouped tr.group-inherited td a {
+    color: #000;
+}
+table.grouped tr.group-inherited svg {
+    vertical-align: middle;
+    width: 12px;
+    height: 12px;
+    margin-bottom: 4px;
+}
+table.grouped tr.group td a {
+    color: #fff;
+}
+table.grouped tr.preview>td {
+    text-align: center;
+    background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0, #EEEEEE), color-stop(0.25, #EEEEEE), color-stop(0.25, var(--secondary-border-color)), color-stop(0.5, var(--secondary-border-color)), color-stop(0.5, #EEEEEE), color-stop(0.75, #EEEEEE), color-stop(0.75, var(--secondary-border-color)));
+    background-size: 20px 20px;
+}
+table.grouped tr.preview>td:hover {
+    background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0, #FFFFFF), color-stop(0.25, #FFFFFF), color-stop(0.25, #EEEEEE), color-stop(0.5, #EEEEEE), color-stop(0.5, #FFFFFF), color-stop(0.75, #FFFFFF), color-stop(0.75, #EEEEEE));
+}
+table.grouped tr.preview>td svg {
+    vertical-align: middle;
+    width: 12px;
+    height: 12px;
+    margin-bottom: 4px;
+}
+table.grouped tr.inherited {
+    opacity: 0.7;
+}
+.hidden {
+    display: none;
+}
+.feather-plus-square {
+    color: var(--green);
+}
+.feather-x-square {
+    color: var(--red);
+}
+.feather-edit {
+    color: var(--blue);
+}
+.feather-link {
+    width: 16px;
+    height: 16px;
+}
+figcaption .feather-link {
+    width: 12px;
+    height: 12px;
+    margin-left: calc(0.5 * var(--universal-margin));
+}
+.hide-inverse .feather-eye-off {
+    vertical-align: text-bottom;
+    margin-right: var(--universal-margin)
+}
+.toggle-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+.search {
+    margin: 0px;
+    padding: 0px;
+    background: none;
+    border: none;
+}
+.search input {
+    width:100%;
+}
+a.edit-github {
+    margin: 0px;
+    display: block;
+}
+.contributor-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    vertical-align: middle;
+}
+.inheritance-listing, .inheritance-listing * {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--border-color);
+}
+table.hljs-ln, table.hljs-ln * {
+    border: 0px !important;
+    background-color: transparent;
+}
+table.hljs-ln td:first-child {
+    padding-right: var(--universal-padding);
+}
+.hljs-ln-numbers {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    color: var(--border-color);
+}
+.show-inherited, .hide-inherited {
+    cursor: pointer;
+}

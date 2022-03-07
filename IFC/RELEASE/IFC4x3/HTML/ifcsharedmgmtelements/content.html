@@ -1,0 +1,326 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>6.5 IfcSharedMgmtElements - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a class="current" href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a class="sublink-1" href="../ifcsharedbldgelements/content.html">
+                            6.1 IfcSharedBldgElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedbldgserviceelements/content.html">
+                            6.2 IfcSharedBldgServiceElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedcomponentelements/content.html">
+                            6.3 IfcSharedComponentElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedfacilitieselements/content.html">
+                            6.4 IfcSharedFacilitiesElements
+                        </a>
+<a class="sublink-1 current" href="content.html">
+                            6.5 IfcSharedMgmtElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedinfrastructureelements/content.html">
+                            6.6 IfcSharedInfrastructureElements
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>6.5 IfcSharedMgmtElements</h1>
+<h2><a id="6.5.1-Schema-definition"></a>
+    6.5.1 Schema definition
+<a href="content.html#6.5.1-Schema-definition"><i data-feather="link"></i></a></h2>
+<p>The <strong>IfcSharedMgmtElements</strong> schema defines basic concepts that are common to management throughout the various stages of the building lifecycle. The primary classes in the schema are all subtypes of <em><a href="../lexical/IfcControl.htm">IfcControl</a></em> and act to manage or regulate the conduct of the project in some way. This schema, along with <em>IfcProcessExtension</em> and <em>IfcConstructionMgmtDomain</em>, provide a set of models that can be used by applications needing to share information concerning construction and facilities management related issues.</p>
+<p>The objective of the <strong>IfcSharedMgmtElements</strong> schema is to capture information that supports the control of project scope, cost, and time. The aim is to provide support for exchange and sharing of minimal information concerning the subjects in scope; the extent of the model will not support the more detailed ideas found in more specialized management applications.</p>
+<p>The following are within the scope of this part of the specifications:</p>
+<ul>
+<li>Cost schedules supporting hierarchical rows and columns of costs and quantities.</li>
+<li>Orders including purchase orders, change orders, and work orders.</li>
+<li>Permits for access and carrying out work.</li>
+<li>Requests to be fulfilled.</li>
+</ul>
+<p>The following are outside of the scope of this part of the specifications:</p>
+<ul>
+<li>Transaction details that may be supported by or support electronic commerce.</li>
+</ul>
+<p>{ .change-ifc2x4}</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  The former schema <em>IfcFacilitiesMgmtDomain</em> has been merged into this schema to include the entities <em><a href="../lexical/IfcPermit.htm">IfcPermit</a></em> and <em><a href="../lexical/IfcActionRequest.htm">IfcActionRequest</a></em>, as each entity now also supports use in construction as well as facilities management.</aside>
+<h2><a id="6.5.2-Types"></a>
+    6.5.2 Types
+<a href="content.html#6.5.2-Types"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="6.5.2.1">
+<a href="../lexical/IfcActionRequestTypeEnum.htm">
+        
+            IfcActionRequestTypeEnum
+        
+        </a>
+</li><li number="6.5.2.2">
+<a href="../lexical/IfcCostItemTypeEnum.htm">
+        
+            IfcCostItemTypeEnum
+        
+        </a>
+</li><li number="6.5.2.3">
+<a href="../lexical/IfcCostScheduleTypeEnum.htm">
+        
+            IfcCostScheduleTypeEnum
+        
+        </a>
+</li><li number="6.5.2.4">
+<a href="../lexical/IfcPermitTypeEnum.htm">
+        
+            IfcPermitTypeEnum
+        
+        </a>
+</li><li number="6.5.2.5">
+<a href="../lexical/IfcProjectOrderTypeEnum.htm">
+        
+            IfcProjectOrderTypeEnum
+        
+        </a>
+</li>
+</ol>
+<h2><a id="6.5.3-Entities"></a>
+    6.5.3 Entities
+<a href="content.html#6.5.3-Entities"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="6.5.3.1">
+<a href="../lexical/IfcActionRequest.htm">
+        
+            IfcActionRequest
+        
+        </a>
+</li><li number="6.5.3.2">
+<a href="../lexical/IfcCostItem.htm">
+        
+            IfcCostItem
+        
+        </a>
+</li><li number="6.5.3.3">
+<a href="../lexical/IfcCostSchedule.htm">
+        
+            IfcCostSchedule
+        
+        </a>
+</li><li number="6.5.3.4">
+<a href="../lexical/IfcPermit.htm">
+        
+            IfcPermit
+        
+        </a>
+</li><li number="6.5.3.5">
+<a href="../lexical/IfcProjectOrder.htm">
+        
+            IfcProjectOrder
+        
+        </a>
+</li>
+</ol>
+<h2><a id="6.5.4-Property-Sets"></a>
+    6.5.4 Property Sets
+<a href="content.html#6.5.4-Property-Sets"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="6.5.4.1">
+<a href="../lexical/Pset_ActionRequest.htm">
+        
+            Pset_ActionRequest
+        
+        </a>
+</li><li number="6.5.4.2">
+<a href="../lexical/Pset_PackingInstructions.htm">
+        
+            Pset_PackingInstructions
+        
+        </a>
+</li><li number="6.5.4.3">
+<a href="../lexical/Pset_Permit.htm">
+        
+            Pset_Permit
+        
+        </a>
+</li><li number="6.5.4.4">
+<a href="../lexical/Pset_ProjectOrderChangeOrder.htm">
+        
+            Pset_ProjectOrderChangeOrder
+        
+        </a>
+</li><li number="6.5.4.5">
+<a href="../lexical/Pset_ProjectOrderMaintenanceWorkOrder.htm">
+        
+            Pset_ProjectOrderMaintenanceWorkOrder
+        
+        </a>
+</li><li number="6.5.4.6">
+<a href="../lexical/Pset_ProjectOrderMoveOrder.htm">
+        
+            Pset_ProjectOrderMoveOrder
+        
+        </a>
+</li><li number="6.5.4.7">
+<a href="../lexical/Pset_ProjectOrderPurchaseOrder.htm">
+        
+            Pset_ProjectOrderPurchaseOrder
+        
+        </a>
+</li><li number="6.5.4.8">
+<a href="../lexical/Pset_ProjectOrderWorkOrder.htm">
+        
+            Pset_ProjectOrderWorkOrder
+        
+        </a>
+</li>
+</ol>
+<h2><a id="6.5.5-Quantity-Sets"></a>
+    6.5.5 Quantity Sets
+<a href="content.html#6.5.5-Quantity-Sets"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+<h2><a id="6.5.6-Functions"></a>
+    6.5.6 Functions
+<a href="content.html#6.5.6-Functions"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+<h2><a id="6.5.7-Rules"></a>
+    6.5.7 Rules
+<a href="content.html#6.5.7-Rules"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+<h2><a id="6.5.8-PropertyEnumerations"></a>
+    6.5.8 PropertyEnumerations
+<a href="content.html#6.5.8-PropertyEnumerations"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="6.5.8.1">
+<a href="../lexical/PEnum_MaintenanceType.htm">
+        
+            PEnum_MaintenanceType
+        
+        </a>
+</li><li number="6.5.8.2">
+<a href="../lexical/PEnum_PackingCareType.htm">
+        
+            PEnum_PackingCareType
+        
+        </a>
+</li>
+</ol>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/shared/IfcSharedMgmtElements/README.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

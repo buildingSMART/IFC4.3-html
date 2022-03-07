@@ -1,0 +1,546 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>8.18.3.3 IfcGeometricRepresentationContext - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a class="current" href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+<a class="sublink-1" href="../ifcactorresource/content.html">
+                            8.1 IfcActorResource
+                        </a>
+<a class="sublink-1" href="../ifcapprovalresource/content.html">
+                            8.2 IfcApprovalResource
+                        </a>
+<a class="sublink-1" href="../ifcconstraintresource/content.html">
+                            8.3 IfcConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifccostresource/content.html">
+                            8.4 IfcCostResource
+                        </a>
+<a class="sublink-1" href="../ifcdatetimeresource/content.html">
+                            8.5 IfcDateTimeResource
+                        </a>
+<a class="sublink-1" href="../ifcexternalreferenceresource/content.html">
+                            8.6 IfcExternalReferenceResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricconstraintresource/content.html">
+                            8.7 IfcGeometricConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricmodelresource/content.html">
+                            8.8 IfcGeometricModelResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometryresource/content.html">
+                            8.9 IfcGeometryResource
+                        </a>
+<a class="sublink-1" href="../ifcmaterialresource/content.html">
+                            8.10 IfcMaterialResource
+                        </a>
+<a class="sublink-1" href="../ifcmeasureresource/content.html">
+                            8.11 IfcMeasureResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationappearanceresource/content.html">
+                            8.12 IfcPresentationAppearanceResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationdefinitionresource/content.html">
+                            8.13 IfcPresentationDefinitionResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationorganizationresource/content.html">
+                            8.14 IfcPresentationOrganizationResource
+                        </a>
+<a class="sublink-1" href="../ifcprofileresource/content.html">
+                            8.15 IfcProfileResource
+                        </a>
+<a class="sublink-1" href="../ifcpropertyresource/content.html">
+                            8.16 IfcPropertyResource
+                        </a>
+<a class="sublink-1" href="../ifcquantityresource/content.html">
+                            8.17 IfcQuantityResource
+                        </a>
+<a class="sublink-1 current" href="../ifcrepresentationresource/content.html">
+                            8.18 IfcRepresentationResource
+                        </a>
+<a class="sublink-1" href="../ifcstructuralloadresource/content.html">
+                            8.19 IfcStructuralLoadResource
+                        </a>
+<a class="sublink-1" href="../ifctopologyresource/content.html">
+                            8.20 IfcTopologyResource
+                        </a>
+<a class="sublink-1" href="../ifcutilityresource/content.html">
+                            8.21 IfcUtilityResource
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>8.18.3.3 IfcGeometricRepresentationContext</h1>
+<h2><a id="8.18.3.3.1-Semantic-definition"></a>
+    8.18.3.3.1 Semantic definition
+<a href="IfcGeometricRepresentationContext.htm#8.18.3.3.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p>The <em><a href="IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em> defines the context that applies to several shape representations of products within a project. It defines the type of the context in which the shape representation is defined, and the numeric precision applicable to the geometric representation items defined in this context. In addition it can be used to offset the project coordinate system from a global point of origin, using the <em>WorldCoordinateSystem</em> attribute. The main representation context may also provide the true north direction, see Figure 8.18.3.3.A.</p>
+<figure><a id="Figure-8.18.3.3.A-Definition-of-the-true-north-direction"></a><img alt="TrueNorth" src="../figures/ifcgeometricrepresentationcontext_truenorth.png"/><figcaption>Figure 8.18.3.3.A — Definition of the true north direction<a href="IfcGeometricRepresentationContext.htm#Figure-8.18.3.3.A-Definition-of-the-true-north-direction"><i data-feather="link"></i></a></figcaption></figure>
+<p>The <em>TrueNorth</em> attribute should be provided, if the y axis of the <em>WorldCoordinateSystem</em> does not point to the global northing. Direction of the true north, or geographic northing direction, relative to the underlying project coordinate system as established by the attribute <em>WorldCoordinateSystem</em>. It is given by a 2 dimensional direction within the xy-plane of the project coordinate system. If not resent, it defaults to [0.,1.] - i.e. the positive Y axis of the project coordinate system equals the geographic northing direction. The direction is provided within project coordinate system and identifies the true north direction.</p>
+<p>The "true North as seen in CAD" within Figure 8.18.3.3.A shows the correct interpretation of the <em>TrueNorth</em> direction.</p>
+<p>If a conversion to a geographic coordinate system is included by virtue of the <em>HasCoordinateOperation</em> attribute, then the <em>TrueNorth</em> attribute shall be omitted or included only for informational purposes. It shall not be added to any transformation already applied by an <em><a href="IfcCoordinateOperation.htm">IfcCoordinateOperation</a></em>.</p>
+<p>The use of one instance of <em><a href="IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em> to represent the model (3D) view is mandatory, the use of a second instance of <em><a href="IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em> to represent the plan (2D) view is optional (but needs to be given, if there are scale dependent plan views), the additional scale or view dependent contexts need to be handled by using the subtype <em><a href="IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a></em> pointing to the model view (or the plan view) as the <em>ParentContext</em>. See Figure 8.18.3.3.B for an example using geometric representation contexts for 3D and 2D with assigned sub contexts.</p>
+<aside class="aside-note"><mark>NOTE</mark>  The inherited attribute <em>ContextType</em> shall have one of the following recognized values: 'Model', 'Plan', 'NotDefined'.</aside>
+<figure><a id="Figure-8.18.3.3.B-Example-of-using-geometric-representation-contexts"></a><img alt="representation context" src="../figures/ifcgeometricrepresentationcontext_layout.png"/><figcaption>Figure 8.18.3.3.B — Example of using geometric representation contexts<a href="IfcGeometricRepresentationContext.htm#Figure-8.18.3.3.B-Example-of-using-geometric-representation-contexts"><i data-feather="link"></i></a></figcaption></figure>
+<p>Use of representation contexts defined at <em><a href="IfcProject.htm">IfcProject</a></em> for 3D model and 2D plan context, including sub context definitions for different target scales. There shall always be a maximum of one geometric representation context for 2D and for 3D coordinate space.</p>
+<aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO/CD 10303-42:1992
+A geometric representation context is a representation context in which the geometric representation items are geometrically founded.</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>geometric_representation_context</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2.0.</aside><aside class="aside-change"><mark>IFC2x3-CHANGE</mark>  Applicable values for <em>ContextType</em> are only 'Model', 'Plan', and 'NotDefined'. All other contexts are now handled by <em><a href="IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a></em>.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  Mapping to Geographic coordinate system added by inverse attribute <em>HasCoordinateOperation</em>.</aside>
+<h2><a id="8.18.3.3.2-Entity-inheritance"></a>
+    8.18.3.3.2 Entity inheritance
+<a href="IfcGeometricRepresentationContext.htm#8.18.3.3.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
+<ol class="tier">
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcRepresentationContext.htm">IfcRepresentationContext</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="current ancestor"><a href="IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes">
+<li class=""><a href="IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a></li>
+</ul>
+</li>
+</ol>
+<h2><a id="8.18.3.3.3-Attributes"></a>
+    8.18.3.3.3 Attributes
+<a href="IfcGeometricRepresentationContext.htm#8.18.3.3.3-Attributes"><i data-feather="link"></i></a></h2>
+<!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
+<figure><a id="Table-8.18.3.3.U"></a><table class="striped grouped attributes">
+<colgroup>
+<col style="width: 20px;"/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcRepresentationContext.htm">IfcRepresentationContext</a>
+<small>(3)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                ContextIdentifier
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>The optional identifier of the representation context as used within a project.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                ContextType
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>The description of the type of a representation context. The supported values for context type are to be specified by implementers agreements.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>RepresentationsInContext</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcRepresentation.htm">IfcRepresentation</a> FOR ContextOfItems</td>
+<td data-label="Description">
+<p>All shape representations that are defined in the same representation context.</p>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to show 3 hidden inherited attributes
+                </small>
+<small class="hide-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to hide 3 inherited attributes
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="4">
+<a href="IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a>
+<small>(6)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                CoordinateSpaceDimension
+                
+            </td>
+<td data-label="Type"><a href="IfcDimensionCount.htm">IfcDimensionCount</a></td>
+<td data-label="Description">
+<p>The integer dimension count of the coordinate space modeled in a geometric representation context.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Precision
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcReal.htm">IfcReal</a></td>
+<td data-label="Description">
+<p>Value of the model precision for geometric models. It is a double value (REAL), typically in 1E-5 to 1E-8 range, that indicates the tolerance under which two given points are still assumed to be identical. The value can be used e.g. to sets the maximum distance from an edge curve to the underlying face surface in brep models.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                WorldCoordinateSystem
+                
+            </td>
+<td data-label="Type"><a href="IfcAxis2Placement.htm">IfcAxis2Placement</a></td>
+<td data-label="Description">
+<p>Establishment of the engineering coordinate system (often referred to as the world coordinate system in CAD) for all representation contexts used by the project.</p>
+<aside class="aside-note"><mark>NOTE</mark>  It can be used to provide better numeric stability if the placement of the building(s) is far away from the origin. In most cases however it would be set to origin: (0.,0.,0.) and directions x(1.,0.,0.), y(0.,1.,0.), z(0.,0.,1.).</aside>
+<p>If an geographic placement is provided using <em><a href="IfcMapConversion.htm">IfcMapConversion</a></em> then the <em>WorldCoordinateSystem</em> atttibute is used to define the offset between the zero point of the local engineering coordinate system and the geographic reference point to which the <em><a href="IfcMapConversion.htm">IfcMapConversion</a></em> offset relates. In preferred practise both points (also called "project base point" and "survey point") should be coincidental. However it is possible to offset the geographic reference point from the local zero point.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                TrueNorth
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcDirection.htm">IfcDirection</a></td>
+<td data-label="Description">
+<p>Direction of the true north, or geographic northing direction, relative to the underlying project coordinate system. It is given by a 2 dimensional direction within the xy-plane of the project coordinate system. If not present, it defaults to 0. 1., meaning that the positive Y axis of the project coordinate system equals the geographic northing direction.</p>
+<aside class="aside-note"><mark>NOTE</mark>  If a geographic placement is provided using <em><a href="IfcMapConversion.htm">IfcMapConversion</a></em> then the true north is for information only. In case of inconsistency, the value provided with <em><a href="IfcMapConversion.htm">IfcMapConversion</a></em> shall take precedence.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasSubContexts</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a> FOR ParentContext</td>
+<td data-label="Description">
+<p>The set of <em>IfcGeometricRepresentationSubContexts</em> that refer to this <em><a href="IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em>.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasCoordinateOperation</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="IfcCoordinateOperation.htm">IfcCoordinateOperation</a> FOR SourceCRS</td>
+<td data-label="Description">
+<p>Indicates conversion between coordinate systems. In particular it refers to an <em><a href="IfcCoordinateOperation.htm">IfcCoordinateOperation</a></em> between a Geographic map coordinate reference system, and the engineering coordinate system of this construction project. If there is more then one <em><a href="IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></em> provided to the <em><a href="IfcProject.htm">IfcProject</a></em> then all contexts shall have an identical instance of <em><a href="IfcCoordinateOperation.htm">IfcCoordinateOperation</a></em> as <em>HasCoordinateOperation</em> referring to the same instance of <em><a href="IfcCoordinateReferenceSystem.htm">IfcCoordinateReferenceSystem</a></em>.</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.18.3.3.U<a href="IfcGeometricRepresentationContext.htm#Table-8.18.3.3.U"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.18.3.3.4-Formal-propositions"></a>
+    8.18.3.3.4 Formal propositions
+<a href="IfcGeometricRepresentationContext.htm#8.18.3.3.4-Formal-propositions"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-8.18.3.3.V"></a><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>North2D</td>
+<td>
+<p>The <em>TrueNorth</em> direction, if provided, shall be a two-dimensional direction.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">NOT(EXISTS(TrueNorth)) OR (HIINDEX(TrueNorth.DirectionRatios) = 2)</code></pre>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.18.3.3.V<a href="IfcGeometricRepresentationContext.htm#Table-8.18.3.3.V"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.18.3.3.5-Examples"></a>
+    8.18.3.3.5 Examples
+<a href="IfcGeometricRepresentationContext.htm#8.18.3.3.5-Examples"><i data-feather="link"></i></a></h2>
+<ul class="examples">
+<li>
+<figure><a id="Figure-8.18.3.3.C"></a><a href="../annex_e/Georeferencing_Tin_1.html"><img src="../examples/Georeferencing_Tin_1/thumb.png"/></a><figcaption>Figure 8.18.3.3.C<a href="IfcGeometricRepresentationContext.htm#Figure-8.18.3.3.C"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Georeferencing_Tin_1.html">Georeferencing_Tin_1</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.18.3.3.D"></a><a href="../annex_e/ProjectSetup_1.html"><img src="http://localhost/IFC/RELEASE/IFC4x3/HTML/examples/ProjectSetup_1/thumb.png"/></a><figcaption>Figure 8.18.3.3.D<a href="IfcGeometricRepresentationContext.htm#Figure-8.18.3.3.D"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/ProjectSetup_1.html">ProjectSetup_1</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.18.3.3.E"></a><a href="../annex_e/LinearPlacement_2.html"><img src="../examples/LinearPlacement_2/thumb.png"/></a><figcaption>Figure 8.18.3.3.E<a href="IfcGeometricRepresentationContext.htm#Figure-8.18.3.3.E"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/LinearPlacement_2.html">LinearPlacement_2</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.18.3.3.F"></a><a href="../annex_e/SpatialStructure_3.html"><img src="../examples/SpatialStructure_3/thumb.png"/></a><figcaption>Figure 8.18.3.3.F<a href="IfcGeometricRepresentationContext.htm#Figure-8.18.3.3.F"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/SpatialStructure_3.html">SpatialStructure_3</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.18.3.3.G"></a><a href="../annex_e/Georeferencing_Tin_3.html"><img src="../examples/Georeferencing_Tin_3/thumb.png"/></a><figcaption>Figure 8.18.3.3.G<a href="IfcGeometricRepresentationContext.htm#Figure-8.18.3.3.G"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Georeferencing_Tin_3.html">Georeferencing_Tin_3</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.18.3.3.H"></a><a href="../annex_e/Georeferencing_Tin_4.html"><img src="../examples/Georeferencing_Tin_4/thumb.png"/></a><figcaption>Figure 8.18.3.3.H<a href="IfcGeometricRepresentationContext.htm#Figure-8.18.3.3.H"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Georeferencing_Tin_4.html">Georeferencing_Tin_4</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.18.3.3.I"></a><a href="../annex_e/Tin_2.html"><img src="../examples/Tin_2/thumb.png"/></a><figcaption>Figure 8.18.3.3.I<a href="IfcGeometricRepresentationContext.htm#Figure-8.18.3.3.I"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Tin_2.html">Tin_2</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.18.3.3.J"></a><a href="../annex_e/Tin_4.html"><img src="../examples/Tin_4/thumb.png"/></a><figcaption>Figure 8.18.3.3.J<a href="IfcGeometricRepresentationContext.htm#Figure-8.18.3.3.J"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Tin_4.html">Tin_4</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.18.3.3.K"></a><a href="../annex_e/Tin_3.html"><img src="../examples/Tin_3/thumb.png"/></a><figcaption>Figure 8.18.3.3.K<a href="IfcGeometricRepresentationContext.htm#Figure-8.18.3.3.K"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Tin_3.html">Tin_3</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.18.3.3.L"></a><a href="../annex_e/Georeferencing_Tin_2.html"><img src="../examples/Georeferencing_Tin_2/thumb.png"/></a><figcaption>Figure 8.18.3.3.L<a href="IfcGeometricRepresentationContext.htm#Figure-8.18.3.3.L"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Georeferencing_Tin_2.html">Georeferencing_Tin_2</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.18.3.3.M"></a><a href="../annex_e/UT_Alignment_12d_11.html"><img src="../examples/UT_Alignment_12d_11/thumb.png"/></a><figcaption>Figure 8.18.3.3.M<a href="IfcGeometricRepresentationContext.htm#Figure-8.18.3.3.M"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/UT_Alignment_12d_11.html">UT_Alignment_12d_11</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.18.3.3.N"></a><a href="../annex_e/Georeferencing_Tiny_Survey_1.html"><img src="../examples/Georeferencing_Tiny_Survey_1/thumb.png"/></a><figcaption>Figure 8.18.3.3.N<a href="IfcGeometricRepresentationContext.htm#Figure-8.18.3.3.N"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Georeferencing_Tiny_Survey_1.html">Georeferencing_Tiny_Survey_1</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.18.3.3.O"></a><a href="../annex_e/Georeferencing_Tin_5.html"><img src="../examples/Georeferencing_Tin_5/thumb.png"/></a><figcaption>Figure 8.18.3.3.O<a href="IfcGeometricRepresentationContext.htm#Figure-8.18.3.3.O"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Georeferencing_Tin_5.html">Georeferencing_Tin_5</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.18.3.3.P"></a><a href="../annex_e/UT_SpatialStructure_4.html"><img src="../examples/UT_SpatialStructure_4/thumb.png"/></a><figcaption>Figure 8.18.3.3.P<a href="IfcGeometricRepresentationContext.htm#Figure-8.18.3.3.P"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/UT_SpatialStructure_4.html">UT_SpatialStructure_4</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.18.3.3.Q"></a><a href="../annex_e/Georeferencing-1.html"><img src="../examples/Georeferencing-1/thumb.png"/></a><figcaption>Figure 8.18.3.3.Q<a href="IfcGeometricRepresentationContext.htm#Figure-8.18.3.3.Q"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Georeferencing-1.html">Georeferencing-1</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.18.3.3.R"></a><a href="../annex_e/LinearPlacement_1.html"><img src="../examples/LinearPlacement_1/thumb.png"/></a><figcaption>Figure 8.18.3.3.R<a href="IfcGeometricRepresentationContext.htm#Figure-8.18.3.3.R"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/LinearPlacement_1.html">LinearPlacement_1</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.18.3.3.S"></a><a href="../annex_e/ProjectSetup_2.html"><img src="../examples/ProjectSetup_2/thumb.png"/></a><figcaption>Figure 8.18.3.3.S<a href="IfcGeometricRepresentationContext.htm#Figure-8.18.3.3.S"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/ProjectSetup_2.html">ProjectSetup_2</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.18.3.3.T"></a><a href="../annex_e/Tin_1.html"><img src="../examples/Tin_1/thumb.png"/></a><figcaption>Figure 8.18.3.3.T<a href="IfcGeometricRepresentationContext.htm#Figure-8.18.3.3.T"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Tin_1.html">Tin_1</a></p>
+</li>
+</ul>
+<h2><a id="8.18.3.3.6-Formal-representation"></a>
+    8.18.3.3.6 Formal representation
+<a href="IfcGeometricRepresentationContext.htm#8.18.3.3.6-Formal-representation"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">ENTITY <a href="IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a>
+ SUPERTYPE OF (ONEOF
+	(<a href="IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a>))
+ SUBTYPE OF (<a href="IfcRepresentationContext.htm">IfcRepresentationContext</a>);
+	CoordinateSpaceDimension : <a href="IfcDimensionCount.htm">IfcDimensionCount</a>;
+	Precision : OPTIONAL <a href="IfcReal.htm">IfcReal</a>;
+	WorldCoordinateSystem : <a href="IfcAxis2Placement.htm">IfcAxis2Placement</a>;
+	TrueNorth : OPTIONAL <a href="IfcDirection.htm">IfcDirection</a>;
+ INVERSE
+	HasSubContexts : SET [0:?] OF <a href="IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a> FOR ParentContext;
+	HasCoordinateOperation : SET [0:1] OF <a href="IfcCoordinateOperation.htm">IfcCoordinateOperation</a> FOR SourceCRS;
+ WHERE
+	North2D : NOT(EXISTS(TrueNorth)) OR (HIINDEX(TrueNorth.DirectionRatios) = 2);
+END_ENTITY;</code></pre>
+<h2><a id="8.18.3.3.7-References"></a>
+    8.18.3.3.7 References
+<a href="IfcGeometricRepresentationContext.htm#8.18.3.3.7-References"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="IfcCoordinateReferenceSystemSelect.htm">IfcCoordinateReferenceSystemSelect</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubContext</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcRepresentationContext.htm">IfcRepresentationContext</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcRepresentationContextSameWCS.htm">IfcRepresentationContextSameWCS</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+<div class="changelog">
+<h3><a id="8.18.3.3.8-Changelog"></a>
+                        8.18.3.3.8 Changelog
+                    <a href="IfcGeometricRepresentationContext.htm#8.18.3.3.8-Changelog"><i data-feather="link"></i></a></h3>
+<h4 class="collapsed"><a id="8.18.3.3.8.1-IFC4"></a>
+                        8.18.3.3.8.1 IFC4
+                    <a href="IfcGeometricRepresentationContext.htm#8.18.3.3.8.1-IFC4"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                inverses,
+                                HasCoordinateOperation
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where_rules,
+                                North2D
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes Precision definition,
+                                Changed from real to <a href="IfcReal.htm">IfcReal</a>
+</small>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/resource/IfcRepresentationResource/Entities/IfcGeometricRepresentationContext.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,482 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>7.10.3.3 IfcRelConnectsWithEccentricity - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a class="current" href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a class="sublink-1" href="../ifcarchitecturedomain/content.html">
+                            7.1 IfcArchitectureDomain
+                        </a>
+<a class="sublink-1" href="../ifcbuildingcontrolsdomain/content.html">
+                            7.2 IfcBuildingControlsDomain
+                        </a>
+<a class="sublink-1" href="../ifcconstructionmgmtdomain/content.html">
+                            7.3 IfcConstructionMgmtDomain
+                        </a>
+<a class="sublink-1" href="../ifcelectricaldomain/content.html">
+                            7.4 IfcElectricalDomain
+                        </a>
+<a class="sublink-1" href="../ifchvacdomain/content.html">
+                            7.5 IfcHvacDomain
+                        </a>
+<a class="sublink-1" href="../ifcplumbingfireprotectiondomain/content.html">
+                            7.6 IfcPlumbingFireProtectionDomain
+                        </a>
+<a class="sublink-1" href="../ifcportsandwaterwaysdomain/content.html">
+                            7.7 IfcPortsAndWaterwaysDomain
+                        </a>
+<a class="sublink-1" href="../ifcraildomain/content.html">
+                            7.8 IfcRailDomain
+                        </a>
+<a class="sublink-1" href="../ifcroaddomain/content.html">
+                            7.9 IfcRoadDomain
+                        </a>
+<a class="sublink-1 current" href="../ifcstructuralanalysisdomain/content.html">
+                            7.10 IfcStructuralAnalysisDomain
+                        </a>
+<a class="sublink-1" href="../ifcstructuralelementsdomain/content.html">
+                            7.11 IfcStructuralElementsDomain
+                        </a>
+<a href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>7.10.3.3 IfcRelConnectsWithEccentricity</h1>
+<h2><a id="7.10.3.3.1-Semantic-definition"></a>
+    7.10.3.3.1 Semantic definition
+<a href="IfcRelConnectsWithEccentricity.htm#7.10.3.3.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p>The entity <em><a href="IfcRelConnectsWithEccentricity.htm">IfcRelConnectsWithEccentricity</a></em> adds the definition of eccentricity to the connection between a structural member and a structural connection (representing either a node or support).</p>
+<aside class="aside-note"><mark>NOTE</mark>  Another eccentricity model is available independently of eccentric connection specification: The section profile of a curve member may be inserted eccentrically with respect to the member's reference curve, see definitions at <em><a href="IfcStructuralCurveMember.htm">IfcStructuralCurveMember</a></em>. Whether one or the other or both eccentricity models may be used is subject to information requirements and local agreements.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x3.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  Use definitions changed to always require two topology items.</aside>
+<p><strong>Use Definition</strong></p>
+<p><em>Point Connection</em>
+<em>ConnectionConstraint</em> shall be of type <em><a href="IfcConnectionPointGeometry.htm">IfcConnectionPointGeometry</a></em> and shall refer to two instances of <em><a href="IfcVertexPoint.htm">IfcVertexPoint</a></em>.</p>
+<p><em>Curve Connection</em>
+<em>ConnectionConstraint</em> shall be of type <em><a href="IfcConnectionCurveGeometry.htm">IfcConnectionCurveGeometry</a></em> and shall refer to two instances of <em><a href="IfcEdge.htm">IfcEdge</a></em> or subtypes.</p>
+<p><em>Surface Connection</em>
+<em>ConnectionConstraint</em> shall be of type <em><a href="IfcConnectionSurfaceGeometry.htm">IfcConnectionSurfaceGeometry</a></em> and shall refer to two instances of <em><a href="IfcFaceSurface.htm">IfcFaceSurface</a></em>.</p>
+<h2><a id="7.10.3.3.2-Entity-inheritance"></a>
+    7.10.3.3.2 Entity inheritance
+<a href="IfcRelConnectsWithEccentricity.htm#7.10.3.3.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
+<ol class="tier">
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcRoot.htm">IfcRoot</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcRelationship.htm">IfcRelationship</a></li>
+<li class="abstract"><a href="IfcObjectDefinition.htm">IfcObjectDefinition</a></li>
+<li class="abstract"><a href="IfcPropertyDefinition.htm">IfcPropertyDefinition</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcRelConnects.htm">IfcRelConnects</a></li>
+<li class="abstract"><a href="IfcRelAssigns.htm">IfcRelAssigns</a></li>
+<li class="abstract"><a href="IfcRelAssociates.htm">IfcRelAssociates</a></li>
+<li class=""><a href="IfcRelDeclares.htm">IfcRelDeclares</a></li>
+<li class="abstract"><a href="IfcRelDecomposes.htm">IfcRelDecomposes</a></li>
+<li class="abstract"><a href="IfcRelDefines.htm">IfcRelDefines</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="ancestor"><a href="IfcRelConnectsStructuralMember.htm">IfcRelConnectsStructuralMember</a></li>
+<li class=""><a href="IfcRelConnectsElements.htm">IfcRelConnectsElements</a></li>
+<li class="deprecated"><a href="IfcRelConnectsPortToElement.htm">IfcRelConnectsPortToElement</a></li>
+<li class=""><a href="IfcRelConnectsPorts.htm">IfcRelConnectsPorts</a></li>
+<li class=""><a href="IfcRelConnectsStructuralActivity.htm">IfcRelConnectsStructuralActivity</a></li>
+<li class=""><a href="IfcRelContainedInSpatialStructure.htm">IfcRelContainedInSpatialStructure</a></li>
+<li class=""><a href="IfcRelCoversBldgElements.htm">IfcRelCoversBldgElements</a></li>
+<li class=""><a href="IfcRelCoversSpaces.htm">IfcRelCoversSpaces</a></li>
+<li class=""><a href="IfcRelFillsElement.htm">IfcRelFillsElement</a></li>
+<li class=""><a href="IfcRelFlowControlElements.htm">IfcRelFlowControlElements</a></li>
+<li class=""><a href="IfcRelInterferesElements.htm">IfcRelInterferesElements</a></li>
+<li class=""><a href="IfcRelPositions.htm">IfcRelPositions</a></li>
+<li class=""><a href="IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a></li>
+<li class=""><a href="IfcRelSequence.htm">IfcRelSequence</a></li>
+<li class="deprecated"><a href="IfcRelServicesBuildings.htm">IfcRelServicesBuildings</a></li>
+<li class=""><a href="IfcRelSpaceBoundary.htm">IfcRelSpaceBoundary</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="current ancestor"><a href="IfcRelConnectsWithEccentricity.htm">IfcRelConnectsWithEccentricity</a></li>
+</ul>
+</li>
+</ol>
+<h2><a id="7.10.3.3.3-Attributes"></a>
+    7.10.3.3.3 Attributes
+<a href="IfcRelConnectsWithEccentricity.htm#7.10.3.3.3-Attributes"><i data-feather="link"></i></a></h2>
+<!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
+<figure><a id="Table-7.10.3.3.A"></a><table class="striped grouped attributes">
+<colgroup>
+<col style="width: 20px;"/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcRoot.htm">IfcRoot</a>
+<small>(4)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                GlobalId
+                
+            </td>
+<td data-label="Type"><a href="IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a></td>
+<td data-label="Description">
+<p>Assignment of a globally unique identifier within the entire software world.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                OwnerHistory
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
+<td data-label="Description">
+<p>Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,</p>
+<aside class="aside-note"><mark>NOTE</mark>  only the last modification in stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The attribute has been changed to be OPTIONAL.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>Optional name for use by the participating software systems or users. For some subtypes of <a href="IfcRoot.htm">IfcRoot</a> the insertion of the Name attribute may be required. This would be enforced by a where rule.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>Optional description, provided for exchanging informative comments.</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcRelConnectsStructuralMember.htm">IfcRelConnectsStructuralMember</a>
+<small>(6)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                RelatingStructuralMember
+                
+            </td>
+<td data-label="Type"><a href="IfcStructuralMember.htm">IfcStructuralMember</a></td>
+<td data-label="Description">
+<p>Reference to an instance of <a href="IfcStructuralMember.htm">IfcStructuralMember</a> (or its subclasses) which is connected to the specified structural connection.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                RelatedStructuralConnection
+                
+            </td>
+<td data-label="Type"><a href="IfcStructuralConnection.htm">IfcStructuralConnection</a></td>
+<td data-label="Description">
+<p>Reference to an instance of <a href="IfcStructuralConnection.htm">IfcStructuralConnection</a> (or its subclasses) which is connected to the specified structural member.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                AppliedCondition
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcBoundaryCondition.htm">IfcBoundaryCondition</a></td>
+<td data-label="Description">
+<p>Conditions which define the connections properties.  Connection conditions are often called "release" but are not only used to define mechanisms like hinges but also rigid, elastic, and other conditions.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">8</td>
+<td data-label="Name">
+                
+                AdditionalConditions
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcStructuralConnectionCondition.htm">IfcStructuralConnectionCondition</a></td>
+<td data-label="Description">
+<p>Describes additional connection properties.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">9</td>
+<td data-label="Name">
+                
+                SupportedLength
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
+<td data-label="Description">
+<p>Defines the 'supported length' of this structural connection. See Fig. for more detail.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">10</td>
+<td data-label="Name">
+                
+                ConditionCoordinateSystem
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></td>
+<td data-label="Description">
+<p>Defines a coordinate system used for the description of the connection properties in <em>ConnectionCondition</em> relative to the local coordinate system of <em>RelatingStructuralMember</em>.  If left unspecified, the placement <em><a href="IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></em>((x,y,z), ?, ?) is implied with x,y,z being the local member coordinates where the connection is made and the default axes directions being in parallel with the local axes of <em>RelatingStructuralMember</em>.</p>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to show 10 hidden inherited attributes
+                </small>
+<small class="hide-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to hide 10 inherited attributes
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="4">
+<a href="IfcRelConnectsWithEccentricity.htm">IfcRelConnectsWithEccentricity</a>
+<small>(1)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">11</td>
+<td data-label="Name">
+                
+                ConnectionConstraint
+                
+            </td>
+<td data-label="Type"><a href="IfcConnectionGeometry.htm">IfcConnectionGeometry</a></td>
+<td data-label="Description">
+<p>The connection constraint explicitly states the eccentricity between a structural member and a structural connection by means of two topological objects (vertex and vertex, or edge and edge, or face and face).</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 7.10.3.3.A<a href="IfcRelConnectsWithEccentricity.htm#Table-7.10.3.3.A"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="7.10.3.3.4-Concept-usage"></a>
+    7.10.3.3.4 Concept usage
+<a href="IfcRelConnectsWithEccentricity.htm#7.10.3.3.4-Concept-usage"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-7.10.3.3.B"></a><table class="striped grouped concepts">
+<thead>
+<tr>
+<th>Concept</th>
+<th>Usage</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="IfcRoot.htm">IfcRoot</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>Ownership, history, and merge state is captured using <a href="IfcOwnerHistory.htm">IfcOwnerHistory</a>.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p><a href="IfcRoot.htm">IfcRoot</a> assigns the globally unique ID. In addition it may provide for a name and a description about the concept.</p>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    Click to show 2 hidden inherited concepts
+                </small>
+<small class="hide-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    Click to hide 2 inherited concepts
+                </small>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 7.10.3.3.B<a href="IfcRelConnectsWithEccentricity.htm#Table-7.10.3.3.B"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="7.10.3.3.5-Formal-representation"></a>
+    7.10.3.3.5 Formal representation
+<a href="IfcRelConnectsWithEccentricity.htm#7.10.3.3.5-Formal-representation"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">ENTITY <a href="IfcRelConnectsWithEccentricity.htm">IfcRelConnectsWithEccentricity</a>
+ SUBTYPE OF (<a href="IfcRelConnectsStructuralMember.htm">IfcRelConnectsStructuralMember</a>);
+	ConnectionConstraint : <a href="IfcConnectionGeometry.htm">IfcConnectionGeometry</a>;
+END_ENTITY;</code></pre>
+<h2><a id="7.10.3.3.6-References"></a>
+    7.10.3.3.6 References
+<a href="IfcRelConnectsWithEccentricity.htm#7.10.3.3.6-References"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="IfcRelConnectsStructuralMember.htm">IfcRelConnectsStructuralMember</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/domain/IfcStructuralAnalysisDomain/Entities/IfcRelConnectsWithEccentricity.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

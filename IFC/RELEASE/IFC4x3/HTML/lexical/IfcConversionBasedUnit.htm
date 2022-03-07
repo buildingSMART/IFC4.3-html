@@ -1,0 +1,523 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>8.11.3.2 IfcConversionBasedUnit - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a class="current" href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+<a class="sublink-1" href="../ifcactorresource/content.html">
+                            8.1 IfcActorResource
+                        </a>
+<a class="sublink-1" href="../ifcapprovalresource/content.html">
+                            8.2 IfcApprovalResource
+                        </a>
+<a class="sublink-1" href="../ifcconstraintresource/content.html">
+                            8.3 IfcConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifccostresource/content.html">
+                            8.4 IfcCostResource
+                        </a>
+<a class="sublink-1" href="../ifcdatetimeresource/content.html">
+                            8.5 IfcDateTimeResource
+                        </a>
+<a class="sublink-1" href="../ifcexternalreferenceresource/content.html">
+                            8.6 IfcExternalReferenceResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricconstraintresource/content.html">
+                            8.7 IfcGeometricConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricmodelresource/content.html">
+                            8.8 IfcGeometricModelResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometryresource/content.html">
+                            8.9 IfcGeometryResource
+                        </a>
+<a class="sublink-1" href="../ifcmaterialresource/content.html">
+                            8.10 IfcMaterialResource
+                        </a>
+<a class="sublink-1 current" href="../ifcmeasureresource/content.html">
+                            8.11 IfcMeasureResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationappearanceresource/content.html">
+                            8.12 IfcPresentationAppearanceResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationdefinitionresource/content.html">
+                            8.13 IfcPresentationDefinitionResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationorganizationresource/content.html">
+                            8.14 IfcPresentationOrganizationResource
+                        </a>
+<a class="sublink-1" href="../ifcprofileresource/content.html">
+                            8.15 IfcProfileResource
+                        </a>
+<a class="sublink-1" href="../ifcpropertyresource/content.html">
+                            8.16 IfcPropertyResource
+                        </a>
+<a class="sublink-1" href="../ifcquantityresource/content.html">
+                            8.17 IfcQuantityResource
+                        </a>
+<a class="sublink-1" href="../ifcrepresentationresource/content.html">
+                            8.18 IfcRepresentationResource
+                        </a>
+<a class="sublink-1" href="../ifcstructuralloadresource/content.html">
+                            8.19 IfcStructuralLoadResource
+                        </a>
+<a class="sublink-1" href="../ifctopologyresource/content.html">
+                            8.20 IfcTopologyResource
+                        </a>
+<a class="sublink-1" href="../ifcutilityresource/content.html">
+                            8.21 IfcUtilityResource
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>8.11.3.2 IfcConversionBasedUnit</h1>
+<h2><a id="8.11.3.2.1-Semantic-definition"></a>
+    8.11.3.2.1 Semantic definition
+<a href="IfcConversionBasedUnit.htm#8.11.3.2.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p>An <a href="IfcConversionBasedUnit.htm">IfcConversionBasedUnit</a> is used to define a unit that has a conversion rate to a base unit. To identify some commonly used conversion based units, the standard designations (case insensitive) for the <em>Name</em> attribute are indicated in Table 8.11.3.2.D.</p>
+<figure><a id="Table-8.11.3.2.D-Standard-unit-names"></a><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>'inch'</td>
+<td>Length measure equal to 25.4 mm</td>
+</tr>
+<tr>
+<td>'foot'</td>
+<td>Length measure equal to 304.8 mm</td>
+</tr>
+<tr>
+<td>'yard'</td>
+<td>Length measure equal to 914 mm</td>
+</tr>
+<tr>
+<td>'mile'</td>
+<td>Length measure equal to 1609 m</td>
+</tr>
+<tr>
+<td>'square inch'</td>
+<td>Area measure equal to 0.0006452 square meters</td>
+</tr>
+<tr>
+<td>'square foot'</td>
+<td>Area measure equal to 0.09290 square meters</td>
+</tr>
+<tr>
+<td>'square yard'</td>
+<td>Area measure equal to 0.83612736 square meters</td>
+</tr>
+<tr>
+<td>'acre'</td>
+<td>Area measure equal to 4046.86 square meters</td>
+</tr>
+<tr>
+<td>'square mile'</td>
+<td>Area measure equal to 2 588 881 square meters</td>
+</tr>
+<tr>
+<td>'cubic inch'</td>
+<td>Volume measure equal to 0.00001639 cubic meters</td>
+</tr>
+<tr>
+<td>'cubic foot'</td>
+<td>Volume measure equal to 0.02832 cubic meters</td>
+</tr>
+<tr>
+<td>'cubic yard'</td>
+<td>Volume measure equal to 0.7636 cubic meters</td>
+</tr>
+<tr>
+<td>'litre'</td>
+<td>Volume measure equal to 0.001 cubic meters</td>
+</tr>
+<tr>
+<td>'fluid ounce UK'</td>
+<td>Volume measure equal to 0.0000284130625 cubic meters</td>
+</tr>
+<tr>
+<td>'fluid ounce US'</td>
+<td>Volume measure equal to 0.00002957353 cubic meters</td>
+</tr>
+<tr>
+<td>'pint UK'</td>
+<td>Volume measure equal to 0.000568 cubic meters</td>
+</tr>
+<tr>
+<td>'pint US'</td>
+<td>Volume measure equal to 0.000473 cubic meters</td>
+</tr>
+<tr>
+<td>'gallon UK'</td>
+<td>Volume measure equal to 0.004546 cubic meters</td>
+</tr>
+<tr>
+<td>'gallon US'</td>
+<td>Volume measure equal to 0.003785 cubic meters</td>
+</tr>
+<tr>
+<td>'degree'</td>
+<td>Angle measure equal to π/180 rad</td>
+</tr>
+<tr>
+<td>'ounce'</td>
+<td>Mass measure equal to 28.35 g</td>
+</tr>
+<tr>
+<td>'pound'</td>
+<td>Mass measure equal to 0.454 kg</td>
+</tr>
+<tr>
+<td>'ton UK'</td>
+<td>Mass measure equal to 1016.0469088 kg, also known as long ton, gross ton, shipper's ton</td>
+</tr>
+<tr>
+<td>'ton US'</td>
+<td>Mass measure equal to 907.18474 kg, also known as short ton, net ton</td>
+</tr>
+<tr>
+<td>'lbf'</td>
+<td>Force measure equal to 4.4482216153 N, pound-force</td>
+</tr>
+<tr>
+<td>'kip'</td>
+<td>Force measure equal to 4448.2216153 N, kilopound-force</td>
+</tr>
+<tr>
+<td>'psi'</td>
+<td>Pressure measure equal to 6894.7572932 Pa, pound-force per square inch</td>
+</tr>
+<tr>
+<td>'ksi'</td>
+<td>Pressure measure equal to 6894757.2932 Pa, kilopound-force per square inch</td>
+</tr>
+<tr>
+<td>'minute'</td>
+<td>Time measure equal to 60 s</td>
+</tr>
+<tr>
+<td>'hour'</td>
+<td>Time measure equal to 3600 s</td>
+</tr>
+<tr>
+<td>'day'</td>
+<td>Time measure equal to 86400 s</td>
+</tr>
+<tr>
+<td>'btu'</td>
+<td>Energy measure equal to 1055.056 J, British Thermal Unit</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.11.3.2.D — Standard unit names<a href="IfcConversionBasedUnit.htm#Table-8.11.3.2.D-Standard-unit-names"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-example"><mark>EXAMPLE</mark>  An inch is a converted unit. It is from the Imperial system, its name is "inch" and it can be related to the SI unit, millimetre, through a measure with unit whose value is 25.4 millimetre. A foot is also a converted unit. It is from the Imperial system, its name is "foot" and it can be related to an <em><a href="IfcSIUnit.htm">IfcSIUnit</a></em>, millimetre, either directly or through the unit called "inch". Note that several US customary units differ from Imperial units (nonmetric English units) of the same name.</aside><aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO/CD 10303-41:1992
+A conversion based unit is a unit that is defined based on a measure with unit.</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>conversion_based_unit</strong> defined in ISO 10303-41.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC1.5.1.</aside><aside class="aside-change"><mark>IFC2x3-CHANGE</mark>  Standard names of typical units added.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  Further names added: square inch, square foot, square mile, square yard, cubic inch, cubic foot, cubic yard, fluid ounce UK/US, ton UK/US, degree.</aside>
+<h2><a id="8.11.3.2.2-Entity-inheritance"></a>
+    8.11.3.2.2 Entity inheritance
+<a href="IfcConversionBasedUnit.htm#8.11.3.2.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
+<ol class="tier">
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcNamedUnit.htm">IfcNamedUnit</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="current ancestor"><a href="IfcConversionBasedUnit.htm">IfcConversionBasedUnit</a></li>
+<li class=""><a href="IfcContextDependentUnit.htm">IfcContextDependentUnit</a></li>
+<li class=""><a href="IfcSIUnit.htm">IfcSIUnit</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes">
+<li class=""><a href="IfcConversionBasedUnitWithOffset.htm">IfcConversionBasedUnitWithOffset</a></li>
+</ul>
+</li>
+</ol>
+<h2><a id="8.11.3.2.3-Attributes"></a>
+    8.11.3.2.3 Attributes
+<a href="IfcConversionBasedUnit.htm#8.11.3.2.3-Attributes"><i data-feather="link"></i></a></h2>
+<!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
+<figure><a id="Table-8.11.3.2.E"></a><table class="striped grouped attributes">
+<colgroup>
+<col style="width: 20px;"/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcNamedUnit.htm">IfcNamedUnit</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                Dimensions
+                
+            </td>
+<td data-label="Type"><a href="IfcDimensionalExponents.htm">IfcDimensionalExponents</a></td>
+<td data-label="Description">
+<p>The dimensional exponents of the SI base units by which the named unit is defined.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                UnitType
+                
+            </td>
+<td data-label="Type"><a href="IfcUnitEnum.htm">IfcUnitEnum</a></td>
+<td data-label="Description">
+<p>The type of the unit.</p>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to show 2 hidden inherited attributes
+                </small>
+<small class="hide-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to hide 2 inherited attributes
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="4">
+<a href="IfcConversionBasedUnit.htm">IfcConversionBasedUnit</a>
+<small>(3)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type"><a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>The word, or group of words, by which the conversion based unit is referred to.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                ConversionFactor
+                
+            </td>
+<td data-label="Type"><a href="IfcMeasureWithUnit.htm">IfcMeasureWithUnit</a></td>
+<td data-label="Description">
+<p>The physical quantity from which the converted unit is derived.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasExternalReference</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
+<td data-label="Description">
+<p>Reference to external information, e.g. library, classification, or document information, which is associated with the conversion-based unit.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark> New inverse attribute.</aside>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.11.3.2.E<a href="IfcConversionBasedUnit.htm#Table-8.11.3.2.E"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.11.3.2.4-Examples"></a>
+    8.11.3.2.4 Examples
+<a href="IfcConversionBasedUnit.htm#8.11.3.2.4-Examples"><i data-feather="link"></i></a></h2>
+<ul class="examples">
+<li>
+<figure><a id="Figure-8.11.3.2.A"></a><a href="../annex_e/ProjectSetup_1.html"><img src="http://localhost/IFC/RELEASE/IFC4x3/HTML/examples/ProjectSetup_1/thumb.png"/></a><figcaption>Figure 8.11.3.2.A<a href="IfcConversionBasedUnit.htm#Figure-8.11.3.2.A"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/ProjectSetup_1.html">ProjectSetup_1</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.11.3.2.B"></a><a href="../annex_e/Georeferencing-1.html"><img src="../examples/Georeferencing-1/thumb.png"/></a><figcaption>Figure 8.11.3.2.B<a href="IfcConversionBasedUnit.htm#Figure-8.11.3.2.B"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Georeferencing-1.html">Georeferencing-1</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.11.3.2.C"></a><a href="../annex_e/ProjectSetup_2.html"><img src="../examples/ProjectSetup_2/thumb.png"/></a><figcaption>Figure 8.11.3.2.C<a href="IfcConversionBasedUnit.htm#Figure-8.11.3.2.C"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/ProjectSetup_2.html">ProjectSetup_2</a></p>
+</li>
+</ul>
+<h2><a id="8.11.3.2.5-Formal-representation"></a>
+    8.11.3.2.5 Formal representation
+<a href="IfcConversionBasedUnit.htm#8.11.3.2.5-Formal-representation"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">ENTITY <a href="IfcConversionBasedUnit.htm">IfcConversionBasedUnit</a>
+ SUPERTYPE OF (ONEOF
+	(<a href="IfcConversionBasedUnitWithOffset.htm">IfcConversionBasedUnitWithOffset</a>))
+ SUBTYPE OF (<a href="IfcNamedUnit.htm">IfcNamedUnit</a>);
+	Name : <a href="IfcLabel.htm">IfcLabel</a>;
+	ConversionFactor : <a href="IfcMeasureWithUnit.htm">IfcMeasureWithUnit</a>;
+ INVERSE
+	HasExternalReference : SET [0:?] OF <a href="IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects;
+END_ENTITY;</code></pre>
+<h2><a id="8.11.3.2.6-References"></a>
+    8.11.3.2.6 References
+<a href="IfcConversionBasedUnit.htm#8.11.3.2.6-References"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="IfcConversionBasedUnitWithOffset.htm">IfcConversionBasedUnitWithOffset</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcNamedUnit.htm">IfcNamedUnit</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcResourceObjectSelect.htm">IfcResourceObjectSelect</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+<div class="changelog">
+<h3><a id="8.11.3.2.7-Changelog"></a>
+                        8.11.3.2.7 Changelog
+                    <a href="IfcConversionBasedUnit.htm#8.11.3.2.7-Changelog"><i data-feather="link"></i></a></h3>
+<h4 class="collapsed"><a id="8.11.3.2.7.1-IFC4"></a>
+                        8.11.3.2.7.1 IFC4
+                    <a href="IfcConversionBasedUnit.htm#8.11.3.2.7.1-IFC4"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                inverses,
+                                HasExternalReference
+                                
+                            </small>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/resource/IfcMeasureResource/Entities/IfcConversionBasedUnit.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

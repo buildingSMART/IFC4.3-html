@@ -1,0 +1,403 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>8.3.3.4 IfcReference - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a class="current" href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+<a class="sublink-1" href="../ifcactorresource/content.html">
+                            8.1 IfcActorResource
+                        </a>
+<a class="sublink-1" href="../ifcapprovalresource/content.html">
+                            8.2 IfcApprovalResource
+                        </a>
+<a class="sublink-1 current" href="../ifcconstraintresource/content.html">
+                            8.3 IfcConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifccostresource/content.html">
+                            8.4 IfcCostResource
+                        </a>
+<a class="sublink-1" href="../ifcdatetimeresource/content.html">
+                            8.5 IfcDateTimeResource
+                        </a>
+<a class="sublink-1" href="../ifcexternalreferenceresource/content.html">
+                            8.6 IfcExternalReferenceResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricconstraintresource/content.html">
+                            8.7 IfcGeometricConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricmodelresource/content.html">
+                            8.8 IfcGeometricModelResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometryresource/content.html">
+                            8.9 IfcGeometryResource
+                        </a>
+<a class="sublink-1" href="../ifcmaterialresource/content.html">
+                            8.10 IfcMaterialResource
+                        </a>
+<a class="sublink-1" href="../ifcmeasureresource/content.html">
+                            8.11 IfcMeasureResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationappearanceresource/content.html">
+                            8.12 IfcPresentationAppearanceResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationdefinitionresource/content.html">
+                            8.13 IfcPresentationDefinitionResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationorganizationresource/content.html">
+                            8.14 IfcPresentationOrganizationResource
+                        </a>
+<a class="sublink-1" href="../ifcprofileresource/content.html">
+                            8.15 IfcProfileResource
+                        </a>
+<a class="sublink-1" href="../ifcpropertyresource/content.html">
+                            8.16 IfcPropertyResource
+                        </a>
+<a class="sublink-1" href="../ifcquantityresource/content.html">
+                            8.17 IfcQuantityResource
+                        </a>
+<a class="sublink-1" href="../ifcrepresentationresource/content.html">
+                            8.18 IfcRepresentationResource
+                        </a>
+<a class="sublink-1" href="../ifcstructuralloadresource/content.html">
+                            8.19 IfcStructuralLoadResource
+                        </a>
+<a class="sublink-1" href="../ifctopologyresource/content.html">
+                            8.20 IfcTopologyResource
+                        </a>
+<a class="sublink-1" href="../ifcutilityresource/content.html">
+                            8.21 IfcUtilityResource
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>8.3.3.4 IfcReference</h1>
+<h2><a id="8.3.3.4.1-Semantic-definition"></a>
+    8.3.3.4.1 Semantic definition
+<a href="IfcReference.htm#8.3.3.4.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p>This entity is used to refer to a value of an attribute on an instance. It may refer to the value of a scalar attribute or a value within a collection-based attribute. Referenced attributes may be direct values, object references, collections, inverse object references, and inverse collections. References may be chained to form a path of object-attribute references.</p>
+<figure><a id="Figure-8.3.3.4.A-An-example-of-chained-references-to-refer-to-a-core-layer-thickness"></a><svg height="378px" viewbox="0.00 0.00 248.00 377.50" width="248px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="graph" id="graph0" transform="scale(1 1) rotate(0) translate(4 373.5)">
+<title>dot_neato</title>
+<polygon fill="transparent" points="-4,4 -4,-373.5 244,-373.5 244,4 -4,4" stroke="transparent"></polygon>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReference.htm'>IfcReference</a> -->
+<g class="node" id="node1">
+<title><a href="IfcReference.htm">IfcReference</a></title>
+<polygon fill="#1976d2" points="13.5,-308 13.5,-369 226.5,-369 226.5,-308 13.5,-308" stroke="#000000" stroke-width=".2"></polygon>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="85" y="-353.8"><a href="IfcReference.htm">IfcReference</a></text>
+<polyline fill="none" points="13.5,-346 226.5,-346 " stroke="#000000" stroke-width=".2"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="57.5" y="-330.8">TypeIdentifier: <a href="IfcSlab.htm">IfcSlab</a></text>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="21.5" y="-315.8">AttributeIdentifier: HasAssociations</text>
+</g>
+<!-- IfcReference2 -->
+<g class="node" id="node2">
+<title>IfcReference2</title>
+<polygon fill="#1976d2" points="0,-208 0,-269 240,-269 240,-208 0,-208" stroke="#000000" stroke-width=".2"></polygon>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="85" y="-253.8"><a href="IfcReference.htm">IfcReference</a></text>
+<polyline fill="none" points="0,-246 240,-246 " stroke="#000000" stroke-width=".2"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="8" y="-230.8">TypeIdentifier: <a href="IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a></text>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="20.5" y="-215.8">AttributeIdentifier: RelatingMaterial</text>
+</g>
+<!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcReference.htm'>IfcReference</a>&#45;&gt;IfcReference2 -->
+<g class="edge" id="edge1">
+<title><a href="IfcReference.htm">IfcReference</a>-&gt;IfcReference2</title>
+<path d="M120,-307.9533C120,-297.006 120,-284.5848 120,-273.3039" fill="none" stroke="#000000"></path>
+<ellipse cx="120" cy="-271.2042" fill="#000000" rx="2" ry="2" stroke="#000000"></ellipse>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="78" y="-294.4286">InnerReference</text>
+</g>
+<!-- IfcReference3 -->
+<g class="node" id="node3">
+<title>IfcReference3</title>
+<polygon fill="#1976d2" points="14,-108 14,-169 226,-169 226,-108 14,-108" stroke="#000000" stroke-width=".2"></polygon>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="85" y="-153.8"><a href="IfcReference.htm">IfcReference</a></text>
+<polyline fill="none" points="14,-146 226,-146 " stroke="#000000" stroke-width=".2"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="22" y="-130.8">TypeIdentifier: <a href="IfcMaterialLayerSet.htm">IfcMaterialLayerSet</a></text>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="25" y="-115.8">AttributeIdentifier: MaterialLayers</text>
+</g>
+<!-- IfcReference2&#45;&gt;IfcReference3 -->
+<g class="edge" id="edge2">
+<title>IfcReference2-&gt;IfcReference3</title>
+<path d="M120,-207.9533C120,-197.006 120,-184.5848 120,-173.3039" fill="none" stroke="#000000"></path>
+<ellipse cx="120" cy="-171.2042" fill="#000000" rx="2" ry="2" stroke="#000000"></ellipse>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="78" y="-194.4286">InnerReference</text>
+</g>
+<!-- IfcReference4 -->
+<g class="node" id="node4">
+<title>IfcReference4</title>
+<polygon fill="#1976d2" points="20,-.5 20,-76.5 220,-76.5 220,-.5 20,-.5" stroke="#000000" stroke-width=".2"></polygon>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="85" y="-61.3"><a href="IfcReference.htm">IfcReference</a></text>
+<polyline fill="none" points="20,-53.5 220,-53.5 " stroke="#000000" stroke-width=".2"></polyline>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="30.5" y="-38.3">TypeIdentifier: <a href="IfcMaterialLayer.htm">IfcMaterialLayer</a></text>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="28" y="-23.3">LayerThickness: HasAssociations</text>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="start" x="64" y="-8.3">InstanceName: Core</text>
+</g>
+<!-- IfcReference3&#45;&gt;IfcReference4 -->
+<g class="edge" id="edge3">
+<title>IfcReference3-&gt;IfcReference4</title>
+<path d="M120,-107.9533C120,-99.4633 120,-90.0867 120,-81.0431" fill="none" stroke="#000000"></path>
+<ellipse cx="120" cy="-78.6356" fill="#000000" rx="2" ry="2" stroke="#000000"></ellipse>
+<text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="78" y="-83.2982">InnerReference</text>
+</g>
+</g>
+</svg><figcaption>Figure 8.3.3.4.A — An example of chained references to refer to a core layer thickness<a href="IfcReference.htm#Figure-8.3.3.4.A-An-example-of-chained-references-to-refer-to-a-core-layer-thickness"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.3.3.4.2-Entity-inheritance"></a>
+    8.3.3.4.2 Entity inheritance
+<a href="IfcReference.htm#8.3.3.4.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
+<ol class="tier">
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="current ancestor"><a href="IfcReference.htm">IfcReference</a></li>
+</ul>
+</li>
+</ol>
+<h2><a id="8.3.3.4.3-Attributes"></a>
+    8.3.3.4.3 Attributes
+<a href="IfcReference.htm#8.3.3.4.3-Attributes"><i data-feather="link"></i></a></h2>
+<!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
+<figure><a id="Table-8.3.3.4.B"></a><table class="striped grouped attributes">
+<colgroup>
+<col style="width: 20px;"/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group">
+<td colspan="4">
+<a href="IfcReference.htm">IfcReference</a>
+<small>(5)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                TypeIdentifier
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcIdentifier.htm">IfcIdentifier</a></td>
+<td data-label="Description">
+<p>Optional identifier of the entity or type such as '<a href="IfcMaterialLayerSet.htm">IfcMaterialLayerSet</a>'. For entity, type, or select-based references within a collection, this resolves the reference to such type.
+If omitted, the type is assumed to be the same as the declared referencing attribute.</p>
+<aside class="aside-example"><mark>EXAMPLE</mark> <em><a href="IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a></em>.<em>RelatingMaterial</em> may be resolved to <em><a href="IfcMaterialLayerSet.htm">IfcMaterialLayerSet</a></em>.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                AttributeIdentifier
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcIdentifier.htm">IfcIdentifier</a></td>
+<td data-label="Description">
+<p>Optionally identifies a direct or inverse attribute within an entity such as 'MaterialLayers'.
+If <em>TypeIdentifier</em> is specified and refers to an entity, the attribute must exist within the referenced entity.
+A null value indicates a reference to the type or entity itself, such as for indicating that the type of a value must match a specified constraint.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                InstanceName
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>Optionally identifies an instance within a collection according to name.  If the instance has an attribute called 'Name', such attribute is used for comparison; otherwise the first STRING-based attribute of the entity is used.</p>
+<aside class="aside-example"><mark>EXAMPLE</mark> <em><a href="IfcRoot.htm">IfcRoot</a></em>-based entities such as <em><a href="IfcPropertySet.htm">IfcPropertySet</a></em> use the <em>Name</em> attribute; <em><a href="IfcRepresentation.htm">IfcRepresentation</a></em> entities use the <em>RepresentationIdentifier</em> attribute.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                ListPositions
+                
+            </td>
+<td data-label="Type">OPTIONAL LIST [1:?] OF <a href="IfcInteger.htm">IfcInteger</a></td>
+<td data-label="Description">
+<p>Optionally identifies an instance within a collection according to position starting at 1.  For referencing single-level collections, this attribute contains a single member; for referencing multi-level collections, then this LIST attribute contains multiple members starting from the outer-most index.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                InnerReference
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcReference.htm">IfcReference</a></td>
+<td data-label="Description">
+<p>Optional reference to an inner value for ENTITY, SELECT, SET, or LIST attributes.
+A path may be formed by linking <em><a href="IfcReference.htm">IfcReference</a></em> instances together.</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.3.3.4.B<a href="IfcReference.htm#Table-8.3.3.4.B"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.3.3.4.4-Formal-representation"></a>
+    8.3.3.4.4 Formal representation
+<a href="IfcReference.htm#8.3.3.4.4-Formal-representation"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">ENTITY <a href="IfcReference.htm">IfcReference</a>;
+	TypeIdentifier : OPTIONAL <a href="IfcIdentifier.htm">IfcIdentifier</a>;
+	AttributeIdentifier : OPTIONAL <a href="IfcIdentifier.htm">IfcIdentifier</a>;
+	InstanceName : OPTIONAL <a href="IfcLabel.htm">IfcLabel</a>;
+	ListPositions : OPTIONAL LIST [1:?] OF <a href="IfcInteger.htm">IfcInteger</a>;
+	InnerReference : OPTIONAL <a href="IfcReference.htm">IfcReference</a>;
+END_ENTITY;</code></pre>
+<h2><a id="8.3.3.4.5-References"></a>
+    8.3.3.4.5 References
+<a href="IfcReference.htm#8.3.3.4.5-References"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="IfcAppliedValueSelect.htm">IfcAppliedValueSelect</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcMetric.htm">IfcMetric</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcMetricValueSelect.htm">IfcMetricValueSelect</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcTableColumn.htm">IfcTableColumn</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+<div class="changelog">
+<h3><a id="8.3.3.4.6-Changelog"></a>
+                        8.3.3.4.6 Changelog
+                    <a href="IfcReference.htm#8.3.3.4.6-Changelog"><i data-feather="link"></i></a></h3>
+<h4 class="collapsed"><a id="8.3.3.4.6.1-IFC4"></a>
+                        8.3.3.4.6.1 IFC4
+                    <a href="IfcReference.htm#8.3.3.4.6.1-IFC4"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                New resource
+                                
+                            </small>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/resource/IfcConstraintResource/Entities/IfcReference.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

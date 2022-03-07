@@ -1,0 +1,518 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>8.10 IfcMaterialResource - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a class="current" href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+<a class="sublink-1" href="../ifcactorresource/content.html">
+                            8.1 IfcActorResource
+                        </a>
+<a class="sublink-1" href="../ifcapprovalresource/content.html">
+                            8.2 IfcApprovalResource
+                        </a>
+<a class="sublink-1" href="../ifcconstraintresource/content.html">
+                            8.3 IfcConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifccostresource/content.html">
+                            8.4 IfcCostResource
+                        </a>
+<a class="sublink-1" href="../ifcdatetimeresource/content.html">
+                            8.5 IfcDateTimeResource
+                        </a>
+<a class="sublink-1" href="../ifcexternalreferenceresource/content.html">
+                            8.6 IfcExternalReferenceResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricconstraintresource/content.html">
+                            8.7 IfcGeometricConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricmodelresource/content.html">
+                            8.8 IfcGeometricModelResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometryresource/content.html">
+                            8.9 IfcGeometryResource
+                        </a>
+<a class="sublink-1 current" href="content.html">
+                            8.10 IfcMaterialResource
+                        </a>
+<a class="sublink-1" href="../ifcmeasureresource/content.html">
+                            8.11 IfcMeasureResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationappearanceresource/content.html">
+                            8.12 IfcPresentationAppearanceResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationdefinitionresource/content.html">
+                            8.13 IfcPresentationDefinitionResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationorganizationresource/content.html">
+                            8.14 IfcPresentationOrganizationResource
+                        </a>
+<a class="sublink-1" href="../ifcprofileresource/content.html">
+                            8.15 IfcProfileResource
+                        </a>
+<a class="sublink-1" href="../ifcpropertyresource/content.html">
+                            8.16 IfcPropertyResource
+                        </a>
+<a class="sublink-1" href="../ifcquantityresource/content.html">
+                            8.17 IfcQuantityResource
+                        </a>
+<a class="sublink-1" href="../ifcrepresentationresource/content.html">
+                            8.18 IfcRepresentationResource
+                        </a>
+<a class="sublink-1" href="../ifcstructuralloadresource/content.html">
+                            8.19 IfcStructuralLoadResource
+                        </a>
+<a class="sublink-1" href="../ifctopologyresource/content.html">
+                            8.20 IfcTopologyResource
+                        </a>
+<a class="sublink-1" href="../ifcutilityresource/content.html">
+                            8.21 IfcUtilityResource
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>8.10 IfcMaterialResource</h1>
+<h2><a id="8.10.1-Schema-definition"></a>
+    8.10.1 Schema definition
+<a href="content.html#8.10.1-Schema-definition"><i data-feather="link"></i></a></h2>
+<p>The schema <em>IfcMaterialResource</em> contains the types and entities that are used to define materials (substances, of which products are made of). Materials are defined generically.</p>
+<aside class="aside-note"><mark>NOTE</mark>  The references to the usage of materials is made from the relevant elements through the objectified relationship <em><a href="../lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a></em>.</aside>
+<p>Material definitions are distinguished by how they apply to elements or element types and by their components (layers, profiles, parts).</p>
+<p>Material designation can be made for element occurrences to support a limited range of their parametric representation using</p>
+<ol>
+<li>a structured set of material layers <em><a href="../lexical/IfcMaterialLayerSetUsage.htm">IfcMaterialLayerSetUsage</a></em> and how the layers relate to the reference axis or plane,</li>
+<li>a structured set of material profiles <em><a href="../lexical/IfcMaterialProfileSetUsage.htm">IfcMaterialProfileSetUsage</a></em> and how the profiles relate to the reference axis.</li>
+</ol>
+<p>Material designation can be made for element occurrences or element types without applying a parametric meaning using</p>
+<ol>
+<li>a set of material layers (with a specified configuration by sequence and thickness of material layers) <em><a href="../lexical/IfcMaterialLayerSet.htm">IfcMaterialLayerSet</a></em>, or</li>
+<li>a set of material profiles (with a specified configuration by positioning and outline profile of material profiles) <em><a href="../lexical/IfcMaterialProfileSet.htm">IfcMaterialProfileSet</a></em>, or</li>
+<li>a set of materials (without a specified configuration or structure) <em><a href="../lexical/IfcMaterialConstituentSet.htm">IfcMaterialConstituentSet</a></em>, or</li>
+<li>as fallback by a single material <em><a href="../lexical/IfcMaterial.htm">IfcMaterial</a></em> (including composite materials),</li>
+</ol>
+<p>These options are exposed for association with <em><a href="../lexical/IfcElement.htm">IfcElement</a></em> or <em><a href="../lexical/IfcElementType.htm">IfcElementType</a></em> and their subtypes through a select type <em><a href="../lexical/IfcMaterialSelect.htm">IfcMaterialSelect</a></em>. The association is realized by the objectified relationship <em><a href="../lexical/IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a></em>, accessible by the inverse relationship <em>AssociatedTo</em>. Some associations to specific material entities may be restricted as not being appropriate within the specialized element or element type definitions.</p>
+<p>The following material properties and information sets can be assigned to an <em><a href="../lexical/IfcMaterialDefinition.htm">IfcMaterialDefinition</a></em>, or only to a single <em><a href="../lexical/IfcMaterial.htm">IfcMaterial</a></em>.</p>
+<ul>
+<li>Material properties;</li>
+<li>Material classification and material library reference;</li>
+<li>Material presentation in shape models (e.g. by color, hatching, rendering);</li>
+<li>Relation to the ingredients of a material composite.</li>
+</ul>
+<aside class="aside-history"><mark>HISTORY</mark>  New schema in IFC1.0</aside>
+<p>{ .change-ifc2x4}</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  Definition of material properties and their assignment to <em><a href="../lexical/IfcMaterial.htm">IfcMaterial</a></em> or other appropriate options in <em><a href="../lexical/IfcMaterialSelect.htm">IfcMaterialSelect</a></em> is now fully captured by <em>IfcExtendedMaterialProperties</em> using the general <em><a href="../lexical/IfcProperty.htm">IfcProperty</a></em> approach. Specific predefined subtypes of <em><a href="../lexical/IfcMaterialProperties.htm">IfcMaterialProperties</a></em> are no longer available.</aside>
+<p>{ .deprecated}</p>
+<blockquote>
+<p>DEPRECATION  Material designation by using <em><a href="../lexical/IfcMaterialList.htm">IfcMaterialList</a></em> is deprecated and should not be used. The classification of materials should not be done using <em><a href="../lexical/IfcMaterialClassificationRelationship.htm">IfcMaterialClassificationRelationship</a></em> anymore (entity type deprecated); the <em><a href="../lexical/IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a></em> in <em>IfcExternalReferenceResource</em> schema should be used instead.</p>
+</blockquote>
+<h2><a id="8.10.2-Types"></a>
+    8.10.2 Types
+<a href="content.html#8.10.2-Types"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="8.10.2.1">
+<a href="../lexical/IfcCardinalPointReference.htm">
+        
+            IfcCardinalPointReference
+        
+        </a>
+</li><li number="8.10.2.2">
+<a href="../lexical/IfcDirectionSenseEnum.htm">
+        
+            IfcDirectionSenseEnum
+        
+        </a>
+</li><li number="8.10.2.3">
+<a href="../lexical/IfcLayerSetDirectionEnum.htm">
+        
+            IfcLayerSetDirectionEnum
+        
+        </a>
+</li><li number="8.10.2.4">
+<a href="../lexical/IfcMaterialSelect.htm">
+        
+            IfcMaterialSelect
+        
+        </a>
+</li>
+</ol>
+<h2><a id="8.10.3-Entities"></a>
+    8.10.3 Entities
+<a href="content.html#8.10.3-Entities"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="8.10.3.1">
+<a href="../lexical/IfcMaterial.htm">
+        
+            IfcMaterial
+        
+        </a>
+</li><li number="8.10.3.2">
+<a href="../lexical/IfcMaterialClassificationRelationship.htm">
+        
+            IfcMaterialClassificationRelationship
+        
+        </a>
+</li><li number="8.10.3.3">
+<a href="../lexical/IfcMaterialConstituent.htm">
+        
+            IfcMaterialConstituent
+        
+        </a>
+</li><li number="8.10.3.4">
+<a href="../lexical/IfcMaterialConstituentSet.htm">
+        
+            IfcMaterialConstituentSet
+        
+        </a>
+</li><li number="8.10.3.5">
+<a href="../lexical/IfcMaterialDefinition.htm">
+        
+            IfcMaterialDefinition
+        
+        </a>
+</li><li number="8.10.3.6">
+<a href="../lexical/IfcMaterialLayer.htm">
+        
+            IfcMaterialLayer
+        
+        </a>
+</li><li number="8.10.3.7">
+<a href="../lexical/IfcMaterialLayerSet.htm">
+        
+            IfcMaterialLayerSet
+        
+        </a>
+</li><li number="8.10.3.8">
+<a href="../lexical/IfcMaterialLayerSetUsage.htm">
+        
+            IfcMaterialLayerSetUsage
+        
+        </a>
+</li><li number="8.10.3.9">
+<a href="../lexical/IfcMaterialLayerWithOffsets.htm">
+        
+            IfcMaterialLayerWithOffsets
+        
+        </a>
+</li><li number="8.10.3.10">
+<a href="../lexical/IfcMaterialList.htm">
+        
+            IfcMaterialList
+        
+        </a>
+</li><li number="8.10.3.11">
+<a href="../lexical/IfcMaterialProfile.htm">
+        
+            IfcMaterialProfile
+        
+        </a>
+</li><li number="8.10.3.12">
+<a href="../lexical/IfcMaterialProfileSet.htm">
+        
+            IfcMaterialProfileSet
+        
+        </a>
+</li><li number="8.10.3.13">
+<a href="../lexical/IfcMaterialProfileSetUsage.htm">
+        
+            IfcMaterialProfileSetUsage
+        
+        </a>
+</li><li number="8.10.3.14">
+<a href="../lexical/IfcMaterialProfileSetUsageTapering.htm">
+        
+            IfcMaterialProfileSetUsageTapering
+        
+        </a>
+</li><li number="8.10.3.15">
+<a href="../lexical/IfcMaterialProfileWithOffsets.htm">
+        
+            IfcMaterialProfileWithOffsets
+        
+        </a>
+</li><li number="8.10.3.16">
+<a href="../lexical/IfcMaterialProperties.htm">
+        
+            IfcMaterialProperties
+        
+        </a>
+</li><li number="8.10.3.17">
+<a href="../lexical/IfcMaterialRelationship.htm">
+        
+            IfcMaterialRelationship
+        
+        </a>
+</li><li number="8.10.3.18">
+<a href="../lexical/IfcMaterialUsageDefinition.htm">
+        
+            IfcMaterialUsageDefinition
+        
+        </a>
+</li>
+</ol>
+<h2><a id="8.10.4-Property-Sets"></a>
+    8.10.4 Property Sets
+<a href="content.html#8.10.4-Property-Sets"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="8.10.4.1">
+<a href="../lexical/Pset_MaterialCombustion.htm">
+        
+            Pset_MaterialCombustion
+        
+        </a>
+</li><li number="8.10.4.2">
+<a href="../lexical/Pset_MaterialCommon.htm">
+        
+            Pset_MaterialCommon
+        
+        </a>
+</li><li number="8.10.4.3">
+<a href="../lexical/Pset_MaterialConcrete.htm">
+        
+            Pset_MaterialConcrete
+        
+        </a>
+</li><li number="8.10.4.4">
+<a href="../lexical/Pset_MaterialEnergy.htm">
+        
+            Pset_MaterialEnergy
+        
+        </a>
+</li><li number="8.10.4.5">
+<a href="../lexical/Pset_MaterialFuel.htm">
+        
+            Pset_MaterialFuel
+        
+        </a>
+</li><li number="8.10.4.6">
+<a href="../lexical/Pset_MaterialHygroscopic.htm">
+        
+            Pset_MaterialHygroscopic
+        
+        </a>
+</li><li number="8.10.4.7">
+<a href="../lexical/Pset_MaterialMechanical.htm">
+        
+            Pset_MaterialMechanical
+        
+        </a>
+</li><li number="8.10.4.8">
+<a href="../lexical/Pset_MaterialOptical.htm">
+        
+            Pset_MaterialOptical
+        
+        </a>
+</li><li number="8.10.4.9">
+<a href="../lexical/Pset_MaterialSteel.htm">
+        
+            Pset_MaterialSteel
+        
+        </a>
+</li><li number="8.10.4.10">
+<a href="../lexical/Pset_MaterialThermal.htm">
+        
+            Pset_MaterialThermal
+        
+        </a>
+</li><li number="8.10.4.11">
+<a href="../lexical/Pset_MaterialWater.htm">
+        
+            Pset_MaterialWater
+        
+        </a>
+</li><li number="8.10.4.12">
+<a href="../lexical/Pset_MaterialWood.htm">
+        
+            Pset_MaterialWood
+        
+        </a>
+</li><li number="8.10.4.13">
+<a href="../lexical/Pset_MaterialWoodBasedStructure.htm">
+        
+            Pset_MaterialWoodBasedStructure
+        
+        </a>
+</li><li number="8.10.4.14">
+<a href="../lexical/Pset_MechanicalBeamInPlane.htm">
+        
+            Pset_MechanicalBeamInPlane
+        
+        </a>
+</li><li number="8.10.4.15">
+<a href="../lexical/Pset_MechanicalBeamInPlaneNegative.htm">
+        
+            Pset_MechanicalBeamInPlaneNegative
+        
+        </a>
+</li><li number="8.10.4.16">
+<a href="../lexical/Pset_MechanicalBeamOutOfPlane.htm">
+        
+            Pset_MechanicalBeamOutOfPlane
+        
+        </a>
+</li><li number="8.10.4.17">
+<a href="../lexical/Pset_MechanicalPanelInPlane.htm">
+        
+            Pset_MechanicalPanelInPlane
+        
+        </a>
+</li><li number="8.10.4.18">
+<a href="../lexical/Pset_MechanicalPanelOutOfPlane.htm">
+        
+            Pset_MechanicalPanelOutOfPlane
+        
+        </a>
+</li><li number="8.10.4.19">
+<a href="../lexical/Pset_MechanicalPanelOutOfPlaneNegative.htm">
+        
+            Pset_MechanicalPanelOutOfPlaneNegative
+        
+        </a>
+</li>
+</ol>
+<h2><a id="8.10.5-Quantity-Sets"></a>
+    8.10.5 Quantity Sets
+<a href="content.html#8.10.5-Quantity-Sets"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+<h2><a id="8.10.6-Functions"></a>
+    8.10.6 Functions
+<a href="content.html#8.10.6-Functions"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="8.10.6.1">
+<a href="../lexical/IfcMlsTotalThickness.htm">
+        
+            IfcMlsTotalThickness
+        
+        </a>
+</li>
+</ol>
+<h2><a id="8.10.7-Rules"></a>
+    8.10.7 Rules
+<a href="content.html#8.10.7-Rules"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+<h2><a id="8.10.8-PropertyEnumerations"></a>
+    8.10.8 PropertyEnumerations
+<a href="content.html#8.10.8-PropertyEnumerations"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/resource/IfcMaterialResource/README.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

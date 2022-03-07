@@ -1,0 +1,567 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>7.7 IfcPortsAndWaterwaysDomain - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a class="current" href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a class="sublink-1" href="../ifcarchitecturedomain/content.html">
+                            7.1 IfcArchitectureDomain
+                        </a>
+<a class="sublink-1" href="../ifcbuildingcontrolsdomain/content.html">
+                            7.2 IfcBuildingControlsDomain
+                        </a>
+<a class="sublink-1" href="../ifcconstructionmgmtdomain/content.html">
+                            7.3 IfcConstructionMgmtDomain
+                        </a>
+<a class="sublink-1" href="../ifcelectricaldomain/content.html">
+                            7.4 IfcElectricalDomain
+                        </a>
+<a class="sublink-1" href="../ifchvacdomain/content.html">
+                            7.5 IfcHvacDomain
+                        </a>
+<a class="sublink-1" href="../ifcplumbingfireprotectiondomain/content.html">
+                            7.6 IfcPlumbingFireProtectionDomain
+                        </a>
+<a class="sublink-1 current" href="content.html">
+                            7.7 IfcPortsAndWaterwaysDomain
+                        </a>
+<a class="sublink-1" href="../ifcraildomain/content.html">
+                            7.8 IfcRailDomain
+                        </a>
+<a class="sublink-1" href="../ifcroaddomain/content.html">
+                            7.9 IfcRoadDomain
+                        </a>
+<a class="sublink-1" href="../ifcstructuralanalysisdomain/content.html">
+                            7.10 IfcStructuralAnalysisDomain
+                        </a>
+<a class="sublink-1" href="../ifcstructuralelementsdomain/content.html">
+                            7.11 IfcStructuralElementsDomain
+                        </a>
+<a href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>7.7 IfcPortsAndWaterwaysDomain</h1>
+<h2><a id="7.7.1-Schema-definition"></a>
+    7.7.1 Schema definition
+<a href="content.html#7.7.1-Schema-definition"><i data-feather="link"></i></a></h2>
+<p>The <em>IfcPortsAndWaterwaysDomain</em> schema forms part of the Domain Layer of the IFC Model. It extends the ideas concerning infrastructure outlined in the <em>IfcSharedInfrastructureElements</em> schema. It defines concepts specific to ports and waterways infrastructure.</p>
+<p>The concepts which are currently considered as in scope and covered by this schema is as follows:</p>
+<ul>
+<li>Complex types<ul>
+<li>Cargo ports (Container, dry bulk, liquid bulk, roll-on roll-off)</li>
+<li>Passenger terminals (cruise, ferry &amp; foot traffic)</li>
+<li>Marinas &amp; leisure terminals</li>
+<li>Ship &amp; boat building yards</li>
+<li>Marine &amp; water maintenance</li>
+<li>Offshore support/construction base</li>
+<li>Canal complexes/networks</li>
+<li>Channel regulation &amp; water control</li>
+<li>Ship lock complexes</li>
+</ul>
+</li>
+<li>Facility types<ul>
+<li>Breakwaters</li>
+<li>Revetments</li>
+<li>Sluices, spillways &amp;control gates</li>
+<li>Ship-lifts</li>
+<li>Hydraulic lift docks</li>
+<li>Slipways</li>
+<li>Dry docks</li>
+<li>Floating docks</li>
+<li>Wharf/Quays &amp; Piers/Jetties</li>
+<li>Ship locks</li>
+<li>Anchorages</li>
+<li>Navigational channels/areas</li>
+<li>Storage/working areas</li>
+<li>Intermodal yards/areas</li>
+</ul>
+</li>
+<li>Marine Products &amp; Components<ul>
+<li>Cargo &amp; Vehicles</li>
+<li>Cranes</li>
+<li>Marine dock/lock gates</li>
+<li>Aids to navigation (buoys, lights, markers etc.)</li>
+<li>Fenders &amp; bollards</li>
+<li>Mooring systems &amp; devices</li>
+<li>Rock armour systems</li>
+</ul>
+</li>
+</ul>
+<p>The following topics are currently out of scope:
+* Complex types
+    * Coastal protection
+    * Erosion protection
+    * Flood protection
+    * Power generation (Hydroelectric, tidal, wave, offshore wind)
+* Facility types
+    * Seawalls
+    * Groynes
+    * Dams/levees
+    * Weirs</p>
+<aside class="aside-history"><mark>HISTORY</mark>  New schema in IFC4x3.</aside>
+<h2><a id="7.7.2-Types"></a>
+    7.7.2 Types
+<a href="content.html#7.7.2-Types"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="7.7.2.1">
+<a href="../lexical/IfcConveyorSegmentTypeEnum.htm">
+        
+            IfcConveyorSegmentTypeEnum
+        
+        </a>
+</li><li number="7.7.2.2">
+<a href="../lexical/IfcLiquidTerminalTypeEnum.htm">
+        
+            IfcLiquidTerminalTypeEnum
+        
+        </a>
+</li><li number="7.7.2.3">
+<a href="../lexical/IfcMarineFacilityTypeEnum.htm">
+        
+            IfcMarineFacilityTypeEnum
+        
+        </a>
+</li><li number="7.7.2.4">
+<a href="../lexical/IfcMarinePartTypeEnum.htm">
+        
+            IfcMarinePartTypeEnum
+        
+        </a>
+</li><li number="7.7.2.5">
+<a href="../lexical/IfcMooringDeviceTypeEnum.htm">
+        
+            IfcMooringDeviceTypeEnum
+        
+        </a>
+</li><li number="7.7.2.6">
+<a href="../lexical/IfcNavigationElementTypeEnum.htm">
+        
+            IfcNavigationElementTypeEnum
+        
+        </a>
+</li>
+</ol>
+<h2><a id="7.7.3-Entities"></a>
+    7.7.3 Entities
+<a href="content.html#7.7.3-Entities"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="7.7.3.1">
+<a href="../lexical/IfcConveyorSegment.htm">
+        
+            IfcConveyorSegment
+        
+        </a>
+</li><li number="7.7.3.2">
+<a href="../lexical/IfcConveyorSegmentType.htm">
+        
+            IfcConveyorSegmentType
+        
+        </a>
+</li><li number="7.7.3.3">
+<a href="../lexical/IfcLiquidTerminal.htm">
+        
+            IfcLiquidTerminal
+        
+        </a>
+</li><li number="7.7.3.4">
+<a href="../lexical/IfcLiquidTerminalType.htm">
+        
+            IfcLiquidTerminalType
+        
+        </a>
+</li><li number="7.7.3.5">
+<a href="../lexical/IfcMarineFacility.htm">
+        
+            IfcMarineFacility
+        
+        </a>
+</li><li number="7.7.3.6">
+<a href="../lexical/IfcMarinePart.htm">
+        
+            IfcMarinePart
+        
+        </a>
+</li><li number="7.7.3.7">
+<a href="../lexical/IfcMooringDevice.htm">
+        
+            IfcMooringDevice
+        
+        </a>
+</li><li number="7.7.3.8">
+<a href="../lexical/IfcMooringDeviceType.htm">
+        
+            IfcMooringDeviceType
+        
+        </a>
+</li><li number="7.7.3.9">
+<a href="../lexical/IfcNavigationElement.htm">
+        
+            IfcNavigationElement
+        
+        </a>
+</li><li number="7.7.3.10">
+<a href="../lexical/IfcNavigationElementType.htm">
+        
+            IfcNavigationElementType
+        
+        </a>
+</li>
+</ol>
+<h2><a id="7.7.4-Property-Sets"></a>
+    7.7.4 Property Sets
+<a href="content.html#7.7.4-Property-Sets"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="7.7.4.1">
+<a href="../lexical/Pset_BerthCommon.htm">
+        
+            Pset_BerthCommon
+        
+        </a>
+</li><li number="7.7.4.2">
+<a href="../lexical/Pset_BreakwaterCommon.htm">
+        
+            Pset_BreakwaterCommon
+        
+        </a>
+</li><li number="7.7.4.3">
+<a href="../lexical/Pset_CargoCommon.htm">
+        
+            Pset_CargoCommon
+        
+        </a>
+</li><li number="7.7.4.4">
+<a href="../lexical/Pset_EnergyRequirements.htm">
+        
+            Pset_EnergyRequirements
+        
+        </a>
+</li><li number="7.7.4.5">
+<a href="../lexical/Pset_FenderCommon.htm">
+        
+            Pset_FenderCommon
+        
+        </a>
+</li><li number="7.7.4.6">
+<a href="../lexical/Pset_FenderDesignCriteria.htm">
+        
+            Pset_FenderDesignCriteria
+        
+        </a>
+</li><li number="7.7.4.7">
+<a href="../lexical/Pset_GateHeadCommon.htm">
+        
+            Pset_GateHeadCommon
+        
+        </a>
+</li><li number="7.7.4.8">
+<a href="../lexical/Pset_JettyCommon.htm">
+        
+            Pset_JettyCommon
+        
+        </a>
+</li><li number="7.7.4.9">
+<a href="../lexical/Pset_JettyDesignCriteria.htm">
+        
+            Pset_JettyDesignCriteria
+        
+        </a>
+</li><li number="7.7.4.10">
+<a href="../lexical/Pset_MarineFacilityTransportation.htm">
+        
+            Pset_MarineFacilityTransportation
+        
+        </a>
+</li><li number="7.7.4.11">
+<a href="../lexical/Pset_MarinePartChamberCommon.htm">
+        
+            Pset_MarinePartChamberCommon
+        
+        </a>
+</li><li number="7.7.4.12">
+<a href="../lexical/Pset_MarineVehicleCommon.htm">
+        
+            Pset_MarineVehicleCommon
+        
+        </a>
+</li><li number="7.7.4.13">
+<a href="../lexical/Pset_MarineVehicleDesignCriteria.htm">
+        
+            Pset_MarineVehicleDesignCriteria
+        
+        </a>
+</li><li number="7.7.4.14">
+<a href="../lexical/Pset_MooringDeviceCommon.htm">
+        
+            Pset_MooringDeviceCommon
+        
+        </a>
+</li><li number="7.7.4.15">
+<a href="../lexical/Pset_QuayCommon.htm">
+        
+            Pset_QuayCommon
+        
+        </a>
+</li><li number="7.7.4.16">
+<a href="../lexical/Pset_QuayDesignCriteria.htm">
+        
+            Pset_QuayDesignCriteria
+        
+        </a>
+</li><li number="7.7.4.17">
+<a href="../lexical/Pset_RevetmentCommon.htm">
+        
+            Pset_RevetmentCommon
+        
+        </a>
+</li><li number="7.7.4.18">
+<a href="../lexical/Pset_ShipLockCommon.htm">
+        
+            Pset_ShipLockCommon
+        
+        </a>
+</li><li number="7.7.4.19">
+<a href="../lexical/Pset_ShiplockComplex.htm">
+        
+            Pset_ShiplockComplex
+        
+        </a>
+</li><li number="7.7.4.20">
+<a href="../lexical/Pset_ShiplockDesignCriteria.htm">
+        
+            Pset_ShiplockDesignCriteria
+        
+        </a>
+</li><li number="7.7.4.21">
+<a href="../lexical/Pset_ShipyardCommon.htm">
+        
+            Pset_ShipyardCommon
+        
+        </a>
+</li><li number="7.7.4.22">
+<a href="../lexical/Pset_SiteWeather.htm">
+        
+            Pset_SiteWeather
+        
+        </a>
+</li><li number="7.7.4.23">
+<a href="../lexical/Pset_VehicleAvailability.htm">
+        
+            Pset_VehicleAvailability
+        
+        </a>
+</li><li number="7.7.4.24">
+<a href="../lexical/Pset_VesselLineCommon.htm">
+        
+            Pset_VesselLineCommon
+        
+        </a>
+</li>
+</ol>
+<h2><a id="7.7.5-Quantity-Sets"></a>
+    7.7.5 Quantity Sets
+<a href="content.html#7.7.5-Quantity-Sets"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="7.7.5.1">
+<a href="../lexical/Qto_FacilityPartBaseQuantities.htm">
+        
+            Qto_FacilityPartBaseQuantities
+        
+        </a>
+</li><li number="7.7.5.2">
+<a href="../lexical/Qto_MarineFacilityBaseQuantities.htm">
+        
+            Qto_MarineFacilityBaseQuantities
+        
+        </a>
+</li><li number="7.7.5.3">
+<a href="../lexical/Qto_VehicleBaseQuantities.htm">
+        
+            Qto_VehicleBaseQuantities
+        
+        </a>
+</li>
+</ol>
+<h2><a id="7.7.6-Functions"></a>
+    7.7.6 Functions
+<a href="content.html#7.7.6-Functions"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+<h2><a id="7.7.7-Rules"></a>
+    7.7.7 Rules
+<a href="content.html#7.7.7-Rules"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+<h2><a id="7.7.8-PropertyEnumerations"></a>
+    7.7.8 PropertyEnumerations
+<a href="content.html#7.7.8-PropertyEnumerations"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="7.7.8.1">
+<a href="../lexical/PEnum_AddedMassCoefficientMethod.htm">
+        
+            PEnum_AddedMassCoefficientMethod
+        
+        </a>
+</li><li number="7.7.8.2">
+<a href="../lexical/PEnum_AdditionalProcessing.htm">
+        
+            PEnum_AdditionalProcessing
+        
+        </a>
+</li><li number="7.7.8.3">
+<a href="../lexical/PEnum_AnchorageType.htm">
+        
+            PEnum_AnchorageType
+        
+        </a>
+</li><li number="7.7.8.4">
+<a href="../lexical/PEnum_BerthApproach.htm">
+        
+            PEnum_BerthApproach
+        
+        </a>
+</li><li number="7.7.8.5">
+<a href="../lexical/PEnum_BerthMode.htm">
+        
+            PEnum_BerthMode
+        
+        </a>
+</li><li number="7.7.8.6">
+<a href="../lexical/PEnum_FenderType.htm">
+        
+            PEnum_FenderType
+        
+        </a>
+</li><li number="7.7.8.7">
+<a href="../lexical/PEnum_MooringDeviceType.htm">
+        
+            PEnum_MooringDeviceType
+        
+        </a>
+</li><li number="7.7.8.8">
+<a href="../lexical/PEnum_ProcessDirection.htm">
+        
+            PEnum_ProcessDirection
+        
+        </a>
+</li>
+</ol>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/domain/IfcPortsAndWaterwaysDomain/README.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

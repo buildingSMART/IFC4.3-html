@@ -1,0 +1,1051 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>6.1 IfcSharedBldgElements - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a class="current" href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a class="sublink-1 current" href="content.html">
+                            6.1 IfcSharedBldgElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedbldgserviceelements/content.html">
+                            6.2 IfcSharedBldgServiceElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedcomponentelements/content.html">
+                            6.3 IfcSharedComponentElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedfacilitieselements/content.html">
+                            6.4 IfcSharedFacilitiesElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedmgmtelements/content.html">
+                            6.5 IfcSharedMgmtElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedinfrastructureelements/content.html">
+                            6.6 IfcSharedInfrastructureElements
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>6.1 IfcSharedBldgElements</h1>
+<h2><a id="6.1.1-Schema-definition"></a>
+    6.1.1 Schema definition
+<a href="content.html#6.1.1-Schema-definition"><i data-feather="link"></i></a></h2>
+<p>The shared building elements (<em>IfcSharedBldgElements</em>) define the subtypes of <em>IfcBuildingElement</em>, which is defined in the <em>IfcProductExtension</em>. Those subtypes are the major elements, which constitutes the architectural design of the building structure.</p>
+<p>The elements (e.g. wall, beam, column, slab, roof, stair, ramp, window, door and covering) are the main components of the raw building (or carcass) which is central for the exchange of project data. For each of those elements a geometric use definition is provided, which introduces the correct application of available shape representation types for the elements.</p>
+<h2><a id="6.1.2-Types"></a>
+    6.1.2 Types
+<a href="content.html#6.1.2-Types"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="6.1.2.1">
+<a href="../lexical/IfcBeamTypeEnum.htm">
+        
+            IfcBeamTypeEnum
+        
+        </a>
+</li><li number="6.1.2.2">
+<a href="../lexical/IfcBearingTypeDisplacementEnum.htm">
+        
+            IfcBearingTypeDisplacementEnum
+        
+        </a>
+</li><li number="6.1.2.3">
+<a href="../lexical/IfcBearingTypeEnum.htm">
+        
+            IfcBearingTypeEnum
+        
+        </a>
+</li><li number="6.1.2.4">
+<a href="../lexical/IfcBuildingElementProxyTypeEnum.htm">
+        
+            IfcBuildingElementProxyTypeEnum
+        
+        </a>
+</li><li number="6.1.2.5">
+<a href="../lexical/IfcBuildingSystemTypeEnum.htm">
+        
+            IfcBuildingSystemTypeEnum
+        
+        </a>
+</li><li number="6.1.2.6">
+<a href="../lexical/IfcChimneyTypeEnum.htm">
+        
+            IfcChimneyTypeEnum
+        
+        </a>
+</li><li number="6.1.2.7">
+<a href="../lexical/IfcColumnTypeEnum.htm">
+        
+            IfcColumnTypeEnum
+        
+        </a>
+</li><li number="6.1.2.8">
+<a href="../lexical/IfcConnectionTypeEnum.htm">
+        
+            IfcConnectionTypeEnum
+        
+        </a>
+</li><li number="6.1.2.9">
+<a href="../lexical/IfcCoveringTypeEnum.htm">
+        
+            IfcCoveringTypeEnum
+        
+        </a>
+</li><li number="6.1.2.10">
+<a href="../lexical/IfcCurtainWallTypeEnum.htm">
+        
+            IfcCurtainWallTypeEnum
+        
+        </a>
+</li><li number="6.1.2.11">
+<a href="../lexical/IfcDoorTypeEnum.htm">
+        
+            IfcDoorTypeEnum
+        
+        </a>
+</li><li number="6.1.2.12">
+<a href="../lexical/IfcDoorTypeOperationEnum.htm">
+        
+            IfcDoorTypeOperationEnum
+        
+        </a>
+</li><li number="6.1.2.13">
+<a href="../lexical/IfcMemberTypeEnum.htm">
+        
+            IfcMemberTypeEnum
+        
+        </a>
+</li><li number="6.1.2.14">
+<a href="../lexical/IfcPlateTypeEnum.htm">
+        
+            IfcPlateTypeEnum
+        
+        </a>
+</li><li number="6.1.2.15">
+<a href="../lexical/IfcRailingTypeEnum.htm">
+        
+            IfcRailingTypeEnum
+        
+        </a>
+</li><li number="6.1.2.16">
+<a href="../lexical/IfcRampFlightTypeEnum.htm">
+        
+            IfcRampFlightTypeEnum
+        
+        </a>
+</li><li number="6.1.2.17">
+<a href="../lexical/IfcRampTypeEnum.htm">
+        
+            IfcRampTypeEnum
+        
+        </a>
+</li><li number="6.1.2.18">
+<a href="../lexical/IfcRoofTypeEnum.htm">
+        
+            IfcRoofTypeEnum
+        
+        </a>
+</li><li number="6.1.2.19">
+<a href="../lexical/IfcShadingDeviceTypeEnum.htm">
+        
+            IfcShadingDeviceTypeEnum
+        
+        </a>
+</li><li number="6.1.2.20">
+<a href="../lexical/IfcSlabTypeEnum.htm">
+        
+            IfcSlabTypeEnum
+        
+        </a>
+</li><li number="6.1.2.21">
+<a href="../lexical/IfcStairFlightTypeEnum.htm">
+        
+            IfcStairFlightTypeEnum
+        
+        </a>
+</li><li number="6.1.2.22">
+<a href="../lexical/IfcStairTypeEnum.htm">
+        
+            IfcStairTypeEnum
+        
+        </a>
+</li><li number="6.1.2.23">
+<a href="../lexical/IfcWallTypeEnum.htm">
+        
+            IfcWallTypeEnum
+        
+        </a>
+</li><li number="6.1.2.24">
+<a href="../lexical/IfcWindowTypeEnum.htm">
+        
+            IfcWindowTypeEnum
+        
+        </a>
+</li><li number="6.1.2.25">
+<a href="../lexical/IfcWindowTypePartitioningEnum.htm">
+        
+            IfcWindowTypePartitioningEnum
+        
+        </a>
+</li>
+</ol>
+<h2><a id="6.1.3-Entities"></a>
+    6.1.3 Entities
+<a href="content.html#6.1.3-Entities"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="6.1.3.1">
+<a href="../lexical/IfcBeam.htm">
+        
+            IfcBeam
+        
+        </a>
+</li><li number="6.1.3.2">
+<a href="../lexical/IfcBeamType.htm">
+        
+            IfcBeamType
+        
+        </a>
+</li><li number="6.1.3.3">
+<a href="../lexical/IfcBearing.htm">
+        
+            IfcBearing
+        
+        </a>
+</li><li number="6.1.3.4">
+<a href="../lexical/IfcBearingType.htm">
+        
+            IfcBearingType
+        
+        </a>
+</li><li number="6.1.3.5">
+<a href="../lexical/IfcBuildingElementProxy.htm">
+        
+            IfcBuildingElementProxy
+        
+        </a>
+</li><li number="6.1.3.6">
+<a href="../lexical/IfcBuildingElementProxyType.htm">
+        
+            IfcBuildingElementProxyType
+        
+        </a>
+</li><li number="6.1.3.7">
+<a href="../lexical/IfcBuildingSystem.htm">
+        
+            IfcBuildingSystem
+        
+        </a>
+</li><li number="6.1.3.8">
+<a href="../lexical/IfcChimney.htm">
+        
+            IfcChimney
+        
+        </a>
+</li><li number="6.1.3.9">
+<a href="../lexical/IfcChimneyType.htm">
+        
+            IfcChimneyType
+        
+        </a>
+</li><li number="6.1.3.10">
+<a href="../lexical/IfcColumn.htm">
+        
+            IfcColumn
+        
+        </a>
+</li><li number="6.1.3.11">
+<a href="../lexical/IfcColumnType.htm">
+        
+            IfcColumnType
+        
+        </a>
+</li><li number="6.1.3.12">
+<a href="../lexical/IfcCovering.htm">
+        
+            IfcCovering
+        
+        </a>
+</li><li number="6.1.3.13">
+<a href="../lexical/IfcCoveringType.htm">
+        
+            IfcCoveringType
+        
+        </a>
+</li><li number="6.1.3.14">
+<a href="../lexical/IfcCurtainWall.htm">
+        
+            IfcCurtainWall
+        
+        </a>
+</li><li number="6.1.3.15">
+<a href="../lexical/IfcCurtainWallType.htm">
+        
+            IfcCurtainWallType
+        
+        </a>
+</li><li number="6.1.3.16">
+<a href="../lexical/IfcDoor.htm">
+        
+            IfcDoor
+        
+        </a>
+</li><li number="6.1.3.17">
+<a href="../lexical/IfcDoorType.htm">
+        
+            IfcDoorType
+        
+        </a>
+</li><li number="6.1.3.18">
+<a href="../lexical/IfcMember.htm">
+        
+            IfcMember
+        
+        </a>
+</li><li number="6.1.3.19">
+<a href="../lexical/IfcMemberType.htm">
+        
+            IfcMemberType
+        
+        </a>
+</li><li number="6.1.3.20">
+<a href="../lexical/IfcPlate.htm">
+        
+            IfcPlate
+        
+        </a>
+</li><li number="6.1.3.21">
+<a href="../lexical/IfcPlateType.htm">
+        
+            IfcPlateType
+        
+        </a>
+</li><li number="6.1.3.22">
+<a href="../lexical/IfcRailing.htm">
+        
+            IfcRailing
+        
+        </a>
+</li><li number="6.1.3.23">
+<a href="../lexical/IfcRailingType.htm">
+        
+            IfcRailingType
+        
+        </a>
+</li><li number="6.1.3.24">
+<a href="../lexical/IfcRamp.htm">
+        
+            IfcRamp
+        
+        </a>
+</li><li number="6.1.3.25">
+<a href="../lexical/IfcRampFlight.htm">
+        
+            IfcRampFlight
+        
+        </a>
+</li><li number="6.1.3.26">
+<a href="../lexical/IfcRampFlightType.htm">
+        
+            IfcRampFlightType
+        
+        </a>
+</li><li number="6.1.3.27">
+<a href="../lexical/IfcRampType.htm">
+        
+            IfcRampType
+        
+        </a>
+</li><li number="6.1.3.28">
+<a href="../lexical/IfcRelConnectsPathElements.htm">
+        
+            IfcRelConnectsPathElements
+        
+        </a>
+</li><li number="6.1.3.29">
+<a href="../lexical/IfcRelCoversBldgElements.htm">
+        
+            IfcRelCoversBldgElements
+        
+        </a>
+</li><li number="6.1.3.30">
+<a href="../lexical/IfcRelCoversSpaces.htm">
+        
+            IfcRelCoversSpaces
+        
+        </a>
+</li><li number="6.1.3.31">
+<a href="../lexical/IfcRoof.htm">
+        
+            IfcRoof
+        
+        </a>
+</li><li number="6.1.3.32">
+<a href="../lexical/IfcRoofType.htm">
+        
+            IfcRoofType
+        
+        </a>
+</li><li number="6.1.3.33">
+<a href="../lexical/IfcShadingDevice.htm">
+        
+            IfcShadingDevice
+        
+        </a>
+</li><li number="6.1.3.34">
+<a href="../lexical/IfcShadingDeviceType.htm">
+        
+            IfcShadingDeviceType
+        
+        </a>
+</li><li number="6.1.3.35">
+<a href="../lexical/IfcSlab.htm">
+        
+            IfcSlab
+        
+        </a>
+</li><li number="6.1.3.36">
+<a href="../lexical/IfcSlabType.htm">
+        
+            IfcSlabType
+        
+        </a>
+</li><li number="6.1.3.37">
+<a href="../lexical/IfcStair.htm">
+        
+            IfcStair
+        
+        </a>
+</li><li number="6.1.3.38">
+<a href="../lexical/IfcStairFlight.htm">
+        
+            IfcStairFlight
+        
+        </a>
+</li><li number="6.1.3.39">
+<a href="../lexical/IfcStairFlightType.htm">
+        
+            IfcStairFlightType
+        
+        </a>
+</li><li number="6.1.3.40">
+<a href="../lexical/IfcStairType.htm">
+        
+            IfcStairType
+        
+        </a>
+</li><li number="6.1.3.41">
+<a href="../lexical/IfcWall.htm">
+        
+            IfcWall
+        
+        </a>
+</li><li number="6.1.3.42">
+<a href="../lexical/IfcWallStandardCase.htm">
+        
+            IfcWallStandardCase
+        
+        </a>
+</li><li number="6.1.3.43">
+<a href="../lexical/IfcWallType.htm">
+        
+            IfcWallType
+        
+        </a>
+</li><li number="6.1.3.44">
+<a href="../lexical/IfcWindow.htm">
+        
+            IfcWindow
+        
+        </a>
+</li><li number="6.1.3.45">
+<a href="../lexical/IfcWindowType.htm">
+        
+            IfcWindowType
+        
+        </a>
+</li>
+</ol>
+<h2><a id="6.1.4-Property-Sets"></a>
+    6.1.4 Property Sets
+<a href="content.html#6.1.4-Property-Sets"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="6.1.4.1">
+<a href="../lexical/Pset_BeamCommon.htm">
+        
+            Pset_BeamCommon
+        
+        </a>
+</li><li number="6.1.4.2">
+<a href="../lexical/Pset_BearingCommon.htm">
+        
+            Pset_BearingCommon
+        
+        </a>
+</li><li number="6.1.4.3">
+<a href="../lexical/Pset_BuildingElementProxyCommon.htm">
+        
+            Pset_BuildingElementProxyCommon
+        
+        </a>
+</li><li number="6.1.4.4">
+<a href="../lexical/Pset_BuildingSystemCommon.htm">
+        
+            Pset_BuildingSystemCommon
+        
+        </a>
+</li><li number="6.1.4.5">
+<a href="../lexical/Pset_ChimneyCommon.htm">
+        
+            Pset_ChimneyCommon
+        
+        </a>
+</li><li number="6.1.4.6">
+<a href="../lexical/Pset_ColumnCommon.htm">
+        
+            Pset_ColumnCommon
+        
+        </a>
+</li><li number="6.1.4.7">
+<a href="../lexical/Pset_CoveringCommon.htm">
+        
+            Pset_CoveringCommon
+        
+        </a>
+</li><li number="6.1.4.8">
+<a href="../lexical/Pset_CoveringFlooring.htm">
+        
+            Pset_CoveringFlooring
+        
+        </a>
+</li><li number="6.1.4.9">
+<a href="../lexical/Pset_CurtainWallCommon.htm">
+        
+            Pset_CurtainWallCommon
+        
+        </a>
+</li><li number="6.1.4.10">
+<a href="../lexical/Pset_DoorCommon.htm">
+        
+            Pset_DoorCommon
+        
+        </a>
+</li><li number="6.1.4.11">
+<a href="../lexical/Pset_DoorWindowGlazingType.htm">
+        
+            Pset_DoorWindowGlazingType
+        
+        </a>
+</li><li number="6.1.4.12">
+<a href="../lexical/Pset_MemberCommon.htm">
+        
+            Pset_MemberCommon
+        
+        </a>
+</li><li number="6.1.4.13">
+<a href="../lexical/Pset_PlateCommon.htm">
+        
+            Pset_PlateCommon
+        
+        </a>
+</li><li number="6.1.4.14">
+<a href="../lexical/Pset_RailingCommon.htm">
+        
+            Pset_RailingCommon
+        
+        </a>
+</li><li number="6.1.4.15">
+<a href="../lexical/Pset_RampCommon.htm">
+        
+            Pset_RampCommon
+        
+        </a>
+</li><li number="6.1.4.16">
+<a href="../lexical/Pset_RampFlightCommon.htm">
+        
+            Pset_RampFlightCommon
+        
+        </a>
+</li><li number="6.1.4.17">
+<a href="../lexical/Pset_RoofCommon.htm">
+        
+            Pset_RoofCommon
+        
+        </a>
+</li><li number="6.1.4.18">
+<a href="../lexical/Pset_ShadingDeviceCommon.htm">
+        
+            Pset_ShadingDeviceCommon
+        
+        </a>
+</li><li number="6.1.4.19">
+<a href="../lexical/Pset_SlabCommon.htm">
+        
+            Pset_SlabCommon
+        
+        </a>
+</li><li number="6.1.4.20">
+<a href="../lexical/Pset_StairCommon.htm">
+        
+            Pset_StairCommon
+        
+        </a>
+</li><li number="6.1.4.21">
+<a href="../lexical/Pset_StairFlightCommon.htm">
+        
+            Pset_StairFlightCommon
+        
+        </a>
+</li><li number="6.1.4.22">
+<a href="../lexical/Pset_Tiling.htm">
+        
+            Pset_Tiling
+        
+        </a>
+</li><li number="6.1.4.23">
+<a href="../lexical/Pset_WallCommon.htm">
+        
+            Pset_WallCommon
+        
+        </a>
+</li><li number="6.1.4.24">
+<a href="../lexical/Pset_WindowCommon.htm">
+        
+            Pset_WindowCommon
+        
+        </a>
+</li>
+</ol>
+<h2><a id="6.1.5-Quantity-Sets"></a>
+    6.1.5 Quantity Sets
+<a href="content.html#6.1.5-Quantity-Sets"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="6.1.5.1">
+<a href="../lexical/Qto_BeamBaseQuantities.htm">
+        
+            Qto_BeamBaseQuantities
+        
+        </a>
+</li><li number="6.1.5.2">
+<a href="../lexical/Qto_BuildingElementProxyQuantities.htm">
+        
+            Qto_BuildingElementProxyQuantities
+        
+        </a>
+</li><li number="6.1.5.3">
+<a href="../lexical/Qto_ChimneyBaseQuantities.htm">
+        
+            Qto_ChimneyBaseQuantities
+        
+        </a>
+</li><li number="6.1.5.4">
+<a href="../lexical/Qto_ColumnBaseQuantities.htm">
+        
+            Qto_ColumnBaseQuantities
+        
+        </a>
+</li><li number="6.1.5.5">
+<a href="../lexical/Qto_CoveringBaseQuantities.htm">
+        
+            Qto_CoveringBaseQuantities
+        
+        </a>
+</li><li number="6.1.5.6">
+<a href="../lexical/Qto_CurtainWallQuantities.htm">
+        
+            Qto_CurtainWallQuantities
+        
+        </a>
+</li><li number="6.1.5.7">
+<a href="../lexical/Qto_DoorBaseQuantities.htm">
+        
+            Qto_DoorBaseQuantities
+        
+        </a>
+</li><li number="6.1.5.8">
+<a href="../lexical/Qto_MemberBaseQuantities.htm">
+        
+            Qto_MemberBaseQuantities
+        
+        </a>
+</li><li number="6.1.5.9">
+<a href="../lexical/Qto_PlateBaseQuantities.htm">
+        
+            Qto_PlateBaseQuantities
+        
+        </a>
+</li><li number="6.1.5.10">
+<a href="../lexical/Qto_RailingBaseQuantities.htm">
+        
+            Qto_RailingBaseQuantities
+        
+        </a>
+</li><li number="6.1.5.11">
+<a href="../lexical/Qto_RampFlightBaseQuantities.htm">
+        
+            Qto_RampFlightBaseQuantities
+        
+        </a>
+</li><li number="6.1.5.12">
+<a href="../lexical/Qto_RoofBaseQuantities.htm">
+        
+            Qto_RoofBaseQuantities
+        
+        </a>
+</li><li number="6.1.5.13">
+<a href="../lexical/Qto_SlabBaseQuantities.htm">
+        
+            Qto_SlabBaseQuantities
+        
+        </a>
+</li><li number="6.1.5.14">
+<a href="../lexical/Qto_StairFlightBaseQuantities.htm">
+        
+            Qto_StairFlightBaseQuantities
+        
+        </a>
+</li><li number="6.1.5.15">
+<a href="../lexical/Qto_WallBaseQuantities.htm">
+        
+            Qto_WallBaseQuantities
+        
+        </a>
+</li><li number="6.1.5.16">
+<a href="../lexical/Qto_WindowBaseQuantities.htm">
+        
+            Qto_WindowBaseQuantities
+        
+        </a>
+</li>
+</ol>
+<h2><a id="6.1.6-Functions"></a>
+    6.1.6 Functions
+<a href="content.html#6.1.6-Functions"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+<h2><a id="6.1.7-Rules"></a>
+    6.1.7 Rules
+<a href="content.html#6.1.7-Rules"><i data-feather="link"></i></a></h2>
+<p>
+    No resources are available in this category.
+</p>
+<h2><a id="6.1.8-PropertyEnumerations"></a>
+    6.1.8 PropertyEnumerations
+<a href="content.html#6.1.8-PropertyEnumerations"><i data-feather="link"></i></a></h2>
+<ol class="referenced-list">
+<li number="6.1.8.1">
+<a href="../lexical/PEnum_AdjustmentValueType.htm">
+        
+            PEnum_AdjustmentValueType
+        
+        </a>
+</li><li number="6.1.8.2">
+<a href="../lexical/PEnum_AssemblyPlace.htm">
+        
+            PEnum_AssemblyPlace
+        
+        </a>
+</li><li number="6.1.8.3">
+<a href="../lexical/PEnum_AssetRating.htm">
+        
+            PEnum_AssetRating
+        
+        </a>
+</li><li number="6.1.8.4">
+<a href="../lexical/PEnum_BackInletPatternType.htm">
+        
+            PEnum_BackInletPatternType
+        
+        </a>
+</li><li number="6.1.8.5">
+<a href="../lexical/PEnum_ConductorFunctionEnum.htm">
+        
+            PEnum_ConductorFunctionEnum
+        
+        </a>
+</li><li number="6.1.8.6">
+<a href="../lexical/PEnum_DataCollectionType.htm">
+        
+            PEnum_DataCollectionType
+        
+        </a>
+</li><li number="6.1.8.7">
+<a href="../lexical/PEnum_ElementShading.htm">
+        
+            PEnum_ElementShading
+        
+        </a>
+</li><li number="6.1.8.8">
+<a href="../lexical/PEnum_ElementStatus.htm">
+        
+            PEnum_ElementStatus
+        
+        </a>
+</li><li number="6.1.8.9">
+<a href="../lexical/PEnum_EndShapeType.htm">
+        
+            PEnum_EndShapeType
+        
+        </a>
+</li><li number="6.1.8.10">
+<a href="../lexical/PEnum_EnergySource.htm">
+        
+            PEnum_EnergySource
+        
+        </a>
+</li><li number="6.1.8.11">
+<a href="../lexical/PEnum_FiberColour.htm">
+        
+            PEnum_FiberColour
+        
+        </a>
+</li><li number="6.1.8.12">
+<a href="../lexical/PEnum_FiberType.htm">
+        
+            PEnum_FiberType
+        
+        </a>
+</li><li number="6.1.8.13">
+<a href="../lexical/PEnum_FireDamperActuationType.htm">
+        
+            PEnum_FireDamperActuationType
+        
+        </a>
+</li><li number="6.1.8.14">
+<a href="../lexical/PEnum_FireDamperClosureRating.htm">
+        
+            PEnum_FireDamperClosureRating
+        
+        </a>
+</li><li number="6.1.8.15">
+<a href="../lexical/PEnum_FurniturePanelType.htm">
+        
+            PEnum_FurniturePanelType
+        
+        </a>
+</li><li number="6.1.8.16">
+<a href="../lexical/PEnum_GullyType.htm">
+        
+            PEnum_GullyType
+        
+        </a>
+</li><li number="6.1.8.17">
+<a href="../lexical/PEnum_InputOutputSignalType.htm">
+        
+            PEnum_InputOutputSignalType
+        
+        </a>
+</li><li number="6.1.8.18">
+<a href="../lexical/PEnum_PriorityType.htm">
+        
+            PEnum_PriorityType
+        
+        </a>
+</li><li number="6.1.8.19">
+<a href="../lexical/PEnum_RefrigerantClass.htm">
+        
+            PEnum_RefrigerantClass
+        
+        </a>
+</li><li number="6.1.8.20">
+<a href="../lexical/PEnum_RelativePosition.htm">
+        
+            PEnum_RelativePosition
+        
+        </a>
+</li><li number="6.1.8.21">
+<a href="../lexical/PEnum_RiskRating.htm">
+        
+            PEnum_RiskRating
+        
+        </a>
+</li><li number="6.1.8.22">
+<a href="../lexical/PEnum_SanitaryMounting.htm">
+        
+            PEnum_SanitaryMounting
+        
+        </a>
+</li><li number="6.1.8.23">
+<a href="../lexical/PEnum_SectionType.htm">
+        
+            PEnum_SectionType
+        
+        </a>
+</li><li number="6.1.8.24">
+<a href="../lexical/PEnum_SerialInterfaceType.htm">
+        
+            PEnum_SerialInterfaceType
+        
+        </a>
+</li><li number="6.1.8.25">
+<a href="../lexical/PEnum_SideType.htm">
+        
+            PEnum_SideType
+        
+        </a>
+</li><li number="6.1.8.26">
+<a href="../lexical/PEnum_SignalIndicatorType.htm">
+        
+            PEnum_SignalIndicatorType
+        
+        </a>
+</li><li number="6.1.8.27">
+<a href="../lexical/PEnum_SwitchActivation.htm">
+        
+            PEnum_SwitchActivation
+        
+        </a>
+</li><li number="6.1.8.28">
+<a href="../lexical/PEnum_SwitchUsage.htm">
+        
+            PEnum_SwitchUsage
+        
+        </a>
+</li><li number="6.1.8.29">
+<a href="../lexical/PEnum_SwitchingDeviceDimmerSwitchType.htm">
+        
+            PEnum_SwitchingDeviceDimmerSwitchType
+        
+        </a>
+</li><li number="6.1.8.30">
+<a href="../lexical/PEnum_TankPatternType.htm">
+        
+            PEnum_TankPatternType
+        
+        </a>
+</li><li number="6.1.8.31">
+<a href="../lexical/PEnum_TrapType.htm">
+        
+            PEnum_TrapType
+        
+        </a>
+</li><li number="6.1.8.32">
+<a href="../lexical/PEnum_UnitConnectionType.htm">
+        
+            PEnum_UnitConnectionType
+        
+        </a>
+</li><li number="6.1.8.33">
+<a href="../lexical/PEnum_VoltageLevels.htm">
+        
+            PEnum_VoltageLevels
+        
+        </a>
+</li>
+</ol>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/shared/IfcSharedBldgElements/README.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

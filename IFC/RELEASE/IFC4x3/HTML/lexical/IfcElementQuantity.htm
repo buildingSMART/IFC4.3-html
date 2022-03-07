@@ -1,0 +1,516 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>5.4.3.21 IfcElementQuantity - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a class="current" href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a class="sublink-1" href="../ifckernel/content.html">
+                            5.1 IfcKernel
+                        </a>
+<a class="sublink-1" href="../ifccontrolextension/content.html">
+                            5.2 IfcControlExtension
+                        </a>
+<a class="sublink-1" href="../ifcprocessextension/content.html">
+                            5.3 IfcProcessExtension
+                        </a>
+<a class="sublink-1 current" href="../ifcproductextension/content.html">
+                            5.4 IfcProductExtension
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>5.4.3.21 IfcElementQuantity</h1>
+<h2><a id="5.4.3.21.1-Semantic-definition"></a>
+    5.4.3.21.1 Semantic definition
+<a href="IfcElementQuantity.htm#5.4.3.21.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p>An <em><a href="IfcElementQuantity.htm">IfcElementQuantity</a></em> defines a set of derived measures of an element's physical property. Elements could be spatial structure elements (like buildings, storeys, or spaces) or building elements (like walls, slabs, finishes). The <em><a href="IfcElementQuantity.htm">IfcElementQuantity</a></em> gets assigned to the element by using the <em><a href="IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em> relationship.</p>
+<p>The optional <em>MethodOfMeasurement</em> attribute defines the code, e.g. from a standard method of measurement, which had been used to calculate the element quantity.</p>
+<aside class="aside-note"><mark>NOTE</mark>  The recognizable values for the name and the method of measurement attributes have to be agreed upon in further agreement documents, such as implementers agreements. Some of these agreements might be limited to a certain region, to which the method of measurement applies.</aside>
+<p>The name attribute, given at the individual <em>Quantities</em> provides a recognizable semantic meaning of the element quantity. Both information is needed to establish a precise meaning for the measure value. An optional description may be assigned to each of the <em>Quantities</em>. All quantities assigned by a single instance of <em><a href="IfcElementQuantity.htm">IfcElementQuantity</a></em> are deemed to have been generated according to the same method of measurement. However several instances of <em><a href="IfcElementQuantity.htm">IfcElementQuantity</a></em> are assignable to an element, thus allowing for an element having quantities generated according to several methods of measurement.</p>
+<aside class="aside-example"><mark>EXAMPLE</mark>  To exchange the net floor area of spaces in the German region (as <em><a href="IfcSpace.htm">IfcSpace</a></em>), the name might be 'Netto-Grundfläche' (net floor area), and the method of measurement might be accordingly 'DIN277-2' (German industry norm no. 277 edition 2).</aside><aside class="aside-example"><mark>EXAMPLE</mark>  The same instance of <em><a href="IfcSpace.htm">IfcSpace</a></em> may have a different area measure assigned in the German region according to a housing regulation, the name would be 'Wohnfläche' and the method of measurement would be '2.BV'. It would be attached to the <em><a href="IfcSpace.htm">IfcSpace</a></em> by a separate <em><a href="IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em> relationship.</aside>
+<p>The <em><a href="IfcElementQuantity.htm">IfcElementQuantity</a></em> can have the following subtypes of <em><a href="IfcPhysicalQuantity.htm">IfcPhysicalQuantity</a></em> within its SET of <em>Quantities</em>, which count for the basis measure types used:</p>
+<ul>
+<li>count measure</li>
+<li>weight measure</li>
+<li>length measure</li>
+<li>area measure</li>
+<li>volume measure</li>
+<li>time measure</li>
+</ul>
+<p>Base quantities are quantity definitions that are independent of a particular method of measurement and therefore internationally applicable. Base quantities are defined as gross and net values and provided by measurement of the correct geometric shape representation of the element. This specification includes a set of base quantity definition. See each subtype of <em><a href="IfcElement.htm">IfcElement</a></em> for applicable base quantities.</p>
+<p>The following general agreements apply for each base quantity set</p>
+<ul>
+<li><em><a href="IfcElementQuantity.htm">IfcElementQuantity</a>.Name</em> = <name definition="" of="" qto="" template="" the=""></name></li>
+<li><em><a href="IfcElementQuantity.htm">IfcElementQuantity</a>.MethodOfMeasurement</em> = 'BaseQuantities'</li>
+<li><em><a href="IfcElementQuantity.htm">IfcElementQuantity</a>.Quantities</em> = SET of subtypes of <em><a href="IfcPhysicalSimpleQuantity.htm">IfcPhysicalSimpleQuantity</a></em> with values for the <em>Name</em> attribute as published as part of this specifciation.</li>
+</ul>
+<aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  Subtyped from new intermediate <em><a href="IfcQuantitySet.htm">IfcQuantitySet</a></em> supertype.</aside>
+<h2><a id="5.4.3.21.2-Entity-inheritance"></a>
+    5.4.3.21.2 Entity inheritance
+<a href="IfcElementQuantity.htm#5.4.3.21.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
+<ol class="tier">
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcRoot.htm">IfcRoot</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcPropertyDefinition.htm">IfcPropertyDefinition</a></li>
+<li class="abstract"><a href="IfcObjectDefinition.htm">IfcObjectDefinition</a></li>
+<li class="abstract"><a href="IfcRelationship.htm">IfcRelationship</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></li>
+<li class="abstract"><a href="IfcPropertyTemplateDefinition.htm">IfcPropertyTemplateDefinition</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcQuantitySet.htm">IfcQuantitySet</a></li>
+<li class="abstract"><a href="IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a></li>
+<li class=""><a href="IfcPropertySet.htm">IfcPropertySet</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="current ancestor"><a href="IfcElementQuantity.htm">IfcElementQuantity</a></li>
+</ul>
+</li>
+</ol>
+<h2><a id="5.4.3.21.3-Attributes"></a>
+    5.4.3.21.3 Attributes
+<a href="IfcElementQuantity.htm#5.4.3.21.3-Attributes"><i data-feather="link"></i></a></h2>
+<!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
+<figure><a id="Table-5.4.3.21.A"></a><table class="striped grouped attributes">
+<colgroup>
+<col style="width: 20px;"/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcRoot.htm">IfcRoot</a>
+<small>(4)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                GlobalId
+                
+            </td>
+<td data-label="Type"><a href="IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a></td>
+<td data-label="Description">
+<p>Assignment of a globally unique identifier within the entire software world.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                OwnerHistory
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
+<td data-label="Description">
+<p>Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,</p>
+<aside class="aside-note"><mark>NOTE</mark>  only the last modification in stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The attribute has been changed to be OPTIONAL.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>Optional name for use by the participating software systems or users. For some subtypes of <a href="IfcRoot.htm">IfcRoot</a> the insertion of the Name attribute may be required. This would be enforced by a where rule.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>Optional description, provided for exchanging informative comments.</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcPropertyDefinition.htm">IfcPropertyDefinition</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasContext</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="IfcRelDeclares.htm">IfcRelDeclares</a> FOR RelatedDefinitions</td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasAssociations</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcRelAssociates.htm">IfcRelAssociates</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>Reference to the relationship <a href="IfcRelAssociates.htm">IfcRelAssociates</a> and thus to those externally defined concepts, like classifications, documents, or library information, which are associated to the property definition.</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>
+<small>(3)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>DefinesType</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcTypeObject.htm">IfcTypeObject</a> FOR HasPropertySets</td>
+<td data-label="Description">
+<p>The type object to which the property set is assigned. The property set acts as a shared property set to all occurrences of the type object.</p>
+<aside class="aside-note"><mark>NOTE</mark>  The relationship between the <em><a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></em> and the <em><a href="IfcTypeObject.htm">IfcTypeObject</a></em> is a direct relationship, not utilizing <em><a href="IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em>, for maintaining compatibility with earlier releases of this standard.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The cardinality has been changed from 0:1 to 0:? with upward compatibility for file based exchange.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>IsDefinedBy</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcRelDefinesByTemplate.htm">IfcRelDefinesByTemplate</a> FOR RelatedPropertySets</td>
+<td data-label="Description">
+<p>Relation to the property set template, via the objectified relationship <em><a href="IfcRelDefinesByTemplate.htm">IfcRelDefinesByTemplate</a></em>, that, if given, provides the definition template for the property set or quantity set and its properties.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  New inverse relationship, change made with upward compatibility for file based exchange.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>DefinesOccurrence</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a> FOR RelatingPropertyDefinition</td>
+<td data-label="Description">
+<p>Reference to the relation to one or many object occurrences that are characterized by the property set definition. A single property set can be assigned to multiple object occurrences using the objectified relationship <em>IfcRefDefinesByProperties</em>.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark> Inverse attribute renamed from PropertyDefinitionOf with upward compatibility for file-based exchange.</aside>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to show 9 hidden inherited attributes
+                </small>
+<small class="hide-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to hide 9 inherited attributes
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="4">
+<a href="IfcElementQuantity.htm">IfcElementQuantity</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                MethodOfMeasurement
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>Name of the method of measurement used to calculate the element quantity. The method of measurement attribute has to be made recognizable by further agreements.</p>
+<aside class="aside-change"><mark>IFC2x2-Addendum</mark> 1 change: The attribute has been changed to be optional</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                Quantities
+                
+            </td>
+<td data-label="Type">SET [1:?] OF <a href="IfcPhysicalQuantity.htm">IfcPhysicalQuantity</a></td>
+<td data-label="Description">
+<p>The individual quantities for the element, can be a set of length, area, volume, weight or count based quantities.</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 5.4.3.21.A<a href="IfcElementQuantity.htm#Table-5.4.3.21.A"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="5.4.3.21.4-Formal-propositions"></a>
+    5.4.3.21.4 Formal propositions
+<a href="IfcElementQuantity.htm#5.4.3.21.4-Formal-propositions"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-5.4.3.21.B"></a><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UniqueQuantityNames</td>
+<td>
+<p>Every individual <em><a href="IfcPhysicalQuantity.htm">IfcPhysicalQuantity</a></em> within the set <em>Quantities</em> shall have a unique <em>Name</em> attribute value.</p>
+<aside class="aside-history"><mark>HISTORY</mark>  New rule in IFC4</aside>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs"><a href="IfcUniqueQuantityNames.htm">IfcUniqueQuantityNames</a>(Quantities)</code></pre>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 5.4.3.21.B<a href="IfcElementQuantity.htm#Table-5.4.3.21.B"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="5.4.3.21.5-Concept-usage"></a>
+    5.4.3.21.5 Concept usage
+<a href="IfcElementQuantity.htm#5.4.3.21.5-Concept-usage"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-5.4.3.21.C"></a><table class="striped grouped concepts">
+<thead>
+<tr>
+<th>Concept</th>
+<th>Usage</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="IfcRoot.htm">IfcRoot</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>Ownership, history, and merge state is captured using <a href="IfcOwnerHistory.htm">IfcOwnerHistory</a>.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p><a href="IfcRoot.htm">IfcRoot</a> assigns the globally unique ID. In addition it may provide for a name and a description about the concept.</p>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    Click to show 2 hidden inherited concepts
+                </small>
+<small class="hide-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    Click to hide 2 inherited concepts
+                </small>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 5.4.3.21.C<a href="IfcElementQuantity.htm#Table-5.4.3.21.C"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="5.4.3.21.6-Formal-representation"></a>
+    5.4.3.21.6 Formal representation
+<a href="IfcElementQuantity.htm#5.4.3.21.6-Formal-representation"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">ENTITY <a href="IfcElementQuantity.htm">IfcElementQuantity</a>
+ SUBTYPE OF (<a href="IfcQuantitySet.htm">IfcQuantitySet</a>);
+	MethodOfMeasurement : OPTIONAL <a href="IfcLabel.htm">IfcLabel</a>;
+	Quantities : SET [1:?] OF <a href="IfcPhysicalQuantity.htm">IfcPhysicalQuantity</a>;
+ WHERE
+	UniqueQuantityNames : <a href="IfcUniqueQuantityNames.htm">IfcUniqueQuantityNames</a>(Quantities);
+END_ENTITY;</code></pre>
+<h2><a id="5.4.3.21.7-References"></a>
+    5.4.3.21.7 References
+<a href="IfcElementQuantity.htm#5.4.3.21.7-References"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="IfcQuantitySet.htm">IfcQuantitySet</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+<div class="changelog">
+<h3><a id="5.4.3.21.8-Changelog"></a>
+                        5.4.3.21.8 Changelog
+                    <a href="IfcElementQuantity.htm#5.4.3.21.8-Changelog"><i data-feather="link"></i></a></h3>
+<h4 class="collapsed"><a id="5.4.3.21.8.1-IFC4"></a>
+                        5.4.3.21.8.1 IFC4
+                    <a href="IfcElementQuantity.htm#5.4.3.21.8.1-IFC4"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where_rules,
+                                UniqueQuantityNames
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                supertype,
+                                Changed from <a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a> to <a href="IfcQuantitySet.htm">IfcQuantitySet</a>
+</small>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/core/IfcProductExtension/Entities/IfcElementQuantity.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

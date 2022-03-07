@@ -1,0 +1,534 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>8.8.3.26 IfcPolygonalBoundedHalfSpace - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a class="current" href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+<a class="sublink-1" href="../ifcactorresource/content.html">
+                            8.1 IfcActorResource
+                        </a>
+<a class="sublink-1" href="../ifcapprovalresource/content.html">
+                            8.2 IfcApprovalResource
+                        </a>
+<a class="sublink-1" href="../ifcconstraintresource/content.html">
+                            8.3 IfcConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifccostresource/content.html">
+                            8.4 IfcCostResource
+                        </a>
+<a class="sublink-1" href="../ifcdatetimeresource/content.html">
+                            8.5 IfcDateTimeResource
+                        </a>
+<a class="sublink-1" href="../ifcexternalreferenceresource/content.html">
+                            8.6 IfcExternalReferenceResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricconstraintresource/content.html">
+                            8.7 IfcGeometricConstraintResource
+                        </a>
+<a class="sublink-1 current" href="../ifcgeometricmodelresource/content.html">
+                            8.8 IfcGeometricModelResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometryresource/content.html">
+                            8.9 IfcGeometryResource
+                        </a>
+<a class="sublink-1" href="../ifcmaterialresource/content.html">
+                            8.10 IfcMaterialResource
+                        </a>
+<a class="sublink-1" href="../ifcmeasureresource/content.html">
+                            8.11 IfcMeasureResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationappearanceresource/content.html">
+                            8.12 IfcPresentationAppearanceResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationdefinitionresource/content.html">
+                            8.13 IfcPresentationDefinitionResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationorganizationresource/content.html">
+                            8.14 IfcPresentationOrganizationResource
+                        </a>
+<a class="sublink-1" href="../ifcprofileresource/content.html">
+                            8.15 IfcProfileResource
+                        </a>
+<a class="sublink-1" href="../ifcpropertyresource/content.html">
+                            8.16 IfcPropertyResource
+                        </a>
+<a class="sublink-1" href="../ifcquantityresource/content.html">
+                            8.17 IfcQuantityResource
+                        </a>
+<a class="sublink-1" href="../ifcrepresentationresource/content.html">
+                            8.18 IfcRepresentationResource
+                        </a>
+<a class="sublink-1" href="../ifcstructuralloadresource/content.html">
+                            8.19 IfcStructuralLoadResource
+                        </a>
+<a class="sublink-1" href="../ifctopologyresource/content.html">
+                            8.20 IfcTopologyResource
+                        </a>
+<a class="sublink-1" href="../ifcutilityresource/content.html">
+                            8.21 IfcUtilityResource
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>8.8.3.26 IfcPolygonalBoundedHalfSpace</h1>
+<h2><a id="8.8.3.26.1-Semantic-definition"></a>
+    8.8.3.26.1 Semantic definition
+<a href="IfcPolygonalBoundedHalfSpace.htm#8.8.3.26.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p>The polygonal bounded half space is a special subtype of a half space solid, where the material of the half space used in Boolean expressions is bounded by a two-dimensional boundary. The base surface of the half space is positioned by its normal relative to the object coordinate system (as defined at the supertype <em><a href="IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a></em>), and its boundary (with straight and arc segments) is defined in the XY plane of the position coordinate system established by the <em>Position</em> attribute, the subtraction body is extruded perpendicular to the XY plane of the position coordinate system, that is, into the direction of the positive Z axis defined by the <em>Position</em> attribute.</p>
+<p>The boundary is defined by a 2 dimensional polyline (or 2 dimensional composite curve, consisting of straight segments and circular arc segments, or indexed poly curve) within the XY plane of the position coordinate system. The side of the surface which is in the half space is determined by the surface normal and the agreement flag. If the agreement flag is TRUE, then the subset is the one the normal points away from. If the agreement flag is FALSE, then the subset is the one the normal points into.</p>
+<aside class="aside-note"><mark>NOTE</mark>  A polygonal bounded half space is not a subtype of <em><a href="IfcSolidModel.htm">IfcSolidModel</a></em>, half space solids are only useful as operands in Boolean expressions. The term <em><a href="IfcPolygonalBoundedHalfSpace.htm">IfcPolygonalBoundedHalfSpace</a></em> was coined when only curves of type <em><a href="IfcPolyline.htm">IfcPolyline</a></em> were allowed as boundary definitions.</aside>
+<p>Figure 8.8.3.26.A illustrates a polygonal bounded half space.</p>
+<figure><a id="Figure-8.8.3.26.A-Polygonal-half-space-geometry"></a><img alt="polygonal bounded halfspace" src="../figures/ifcpolygonalboundedhalfspace-layout1.png"/><figcaption>Figure 8.8.3.26.A — Polygonal half space geometry<a href="IfcPolygonalBoundedHalfSpace.htm#Figure-8.8.3.26.A-Polygonal-half-space-geometry"><i data-feather="link"></i></a></figcaption></figure>
+<ul>
+<li>Black coordinates indicate the object coordinate system (usually provided by <em><a href="IfcLocalPlacement.htm">IfcLocalPlacement</a></em>).</li>
+<li>Green coordinates indicate the position coordinate system; the <em>PolygonalBoundary</em> is given within this coordinate system. It is provided by <em><a href="IfcPolygonalBoundedHalfSpace.htm">IfcPolygonalBoundedHalfSpace</a>.Position</em>. This coordinate system is relative to the object coordinate system. The extrusion direction of the subtraction body is the positive Z axis.</li>
+<li>Red coordinates indicate the normal of the plane. It is provided by the <em>BaseSurface</em> (<em><a href="IfcSurface.htm">IfcSurface</a>.Position</em>). This normal is also relative to the object coordinate system.</li>
+</ul>
+<p>The polygonal bounded half space is used to limit the volume of the half space in Boolean difference expressions. Only the part that is defined by a theoretical intersection between the half space solid and an extruded area solid, defined by extruding the polygonal boundary, is used for Boolean expressions.</p>
+<p>The <em>PolygonalBoundary</em> defines the 2D polyline which bounds the effectiveness of the half space in Boolean expressions. The <em>BaseSurface</em> is defined by a plane, and the normal of the plane together with the <em>AgreementFlag</em> defines the side of the material of the half space.</p>
+<aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x.</aside>
+<p>Informal Propositions:</p>
+<ol>
+<li>The <em><a href="IfcPolyline.htm">IfcPolyline</a></em> or the <em><a href="IfcCompositeCurve.htm">IfcCompositeCurve</a></em> providing the <em>PolygonalBoundary</em> shall be closed.</li>
+<li>If the <em>PolygonalBoundary</em> is given by an <em><a href="IfcCompositeCurve.htm">IfcCompositeCurve</a></em>, it shall only have <em><a href="IfcCompositeCurveSegment.htm">IfcCompositeCurveSegment</a></em>'s of type <em><a href="IfcPolyline.htm">IfcPolyline</a></em>, or <em><a href="IfcTrimmedCurve.htm">IfcTrimmedCurve</a></em> (having a <em>BasisCurve</em> of type <em><a href="IfcLine.htm">IfcLine</a></em>, or <em><a href="IfcCircle.htm">IfcCircle</a></em>)</li>
+<li>The <em>BaseSurface</em> defined at supertype <em><a href="IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a></em> shall be of type <em><a href="IfcPlane.htm">IfcPlane</a></em></li>
+<li>The normal of the plane, being the <em>BaseSurface</em>, shall not be perpendicular to the z-axis of the position coordinate system</li>
+</ol>
+<h2><a id="8.8.3.26.2-Entity-inheritance"></a>
+    8.8.3.26.2 Entity inheritance
+<a href="IfcPolygonalBoundedHalfSpace.htm#8.8.3.26.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
+<ol class="tier">
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcRepresentationItem.htm">IfcRepresentationItem</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcGeometricRepresentationItem.htm">IfcGeometricRepresentationItem</a></li>
+<li class=""><a href="IfcMappedItem.htm">IfcMappedItem</a></li>
+<li class=""><a href="IfcStyledItem.htm">IfcStyledItem</a></li>
+<li class="abstract"><a href="IfcTopologicalRepresentationItem.htm">IfcTopologicalRepresentationItem</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="ancestor"><a href="IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a></li>
+<li class=""><a href="IfcAnnotationFillArea.htm">IfcAnnotationFillArea</a></li>
+<li class=""><a href="IfcBooleanResult.htm">IfcBooleanResult</a></li>
+<li class=""><a href="IfcBoundingBox.htm">IfcBoundingBox</a></li>
+<li class="abstract"><a href="IfcCartesianPointList.htm">IfcCartesianPointList</a></li>
+<li class="abstract"><a href="IfcCartesianTransformationOperator.htm">IfcCartesianTransformationOperator</a></li>
+<li class="abstract"><a href="IfcCsgPrimitive3D.htm">IfcCsgPrimitive3D</a></li>
+<li class="abstract"><a href="IfcCurve.htm">IfcCurve</a></li>
+<li class=""><a href="IfcDirection.htm">IfcDirection</a></li>
+<li class=""><a href="IfcFaceBasedSurfaceModel.htm">IfcFaceBasedSurfaceModel</a></li>
+<li class=""><a href="IfcFillAreaStyleHatching.htm">IfcFillAreaStyleHatching</a></li>
+<li class=""><a href="IfcFillAreaStyleTiles.htm">IfcFillAreaStyleTiles</a></li>
+<li class=""><a href="IfcGeometricSet.htm">IfcGeometricSet</a></li>
+<li class="abstract"><a href="IfcLightSource.htm">IfcLightSource</a></li>
+<li class="abstract"><a href="IfcPlacement.htm">IfcPlacement</a></li>
+<li class=""><a href="IfcPlanarExtent.htm">IfcPlanarExtent</a></li>
+<li class="abstract"><a href="IfcPoint.htm">IfcPoint</a></li>
+<li class=""><a href="IfcSectionedSpine.htm">IfcSectionedSpine</a></li>
+<li class="abstract"><a href="IfcSegment.htm">IfcSegment</a></li>
+<li class=""><a href="IfcShellBasedSurfaceModel.htm">IfcShellBasedSurfaceModel</a></li>
+<li class="abstract"><a href="IfcSolidModel.htm">IfcSolidModel</a></li>
+<li class="abstract"><a href="IfcSurface.htm">IfcSurface</a></li>
+<li class="abstract"><a href="IfcTessellatedItem.htm">IfcTessellatedItem</a></li>
+<li class=""><a href="IfcTextLiteral.htm">IfcTextLiteral</a></li>
+<li class=""><a href="IfcVector.htm">IfcVector</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="current ancestor"><a href="IfcPolygonalBoundedHalfSpace.htm">IfcPolygonalBoundedHalfSpace</a></li>
+<li class=""><a href="IfcBoxedHalfSpace.htm">IfcBoxedHalfSpace</a></li>
+</ul>
+</li>
+</ol>
+<h2><a id="8.8.3.26.3-Attributes"></a>
+    8.8.3.26.3 Attributes
+<a href="IfcPolygonalBoundedHalfSpace.htm#8.8.3.26.3-Attributes"><i data-feather="link"></i></a></h2>
+<!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
+<figure><a id="Table-8.8.3.26.B"></a><table class="striped grouped attributes">
+<colgroup>
+<col style="width: 20px;"/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcRepresentationItem.htm">IfcRepresentationItem</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>LayerAssignment</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems</td>
+<td data-label="Description">
+<p>Assignment of the representation item to a single or multiple layer(s). The <em>LayerAssignments</em> can override a <em>LayerAssignments</em> of the <em><a href="IfcRepresentation.htm">IfcRepresentation</a></em> it is used  within the list of <em>Items</em>.</p>
+<aside class="aside-change"><mark>IFC2x3-CHANGE</mark>  The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>StyledByItem</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="IfcStyledItem.htm">IfcStyledItem</a> FOR Item</td>
+<td data-label="Description">
+<p>Reference to the <em><a href="IfcStyledItem.htm">IfcStyledItem</a></em> that provides presentation information to the representation, e.g. a curve style, including colour and thickness to a geometric curve.</p>
+<aside class="aside-change"><mark>IFC2x3-CHANGE</mark>  The inverse attribute <em>StyledByItem</em> has been added.</aside>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a>
+<small>(3)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                BaseSurface
+                
+            </td>
+<td data-label="Type"><a href="IfcSurface.htm">IfcSurface</a></td>
+<td data-label="Description">
+<p>Surface defining side of half space.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                AgreementFlag
+                
+            </td>
+<td data-label="Type"><a href="IfcBoolean.htm">IfcBoolean</a></td>
+<td data-label="Description">
+<p>The agreement flag is TRUE if the normal to the BaseSurface points away from the material of the <a href="IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a>. Otherwise it is FALSE.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>Dim</em>
+</td>
+<td data-label="Type"><a href="IfcDimensionCount.htm">IfcDimensionCount</a></td>
+<td data-label="Description">
+<p>
+                    This attribute is formally derived.
+                </p>
+<pre><code class="language-express hljs">3</code></pre>
+<p>The space dimensionality of this class, it is always 3</p>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to show 5 hidden inherited attributes
+                </small>
+<small class="hide-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to hide 5 inherited attributes
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="4">
+<a href="IfcPolygonalBoundedHalfSpace.htm">IfcPolygonalBoundedHalfSpace</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Position
+                
+            </td>
+<td data-label="Type"><a href="IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a></td>
+<td data-label="Description">
+<p>Definition of the position coordinate system for the two-dimensional boundary.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                PolygonalBoundary
+                
+            </td>
+<td data-label="Type"><a href="IfcBoundedCurve.htm">IfcBoundedCurve</a></td>
+<td data-label="Description">
+<p>Two-dimensional bounded curve, defined in the xy plane of the position coordinate system.</p>
+<aside class="aside-change"><mark>IFC2x3-CHANGE</mark>  The attribute type has been changed from <em><a href="IfcPolyline.htm">IfcPolyline</a></em> to its supertype <em><a href="IfcBoundedCurve.htm">IfcBoundedCurve</a></em> with upward compatibility for file based exchange.</aside>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.8.3.26.B<a href="IfcPolygonalBoundedHalfSpace.htm#Table-8.8.3.26.B"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.8.3.26.4-Formal-propositions"></a>
+    8.8.3.26.4 Formal propositions
+<a href="IfcPolygonalBoundedHalfSpace.htm#8.8.3.26.4-Formal-propositions"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-8.8.3.26.C"></a><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BoundaryDim</td>
+<td>
+<p>The bounding polyline should have the dimensionality of 2.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">PolygonalBoundary.Dim = 2</code></pre>
+</td>
+</tr>
+<tr>
+<td>BoundaryType</td>
+<td>
+<p>Only bounded curves of type <em><a href="IfcCompositeCurve.htm">IfcCompositeCurve</a></em>, <em><a href="IfcPolyline.htm">IfcPolyline</a></em>, and <em><a href="IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a></em>  are valid boundary curves.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">SIZEOF(TYPEOF(PolygonalBoundary) * [
+    'IFC4X3.<a href="IfcPolyline.htm">IfcPolyline</a>',
+    'IFC4X3.<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>',
+    'IFC4X3.<a href="IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a>'
+  ]) = 1</code></pre>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.8.3.26.C<a href="IfcPolygonalBoundedHalfSpace.htm#Table-8.8.3.26.C"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.8.3.26.5-Formal-representation"></a>
+    8.8.3.26.5 Formal representation
+<a href="IfcPolygonalBoundedHalfSpace.htm#8.8.3.26.5-Formal-representation"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">ENTITY <a href="IfcPolygonalBoundedHalfSpace.htm">IfcPolygonalBoundedHalfSpace</a>
+ SUBTYPE OF (<a href="IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a>);
+	Position : <a href="IfcAxis2Placement3D.htm">IfcAxis2Placement3D</a>;
+	PolygonalBoundary : <a href="IfcBoundedCurve.htm">IfcBoundedCurve</a>;
+ WHERE
+	BoundaryDim : PolygonalBoundary.Dim = 2;
+	BoundaryType : SIZEOF(TYPEOF(PolygonalBoundary) * [
+    'IFC4X3.<a href="IfcPolyline.htm">IfcPolyline</a>',
+    'IFC4X3.<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>',
+    'IFC4X3.<a href="IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a>'
+  ]) = 1;
+END_ENTITY;</code></pre>
+<h2><a id="8.8.3.26.6-References"></a>
+    8.8.3.26.6 References
+<a href="IfcPolygonalBoundedHalfSpace.htm#8.8.3.26.6-References"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+<div class="changelog">
+<h3><a id="8.8.3.26.7-Changelog"></a>
+                        8.8.3.26.7 Changelog
+                    <a href="IfcPolygonalBoundedHalfSpace.htm#8.8.3.26.7-Changelog"><i data-feather="link"></i></a></h3>
+<h4 class="collapsed"><a id="8.8.3.26.7.1-IFC4"></a>
+                        8.8.3.26.7.1 IFC4
+                    <a href="IfcPolygonalBoundedHalfSpace.htm#8.8.3.26.7.1-IFC4"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where_rules,
+                                BoundaryDim
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where_rules,
+                                BoundaryType
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="x-square"></i>
+                                
+                                
+                                where_rules,
+                                WR41
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="x-square"></i>
+                                
+                                
+                                where_rules,
+                                WR42
+                                
+                            </small>
+</li>
+</ul>
+<h4 class="collapsed"><a id="8.8.3.26.7.2-IFC4.3"></a>
+                        8.8.3.26.7.2 IFC4.3
+                    <a href="IfcPolygonalBoundedHalfSpace.htm#8.8.3.26.7.2-IFC4.3"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                where_rules BoundaryType definition,
+                                Changed from sizeof(typeof(PolygonalBoundary)*[ifcpolyline,ifccompositecurve]) = 1 to sizeof(typeof(PolygonalBoundary)*[ifcpolyline,ifccompositecurve,ifcindexedpolycurve]) = 1
+                                
+                            </small>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/resource/IfcGeometricModelResource/Entities/IfcPolygonalBoundedHalfSpace.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

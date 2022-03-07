@@ -1,0 +1,576 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>6.1.3.28 IfcRelConnectsPathElements - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a class="current" href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a class="sublink-1 current" href="../ifcsharedbldgelements/content.html">
+                            6.1 IfcSharedBldgElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedbldgserviceelements/content.html">
+                            6.2 IfcSharedBldgServiceElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedcomponentelements/content.html">
+                            6.3 IfcSharedComponentElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedfacilitieselements/content.html">
+                            6.4 IfcSharedFacilitiesElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedmgmtelements/content.html">
+                            6.5 IfcSharedMgmtElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedinfrastructureelements/content.html">
+                            6.6 IfcSharedInfrastructureElements
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>6.1.3.28 IfcRelConnectsPathElements</h1>
+<h2><a id="6.1.3.28.1-Semantic-definition"></a>
+    6.1.3.28.1 Semantic definition
+<a href="IfcRelConnectsPathElements.htm#6.1.3.28.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p>The <em><a href="IfcRelConnectsPathElements.htm">IfcRelConnectsPathElements</a></em> relationship provides the connectivity information between two elements, which have path information.</p>
+<p>The objectified relationship provides the additional information required to describe the connection between two path based elements that might have single or multiple layers of material. The connection type specifies where at the path based element a connection is given (at the start, in the middle or at the end).</p>
+<p>The connection is described by a connection geometry, given within the object coordinate systems of the <em>RelatingElement</em> and of the <em>RelatedElement</em>. In case of layered <a href="IfcWall.htm">IfcWall</a> elements as the <em>RelatingElement</em> and <em>RelatedElement</em> the connection geometry is provided by the subtype <em><a href="IfcConnectionCurveGeometry.htm">IfcConnectionCurveGeometry</a></em>. Both curves indicate the so called "end cap", i.e. the curve that trims the wall outer edges (being parallel along the wall axis) at the end.</p>
+<figure><a id="Figure-6.1.3.28.A-Path-connection-geometry"></a><img alt="wall connection" src="../figures/ifcrelconnectspathelements-fig1.png"/><figcaption>Figure 6.1.3.28.A — Path connection geometry<a href="IfcRelConnectsPathElements.htm#Figure-6.1.3.28.A-Path-connection-geometry"><i data-feather="link"></i></a></figcaption></figure>
+<p>Figure 6.1.3.28.A shows the application of <em><a href="IfcRelConnectsPathElements.htm">IfcRelConnectsPathElements</a></em> with the <em>ConnectionGeometry</em> of type  <em><a href="IfcConnectionCurveGeometry.htm">IfcConnectionCurveGeometry</a></em>. The example shows the connection relationship between two instances of layered <em><a href="IfcWall.htm">IfcWall</a></em> elements using the <em><a href="IfcRelConnectsPathElements.htm">IfcRelConnectsPathElements</a></em> relationship. The <em>ConnectionCurveGeometry</em> defines the <em>CurveOnReleatingElement</em> and <em>CurveOnRelatedElement</em>, both are of type <em><a href="IfcPolyline.htm">IfcPolyline</a></em>.</p>
+<figure><a id="Figure-6.1.3.28.B-Path-connection-T-Type"></a><img alt="wall connection" src="../figures/ifcrelconnectspathelements-fig2.png"/><figcaption>Figure 6.1.3.28.B — Path connection T-Type<a href="IfcRelConnectsPathElements.htm#Figure-6.1.3.28.B-Path-connection-T-Type"><i data-feather="link"></i></a></figcaption></figure>
+<p>Figure 6.1.3.28.B illustrates using the <em><a href="IfcRelConnectsPathElements.htm">IfcRelConnectsPathElements</a></em> for a "T" type connection between two instances of layered <em><a href="IfcWall.htm">IfcWall</a></em> elements.</p>
+<figure><a id="Figure-6.1.3.28.C-Path-connection-L-Type"></a><img alt="wall connection" src="../figures/ifcrelconnectspathelements-fig3.png"/><figcaption>Figure 6.1.3.28.C — Path connection L-Type<a href="IfcRelConnectsPathElements.htm#Figure-6.1.3.28.C-Path-connection-L-Type"><i data-feather="link"></i></a></figcaption></figure>
+<p>Figure 6.1.3.28.C illustrates using the <em><a href="IfcRelConnectsPathElements.htm">IfcRelConnectsPathElements</a></em> for a "L" type connection between two instances of layered <em><a href="IfcWall.htm">IfcWall</a></em> elements.</p>
+<aside class="aside-note"><mark>NOTE</mark>  The two wall axes connect in each case.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC1.5.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The data type of <em>RelatingPriorities</em> and <em>RelatedPriorities</em> are restricted to a range o [0..100] to be a normalized ratio measure.</aside>
+<h2><a id="6.1.3.28.2-Entity-inheritance"></a>
+    6.1.3.28.2 Entity inheritance
+<a href="IfcRelConnectsPathElements.htm#6.1.3.28.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
+<ol class="tier">
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcRoot.htm">IfcRoot</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcRelationship.htm">IfcRelationship</a></li>
+<li class="abstract"><a href="IfcObjectDefinition.htm">IfcObjectDefinition</a></li>
+<li class="abstract"><a href="IfcPropertyDefinition.htm">IfcPropertyDefinition</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcRelConnects.htm">IfcRelConnects</a></li>
+<li class="abstract"><a href="IfcRelAssigns.htm">IfcRelAssigns</a></li>
+<li class="abstract"><a href="IfcRelAssociates.htm">IfcRelAssociates</a></li>
+<li class=""><a href="IfcRelDeclares.htm">IfcRelDeclares</a></li>
+<li class="abstract"><a href="IfcRelDecomposes.htm">IfcRelDecomposes</a></li>
+<li class="abstract"><a href="IfcRelDefines.htm">IfcRelDefines</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="ancestor"><a href="IfcRelConnectsElements.htm">IfcRelConnectsElements</a></li>
+<li class="deprecated"><a href="IfcRelConnectsPortToElement.htm">IfcRelConnectsPortToElement</a></li>
+<li class=""><a href="IfcRelConnectsPorts.htm">IfcRelConnectsPorts</a></li>
+<li class=""><a href="IfcRelConnectsStructuralActivity.htm">IfcRelConnectsStructuralActivity</a></li>
+<li class=""><a href="IfcRelConnectsStructuralMember.htm">IfcRelConnectsStructuralMember</a></li>
+<li class=""><a href="IfcRelContainedInSpatialStructure.htm">IfcRelContainedInSpatialStructure</a></li>
+<li class=""><a href="IfcRelCoversBldgElements.htm">IfcRelCoversBldgElements</a></li>
+<li class=""><a href="IfcRelCoversSpaces.htm">IfcRelCoversSpaces</a></li>
+<li class=""><a href="IfcRelFillsElement.htm">IfcRelFillsElement</a></li>
+<li class=""><a href="IfcRelFlowControlElements.htm">IfcRelFlowControlElements</a></li>
+<li class=""><a href="IfcRelInterferesElements.htm">IfcRelInterferesElements</a></li>
+<li class=""><a href="IfcRelPositions.htm">IfcRelPositions</a></li>
+<li class=""><a href="IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a></li>
+<li class=""><a href="IfcRelSequence.htm">IfcRelSequence</a></li>
+<li class="deprecated"><a href="IfcRelServicesBuildings.htm">IfcRelServicesBuildings</a></li>
+<li class=""><a href="IfcRelSpaceBoundary.htm">IfcRelSpaceBoundary</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="current ancestor"><a href="IfcRelConnectsPathElements.htm">IfcRelConnectsPathElements</a></li>
+<li class=""><a href="IfcRelConnectsWithRealizingElements.htm">IfcRelConnectsWithRealizingElements</a></li>
+</ul>
+</li>
+</ol>
+<h2><a id="6.1.3.28.3-Attributes"></a>
+    6.1.3.28.3 Attributes
+<a href="IfcRelConnectsPathElements.htm#6.1.3.28.3-Attributes"><i data-feather="link"></i></a></h2>
+<!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
+<figure><a id="Table-6.1.3.28.D"></a><table class="striped grouped attributes">
+<colgroup>
+<col style="width: 20px;"/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcRoot.htm">IfcRoot</a>
+<small>(4)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                GlobalId
+                
+            </td>
+<td data-label="Type"><a href="IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a></td>
+<td data-label="Description">
+<p>Assignment of a globally unique identifier within the entire software world.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                OwnerHistory
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
+<td data-label="Description">
+<p>Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,</p>
+<aside class="aside-note"><mark>NOTE</mark>  only the last modification in stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The attribute has been changed to be OPTIONAL.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>Optional name for use by the participating software systems or users. For some subtypes of <a href="IfcRoot.htm">IfcRoot</a> the insertion of the Name attribute may be required. This would be enforced by a where rule.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>Optional description, provided for exchanging informative comments.</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcRelConnectsElements.htm">IfcRelConnectsElements</a>
+<small>(3)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                ConnectionGeometry
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcConnectionGeometry.htm">IfcConnectionGeometry</a></td>
+<td data-label="Description">
+<p>The geometric shape representation of the connection geometry that is provided in the object coordinate system of the <em>RelatingElement</em> (mandatory) and in the object coordinate system of the <em>RelatedElement</em> (optionally).</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                RelatingElement
+                
+            </td>
+<td data-label="Type"><a href="IfcElement.htm">IfcElement</a></td>
+<td data-label="Description">
+<p>Reference to a subtype of <em><a href="IfcElement.htm">IfcElement</a></em> that is connected by the connection relationship in the role of <em>RelatingElement</em>.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                RelatedElement
+                
+            </td>
+<td data-label="Type"><a href="IfcElement.htm">IfcElement</a></td>
+<td data-label="Description">
+<p>Reference to a subtype of <em><a href="IfcElement.htm">IfcElement</a></em> that is connected by the connection relationship in the role of <em>RelatedElement</em>.</p>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to show 7 hidden inherited attributes
+                </small>
+<small class="hide-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to hide 7 inherited attributes
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="4">
+<a href="IfcRelConnectsPathElements.htm">IfcRelConnectsPathElements</a>
+<small>(4)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">8</td>
+<td data-label="Name">
+                
+                RelatingPriorities
+                
+            </td>
+<td data-label="Type">LIST [0:?] OF <a href="IfcInteger.htm">IfcInteger</a></td>
+<td data-label="Description">
+<p>Overriding priorities at this connection. It overrides the standard priority given at the wall layer provided by <em><a href="IfcMaterialLayer.htm">IfcMaterialLayer</a></em>.<em>Priority</em>. The list of <em>RelatingProperties</em> corresponds to the list of <em><a href="IfcMaterialLayerSet.htm">IfcMaterialLayerSet</a></em>.<em>MaterialLayers</em> of the element referenced by <em>RelatingObject</em>.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  Data type changed to NUMBER and usage to hold a normalized ratio measure [0..1].</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">9</td>
+<td data-label="Name">
+                
+                RelatedPriorities
+                
+            </td>
+<td data-label="Type">LIST [0:?] OF <a href="IfcInteger.htm">IfcInteger</a></td>
+<td data-label="Description">
+<p>Overriding priorities at this connection. It overrides the standard priority given at the wall layer provided by <em><a href="IfcMaterialLayer.htm">IfcMaterialLayer</a></em>.<em>Priority</em>. The list of <em>RelatedProperties</em> corresponds to the list of <em><a href="IfcMaterialLayerSet.htm">IfcMaterialLayerSet</a></em>.<em>MaterialLayers</em> of the element referenced by <em>RelatedObject</em>.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  Data type changed to NUMBER and usage to hold a normalized ratio measure [0..1].</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">10</td>
+<td data-label="Name">
+                
+                RelatedConnectionType
+                
+            </td>
+<td data-label="Type"><a href="IfcConnectionTypeEnum.htm">IfcConnectionTypeEnum</a></td>
+<td data-label="Description">
+<p>Indication of the connection type in relation to the path of the <em>RelatingObject</em>.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">11</td>
+<td data-label="Name">
+                
+                RelatingConnectionType
+                
+            </td>
+<td data-label="Type"><a href="IfcConnectionTypeEnum.htm">IfcConnectionTypeEnum</a></td>
+<td data-label="Description">
+<p>Indication of the connection type in relation to the path of the <em>RelatingObject</em>.</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 6.1.3.28.D<a href="IfcRelConnectsPathElements.htm#Table-6.1.3.28.D"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="6.1.3.28.4-Formal-propositions"></a>
+    6.1.3.28.4 Formal propositions
+<a href="IfcRelConnectsPathElements.htm#6.1.3.28.4-Formal-propositions"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-6.1.3.28.E"></a><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NormalizedRelatedPriorities</td>
+<td>
+<p>The <em>RelatedProperties</em> shall all be given as a normalized integer range [0..100], where 0 is the lowest and 100 the highest priority of the material layers.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">(SIZEOF(RelatedPriorities) = 0)
+OR
+(SIZEOF (QUERY (temp &lt;* RelatedPriorities
+  | {0 &lt;= temp &lt;= 100}
+  )) = SIZEOF(RelatedPriorities))</code></pre>
+</td>
+</tr>
+<tr>
+<td>NormalizedRelatingPriorities</td>
+<td>
+<p>The <em>RelatingProperties</em> shall all be given as a normalized integer range [0..100], where 0 is the lowest and 100 the highest priority of the material layers.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">(SIZEOF(RelatingPriorities) = 0)
+OR
+(SIZEOF (QUERY (temp &lt;* RelatingPriorities
+  | {0 &lt;= temp &lt;= 100}
+  )) = SIZEOF(RelatingPriorities))</code></pre>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 6.1.3.28.E<a href="IfcRelConnectsPathElements.htm#Table-6.1.3.28.E"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="6.1.3.28.5-Concept-usage"></a>
+    6.1.3.28.5 Concept usage
+<a href="IfcRelConnectsPathElements.htm#6.1.3.28.5-Concept-usage"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-6.1.3.28.F"></a><table class="striped grouped concepts">
+<thead>
+<tr>
+<th>Concept</th>
+<th>Usage</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="IfcRoot.htm">IfcRoot</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>Ownership, history, and merge state is captured using <a href="IfcOwnerHistory.htm">IfcOwnerHistory</a>.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p><a href="IfcRoot.htm">IfcRoot</a> assigns the globally unique ID. In addition it may provide for a name and a description about the concept.</p>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    Click to show 2 hidden inherited concepts
+                </small>
+<small class="hide-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    Click to hide 2 inherited concepts
+                </small>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 6.1.3.28.F<a href="IfcRelConnectsPathElements.htm#Table-6.1.3.28.F"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="6.1.3.28.6-Formal-representation"></a>
+    6.1.3.28.6 Formal representation
+<a href="IfcRelConnectsPathElements.htm#6.1.3.28.6-Formal-representation"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">ENTITY <a href="IfcRelConnectsPathElements.htm">IfcRelConnectsPathElements</a>
+ SUBTYPE OF (<a href="IfcRelConnectsElements.htm">IfcRelConnectsElements</a>);
+	RelatingPriorities : LIST [0:?] OF <a href="IfcInteger.htm">IfcInteger</a>;
+	RelatedPriorities : LIST [0:?] OF <a href="IfcInteger.htm">IfcInteger</a>;
+	RelatedConnectionType : <a href="IfcConnectionTypeEnum.htm">IfcConnectionTypeEnum</a>;
+	RelatingConnectionType : <a href="IfcConnectionTypeEnum.htm">IfcConnectionTypeEnum</a>;
+ WHERE
+	NormalizedRelatedPriorities : (SIZEOF(RelatedPriorities) = 0)
+OR
+(SIZEOF (QUERY (temp &lt;* RelatedPriorities
+  | {0 &lt;= temp &lt;= 100}
+  )) = SIZEOF(RelatedPriorities));
+	NormalizedRelatingPriorities : (SIZEOF(RelatingPriorities) = 0)
+OR
+(SIZEOF (QUERY (temp &lt;* RelatingPriorities
+  | {0 &lt;= temp &lt;= 100}
+  )) = SIZEOF(RelatingPriorities));
+END_ENTITY;</code></pre>
+<h2><a id="6.1.3.28.7-References"></a>
+    6.1.3.28.7 References
+<a href="IfcRelConnectsPathElements.htm#6.1.3.28.7-References"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="IfcRelConnectsElements.htm">IfcRelConnectsElements</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+<div class="changelog">
+<h3><a id="6.1.3.28.8-Changelog"></a>
+                        6.1.3.28.8 Changelog
+                    <a href="IfcRelConnectsPathElements.htm#6.1.3.28.8-Changelog"><i data-feather="link"></i></a></h3>
+<h4 class="collapsed"><a id="6.1.3.28.8.1-IFC4"></a>
+                        6.1.3.28.8.1 IFC4
+                    <a href="IfcRelConnectsPathElements.htm#6.1.3.28.8.1-IFC4"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where_rules,
+                                NormalizedRelatedPriorities
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where_rules,
+                                NormalizedRelatingPriorities
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes RelatedPriorities definition,
+                                Changed from list[0:?] of integer to list[0:?] of <a href="IfcInteger.htm">IfcInteger</a>
+</small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes RelatingPriorities definition,
+                                Changed from list[0:?] of integer to list[0:?] of <a href="IfcInteger.htm">IfcInteger</a>
+</small>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/shared/IfcSharedBldgElements/Entities/IfcRelConnectsPathElements.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

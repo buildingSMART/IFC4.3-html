@@ -1,0 +1,1464 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>6.1.3.45 IfcWindowType - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a class="current" href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a class="sublink-1 current" href="../ifcsharedbldgelements/content.html">
+                            6.1 IfcSharedBldgElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedbldgserviceelements/content.html">
+                            6.2 IfcSharedBldgServiceElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedcomponentelements/content.html">
+                            6.3 IfcSharedComponentElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedfacilitieselements/content.html">
+                            6.4 IfcSharedFacilitiesElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedmgmtelements/content.html">
+                            6.5 IfcSharedMgmtElements
+                        </a>
+<a class="sublink-1" href="../ifcsharedinfrastructureelements/content.html">
+                            6.6 IfcSharedInfrastructureElements
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>6.1.3.45 IfcWindowType</h1>
+<h2><a id="6.1.3.45.1-Semantic-definition"></a>
+    6.1.3.45.1 Semantic definition
+<a href="IfcWindowType.htm#6.1.3.45.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p>The element type <em><a href="IfcWindowType.htm">IfcWindowType</a></em> defines commonly shared information for occurrences of windows. The set of shared information may include:</p>
+<ul>
+<li>common properties within shared property sets</li>
+<li>common material information</li>
+<li>common partitioning of panels</li>
+<li>common operation types of panels</li>
+<li>common shape representations</li>
+</ul>
+<p>A window type defines the particular parameter of the lining and one (or several) panels through the <em><a href="IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a></em> and the <em><a href="IfcWindowPanelProperties.htm">IfcWindowPanelProperties</a></em> as predefined property sets applicable to windows only.</p>
+<p>It is used to define a window specification, or window style (the specific product information that is common to all occurrences of that window type). Window types may be exchanged without being already assigned to occurrences.</p>
+<p>Occurrences of the <em><a href="IfcWindowType.htm">IfcWindowType</a></em> within building models are represented by instances of <em><a href="IfcWindow.htm">IfcWindow</a></em>.</p>
+<aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC4. The entity <em><a href="IfcWindowType.htm">IfcWindowType</a></em> replaces the previous definition <em>IfcWindowStyle</em> (which is deprecated in IFC4).</aside>
+<p>Partitioning type use definition</p>
+<p>The <em><a href="IfcWindowTypePartitioningEnum.htm">IfcWindowTypePartitioningEnum</a></em> defines the general layout of the window type and its symbolic presentation. Depending on the enumerator, the appropriate instances of <em><a href="IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a></em> and <em><a href="IfcWindowPanelProperties.htm">IfcWindowPanelProperties</a></em> are attached in the list of <em>HasPropertySets</em>. The <em><a href="IfcWindowTypePartitioningEnum.htm">IfcWindowTypePartitioningEnum</a></em> mainly determines the way of partitioning the window into individual window panels and thereby number and position of window panels.</p>
+<p>See geometry use definitions at <em><a href="IfcWindowTypePartitioningEnum.htm">IfcWindowTypePartitioningEnum</a></em> for the correct usage of panel partitioning and <em><a href="IfcWindowPanelProperties.htm">IfcWindowPanelProperties</a></em> for the opening symbols for different panel operation types.</p>
+<p>Material Use Definition</p>
+<p>The material of the <em><a href="IfcWindowType.htm">IfcWindowType</a></em> is defined by the <em><a href="IfcMaterialConstituentSet.htm">IfcMaterialConstituentSet</a></em> or as fall back by <em><a href="IfcMaterial.htm">IfcMaterial</a></em> and attached by the <em><a href="IfcRelAssociatesMaterial.htm">IfcRelAssociatesMaterial</a></em>.<em>RelatingMaterial</em>. It is accessible by the inverse <em>HasAssociations</em> relationship.</p>
+<p>The following keywords for <em><a href="IfcMaterialConstituentSet.htm">IfcMaterialConstituentSet</a>.MaterialConstituents[n].Name</em> shall be used:</p>
+<ul>
+<li>'Lining' - to indicate that the material constituent applies to to the window lining</li>
+<li>'Framing' - to indicate that the material constituent applies to to the window panels, if not provided, the 'Lining' material information applied to panels as well</li>
+<li>'Glazing' - to indicate that the material constituent applies to to the glazing part</li>
+</ul>
+<p>If the fall back single <em><a href="IfcMaterial.htm">IfcMaterial</a></em> is referenced, it applies to the lining and framing of the window.</p>
+<p>Geometry Use Definitions:</p>
+<p>The <em><a href="IfcWindowType.htm">IfcWindowType</a></em> may define the common shape of window occurrences. The common shape can be defined by</p>
+<ul>
+<li>applying shape parameters defined within the associated <em><a href="IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a></em> and <em><a href="IfcWindowPanelProperties.htm">IfcWindowPanelProperties</a></em> applied to the 'Profile' geometric representation. It is only applicable if the <em><a href="IfcWindowType.htm">IfcWindowType</a></em> has only occurrences of type <em>IfcWindowStandardCase</em> (See geometric use definition of <em>IfcWindowStandardCase</em> for further information).</li>
+<li>applying the <em>RepresentationMaps</em> attribute to refer to a list of <em><a href="IfcRepresentationMap.htm">IfcRepresentationMap</a></em>'s, that allow for multiple geometric representations (e.g. with <em><a href="IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em>'s having an <em>RepresentationIdentifier</em> 'Box', 'Profile', 'FootPrint', or 'Body')<aside class="aside-note"><mark>NOTE</mark>  The product shape representations are defined as <em>RepresentationMaps</em> (attribute of the supertype <em><a href="IfcTypeProduct.htm">IfcTypeProduct</a></em>), which get assigned by an element occurrence instance through the <em><a href="IfcShapeRepresentation.htm">IfcShapeRepresentation</a>.Item[n]</em> being an <em><a href="IfcMappedItem.htm">IfcMappedItem</a></em>. See <em><a href="IfcTypeProduct.htm">IfcTypeProduct</a></em> for further information.
+  The values of attributes <em>RepresentationIdentifier</em> and <em>RepresentationType</em> of <em><a href="IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em> are restricted in the same way as those for <em><a href="IfcWindow.htm">IfcWindow</a></em> and <em>IfcWindowStandardCase</em></aside>
+</li>
+</ul>
+<h2><a id="6.1.3.45.2-Entity-inheritance"></a>
+    6.1.3.45.2 Entity inheritance
+<a href="IfcWindowType.htm#6.1.3.45.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
+<ol class="tier">
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcRoot.htm">IfcRoot</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcObjectDefinition.htm">IfcObjectDefinition</a></li>
+<li class="abstract"><a href="IfcPropertyDefinition.htm">IfcPropertyDefinition</a></li>
+<li class="abstract"><a href="IfcRelationship.htm">IfcRelationship</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="ancestor"><a href="IfcTypeObject.htm">IfcTypeObject</a></li>
+<li class="abstract"><a href="IfcContext.htm">IfcContext</a></li>
+<li class="abstract"><a href="IfcObject.htm">IfcObject</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="ancestor"><a href="IfcTypeProduct.htm">IfcTypeProduct</a></li>
+<li class="abstract"><a href="IfcTypeProcess.htm">IfcTypeProcess</a></li>
+<li class="abstract"><a href="IfcTypeResource.htm">IfcTypeResource</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcElementType.htm">IfcElementType</a></li>
+<li class="abstract"><a href="IfcSpatialElementType.htm">IfcSpatialElementType</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="ancestor"><a href="IfcBuiltElementType.htm">IfcBuiltElementType</a></li>
+<li class="deprecated"><a href="IfcCivilElementType.htm">IfcCivilElementType</a></li>
+<li class=""><a href="IfcDistributionElementType.htm">IfcDistributionElementType</a></li>
+<li class=""><a href="IfcElementAssemblyType.htm">IfcElementAssemblyType</a></li>
+<li class="abstract"><a href="IfcElementComponentType.htm">IfcElementComponentType</a></li>
+<li class=""><a href="IfcFurnishingElementType.htm">IfcFurnishingElementType</a></li>
+<li class=""><a href="IfcGeographicElementType.htm">IfcGeographicElementType</a></li>
+<li class="abstract"><a href="IfcTransportationDeviceType.htm">IfcTransportationDeviceType</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="current ancestor"><a href="IfcWindowType.htm">IfcWindowType</a></li>
+<li class=""><a href="IfcBeamType.htm">IfcBeamType</a></li>
+<li class=""><a href="IfcBearingType.htm">IfcBearingType</a></li>
+<li class=""><a href="IfcBuildingElementProxyType.htm">IfcBuildingElementProxyType</a></li>
+<li class=""><a href="IfcChimneyType.htm">IfcChimneyType</a></li>
+<li class=""><a href="IfcColumnType.htm">IfcColumnType</a></li>
+<li class=""><a href="IfcCourseType.htm">IfcCourseType</a></li>
+<li class=""><a href="IfcCoveringType.htm">IfcCoveringType</a></li>
+<li class=""><a href="IfcCurtainWallType.htm">IfcCurtainWallType</a></li>
+<li class=""><a href="IfcDeepFoundationType.htm">IfcDeepFoundationType</a></li>
+<li class=""><a href="IfcDoorType.htm">IfcDoorType</a></li>
+<li class=""><a href="IfcFootingType.htm">IfcFootingType</a></li>
+<li class=""><a href="IfcKerbType.htm">IfcKerbType</a></li>
+<li class=""><a href="IfcMemberType.htm">IfcMemberType</a></li>
+<li class=""><a href="IfcMooringDeviceType.htm">IfcMooringDeviceType</a></li>
+<li class=""><a href="IfcNavigationElementType.htm">IfcNavigationElementType</a></li>
+<li class=""><a href="IfcPavementType.htm">IfcPavementType</a></li>
+<li class=""><a href="IfcPlateType.htm">IfcPlateType</a></li>
+<li class=""><a href="IfcRailType.htm">IfcRailType</a></li>
+<li class=""><a href="IfcRailingType.htm">IfcRailingType</a></li>
+<li class=""><a href="IfcRampFlightType.htm">IfcRampFlightType</a></li>
+<li class=""><a href="IfcRampType.htm">IfcRampType</a></li>
+<li class=""><a href="IfcRoofType.htm">IfcRoofType</a></li>
+<li class=""><a href="IfcShadingDeviceType.htm">IfcShadingDeviceType</a></li>
+<li class=""><a href="IfcSlabType.htm">IfcSlabType</a></li>
+<li class=""><a href="IfcStairFlightType.htm">IfcStairFlightType</a></li>
+<li class=""><a href="IfcStairType.htm">IfcStairType</a></li>
+<li class=""><a href="IfcTrackElementType.htm">IfcTrackElementType</a></li>
+<li class=""><a href="IfcWallType.htm">IfcWallType</a></li>
+</ul>
+</li>
+</ol>
+<h2><a id="6.1.3.45.3-Attributes"></a>
+    6.1.3.45.3 Attributes
+<a href="IfcWindowType.htm#6.1.3.45.3-Attributes"><i data-feather="link"></i></a></h2>
+<!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
+<figure><a id="Table-6.1.3.45.A"></a><table class="striped grouped attributes">
+<colgroup>
+<col style="width: 20px;"/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcRoot.htm">IfcRoot</a>
+<small>(4)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                GlobalId
+                
+            </td>
+<td data-label="Type"><a href="IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a></td>
+<td data-label="Description">
+<p>Assignment of a globally unique identifier within the entire software world.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                OwnerHistory
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
+<td data-label="Description">
+<p>Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,</p>
+<aside class="aside-note"><mark>NOTE</mark>  only the last modification in stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The attribute has been changed to be OPTIONAL.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>Optional name for use by the participating software systems or users. For some subtypes of <a href="IfcRoot.htm">IfcRoot</a> the insertion of the Name attribute may be required. This would be enforced by a where rule.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>Optional description, provided for exchanging informative comments.</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcObjectDefinition.htm">IfcObjectDefinition</a>
+<small>(7)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasAssignments</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcRelAssigns.htm">IfcRelAssigns</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>Reference to the relationship objects, that assign (by an association relationship) other subtypes of <a href="IfcObject.htm">IfcObject</a> to this object instance. Examples are the association to products, processes, controls, resources or groups.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>Nests</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="IfcRelNests.htm">IfcRelNests</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>References to the decomposition relationship being a nesting. It determines that this object definition is a part within an ordered whole/part decomposition relationship. An object occurrence or type can only be part of a single decomposition (to allow hierarchical strutures only).</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  The inverse attribute datatype has been added and separated from <em>Decomposes</em> defined at <em><a href="IfcObjectDefinition.htm">IfcObjectDefinition</a></em>.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>IsNestedBy</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcRelNests.htm">IfcRelNests</a> FOR RelatingObject</td>
+<td data-label="Description">
+<p>References to the decomposition relationship being a nesting. It determines that this object definition is the whole within an ordered whole/part decomposition relationship. An object or object type can be nested by several other objects (occurrences or types).</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  The inverse attribute datatype has been added and separated from <em>IsDecomposedBy</em> defined at <em><a href="IfcObjectDefinition.htm">IfcObjectDefinition</a></em>.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasContext</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="IfcRelDeclares.htm">IfcRelDeclares</a> FOR RelatedDefinitions</td>
+<td data-label="Description">
+<p>References to the context providing context information such as project unit or representation context. It should only be asserted for the uppermost non-spatial object.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  The inverse attribute datatype has been added.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>IsDecomposedBy</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcRelAggregates.htm">IfcRelAggregates</a> FOR RelatingObject</td>
+<td data-label="Description">
+<p>References to the decomposition relationship being an aggregation. It determines that this object definition is whole within an unordered whole/part decomposition relationship. An object definitions can be aggregated by several other objects (occurrences or parts).</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  The inverse attribute datatype has been changed from the supertype <em><a href="IfcRelDecomposes.htm">IfcRelDecomposes</a></em> to subtype <em><a href="IfcRelAggregates.htm">IfcRelAggregates</a></em>.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>Decomposes</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="IfcRelAggregates.htm">IfcRelAggregates</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>References to the decomposition relationship being an aggregation. It determines that this object definition is a part within an unordered whole/part decomposition relationship. An object definitions can only be part of a single decomposition (to allow hierarchical strutures only).</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  The inverse attribute datatype has been changed from the supertype <em><a href="IfcRelDecomposes.htm">IfcRelDecomposes</a></em> to subtype <em><a href="IfcRelAggregates.htm">IfcRelAggregates</a></em>.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasAssociations</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcRelAssociates.htm">IfcRelAssociates</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>Reference to the relationship objects, that associates external references or other resource definitions to the object.. Examples are the association to library, documentation or classification.</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcTypeObject.htm">IfcTypeObject</a>
+<small>(3)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                ApplicableOccurrence
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcIdentifier.htm">IfcIdentifier</a></td>
+<td data-label="Description">
+<p>The attribute optionally defines the data type of the occurrence object, to which the assigned type object can relate. If not present, no instruction is given to which occurrence object the type object is applicable. The following conventions are used:
+* The IFC entity name of the applicable occurrence using the IFC naming convention, CamelCase with IFC prefix
+* It can be optionally followed by the predefined type after the separator "/" (forward slash), using uppercase
+* If one type object is applicable to many occurrence objects, then those occurrence object names should be separate by comma "," forming a comma separated string.</p>
+<aside class="aside-example"><mark>EXAMPLE</mark> Referring to a furniture as applicable occurrence entity would be expressed as '<a href="IfcFurnishingElement.htm">IfcFurnishingElement</a>', referring to a brace as applicable entity would be expressed as '<a href="IfcMember.htm">IfcMember</a>/BRACE'.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                HasPropertySets
+                
+            </td>
+<td data-label="Type">OPTIONAL SET [1:?] OF <a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></td>
+<td data-label="Description">
+<p>Set ~~list~~ of unique property sets, that are associated with the object type and are common to all object occurrences referring to this object type.</p>
+<aside class="aside-change"><mark>IFC2x3-CHANGE</mark>  The attribute aggregate type has been changed from LIST to SET.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>Types</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="IfcRelDefinesByType.htm">IfcRelDefinesByType</a> FOR RelatingType</td>
+<td data-label="Description">
+<p>Reference to the relationship IfcRelDefinedByType and thus to those occurrence objects, which are defined by this type.</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcTypeProduct.htm">IfcTypeProduct</a>
+<small>(3)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                RepresentationMaps
+                
+            </td>
+<td data-label="Type">OPTIONAL LIST [1:?] OF UNIQUE <a href="IfcRepresentationMap.htm">IfcRepresentationMap</a></td>
+<td data-label="Description">
+<p>List of unique representation maps. Each representation map describes a block definition of the shape of the product style. By providing more than one representation map, a multi-view block definition can be given.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">8</td>
+<td data-label="Name">
+                
+                Tag
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>The tag (or label) identifier at the particular type of a product, e.g. the article number (like the EAN). It is the identifier at the specific level.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>ReferencedBy</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcRelAssignsToProduct.htm">IfcRelAssignsToProduct</a> FOR RelatingProduct</td>
+<td data-label="Description">
+<p>Reference to the <em><a href="IfcRelAssignsToProduct.htm">IfcRelAssignsToProduct</a></em> relationship, by which other products, processes, controls, resources or actors (as subtypes of <em><a href="IfcObjectDefinition.htm">IfcObjectDefinition</a></em>) can be related to this product type.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  New inverse relationship.</aside>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcElementType.htm">IfcElementType</a>
+<small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">9</td>
+<td data-label="Name">
+                
+                ElementType
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute 'PredefinedType' is set to USERDEFINED.</p>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to show 18 hidden inherited attributes
+                </small>
+<small class="hide-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to hide 18 inherited attributes
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="4">
+<a href="IfcWindowType.htm">IfcWindowType</a>
+<small>(4)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">10</td>
+<td data-label="Name">
+                
+                PredefinedType
+                
+            </td>
+<td data-label="Type"><a href="IfcWindowTypeEnum.htm">IfcWindowTypeEnum</a></td>
+<td data-label="Description">
+<p>Identifies the predefined types of a window element from which the type required may be set.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">11</td>
+<td data-label="Name">
+                
+                PartitioningType
+                
+            </td>
+<td data-label="Type"><a href="IfcWindowTypePartitioningEnum.htm">IfcWindowTypePartitioningEnum</a></td>
+<td data-label="Description">
+<p>Type defining the general layout of the window type in terms of the partitioning of panels.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">12</td>
+<td data-label="Name">
+                
+                ParameterTakesPrecedence
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcBoolean.htm">IfcBoolean</a></td>
+<td data-label="Description">
+<p>The Boolean value reflects, whether the parameter given in the attached lining and panel properties exactly define the geometry (TRUE), or whether the attached style shape take precedence (FALSE). In the last case the parameter have only informative value. If not provided, no such information can be infered.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">13</td>
+<td data-label="Name">
+                
+                UserDefinedPartitioningType
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>Designator for the user defined partitioning type, shall only be provided, if the value of <em>PartitioningType</em> is set to USERDEFINED.</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 6.1.3.45.A<a href="IfcWindowType.htm#Table-6.1.3.45.A"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="6.1.3.45.4-Formal-propositions"></a>
+    6.1.3.45.4 Formal propositions
+<a href="IfcWindowType.htm#6.1.3.45.4-Formal-propositions"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-6.1.3.45.C"></a><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CorrectPredefinedType</td>
+<td>
+<p>The inherited attribute <em>ElementType</em> shall be provided, if the <em>PredefinedType</em> is set to USERDEFINED.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">(PredefinedType &lt;&gt; <a href="IfcWindowTypeEnum.htm">IfcWindowTypeEnum</a>.USERDEFINED) OR
+ ((PredefinedType = <a href="IfcWindowTypeEnum.htm">IfcWindowTypeEnum</a>.USERDEFINED) AND EXISTS (SELF\<a href="IfcElementType.htm">IfcElementType</a>.ElementType))</code></pre>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 6.1.3.45.C<a href="IfcWindowType.htm#Table-6.1.3.45.C"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="6.1.3.45.5-Property-sets"></a>
+    6.1.3.45.5 Property sets
+<a href="IfcWindowType.htm#6.1.3.45.5-Property-sets"><i data-feather="link"></i></a></h2>
+<p>
+</p><ul class="psets">
+<li>
+<a href="Pset_Condition.htm">Pset_Condition</a>
+<ul>
+<li>AssessmentDate</li>
+<li>AssessmentCondition</li>
+<li>AssessmentDescription</li>
+<li>AssessmentType</li>
+<li>AssessmentMethod</li>
+<li>LastAssessmentReport</li>
+<li>NextAssessmentDate</li>
+<li>AssessmentFrequency</li>
+</ul>
+</li>
+<li>
+<a href="Pset_ConstructionAdministration.htm">Pset_ConstructionAdministration</a>
+<ul>
+<li>ProcurementMethod</li>
+<li>SpecificationSectionNumber</li>
+<li>SubmittalIdentifer</li>
+</ul>
+</li>
+<li>
+<a href="Pset_DoorWindowGlazingType.htm">Pset_DoorWindowGlazingType</a>
+<ul>
+<li>GlassLayers</li>
+<li>GlassThickness1</li>
+<li>GlassThickness2</li>
+<li>GlassThickness3</li>
+<li>FillGas</li>
+<li>GlassColour</li>
+<li>IsTempered</li>
+<li>IsLaminated</li>
+<li>IsCoated</li>
+<li>IsWired</li>
+<li>VisibleLightReflectance</li>
+<li>VisibleLightTransmittance</li>
+<li>SolarAbsorption</li>
+<li>SolarReflectance</li>
+<li>SolarTransmittance</li>
+<li>SolarHeatGainTransmittance</li>
+<li>ShadingCoefficient</li>
+<li>ThermalTransmittanceSummer</li>
+<li>ThermalTransmittanceWinter</li>
+</ul>
+</li>
+<li>
+<a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
+<ul>
+<li>CyclicPath</li>
+<li>CyclicRange</li>
+<li>LinearPath</li>
+<li>LinearRange</li>
+<li>MaximumAngularVelocity</li>
+<li>MaximumConstantSpeed</li>
+<li>MinimumTime</li>
+</ul>
+</li>
+<li>
+<a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
+<ul>
+<li>CyclicPath</li>
+<li>CyclicRange</li>
+<li>LinearPath</li>
+<li>LinearRange</li>
+<li>MaximumAngularVelocity</li>
+<li>MaximumConstantSpeed</li>
+<li>MinimumTime</li>
+</ul>
+</li>
+<li>
+<a href="Pset_EnvironmentalCondition.htm">Pset_EnvironmentalCondition</a>
+<ul>
+<li>ReferenceAirRelativeHumidity</li>
+<li>ReferenceEnvironmentTemperature</li>
+<li>MaximumAtmosphericPressure</li>
+<li>StorageTemperatureRange</li>
+<li>MaximumWindSpeed</li>
+<li>OperationalTemperatureRange</li>
+<li>MaximumRainIntensity</li>
+<li>SaltMistLevel</li>
+<li>SeismicResistance</li>
+<li>SmokeLevel</li>
+<li>MaximumSolarRadiation</li>
+</ul>
+</li>
+<li>
+<a href="Pset_EnvironmentalImpactIndicators.htm">Pset_EnvironmentalImpactIndicators</a>
+<ul>
+<li>Reference</li>
+<li>FunctionalUnitReference</li>
+<li>IndicatorsUnit</li>
+<li>LifeCyclePhase</li>
+<li>ExpectedServiceLife</li>
+<li>TotalPrimaryEnergyConsumptionPerUnit</li>
+<li>WaterConsumptionPerUnit</li>
+<li>HazardousWastePerUnit</li>
+<li>NonHazardousWastePerUnit</li>
+<li>ClimateChangePerUnit</li>
+<li>AtmosphericAcidificationPerUnit</li>
+<li>RenewableEnergyConsumptionPerUnit</li>
+<li>NonRenewableEnergyConsumptionPerUnit</li>
+<li>ResourceDepletionPerUnit</li>
+<li>InertWastePerUnit</li>
+<li>RadioactiveWastePerUnit</li>
+<li>StratosphericOzoneLayerDestructionPerUnit</li>
+<li>PhotochemicalOzoneFormationPerUnit</li>
+<li>EutrophicationPerUnit</li>
+</ul>
+</li>
+<li>
+<a href="Pset_EnvironmentalImpactValues.htm">Pset_EnvironmentalImpactValues</a>
+<ul>
+<li>TotalPrimaryEnergyConsumption</li>
+<li>WaterConsumption</li>
+<li>HazardousWaste</li>
+<li>NonHazardousWaste</li>
+<li>ClimateChange</li>
+<li>AtmosphericAcidification</li>
+<li>RenewableEnergyConsumption</li>
+<li>NonRenewableEnergyConsumption</li>
+<li>ResourceDepletion</li>
+<li>InertWaste</li>
+<li>RadioactiveWaste</li>
+<li>StratosphericOzoneLayerDestruction</li>
+<li>PhotochemicalOzoneFormation</li>
+<li>Eutrophication</li>
+<li>LeadInTime</li>
+<li>Duration</li>
+<li>LeadOutTime</li>
+</ul>
+</li>
+<li>
+<a href="Pset_MaintenanceStrategy.htm">Pset_MaintenanceStrategy</a>
+<ul>
+<li>AssetCriticality</li>
+<li>AssetFrailty</li>
+<li>AssetPriority</li>
+<li>MonitoringType</li>
+<li>AccidentResponse</li>
+</ul>
+</li>
+<li>
+<a href="Pset_MaintenanceTriggerCondition.htm">Pset_MaintenanceTriggerCondition</a>
+<ul>
+<li>ConditionTargetPerformance</li>
+<li>ConditionMaintenanceLevel</li>
+<li>ConditionReplacementLevel</li>
+<li>ConditionDisposalLevel</li>
+</ul>
+</li>
+<li>
+<a href="Pset_MaintenanceTriggerDuration.htm">Pset_MaintenanceTriggerDuration</a>
+<ul>
+<li>DurationTargetPerformance</li>
+<li>DurationMaintenanceLevel</li>
+<li>DurationReplacementLevel</li>
+<li>DurationDisposalLevel</li>
+</ul>
+</li>
+<li>
+<a href="Pset_MaintenanceTriggerPerformance.htm">Pset_MaintenanceTriggerPerformance</a>
+<ul>
+<li>TargetPerformance</li>
+<li>PerformanceMaintenanceLevel</li>
+<li>ReplacementLevel</li>
+<li>DisposalLevel</li>
+</ul>
+</li>
+<li>
+<a href="Pset_ManufacturerTypeInformation.htm">Pset_ManufacturerTypeInformation</a>
+<ul>
+<li>GlobalTradeItemNumber</li>
+<li>ArticleNumber</li>
+<li>ModelReference</li>
+<li>ModelLabel</li>
+<li>Manufacturer</li>
+<li>ProductionYear</li>
+<li>AssemblyPlace</li>
+<li>OperationalDocument</li>
+<li>SafetyDocument</li>
+<li>PerformanceCertificate</li>
+</ul>
+</li>
+<li>
+<a href="Pset_Risk.htm">Pset_Risk</a>
+<ul>
+<li>RiskName</li>
+<li>RiskType</li>
+<li>NatureOfRisk</li>
+<li>RiskAssessmentMethodology</li>
+<li>UnmitigatedRiskLikelihood</li>
+<li>UnmitigatedRiskConsequence</li>
+<li>UnmitigatedRiskSignificance</li>
+<li>MitigationPlanned</li>
+<li>MitigatedRiskLikelihood</li>
+<li>MitigatedRiskConsequence</li>
+<li>MitigatedRiskSignificance</li>
+<li>MitigationProposed</li>
+<li>AssociatedProduct</li>
+<li>AssociatedActivity</li>
+<li>AssociatedLocation</li>
+</ul>
+</li>
+<li>
+<a href="Pset_ServiceLife.htm">Pset_ServiceLife</a>
+<ul>
+<li>ServiceLifeDuration</li>
+<li>MeanTimeBetweenFailure</li>
+</ul>
+</li>
+<li>
+<a href="Pset_Tolerance.htm">Pset_Tolerance</a>
+<ul>
+<li>ToleranceDescription</li>
+<li>ToleranceBasis</li>
+<li>OverallTolerance</li>
+<li>HorizontalTolerance</li>
+<li>OrthogonalTolerance</li>
+<li>VerticalTolerance</li>
+<li>PlanarFlatness</li>
+<li>HorizontalFlatness</li>
+<li>ElevationalFlatness</li>
+<li>SideFlatness</li>
+<li>OverallOrthogonality</li>
+<li>HorizontalOrthogonality</li>
+<li>OrthogonalOrthogonality</li>
+<li>VerticalOrthogonality</li>
+<li>OverallStraightness</li>
+<li>HorizontalStraightness</li>
+<li>OrthogonalStraightness</li>
+<li>VerticalStraightness</li>
+</ul>
+</li>
+<li>
+<a href="Pset_Uncertainty.htm">Pset_Uncertainty</a>
+<ul>
+<li>UncertaintyBasis</li>
+<li>UncertaintyDescription</li>
+<li>HorizontalUncertainty</li>
+<li>LinearUncertainty</li>
+<li>OrthogonalUncertainty</li>
+<li>VerticalUncertainty</li>
+</ul>
+</li>
+<li>
+<a href="Pset_Warranty.htm">Pset_Warranty</a>
+<ul>
+<li>WarrantyIdentifier</li>
+<li>WarrantyStartDate</li>
+<li>IsExtendedWarranty</li>
+<li>WarrantyPeriod</li>
+<li>WarrantyContent</li>
+<li>PointOfContact</li>
+<li>Exclusions</li>
+</ul>
+</li>
+<li>
+<a href="Pset_WindowCommon.htm">Pset_WindowCommon</a>
+<ul>
+<li>Reference</li>
+<li>Status</li>
+<li>AcousticRating</li>
+<li>FireRating</li>
+<li>SecurityRating</li>
+<li>IsExternal</li>
+<li>Infiltration</li>
+<li>ThermalTransmittance</li>
+<li>GlazingAreaFraction</li>
+<li>HasSillExternal</li>
+<li>HasSillInternal</li>
+<li>HasDrive</li>
+<li>SmokeStop</li>
+<li>FireExit</li>
+<li>WaterTightnessRating</li>
+<li>MechanicalLoadRating</li>
+<li>WindLoadRating</li>
+</ul>
+</li>
+<li>
+<a href="Qto_WindowBaseQuantities.htm">Qto_WindowBaseQuantities</a>
+<ul>
+<li>Width</li>
+<li>Height</li>
+<li>Perimeter</li>
+<li>Area</li>
+</ul>
+</li>
+</ul>
+<p>
+</p><h2><a id="6.1.3.45.6-Concept-usage"></a>
+    6.1.3.45.6 Concept usage
+<a href="IfcWindowType.htm#6.1.3.45.6-Concept-usage"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-6.1.3.45.D"></a><table class="striped grouped concepts">
+<thead>
+<tr>
+<th>Concept</th>
+<th>Usage</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="IfcRoot.htm">IfcRoot</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>Ownership, history, and merge state is captured using <a href="IfcOwnerHistory.htm">IfcOwnerHistory</a>.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p><a href="IfcRoot.htm">IfcRoot</a> assigns the globally unique ID. In addition it may provide for a name and a description about the concept.</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="IfcObjectDefinition.htm">IfcObjectDefinition</a>
+<small>(9)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Composition/Aggregation/content.html">Aggregation</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Association/Approval_Association/content.html">Approval Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Association/Classification_Association/content.html">Classification Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>Any object occurrence or object type can have a reference to a specific classification reference, i.e. to a particular facet within a classification system.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Association/Constraint_Association/content.html">Constraint Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Association/Document_Association/content.html">Document Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Association/Library_Association/content.html">Library Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Association/Material_Association/content.html">Material Association</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Association/Material_Association/Material_Single/content.html">Material Single</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Composition/Nesting/content.html">Nesting</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="IfcTypeObject.htm">IfcTypeObject</a>
+<small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Property_Sets/Property_Sets_for_Types/content.html">Property Sets for Types</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="IfcTypeProduct.htm">IfcTypeProduct</a>
+<small>(7)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Product_Type_Shape/Product_Type_Geometric_Representation/content.html">Product Type Geometric Representation</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Product_Type_Shape/content.html">Product Type Shape</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>The RepresentationMaps define the type product shape and multiple geometric representations can be assigned. If a product occurrence is assigned to the type by using the <a href="IfcRelDefinesByType.htm">IfcRelDefinesByType</a> relationship, then these occurrences have to reference the representation maps. The reference is created by one or multiple <a href="IfcShapeRepresentation.htm">IfcShapeRepresentation</a>'s having an <a href="IfcMappedItem.htm">IfcMappedItem</a> as Items, that places the <a href="IfcRepresentationMap.htm">IfcRepresentationMap</a> of the type product into the spatial contexts, i.e. by using an Cartesian transformation operator to transform the <a href="IfcRepresentationMap.htm">IfcRepresentationMap</a> into the object coordinate system of the product occurrence.</p>
+<p>Figure 1 illustrates an example of referencing a representation map by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling.</p>
+<figure><a id="Figure-6.1.3.45.B-illustrates-an-example-of-referencing-a-representation-multiple-times-map-by-the-shape-representation-of-a-product-occurrence.-Here-the-Cartesian-transformation-operator-only-uses-translation-but-no-rotation-mirroring-or-scaling.-The-different-translation-values-determine-the-pattern-of-the-multiple-placement."></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-1.png" title="Figure 1 — Product type geometry with single placement"/><figcaption>Figure 6.1.3.45.B illustrates an example of referencing a representation multiple times map by the shape representation of a product occurrence. Here the Cartesian transformation operator only uses translation, but no rotation, mirroring, or scaling. The different translation values determine the pattern of the multiple placement.<a href="IfcWindowType.htm#Figure-6.1.3.45.B-illustrates-an-example-of-referencing-a-representation-multiple-times-map-by-the-shape-representation-of-a-product-occurrence.-Here-the-Cartesian-transformation-operator-only-uses-translation-but-no-rotation-mirroring-or-scaling.-The-different-translation-values-determine-the-pattern-of-the-multiple-placement."><i data-feather="link"></i></a></figcaption></figure>
+<figure><a id="Figure-6.1.3.45.B-Product-type-geometry-with-multiple-placement"></a><img alt="representation map" src="../figures/ifctypeproduct_representationmap-2.png" title="Figure 6.1.3.45.B — Product type geometry with multiple placement"/><figcaption>Figure 6.1.3.45.B — Product type geometry with multiple placement<a href="IfcWindowType.htm#Figure-6.1.3.45.B-Product-type-geometry-with-multiple-placement"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Property_Sets/Property_Sets_for_Objects/content.html">Property Sets for Objects</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>This concept can be applied to the following resources:</p>
+<ul>
+<li>
+<a href="Pset_Risk.htm">Pset_Risk</a>
+</li>
+<li>
+<a href="Pset_Tolerance.htm">Pset_Tolerance</a>
+</li>
+<li>
+<a href="Pset_Uncertainty.htm">Pset_Uncertainty</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Product_Type_Shape/Product_Type_Geometric_Representation/Type_Body_Geometry/Type_Body_AdvancedBrep_Geometry/content.html">Type Body AdvancedBrep Geometry</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Product_Type_Shape/Product_Type_Geometric_Representation/Type_Body_Geometry/Type_Body_Brep_Geometry/content.html">Type Body Brep Geometry</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Product_Type_Shape/Product_Type_Geometric_Representation/Type_Body_Geometry/Type_Body_CSG_Geometry/content.html">Type Body CSG Geometry</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Product_Type_Shape/Product_Type_Geometric_Representation/Type_Body_Geometry/content.html">Type Body Geometry</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="IfcElementType.htm">IfcElementType</a>
+<small>(5)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Attributes/Object_Type_Predefined_Type/Element_Type_Predefined_Type/content.html">Element Type Predefined Type</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Property_Sets/Property_Sets_for_Objects/content.html">Property Sets for Objects</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>This concept can be applied to the following resources:</p>
+<ul>
+<li>
+<a href="Pset_Condition.htm">Pset_Condition</a>
+</li>
+<li>
+<a href="Pset_MaintenanceStrategy.htm">Pset_MaintenanceStrategy</a>
+</li>
+<li>
+<a href="Pset_MaintenanceTriggerCondition.htm">Pset_MaintenanceTriggerCondition</a>
+</li>
+<li>
+<a href="Pset_MaintenanceTriggerDuration.htm">Pset_MaintenanceTriggerDuration</a>
+</li>
+<li>
+<a href="Pset_MaintenanceTriggerPerformance.htm">Pset_MaintenanceTriggerPerformance</a>
+</li>
+<li>
+<a href="Pset_ConstructionAdministration.htm">Pset_ConstructionAdministration</a>
+</li>
+<li>
+<a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
+</li>
+<li>
+<a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
+</li>
+<li>
+<a href="Pset_EnvironmentalCondition.htm">Pset_EnvironmentalCondition</a>
+</li>
+<li>
+<a href="Pset_EnvironmentalImpactIndicators.htm">Pset_EnvironmentalImpactIndicators</a>
+</li>
+<li>
+<a href="Pset_EnvironmentalImpactValues.htm">Pset_EnvironmentalImpactValues</a>
+</li>
+<li>
+<a href="Pset_ManufacturerTypeInformation.htm">Pset_ManufacturerTypeInformation</a>
+</li>
+<li>
+<a href="Pset_ServiceLife.htm">Pset_ServiceLife</a>
+</li>
+<li>
+<a href="Pset_Warranty.htm">Pset_Warranty</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Product_Type_Shape/Product_Type_Geometric_Representation/Type_Body_Geometry/Type_Body_Tessellated_Geometry/content.html">Type Body Tessellated Geometry</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Composition/Type_Element_Aggregation/content.html">Type Element Aggregation</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Composition/Nesting/Type_Element_Nesting/content.html">Type Element Nesting</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    Click to show 24 hidden inherited concepts
+                </small>
+<small class="hide-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    Click to hide 24 inherited concepts
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="3">
+<a href="IfcWindowType.htm">IfcWindowType</a>
+<small>(4)</small>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Property_Sets/Property_Sets_for_Objects/content.html">Property Sets for Objects</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        This is a further elaboration on an inherited concept.
+                    </small>
+</aside>
+<p>This concept can be applied to the following resources:</p>
+<ul>
+<li>
+<a href="Pset_DoorWindowGlazingType.htm">Pset_DoorWindowGlazingType</a>
+</li>
+<li>
+<a href="Pset_WindowCommon.htm">Pset_WindowCommon</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Property_Sets/Property_Sets_for_Types/content.html">Property Sets for Types</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        This is a further elaboration on an inherited concept.
+                    </small>
+</aside>
+<p>Two subtypes of <a href="IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a> are applicable to <a href="IfcWindowType.htm">IfcWindowType</a>:</p>
+<ul>
+<li><a href="IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a> - a single instance to define the shape parameters of the window lining</li>
+<li><a href="IfcWindowPanelProperties.htm">IfcWindowPanelProperties</a> - one or several instances to define the shape parameters of the window panel(s)</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Quantity_Sets/content.html">Quantity Sets</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>This concept can be applied to the following resources:</p>
+<ul>
+<li>
+<a href="Qto_WindowBaseQuantities.htm">Qto_WindowBaseQuantities</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="../concepts/Object_Attributes/Object_Type_Attributes/Window_Type_Attributes/content.html">Window Type Attributes</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 6.1.3.45.D<a href="IfcWindowType.htm#Table-6.1.3.45.D"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="6.1.3.45.7-Formal-representation"></a>
+    6.1.3.45.7 Formal representation
+<a href="IfcWindowType.htm#6.1.3.45.7-Formal-representation"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">ENTITY <a href="IfcWindowType.htm">IfcWindowType</a>
+ SUBTYPE OF (<a href="IfcBuiltElementType.htm">IfcBuiltElementType</a>);
+	PredefinedType : <a href="IfcWindowTypeEnum.htm">IfcWindowTypeEnum</a>;
+	PartitioningType : <a href="IfcWindowTypePartitioningEnum.htm">IfcWindowTypePartitioningEnum</a>;
+	ParameterTakesPrecedence : OPTIONAL <a href="IfcBoolean.htm">IfcBoolean</a>;
+	UserDefinedPartitioningType : OPTIONAL <a href="IfcLabel.htm">IfcLabel</a>;
+ WHERE
+	CorrectPredefinedType : (PredefinedType &lt;&gt; <a href="IfcWindowTypeEnum.htm">IfcWindowTypeEnum</a>.USERDEFINED) OR
+ ((PredefinedType = <a href="IfcWindowTypeEnum.htm">IfcWindowTypeEnum</a>.USERDEFINED) AND EXISTS (SELF\<a href="IfcElementType.htm">IfcElementType</a>.ElementType));
+END_ENTITY;</code></pre>
+<h2><a id="6.1.3.45.8-References"></a>
+    6.1.3.45.8 References
+<a href="IfcWindowType.htm#6.1.3.45.8-References"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="IfcBuiltElementType.htm">IfcBuiltElementType</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+<div class="changelog">
+<h3><a id="6.1.3.45.9-Changelog"></a>
+                        6.1.3.45.9 Changelog
+                    <a href="IfcWindowType.htm#6.1.3.45.9-Changelog"><i data-feather="link"></i></a></h3>
+<h4 class="collapsed"><a id="6.1.3.45.9.1-IFC4"></a>
+                        6.1.3.45.9.1 IFC4
+                    <a href="IfcWindowType.htm#6.1.3.45.9.1-IFC4"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                New resource
+                                
+                            </small>
+</li>
+</ul>
+<h4 class="collapsed"><a id="6.1.3.45.9.2-IFC4.3"></a>
+                        6.1.3.45.9.2 IFC4.3
+                    <a href="IfcWindowType.htm#6.1.3.45.9.2-IFC4.3"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                supertype,
+                                Changed from IfcBuildingElementType to <a href="IfcBuiltElementType.htm">IfcBuiltElementType</a>
+</small>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/shared/IfcSharedBldgElements/Entities/IfcWindowType.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

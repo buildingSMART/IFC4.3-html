@@ -1,0 +1,376 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>8.7.2.3 IfcAlignmentVerticalSegmentTypeEnum - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a class="current" href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+<a class="sublink-1" href="../ifcactorresource/content.html">
+                            8.1 IfcActorResource
+                        </a>
+<a class="sublink-1" href="../ifcapprovalresource/content.html">
+                            8.2 IfcApprovalResource
+                        </a>
+<a class="sublink-1" href="../ifcconstraintresource/content.html">
+                            8.3 IfcConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifccostresource/content.html">
+                            8.4 IfcCostResource
+                        </a>
+<a class="sublink-1" href="../ifcdatetimeresource/content.html">
+                            8.5 IfcDateTimeResource
+                        </a>
+<a class="sublink-1" href="../ifcexternalreferenceresource/content.html">
+                            8.6 IfcExternalReferenceResource
+                        </a>
+<a class="sublink-1 current" href="../ifcgeometricconstraintresource/content.html">
+                            8.7 IfcGeometricConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricmodelresource/content.html">
+                            8.8 IfcGeometricModelResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometryresource/content.html">
+                            8.9 IfcGeometryResource
+                        </a>
+<a class="sublink-1" href="../ifcmaterialresource/content.html">
+                            8.10 IfcMaterialResource
+                        </a>
+<a class="sublink-1" href="../ifcmeasureresource/content.html">
+                            8.11 IfcMeasureResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationappearanceresource/content.html">
+                            8.12 IfcPresentationAppearanceResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationdefinitionresource/content.html">
+                            8.13 IfcPresentationDefinitionResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationorganizationresource/content.html">
+                            8.14 IfcPresentationOrganizationResource
+                        </a>
+<a class="sublink-1" href="../ifcprofileresource/content.html">
+                            8.15 IfcProfileResource
+                        </a>
+<a class="sublink-1" href="../ifcpropertyresource/content.html">
+                            8.16 IfcPropertyResource
+                        </a>
+<a class="sublink-1" href="../ifcquantityresource/content.html">
+                            8.17 IfcQuantityResource
+                        </a>
+<a class="sublink-1" href="../ifcrepresentationresource/content.html">
+                            8.18 IfcRepresentationResource
+                        </a>
+<a class="sublink-1" href="../ifcstructuralloadresource/content.html">
+                            8.19 IfcStructuralLoadResource
+                        </a>
+<a class="sublink-1" href="../ifctopologyresource/content.html">
+                            8.20 IfcTopologyResource
+                        </a>
+<a class="sublink-1" href="../ifcutilityresource/content.html">
+                            8.21 IfcUtilityResource
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>8.7.2.3 IfcAlignmentVerticalSegmentTypeEnum</h1>
+<h2><a id="8.7.2.3.1-Semantic-definition"></a>
+    8.7.2.3.1 Semantic definition
+<a href="IfcAlignmentVerticalSegmentTypeEnum.htm#8.7.2.3.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p>The <a href="IfcAlignmentVerticalSegmentTypeEnum.htm">IfcAlignmentVerticalSegmentTypeEnum</a> indicates the type of a segment of a vertical alignment segment (<a href="IfcAlignmentVerticalSegment.htm">IfcAlignmentVerticalSegment</a>).</p>
+<figure><a id="Table-8.7.2.3.A"></a><table>
+<thead>
+<tr>
+<th align="left">Vertical curvature</th>
+<th align="left">Segmenttype</th>
+<th align="left">Enumeration Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">No vertical curvature</td>
+<td align="left">constant gradient</td>
+<td align="left">CONSTANTGRADIENT</td>
+</tr>
+<tr>
+<td align="left">Derivative of gradient with respect to horizontal projection of alignment is constant</td>
+<td align="left">Vertical curve, parabola</td>
+<td align="left">PARABOLICARC</td>
+</tr>
+<tr>
+<td align="left">Derivative of vertical angle with respect to 3D arc length along the alignment is constant</td>
+<td align="left">Vertical curve, circular</td>
+<td align="left">CIRCULARARC</td>
+</tr>
+<tr>
+<td align="left">Variation of vertical curvature is constant</td>
+<td align="left">Vertical curve, clothoid</td>
+<td align="left">CLOTHOID</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.7.2.3.A<a href="IfcAlignmentVerticalSegmentTypeEnum.htm#Table-8.7.2.3.A"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-note"><mark>NOTE</mark> A vertical curve in track that starts or ends in canted switches and crossings can be of a higher order polynomial than a parabola.</aside><aside class="aside-note"><mark>NOTE</mark> chainage is  longitudinal distance along the horizontal projection of the alignment (e.g. track centre line).</aside><aside class="aside-note"><mark>NOTE</mark> Definitions according to EN 13803/2017 (except CLOTHOID)</aside>
+<p><strong>Used Symbols and their meaning</strong></p>
+<figure><a id="Table-8.7.2.3.B"></a><table>
+<thead>
+<tr>
+<th align="left">Symbol</th>
+<th align="left">meaning</th>
+<th align="left">Unit, value range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">L</td>
+<td align="left">full length of segment</td>
+<td align="left">positive length  L &gt; 0</td>
+</tr>
+<tr>
+<td align="left">s</td>
+<td align="left">current position on segment</td>
+<td align="left">0 &lt; s &lt; L</td>
+</tr>
+<tr>
+<td align="left">θ</td>
+<td align="left">(Greek "theta") Longitudinal slope angle (incline or decline)</td>
+<td align="left">rad</td>
+</tr>
+<tr>
+<td align="left">g</td>
+<td align="left">gradient (math); g=tan(θ)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">x(s)</td>
+<td align="left">variable longitudinal coordinate of the projection of the alignment / track centreline into the ground plan.</td>
+<td align="left">length</td>
+</tr>
+<tr>
+<td align="left">y(s)</td>
+<td align="left">variable transverse coordinate of the projection of the alignment / track centreline into the ground plan.</td>
+<td align="left">length</td>
+</tr>
+<tr>
+<td align="left">z(s)</td>
+<td align="left">Variable vertical coordinate of the projection of the track centreline in plan in a Cartesian coordinate system in the vertical direction.</td>
+<td align="left">length</td>
+</tr>
+<tr>
+<td align="left">z<sub>c</sub>(s)</td>
+<td align="left">Ordinate of the vertical circular arc of measured away from the tangent line at position s.</td>
+<td align="left">length</td>
+</tr>
+<tr>
+<td align="left">L<sub>V</sub></td>
+<td align="left">length of vertical radius radius (inverse curvature)</td>
+<td align="left">length</td>
+</tr>
+<tr>
+<td align="left">R<sub>V</sub></td>
+<td align="left">radius (inverse curvature) of the track centreline at a point in the elevation diagram (longitudinal section)</td>
+<td align="left">length</td>
+</tr>
+<tr>
+<td align="left">κ<sub>V</sub></td>
+<td align="left">(Greek "kappa") Vertical curvature</td>
+<td align="left">1/radius<sub>V</sub></td>
+</tr>
+<tr>
+<td align="left">Z<sub>G</sub></td>
+<td align="left">Distance of the tangent intersection from the chord of the vertical circular arc</td>
+<td align="left">length</td>
+</tr>
+<tr>
+<td align="left">Z<sub>M</sub></td>
+<td align="left">Distance of the centre of the vertical circular arc to the tangent intersection point (stitch height)</td>
+<td align="left">length</td>
+</tr>
+<tr>
+<td align="left">l<sub>T</sub></td>
+<td align="left">Length of the tangents of the  vertical circular arc</td>
+<td align="left">length</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.7.2.3.B<a href="IfcAlignmentVerticalSegmentTypeEnum.htm#Table-8.7.2.3.B"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-note"><mark>NOTE</mark> Symbols according to EN 13803/2017</aside><aside class="aside-note"><mark>NOTE</mark> gradient has a slightly different definition in civil engineering. "Gradient (Civ.Eng.) is the degree of slope, e.g. of a highway or a railway. US grade".</aside><aside class="aside-note"><mark>NOTE</mark> most railway track designs use the <strong>small angle assumption</strong>. That means θ=tan(θ)=gradient.</aside>
+<p><strong>References to EN 13803/2017</strong></p>
+<p>EN 13803/2017 covers "Track alignment design parameters". As such it is not fully compatible with definitions for IFC Alignment. Therefore rail specific terms like track have been replaced with more general terms also applicable to road design.</p>
+<p>Referenced content of EN 13803/2017 "Table 2 - Elements for vertical alignment" has been modified as follows:</p>
+<p><strong>Vertical curve, parabola:</strong> Derivative of gradient with respect to chainage is constant<br/>
+<strong>Generalized:</strong> Derivative of gradient with respect to horizontal projection of alignment is constant</p>
+<p><strong>Vertical curve, circular:</strong> Derivative of vertical angle with respect to sloping length along the track is constant<br/>
+<strong>Generalized:</strong> Derivative of vertical angle with respect to 3D arc length along the alignment is constant</p>
+<p>EN13803 clause 3.5:
+<strong>Chainage</strong>: longitudinal distance along the horizontal projection of the track centre line.</p>
+<h2><a id="8.7.2.3.2-Type-values"></a>
+    8.7.2.3.2 Type values
+<a href="IfcAlignmentVerticalSegmentTypeEnum.htm#8.7.2.3.2-Type-values"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-8.7.2.3.C"></a><table class="striped type-values">
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Name"><code>CIRCULARARC</code>
+</td><td data-label="Description">
+<p>Vertical alignment segment where the derivative of vertical angle with respect to sloping length along the track (3D length) is constant.</p><p>The curvature for vertical circular arc segment is provided by:</p><p>$$ \kappa_v = \frac{1}{R_v(s)} = \frac{d\theta}{ds} $$</p><p>The length for vertical circular arc segment is provided by:</p><p>$$ l_V =\Delta s_v = \frac{\Delta \theta}{\kappa_v} = \Delta \theta \cdot R_v $$</p><p>The distance between point on segment to tangent is provided by:</p><p>$$ z_c(s) = \frac{s^2}{2\cdot R_v} $$</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>CLOTHOID</code>
+</td><td data-label="Description">
+<p>Vertical alignment segment where the derivative of vertical angle with respect to sloping length along the track (3D length) obeys a linear change.</p><p>The curvature equation of the vertical clothoid segment is provided by:
+$$ \displaylines {
+\xi = \frac{s}{L} \\
+\kappa_v(s) =  \kappa_{v1} + \xi  \Delta \kappa_v
+} $$</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>CONSTANTGRADIENT</code>
+</td><td data-label="Description">
+<p>Vertical alignment segment with constant gradient.</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>PARABOLICARC</code>
+</td><td data-label="Description">
+<p>Vertical alignment segment where the derivative of gradient with respect to distance along is constant.
+<br/></p><p>General equation of the parabolic arc segment is provided by:</p><p>$$ y = a x^2 + b x + c $$</p><p>The gradient (slope) of this curve at any point (first derivative) is provided by:</p><p>$$ \frac{dy}{dx} = 2  a  x + b $$</p><p>The rate of change of gradient of the parabolic arc segment is constant. The variation of curvature is therefore provided by:</p><p>$$ \frac{d^2y}{d^2x} = 2  a $$</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.7.2.3.C<a href="IfcAlignmentVerticalSegmentTypeEnum.htm#Table-8.7.2.3.C"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.7.2.3.3-Formal-representation"></a>
+    8.7.2.3.3 Formal representation
+<a href="IfcAlignmentVerticalSegmentTypeEnum.htm#8.7.2.3.3-Formal-representation"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">TYPE <a href="IfcAlignmentVerticalSegmentTypeEnum.htm">IfcAlignmentVerticalSegmentTypeEnum</a> = ENUMERATION OF
+	(CIRCULARARC
+	,CLOTHOID
+	,CONSTANTGRADIENT
+	,PARABOLICARC);
+END_TYPE;</code></pre>
+<h2><a id="8.7.2.3.4-References"></a>
+    8.7.2.3.4 References
+<a href="IfcAlignmentVerticalSegmentTypeEnum.htm#8.7.2.3.4-References"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="IfcAlignmentVerticalSegment.htm">IfcAlignmentVerticalSegment</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/resource/IfcGeometricConstraintResource/Types/IfcAlignmentVerticalSegmentTypeEnum.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

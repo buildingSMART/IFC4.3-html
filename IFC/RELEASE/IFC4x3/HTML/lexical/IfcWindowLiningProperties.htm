@@ -1,0 +1,812 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>7.1.3.4 IfcWindowLiningProperties - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a class="current" href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a class="sublink-1 current" href="../ifcarchitecturedomain/content.html">
+                            7.1 IfcArchitectureDomain
+                        </a>
+<a class="sublink-1" href="../ifcbuildingcontrolsdomain/content.html">
+                            7.2 IfcBuildingControlsDomain
+                        </a>
+<a class="sublink-1" href="../ifcconstructionmgmtdomain/content.html">
+                            7.3 IfcConstructionMgmtDomain
+                        </a>
+<a class="sublink-1" href="../ifcelectricaldomain/content.html">
+                            7.4 IfcElectricalDomain
+                        </a>
+<a class="sublink-1" href="../ifchvacdomain/content.html">
+                            7.5 IfcHvacDomain
+                        </a>
+<a class="sublink-1" href="../ifcplumbingfireprotectiondomain/content.html">
+                            7.6 IfcPlumbingFireProtectionDomain
+                        </a>
+<a class="sublink-1" href="../ifcportsandwaterwaysdomain/content.html">
+                            7.7 IfcPortsAndWaterwaysDomain
+                        </a>
+<a class="sublink-1" href="../ifcraildomain/content.html">
+                            7.8 IfcRailDomain
+                        </a>
+<a class="sublink-1" href="../ifcroaddomain/content.html">
+                            7.9 IfcRoadDomain
+                        </a>
+<a class="sublink-1" href="../ifcstructuralanalysisdomain/content.html">
+                            7.10 IfcStructuralAnalysisDomain
+                        </a>
+<a class="sublink-1" href="../ifcstructuralelementsdomain/content.html">
+                            7.11 IfcStructuralElementsDomain
+                        </a>
+<a href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>7.1.3.4 IfcWindowLiningProperties</h1>
+<h2><a id="7.1.3.4.1-Semantic-definition"></a>
+    7.1.3.4.1 Semantic definition
+<a href="IfcWindowLiningProperties.htm#7.1.3.4.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p>The window lining is the outer frame which enables the window to be fixed in position. The window lining is used to hold the window panels or other casements. The parameter of the <em><a href="IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a></em> define the geometrically relevant parameter of the lining.</p>
+<aside class="aside-note"><mark>NOTE</mark>  The <em><a href="IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a></em> shall only be applied to construct the 3D shape of a window, if the attribute <em><a href="IfcWindowType.htm">IfcWindowType</a></em>.ParameterTakesPrecedence is set TRUE.</aside>
+<p>The <em><a href="IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a></em> are included in the set of properties of <em><a href="IfcWindowType.htm">IfcWindowType</a>.HasPropertySets</em>. More information about the window lining can be included in the same set of the <em><a href="IfcWindowType.htm">IfcWindowType</a></em> using another <em><a href="IfcPropertySet.htm">IfcPropertySet</a></em> for dynamic extensions.</p>
+<p>The <em><a href="IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a></em> does not hold a geometric representation. However it defines parameters which can be used to create the shape of the window type(which is inserted by the <em><a href="IfcWindow.htm">IfcWindow</a></em> into the spatial context of the project) as shown in Figure 7.1.3.4.F. The parameters at the <em><a href="IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a></em> define a standard window lining, including (if given) a mullion and a transom (for horizontal and vertical splits). The outer boundary of the lining is determined by the 'Profile' shape representation assigned to the <em><a href="IfcWindow.htm">IfcWindow</a></em>, which inserts the <em><a href="IfcWindowType.htm">IfcWindowType</a></em>.</p>
+<figure><a id="Table-7.1.3.4.F-Window-lining-properties"></a><table>
+<thead>
+<tr>
+<th>Figure</th>
+<th>OperationType</th>
+<th>Applicable Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><figure><a id="Figure-7.1.3.4.A"></a><img alt="lining 5" src="../figures/ifcwindowliningproperties-fig05.png"/><figcaption>Figure 7.1.3.4.A<a href="IfcWindowLiningProperties.htm#Figure-7.1.3.4.A"><i data-feather="link"></i></a></figcaption></figure></td>
+<td>All</td>
+<td>LiningDepth, LiningThickness, LiningOffset, LiningToPanelOffsetX, LiningToPanelOffsetY (Note: The inner side is defined as the direction of the window panel opening operation.)</td>
+</tr>
+<tr>
+<td><figure><a id="Figure-7.1.3.4.B"></a><img alt="lining 1" src="../figures/ifcwindowliningproperties-fig01.png"/><figcaption>Figure 7.1.3.4.B<a href="IfcWindowLiningProperties.htm#Figure-7.1.3.4.B"><i data-feather="link"></i></a></figcaption></figure></td>
+<td>DoublePanelVertical (shown), TriplePanelBottom, TriplePanelTop, TriplePanelLeft, TriplePanelRight</td>
+<td>MullionThickness, FirstMullionOffset (measured as offset to the Z axis in XZ plane as a normalized ratio measure)</td>
+</tr>
+<tr>
+<td><figure><a id="Figure-7.1.3.4.C"></a><img alt="lining 2" src="../figures/ifcwindowliningproperties-fig02.png"/><figcaption>Figure 7.1.3.4.C<a href="IfcWindowLiningProperties.htm#Figure-7.1.3.4.C"><i data-feather="link"></i></a></figcaption></figure></td>
+<td>DoublePanelHorizontal, TriplePanelBottom, TriplePanelTop, TriplePanelLeft, TriplePanelRight</td>
+<td>TransomThickness, FirstTransomOffset (measured as offset to the X axis in XZ plane as a normalized ratio measure)</td>
+</tr>
+<tr>
+<td><figure><a id="Figure-7.1.3.4.D"></a><img alt="lining 3" src="../figures/ifcwindowliningproperties-fig03.png"/><figcaption>Figure 7.1.3.4.D<a href="IfcWindowLiningProperties.htm#Figure-7.1.3.4.D"><i data-feather="link"></i></a></figcaption></figure></td>
+<td>TriplePanelVertical</td>
+<td>SecondMullionOffset (measured as offset to the Z axis in XZ plane as a normalized ratio measure)</td>
+</tr>
+<tr>
+<td><figure><a id="Figure-7.1.3.4.E"></a><img alt="lining 4" src="../figures/ifcwindowliningproperties-fig04.png"/><figcaption>Figure 7.1.3.4.E<a href="IfcWindowLiningProperties.htm#Figure-7.1.3.4.E"><i data-feather="link"></i></a></figcaption></figure></td>
+<td>TriplePanelHorizontal</td>
+<td>SecondTransomOffset (measured as offset to the X axis in XZ plane as a normalized ratio measure)</td>
+</tr>
+</tbody>
+</table><figcaption>Table 7.1.3.4.F — Window lining properties<a href="IfcWindowLiningProperties.htm#Table-7.1.3.4.F-Window-lining-properties"><i data-feather="link"></i></a></figcaption></figure>
+<aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2.0. Has been renamed from <em>IfcWindowLining</em> in IFC2x.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The following attributes have been added <em>LiningOffset</em>, <em>LiningToPanelOffsetX</em>, <em>LiningToPanelOffsetY</em>. The attribute <em>ShapeAspectStyle</em> is deprecated and shall no longer be used. Supertype changed to new <em><a href="IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a></em>.</aside>
+<h2><a id="7.1.3.4.2-Entity-inheritance"></a>
+    7.1.3.4.2 Entity inheritance
+<a href="IfcWindowLiningProperties.htm#7.1.3.4.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
+<ol class="tier">
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcRoot.htm">IfcRoot</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcPropertyDefinition.htm">IfcPropertyDefinition</a></li>
+<li class="abstract"><a href="IfcObjectDefinition.htm">IfcObjectDefinition</a></li>
+<li class="abstract"><a href="IfcRelationship.htm">IfcRelationship</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></li>
+<li class="abstract"><a href="IfcPropertyTemplateDefinition.htm">IfcPropertyTemplateDefinition</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a></li>
+<li class=""><a href="IfcPropertySet.htm">IfcPropertySet</a></li>
+<li class="abstract"><a href="IfcQuantitySet.htm">IfcQuantitySet</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="current ancestor"><a href="IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a></li>
+<li class=""><a href="IfcDoorLiningProperties.htm">IfcDoorLiningProperties</a></li>
+<li class=""><a href="IfcDoorPanelProperties.htm">IfcDoorPanelProperties</a></li>
+<li class=""><a href="IfcPermeableCoveringProperties.htm">IfcPermeableCoveringProperties</a></li>
+<li class=""><a href="IfcReinforcementDefinitionProperties.htm">IfcReinforcementDefinitionProperties</a></li>
+<li class=""><a href="IfcWindowPanelProperties.htm">IfcWindowPanelProperties</a></li>
+</ul>
+</li>
+</ol>
+<h2><a id="7.1.3.4.3-Attributes"></a>
+    7.1.3.4.3 Attributes
+<a href="IfcWindowLiningProperties.htm#7.1.3.4.3-Attributes"><i data-feather="link"></i></a></h2>
+<!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
+<figure><a id="Table-7.1.3.4.G"></a><table class="striped grouped attributes">
+<colgroup>
+<col style="width: 20px;"/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcRoot.htm">IfcRoot</a>
+<small>(4)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                GlobalId
+                
+            </td>
+<td data-label="Type"><a href="IfcGloballyUniqueId.htm">IfcGloballyUniqueId</a></td>
+<td data-label="Description">
+<p>Assignment of a globally unique identifier within the entire software world.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                OwnerHistory
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcOwnerHistory.htm">IfcOwnerHistory</a></td>
+<td data-label="Description">
+<p>Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,</p>
+<aside class="aside-note"><mark>NOTE</mark>  only the last modification in stored - either as addition, deletion or modification.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The attribute has been changed to be OPTIONAL.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Name
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>Optional name for use by the participating software systems or users. For some subtypes of <a href="IfcRoot.htm">IfcRoot</a> the insertion of the Name attribute may be required. This would be enforced by a where rule.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                Description
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcText.htm">IfcText</a></td>
+<td data-label="Description">
+<p>Optional description, provided for exchanging informative comments.</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcPropertyDefinition.htm">IfcPropertyDefinition</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasContext</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="IfcRelDeclares.htm">IfcRelDeclares</a> FOR RelatedDefinitions</td>
+<td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasAssociations</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcRelAssociates.htm">IfcRelAssociates</a> FOR RelatedObjects</td>
+<td data-label="Description">
+<p>Reference to the relationship <a href="IfcRelAssociates.htm">IfcRelAssociates</a> and thus to those externally defined concepts, like classifications, documents, or library information, which are associated to the property definition.</p>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>
+<small>(3)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>DefinesType</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcTypeObject.htm">IfcTypeObject</a> FOR HasPropertySets</td>
+<td data-label="Description">
+<p>The type object to which the property set is assigned. The property set acts as a shared property set to all occurrences of the type object.</p>
+<aside class="aside-note"><mark>NOTE</mark>  The relationship between the <em><a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a></em> and the <em><a href="IfcTypeObject.htm">IfcTypeObject</a></em> is a direct relationship, not utilizing <em><a href="IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em>, for maintaining compatibility with earlier releases of this standard.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The cardinality has been changed from 0:1 to 0:? with upward compatibility for file based exchange.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>IsDefinedBy</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcRelDefinesByTemplate.htm">IfcRelDefinesByTemplate</a> FOR RelatedPropertySets</td>
+<td data-label="Description">
+<p>Relation to the property set template, via the objectified relationship <em><a href="IfcRelDefinesByTemplate.htm">IfcRelDefinesByTemplate</a></em>, that, if given, provides the definition template for the property set or quantity set and its properties.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  New inverse relationship, change made with upward compatibility for file based exchange.</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>DefinesOccurrence</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a> FOR RelatingPropertyDefinition</td>
+<td data-label="Description">
+<p>Reference to the relation to one or many object occurrences that are characterized by the property set definition. A single property set can be assigned to multiple object occurrences using the objectified relationship <em>IfcRefDefinesByProperties</em>.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark> Inverse attribute renamed from PropertyDefinitionOf with upward compatibility for file-based exchange.</aside>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to show 9 hidden inherited attributes
+                </small>
+<small class="hide-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to hide 9 inherited attributes
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="4">
+<a href="IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a>
+<small>(12)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                LiningDepth
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>Depth of the window lining (dimension measured perpendicular to window elevation plane).</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                LiningThickness
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
+<td data-label="Description">
+<p>Thickness of the window lining as explained in the figure above. If <em>LiningThickness</em> value is 0. (zero) it denotes a window without a lining (all other lining parameters shall be set to NIL in this case). If the <em>LiningThickness</em> is NIL it denotes that the value is not available.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  Data type modified to be <em><a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></em>.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                TransomThickness
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
+<td data-label="Description">
+<p>Thickness of the transom (horizontal separator of window panels within a window), measured parallel to the window elevation plane. The transom is part of the lining and the transom depth is assumed to be identical to the lining depth.
+If the <em>TransomThickness</em> is set to zero (and the <em>TransomOffset</em> set to a positive length), then the window is divided vertically without a physical divider.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  Data type changed to <em><a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></em>.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">8</td>
+<td data-label="Name">
+                
+                MullionThickness
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
+<td data-label="Description">
+<p>Thickness of the mullion (vertical separator of window panels within a window), measured parallel to the window elevation plane. The mullion is part of the lining and the mullion depth is assumed to be identical to the lining depth.
+If the <em>MullionThickness</em> is set to zero (and the <em>MullionOffset</em> set to a positive length), then the window is divided horizontally without a physical divider.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  Data type changed to <em><a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></em>.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">9</td>
+<td data-label="Name">
+                
+                FirstTransomOffset
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a></td>
+<td data-label="Description">
+<p>Offset of the transom centerline, measured along the z-axis of the window placement co-ordinate system. An offset value = 0.5 indicates that the transom is positioned in the middle of the window.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">10</td>
+<td data-label="Name">
+                
+                SecondTransomOffset
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a></td>
+<td data-label="Description">
+<p>Offset of the transom centerline for the second transom, measured along the x-axis of the window placement co-ordinate system. An offset value = 0.666 indicates that the second transom is positioned at two/third of the window.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">11</td>
+<td data-label="Name">
+                
+                FirstMullionOffset
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a></td>
+<td data-label="Description">
+<p>Offset of the mullion centerline, measured along the x-axis of the window placement co-ordinate system. An offset value = 0.5 indicates that the mullion is positioned in the middle of the window.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">12</td>
+<td data-label="Name">
+                
+                SecondMullionOffset
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a></td>
+<td data-label="Description">
+<p>Offset of the mullion centerline for the second mullion, measured along the x-axis of the window placement co-ordinate system. An offset value = 0.666 indicates that the second mullion is positioned at two/third of the window.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">13</td>
+<td data-label="Name">
+                
+                ShapeAspectStyle
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcShapeAspect.htm">IfcShapeAspect</a></td>
+<td data-label="Description">
+<p>Optional link to a shape aspect definition, which points to the part of the geometric representation of the window style, which is used to represent the lining.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark> The attribute is deprecated and shall no longer be used, i.e. the value shall be NIL ($).</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">14</td>
+<td data-label="Name">
+                
+                LiningOffset
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
+<td data-label="Description">
+<p>Offset of the window lining. The offset is given as distance along the y axis of the local placement (perpendicular to the window plane).</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  New attribute added at the end of the entity definition.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">15</td>
+<td data-label="Name">
+                
+                LiningToPanelOffsetX
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
+<td data-label="Description">
+<p>Offset between the lining and the window panel measured along the x-axis of the local placement. Should be smaller or equal to the <em>LiningThickness</em>.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  New attribute added at the end of the entity definition.</aside>
+</td>
+</tr>
+<tr>
+<td data-label="#">16</td>
+<td data-label="Name">
+                
+                LiningToPanelOffsetY
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
+<td data-label="Description">
+<p>Offset between the lining and the window panel measured along the y-axis of the local placement. Should be smaller or equal to the <em><a href="IfcWindowPanelProperties.htm">IfcWindowPanelProperties</a>.PanelThickness</em>.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark>  New attribute added at the end of the entity definition.</aside>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 7.1.3.4.G<a href="IfcWindowLiningProperties.htm#Table-7.1.3.4.G"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="7.1.3.4.4-Formal-propositions"></a>
+    7.1.3.4.4 Formal propositions
+<a href="IfcWindowLiningProperties.htm#7.1.3.4.4-Formal-propositions"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-7.1.3.4.H"></a><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WR31</td>
+<td>
+<p>Either both parameter, <em>LiningDepth</em> and <em>LiningThickness</em> are given, or only the <em>LiningThickness</em>, then the <em>LiningDepth</em> is variable. It is not valid to only assert the <em>LiningDepth</em>.</p>
+<aside class="aside-note"><mark>NOTE</mark>  A <em>LiningDepth</em> with NIL ($) value indicates a window style with a lining equal to the wall thickness.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  Rule corrected.</aside>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">NOT(EXISTS(LiningDepth) AND NOT(EXISTS(LiningThickness)))</code></pre>
+</td>
+</tr>
+<tr>
+<td>WR32</td>
+<td>
+<p>Either both parameter, <em>FirstTransomOffset</em> and <em>SecondTransomOffset</em> are given, or only the <em>FirstTransomOffset</em>, or none of both. It is not valid to only assert the <em>SecondTransomOffset</em>.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">NOT(NOT(EXISTS(FirstTransomOffset)) AND EXISTS(SecondTransomOffset))</code></pre>
+</td>
+</tr>
+<tr>
+<td>WR33</td>
+<td>
+<p>Either both parameter, <em>FirstMullionOffset</em> and <em>SecondMullionOffset</em> are given, or only the <em>FirstMullionOffset</em>, or none of both. It is not valid to only assert the <em>SecondMullionOffset</em>.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">NOT(NOT(EXISTS(FirstMullionOffset)) AND EXISTS(SecondMullionOffset))</code></pre>
+</td>
+</tr>
+<tr>
+<td>WR34</td>
+<td>
+<p>The <em><a href="IfcWindowPanelProperties.htm">IfcWindowPanelProperties</a></em> shall only be used in the context of an <em><a href="IfcDoorType.htm">IfcDoorType</a></em>.</p>
+<aside class="aside-note"><mark>NOTE</mark>  The deprecated entity <em><a href="IfcWindowType.htm">IfcWindowType</a></em> is applicable as well.</aside>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">(EXISTS(SELF\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])) 
+AND 
+(
+ ('IFC4X3.IFCWINDOWTYPE' IN TYPEOF(SELF\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]))
+  OR
+ ('IFC4X3.IFCWINDOWSTYLE' IN TYPEOF(SELF\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]))
+)</code></pre>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 7.1.3.4.H<a href="IfcWindowLiningProperties.htm#Table-7.1.3.4.H"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="7.1.3.4.5-Concept-usage"></a>
+    7.1.3.4.5 Concept usage
+<a href="IfcWindowLiningProperties.htm#7.1.3.4.5-Concept-usage"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-7.1.3.4.I"></a><table class="striped grouped concepts">
+<thead>
+<tr>
+<th>Concept</th>
+<th>Usage</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="IfcRoot.htm">IfcRoot</a>
+<small>(2)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Attributes/Revision_Control/content.html">Revision Control</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>Ownership, history, and merge state is captured using <a href="IfcOwnerHistory.htm">IfcOwnerHistory</a>.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Attributes/Software_Identity/content.html">Software Identity</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p><a href="IfcRoot.htm">IfcRoot</a> assigns the globally unique ID. In addition it may provide for a name and a description about the concept.</p>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    Click to show 2 hidden inherited concepts
+                </small>
+<small class="hide-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    Click to hide 2 inherited concepts
+                </small>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 7.1.3.4.I<a href="IfcWindowLiningProperties.htm#Table-7.1.3.4.I"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="7.1.3.4.6-Formal-representation"></a>
+    7.1.3.4.6 Formal representation
+<a href="IfcWindowLiningProperties.htm#7.1.3.4.6-Formal-representation"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">ENTITY <a href="IfcWindowLiningProperties.htm">IfcWindowLiningProperties</a>
+ SUBTYPE OF (<a href="IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a>);
+	LiningDepth : OPTIONAL <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a>;
+	LiningThickness : OPTIONAL <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>;
+	TransomThickness : OPTIONAL <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>;
+	MullionThickness : OPTIONAL <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>;
+	FirstTransomOffset : OPTIONAL <a href="IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a>;
+	SecondTransomOffset : OPTIONAL <a href="IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a>;
+	FirstMullionOffset : OPTIONAL <a href="IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a>;
+	SecondMullionOffset : OPTIONAL <a href="IfcNormalisedRatioMeasure.htm">IfcNormalisedRatioMeasure</a>;
+	ShapeAspectStyle : OPTIONAL <a href="IfcShapeAspect.htm">IfcShapeAspect</a>;
+	LiningOffset : OPTIONAL <a href="IfcLengthMeasure.htm">IfcLengthMeasure</a>;
+	LiningToPanelOffsetX : OPTIONAL <a href="IfcLengthMeasure.htm">IfcLengthMeasure</a>;
+	LiningToPanelOffsetY : OPTIONAL <a href="IfcLengthMeasure.htm">IfcLengthMeasure</a>;
+ WHERE
+	WR31 : NOT(EXISTS(LiningDepth) AND NOT(EXISTS(LiningThickness)));
+	WR32 : NOT(NOT(EXISTS(FirstTransomOffset)) AND EXISTS(SecondTransomOffset));
+	WR33 : NOT(NOT(EXISTS(FirstMullionOffset)) AND EXISTS(SecondMullionOffset));
+	WR34 : (EXISTS(SELF\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])) 
+AND 
+(
+ ('IFC4X3.IFCWINDOWTYPE' IN TYPEOF(SELF\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]))
+  OR
+ ('IFC4X3.IFCWINDOWSTYLE' IN TYPEOF(SELF\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]))
+);
+END_ENTITY;</code></pre>
+<h2><a id="7.1.3.4.7-References"></a>
+    7.1.3.4.7 References
+<a href="IfcWindowLiningProperties.htm#7.1.3.4.7-References"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+<div class="changelog">
+<h3><a id="7.1.3.4.8-Changelog"></a>
+                        7.1.3.4.8 Changelog
+                    <a href="IfcWindowLiningProperties.htm#7.1.3.4.8-Changelog"><i data-feather="link"></i></a></h3>
+<h4 class="collapsed"><a id="7.1.3.4.8.1-IFC4"></a>
+                        7.1.3.4.8.1 IFC4
+                    <a href="IfcWindowLiningProperties.htm#7.1.3.4.8.1-IFC4"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                attributes,
+                                LiningOffset
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                attributes,
+                                LiningToPanelOffsetX
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                attributes,
+                                LiningToPanelOffsetY
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes LiningThickness definition,
+                                Changed from <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a> to <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>
+</small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes MullionThickness definition,
+                                Changed from <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a> to <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>
+</small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes TransomThickness definition,
+                                Changed from <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a> to <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>
+</small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                supertype,
+                                Changed from <a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a> to <a href="IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a>
+</small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                where_rules WR31 definition,
+                                Changed from not(not(exists(LiningDepth)) and exists(LiningThickness)) to not(exists(LiningDepth) and not(exists(LiningThickness)))
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                where_rules WR34 definition,
+                                Changed from exists(self\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]) and (ifcwindowstyle in typeof(self\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])) to (exists(self\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])) and ((ifcwindowtype in typeof(self\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])) or (ifcwindowstyle in typeof(self\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])))
+                                
+                            </small>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/domain/IfcArchitectureDomain/Entities/IfcWindowLiningProperties.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

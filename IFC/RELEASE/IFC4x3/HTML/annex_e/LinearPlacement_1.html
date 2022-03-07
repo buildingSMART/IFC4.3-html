@@ -1,0 +1,313 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>Annex E Examples - LinearPlacement_1 - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>Annex E Examples - LinearPlacement_1</h1>
+<h2><a id="Example-overview"></a>
+    Example overview
+<a href="LinearPlacement_1.html#Example-overview"><i data-feather="link"></i></a></h2>
+<hr/>
+<h3><a id="Intent"></a>Intent<a href="LinearPlacement_1.html#Intent"><i data-feather="link"></i></a></h3>
+<p>This scenario is a sample for local and linear placements along an alignment curve. 
+An <a href="../lexical/IfcLinearPlacement.htm">IfcLinearPlacement</a> defines a point in space in dependency to a referenced space curve (often IfcAlignmentCurve). 
+The euclidian coordinates can be calculated out of the station/referent along the given alignment curve and related offsets in longitudinal, lateral, and vertical direction. 
+The sample contains an <a href="../lexical/IfcBuildingElementProxy.htm">IfcBuildingElementProxy</a> product represented by a cuboid. This element is positioned in several ways: 
+-  <a href="../lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a>: the Euclidian points are directly given by x, y, and z-value. 
+-  <a href="../lexical/IfcLinearPlacement.htm">IfcLinearPlacement</a>: the position is defined by the distance along the referenced curve and the orientation (which then contains information about offsets). </p>
+<h3><a id="Prerequisites"></a>Prerequisites<a href="LinearPlacement_1.html#Prerequisites"><i data-feather="link"></i></a></h3>
+<p>This scenario builds upon following other scenarios:
+- none</p>
+<h3><a id="Content"></a>Content<a href="LinearPlacement_1.html#Content"><i data-feather="link"></i></a></h3>
+<p>This scenario builds upon following scenarios:
+- project structure
+  - <code><a href="../lexical/IfcProject.htm">IfcProject</a></code>
+  - <code><a href="../lexical/IfcSite.htm">IfcSite</a></code>
+- default unit assignment
+  - <code><a href="../lexical/IfcUnitAssignment.htm">IfcUnitAssignment</a></code>
+  - <code><a href="../lexical/IfcSIUnit.htm">IfcSIUnit</a></code>
+- alignment
+  - <code><a href="../lexical/IfcAlignment.htm">IfcAlignment</a></code>
+- core spatial structure
+  - <code><a href="../lexical/IfcProject.htm">IfcProject</a></code>
+  -  <code><a href="../lexical/IfcSite.htm">IfcSite</a></code></p>
+<p>This scenario might be extended by the following concepts: 
+- GeoRef (see Georeferencing_1 scenario)
+- advanced spatial structure
+- Element assemblies and aggregations
+- advanced geometry representations  </p>
+<h3><a id="Supporting-files"></a>Supporting files<a href="LinearPlacement_1.html#Supporting-files"><i data-feather="link"></i></a></h3>
+<p>Following files correspond to this scenario:</p>
+<figure><a id="Table-15a51f30-90a8-426a-a3dd-84f695e68465"></a><table>
+<thead>
+<tr>
+<th>Filename</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>UT_LinearPlacement_1.ifc</code></td>
+<td>the exported content as IFC document</td>
+</tr>
+<tr>
+<td><code>UT_LinearPlacement_1_1.png</code></td>
+<td>screenshot from the KIT FZK Viewer</td>
+</tr>
+<tr>
+<td><code>UT_LinearPlacement_1_2.png</code></td>
+<td>screenshot from the KIT FZK Viewer</td>
+</tr>
+<tr>
+<td><code>UT_LinearPlacement_1_3.pdf</code></td>
+<td>drawing of intended content</td>
+</tr>
+</tbody>
+</table><figcaption>Table 15a51f30-90a8-426a-a3dd-84f695e68465<a href="LinearPlacement_1.html#Table-15a51f30-90a8-426a-a3dd-84f695e68465"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="Images"></a>
+    Images
+<a href="LinearPlacement_1.html#Images"><i data-feather="link"></i></a></h2>
+<ul class="thumbnails">
+<li><figure><a id="Figure-ff19b1cd-d46d-4e4d-91b4-4e0c2c51828e"></a><a href="../examples/LinearPlacement_1/UT_LinearPlacement_1_1.png"><img src="../examples/LinearPlacement_1/UT_LinearPlacement_1_1.png"/></a><figcaption>Figure ff19b1cd-d46d-4e4d-91b4-4e0c2c51828e<a href="LinearPlacement_1.html#Figure-ff19b1cd-d46d-4e4d-91b4-4e0c2c51828e"><i data-feather="link"></i></a></figcaption></figure></li>
+<li><figure><a id="Figure-a3793a01-2e73-40d8-bf0c-bb0fed201b4b"></a><a href="../examples/LinearPlacement_1/UT_LinearPlacement_1_2.png"><img src="../examples/LinearPlacement_1/UT_LinearPlacement_1_2.png"/></a><figcaption>Figure a3793a01-2e73-40d8-bf0c-bb0fed201b4b<a href="LinearPlacement_1.html#Figure-a3793a01-2e73-40d8-bf0c-bb0fed201b4b"><i data-feather="link"></i></a></figcaption></figure></li>
+<li><figure><a id="Figure-5131d314-f823-4518-b546-85469a9902ff"></a><a href="../examples/LinearPlacement_1/thumb.png"><img src="../examples/LinearPlacement_1/thumb.png"/></a><figcaption>Figure 5131d314-f823-4518-b546-85469a9902ff<a href="LinearPlacement_1.html#Figure-5131d314-f823-4518-b546-85469a9902ff"><i data-feather="link"></i></a></figcaption></figure></li>
+</ul>
+<h2><a id="IFC-SPF-source"></a>
+    IFC-SPF source
+<a href="LinearPlacement_1.html#IFC-SPF-source"><i data-feather="link"></i></a></h2>
+<pre><code class="language-step21 hljs">ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('ViewDefinition []'), '2;1');
+FILE_NAME('', '2019-09-19T10:23:29', (''), (''), 'Processor version 5.0.0.0', '', '');
+FILE_SCHEMA(('IFC4X3_RC2'));
+ENDSEC;
+DATA;
+
+/* <a href="../lexical/IfcRoad.htm">IfcRoad</a> WP5 Prototypical Implementation  */
+/* Author: Sebastian Esser; Technical University of Munich, Chair of Computational Modeling and Simulation and Autodesk. sebastian.esser@tum.de */
+/* Please note: This sample is partially hand-coded and may contain mistakes. */
+/* Version: 02 */
+
+/* !!! This sample contains IFC4x1 entities. However, from IFC4X1 to IFC4x2, several changes were applied to <a href="../lexical/IfcLinearPlacement.htm">IfcLinearPlacement</a> !! */
+/* --- --- --- --- --- --- --- --- */
+
+/* -- Base setup: project, credits, units, ... */
+#1=IFCPROJECT('2dGnaVksj48hS2oyo_XxlK',#2,'LinearPlacement Sample',$,$,$,$,(#15),#7);
+#2=IFCOWNERHISTORY(#5,#6,$,.ADDED.,1549899150,$,$,0);
+#3=IFCPERSON($,'Esser','Sebastian',$,$,$,$,$);
+#4=IFCORGANIZATION($,'Technical University of Munich',$,$,$);
+#5=IFCPERSONANDORGANIZATION(#3,#4,$);
+#6=IFCAPPLICATION(#4,'1.0','TUM_CMS_SE','notDefined');
+
+#7=IFCUNITASSIGNMENT((#8,#9,#10,#11));
+#8=IFCSIUNIT(*,.LENGTHUNIT.,$,.METRE.);
+#9=IFCSIUNIT(*,.PLANEANGLEUNIT.,$,.RADIAN.);
+#10=IFCSIUNIT(*,.AREAUNIT.,$,.SQUARE_METRE.);
+#11=IFCSIUNIT(*,.VOLUMEUNIT.,$,.CUBIC_METRE.);
+
+/* site and alignment placement */
+#12=IFCLOCALPLACEMENT($,#13);
+#13=IFCAXIS2PLACEMENT3D(#14,$,$);
+#14=IFCCARTESIANPOINT((0.,0.,0.));
+
+/* representation context is necessary to have geometric product representations */
+#15=IFCGEOMETRICREPRESENTATIONCONTEXT($,'Model',3,$,#13,$);
+
+/* -- setup a simple <a href="../lexical/IfcSite.htm">IfcSite</a> containing the products and the alignment curve */
+#16=IFCSITE('3_lzWZ4lL1xBtgb_k89blG',#2,'AlignmentSite','Samples for <a href="../lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a> and <a href="../lexical/IfcLinearPlacement.htm">IfcLinearPlacement</a>',$,#12,$,$,$,$,$,0.,$,$);
+
+#17=IFCRELAGGREGATES('1oEWrejW14$hUYRDBPoxmo',#2,$,$,#1,(#16));
+#18=IFCRELCONTAINEDINSPATIALSTRUCTURE('2FzbCnjPP0pOSTW0cCcjnt',#2,$,$,(#19,#90,#100,#110,#120),#16);
+
+/* --- --- --- --- --- --- --- --- */
+
+/* -- <a href="../lexical/IfcAlignment.htm">IfcAlignment</a> defining the linear referencing system */
+#19=IFCALIGNMENT('3RGarZbNb8aQVemB05KsyD',#2,'sampleAlignment','Alignment with 2 horiz segments and 0 vertical segments',$,#12,$,#20,$);
+#20=IFCALIGNMENTCURVE(#21,$,$);
+#21=IFCALIGNMENT2DHORIZONTAL($,(#25,#28));
+
+/* Horizontal segments */
+#23=IFCLINESEGMENT2D(#24,1.5707963267948966,1000.);
+#24=IFCCARTESIANPOINT((0.,0.));
+#25=IFCALIGNMENT2DHORIZONTALSEGMENT($,$,$,#23);
+
+#26=IFCCIRCULARARCSEGMENT2D(#27,1.5707963267948966,785.39816339744823,500.,.F.);
+#27=IFCCARTESIANPOINT((0.,1000.));
+#28=IFCALIGNMENT2DHORIZONTALSEGMENT($,$,$,#26);
+
+/* Vertical segments */
+
+
+/* --- --- --- --- --- --- --- --- */
+
+/* -- Geometry of product*/
+/* Note: The placement point is NOT the center of mass! */
+#50=IFCCARTESIANPOINTLIST3D(((10.,20.,50.),(0.,20.,50.),(10.,0.,50.),(10.,0.,50.),(0.,20.,50.),(0.,0.,50.),(10.,0.,0.),(0.,0.,0.),(10.,20.,0.),(10.,20.,0.),(0.,0.,0.),(0.,20.,0.),(0.,0.,50.),(0.,0.,0.),(10.,0.,50.),(10.,0.,50.),(0.,0.,0.),(10.,0.,0.),(0.,20.,50.),(0.,20.,0.),(0.,0.,50.),(0.,0.,50.),(0.,20.,0.),(0.,0.,0.),(10.,20.,50.),(10.,20.,0.),(0.,20.,50.),(0.,20.,50.),(10.,20.,0),(0,20.,0),(10.,0.,50.),(10.,0.,0.),(10.,20.,50.),(10.,20.,50.),(10.,0.,0.),(10.,20.,0.)),$);
+#51=IFCTRIANGULATEDFACESET(#50,$,.T.,((1,2,3),(4,5,6),(7,8,9),(10,11,12),(13,14,15),(16,17,18),(19,20,21),(22,23,24),(25,26,27),(28,29,30),(31,32,33),(34,35,36)),$);
+#52=IFCSHAPEREPRESENTATION(#15,'Body','Tessellation',(#51));
+#53=IFCPRODUCTDEFINITIONSHAPE($,$,(#52));
+
+/* -- <a href="../lexical/IfcProduct.htm">IfcProduct</a> instance with <a href="../lexical/IfcLinearPlacement.htm">IfcLinearPlacement</a> */
+#90=IFCBUILDINGELEMENTPROXY('2uEmTbIVTEr94hFPqz1_N9',#2,'linear positioned in arc segment',$,$,#91,#53,$,$);
+/* -- <a href="../lexical/IfcLinearPlacement.htm">IfcLinearPlacement</a>: station 600m, 14m lateral offset, 0m vertical offset, 0m logitudinal offset, measurement should be applied the horizontal projection (has no impact in this sample since no vertical alignment has been defined) */
+#91=IFCLINEARPLACEMENT($,#20,#92,#93,$);
+#92=IFCDISTANCEEXPRESSION(600.,-14.,0.,0.,.T.);
+#93=IFCORIENTATIONEXPRESSION(#94,#95);
+#94=IFCDIRECTION((1.,0.,0.));
+#95=IFCDIRECTION((0.,0.,1.));
+
+/* -- <a href="../lexical/IfcProduct.htm">IfcProduct</a> instance with <a href="../lexical/IfcLinearPlacement.htm">IfcLinearPlacement</a>, placement at arc segment */
+#100=IFCBUILDINGELEMENTPROXY('2uEmTbIVTEr94hFPqz1_M9',#2,'linear positioned',$,$,#101,#53,$,$);
+
+/* -- <a href="../lexical/IfcLinearPlacement.htm">IfcLinearPlacement</a> for #100:  */
+#101=IFCLINEARPLACEMENT($,#20,#102,#103,$);
+#102=IFCDISTANCEEXPRESSION(1500.,-14.,0.,0.,.T.);
+#103=IFCORIENTATIONEXPRESSION(#104,#105);
+#104=IFCDIRECTION((0.,0.,1.));
+#105=IFCDIRECTION((1.,0.,0.));
+
+/* -- <a href="../lexical/IfcProduct.htm">IfcProduct</a> instance with <a href="../lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a> - no rotation */
+#110=IFCBUILDINGELEMENTPROXY('3$fw5brl95uh4EJX8NGPg7',#2,'euclidian positioned','localPos',$,#111,#53,$,$);
+
+/* -- <a href="../lexical/IfcProduct.htm">IfcProduct</a> instance with local/euclidian placement */
+#111=IFCLOCALPLACEMENT($,#112);
+#112=IFCAXIS2PLACEMENT3D(#113,#114,#115);
+#113=IFCCARTESIANPOINT((100.,0.,0.));
+#114=IFCDIRECTION((1.,0.,0.));
+#115=IFCDIRECTION((0.,0.,1.));
+
+/* -- <a href="../lexical/IfcProduct.htm">IfcProduct</a> instance with <a href="../lexical/IfcLocalPlacement.htm">IfcLocalPlacement</a> - rotated */
+#120=IFCBUILDINGELEMENTPROXY('3$fw5brl95uh4EJX8NGPf7',#2,'euclidian and rotated positioned','localPos + Rotation',$,#121,#53,$,$);
+
+/* -- <a href="../lexical/IfcProduct.htm">IfcProduct</a> instance with local/euclidian placement - rotated */
+#121=IFCLOCALPLACEMENT($,#122);
+#122=IFCAXIS2PLACEMENT3D(#123,#124,#125);
+#123=IFCCARTESIANPOINT((100.,20.,0.));
+#124=IFCDIRECTION((0.4142,0.4142,0.));
+#125=IFCDIRECTION((0.,0.,1.));
+
+ENDSEC;
+END-ISO-10303-21;
+</code></pre>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': 'IFC 4.3/LinearPlacement_1/LinearPlacement_1.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/Sample-Test-Files',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

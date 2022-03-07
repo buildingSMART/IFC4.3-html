@@ -1,0 +1,2162 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>4 Fundamental concepts and assumptions - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a class="current" href="content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>4 Fundamental concepts and assumptions</h1>
+<p>This specification consists of a schema defining data types, along with common concepts indicating use of data types for particular scenarios. This chapter defines such common concepts, which are applied at entities having specific use. Such concepts also form the basis of model views, which are supplementary specifications that adapt the scope and rules of this schema for targeted domains within the building industry.</p>
+<p>Each concept template defines a graph of entities and attributes, with constraints and parameters set for particular attributes and instance types. Various entities within this schema reference such concept templates and adapt them for particular use according to parameters.</p>
+<aside class="aside-example"><mark>EXAMPLE</mark>  The 'Ports' concept template defines distribution system connectivity for mechanical, electrical, and plumbing systems; a pipe segment defines an application of the 'Ports' concept, having one port as an inlet and another as an outlet.</aside>
+<ol class="referenced-list">
+<li number="4.1">
+<a href="Object_Assignment/content.html">
+        
+            Object Assignment
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.1.1">
+<a href="Object_Assignment/Actor_Assignment/content.html">
+        
+            Actor Assignment
+        
+        </a>
+</li><li number="4.1.2">
+<a href="Object_Assignment/Assignment_to_Group/content.html">
+        
+            Assignment to Group
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.1.2.1">
+<a href="Object_Assignment/Assignment_to_Group/Component_to_Distribution_System/content.html">
+        
+            Component to Distribution System
+        
+        </a>
+</li><li number="4.1.2.2">
+<a href="Object_Assignment/Assignment_to_Group/Port_to_Distribution_System/content.html">
+        
+            Port to Distribution System
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.1.3">
+<a href="Object_Assignment/Control_Assignment/content.html">
+        
+            Control Assignment
+        
+        </a>
+</li><li number="4.1.4">
+<a href="Object_Assignment/Group_Assignment/content.html">
+        
+            Group Assignment
+        
+        </a>
+</li><li number="4.1.5">
+<a href="Object_Assignment/Process_Assignment/content.html">
+        
+            Process Assignment
+        
+        </a>
+</li><li number="4.1.6">
+<a href="Object_Assignment/Process_Type_Assignment/content.html">
+        
+            Process Type Assignment
+        
+        </a>
+</li><li number="4.1.7">
+<a href="Object_Assignment/Product_Assignment/content.html">
+        
+            Product Assignment
+        
+        </a>
+</li><li number="4.1.8">
+<a href="Object_Assignment/Product_Type_Assignment/content.html">
+        
+            Product Type Assignment
+        
+        </a>
+</li><li number="4.1.9">
+<a href="Object_Assignment/Resource_Assignment/content.html">
+        
+            Resource Assignment
+        
+        </a>
+</li><li number="4.1.10">
+<a href="Object_Assignment/Resource_Type_Assignment/content.html">
+        
+            Resource Type Assignment
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.2">
+<a href="Object_Association/content.html">
+        
+            Object Association
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.2.1">
+<a href="Object_Association/Approval_Association/content.html">
+        
+            Approval Association
+        
+        </a>
+</li><li number="4.2.2">
+<a href="Object_Association/Classification_Association/content.html">
+        
+            Classification Association
+        
+        </a>
+</li><li number="4.2.3">
+<a href="Object_Association/Constraint_Association/content.html">
+        
+            Constraint Association
+        
+        </a>
+</li><li number="4.2.4">
+<a href="Object_Association/Document_Association/content.html">
+        
+            Document Association
+        
+        </a>
+</li><li number="4.2.5">
+<a href="Object_Association/Library_Association/content.html">
+        
+            Library Association
+        
+        </a>
+</li><li number="4.2.6">
+<a href="Object_Association/Material_Association/content.html">
+        
+            Material Association
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.2.6.1">
+<a href="Object_Association/Material_Association/Material_Constituent_Set/content.html">
+        
+            Material Constituent Set
+        
+        </a>
+</li><li number="4.2.6.2">
+<a href="Object_Association/Material_Association/Material_Layer_Set_Usage/content.html">
+        
+            Material Layer Set Usage
+        
+        </a>
+</li><li number="4.2.6.3">
+<a href="Object_Association/Material_Association/Material_Profile_Set_Usage/content.html">
+        
+            Material Profile Set Usage
+        
+        </a>
+</li><li number="4.2.6.4">
+<a href="Object_Association/Material_Association/Material_Set/content.html">
+        
+            Material Set
+        
+        </a>
+</li><li number="4.2.6.5">
+<a href="Object_Association/Material_Association/Material_Single/content.html">
+        
+            Material Single
+        
+        </a>
+</li>
+</ol>
+</li>
+</ol>
+</li><li number="4.3">
+<a href="Object_Attributes/content.html">
+        
+            Object Attributes
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.3.1">
+<a href="Object_Attributes/Object_Occurrence_Attributes/content.html">
+        
+            Object Occurrence Attributes
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.3.1.1">
+<a href="Object_Attributes/Object_Occurrence_Attributes/Element_Occurrence_Attributes/content.html">
+        
+            Element Occurrence Attributes
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.3.1.1.1">
+<a href="Object_Attributes/Object_Occurrence_Attributes/Element_Occurrence_Attributes/Door_Attributes/content.html">
+        
+            Door Attributes
+        
+        </a>
+</li><li number="4.3.1.1.2">
+<a href="Object_Attributes/Object_Occurrence_Attributes/Element_Occurrence_Attributes/Mechanical_Fastener_Attributes/content.html">
+        
+            Mechanical Fastener Attributes
+        
+        </a>
+</li><li number="4.3.1.1.3">
+<a href="Object_Attributes/Object_Occurrence_Attributes/Element_Occurrence_Attributes/Reinforcing_Bar_Attributes/content.html">
+        
+            Reinforcing Bar Attributes
+        
+        </a>
+</li><li number="4.3.1.1.4">
+<a href="Object_Attributes/Object_Occurrence_Attributes/Element_Occurrence_Attributes/Reinforcing_Mesh_Attributes/content.html">
+        
+            Reinforcing Mesh Attributes
+        
+        </a>
+</li><li number="4.3.1.1.5">
+<a href="Object_Attributes/Object_Occurrence_Attributes/Element_Occurrence_Attributes/Tendon_Attributes/content.html">
+        
+            Tendon Attributes
+        
+        </a>
+</li><li number="4.3.1.1.6">
+<a href="Object_Attributes/Object_Occurrence_Attributes/Element_Occurrence_Attributes/Window_Attributes/content.html">
+        
+            Window Attributes
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.3.1.2">
+<a href="Object_Attributes/Object_Occurrence_Attributes/Grid_Attributes/content.html">
+        
+            Grid Attributes
+        
+        </a>
+</li><li number="4.3.1.3">
+<a href="Object_Attributes/Object_Occurrence_Attributes/Spatial_Element_Attributes/content.html">
+        
+            Spatial Element Attributes
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.3.1.3.1">
+<a href="Object_Attributes/Object_Occurrence_Attributes/Spatial_Element_Attributes/Building_Attributes/content.html">
+        
+            Building Attributes
+        
+        </a>
+</li><li number="4.3.1.3.2">
+<a href="Object_Attributes/Object_Occurrence_Attributes/Spatial_Element_Attributes/Site_Attributes/content.html">
+        
+            Site Attributes
+        
+        </a>
+</li><li number="4.3.1.3.3">
+<a href="Object_Attributes/Object_Occurrence_Attributes/Spatial_Element_Attributes/Space_Attributes/content.html">
+        
+            Space Attributes
+        
+        </a>
+</li><li number="4.3.1.3.4">
+<a href="Object_Attributes/Object_Occurrence_Attributes/Spatial_Element_Attributes/Spatial_Zone_Attributes/content.html">
+        
+            Spatial Zone Attributes
+        
+        </a>
+</li><li number="4.3.1.3.5">
+<a href="Object_Attributes/Object_Occurrence_Attributes/Spatial_Element_Attributes/Storey_Attributes/content.html">
+        
+            Storey Attributes
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.3.1.4">
+<a href="Object_Attributes/Object_Occurrence_Attributes/System_Element_Attributes/content.html">
+        
+            System Element Attributes
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.3.2">
+<a href="Object_Attributes/Object_Predefined_Type/content.html">
+        
+            Object Predefined Type
+        
+        </a>
+</li><li number="4.3.3">
+<a href="Object_Attributes/Object_Type_Attributes/content.html">
+        
+            Object Type Attributes
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.3.3.1">
+<a href="Object_Attributes/Object_Type_Attributes/Door_Type_Attributes/content.html">
+        
+            Door Type Attributes
+        
+        </a>
+</li><li number="4.3.3.2">
+<a href="Object_Attributes/Object_Type_Attributes/Mechanical_Fastener_Type_Attributes/content.html">
+        
+            Mechanical Fastener Type Attributes
+        
+        </a>
+</li><li number="4.3.3.3">
+<a href="Object_Attributes/Object_Type_Attributes/Reinforcing_Bar_Type_Attributes/content.html">
+        
+            Reinforcing Bar Type Attributes
+        
+        </a>
+</li><li number="4.3.3.4">
+<a href="Object_Attributes/Object_Type_Attributes/Reinforcing_Mesh_Type_Attributes/content.html">
+        
+            Reinforcing Mesh Type Attributes
+        
+        </a>
+</li><li number="4.3.3.5">
+<a href="Object_Attributes/Object_Type_Attributes/Tendon_Type_Attributes/content.html">
+        
+            Tendon Type Attributes
+        
+        </a>
+</li><li number="4.3.3.6">
+<a href="Object_Attributes/Object_Type_Attributes/Window_Type_Attributes/content.html">
+        
+            Window Type Attributes
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.3.4">
+<a href="Object_Attributes/Object_Type_Predefined_Type/content.html">
+        
+            Object Type Predefined Type
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.3.4.1">
+<a href="Object_Attributes/Object_Type_Predefined_Type/Element_Type_Predefined_Type/content.html">
+        
+            Element Type Predefined Type
+        
+        </a>
+</li><li number="4.3.4.2">
+<a href="Object_Attributes/Object_Type_Predefined_Type/Spatial_Element_Type_Predefined_Type/content.html">
+        
+            Spatial Element Type Predefined Type
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.3.5">
+<a href="Object_Attributes/Object_User_Identity/content.html">
+        
+            Object User Identity
+        
+        </a>
+</li><li number="4.3.6">
+<a href="Object_Attributes/Revision_Control/content.html">
+        
+            Revision Control
+        
+        </a>
+</li><li number="4.3.7">
+<a href="Object_Attributes/Software_Identity/content.html">
+        
+            Software Identity
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.4">
+<a href="Object_Composition/content.html">
+        
+            Object Composition
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.4.1">
+<a href="Object_Composition/Aggregation/content.html">
+        
+            Aggregation
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.4.1.1">
+<a href="Object_Composition/Aggregation/Element_Composition/content.html">
+        
+            Element Composition
+        
+        </a>
+</li><li number="4.4.1.2">
+<a href="Object_Composition/Aggregation/Element_Decomposition/content.html">
+        
+            Element Decomposition
+        
+        </a>
+</li><li number="4.4.1.3">
+<a href="Object_Composition/Aggregation/Spatial_Composition/content.html">
+        
+            Spatial Composition
+        
+        </a>
+</li><li number="4.4.1.4">
+<a href="Object_Composition/Aggregation/Spatial_Decomposition/content.html">
+        
+            Spatial Decomposition
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.4.2">
+<a href="Object_Composition/Element_Projecting/content.html">
+        
+            Element Projecting
+        
+        </a>
+</li><li number="4.4.3">
+<a href="Object_Composition/Element_Voiding/content.html">
+        
+            Element Voiding
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.4.3.1">
+<a href="Object_Composition/Element_Voiding/Earthworks_Cuttings/content.html">
+        
+            Earthworks Cuttings
+        
+        </a>
+</li><li number="4.4.3.2">
+<a href="Object_Composition/Element_Voiding/Element_Openings/content.html">
+        
+            Element Openings
+        
+        </a>
+</li><li number="4.4.3.3">
+<a href="Object_Composition/Element_Voiding/Element_Voiding_Features/content.html">
+        
+            Element Voiding Features
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.4.4">
+<a href="Object_Composition/Nesting/content.html">
+        
+            Nesting
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.4.4.1">
+<a href="Object_Composition/Nesting/Alignment_Layout/content.html">
+        
+            Alignment Layout
+        
+        </a>
+</li><li number="4.4.4.2">
+<a href="Object_Composition/Nesting/Element_Nesting/content.html">
+        
+            Element Nesting
+        
+        </a>
+</li><li number="4.4.4.3">
+<a href="Object_Composition/Nesting/Object_Nesting/content.html">
+        
+            Object Nesting
+        
+        </a>
+</li><li number="4.4.4.4">
+<a href="Object_Composition/Nesting/Port_Nesting/content.html">
+        
+            Port Nesting
+        
+        </a>
+</li><li number="4.4.4.5">
+<a href="Object_Composition/Nesting/Type_Element_Nesting/content.html">
+        
+            Type Element Nesting
+        
+        </a>
+</li><li number="4.4.4.6">
+<a href="Object_Composition/Nesting/Type_Port_Nesting/content.html">
+        
+            Type Port Nesting
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.4.5">
+<a href="Object_Composition/Surface_Feature_Adherence/content.html">
+        
+            Surface Feature Adherence
+        
+        </a>
+</li><li number="4.4.6">
+<a href="Object_Composition/Type_Element_Aggregation/content.html">
+        
+            Type Element Aggregation
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.5">
+<a href="Object_Connectivity/content.html">
+        
+            Object Connectivity
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.5.1">
+<a href="Object_Connectivity/Control_Flow/content.html">
+        
+            Control Flow
+        
+        </a>
+</li><li number="4.5.2">
+<a href="Object_Connectivity/Element_Connectivity/content.html">
+        
+            Element Connectivity
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.5.2.1">
+<a href="Object_Connectivity/Element_Connectivity/Path_Connectivity/content.html">
+        
+            Path Connectivity
+        
+        </a>
+</li><li number="4.5.2.2">
+<a href="Object_Connectivity/Element_Connectivity/Port_Connectivity/content.html">
+        
+            Port Connectivity
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.5.3">
+<a href="Object_Connectivity/Element_Covering/content.html">
+        
+            Element Covering
+        
+        </a>
+</li><li number="4.5.4">
+<a href="Object_Connectivity/Element_Filling/content.html">
+        
+            Element Filling
+        
+        </a>
+</li><li number="4.5.5">
+<a href="Object_Connectivity/Element_Interference/content.html">
+        
+            Element Interference
+        
+        </a>
+</li><li number="4.5.6">
+<a href="Object_Connectivity/Group_Spatial_Connectivity/content.html">
+        
+            Group Spatial Connectivity
+        
+        </a>
+</li><li number="4.5.7">
+<a href="Object_Connectivity/Product_Relative_Positioning/content.html">
+        
+            Product Relative Positioning
+        
+        </a>
+</li><li number="4.5.8">
+<a href="Object_Connectivity/Product_Span_Positioning/content.html">
+        
+            Product Span Positioning
+        
+        </a>
+</li><li number="4.5.9">
+<a href="Object_Connectivity/Sequential_Connectivity/content.html">
+        
+            Sequential Connectivity
+        
+        </a>
+</li><li number="4.5.10">
+<a href="Object_Connectivity/Space_Boundaries/content.html">
+        
+            Space Boundaries
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.5.10.1">
+<a href="Object_Connectivity/Space_Boundaries/Space_Boundaries_1st_Level/content.html">
+        
+            Space Boundaries 1st Level
+        
+        </a>
+</li><li number="4.5.10.2">
+<a href="Object_Connectivity/Space_Boundaries/Space_Boundaries_2nd_Level/content.html">
+        
+            Space Boundaries 2nd Level
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.5.11">
+<a href="Object_Connectivity/Spatial_Service_Connectivity/content.html">
+        
+            Spatial Service Connectivity
+        
+        </a>
+</li><li number="4.5.12">
+<a href="Object_Connectivity/Spatial_Structure/content.html">
+        
+            Spatial Structure
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.5.12.1">
+<a href="Object_Connectivity/Spatial_Structure/Spatial_Container/content.html">
+        
+            Spatial Container
+        
+        </a>
+</li><li number="4.5.12.2">
+<a href="Object_Connectivity/Spatial_Structure/Spatial_Containment/content.html">
+        
+            Spatial Containment
+        
+        </a>
+</li><li number="4.5.12.3">
+<a href="Object_Connectivity/Spatial_Structure/Spatial_Interference/content.html">
+        
+            Spatial Interference
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.5.12.3.1">
+<a href="Object_Connectivity/Spatial_Structure/Spatial_Interference/Spatial_Interference_With_Zones/content.html">
+        
+            Spatial Interference With Zones
+        
+        </a>
+</li>
+</ol>
+</li>
+</ol>
+</li><li number="4.5.13">
+<a href="Object_Connectivity/Structural_Activity/content.html">
+        
+            Structural Activity
+        
+        </a>
+</li><li number="4.5.14">
+<a href="Object_Connectivity/Structural_Connectivity/content.html">
+        
+            Structural Connectivity
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.6">
+<a href="Object_Definition/content.html">
+        
+            Object Definition
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.6.1">
+<a href="Object_Definition/Object_Typing/content.html">
+        
+            Object Typing
+        
+        </a>
+</li><li number="4.6.2">
+<a href="Object_Definition/Property_Sets/content.html">
+        
+            Property Sets
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.6.2.1">
+<a href="Object_Definition/Property_Sets/Property_Sets_for_Contexts/content.html">
+        
+            Property Sets for Contexts
+        
+        </a>
+</li><li number="4.6.2.2">
+<a href="Object_Definition/Property_Sets/Property_Sets_for_Materials/content.html">
+        
+            Property Sets for Materials
+        
+        </a>
+</li><li number="4.6.2.3">
+<a href="Object_Definition/Property_Sets/Property_Sets_for_Objects/content.html">
+        
+            Property Sets for Objects
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.6.2.3.1">
+<a href="Object_Definition/Property_Sets/Property_Sets_for_Objects/Property_Sets_with_Override/content.html">
+        
+            Property Sets with Override
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.6.2.4">
+<a href="Object_Definition/Property_Sets/Property_Sets_for_Performance/content.html">
+        
+            Property Sets for Performance
+        
+        </a>
+</li><li number="4.6.2.5">
+<a href="Object_Definition/Property_Sets/Property_Sets_for_Profiles/content.html">
+        
+            Property Sets for Profiles
+        
+        </a>
+</li><li number="4.6.2.6">
+<a href="Object_Definition/Property_Sets/Property_Sets_for_Types/content.html">
+        
+            Property Sets for Types
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.6.3">
+<a href="Object_Definition/Quantity_Sets/content.html">
+        
+            Quantity Sets
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.7">
+<a href="Partial_Templates/content.html">
+        
+            Partial Templates
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.1">
+<a href="Partial_Templates/Geometry/content.html">
+        
+            Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.1.1">
+<a href="Partial_Templates/Geometry/Curve_Axis_Geometry/content.html">
+        
+            Curve Axis Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.1.1.1">
+<a href="Partial_Templates/Geometry/Curve_Axis_Geometry/Gradient_Curve/content.html">
+        
+            Gradient Curve
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.7.1.2">
+<a href="Partial_Templates/Geometry/Curve_Segment_Geometry/content.html">
+        
+            Curve Segment Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.1.2.1">
+<a href="Partial_Templates/Geometry/Curve_Segment_Geometry/Arc_Segment/content.html">
+        
+            Arc Segment
+        
+        </a>
+</li><li number="4.7.1.2.2">
+<a href="Partial_Templates/Geometry/Curve_Segment_Geometry/Bloss_Transition_Segment/content.html">
+        
+            Bloss Transition Segment
+        
+        </a>
+</li><li number="4.7.1.2.3">
+<a href="Partial_Templates/Geometry/Curve_Segment_Geometry/Clothoid_Transition_Segment/content.html">
+        
+            Clothoid Transition Segment
+        
+        </a>
+</li><li number="4.7.1.2.4">
+<a href="Partial_Templates/Geometry/Curve_Segment_Geometry/Cosine_Spiral_Transition_Segment/content.html">
+        
+            Cosine Spiral Transition Segment
+        
+        </a>
+</li><li number="4.7.1.2.5">
+<a href="Partial_Templates/Geometry/Curve_Segment_Geometry/Cubic_Transition_Segment/content.html">
+        
+            Cubic Transition Segment
+        
+        </a>
+</li><li number="4.7.1.2.6">
+<a href="Partial_Templates/Geometry/Curve_Segment_Geometry/Helmert_Transition_Segment/content.html">
+        
+            Helmert Transition Segment
+        
+        </a>
+</li><li number="4.7.1.2.7">
+<a href="Partial_Templates/Geometry/Curve_Segment_Geometry/Linear_Segment/content.html">
+        
+            Linear Segment
+        
+        </a>
+</li><li number="4.7.1.2.8">
+<a href="Partial_Templates/Geometry/Curve_Segment_Geometry/Parabolic_Transition_Segment/content.html">
+        
+            Parabolic Transition Segment
+        
+        </a>
+</li><li number="4.7.1.2.9">
+<a href="Partial_Templates/Geometry/Curve_Segment_Geometry/Sine_Spiral_Transition_Segment/content.html">
+        
+            Sine Spiral Transition Segment
+        
+        </a>
+</li><li number="4.7.1.2.10">
+<a href="Partial_Templates/Geometry/Curve_Segment_Geometry/Viennese_Bend_Transition_Segment/content.html">
+        
+            Viennese Bend Transition Segment
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.7.1.3">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/content.html">
+        
+            Solid Model Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.1.3.1">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Advanced_Brep_Geometry/content.html">
+        
+            Advanced Brep Geometry
+        
+        </a>
+</li><li number="4.7.1.3.2">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Faceted_Brep_Geometry/content.html">
+        
+            Faceted Brep Geometry
+        
+        </a>
+</li><li number="4.7.1.3.3">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Disk_Solid_Geometry/content.html">
+        
+            Swept Disk Solid Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.1.3.3.1">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Disk_Solid_Geometry/Swept_Disk_Solid_PolyCurve_Directrix/content.html">
+        
+            Swept Disk Solid PolyCurve Directrix
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.7.1.3.4">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Solid_Geometry/content.html">
+        
+            Swept Solid Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.1.3.4.1">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Solid_Geometry/Extruded_Area_Geometry/content.html">
+        
+            Extruded Area Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.1.3.4.1.1">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Solid_Geometry/Extruded_Area_Geometry/Extruded_Area_Basic_Profile/content.html">
+        
+            Extruded Area Basic Profile
+        
+        </a>
+</li><li number="4.7.1.3.4.1.2">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Solid_Geometry/Extruded_Area_Geometry/Extruded_Area_Composite_Profile/content.html">
+        
+            Extruded Area Composite Profile
+        
+        </a>
+</li><li number="4.7.1.3.4.1.3">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Solid_Geometry/Extruded_Area_Geometry/Extruded_Area_CompositeCurve_Profile/content.html">
+        
+            Extruded Area CompositeCurve Profile
+        
+        </a>
+</li><li number="4.7.1.3.4.1.4">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Solid_Geometry/Extruded_Area_Geometry/Extruded_Area_PolyCurve_Profile/content.html">
+        
+            Extruded Area PolyCurve Profile
+        
+        </a>
+</li><li number="4.7.1.3.4.1.5">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Solid_Geometry/Extruded_Area_Geometry/Extruded_Area_Standardized_Profile/content.html">
+        
+            Extruded Area Standardized Profile
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.7.1.3.4.2">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Solid_Geometry/Extruded_Area_Tapered_Geometry/content.html">
+        
+            Extruded Area Tapered Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.1.3.4.2.1">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Solid_Geometry/Extruded_Area_Tapered_Geometry/Extruded_Area_Tapered_Parameterized_Profile/content.html">
+        
+            Extruded Area Tapered Parameterized Profile
+        
+        </a>
+</li><li number="4.7.1.3.4.2.2">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Solid_Geometry/Extruded_Area_Tapered_Geometry/Extruded_Area_Tapered_PolyCurve_Profile/content.html">
+        
+            Extruded Area Tapered PolyCurve Profile
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.7.1.3.4.3">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Solid_Geometry/FixedReference_SweptArea_Geometry/content.html">
+        
+            FixedReference SweptArea Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.1.3.4.3.1">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Solid_Geometry/FixedReference_SweptArea_Geometry/FixedReference_SweptArea_PolyCurve_Profile/content.html">
+        
+            FixedReference SweptArea PolyCurve Profile
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.7.1.3.4.4">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Solid_Geometry/Revolved_Area_Geometry/content.html">
+        
+            Revolved Area Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.1.3.4.4.1">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Solid_Geometry/Revolved_Area_Geometry/Revolved_Area_Basic_Profile/content.html">
+        
+            Revolved Area Basic Profile
+        
+        </a>
+</li><li number="4.7.1.3.4.4.2">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Solid_Geometry/Revolved_Area_Geometry/Revolved_Area_CompositeCurve_Profile/content.html">
+        
+            Revolved Area CompositeCurve Profile
+        
+        </a>
+</li><li number="4.7.1.3.4.4.3">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Solid_Geometry/Revolved_Area_Geometry/Revolved_Area_PolyCurve_Profile/content.html">
+        
+            Revolved Area PolyCurve Profile
+        
+        </a>
+</li><li number="4.7.1.3.4.4.4">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Solid_Geometry/Revolved_Area_Geometry/Revolved_Area_Standardized_Profile/content.html">
+        
+            Revolved Area Standardized Profile
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.7.1.3.4.5">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Solid_Geometry/Revolved_Area_Tapered_Geometry/content.html">
+        
+            Revolved Area Tapered Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.1.3.4.5.1">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Solid_Geometry/Revolved_Area_Tapered_Geometry/Revolved_Area_Tapered_Parameterized_Profile/content.html">
+        
+            Revolved Area Tapered Parameterized Profile
+        
+        </a>
+</li><li number="4.7.1.3.4.5.2">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Solid_Geometry/Revolved_Area_Tapered_Geometry/Revolved_Area_Tapered_PolyCurve_Profile/content.html">
+        
+            Revolved Area Tapered PolyCurve Profile
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.7.1.3.4.6">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Solid_Geometry/SurfaceCurve_SweptArea_Geometry/content.html">
+        
+            SurfaceCurve SweptArea Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.1.3.4.6.1">
+<a href="Partial_Templates/Geometry/Solid_Model_Geometry/Swept_Solid_Geometry/SurfaceCurve_SweptArea_Geometry/SurfaceCurve_SweptArea_PolyCurve_Profile/content.html">
+        
+            SurfaceCurve SweptArea PolyCurve Profile
+        
+        </a>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li><li number="4.7.1.4">
+<a href="Partial_Templates/Geometry/Surface_Model_Geometry/content.html">
+        
+            Surface Model Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.1.4.1">
+<a href="Partial_Templates/Geometry/Surface_Model_Geometry/FaceBased_Surface_Model/content.html">
+        
+            FaceBased Surface Model
+        
+        </a>
+</li><li number="4.7.1.4.2">
+<a href="Partial_Templates/Geometry/Surface_Model_Geometry/ShellBased_Surface_Model/content.html">
+        
+            ShellBased Surface Model
+        
+        </a>
+</li><li number="4.7.1.4.3">
+<a href="Partial_Templates/Geometry/Surface_Model_Geometry/Tessellated_Geometry/content.html">
+        
+            Tessellated Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.1.4.3.1">
+<a href="Partial_Templates/Geometry/Surface_Model_Geometry/Tessellated_Geometry/Polygonal_Geometry/content.html">
+        
+            Polygonal Geometry
+        
+        </a>
+</li><li number="4.7.1.4.3.2">
+<a href="Partial_Templates/Geometry/Surface_Model_Geometry/Tessellated_Geometry/Triangulated_Geometry/content.html">
+        
+            Triangulated Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.1.4.3.2.1">
+<a href="Partial_Templates/Geometry/Surface_Model_Geometry/Tessellated_Geometry/Triangulated_Geometry/Triangulated_Geometry_With_Textures/content.html">
+        
+            Triangulated Geometry With Textures
+        
+        </a>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li><li number="4.7.2">
+<a href="Partial_Templates/Geometry_Styles/content.html">
+        
+            Geometry Styles
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.2.1">
+<a href="Partial_Templates/Geometry_Styles/Geometry_Curve_Style/content.html">
+        
+            Geometry Curve Style
+        
+        </a>
+</li><li number="4.7.2.2">
+<a href="Partial_Templates/Geometry_Styles/Geometry_Fill_Area_Style/content.html">
+        
+            Geometry Fill Area Style
+        
+        </a>
+</li><li number="4.7.2.3">
+<a href="Partial_Templates/Geometry_Styles/Geometry_Surface_Style/content.html">
+        
+            Geometry Surface Style
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.2.3.1">
+<a href="Partial_Templates/Geometry_Styles/Geometry_Surface_Style/Surface_Color_Style/content.html">
+        
+            Surface Color Style
+        
+        </a>
+</li><li number="4.7.2.3.2">
+<a href="Partial_Templates/Geometry_Styles/Geometry_Surface_Style/Surface_Texture_Style/content.html">
+        
+            Surface Texture Style
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.7.2.4">
+<a href="Partial_Templates/Geometry_Styles/Geometry_Text_Style/content.html">
+        
+            Geometry Text Style
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.7.3">
+<a href="Partial_Templates/Layer/content.html">
+        
+            Layer
+        
+        </a>
+</li><li number="4.7.4">
+<a href="Partial_Templates/Material_Definition/content.html">
+        
+            Material Definition
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.4.1">
+<a href="Partial_Templates/Material_Definition/Material/content.html">
+        
+            Material
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.7.5">
+<a href="Partial_Templates/Material_Properties/content.html">
+        
+            Material Properties
+        
+        </a>
+</li><li number="4.7.6">
+<a href="Partial_Templates/Material_Styles/content.html">
+        
+            Material Styles
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.6.1">
+<a href="Partial_Templates/Material_Styles/Material_Surface_Style/content.html">
+        
+            Material Surface Style
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.6.1.1">
+<a href="Partial_Templates/Material_Styles/Material_Surface_Style/Material_Surface_Color_Style/content.html">
+        
+            Material Surface Color Style
+        
+        </a>
+</li>
+</ol>
+</li>
+</ol>
+</li><li number="4.7.7">
+<a href="Partial_Templates/Profile_Definition/content.html">
+        
+            Profile Definition
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.7.1">
+<a href="Partial_Templates/Profile_Definition/Arbitrary_Profile_Definition/content.html">
+        
+            Arbitrary Profile Definition
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.7.1.1">
+<a href="Partial_Templates/Profile_Definition/Arbitrary_Profile_Definition/Centerline_Profile_Definition/content.html">
+        
+            Centerline Profile Definition
+        
+        </a>
+</li><li number="4.7.7.1.2">
+<a href="Partial_Templates/Profile_Definition/Arbitrary_Profile_Definition/CompositeCurve_Profile_Definition/content.html">
+        
+            CompositeCurve Profile Definition
+        
+        </a>
+</li><li number="4.7.7.1.3">
+<a href="Partial_Templates/Profile_Definition/Arbitrary_Profile_Definition/PolyCurve_Profile_Definition/content.html">
+        
+            PolyCurve Profile Definition
+        
+        </a>
+</li><li number="4.7.7.1.4">
+<a href="Partial_Templates/Profile_Definition/Arbitrary_Profile_Definition/PolyCurve_with_Voids_Profile_Definition/content.html">
+        
+            PolyCurve with Voids Profile Definition
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.7.7.2">
+<a href="Partial_Templates/Profile_Definition/Derived_Profile_Definiton/content.html">
+        
+            Derived Profile Definiton
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.7.2.1">
+<a href="Partial_Templates/Profile_Definition/Derived_Profile_Definiton/Composite_Profile_Definition/content.html">
+        
+            Composite Profile Definition
+        
+        </a>
+</li><li number="4.7.7.2.2">
+<a href="Partial_Templates/Profile_Definition/Derived_Profile_Definiton/Transformed_Profile_Definition/content.html">
+        
+            Transformed Profile Definition
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.7.7.3">
+<a href="Partial_Templates/Profile_Definition/Parameterized_Profile_Definition/content.html">
+        
+            Parameterized Profile Definition
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.7.3.1">
+<a href="Partial_Templates/Profile_Definition/Parameterized_Profile_Definition/Basic_Profile_Definition/content.html">
+        
+            Basic Profile Definition
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.7.3.1.1">
+<a href="Partial_Templates/Profile_Definition/Parameterized_Profile_Definition/Basic_Profile_Definition/Circle_Hollow_Profile_Definition/content.html">
+        
+            Circle Hollow Profile Definition
+        
+        </a>
+</li><li number="4.7.7.3.1.2">
+<a href="Partial_Templates/Profile_Definition/Parameterized_Profile_Definition/Basic_Profile_Definition/Circle_Profile_Definition/content.html">
+        
+            Circle Profile Definition
+        
+        </a>
+</li><li number="4.7.7.3.1.3">
+<a href="Partial_Templates/Profile_Definition/Parameterized_Profile_Definition/Basic_Profile_Definition/Ellipse_Profile_Definition/content.html">
+        
+            Ellipse Profile Definition
+        
+        </a>
+</li><li number="4.7.7.3.1.4">
+<a href="Partial_Templates/Profile_Definition/Parameterized_Profile_Definition/Basic_Profile_Definition/Rectangle_Hollow_Profile_Definition/content.html">
+        
+            Rectangle Hollow Profile Definition
+        
+        </a>
+</li><li number="4.7.7.3.1.5">
+<a href="Partial_Templates/Profile_Definition/Parameterized_Profile_Definition/Basic_Profile_Definition/Rectangle_Profile_Definition/content.html">
+        
+            Rectangle Profile Definition
+        
+        </a>
+</li><li number="4.7.7.3.1.6">
+<a href="Partial_Templates/Profile_Definition/Parameterized_Profile_Definition/Basic_Profile_Definition/Rectangle_Rounded_Profile_Definition/content.html">
+        
+            Rectangle Rounded Profile Definition
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.7.7.3.2">
+<a href="Partial_Templates/Profile_Definition/Parameterized_Profile_Definition/Standardized_Profile_Definition/content.html">
+        
+            Standardized Profile Definition
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.7.3.2.1">
+<a href="Partial_Templates/Profile_Definition/Parameterized_Profile_Definition/Standardized_Profile_Definition/C-Shape_Profile_Definition/content.html">
+        
+            C-Shape Profile Definition
+        
+        </a>
+</li><li number="4.7.7.3.2.2">
+<a href="Partial_Templates/Profile_Definition/Parameterized_Profile_Definition/Standardized_Profile_Definition/I-Shape_Asymmetric_Profile_Definition/content.html">
+        
+            I-Shape Asymmetric Profile Definition
+        
+        </a>
+</li><li number="4.7.7.3.2.3">
+<a href="Partial_Templates/Profile_Definition/Parameterized_Profile_Definition/Standardized_Profile_Definition/I-Shape_Profile_Definition/content.html">
+        
+            I-Shape Profile Definition
+        
+        </a>
+</li><li number="4.7.7.3.2.4">
+<a href="Partial_Templates/Profile_Definition/Parameterized_Profile_Definition/Standardized_Profile_Definition/L-Shape_Profile_Definition/content.html">
+        
+            L-Shape Profile Definition
+        
+        </a>
+</li><li number="4.7.7.3.2.5">
+<a href="Partial_Templates/Profile_Definition/Parameterized_Profile_Definition/Standardized_Profile_Definition/T-Shape_Profile_Definition/content.html">
+        
+            T-Shape Profile Definition
+        
+        </a>
+</li><li number="4.7.7.3.2.6">
+<a href="Partial_Templates/Profile_Definition/Parameterized_Profile_Definition/Standardized_Profile_Definition/U-Shape_Profile_Definition/content.html">
+        
+            U-Shape Profile Definition
+        
+        </a>
+</li><li number="4.7.7.3.2.7">
+<a href="Partial_Templates/Profile_Definition/Parameterized_Profile_Definition/Standardized_Profile_Definition/Z-Shape_Profile_Definition/content.html">
+        
+            Z-Shape Profile Definition
+        
+        </a>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li><li number="4.7.8">
+<a href="Partial_Templates/Profile_Properties/content.html">
+        
+            Profile Properties
+        
+        </a>
+</li><li number="4.7.9">
+<a href="Partial_Templates/Quantities/content.html">
+        
+            Quantities
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.9.1">
+<a href="Partial_Templates/Quantities/Area_Quantity/content.html">
+        
+            Area Quantity
+        
+        </a>
+</li><li number="4.7.9.2">
+<a href="Partial_Templates/Quantities/Count_Quantity/content.html">
+        
+            Count Quantity
+        
+        </a>
+</li><li number="4.7.9.3">
+<a href="Partial_Templates/Quantities/Length_Quantity/content.html">
+        
+            Length Quantity
+        
+        </a>
+</li><li number="4.7.9.4">
+<a href="Partial_Templates/Quantities/Time_Quantity/content.html">
+        
+            Time Quantity
+        
+        </a>
+</li><li number="4.7.9.5">
+<a href="Partial_Templates/Quantities/Volume_Quantity/content.html">
+        
+            Volume Quantity
+        
+        </a>
+</li><li number="4.7.9.6">
+<a href="Partial_Templates/Quantities/Weight_Quantity/content.html">
+        
+            Weight Quantity
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.7.10">
+<a href="Partial_Templates/Texture/content.html">
+        
+            Texture
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.10.1">
+<a href="Partial_Templates/Texture/Image_Texture/content.html">
+        
+            Image Texture
+        
+        </a>
+</li><li number="4.7.10.2">
+<a href="Partial_Templates/Texture/Texture_Map/content.html">
+        
+            Texture Map
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.10.2.1">
+<a href="Partial_Templates/Texture/Texture_Map/Indexed_Texture_Map/content.html">
+        
+            Indexed Texture Map
+        
+        </a>
+</li>
+</ol>
+</li>
+</ol>
+</li><li number="4.7.11">
+<a href="Partial_Templates/Values/content.html">
+        
+            Values
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.7.11.1">
+<a href="Partial_Templates/Values/Bounded_Value/content.html">
+        
+            Bounded Value
+        
+        </a>
+</li><li number="4.7.11.2">
+<a href="Partial_Templates/Values/Enumerated_Value/content.html">
+        
+            Enumerated Value
+        
+        </a>
+</li><li number="4.7.11.3">
+<a href="Partial_Templates/Values/List_Value/content.html">
+        
+            List Value
+        
+        </a>
+</li><li number="4.7.11.4">
+<a href="Partial_Templates/Values/Reference_Value_Time_Series/content.html">
+        
+            Reference Value Time Series
+        
+        </a>
+</li><li number="4.7.11.5">
+<a href="Partial_Templates/Values/Single_Value/content.html">
+        
+            Single Value
+        
+        </a>
+</li><li number="4.7.11.6">
+<a href="Partial_Templates/Values/Table_Value/content.html">
+        
+            Table Value
+        
+        </a>
+</li>
+</ol>
+</li>
+</ol>
+</li><li number="4.8">
+<a href="Product_Shape/content.html">
+        
+            Product Shape
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.8.1">
+<a href="Product_Shape/Product_Geometric_Representation/content.html">
+        
+            Product Geometric Representation
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.8.1.1">
+<a href="Product_Shape/Product_Geometric_Representation/Alignment_Geometry/content.html">
+        
+            Alignment Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.8.1.1.1">
+<a href="Product_Shape/Product_Geometric_Representation/Alignment_Geometry/Alignment_Geometry_Cant/content.html">
+        
+            Alignment Geometry Cant
+        
+        </a>
+</li><li number="4.8.1.1.2">
+<a href="Product_Shape/Product_Geometric_Representation/Alignment_Geometry/Alignment_Geometry_Gradient/content.html">
+        
+            Alignment Geometry Gradient
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.8.1.2">
+<a href="Product_Shape/Product_Geometric_Representation/Annotation_Geometry/content.html">
+        
+            Annotation Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.8.1.2.1">
+<a href="Product_Shape/Product_Geometric_Representation/Annotation_Geometry/Annotation_2D_Geometry/content.html">
+        
+            Annotation 2D Geometry
+        
+        </a>
+</li><li number="4.8.1.2.2">
+<a href="Product_Shape/Product_Geometric_Representation/Annotation_Geometry/Annotation_3D_Geometry/content.html">
+        
+            Annotation 3D Geometry
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.8.1.3">
+<a href="Product_Shape/Product_Geometric_Representation/Axis_Geometry/content.html">
+        
+            Axis Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.8.1.3.1">
+<a href="Product_Shape/Product_Geometric_Representation/Axis_Geometry/Axis_2D_Geometry/content.html">
+        
+            Axis 2D Geometry
+        
+        </a>
+</li><li number="4.8.1.3.2">
+<a href="Product_Shape/Product_Geometric_Representation/Axis_Geometry/Axis_3D_Geometry/content.html">
+        
+            Axis 3D Geometry
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.8.1.4">
+<a href="Product_Shape/Product_Geometric_Representation/Body_Geometry/content.html">
+        
+            Body Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.8.1.4.1">
+<a href="Product_Shape/Product_Geometric_Representation/Body_Geometry/Body_AdvancedBrep_Geometry/content.html">
+        
+            Body AdvancedBrep Geometry
+        
+        </a>
+</li><li number="4.8.1.4.2">
+<a href="Product_Shape/Product_Geometric_Representation/Body_Geometry/Body_AdvancedSweptSolid_Geometry/content.html">
+        
+            Body AdvancedSweptSolid Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.8.1.4.2.1">
+<a href="Product_Shape/Product_Geometric_Representation/Body_Geometry/Body_AdvancedSweptSolid_Geometry/Body_AdvancedSwept_Directrix_Geometry/content.html">
+        
+            Body AdvancedSwept Directrix Geometry
+        
+        </a>
+</li><li number="4.8.1.4.2.2">
+<a href="Product_Shape/Product_Geometric_Representation/Body_Geometry/Body_AdvancedSweptSolid_Geometry/Body_AdvancedSwept_DiskSolid_PolyCurve_Geometry/content.html">
+        
+            Body AdvancedSwept DiskSolid PolyCurve Geometry
+        
+        </a>
+</li><li number="4.8.1.4.2.3">
+<a href="Product_Shape/Product_Geometric_Representation/Body_Geometry/Body_AdvancedSweptSolid_Geometry/Body_AdvancedSwept_Tapered_Geometry/content.html">
+        
+            Body AdvancedSwept Tapered Geometry
+        
+        </a>
+</li><li number="4.8.1.4.2.4">
+<a href="Product_Shape/Product_Geometric_Representation/Body_Geometry/Body_AdvancedSweptSolid_Geometry/Body_SectionedSolidHorizontal/content.html">
+        
+            Body SectionedSolidHorizontal
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.8.1.4.3">
+<a href="Product_Shape/Product_Geometric_Representation/Body_Geometry/Body_Brep_Geometry/content.html">
+        
+            Body Brep Geometry
+        
+        </a>
+</li><li number="4.8.1.4.4">
+<a href="Product_Shape/Product_Geometric_Representation/Body_Geometry/Body_CSG_Geometry/content.html">
+        
+            Body CSG Geometry
+        
+        </a>
+</li><li number="4.8.1.4.5">
+<a href="Product_Shape/Product_Geometric_Representation/Body_Geometry/Body_Clipping_Geometry/content.html">
+        
+            Body Clipping Geometry
+        
+        </a>
+</li><li number="4.8.1.4.6">
+<a href="Product_Shape/Product_Geometric_Representation/Body_Geometry/Body_SurfaceModel_Geometry/content.html">
+        
+            Body SurfaceModel Geometry
+        
+        </a>
+</li><li number="4.8.1.4.7">
+<a href="Product_Shape/Product_Geometric_Representation/Body_Geometry/Body_SurfaceOrSolidModel_Geometry/content.html">
+        
+            Body SurfaceOrSolidModel Geometry
+        
+        </a>
+</li><li number="4.8.1.4.8">
+<a href="Product_Shape/Product_Geometric_Representation/Body_Geometry/Body_SweptSolid_Geometry/content.html">
+        
+            Body SweptSolid Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.8.1.4.8.1">
+<a href="Product_Shape/Product_Geometric_Representation/Body_Geometry/Body_SweptSolid_Geometry/Body_SweptSolid_Composite_Geometry/content.html">
+        
+            Body SweptSolid Composite Geometry
+        
+        </a>
+</li><li number="4.8.1.4.8.2">
+<a href="Product_Shape/Product_Geometric_Representation/Body_Geometry/Body_SweptSolid_Geometry/Body_SweptSolid_CompositeCurve_Geometry/content.html">
+        
+            Body SweptSolid CompositeCurve Geometry
+        
+        </a>
+</li><li number="4.8.1.4.8.3">
+<a href="Product_Shape/Product_Geometric_Representation/Body_Geometry/Body_SweptSolid_Geometry/Body_SweptSolid_ParameterizedProfile_Geometry/content.html">
+        
+            Body SweptSolid ParameterizedProfile Geometry
+        
+        </a>
+</li><li number="4.8.1.4.8.4">
+<a href="Product_Shape/Product_Geometric_Representation/Body_Geometry/Body_SweptSolid_Geometry/Body_SweptSolid_PolyCurve_Geometry/content.html">
+        
+            Body SweptSolid PolyCurve Geometry
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.8.1.4.9">
+<a href="Product_Shape/Product_Geometric_Representation/Body_Geometry/Body_Tessellation_Geometry/content.html">
+        
+            Body Tessellation Geometry
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.8.1.5">
+<a href="Product_Shape/Product_Geometric_Representation/Box_Geometry/content.html">
+        
+            Box Geometry
+        
+        </a>
+</li><li number="4.8.1.6">
+<a href="Product_Shape/Product_Geometric_Representation/Clearance_Geometry/content.html">
+        
+            Clearance Geometry
+        
+        </a>
+</li><li number="4.8.1.7">
+<a href="Product_Shape/Product_Geometric_Representation/CoG_Geometry/content.html">
+        
+            CoG Geometry
+        
+        </a>
+</li><li number="4.8.1.8">
+<a href="Product_Shape/Product_Geometric_Representation/FootPrint_Geometry/content.html">
+        
+            FootPrint Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.8.1.8.1">
+<a href="Product_Shape/Product_Geometric_Representation/FootPrint_Geometry/FootPrint_Annotation_Geometry/content.html">
+        
+            FootPrint Annotation Geometry
+        
+        </a>
+</li><li number="4.8.1.8.2">
+<a href="Product_Shape/Product_Geometric_Representation/FootPrint_Geometry/FootPrint_GeomSet_Geometry/content.html">
+        
+            FootPrint GeomSet Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.8.1.8.2.1">
+<a href="Product_Shape/Product_Geometric_Representation/FootPrint_Geometry/FootPrint_GeomSet_Geometry/FootPrint_GeomSet_PolyCurve_Geometry/content.html">
+        
+            FootPrint GeomSet PolyCurve Geometry
+        
+        </a>
+</li>
+</ol>
+</li>
+</ol>
+</li><li number="4.8.1.9">
+<a href="Product_Shape/Product_Geometric_Representation/Lighting_Geometry/content.html">
+        
+            Lighting Geometry
+        
+        </a>
+</li><li number="4.8.1.10">
+<a href="Product_Shape/Product_Geometric_Representation/Mapped_Geometry/content.html">
+        
+            Mapped Geometry
+        
+        </a>
+</li><li number="4.8.1.11">
+<a href="Product_Shape/Product_Geometric_Representation/Profile_Geometry/content.html">
+        
+            Profile Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.8.1.11.1">
+<a href="Product_Shape/Product_Geometric_Representation/Profile_Geometry/Profile_3D_Geometry/content.html">
+        
+            Profile 3D Geometry
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.8.1.12">
+<a href="Product_Shape/Product_Geometric_Representation/Reference_Geometry/content.html">
+        
+            Reference Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.8.1.12.1">
+<a href="Product_Shape/Product_Geometric_Representation/Reference_Geometry/Reference_SweptSolid_Geometry/content.html">
+        
+            Reference SweptSolid Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.8.1.12.1.1">
+<a href="Product_Shape/Product_Geometric_Representation/Reference_Geometry/Reference_SweptSolid_Geometry/Reference_SweptSolid_PolyCurve_Geometry/content.html">
+        
+            Reference SweptSolid PolyCurve Geometry
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.8.1.12.2">
+<a href="Product_Shape/Product_Geometric_Representation/Reference_Geometry/Reference_Tessellation_Geometry/content.html">
+        
+            Reference Tessellation Geometry
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.8.1.13">
+<a href="Product_Shape/Product_Geometric_Representation/Surface_Geometry/content.html">
+        
+            Surface Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.8.1.13.1">
+<a href="Product_Shape/Product_Geometric_Representation/Surface_Geometry/Surface_3D_Geometry/content.html">
+        
+            Surface 3D Geometry
+        
+        </a>
+</li><li number="4.8.1.13.2">
+<a href="Product_Shape/Product_Geometric_Representation/Surface_Geometry/Surface_Sectioned_Geometry/content.html">
+        
+            Surface Sectioned Geometry
+        
+        </a>
+</li><li number="4.8.1.13.3">
+<a href="Product_Shape/Product_Geometric_Representation/Surface_Geometry/Surface_Tessellation_Geometry/content.html">
+        
+            Surface Tessellation Geometry
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.8.1.14">
+<a href="Product_Shape/Product_Geometric_Representation/Survey_Points_Geometry/content.html">
+        
+            Survey Points Geometry
+        
+        </a>
+</li><li number="4.8.1.15">
+<a href="Product_Shape/Product_Geometric_Representation/Topography_Geometry/content.html">
+        
+            Topography Geometry
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.8.2">
+<a href="Product_Shape/Product_Geometry_Colour/content.html">
+        
+            Product Geometry Colour
+        
+        </a>
+</li><li number="4.8.3">
+<a href="Product_Shape/Product_Geometry_Layer/content.html">
+        
+            Product Geometry Layer
+        
+        </a>
+</li><li number="4.8.4">
+<a href="Product_Shape/Product_Placement/content.html">
+        
+            Product Placement
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.8.4.1">
+<a href="Product_Shape/Product_Placement/Product_Grid_Placement/content.html">
+        
+            Product Grid Placement
+        
+        </a>
+</li><li number="4.8.4.2">
+<a href="Product_Shape/Product_Placement/Product_Linear_Placement/content.html">
+        
+            Product Linear Placement
+        
+        </a>
+</li><li number="4.8.4.3">
+<a href="Product_Shape/Product_Placement/Product_Local_Placement/content.html">
+        
+            Product Local Placement
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.8.5">
+<a href="Product_Shape/Product_Topology_Representation/content.html">
+        
+            Product Topology Representation
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.8.5.1">
+<a href="Product_Shape/Product_Topology_Representation/Reference_Topology/content.html">
+        
+            Reference Topology
+        
+        </a>
+</li>
+</ol>
+</li>
+</ol>
+</li><li number="4.9">
+<a href="Product_Type_Shape/content.html">
+        
+            Product Type Shape
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.9.1">
+<a href="Product_Type_Shape/Product_Type_Geometric_Representation/content.html">
+        
+            Product Type Geometric Representation
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.9.1.1">
+<a href="Product_Type_Shape/Product_Type_Geometric_Representation/Type_Axis_Geometry/content.html">
+        
+            Type Axis Geometry
+        
+        </a>
+</li><li number="4.9.1.2">
+<a href="Product_Type_Shape/Product_Type_Geometric_Representation/Type_Body_Geometry/content.html">
+        
+            Type Body Geometry
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.9.1.2.1">
+<a href="Product_Type_Shape/Product_Type_Geometric_Representation/Type_Body_Geometry/Type_Body_AdvancedBrep_Geometry/content.html">
+        
+            Type Body AdvancedBrep Geometry
+        
+        </a>
+</li><li number="4.9.1.2.2">
+<a href="Product_Type_Shape/Product_Type_Geometric_Representation/Type_Body_Geometry/Type_Body_Brep_Geometry/content.html">
+        
+            Type Body Brep Geometry
+        
+        </a>
+</li><li number="4.9.1.2.3">
+<a href="Product_Type_Shape/Product_Type_Geometric_Representation/Type_Body_Geometry/Type_Body_CSG_Geometry/content.html">
+        
+            Type Body CSG Geometry
+        
+        </a>
+</li><li number="4.9.1.2.4">
+<a href="Product_Type_Shape/Product_Type_Geometric_Representation/Type_Body_Geometry/Type_Body_Tessellated_Geometry/content.html">
+        
+            Type Body Tessellated Geometry
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.9.1.3">
+<a href="Product_Type_Shape/Product_Type_Geometric_Representation/Type_Clearance_Geometry/content.html">
+        
+            Type Clearance Geometry
+        
+        </a>
+</li><li number="4.9.1.4">
+<a href="Product_Type_Shape/Product_Type_Geometric_Representation/Type_Lighting_Geometry/content.html">
+        
+            Type Lighting Geometry
+        
+        </a>
+</li>
+</ol>
+</li>
+</ol>
+</li><li number="4.10">
+<a href="Project_Context/content.html">
+        
+            Project Context
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.10.1">
+<a href="Project_Context/Project_Classification_Information/content.html">
+        
+            Project Classification Information
+        
+        </a>
+</li><li number="4.10.2">
+<a href="Project_Context/Project_Declaration/content.html">
+        
+            Project Declaration
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.10.2.1">
+<a href="Project_Context/Project_Declaration/Project_Template_Definitions/content.html">
+        
+            Project Template Definitions
+        
+        </a>
+</li><li number="4.10.2.2">
+<a href="Project_Context/Project_Declaration/Project_Type_Definitions/content.html">
+        
+            Project Type Definitions
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.10.3">
+<a href="Project_Context/Project_Document_Information/content.html">
+        
+            Project Document Information
+        
+        </a>
+</li><li number="4.10.4">
+<a href="Project_Context/Project_Global_Positioning/content.html">
+        
+            Project Global Positioning
+        
+        </a>
+</li><li number="4.10.5">
+<a href="Project_Context/Project_Library_Information/content.html">
+        
+            Project Library Information
+        
+        </a>
+</li><li number="4.10.6">
+<a href="Project_Context/Project_Representation_Context/content.html">
+        
+            Project Representation Context
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.10.6.1">
+<a href="Project_Context/Project_Representation_Context/Project_Representation_Context_2D/content.html">
+        
+            Project Representation Context 2D
+        
+        </a>
+</li><li number="4.10.6.2">
+<a href="Project_Context/Project_Representation_Context/Project_Representation_Context_3D/content.html">
+        
+            Project Representation Context 3D
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.10.7">
+<a href="Project_Context/Project_Units/content.html">
+        
+            Project Units
+        
+        </a>
+</li>
+</ol>
+</li><li number="4.11">
+<a href="Resource_Limits/content.html">
+        
+            Resource Limits
+        
+        </a>
+<ol class="referenced-list">
+<li number="4.11.1">
+<a href="Resource_Limits/Resource_Cost/content.html">
+        
+            Resource Cost
+        
+        </a>
+</li><li number="4.11.2">
+<a href="Resource_Limits/Resource_Quantity/content.html">
+        
+            Resource Quantity
+        
+        </a>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/templates/README.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

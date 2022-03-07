@@ -1,0 +1,321 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>7.1.2.4 IfcDoorStyleOperationEnum - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a class="current" href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a class="sublink-1 current" href="../ifcarchitecturedomain/content.html">
+                            7.1 IfcArchitectureDomain
+                        </a>
+<a class="sublink-1" href="../ifcbuildingcontrolsdomain/content.html">
+                            7.2 IfcBuildingControlsDomain
+                        </a>
+<a class="sublink-1" href="../ifcconstructionmgmtdomain/content.html">
+                            7.3 IfcConstructionMgmtDomain
+                        </a>
+<a class="sublink-1" href="../ifcelectricaldomain/content.html">
+                            7.4 IfcElectricalDomain
+                        </a>
+<a class="sublink-1" href="../ifchvacdomain/content.html">
+                            7.5 IfcHvacDomain
+                        </a>
+<a class="sublink-1" href="../ifcplumbingfireprotectiondomain/content.html">
+                            7.6 IfcPlumbingFireProtectionDomain
+                        </a>
+<a class="sublink-1" href="../ifcportsandwaterwaysdomain/content.html">
+                            7.7 IfcPortsAndWaterwaysDomain
+                        </a>
+<a class="sublink-1" href="../ifcraildomain/content.html">
+                            7.8 IfcRailDomain
+                        </a>
+<a class="sublink-1" href="../ifcroaddomain/content.html">
+                            7.9 IfcRoadDomain
+                        </a>
+<a class="sublink-1" href="../ifcstructuralanalysisdomain/content.html">
+                            7.10 IfcStructuralAnalysisDomain
+                        </a>
+<a class="sublink-1" href="../ifcstructuralelementsdomain/content.html">
+                            7.11 IfcStructuralElementsDomain
+                        </a>
+<a href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>7.1.2.4 IfcDoorStyleOperationEnum</h1>
+<h2><a id="7.1.2.4.1-Semantic-definition"></a>
+    7.1.2.4.1 Semantic definition
+<a href="IfcDoorStyleOperationEnum.htm#7.1.2.4.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p>This enumeration defines the basic ways to describe how doors operate.</p>
+<aside class="aside-history"><mark>HISTORY</mark>  New enumeration in IFC2x.</aside>
+<p>Note:</p>
+<ol>
+<li>Figures are shown in the ground view.</li>
+<li>Figures (symbolic representation) depend on the national building code.</li>
+<li>These figures/ are only shown as illustrations, the actual representation in the ground view might differ.</li>
+<li>Open to the outside is declared as open into the direction of the positive y-axis, determined by the <em>ObjectPlacement</em> at <em><a href="IfcDoor.htm">IfcDoor</a></em></li>
+<li>The location of the panel relative to the wall thickness is defined by the <em>ObjectPlacement</em> at <em><a href="IfcDoor.htm">IfcDoor</a></em>, and the <em><a href="IfcDoorLiningProperties.htm">IfcDoorLiningProperties</a>.LiningOffset</em> parameter.</li>
+</ol>
+<h2><a id="7.1.2.4.2-Type-values"></a>
+    7.1.2.4.2 Type values
+<a href="IfcDoorStyleOperationEnum.htm#7.1.2.4.2-Type-values"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-7.1.2.4.R"></a><table class="striped type-values">
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Name"><code>DOUBLE_DOOR_DOUBLE_SWING</code>
+</td><td data-label="Description">
+<aside class="aside-note"><mark>NOTE</mark> Direction of swing (whether in or out) is determined at the <em><a href="IfcDoor.htm">IfcDoor</a></em>.</aside><figure><a id="Figure-7.1.2.4.A"></a><img alt="double double swing" src="../figures/ifcdoorstyleoperationenum-fig06.gif"/><figcaption>Figure 7.1.2.4.A<a href="IfcDoorStyleOperationEnum.htm#Figure-7.1.2.4.A"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>DOUBLE_DOOR_FOLDING</code>
+</td><td data-label="Description">
+<p>Door with two panels, one is folding to the left the other is folding to the right.</p><figure><a id="Figure-7.1.2.4.B"></a><img alt="double folding" src="../figures/ifcdoorstyleoperationenum-fig12.gif"/><figcaption>Figure 7.1.2.4.B<a href="IfcDoorStyleOperationEnum.htm#Figure-7.1.2.4.B"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>DOUBLE_DOOR_SINGLE_SWING</code>
+</td><td data-label="Description">
+<p>Door with two panels, one swings in both directions and to the right in the main traffic direction the other swings also in both directions and to the left in the main traffic direction.</p><aside class="aside-note"><mark>NOTE</mark> Direction of swing (whether in or out) is determined at the <em><a href="IfcDoor.htm">IfcDoor</a></em>.</aside><figure><a id="Figure-7.1.2.4.C"></a><img alt="double swing" src="../figures/ifcdoorstyleoperationenum-fig03.gif"/><figcaption>Figure 7.1.2.4.C<a href="IfcDoorStyleOperationEnum.htm#Figure-7.1.2.4.C"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_LEFT</code>
+</td><td data-label="Description">
+<p>Door with two panels that both open to the left, one panel swings in one direction and the other panel swings in the opposite direction.</p><aside class="aside-note"><mark>NOTE</mark> Direction of swing (whether in or out) is determined at the <em><a href="IfcDoor.htm">IfcDoor</a></em>.</aside><figure><a id="Figure-7.1.2.4.D"></a><img alt="opposite left" src="../figures/ifcdoorstyleoperationenum-fig06a.gif"/><figcaption>Figure 7.1.2.4.D<a href="IfcDoorStyleOperationEnum.htm#Figure-7.1.2.4.D"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_RIGHT</code>
+</td><td data-label="Description">
+<p>Door with two panels that both open to the right, one panel swings in one direction and the other panel swings in the opposite direction.</p><aside class="aside-note"><mark>NOTE</mark> Direction of swing (whether in or out) is determined at the <em><a href="IfcDoor.htm">IfcDoor</a></em>.</aside><figure><a id="Figure-7.1.2.4.E"></a><img alt="opposite right" src="../figures/ifcdoorstyleoperationenum-fig06b.gif"/><figcaption>Figure 7.1.2.4.E<a href="IfcDoorStyleOperationEnum.htm#Figure-7.1.2.4.E"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>DOUBLE_DOOR_SLIDING</code>
+</td><td data-label="Description">
+<p>Door with two panels, one is sliding to the left the other is sliding to the right.</p><figure><a id="Figure-7.1.2.4.F"></a><img alt="double sliding" src="../figures/ifcdoorstyleoperationenum-fig09.gif"/><figcaption>Figure 7.1.2.4.F<a href="IfcDoorStyleOperationEnum.htm#Figure-7.1.2.4.F"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>DOUBLE_SWING_LEFT</code>
+</td><td data-label="Description">
+<aside class="aside-note"><mark>NOTE</mark> Direction of swing (whether in or out) is determined at the <em><a href="IfcDoor.htm">IfcDoor</a></em>.</aside><figure><a id="Figure-7.1.2.4.G"></a><img alt="double swing left" src="../figures/ifcdoorstyleoperationenum-fig04.gif"/><figcaption>Figure 7.1.2.4.G<a href="IfcDoorStyleOperationEnum.htm#Figure-7.1.2.4.G"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>DOUBLE_SWING_RIGHT</code>
+</td><td data-label="Description">
+<aside class="aside-note"><mark>NOTE</mark> Direction of swing (whether in or out) is determined at the <em><a href="IfcDoor.htm">IfcDoor</a></em>.</aside><figure><a id="Figure-7.1.2.4.H"></a><img alt="double swing right" src="../figures/ifcdoorstyleoperationenum-fig05.gif"/><figcaption>Figure 7.1.2.4.H<a href="IfcDoorStyleOperationEnum.htm#Figure-7.1.2.4.H"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>FOLDING_TO_LEFT</code>
+</td><td data-label="Description">
+<p>Door with one panel that is folding to the left.</p><figure><a id="Figure-7.1.2.4.I"></a><img alt="folding to left" src="../figures/ifcdoorstyleoperationenum-fig10.gif"/><figcaption>Figure 7.1.2.4.I<a href="IfcDoorStyleOperationEnum.htm#Figure-7.1.2.4.I"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>FOLDING_TO_RIGHT</code>
+</td><td data-label="Description">
+<p>Door with one panel that is folding to the right.</p><figure><a id="Figure-7.1.2.4.J"></a><img alt="folding to right" src="../figures/ifcdoorstyleoperationenum-fig11.gif"/><figcaption>Figure 7.1.2.4.J<a href="IfcDoorStyleOperationEnum.htm#Figure-7.1.2.4.J"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>REVOLVING</code>
+</td><td data-label="Description">
+<p>An entrance door consisting of four leaves set in a form of a cross and revolving around a central vertical axis (the four panels are described by a single <em><a href="IfcDoor.htm">IfcDoor</a></em> panel property).</p><figure><a id="Figure-7.1.2.4.K"></a><img alt="revolving" src="../figures/ifcdoorstyleoperationenum-fig13.gif"/><figcaption>Figure 7.1.2.4.K<a href="IfcDoorStyleOperationEnum.htm#Figure-7.1.2.4.K"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>ROLLINGUP</code>
+</td><td data-label="Description">
+<p>Door that opens by rolling up.</p><aside class="aside-note"><mark>NOTE</mark> Whether it rolls up to the inside or outside is determined at the <em><a href="IfcDoor.htm">IfcDoor</a></em>.</aside><figure><a id="Figure-7.1.2.4.L"></a><img alt="rolling" src="../figures/ifcdoorstyleoperationenum-fig14.gif"/><figcaption>Figure 7.1.2.4.L<a href="IfcDoorStyleOperationEnum.htm#Figure-7.1.2.4.L"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>SINGLE_SWING_LEFT</code>
+</td><td data-label="Description">
+<p>Door with one panel that opens (swings) to the left. The hinges are on the left side as viewed in the direction of the positive y-axis.</p><aside class="aside-note"><mark>NOTE</mark> Direction of swing (whether in or out) is determined at the <em><a href="IfcDoor.htm">IfcDoor</a></em>.</aside><figure><a id="Figure-7.1.2.4.M"></a><img alt="single swing left " src="../figures/ifcdoorstyleoperationenum-fig01.gif"/><figcaption>Figure 7.1.2.4.M<a href="IfcDoorStyleOperationEnum.htm#Figure-7.1.2.4.M"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>SINGLE_SWING_RIGHT</code>
+</td><td data-label="Description">
+<p>Door with one panel that swings in both directions and to the right in the main traffic direction. Also called double acting door.</p><aside class="aside-note"><mark>NOTE</mark> Direction of swing (whether in or out) is determined at the <em><a href="IfcDoor.htm">IfcDoor</a></em>.</aside><figure><a id="Figure-7.1.2.4.N"></a><img alt="single swing right" src="../figures/ifcdoorstyleoperationenum-fig02.gif"/><figcaption>Figure 7.1.2.4.N<a href="IfcDoorStyleOperationEnum.htm#Figure-7.1.2.4.N"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>SLIDING_TO_LEFT</code>
+</td><td data-label="Description">
+<p>Door with one panel that is sliding to the left.</p><figure><a id="Figure-7.1.2.4.O"></a><img alt="sliding to left" src="../figures/ifcdoorstyleoperationenum-fig07.gif"/><figcaption>Figure 7.1.2.4.O<a href="IfcDoorStyleOperationEnum.htm#Figure-7.1.2.4.O"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>SLIDING_TO_RIGHT</code>
+</td><td data-label="Description">
+<p>Door with one panel that is sliding to the right.</p><figure><a id="Figure-7.1.2.4.P"></a><img alt="sliding to right" src="../figures/ifcdoorstyleoperationenum-fig08.gif"/><figcaption>Figure 7.1.2.4.P<a href="IfcDoorStyleOperationEnum.htm#Figure-7.1.2.4.P"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>USERDEFINED</code>
+</td><td data-label="Description">
+<p>User defined operation type</p><figure><a id="Figure-7.1.2.4.Q"></a><img alt="not defined" src="../figures/ifcdoorstyleoperationenum-fig15.gif"/><figcaption>Figure 7.1.2.4.Q<a href="IfcDoorStyleOperationEnum.htm#Figure-7.1.2.4.Q"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>NOTDEFINED</code>
+</td><td data-label="Description">
+<p>A door with a
+not defined operation type is
+considered as a door with a lining, but no panels. It is thereby always
+open.</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 7.1.2.4.R<a href="IfcDoorStyleOperationEnum.htm#Table-7.1.2.4.R"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="7.1.2.4.3-Formal-representation"></a>
+    7.1.2.4.3 Formal representation
+<a href="IfcDoorStyleOperationEnum.htm#7.1.2.4.3-Formal-representation"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">TYPE <a href="IfcDoorStyleOperationEnum.htm">IfcDoorStyleOperationEnum</a> = ENUMERATION OF
+	(DOUBLE_DOOR_DOUBLE_SWING
+	,DOUBLE_DOOR_FOLDING
+	,DOUBLE_DOOR_SINGLE_SWING
+	,DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_LEFT
+	,DOUBLE_DOOR_SINGLE_SWING_OPPOSITE_RIGHT
+	,DOUBLE_DOOR_SLIDING
+	,DOUBLE_SWING_LEFT
+	,DOUBLE_SWING_RIGHT
+	,FOLDING_TO_LEFT
+	,FOLDING_TO_RIGHT
+	,REVOLVING
+	,ROLLINGUP
+	,SINGLE_SWING_LEFT
+	,SINGLE_SWING_RIGHT
+	,SLIDING_TO_LEFT
+	,SLIDING_TO_RIGHT
+	,USERDEFINED
+	,NOTDEFINED);
+END_TYPE;</code></pre>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/domain/IfcArchitectureDomain/Types/IfcDoorStyleOperationEnum.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

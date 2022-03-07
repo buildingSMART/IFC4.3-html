@@ -1,0 +1,861 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>8.15.3.4 IfcAsymmetricIShapeProfileDef - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a class="current" href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+<a class="sublink-1" href="../ifcactorresource/content.html">
+                            8.1 IfcActorResource
+                        </a>
+<a class="sublink-1" href="../ifcapprovalresource/content.html">
+                            8.2 IfcApprovalResource
+                        </a>
+<a class="sublink-1" href="../ifcconstraintresource/content.html">
+                            8.3 IfcConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifccostresource/content.html">
+                            8.4 IfcCostResource
+                        </a>
+<a class="sublink-1" href="../ifcdatetimeresource/content.html">
+                            8.5 IfcDateTimeResource
+                        </a>
+<a class="sublink-1" href="../ifcexternalreferenceresource/content.html">
+                            8.6 IfcExternalReferenceResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricconstraintresource/content.html">
+                            8.7 IfcGeometricConstraintResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometricmodelresource/content.html">
+                            8.8 IfcGeometricModelResource
+                        </a>
+<a class="sublink-1" href="../ifcgeometryresource/content.html">
+                            8.9 IfcGeometryResource
+                        </a>
+<a class="sublink-1" href="../ifcmaterialresource/content.html">
+                            8.10 IfcMaterialResource
+                        </a>
+<a class="sublink-1" href="../ifcmeasureresource/content.html">
+                            8.11 IfcMeasureResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationappearanceresource/content.html">
+                            8.12 IfcPresentationAppearanceResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationdefinitionresource/content.html">
+                            8.13 IfcPresentationDefinitionResource
+                        </a>
+<a class="sublink-1" href="../ifcpresentationorganizationresource/content.html">
+                            8.14 IfcPresentationOrganizationResource
+                        </a>
+<a class="sublink-1 current" href="../ifcprofileresource/content.html">
+                            8.15 IfcProfileResource
+                        </a>
+<a class="sublink-1" href="../ifcpropertyresource/content.html">
+                            8.16 IfcPropertyResource
+                        </a>
+<a class="sublink-1" href="../ifcquantityresource/content.html">
+                            8.17 IfcQuantityResource
+                        </a>
+<a class="sublink-1" href="../ifcrepresentationresource/content.html">
+                            8.18 IfcRepresentationResource
+                        </a>
+<a class="sublink-1" href="../ifcstructuralloadresource/content.html">
+                            8.19 IfcStructuralLoadResource
+                        </a>
+<a class="sublink-1" href="../ifctopologyresource/content.html">
+                            8.20 IfcTopologyResource
+                        </a>
+<a class="sublink-1" href="../ifcutilityresource/content.html">
+                            8.21 IfcUtilityResource
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>8.15.3.4 IfcAsymmetricIShapeProfileDef</h1>
+<h2><a id="8.15.3.4.1-Semantic-definition"></a>
+    8.15.3.4.1 Semantic definition
+<a href="IfcAsymmetricIShapeProfileDef.htm#8.15.3.4.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p><em><a href="IfcAsymmetricIShapeProfileDef.htm">IfcAsymmetricIShapeProfileDef</a></em> defines a section profile that provides the defining parameters of a singly symmetric I-shaped section. Its parameters and orientation relative to the position coordinate system are according to the following illustration. The centre of the position coordinate system is in the profile's centre of the bounding box.</p>
+<p>The overall width of the profile is implicitly given by the maximum of the bottom flange width and the top flange width.</p>
+<p><em><a href="IfcAsymmetricIShapeProfileDef.htm">IfcAsymmetricIShapeProfileDef</a></em> can also be used to model rail profiles if the application scenario does not require a full explicit shape model of the rail profile. Alternatively, <em><a href="IfcArbitraryClosedProfileDef.htm">IfcArbitraryClosedProfileDef</a></em> can be used to provide the exact shape of rail profiles. Either way, a reference to an external document or library should be provided to further define the profile as described at <em><a href="IfcProfileDef.htm">IfcProfileDef</a></em>.</p>
+<aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x2.</aside><aside class="aside-change"><mark>IFC2x3-CHANGE</mark>  All profile origins are now in the center of the bounding box. The attribute <em>CentreOfGravityInY</em> has been made OPTIONAL.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  Supertype changed from <em><a href="IfcIShapeProfileDef.htm">IfcIShapeProfileDef</a></em> to <em><a href="IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a></em>. Attributes which were inherited from <em><a href="IfcIShapeProfileDef.htm">IfcIShapeProfileDef</a></em> are now defined directly at <em><a href="IfcAsymmetricIShapeProfileDef.htm">IfcAsymmetricIShapeProfileDef</a></em> and have been partially renamed but were not reordered.
+Bottom flange may be narrower than top flange.
+Type of <em>TopFlangeFilletRadius</em> relaxed to allow for zero radius.
+Trailing attribute <em>CentreOfGravityInY</em> deleted, use respective property in <em>IfcExtendedProfileProperties</em> instead.
+Attributes <em>BottomFlangeEdgeRadius</em>, <em>BottomFlangeSlope</em>, <em>TopFlangeEdgeRadius</em>, <em>TopFlangeSlope</em> added.</aside>
+<p>Figure 8.15.3.4.A illustrates parameters of the asymmetric I-shaped section definition. The parameterized profile defines its own position coordinate system. The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of:</p>
+<ul>
+<li><em><a href="IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.Position</em></li>
+</ul>
+<p>By using offsets of the position location, the parameterized profile can be positioned centric (using x,y offsets = 0.), or at any position relative to the profile. The parameterized profile is defined by a set of parameter attributes. In the illustrated example, the 'CentreOfGravityInY' property in <em>IfcExtendedProfileProperties</em>, if provided, is negative.</p>
+<figure><a id="Figure-8.15.3.4.A-Assymetric-I-shape-profile"></a><img alt="asymmetric I shape profile" src="../figures/ifcasymmetricishapeprofiledef.gif" title="Figure 8.15.3.4.A — Assymetric I-shape profile"/><figcaption>Figure 8.15.3.4.A — Assymetric I-shape profile<a href="IfcAsymmetricIShapeProfileDef.htm#Figure-8.15.3.4.A-Assymetric-I-shape-profile"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.15.3.4.2-Entity-inheritance"></a>
+    8.15.3.4.2 Entity inheritance
+<a href="IfcAsymmetricIShapeProfileDef.htm#8.15.3.4.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
+<ol class="tier">
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="ancestor"><a href="IfcProfileDef.htm">IfcProfileDef</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="abstract ancestor"><a href="IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a></li>
+<li class=""><a href="IfcArbitraryClosedProfileDef.htm">IfcArbitraryClosedProfileDef</a></li>
+<li class=""><a href="IfcArbitraryOpenProfileDef.htm">IfcArbitraryOpenProfileDef</a></li>
+<li class=""><a href="IfcCompositeProfileDef.htm">IfcCompositeProfileDef</a></li>
+<li class=""><a href="IfcDerivedProfileDef.htm">IfcDerivedProfileDef</a></li>
+<li class=""><a href="IfcOpenCrossProfileDef.htm">IfcOpenCrossProfileDef</a></li>
+</ul>
+</li>
+<li>
+<i data-feather="arrow-up"></i>
+<ul class="classes classes-in-chain">
+<li class="current ancestor"><a href="IfcAsymmetricIShapeProfileDef.htm">IfcAsymmetricIShapeProfileDef</a></li>
+<li class=""><a href="IfcCShapeProfileDef.htm">IfcCShapeProfileDef</a></li>
+<li class=""><a href="IfcCircleProfileDef.htm">IfcCircleProfileDef</a></li>
+<li class=""><a href="IfcEllipseProfileDef.htm">IfcEllipseProfileDef</a></li>
+<li class=""><a href="IfcIShapeProfileDef.htm">IfcIShapeProfileDef</a></li>
+<li class=""><a href="IfcLShapeProfileDef.htm">IfcLShapeProfileDef</a></li>
+<li class=""><a href="IfcRectangleProfileDef.htm">IfcRectangleProfileDef</a></li>
+<li class=""><a href="IfcTShapeProfileDef.htm">IfcTShapeProfileDef</a></li>
+<li class="deprecated"><a href="IfcTrapeziumProfileDef.htm">IfcTrapeziumProfileDef</a></li>
+<li class=""><a href="IfcUShapeProfileDef.htm">IfcUShapeProfileDef</a></li>
+<li class=""><a href="IfcZShapeProfileDef.htm">IfcZShapeProfileDef</a></li>
+</ul>
+</li>
+</ol>
+<h2><a id="8.15.3.4.3-Attributes"></a>
+    8.15.3.4.3 Attributes
+<a href="IfcAsymmetricIShapeProfileDef.htm#8.15.3.4.3-Attributes"><i data-feather="link"></i></a></h2>
+<!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
+<figure><a id="Table-8.15.3.4.B"></a><table class="striped grouped attributes">
+<colgroup>
+<col style="width: 20px;"/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcProfileDef.htm">IfcProfileDef</a>
+<small>(4)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">1</td>
+<td data-label="Name">
+                
+                ProfileType
+                
+            </td>
+<td data-label="Type"><a href="IfcProfileTypeEnum.htm">IfcProfileTypeEnum</a></td>
+<td data-label="Description">
+<p>Defines the type of geometry into which this profile definition shall be resolved, either a curve or a surface area. In case of curve the profile should be referenced by a swept surface, in case of area the profile should be referenced by a swept area solid.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                ProfileName
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Description">
+<p>Human-readable name of the profile, for example according to a standard profile table. As noted above, machine-readable standardized profile designations should be provided in <em><a href="IfcExternalReference.htm">IfcExternalReference</a>.ItemReference</em>.</p>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasExternalReference</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects</td>
+<td data-label="Description">
+<p>Reference to external information, e.g. library, classification, or document information, which is associated with the profile.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark> New inverse attribute</aside>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#"></td>
+<td data-label="Name">
+<em>HasProperties</em>
+</td>
+<td data-label="Type">SET [0:?] OF <a href="IfcProfileProperties.htm">IfcProfileProperties</a> FOR ProfileDefinition</td>
+<td data-label="Description">
+<p>Additional properties of the profile, for example mechanical properties.</p>
+<aside class="aside-change"><mark>IFC4-CHANGE</mark> New inverse attribute</aside>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a>
+<small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">3</td>
+<td data-label="Name">
+                
+                Position
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcAxis2Placement2D.htm">IfcAxis2Placement2D</a></td>
+<td data-label="Description">
+<p>Position coordinate system of the parameterized profile definition. If unspecified, no translation and no rotation is applied.</p>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to show 5 hidden inherited attributes
+                </small>
+<small class="hide-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to hide 5 inherited attributes
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="4">
+<a href="IfcAsymmetricIShapeProfileDef.htm">IfcAsymmetricIShapeProfileDef</a>
+<small>(12)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">4</td>
+<td data-label="Name">
+                
+                BottomFlangeWidth
+                
+            </td>
+<td data-label="Type"><a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>Extent of the bottom flange, defined parallel to the x axis of the position coordinate system.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">5</td>
+<td data-label="Name">
+                
+                OverallDepth
+                
+            </td>
+<td data-label="Type"><a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>Total extent of the depth, defined parallel to the y axis of the position coordinate system.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">6</td>
+<td data-label="Name">
+                
+                WebThickness
+                
+            </td>
+<td data-label="Type"><a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>Thickness of the web of the I-shape. The web is centred on the x-axis and the y-axis of the position coordinate system.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">7</td>
+<td data-label="Name">
+                
+                BottomFlangeThickness
+                
+            </td>
+<td data-label="Type"><a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>Flange thickness of the bottom flange.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">8</td>
+<td data-label="Name">
+                
+                BottomFlangeFilletRadius
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
+<td data-label="Description">
+<p>The fillet between the web and the bottom flange.  0 if sharp-edged, omitted if unknown.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">9</td>
+<td data-label="Name">
+                
+                TopFlangeWidth
+                
+            </td>
+<td data-label="Type"><a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>Extent of the top flange, defined parallel to the x axis of the position coordinate system.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">10</td>
+<td data-label="Name">
+                
+                TopFlangeThickness
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
+<td data-label="Description">
+<p>Flange thickness of the top flange. This attribute is formally optional for historic reasons only. Whenever the flange thickness is known, it shall be provided by value.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">11</td>
+<td data-label="Name">
+                
+                TopFlangeFilletRadius
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
+<td data-label="Description">
+<p>The fillet between the web and the top flange.  0 if sharp-edged, omitted if unknown.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">12</td>
+<td data-label="Name">
+                
+                BottomFlangeEdgeRadius
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
+<td data-label="Description">
+<p>Radius of the upper edges of the bottom flange.  0 if sharp-edged, omitted if unknown.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">13</td>
+<td data-label="Name">
+                
+                BottomFlangeSlope
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcPlaneAngleMeasure.htm">IfcPlaneAngleMeasure</a></td>
+<td data-label="Description">
+<p>Slope of the upper faces of the bottom flange.  Non-zero in case of of tapered bottom flange, 0 in case of parallel bottom flange, omitted if unknown.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">14</td>
+<td data-label="Name">
+                
+                TopFlangeEdgeRadius
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a></td>
+<td data-label="Description">
+<p>Radius of the lower edges of the top flange.  0 if sharp-edged, omitted if unknown.</p>
+</td>
+</tr>
+<tr>
+<td data-label="#">15</td>
+<td data-label="Name">
+                
+                TopFlangeSlope
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcPlaneAngleMeasure.htm">IfcPlaneAngleMeasure</a></td>
+<td data-label="Description">
+<p>Slope of the lower faces of the top flange.  Non-zero in case of of tapered top flange, 0 in case of parallel top flange, omitted if unknown.</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.15.3.4.B<a href="IfcAsymmetricIShapeProfileDef.htm#Table-8.15.3.4.B"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.15.3.4.4-Formal-propositions"></a>
+    8.15.3.4.4 Formal propositions
+<a href="IfcAsymmetricIShapeProfileDef.htm#8.15.3.4.4-Formal-propositions"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-8.15.3.4.C"></a><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ValidBottomFilletRadius</td>
+<td>
+<p>The bottom fillet radius, if given, shall be within the range of allowed values.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">(NOT(EXISTS(BottomFlangeFilletRadius))) OR 
+(BottomFlangeFilletRadius &lt;= (BottomFlangeWidth - WebThickness)/2.)</code></pre>
+</td>
+</tr>
+<tr>
+<td>ValidFlangeThickness</td>
+<td>
+<p>The sum of flange thicknesses shall be less than the overall depth.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">NOT(EXISTS(TopFlangeThickness)) OR ((BottomFlangeThickness + TopFlangeThickness) &lt; OverallDepth)</code></pre>
+</td>
+</tr>
+<tr>
+<td>ValidTopFilletRadius</td>
+<td>
+<p>The top fillet radius, if given, shall be within the range of allowed values.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">(NOT(EXISTS(TopFlangeFilletRadius))) OR 
+(TopFlangeFilletRadius &lt;= (TopFlangeWidth - WebThickness)/2.)</code></pre>
+</td>
+</tr>
+<tr>
+<td>ValidWebThickness</td>
+<td>
+<p>The web thickness shall be less than either flange width.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">(WebThickness &lt; BottomFlangeWidth) AND (WebThickness &lt; TopFlangeWidth)</code></pre>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.15.3.4.C<a href="IfcAsymmetricIShapeProfileDef.htm#Table-8.15.3.4.C"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.15.3.4.5-Property-sets"></a>
+    8.15.3.4.5 Property sets
+<a href="IfcAsymmetricIShapeProfileDef.htm#8.15.3.4.5-Property-sets"><i data-feather="link"></i></a></h2>
+<p>
+</p><ul class="psets">
+<li>
+<a href="Pset_ProfileMechanical.htm">Pset_ProfileMechanical</a>
+<ul>
+<li>MassPerLength</li>
+<li>CrossSectionArea</li>
+<li>Perimeter</li>
+<li>MinimumPlateThickness</li>
+<li>MaximumPlateThickness</li>
+<li>CentreOfGravityInX</li>
+<li>CentreOfGravityInY</li>
+<li>ShearCentreZ</li>
+<li>ShearCentreY</li>
+<li>MomentOfInertiaY</li>
+<li>MomentOfInertiaZ</li>
+<li>MomentOfInertiaYZ</li>
+<li>TorsionalConstantX</li>
+<li>WarpingConstant</li>
+<li>ShearDeformationAreaZ</li>
+<li>ShearDeformationAreaY</li>
+<li>MaximumSectionModulusY</li>
+<li>MinimumSectionModulusY</li>
+<li>MaximumSectionModulusZ</li>
+<li>MinimumSectionModulusZ</li>
+<li>TorsionalSectionModulus</li>
+<li>ShearAreaZ</li>
+<li>ShearAreaY</li>
+<li>PlasticShapeFactorY</li>
+<li>PlasticShapeFactorZ</li>
+</ul>
+</li>
+</ul>
+<p>
+</p><h2><a id="8.15.3.4.6-Concept-usage"></a>
+    8.15.3.4.6 Concept usage
+<a href="IfcAsymmetricIShapeProfileDef.htm#8.15.3.4.6-Concept-usage"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-8.15.3.4.D"></a><table class="striped grouped concepts">
+<thead>
+<tr>
+<th>Concept</th>
+<th>Usage</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="group-inherited">
+<td colspan="3">
+<a href="IfcProfileDef.htm">IfcProfileDef</a>
+<small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Property_Sets/Property_Sets_for_Profiles/content.html">Property Sets for Profiles</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<p>This concept can be applied to the following resources:</p>
+<ul>
+<li>
+<a href="Pset_ProfileMechanical.htm">Pset_ProfileMechanical</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    Click to show 1 hidden inherited concepts
+                </small>
+<small class="hide-inherited" data-type="concept">
+<i data-feather="eye-off"></i>
+                    Click to hide 1 inherited concepts
+                </small>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.15.3.4.D<a href="IfcAsymmetricIShapeProfileDef.htm#Table-8.15.3.4.D"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.15.3.4.7-Formal-representation"></a>
+    8.15.3.4.7 Formal representation
+<a href="IfcAsymmetricIShapeProfileDef.htm#8.15.3.4.7-Formal-representation"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">ENTITY <a href="IfcAsymmetricIShapeProfileDef.htm">IfcAsymmetricIShapeProfileDef</a>
+ SUBTYPE OF (<a href="IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a>);
+	BottomFlangeWidth : <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a>;
+	OverallDepth : <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a>;
+	WebThickness : <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a>;
+	BottomFlangeThickness : <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a>;
+	BottomFlangeFilletRadius : OPTIONAL <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>;
+	TopFlangeWidth : <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a>;
+	TopFlangeThickness : OPTIONAL <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a>;
+	TopFlangeFilletRadius : OPTIONAL <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>;
+	BottomFlangeEdgeRadius : OPTIONAL <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>;
+	BottomFlangeSlope : OPTIONAL <a href="IfcPlaneAngleMeasure.htm">IfcPlaneAngleMeasure</a>;
+	TopFlangeEdgeRadius : OPTIONAL <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>;
+	TopFlangeSlope : OPTIONAL <a href="IfcPlaneAngleMeasure.htm">IfcPlaneAngleMeasure</a>;
+ WHERE
+	ValidBottomFilletRadius : (NOT(EXISTS(BottomFlangeFilletRadius))) OR 
+(BottomFlangeFilletRadius &lt;= (BottomFlangeWidth - WebThickness)/2.);
+	ValidFlangeThickness : NOT(EXISTS(TopFlangeThickness)) OR ((BottomFlangeThickness + TopFlangeThickness) &lt; OverallDepth);
+	ValidTopFilletRadius : (NOT(EXISTS(TopFlangeFilletRadius))) OR 
+(TopFlangeFilletRadius &lt;= (TopFlangeWidth - WebThickness)/2.);
+	ValidWebThickness : (WebThickness &lt; BottomFlangeWidth) AND (WebThickness &lt; TopFlangeWidth);
+END_ENTITY;</code></pre>
+<h2><a id="8.15.3.4.8-References"></a>
+    8.15.3.4.8 References
+<a href="IfcAsymmetricIShapeProfileDef.htm#8.15.3.4.8-References"><i data-feather="link"></i></a></h2>
+<ul class="references">
+<li><i data-feather="paperclip"></i><a href="IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a></li>
+</ul>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+<div class="changelog">
+<h3><a id="8.15.3.4.9-Changelog"></a>
+                        8.15.3.4.9 Changelog
+                    <a href="IfcAsymmetricIShapeProfileDef.htm#8.15.3.4.9-Changelog"><i data-feather="link"></i></a></h3>
+<h4 class="collapsed"><a id="8.15.3.4.9.1-IFC4"></a>
+                        8.15.3.4.9.1 IFC4
+                    <a href="IfcAsymmetricIShapeProfileDef.htm#8.15.3.4.9.1-IFC4"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                attributes,
+                                BottomFlangeEdgeRadius
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                attributes,
+                                BottomFlangeFilletRadius
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                attributes,
+                                BottomFlangeSlope
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                attributes,
+                                BottomFlangeWidth
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                attributes,
+                                OverallDepth
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                attributes,
+                                TopFlangeEdgeRadius
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                attributes,
+                                TopFlangeFilletRadius
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                attributes,
+                                TopFlangeSlope
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where_rules,
+                                ValidBottomFilletRadius
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where_rules,
+                                ValidFlangeThickness
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where_rules,
+                                ValidTopFilletRadius
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where_rules,
+                                ValidWebThickness
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes CentreOfGravityInY is_optional,
+                                Changed from True to False
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes CentreOfGravityInY name,
+                                Changed from CentreOfGravityInY to BottomFlangeThickness
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes TopFlangeFilletRadius is_optional,
+                                Changed from True to False
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attributes TopFlangeFilletRadius name,
+                                Changed from TopFlangeFilletRadius to WebThickness
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                supertype,
+                                Changed from <a href="IfcIShapeProfileDef.htm">IfcIShapeProfileDef</a> to <a href="IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a>
+</small>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/resource/IfcProfileResource/Entities/IfcAsymmetricIShapeProfileDef.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>

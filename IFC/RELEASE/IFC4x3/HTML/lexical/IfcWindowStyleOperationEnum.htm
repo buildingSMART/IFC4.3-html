@@ -1,0 +1,277 @@
+<html lang="en">
+<head>
+<link href="../assets/css/mini-default.min.css" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>7.1.2.9 IfcWindowStyleOperationEnum - IFC4.3.0.0 Documentation</title>
+<link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<header>
+<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+</header>
+</div>
+<div class="row">
+<div class="col-md-2">
+<nav>
+<div>
+<a href="../../../../../index.html">
+                             Cover
+                        </a>
+<a href="../toc.html">
+                             Contents
+                        </a>
+<a href="../content/foreword.htm">
+                             Foreword
+                        </a>
+<a href="../content/introduction.htm">
+                             Introduction
+                        </a>
+</div>
+<div>
+<a href="../content/scope.htm">
+                            1 Scope
+                        </a>
+<a href="../content/normative_references.htm">
+                            2 Normative references
+                        </a>
+<a href="../content/terms_and_definitions.htm">
+                            3 Terms, definitions, and abbreviated terms
+                        </a>
+<a href="../concepts/content.html">
+                            4 Fundamental concepts and assumptions
+                        </a>
+<a href="../chapter-5.html">
+                            5 Core data schemas
+                        </a>
+<a href="../chapter-6.html">
+                            6 Shared element data schemas
+                        </a>
+<a class="current" href="../chapter-7.html">
+                            7 Domain specific data schemas
+                        </a>
+<a class="sublink-1 current" href="../ifcarchitecturedomain/content.html">
+                            7.1 IfcArchitectureDomain
+                        </a>
+<a class="sublink-1" href="../ifcbuildingcontrolsdomain/content.html">
+                            7.2 IfcBuildingControlsDomain
+                        </a>
+<a class="sublink-1" href="../ifcconstructionmgmtdomain/content.html">
+                            7.3 IfcConstructionMgmtDomain
+                        </a>
+<a class="sublink-1" href="../ifcelectricaldomain/content.html">
+                            7.4 IfcElectricalDomain
+                        </a>
+<a class="sublink-1" href="../ifchvacdomain/content.html">
+                            7.5 IfcHvacDomain
+                        </a>
+<a class="sublink-1" href="../ifcplumbingfireprotectiondomain/content.html">
+                            7.6 IfcPlumbingFireProtectionDomain
+                        </a>
+<a class="sublink-1" href="../ifcportsandwaterwaysdomain/content.html">
+                            7.7 IfcPortsAndWaterwaysDomain
+                        </a>
+<a class="sublink-1" href="../ifcraildomain/content.html">
+                            7.8 IfcRailDomain
+                        </a>
+<a class="sublink-1" href="../ifcroaddomain/content.html">
+                            7.9 IfcRoadDomain
+                        </a>
+<a class="sublink-1" href="../ifcstructuralanalysisdomain/content.html">
+                            7.10 IfcStructuralAnalysisDomain
+                        </a>
+<a class="sublink-1" href="../ifcstructuralelementsdomain/content.html">
+                            7.11 IfcStructuralElementsDomain
+                        </a>
+<a href="../chapter-8.html">
+                            8 Resource definition data schemas
+                        </a>
+</div>
+<div>
+<a href="../annex-a.html">
+                            A Computer interpretable listings
+                        </a>
+<a href="../annex-b.html">
+                            B Alphabetical listings
+                        </a>
+<a href="../annex-c.html">
+                            C Inheritance listings
+                        </a>
+<a href="../annex-d.html">
+                            D Diagrams
+                        </a>
+<a href="../annex-e.html">
+                            E Examples
+                        </a>
+<a href="../annex-f.html">
+                            F Change logs
+                        </a>
+</div>
+<div>
+<a href="../content/bibliography.htm">
+                             Bibliography
+                        </a>
+<a href="../index.htm">
+                             Index
+                        </a>
+</div>
+</nav>
+</div>
+<div class="col-md-8" id="main-content">
+<h1>7.1.2.9 IfcWindowStyleOperationEnum</h1>
+<h2><a id="7.1.2.9.1-Semantic-definition"></a>
+    7.1.2.9.1 Semantic definition
+<a href="IfcWindowStyleOperationEnum.htm#7.1.2.9.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<p>This enumeration defines the basic configuration of the window type in terms of the number of window panels and the subdivision of the total window. The window configurations are given for windows with one, two or three panels (including fixed panels) as shown in Figure 1.</p>
+<p>Windows which are subdivided into more than three panels have to be defined by the geometry only. The type of such windows is USERDEFINED.</p>
+<aside class="aside-history"><mark>HISTORY</mark>  New Enumeration in IFC2.0.</aside>
+<p>Note:</p>
+<ol>
+<li>The way how each panel operates is defined at the <em><a href="IfcWindowPanelProperties.htm">IfcWindowPanelProperties</a>.OperationType</em>.</li>
+<li>The reference from the window panel to the location of that panel in the window style configuration is handled by the <em><a href="IfcWindowPanelProperties.htm">IfcWindowPanelProperties</a>.PanelPosition</em>.</li>
+<li>The figures/ are shown as elevations in the XZ plane of the local placement of the window, looking into the direction of the positive Y axis.</li>
+<li>These figures/ are only shown as illustrations</li>
+</ol>
+<h2><a id="7.1.2.9.2-Type-values"></a>
+    7.1.2.9.2 Type values
+<a href="IfcWindowStyleOperationEnum.htm#7.1.2.9.2-Type-values"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-7.1.2.9.J"></a><table class="striped type-values">
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Name"><code>DOUBLE_PANEL_HORIZONTAL</code>
+</td><td data-label="Description">
+<p>Window with two panels. The configuration of the panels is
+horizontally.</p><figure><a id="Figure-7.1.2.9.A"></a><img alt="" src="../figures/ifcwindowstyleoperationenum-fig03.gif"/><figcaption>Figure 7.1.2.9.A<a href="IfcWindowStyleOperationEnum.htm#Figure-7.1.2.9.A"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>DOUBLE_PANEL_VERTICAL</code>
+</td><td data-label="Description">
+<p>Window with two panels. The configuration of the panels is vertically.</p><figure><a id="Figure-7.1.2.9.B"></a><img alt="" src="../figures/ifcwindowstyleoperationenum-fig02.gif"/><figcaption>Figure 7.1.2.9.B<a href="IfcWindowStyleOperationEnum.htm#Figure-7.1.2.9.B"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>SINGLE_PANEL</code>
+</td><td data-label="Description">
+<p>Window with one panel.</p><figure><a id="Figure-7.1.2.9.C"></a><img alt="" src="../figures/ifcwindowstyleoperationenum-fig01.gif"/><figcaption>Figure 7.1.2.9.C<a href="IfcWindowStyleOperationEnum.htm#Figure-7.1.2.9.C"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>TRIPLE_PANEL_BOTTOM</code>
+</td><td data-label="Description">
+<p>Window with three panels. The configuration of two panels is vertically and
+the third one is horizontally at the bottom.</p><figure><a id="Figure-7.1.2.9.D"></a><img alt="" src="../figures/ifcwindowstyleoperationenum-fig06.gif"/><figcaption>Figure 7.1.2.9.D<a href="IfcWindowStyleOperationEnum.htm#Figure-7.1.2.9.D"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>TRIPLE_PANEL_HORIZONTAL</code>
+</td><td data-label="Description">
+<p>Window with three panels. The configuration of the panels is horizontally.</p><figure><a id="Figure-7.1.2.9.E"></a><img alt="" src="../figures/ifcwindowstyleoperationenum-fig05.gif"/><figcaption>Figure 7.1.2.9.E<a href="IfcWindowStyleOperationEnum.htm#Figure-7.1.2.9.E"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>TRIPLE_PANEL_LEFT</code>
+</td><td data-label="Description">
+<p>Window with three panels. The configuration of two panels is horizontally and
+the third one is vertically at the left hand side.</p><figure><a id="Figure-7.1.2.9.F"></a><img alt="" src="../figures/ifcwindowstyleoperationenum-fig08.gif"/><figcaption>Figure 7.1.2.9.F<a href="IfcWindowStyleOperationEnum.htm#Figure-7.1.2.9.F"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>TRIPLE_PANEL_RIGHT</code>
+</td><td data-label="Description">
+<p>Window with three panels. The configuration of two panels is horizontally and
+the third one is vertically at the right hand side.</p><figure><a id="Figure-7.1.2.9.G"></a><img alt="" src="../figures/ifcwindowstyleoperationenum-fig09.gif"/><figcaption>Figure 7.1.2.9.G<a href="IfcWindowStyleOperationEnum.htm#Figure-7.1.2.9.G"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>TRIPLE_PANEL_TOP</code>
+</td><td data-label="Description">
+<p>Window with three panels. The configuration of two panels is vertically and
+the third one is horizontally at the top.</p><figure><a id="Figure-7.1.2.9.H"></a><img alt="" src="../figures/ifcwindowstyleoperationenum-fig07.gif"/><figcaption>Figure 7.1.2.9.H<a href="IfcWindowStyleOperationEnum.htm#Figure-7.1.2.9.H"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>TRIPLE_PANEL_VERTICAL</code>
+</td><td data-label="Description">
+<p>Window with three panels. The configuration of the panels is
+vertically.</p><figure><a id="Figure-7.1.2.9.I"></a><img alt="" src="../figures/ifcwindowstyleoperationenum-fig04.gif"/><figcaption>Figure 7.1.2.9.I<a href="IfcWindowStyleOperationEnum.htm#Figure-7.1.2.9.I"><i data-feather="link"></i></a></figcaption></figure>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>USERDEFINED</code>
+</td><td data-label="Description">
+<p>user defined operation type</p>
+</td>
+</tr>
+<tr>
+<td data-label="Name"><code>NOTDEFINED</code>
+</td><td data-label="Description">
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 7.1.2.9.J<a href="IfcWindowStyleOperationEnum.htm#Table-7.1.2.9.J"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="7.1.2.9.3-Formal-representation"></a>
+    7.1.2.9.3 Formal representation
+<a href="IfcWindowStyleOperationEnum.htm#7.1.2.9.3-Formal-representation"><i data-feather="link"></i></a></h2>
+<pre><code class="language-express hljs">TYPE <a href="IfcWindowStyleOperationEnum.htm">IfcWindowStyleOperationEnum</a> = ENUMERATION OF
+	(DOUBLE_PANEL_HORIZONTAL
+	,DOUBLE_PANEL_VERTICAL
+	,SINGLE_PANEL
+	,TRIPLE_PANEL_BOTTOM
+	,TRIPLE_PANEL_HORIZONTAL
+	,TRIPLE_PANEL_LEFT
+	,TRIPLE_PANEL_RIGHT
+	,TRIPLE_PANEL_TOP
+	,TRIPLE_PANEL_VERTICAL
+	,USERDEFINED
+	,NOTDEFINED);
+END_TYPE;</code></pre>
+</div>
+<div class="col-md-2">
+<div class="card fluid shadowed hidden" id="section-navigation">
+<p>
+</p><center><small>Jump to section</small></center>
+<ol class="referenced-list small"></ol>
+</div>
+</div>
+</div>
+<div class="row">
+<footer>
+<p>
+<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license"><img alt="Creative Commons License" src="../../../../../lib/i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" style="border-width:0"/></a>
+<small>
+                        Copyright © 1996-2022 buildingSMART International Limited. Some rights reserved. Any technical documentation made available by buildingSMART International Limited is the copyrighted work of buildingSMART International Limited and is owned by buildingSMART International Limited. The Industry Foundation Classes are published under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). Read the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode">full license text here</a>. For more information please refer to our <a href="https://buildingsmart-1xbd3ajdayi.netdna-ssl.com/wp-content/uploads/2021/06/bSI-Intellectual-Property-Policy.pdf">IP Policy.</a>
+</small>
+</p>
+<a class="button" id="back-to-top"><i data-feather="arrow-up-circle"></i></a>
+</footer>
+</div>
+</div>
+<script>
+        window.appconfig = {
+            'path': '/docs/schemas/domain/IfcArchitectureDomain/Types/IfcWindowStyleOperationEnum.md',
+            'base': '/IFC/RELEASE/IFC4x3/HTML',
+            'repo': 'buildingSMART/IFC4.3.x-development',
+        };
+    </script>
+<script src="../../../../../lib/unpkg.com/feather-icons"></script>
+<script src="../../../../../lib/polyfill.io/v3/polyfill.min.js%3Ffeatures=es6"></script>
+<script async="" id="MathJax-script" src="../../../../../lib/cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link href="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css" rel="stylesheet"/>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="../../../../../lib/cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="../assets/js/app.js" type="text/javascript"></script>
+</body>
+</html>
