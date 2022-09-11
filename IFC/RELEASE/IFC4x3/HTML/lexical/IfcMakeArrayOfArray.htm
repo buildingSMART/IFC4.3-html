@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.6.15 IfcMakeArrayOfArray - IFC4.3.0.0 Documentation</title>
+<title>8.9.6.14 IfcMakeArrayOfArray - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -151,15 +153,15 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.9.6.15 IfcMakeArrayOfArray</h1>
-<h2><a id="8.9.6.15.1-Semantic-definition"></a>
-    8.9.6.15.1 Semantic definition
-<a href="IfcMakeArrayOfArray.htm#8.9.6.15.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<h1>8.9.6.14 IfcMakeArrayOfArray</h1>
+<h2><a id="8.9.6.14.1-Semantic-definition"></a>
+    8.9.6.14.1 Semantic definition
+<a href="IfcMakeArrayOfArray.htm#8.9.6.14.1-Semantic-definition"><i data-feather="link"></i></a></h2>
 <aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO/CD 10303-42:1992
 This function make array of array builds an array of arrays from a list of lists. The function first checks that the specified array dimensions are compatible with the sizes of the lists, and in particular, verifies that all the sub-lists contain the same number of elements. A null result is returned if the input data is incompatible with the dimensions. This function is used to construct the arrays of control points and weights for a B-spline surface.</aside><aside class="aside-note"><mark>NOTE</mark>  Function adapted from <strong>make_array_of_array</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New function in IFC4</aside>
-<h2><a id="8.9.6.15.2-Formal-representation"></a>
-    8.9.6.15.2 Formal representation
-<a href="IfcMakeArrayOfArray.htm#8.9.6.15.2-Formal-representation"><i data-feather="link"></i></a></h2>
+<h2><a id="8.9.6.14.2-Formal-representation"></a>
+    8.9.6.14.2 Formal representation
+<a href="IfcMakeArrayOfArray.htm#8.9.6.14.2-Formal-representation"><i data-feather="link"></i></a></h2>
 <pre><code class="language-express hljs">FUNCTION <a href="IfcMakeArrayOfArray.htm">IfcMakeArrayOfArray</a>
 (Lis : LIST[1:?] OF LIST [1:?] OF GENERIC : T;
  Low1, U1, Low2, U2 : INTEGER):
@@ -188,9 +190,9 @@ ARRAY [Low1:U1] OF ARRAY [Low2:U2] OF GENERIC : T;
   RETURN (Res);
 
 END_FUNCTION;</code></pre>
-<h2><a id="8.9.6.15.3-References"></a>
-    8.9.6.15.3 References
-<a href="IfcMakeArrayOfArray.htm#8.9.6.15.3-References"><i data-feather="link"></i></a></h2>
+<h2><a id="8.9.6.14.3-References"></a>
+    8.9.6.14.3 References
+<a href="IfcMakeArrayOfArray.htm#8.9.6.14.3-References"><i data-feather="link"></i></a></h2>
 <ul class="references">
 <li><i data-feather="paperclip"></i><a href="IfcBSplineSurface.htm">IfcBSplineSurface</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcRationalBSplineSurfaceWithKnots.htm">IfcRationalBSplineSurfaceWithKnots</a></li>
@@ -201,6 +203,26 @@ END_FUNCTION;</code></pre>
 <p>
 </p><center><small>Jump to section</small></center>
 <ol class="referenced-list small"></ol>
+</div>
+<div class="changelog">
+<h3><a id="8.9.6.14.4-Changelog"></a>
+                        8.9.6.14.4 Changelog
+                    <a href="IfcMakeArrayOfArray.htm#8.9.6.14.4-Changelog"><i data-feather="link"></i></a></h3>
+<h4><a id="8.9.6.14.4.1-IFC4"></a>
+                        8.9.6.14.4.1 IFC4
+                    <a href="IfcMakeArrayOfArray.htm#8.9.6.14.4.1-IFC4"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                New resource
+                                
+                            </small>
+</li>
+</ul>
 </div>
 </div>
 </div>

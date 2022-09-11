@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>Annex E Examples - ProjectSetup_2 - IFC4.3.0.0 Documentation</title>
+<title>Annex E Examples - ProjectSetup_2 - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -117,7 +119,7 @@
   - <code><a href="../lexical/IfcOrganization.htm">IfcOrganization</a></code></p>
 <h3><a id="Supporting-files"></a>Supporting files<a href="ProjectSetup_2.html#Supporting-files"><i data-feather="link"></i></a></h3>
 <p>Following files correspond to this scenario:</p>
-<figure><a id="Table-be5477c5-c239-4fd2-9686-cc65b5230dff"></a><table>
+<figure><a id="Table-34cf05bf-ac22-4a4b-808a-7d20987d286c"></a><table>
 <thead>
 <tr>
 <th>Filename</th>
@@ -134,7 +136,7 @@
 <td>a screen dump of owner history</td>
 </tr>
 </tbody>
-</table><figcaption>Table be5477c5-c239-4fd2-9686-cc65b5230dff<a href="ProjectSetup_2.html#Table-be5477c5-c239-4fd2-9686-cc65b5230dff"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>Table 34cf05bf-ac22-4a4b-808a-7d20987d286c<a href="ProjectSetup_2.html#Table-34cf05bf-ac22-4a4b-808a-7d20987d286c"><i data-feather="link"></i></a></figcaption></figure>
 <h3><a id="Additional-explanation"></a>Additional explanation<a href="ProjectSetup_2.html#Additional-explanation"><i data-feather="link"></i></a></h3>
 <p>This UT adds some information about the person and application responsible for authoring the project.
 There are no products, geometries, properties or anything inside.
@@ -143,8 +145,8 @@ The main purpose is to have a basis for all UT, where this kind of <em>boilerpla
     Images
 <a href="ProjectSetup_2.html#Images"><i data-feather="link"></i></a></h2>
 <ul class="thumbnails">
-<li><figure><a id="Figure-933f70e1-b2aa-4d5d-ba88-3f30af05c457"></a><a href="../examples/ProjectSetup_2/UT_ProjectSetup_2.png"><img src="../examples/ProjectSetup_2/UT_ProjectSetup_2.png"/></a><figcaption>Figure 933f70e1-b2aa-4d5d-ba88-3f30af05c457<a href="ProjectSetup_2.html#Figure-933f70e1-b2aa-4d5d-ba88-3f30af05c457"><i data-feather="link"></i></a></figcaption></figure></li>
-<li><figure><a id="Figure-5726bf1a-cab9-4d2a-9c83-c51c8de13981"></a><a href="../examples/ProjectSetup_2/thumb.png"><img src="../examples/ProjectSetup_2/thumb.png"/></a><figcaption>Figure 5726bf1a-cab9-4d2a-9c83-c51c8de13981<a href="ProjectSetup_2.html#Figure-5726bf1a-cab9-4d2a-9c83-c51c8de13981"><i data-feather="link"></i></a></figcaption></figure></li>
+<li><figure><a id="Figure-0546bfbf-f8e2-47a1-b411-f1011d6793e5"></a><a href="../examples/ProjectSetup_2/UT_ProjectSetup_2.png"><img src="../examples/ProjectSetup_2/UT_ProjectSetup_2.png"/></a><figcaption>Figure 0546bfbf-f8e2-47a1-b411-f1011d6793e5<a href="ProjectSetup_2.html#Figure-0546bfbf-f8e2-47a1-b411-f1011d6793e5"><i data-feather="link"></i></a></figcaption></figure></li>
+<li><figure><a id="Figure-ff4a0b89-2f6b-43a4-869c-646063642f3e"></a><a href="../examples/ProjectSetup_2/thumb.png"><img src="../examples/ProjectSetup_2/thumb.png"/></a><figcaption>Figure ff4a0b89-2f6b-43a4-869c-646063642f3e<a href="ProjectSetup_2.html#Figure-ff4a0b89-2f6b-43a4-869c-646063642f3e"><i data-feather="link"></i></a></figcaption></figure></li>
 </ul>
 <h2><a id="IFC-SPF-source"></a>
     IFC-SPF source
@@ -164,42 +166,42 @@ ENDSEC;
 DATA;
 
 /* ------- UT ProjectSetup_1 ------------------------------------------------------------------- */
-#1 = IFCDIMENSIONALEXPONENTS(0, 0, 0, 0, 0, 0, 0);
-#2 = IFCDIRECTION((1., 0., 0.));
-#3 = IFCDIRECTION((0., 1., 0.));
-#4 = IFCDIRECTION((0., 0., 1.));
-#5 = IFCCARTESIANPOINT((0., 0., 0.));
+#1 = <a href="../lexical/IfcDimensionalExponents.htm">IFCDIMENSIONALEXPONENTS</a>(0, 0, 0, 0, 0, 0, 0);
+#2 = <a href="../lexical/IfcDirection.htm">IFCDIRECTION</a>((1., 0., 0.));
+#3 = <a href="../lexical/IfcDirection.htm">IFCDIRECTION</a>((0., 1., 0.));
+#4 = <a href="../lexical/IfcDirection.htm">IFCDIRECTION</a>((0., 0., 1.));
+#5 = <a href="../lexical/IfcCartesianPoint.htm">IFCCARTESIANPOINT</a>((0., 0., 0.));
 /* ------ Added a reference to owner history to the <a href="../lexical/IfcProject.htm">IfcProject</a> --------------------------------- */
-#16 = IFCPROJECT('2DAvEupIz0HQr73cMaawtY', #6, 'BoilerPlate', 'The bare minimum of an IFC file exchange with no content, only boilerplate code.', $, $, $, (#28), #17);
-#17 = IFCUNITASSIGNMENT((#18, #19, #20, #24, #25, #26, #27));
-#18 = IFCSIUNIT(*, .LENGTHUNIT., $, .METRE.);
-#19 = IFCSIUNIT(*, .AREAUNIT., $, .SQUARE_METRE.);
-#20 = IFCSIUNIT(*, .VOLUMEUNIT., $, .CUBIC_METRE.);
-#22 = IFCSIUNIT(*, .PLANEANGLEUNIT., $, .RADIAN.);
-#23 = IFCMEASUREWITHUNIT(IFCPLANEANGLEMEASURE(0.017453292519943295), #22);
-#24 = IFCCONVERSIONBASEDUNIT(#1, .PLANEANGLEUNIT., 'degree', #23);
-#25 = IFCSIUNIT(*, .MASSUNIT., .KILO., .GRAM.);
-#26 = IFCSIUNIT(*, .TIMEUNIT., $, .SECOND.);
-#27 = IFCMONETARYUNIT('EUR');
-#28 = IFCGEOMETRICREPRESENTATIONCONTEXT($, 'Model', 3, 1.E-6, #29, #3);
-#29 = IFCAXIS2PLACEMENT3D(#5, #4, #2);
+#16 = <a href="../lexical/IfcProject.htm">IFCPROJECT</a>('2DAvEupIz0HQr73cMaawtY', #6, 'BoilerPlate', 'The bare minimum of an IFC file exchange with no content, only boilerplate code.', $, $, $, (#28), #17);
+#17 = <a href="../lexical/IfcUnitAssignment.htm">IFCUNITASSIGNMENT</a>((#18, #19, #20, #24, #25, #26, #27));
+#18 = <a href="../lexical/IfcSIUnit.htm">IFCSIUNIT</a>(*, .LENGTHUNIT., $, .METRE.);
+#19 = <a href="../lexical/IfcSIUnit.htm">IFCSIUNIT</a>(*, .AREAUNIT., $, .SQUARE_METRE.);
+#20 = <a href="../lexical/IfcSIUnit.htm">IFCSIUNIT</a>(*, .VOLUMEUNIT., $, .CUBIC_METRE.);
+#22 = <a href="../lexical/IfcSIUnit.htm">IFCSIUNIT</a>(*, .PLANEANGLEUNIT., $, .RADIAN.);
+#23 = <a href="../lexical/IfcMeasureWithUnit.htm">IFCMEASUREWITHUNIT</a>(<a href="../lexical/IfcPlaneAngleMeasure.htm">IFCPLANEANGLEMEASURE</a>(0.017453292519943295), #22);
+#24 = <a href="../lexical/IfcConversionBasedUnit.htm">IFCCONVERSIONBASEDUNIT</a>(#1, .PLANEANGLEUNIT., 'degree', #23);
+#25 = <a href="../lexical/IfcSIUnit.htm">IFCSIUNIT</a>(*, .MASSUNIT., .KILO., .GRAM.);
+#26 = <a href="../lexical/IfcSIUnit.htm">IFCSIUNIT</a>(*, .TIMEUNIT., $, .SECOND.);
+#27 = <a href="../lexical/IfcMonetaryUnit.htm">IFCMONETARYUNIT</a>('EUR');
+#28 = <a href="../lexical/IfcGeometricRepresentationContext.htm">IFCGEOMETRICREPRESENTATIONCONTEXT</a>($, 'Model', 3, 1.E-6, #29, #3);
+#29 = <a href="../lexical/IfcAxis2Placement3D.htm">IFCAXIS2PLACEMENT3D</a>(#5, #4, #2);
 
 /* ------- UT ProjectSetup_2 ------------------------------------------------------------------- */
 /* ------- <a href="../lexical/IfcOwnerHistory.htm">IfcOwnerHistory</a> contain information about the person and organization --------------- */
 /* ------- that produced this file ------------------------------------------------------------- */
-#6 = IFCOWNERHISTORY(#11, #15, .READONLY., .ADDED., 1594836000, #11, #15, 1594836000);
-#7 = IFCACTORROLE(.CIVILENGINEER., $, $);
+#6 = <a href="../lexical/IfcOwnerHistory.htm">IFCOWNERHISTORY</a>(#11, #15, .READONLY., .ADDED., 1594836000, #11, #15, 1594836000);
+#7 = <a href="../lexical/IfcActorRole.htm">IFCACTORROLE</a>(.CIVILENGINEER., $, $);
 /* ------- Testing some special characters: LaTeX code: {\ss} and \"{u} ------------------------ */
-#8 = IFCPOSTALADDRESS(.OFFICE., $, $, $, ('Arcisstra\X2\00DF\X0\e 21'), $, 'M\X2\00FC\X0\nchen', 'Bayern', '80333', 'Deutschland');
+#8 = <a href="../lexical/IfcPostalAddress.htm">IFCPOSTALADDRESS</a>(.OFFICE., $, $, $, ('Arcisstra\X2\00DF\X0\e 21'), $, 'M\X2\00FC\X0\nchen', 'Bayern', '80333', 'Deutschland');
 /* ------- Testing some special characters: LaTeX code: \v{S} ---------------------------------- */
-#9 = IFCPERSON($, 'Jaud', '\X2\0160\X0\tefan', $, $, $, (#7), (#8));
-#10 = IFCORGANIZATION($, 'bSI', $, (#7), (#8));
-#11 = IFCPERSONANDORGANIZATION(#9, #10, (#7));
-#12 = IFCACTORROLE(.USERDEFINED., 'Validation lead', $);
+#9 = <a href="../lexical/IfcPerson.htm">IFCPERSON</a>($, 'Jaud', '\X2\0160\X0\tefan', $, $, $, (#7), (#8));
+#10 = <a href="../lexical/IfcOrganization.htm">IFCORGANIZATION</a>($, 'bSI', $, (#7), (#8));
+#11 = <a href="../lexical/IfcPersonAndOrganization.htm">IFCPERSONANDORGANIZATION</a>(#9, #10, (#7));
+#12 = <a href="../lexical/IfcActorRole.htm">IFCACTORROLE</a>(.USERDEFINED., 'Validation lead', $);
 /* ------- Testing some special characters: LaTeX code: {\ss} and \"{u} ------------------------ */
-#13 = IFCPOSTALADDRESS(.OFFICE., 'Main office', $, 'MUC/IT', ('Arcisstra\X2\00DF\X0\e 21'), $, 'M\X2\00FC\X0\nchen', 'Bayern', '80333', 'Germany');
-#14 = IFCORGANIZATION($, 'buildingSMART International', 'www.buildingsmart.org', (#12), (#13));
-#15 = IFCAPPLICATION(#14, '3.0', 'Sublime Text', 'ST');
+#13 = <a href="../lexical/IfcPostalAddress.htm">IFCPOSTALADDRESS</a>(.OFFICE., 'Main office', $, 'MUC/IT', ('Arcisstra\X2\00DF\X0\e 21'), $, 'M\X2\00FC\X0\nchen', 'Bayern', '80333', 'Germany');
+#14 = <a href="../lexical/IfcOrganization.htm">IFCORGANIZATION</a>($, 'buildingSMART International', 'www.buildingsmart.org', (#12), (#13));
+#15 = <a href="../lexical/IfcApplication.htm">IFCAPPLICATION</a>(#14, '3.0', 'Sublime Text', 'ST');
 
 ENDSEC;
 END-ISO-10303-21;

@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.21 IfcCompositeCurveOnSurface - IFC4.3.0.0 Documentation</title>
+<title>8.9.3.21 IfcCompositeCurveOnSurface - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -157,7 +159,15 @@
 <a href="IfcCompositeCurveOnSurface.htm#8.9.3.21.1-Semantic-definition"><i data-feather="link"></i></a></h2>
 <p>The <em><a href="IfcCompositeCurveOnSurface.htm">IfcCompositeCurveOnSurface</a></em> is a collection of segments, based on p-curves. i.e. a curve which lies on the basis of a surface and is defined in the parameter space of that surface. The p-curve segment is a special type of a composite curve segment and shall only be used to bound a surface.</p>
 <aside class="aside-note"><mark>NOTE</mark> Definition according to ISO/CD 10303-42:1992
-A composite curve on surface is a collection of segments which are curves on a surface. Each segment shall lie on the basis surface.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC4.</aside>
+A composite curve on surface is a collection of segments which are curves on a surface. Each segment shall lie on the basis surface.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC4.</aside><blockquote>
+<p>There shall be at least positional continuity between adjacent segments. The parameterization of the composite curve is obtained from the accumulation of the parametric ranges of the segments. The first segment is parameterized from <em>0</em> to <em>l~1~</em>, and, for <em>i ≥ 2</em>, the <em>i^th^</em> segment is parameterized from</p>
+<blockquote>
+<figure><a id="Figure-8.9.3.21.A"></a><img alt="formula" src="../figures/ifccompositecurveonsurface-math1.gif"/>
+where <em>l~k~</em> is the parametric length (that is, the difference between maximum and minimum parameter values) of the <em>k^th^</em> curve segment.
+<figcaption>Figure 8.9.3.21.A<a href="IfcCompositeCurveOnSurface.htm#Figure-8.9.3.21.A"><i data-feather="link"></i></a></figcaption></figure>
+</blockquote>
+<p>Entity adapted from <strong>composite_curve_on_surface</strong> defined in ISO 10303-42.</p>
+</blockquote>
 <h2><a id="8.9.3.21.2-Entity-inheritance"></a>
     8.9.3.21.2 Entity inheritance
 <a href="IfcCompositeCurveOnSurface.htm#8.9.3.21.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
@@ -249,7 +259,7 @@ A composite curve on surface is a collection of segments which are curves on a s
     8.9.3.21.3 Attributes
 <a href="IfcCompositeCurveOnSurface.htm#8.9.3.21.3-Attributes"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a id="Table-8.9.3.21.A"></a><table class="striped grouped attributes">
+<figure><a id="Table-8.9.3.21.B"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -405,11 +415,11 @@ A composite curve on surface is a collection of segments which are curves on a s
 </td>
 </tr>
 </tbody>
-</table><figcaption>Table 8.9.3.21.A<a href="IfcCompositeCurveOnSurface.htm#Table-8.9.3.21.A"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>Table 8.9.3.21.B<a href="IfcCompositeCurveOnSurface.htm#Table-8.9.3.21.B"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a id="8.9.3.21.4-Formal-propositions"></a>
     8.9.3.21.4 Formal propositions
 <a href="IfcCompositeCurveOnSurface.htm#8.9.3.21.4-Formal-propositions"><i data-feather="link"></i></a></h2>
-<figure><a id="Table-8.9.3.21.B"></a><table>
+<figure><a id="Table-8.9.3.21.C"></a><table>
 <thead>
 <tr>
 <th>Name</th>
@@ -429,7 +439,7 @@ A composite curve on surface is a collection of segments which are curves on a s
 </td>
 </tr>
 </tbody>
-</table><figcaption>Table 8.9.3.21.B<a href="IfcCompositeCurveOnSurface.htm#Table-8.9.3.21.B"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>Table 8.9.3.21.C<a href="IfcCompositeCurveOnSurface.htm#Table-8.9.3.21.C"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a id="8.9.3.21.5-Formal-representation"></a>
     8.9.3.21.5 Formal representation
 <a href="IfcCompositeCurveOnSurface.htm#8.9.3.21.5-Formal-representation"><i data-feather="link"></i></a></h2>
@@ -462,7 +472,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.9.3.21.7-Changelog"></a>
                         8.9.3.21.7 Changelog
                     <a href="IfcCompositeCurveOnSurface.htm#8.9.3.21.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.9.3.21.7.1-IFC4"></a>
+<h4><a id="8.9.3.21.7.1-IFC4"></a>
                         8.9.3.21.7.1 IFC4
                     <a href="IfcCompositeCurveOnSurface.htm#8.9.3.21.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">

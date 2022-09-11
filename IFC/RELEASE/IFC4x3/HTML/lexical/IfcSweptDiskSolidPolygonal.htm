@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.43 IfcSweptDiskSolidPolygonal - IFC4.3.0.0 Documentation</title>
+<title>8.8.3.43 IfcSweptDiskSolidPolygonal - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -425,8 +427,8 @@
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">('IFC4X3.IFCPOLYLINE' IN TYPEOF(SELF\<a href="IfcSweptDiskSolid.htm">IfcSweptDiskSolid</a>.Directrix)) OR
-(('IFC4X3.IFCINDEXEDPOLYCURVE' IN TYPEOF(SELF\<a href="IfcSweptDiskSolid.htm">IfcSweptDiskSolid</a>.Directrix)) AND NOT(EXISTS(SELF\<a href="IfcSweptDiskSolid.htm">IfcSweptDiskSolid</a>.Directrix.Segments)))</code></pre>
+<pre><code class="language-express hljs">('IFC4X3_TC1.<a href="IfcPolyline.htm">IFCPOLYLINE</a>' IN TYPEOF(SELF\<a href="IfcSweptDiskSolid.htm">IfcSweptDiskSolid</a>.Directrix)) OR
+(('IFC4X3_TC1.<a href="IfcIndexedPolyCurve.htm">IFCINDEXEDPOLYCURVE</a>' IN TYPEOF(SELF\<a href="IfcSweptDiskSolid.htm">IfcSweptDiskSolid</a>.Directrix)) AND NOT(EXISTS(SELF\<a href="IfcSweptDiskSolid.htm">IfcSweptDiskSolid</a>.Directrix\<a href="IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a>.Segments)))</code></pre>
 </td>
 </tr>
 </tbody>
@@ -439,8 +441,8 @@
 	FilletRadius : OPTIONAL <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>;
  WHERE
 	CorrectRadii : NOT(EXISTS(FilletRadius)) OR (FilletRadius &gt;= SELF\<a href="IfcSweptDiskSolid.htm">IfcSweptDiskSolid</a>.Radius);
-	DirectrixIsPolyline : ('IFC4X3.IFCPOLYLINE' IN TYPEOF(SELF\<a href="IfcSweptDiskSolid.htm">IfcSweptDiskSolid</a>.Directrix)) OR
-(('IFC4X3.IFCINDEXEDPOLYCURVE' IN TYPEOF(SELF\<a href="IfcSweptDiskSolid.htm">IfcSweptDiskSolid</a>.Directrix)) AND NOT(EXISTS(SELF\<a href="IfcSweptDiskSolid.htm">IfcSweptDiskSolid</a>.Directrix.Segments)));
+	DirectrixIsPolyline : ('IFC4X3_TC1.<a href="IfcPolyline.htm">IFCPOLYLINE</a>' IN TYPEOF(SELF\<a href="IfcSweptDiskSolid.htm">IfcSweptDiskSolid</a>.Directrix)) OR
+(('IFC4X3_TC1.<a href="IfcIndexedPolyCurve.htm">IFCINDEXEDPOLYCURVE</a>' IN TYPEOF(SELF\<a href="IfcSweptDiskSolid.htm">IfcSweptDiskSolid</a>.Directrix)) AND NOT(EXISTS(SELF\<a href="IfcSweptDiskSolid.htm">IfcSweptDiskSolid</a>.Directrix\<a href="IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a>.Segments)));
 END_ENTITY;</code></pre>
 <h2><a id="8.8.3.43.6-References"></a>
     8.8.3.43.6 References
@@ -459,7 +461,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.8.3.43.7-Changelog"></a>
                         8.8.3.43.7 Changelog
                     <a href="IfcSweptDiskSolidPolygonal.htm#8.8.3.43.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.8.3.43.7.1-IFC4"></a>
+<h4><a id="8.8.3.43.7.1-IFC4"></a>
                         8.8.3.43.7.1 IFC4
                     <a href="IfcSweptDiskSolidPolygonal.htm#8.8.3.43.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -474,17 +476,33 @@ END_ENTITY;</code></pre>
                             </small>
 </li>
 </ul>
-<h4 class="collapsed"><a id="8.8.3.43.7.2-IFC4.3"></a>
-                        8.8.3.43.7.2 IFC4.3
-                    <a href="IfcSweptDiskSolidPolygonal.htm#8.8.3.43.7.2-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="8.8.3.43.7.2-IFC4.3-TC1"></a>
+                        8.8.3.43.7.2 IFC4.3_TC1
+                    <a href="IfcSweptDiskSolidPolygonal.htm#8.8.3.43.7.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes FilletRadius definition,
-                                Changed from <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a> to <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>
-</small>
+                                attribute FilletRadius type,
+                                Changed from
+"<a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a>"
+to
+"<a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                where rule DirectrixIsPolyline definition,
+                                Changed from
+"(ifcpolyline in typeof(self\<a href="IfcSweptDiskSolid.htm">IfcSweptDiskSolid</a>.Directrix)) or ((ifcindexedpolycurve in typeof(self\<a href="IfcSweptDiskSolid.htm">IfcSweptDiskSolid</a>.Directrix)) and not(exists(self\<a href="IfcSweptDiskSolid.htm">IfcSweptDiskSolid</a>.Directrix.Segments)))"
+to
+"(ifcpolyline in typeof(self\<a href="IfcSweptDiskSolid.htm">IfcSweptDiskSolid</a>.Directrix)) or ((ifcindexedpolycurve in typeof(self\<a href="IfcSweptDiskSolid.htm">IfcSweptDiskSolid</a>.Directrix)) and not(exists(self\<a href="IfcSweptDiskSolid.htm">IfcSweptDiskSolid</a>.Directrix\<a href="IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a>.Segments)))"
+                                
+                            </small>
 </li>
 </ul>
 </div>

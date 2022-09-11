@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.3.3.1 IfcConstraint - IFC4.3.0.0 Documentation</title>
+<title>8.3.3.1 IfcConstraint - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -387,7 +389,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.3.3.1.7-Changelog"></a>
                         8.3.3.1.7 Changelog
                     <a href="IfcConstraint.htm#8.3.3.1.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.3.3.1.7.1-IFC4"></a>
+<h4><a id="8.3.3.1.7.1-IFC4"></a>
                         8.3.3.1.7.1 IFC4
                     <a href="IfcConstraint.htm#8.3.3.1.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -396,7 +398,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 Aggregates
                                 
                             </small>
@@ -406,7 +408,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 IsAggregatedIn
                                 
                             </small>
@@ -416,7 +418,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 IsRelatedWith
                                 
                             </small>
@@ -426,7 +428,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 PropertiesForConstraint
                                 
                             </small>
@@ -435,16 +437,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes CreationTime definition,
-                                Changed from IfcDateTimeSelect to <a href="IfcDateTime.htm">IfcDateTime</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                inverses ClassifiedAs definition,
-                                Changed from SET OF [0:?] IfcConstraintClassificationRelationship FOR ClassifiedConstraint to SET OF [0:?] <a href="IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects
+                                attribute CreationTime type,
+                                Changed from
+"IfcDateTimeSelect"
+to
+"<a href="IfcDateTime.htm">IfcDateTime</a>"
                                 
                             </small>
 </li>
@@ -452,8 +449,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                inverses ClassifiedAs name,
-                                Changed from ClassifiedAs to HasExternalReferences
+                                inverse attribute ClassifiedAs name,
+                                Changed from
+"ClassifiedAs"
+to
+"HasExternalReferences"
                                 
                             </small>
 </li>
@@ -461,8 +461,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                inverses RelatesConstraints definition,
-                                Changed from SET OF [0:?] IfcConstraintRelationship FOR RelatingConstraint to SET OF [0:?] <a href="IfcResourceConstraintRelationship.htm">IfcResourceConstraintRelationship</a> FOR RelatingConstraint
+                                inverse attribute ClassifiedAs type,
+                                Changed from
+"SET OF [0:?] IfcConstraintClassificationRelationship FOR ClassifiedConstraint"
+to
+"SET OF [0:?] <a href="IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects"
                                 
                             </small>
 </li>
@@ -470,8 +473,23 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                inverses RelatesConstraints name,
-                                Changed from RelatesConstraints to PropertiesForConstraint
+                                inverse attribute RelatesConstraints name,
+                                Changed from
+"RelatesConstraints"
+to
+"PropertiesForConstraint"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                inverse attribute RelatesConstraints type,
+                                Changed from
+"SET OF [0:?] IfcConstraintRelationship FOR RelatingConstraint"
+to
+"SET OF [0:?] <a href="IfcResourceConstraintRelationship.htm">IfcResourceConstraintRelationship</a> FOR RelatingConstraint"
                                 
                             </small>
 </li>

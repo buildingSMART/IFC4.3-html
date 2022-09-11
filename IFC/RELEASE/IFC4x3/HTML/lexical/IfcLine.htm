@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.38 IfcLine - IFC4.3.0.0 Documentation</title>
+<title>8.9.3.38 IfcLine - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -159,7 +161,14 @@
 <aside class="aside-note"><mark>NOTE</mark>  A line segment is defined using either the <em><a href="IfcPolyline.htm">IfcPolyline</a></em> with two <em>Points</em>, or the <em><a href="IfcTrimmedCurve.htm">IfcTrimmedCurve</a></em> with <em>BasisCurve</em> being an <em><a href="IfcLine.htm">IfcLine</a></em>.</aside><aside class="aside-example"><mark>EXAMPLE</mark>  Figure 8.9.3.38.A illustrates an unbounded <em><a href="IfcLine.htm">IfcLine</a></em> and a bounded <em><a href="IfcTrimmedCurve.htm">IfcTrimmedCurve</a></em>. A bounded line starting at 0.,0. and ending at 0.,2. can be defined by:</aside>
 <figure><a id="Figure-8.9.3.38.A-Unbounded-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm'&gt;IfcLine&lt;/a&gt;-and-bounded-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTrimmedCurve.htm'&gt;IfcTrimmedCurve&lt;/a&gt;-"></a><img alt="line examples" src="../figures/ifcline-fig1.png" title="Figure 8.9.3.38.A — Unbounded _IfcLine_ and bounded _IfcTrimmedCurve_"/><figcaption>Figure 8.9.3.38.A — Unbounded _IfcLine_ and bounded _IfcTrimmedCurve_<a href="IfcLine.htm#Figure-8.9.3.38.A-Unbounded-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLine.htm'&gt;IfcLine&lt;/a&gt;-and-bounded-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTrimmedCurve.htm'&gt;IfcTrimmedCurve&lt;/a&gt;-"><i data-feather="link"></i></a></figcaption></figure>
 <aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO/CD 10303-42:1992
-A line is an unbounded curve with constant tangent direction. A line is defined by a point and a direction. The positive direction of the line is in the direction of the dir vector. The curve is parameterized as follows:</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>line</strong> defined in ISO 10303-42</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC1.0</aside>
+A line is an unbounded curve with constant tangent direction. A line is defined by a point and a direction. The positive direction of the line is in the direction of the dir vector. The curve is parameterized as follows:</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>line</strong> defined in ISO 10303-42</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC1.0</aside><blockquote>
+<blockquote>
+<p><strong>P</strong> = Pnt
+<strong>V</strong> = Dir
+λ(<em>u</em>) = <strong>P</strong> + <em>u</em><strong>V</strong>
+ and the parametric range is: -∞ &lt; <em>u</em> &lt; ∞</p>
+</blockquote>
+</blockquote>
 <h2><a id="8.9.3.38.2-Entity-inheritance"></a>
     8.9.3.38.2 Entity inheritance
 <a href="IfcLine.htm#8.9.3.38.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
@@ -398,7 +407,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.9.3.38.8-Changelog"></a>
                         8.9.3.38.8 Changelog
                     <a href="IfcLine.htm#8.9.3.38.8-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.9.3.38.8.1-IFC4"></a>
+<h4><a id="8.9.3.38.8.1-IFC4"></a>
                         8.9.3.38.8.1 IFC4
                     <a href="IfcLine.htm#8.9.3.38.8.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -408,7 +417,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 SameDim
                                 
                             </small>
@@ -418,7 +427,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR1
                                 
                             </small>

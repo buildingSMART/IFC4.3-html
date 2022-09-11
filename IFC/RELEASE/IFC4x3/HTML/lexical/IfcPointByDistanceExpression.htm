@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.49 IfcPointByDistanceExpression - IFC4.3.0.0 Documentation</title>
+<title>8.9.3.49 IfcPointByDistanceExpression - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -155,10 +157,12 @@
 <h2><a id="8.9.3.49.1-Semantic-definition"></a>
     8.9.3.49.1 Semantic definition
 <a href="IfcPointByDistanceExpression.htm#8.9.3.49.1-Semantic-definition"><i data-feather="link"></i></a></h2>
-<p>An <em><a href="IfcPointByDistanceExpression.htm">IfcPointByDistanceExpression</a></em> describes a point relative to a basis curve according to distance along the basis curve. The offsets default  to the initial context of the curve relative to it's tangent either specified in <em><a href="IfcProduct.htm">IfcProduct</a>.Placement</em> or in the case of a segmented curve to the <em><a href="IfcCurveSegment.htm">IfcCurveSegment</a></em> <em>StartPlacement</em> where the values correspond to the following:
-* lateral to the basis curve
-* offset vertical to the basis curve
-* optional additional offset parallel to the basis curve that may be used to address locations otherwise unreachable where the basis curve is tangentially discontinuous.</p>
+<p>An <em><a href="IfcPointByDistanceExpression.htm">IfcPointByDistanceExpression</a></em> describes a point relative to a basis curve according to distance along the basis curve. The offsets default  to the initial context of the curve relative to it's tangent either specified in <em><a href="IfcProduct.htm">IfcProduct</a>.Placement</em> or in the case of a segmented curve to the <em><a href="IfcCurveSegment.htm">IfcCurveSegment</a></em> <em>StartPlacement</em> where the values correspond to the following:</p>
+<ul>
+<li>lateral to the basis curve</li>
+<li>offset vertical to the basis curve</li>
+<li>optional additional offset parallel to the basis curve that may be used to address locations otherwise unreachable where the basis curve is tangentially discontinuous.</li>
+</ul>
 <h2><a id="8.9.3.49.2-Entity-inheritance"></a>
     8.9.3.49.2 Entity inheritance
 <a href="IfcPointByDistanceExpression.htm#8.9.3.49.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
@@ -266,22 +270,42 @@
 <aside class="aside-change"><mark>IFC2x3-CHANGE</mark>  The inverse attribute <em>StyledByItem</em> has been added.</aside>
 </td>
 </tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcPoint.htm">IfcPoint</a>
+<small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>Dim</em>
+</td>
+<td data-label="Type"><a href="IfcDimensionCount.htm">IfcDimensionCount</a></td>
+<td data-label="Description">
+<p>
+                    This attribute is formally derived.
+                </p>
+<pre><code class="language-express hljs"><a href="IfcPointDim.htm">IfcPointDim</a>(SELF)</code></pre>
+<p>The space dimensionality of this abstract class, handled by a function specific for concrete subtypes. Determined by the number of coordinate components in case of <a href="IfcCartesianPoint.htm">IfcCartesianPoint</a> or by the dimensionality of the basis curve or surface in other cases.</p>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
 <i data-feather="eye-off"></i>
-                    Click to show 2 hidden inherited attributes
+                    Click to show 3 hidden inherited attributes
                 </small>
 <small class="hide-inherited" data-type="attribute">
 <i data-feather="eye-off"></i>
-                    Click to hide 2 inherited attributes
+                    Click to hide 3 inherited attributes
                 </small>
 </td>
 </tr>
 <tr class="group">
 <td colspan="4">
 <a href="IfcPointByDistanceExpression.htm">IfcPointByDistanceExpression</a>
-<small>(6)</small>
+<small>(5)</small>
 </td>
 </tr>
 <tr>
@@ -346,19 +370,6 @@
 </p>
 </td>
 </tr>
-<tr>
-<td data-label="#">*</td>
-<td data-label="Name">
-<em>Dim</em>
-</td>
-<td data-label="Type"><a href="IfcDimensionCount.htm">IfcDimensionCount</a></td>
-<td data-label="Description">
-<p>
-                    This attribute is formally derived.
-                </p>
-<pre><code class="language-express hljs">BasisCurve.Dim</code></pre>
-</td>
-</tr>
 </tbody>
 </table><figcaption>Table 8.9.3.49.B<a href="IfcPointByDistanceExpression.htm#Table-8.9.3.49.B"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a id="8.9.3.49.4-Examples"></a>
@@ -380,8 +391,6 @@
 	OffsetVertical : OPTIONAL <a href="IfcLengthMeasure.htm">IfcLengthMeasure</a>;
 	OffsetLongitudinal : OPTIONAL <a href="IfcLengthMeasure.htm">IfcLengthMeasure</a>;
 	BasisCurve : <a href="IfcCurve.htm">IfcCurve</a>;
- DERIVE
-	 Dim : <a href="IfcDimensionCount.htm">IfcDimensionCount</a> := BasisCurve.Dim;
 END_ENTITY;</code></pre>
 <h2><a id="8.9.3.49.6-References"></a>
     8.9.3.49.6 References
@@ -389,6 +398,7 @@ END_ENTITY;</code></pre>
 <ul class="references">
 <li><i data-feather="paperclip"></i><a href="IfcOffsetCurveByDistances.htm">IfcOffsetCurveByDistances</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcPoint.htm">IfcPoint</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcPointDim.htm">IfcPointDim</a></li>
 </ul>
 </div>
 <div class="col-md-2">
@@ -401,9 +411,9 @@ END_ENTITY;</code></pre>
 <h3><a id="8.9.3.49.7-Changelog"></a>
                         8.9.3.49.7 Changelog
                     <a href="IfcPointByDistanceExpression.htm#8.9.3.49.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.9.3.49.7.1-IFC4.3"></a>
-                        8.9.3.49.7.1 IFC4.3
-                    <a href="IfcPointByDistanceExpression.htm#8.9.3.49.7.1-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="8.9.3.49.7.1-IFC4.3-TC1"></a>
+                        8.9.3.49.7.1 IFC4.3_TC1
+                    <a href="IfcPointByDistanceExpression.htm#8.9.3.49.7.1-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>

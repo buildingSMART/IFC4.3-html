@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.21.3.3 IfcTable - IFC4.3.0.0 Documentation</title>
+<title>8.21.3.3 IfcTable - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -348,7 +350,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.21.3.3.7-Changelog"></a>
                         8.21.3.3.7 Changelog
                     <a href="IfcTable.htm#8.21.3.3.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.21.3.3.7.1-IFC4"></a>
+<h4><a id="8.21.3.3.7.1-IFC4"></a>
                         8.21.3.3.7.1 IFC4
                     <a href="IfcTable.htm#8.21.3.3.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -358,7 +360,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 Columns
                                 
                             </small>
@@ -368,7 +370,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR2
                                 
                             </small>
@@ -377,16 +379,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes Name definition,
-                                Changed from string to <a href="IfcLabel.htm">IfcLabel</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                attributes Name is_optional,
-                                Changed from False to True
+                                attribute Name optional,
+                                Changed from
+"False"
+to
+"True"
                                 
                             </small>
 </li>
@@ -394,8 +391,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes Rows is_optional,
-                                Changed from False to True
+                                attribute Name type,
+                                Changed from
+"string"
+to
+"<a href="IfcLabel.htm">IfcLabel</a>"
                                 
                             </small>
 </li>
@@ -403,8 +403,23 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                where_rules WR3 name,
-                                Changed from WR3 to WR2
+                                attribute Rows optional,
+                                Changed from
+"False"
+to
+"True"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                where rule WR3 name,
+                                Changed from
+"WR3"
+to
+"WR2"
                                 
                             </small>
 </li>

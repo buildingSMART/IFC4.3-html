@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.58 IfcRepresentationItem - IFC4.3.0.0 Documentation</title>
+<title>8.9.3.58 IfcRepresentationItem - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -297,7 +299,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.9.3.58.6-Changelog"></a>
                         8.9.3.58.6 Changelog
                     <a href="IfcRepresentationItem.htm#8.9.3.58.6-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.9.3.58.6.1-IFC4"></a>
+<h4><a id="8.9.3.58.6.1-IFC4"></a>
                         8.9.3.58.6.1 IFC4
                     <a href="IfcRepresentationItem.htm#8.9.3.58.6.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -305,8 +307,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                inverses LayerAssignments definition,
-                                Changed from SET OF [0:?] <a href="IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems to SET OF [0:1] <a href="IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems
+                                inverse attribute LayerAssignments name,
+                                Changed from
+"LayerAssignments"
+to
+"LayerAssignment"
                                 
                             </small>
 </li>
@@ -314,8 +319,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                inverses LayerAssignments name,
-                                Changed from LayerAssignments to LayerAssignment
+                                inverse attribute LayerAssignments type,
+                                Changed from
+"SET OF [0:?] <a href="IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems"
+to
+"SET OF [0:1] <a href="IfcPresentationLayerAssignment.htm">IfcPresentationLayerAssignment</a> FOR AssignedItems"
                                 
                             </small>
 </li>

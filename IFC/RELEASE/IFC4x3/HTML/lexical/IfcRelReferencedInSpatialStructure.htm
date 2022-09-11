@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.4.3.57 IfcRelReferencedInSpatialStructure - IFC4.3.0.0 Documentation</title>
+<title>5.4.3.57 IfcRelReferencedInSpatialStructure - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -158,7 +160,7 @@
 <li class=""><a href="IfcRelConnectsStructuralMember.htm">IfcRelConnectsStructuralMember</a></li>
 <li class=""><a href="IfcRelContainedInSpatialStructure.htm">IfcRelContainedInSpatialStructure</a></li>
 <li class=""><a href="IfcRelCoversBldgElements.htm">IfcRelCoversBldgElements</a></li>
-<li class=""><a href="IfcRelCoversSpaces.htm">IfcRelCoversSpaces</a></li>
+<li class="deprecated"><a href="IfcRelCoversSpaces.htm">IfcRelCoversSpaces</a></li>
 <li class=""><a href="IfcRelFillsElement.htm">IfcRelFillsElement</a></li>
 <li class=""><a href="IfcRelFlowControlElements.htm">IfcRelFlowControlElements</a></li>
 <li class=""><a href="IfcRelInterferesElements.htm">IfcRelInterferesElements</a></li>
@@ -312,7 +314,7 @@
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">SIZEOF(QUERY(temp &lt;* RelatedElements | ('IFC4X3.IFCSPATIALSTRUCTUREELEMENT' IN TYPEOF(temp)) AND (NOT ('IFC4X3.IFCSPACE' IN TYPEOF(temp)))
+<pre><code class="language-express hljs">SIZEOF(QUERY(temp &lt;* RelatedElements | ('IFC4X3_TC1.<a href="IfcSpatialStructureElement.htm">IFCSPATIALSTRUCTUREELEMENT</a>' IN TYPEOF(temp)) AND (NOT ('IFC4X3_TC1.<a href="IfcSpace.htm">IFCSPACE</a>' IN TYPEOF(temp)))
 )) = 0</code></pre>
 </td>
 </tr>
@@ -380,7 +382,7 @@
 	RelatedElements : SET [1:?] OF <a href="IfcSpatialReferenceSelect.htm">IfcSpatialReferenceSelect</a>;
 	RelatingStructure : <a href="IfcSpatialElement.htm">IfcSpatialElement</a>;
  WHERE
-	AllowedRelatedElements : SIZEOF(QUERY(temp &lt;* RelatedElements | ('IFC4X3.IFCSPATIALSTRUCTUREELEMENT' IN TYPEOF(temp)) AND (NOT ('IFC4X3.IFCSPACE' IN TYPEOF(temp)))
+	AllowedRelatedElements : SIZEOF(QUERY(temp &lt;* RelatedElements | ('IFC4X3_TC1.<a href="IfcSpatialStructureElement.htm">IFCSPATIALSTRUCTUREELEMENT</a>' IN TYPEOF(temp)) AND (NOT ('IFC4X3_TC1.<a href="IfcSpace.htm">IFCSPACE</a>' IN TYPEOF(temp)))
 )) = 0;
 END_ENTITY;</code></pre>
 <h2><a id="5.4.3.57.7-References"></a>
@@ -404,7 +406,7 @@ END_ENTITY;</code></pre>
 <h3><a id="5.4.3.57.8-Changelog"></a>
                         5.4.3.57.8 Changelog
                     <a href="IfcRelReferencedInSpatialStructure.htm#5.4.3.57.8-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="5.4.3.57.8.1-IFC4"></a>
+<h4><a id="5.4.3.57.8.1-IFC4"></a>
                         5.4.3.57.8.1 IFC4
                     <a href="IfcRelReferencedInSpatialStructure.htm#5.4.3.57.8.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -414,7 +416,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 AllowedRelatedElements
                                 
                             </small>
@@ -424,7 +426,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR31
                                 
                             </small>
@@ -433,22 +435,30 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes RelatingStructure definition,
-                                Changed from <a href="IfcSpatialStructureElement.htm">IfcSpatialStructureElement</a> to <a href="IfcSpatialElement.htm">IfcSpatialElement</a>
-</small>
+                                attribute RelatingStructure type,
+                                Changed from
+"<a href="IfcSpatialStructureElement.htm">IfcSpatialStructureElement</a>"
+to
+"<a href="IfcSpatialElement.htm">IfcSpatialElement</a>"
+                                
+                            </small>
 </li>
 </ul>
-<h4 class="collapsed"><a id="5.4.3.57.8.2-IFC4.3"></a>
-                        5.4.3.57.8.2 IFC4.3
-                    <a href="IfcRelReferencedInSpatialStructure.htm#5.4.3.57.8.2-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="5.4.3.57.8.2-IFC4.3-TC1"></a>
+                        5.4.3.57.8.2 IFC4.3_TC1
+                    <a href="IfcRelReferencedInSpatialStructure.htm#5.4.3.57.8.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes RelatedElements definition,
-                                Changed from set[1:?] of <a href="IfcProduct.htm">IfcProduct</a> to set[1:?] of <a href="IfcSpatialReferenceSelect.htm">IfcSpatialReferenceSelect</a>
-</small>
+                                attribute RelatedElements type,
+                                Changed from
+"set[1:?] of <a href="IfcProduct.htm">IfcProduct</a>"
+to
+"set[1:?] of <a href="IfcSpatialReferenceSelect.htm">IfcSpatialReferenceSelect</a>"
+                                
+                            </small>
 </li>
 </ul>
 </div>

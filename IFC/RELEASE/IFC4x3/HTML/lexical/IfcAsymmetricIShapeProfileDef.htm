@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.15.3.4 IfcAsymmetricIShapeProfileDef - IFC4.3.0.0 Documentation</title>
+<title>8.15.3.4 IfcAsymmetricIShapeProfileDef - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -168,7 +170,7 @@ Attributes <em>BottomFlangeEdgeRadius</em>, <em>BottomFlangeSlope</em>, <em>TopF
 <li><em><a href="IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>.Position</em></li>
 </ul>
 <p>By using offsets of the position location, the parameterized profile can be positioned centric (using x,y offsets = 0.), or at any position relative to the profile. The parameterized profile is defined by a set of parameter attributes. In the illustrated example, the 'CentreOfGravityInY' property in <em>IfcExtendedProfileProperties</em>, if provided, is negative.</p>
-<figure><a id="Figure-8.15.3.4.A-Assymetric-I-shape-profile"></a><img alt="asymmetric I shape profile" src="../figures/ifcasymmetricishapeprofiledef.gif" title="Figure 8.15.3.4.A — Assymetric I-shape profile"/><figcaption>Figure 8.15.3.4.A — Assymetric I-shape profile<a href="IfcAsymmetricIShapeProfileDef.htm#Figure-8.15.3.4.A-Assymetric-I-shape-profile"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a id="Figure-8.15.3.4.A-Asymmetric-I-shape-profile"></a><img alt="asymmetric I shape profile" src="../figures/ifcasymmetricishapeprofiledef.gif" title="Figure 8.15.3.4.A — Asymmetric I-shape profile"/><figcaption>Figure 8.15.3.4.A — Asymmetric I-shape profile<a href="IfcAsymmetricIShapeProfileDef.htm#Figure-8.15.3.4.A-Asymmetric-I-shape-profile"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a id="8.15.3.4.2-Entity-inheritance"></a>
     8.15.3.4.2 Entity inheritance
 <a href="IfcAsymmetricIShapeProfileDef.htm#8.15.3.4.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
@@ -647,7 +649,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.15.3.4.9-Changelog"></a>
                         8.15.3.4.9 Changelog
                     <a href="IfcAsymmetricIShapeProfileDef.htm#8.15.3.4.9-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.15.3.4.9.1-IFC4"></a>
+<h4><a id="8.15.3.4.9.1-IFC4"></a>
                         8.15.3.4.9.1 IFC4
                     <a href="IfcAsymmetricIShapeProfileDef.htm#8.15.3.4.9.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -657,7 +659,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 BottomFlangeEdgeRadius
                                 
                             </small>
@@ -668,7 +670,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 BottomFlangeFilletRadius
                                 
                             </small>
@@ -679,7 +681,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 BottomFlangeSlope
                                 
                             </small>
@@ -690,7 +692,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 BottomFlangeWidth
                                 
                             </small>
@@ -701,7 +703,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 OverallDepth
                                 
                             </small>
@@ -712,7 +714,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 TopFlangeEdgeRadius
                                 
                             </small>
@@ -723,7 +725,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 TopFlangeFilletRadius
                                 
                             </small>
@@ -734,7 +736,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 TopFlangeSlope
                                 
                             </small>
@@ -745,7 +747,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 ValidBottomFilletRadius
                                 
                             </small>
@@ -756,7 +758,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 ValidFlangeThickness
                                 
                             </small>
@@ -767,7 +769,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 ValidTopFilletRadius
                                 
                             </small>
@@ -778,7 +780,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 ValidWebThickness
                                 
                             </small>
@@ -787,8 +789,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes CentreOfGravityInY is_optional,
-                                Changed from True to False
+                                attribute CentreOfGravityInY name,
+                                Changed from
+"CentreOfGravityInY"
+to
+"BottomFlangeThickness"
                                 
                             </small>
 </li>
@@ -796,8 +801,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes CentreOfGravityInY name,
-                                Changed from CentreOfGravityInY to BottomFlangeThickness
+                                attribute CentreOfGravityInY optional,
+                                Changed from
+"True"
+to
+"False"
                                 
                             </small>
 </li>
@@ -805,8 +813,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes TopFlangeFilletRadius is_optional,
-                                Changed from True to False
+                                attribute TopFlangeFilletRadius name,
+                                Changed from
+"TopFlangeFilletRadius"
+to
+"WebThickness"
                                 
                             </small>
 </li>
@@ -814,8 +825,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes TopFlangeFilletRadius name,
-                                Changed from TopFlangeFilletRadius to WebThickness
+                                attribute TopFlangeFilletRadius optional,
+                                Changed from
+"True"
+to
+"False"
                                 
                             </small>
 </li>
@@ -824,8 +838,12 @@ END_ENTITY;</code></pre>
 <i data-feather="edit"></i>
                                 
                                 supertype,
-                                Changed from <a href="IfcIShapeProfileDef.htm">IfcIShapeProfileDef</a> to <a href="IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a>
-</small>
+                                Changed from
+"<a href="IfcIShapeProfileDef.htm">IfcIShapeProfileDef</a>"
+to
+"<a href="IfcParameterizedProfileDef.htm">IfcParameterizedProfileDef</a>"
+                                
+                            </small>
 </li>
 </ul>
 </div>

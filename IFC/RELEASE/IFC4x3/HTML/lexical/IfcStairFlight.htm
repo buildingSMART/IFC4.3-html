@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>6.1.3.38 IfcStairFlight - IFC4.3.0.0 Documentation</title>
+<title>6.1.3.38 IfcStairFlight - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -386,7 +388,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED.</p>
+<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED or when the concrete entity instantiated does not have a PredefinedType attribute. The latter is the case in some exceptional leaf classes and when instantiating <a href="IfcBuiltElement.htm">IfcBuiltElement</a> directly. </p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -755,7 +757,7 @@
 <tr>
 <td colspan="2">
 <pre><code class="language-express hljs">(SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3.IFCSTAIRFLIGHTTYPE' IN TYPEOF(SELF\<a href="IfcObject.htm">IfcObject</a>.IsTypedBy[1].RelatingType))</code></pre>
+  ('IFC4X3_TC1.<a href="IfcStairFlightType.htm">IFCSTAIRFLIGHTTYPE</a>' IN TYPEOF(SELF\<a href="IfcObject.htm">IfcObject</a>.IsTypedBy[1].RelatingType))</code></pre>
 </td>
 </tr>
 </tbody>
@@ -805,24 +807,12 @@
 </ul>
 </li>
 <li>
-<a href="Pset_ConstructionOccurance.htm">Pset_ConstructionOccurance</a>
+<a href="Pset_ConstructionOccurence.htm">Pset_ConstructionOccurence</a>
 <ul>
 <li>InstallationDate</li>
 <li>ModelNumber</li>
 <li>TagNumber</li>
 <li>AssetIdentifier</li>
-</ul>
-</li>
-<li>
-<a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
-<ul>
-<li>CyclicPath</li>
-<li>CyclicRange</li>
-<li>LinearPath</li>
-<li>LinearRange</li>
-<li>MaximumAngularVelocity</li>
-<li>MaximumConstantSpeed</li>
-<li>MinimumTime</li>
 </ul>
 </li>
 <li>
@@ -1361,7 +1351,7 @@
 <tr class="group-inherited">
 <td colspan="3">
 <a href="IfcProduct.htm">IfcProduct</a>
-<small>(17)</small>
+<small>(18)</small>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1416,6 +1406,28 @@
 <p>
 <em>No description available.</em>
 </p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Object_Typing/content.html">Object Typing</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        This is a further elaboration on an inherited concept.
+                    </small>
+</aside>
+<p>This concept can be applied to the following resources:</p>
+<ul>
+<li>
+<a href="IfcTypeProduct.htm">IfcTypeProduct</a>
+</li>
+</ul>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -2147,10 +2159,7 @@ shape.</aside>
 <a href="Pset_ConstructionAdministration.htm">Pset_ConstructionAdministration</a>
 </li>
 <li>
-<a href="Pset_ConstructionOccurance.htm">Pset_ConstructionOccurance</a>
-</li>
-<li>
-<a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
+<a href="Pset_ConstructionOccurence.htm">Pset_ConstructionOccurence</a>
 </li>
 <li>
 <a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
@@ -2319,11 +2328,11 @@ shape.</aside>
 <td colspan="4">
 <small class="show-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    Click to show 81 hidden inherited concepts
+                    Click to show 82 hidden inherited concepts
                 </small>
 <small class="hide-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    Click to hide 81 inherited concepts
+                    Click to hide 82 inherited concepts
                 </small>
 </td>
 </tr>
@@ -2527,7 +2536,7 @@ Figure 6.1.3.38.F — Stair flight footprint<a href="IfcStairFlight.htm#Figure-6
  (PredefinedType &lt;&gt; <a href="IfcStairFlightTypeEnum.htm">IfcStairFlightTypeEnum</a>.USERDEFINED) OR
  ((PredefinedType = <a href="IfcStairFlightTypeEnum.htm">IfcStairFlightTypeEnum</a>.USERDEFINED) AND EXISTS (SELF\<a href="IfcObject.htm">IfcObject</a>.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3.IFCSTAIRFLIGHTTYPE' IN TYPEOF(SELF\<a href="IfcObject.htm">IfcObject</a>.IsTypedBy[1].RelatingType));
+  ('IFC4X3_TC1.<a href="IfcStairFlightType.htm">IFCSTAIRFLIGHTTYPE</a>' IN TYPEOF(SELF\<a href="IfcObject.htm">IfcObject</a>.IsTypedBy[1].RelatingType));
 END_ENTITY;</code></pre>
 <h2><a id="6.1.3.38.8-References"></a>
     6.1.3.38.8 References
@@ -2546,7 +2555,7 @@ END_ENTITY;</code></pre>
 <h3><a id="6.1.3.38.9-Changelog"></a>
                         6.1.3.38.9 Changelog
                     <a href="IfcStairFlight.htm#6.1.3.38.9-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="6.1.3.38.9.1-IFC4"></a>
+<h4><a id="6.1.3.38.9.1-IFC4"></a>
                         6.1.3.38.9.1 IFC4
                     <a href="IfcStairFlight.htm#6.1.3.38.9.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -2556,7 +2565,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 PredefinedType
                                 
                             </small>
@@ -2567,7 +2576,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 CorrectPredefinedType
                                 
                             </small>
@@ -2578,7 +2587,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 CorrectTypeAssigned
                                 
                             </small>
@@ -2587,16 +2596,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes NumberOfRiser definition,
-                                Changed from integer to <a href="IfcInteger.htm">IfcInteger</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                attributes NumberOfRiser name,
-                                Changed from NumberOfRiser to NumberOfRisers
+                                attribute NumberOfRiser name,
+                                Changed from
+"NumberOfRiser"
+to
+"NumberOfRisers"
                                 
                             </small>
 </li>
@@ -2604,22 +2608,42 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes NumberOfTreads definition,
-                                Changed from integer to <a href="IfcInteger.htm">IfcInteger</a>
-</small>
+                                attribute NumberOfRiser type,
+                                Changed from
+"integer"
+to
+"<a href="IfcInteger.htm">IfcInteger</a>"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attribute NumberOfTreads type,
+                                Changed from
+"integer"
+to
+"<a href="IfcInteger.htm">IfcInteger</a>"
+                                
+                            </small>
 </li>
 </ul>
-<h4 class="collapsed"><a id="6.1.3.38.9.2-IFC4.3"></a>
-                        6.1.3.38.9.2 IFC4.3
-                    <a href="IfcStairFlight.htm#6.1.3.38.9.2-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="6.1.3.38.9.2-IFC4.3-TC1"></a>
+                        6.1.3.38.9.2 IFC4.3_TC1
+                    <a href="IfcStairFlight.htm#6.1.3.38.9.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
                                 supertype,
-                                Changed from IfcBuildingElement to <a href="IfcBuiltElement.htm">IfcBuiltElement</a>
-</small>
+                                Changed from
+"IfcBuildingElement"
+to
+"<a href="IfcBuiltElement.htm">IfcBuiltElement</a>"
+                                
+                            </small>
 </li>
 </ul>
 </div>

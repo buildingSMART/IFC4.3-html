@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.48 IfcPoint - IFC4.3.0.0 Documentation</title>
+<title>8.9.3.48 IfcPoint - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -244,13 +246,13 @@ A point is a location in some real Cartesian coordinate space R^m^, for m = 1, 2
 </tr>
 </thead>
 <tbody>
-<tr class="group">
+<tr class="group-inherited">
 <td colspan="4">
 <a href="IfcRepresentationItem.htm">IfcRepresentationItem</a>
 <small>(2)</small>
 </td>
 </tr>
-<tr>
+<tr class="inherited" data-type="attribute">
 <td data-label="#"></td>
 <td data-label="Name">
 <em>LayerAssignment</em>
@@ -261,7 +263,7 @@ A point is a location in some real Cartesian coordinate space R^m^, for m = 1, 2
 <aside class="aside-change"><mark>IFC2x3-CHANGE</mark>  The inverse attribute <em>LayerAssignments</em> has been added.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The inverse attribute <em>LayerAssignment</em> has been restricted to max 1. Upward compatibility for file based exchange is guaranteed.</aside>
 </td>
 </tr>
-<tr>
+<tr class="inherited" data-type="attribute">
 <td data-label="#"></td>
 <td data-label="Name">
 <em>StyledByItem</em>
@@ -270,6 +272,38 @@ A point is a location in some real Cartesian coordinate space R^m^, for m = 1, 2
 <td data-label="Description">
 <p>Reference to the <em><a href="IfcStyledItem.htm">IfcStyledItem</a></em> that provides presentation information to the representation, e.g. a curve style, including colour and thickness to a geometric curve.</p>
 <aside class="aside-change"><mark>IFC2x3-CHANGE</mark>  The inverse attribute <em>StyledByItem</em> has been added.</aside>
+</td>
+</tr>
+<tr class="preview">
+<td colspan="4">
+<small class="show-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to show 2 hidden inherited attributes
+                </small>
+<small class="hide-inherited" data-type="attribute">
+<i data-feather="eye-off"></i>
+                    Click to hide 2 inherited attributes
+                </small>
+</td>
+</tr>
+<tr class="group">
+<td colspan="4">
+<a href="IfcPoint.htm">IfcPoint</a>
+<small>(1)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>Dim</em>
+</td>
+<td data-label="Type"><a href="IfcDimensionCount.htm">IfcDimensionCount</a></td>
+<td data-label="Description">
+<p>
+                    This attribute is formally derived.
+                </p>
+<pre><code class="language-express hljs"><a href="IfcPointDim.htm">IfcPointDim</a>(SELF)</code></pre>
+<p>The space dimensionality of this abstract class, handled by a function specific for concrete subtypes. Determined by the number of coordinate components in case of <a href="IfcCartesianPoint.htm">IfcCartesianPoint</a> or by the dimensionality of the basis curve or surface in other cases.</p>
 </td>
 </tr>
 </tbody>
@@ -284,6 +318,8 @@ A point is a location in some real Cartesian coordinate space R^m^, for m = 1, 2
 	,<a href="IfcPointOnCurve.htm">IfcPointOnCurve</a>
 	,<a href="IfcPointOnSurface.htm">IfcPointOnSurface</a>))
  SUBTYPE OF (<a href="IfcGeometricRepresentationItem.htm">IfcGeometricRepresentationItem</a>);
+ DERIVE
+	 Dim : <a href="IfcDimensionCount.htm">IfcDimensionCount</a> := <a href="IfcPointDim.htm">IfcPointDim</a>(SELF);
 END_ENTITY;</code></pre>
 <h2><a id="8.9.3.48.5-References"></a>
     8.9.3.48.5 References
@@ -295,6 +331,7 @@ END_ENTITY;</code></pre>
 <li><i data-feather="paperclip"></i><a href="IfcMirroredProfileDef.htm">IfcMirroredProfileDef</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcPlacement.htm">IfcPlacement</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcPointByDistanceExpression.htm">IfcPointByDistanceExpression</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcPointDim.htm">IfcPointDim</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcPointOnCurve.htm">IfcPointOnCurve</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcPointOnSurface.htm">IfcPointOnSurface</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcPointOrVertexPoint.htm">IfcPointOrVertexPoint</a></li>

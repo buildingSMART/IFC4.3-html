@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.4.3.1 IfcAppliedValue - IFC4.3.0.0 Documentation</title>
+<title>8.4.3.1 IfcAppliedValue - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -385,7 +387,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.4.3.1.6-Changelog"></a>
                         8.4.3.1.6 Changelog
                     <a href="IfcAppliedValue.htm#8.4.3.1.6-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.4.3.1.6.1-IFC4"></a>
+<h4><a id="8.4.3.1.6.1-IFC4"></a>
                         8.4.3.1.6.1 IFC4
                     <a href="IfcAppliedValue.htm#8.4.3.1.6.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -395,7 +397,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 ArithmeticOperator
                                 
                             </small>
@@ -406,7 +408,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 Category
                                 
                             </small>
@@ -417,7 +419,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 Components
                                 
                             </small>
@@ -428,7 +430,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 Condition
                                 
                             </small>
@@ -438,7 +440,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 IsComponentIn
                                 
                             </small>
@@ -448,7 +450,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 ValueOfComponents
                                 
                             </small>
@@ -458,7 +460,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR1
                                 
                             </small>
@@ -468,7 +470,7 @@ END_ENTITY;</code></pre>
 <i data-feather="edit"></i>
                                 
                                 abstract,
-                                Changed from True to False
+                                Is no longer abstract
                                 
                             </small>
 </li>
@@ -476,24 +478,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes ApplicableDate definition,
-                                Changed from IfcDateTimeSelect to <a href="IfcDate.htm">IfcDate</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                attributes FixedUntilDate definition,
-                                Changed from IfcDateTimeSelect to <a href="IfcDate.htm">IfcDate</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                inverses ValuesReferenced definition,
-                                Changed from SET OF [0:?] IfcReferencesValueDocument FOR ReferencingValues to SET OF [0:?] <a href="IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects
+                                attribute ApplicableDate type,
+                                Changed from
+"IfcDateTimeSelect"
+to
+"<a href="IfcDate.htm">IfcDate</a>"
                                 
                             </small>
 </li>
@@ -501,8 +490,35 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                inverses ValuesReferenced name,
-                                Changed from ValuesReferenced to HasExternalReference
+                                attribute FixedUntilDate type,
+                                Changed from
+"IfcDateTimeSelect"
+to
+"<a href="IfcDate.htm">IfcDate</a>"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                inverse attribute ValuesReferenced name,
+                                Changed from
+"ValuesReferenced"
+to
+"HasExternalReference"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                inverse attribute ValuesReferenced type,
+                                Changed from
+"SET OF [0:?] IfcReferencesValueDocument FOR ReferencingValues"
+to
+"SET OF [0:?] <a href="IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects"
                                 
                             </small>
 </li>

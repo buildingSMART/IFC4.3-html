@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.71 IfcSurfaceOfRevolution - IFC4.3.0.0 Documentation</title>
+<title>8.9.3.71 IfcSurfaceOfRevolution - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -157,7 +159,15 @@
 <a href="IfcSurfaceOfRevolution.htm#8.9.3.71.1-Semantic-definition"><i data-feather="link"></i></a></h2>
 <p>The <a href="IfcSurfaceOfRevolution.htm">IfcSurfaceOfRevolution</a> is a surface derived by rotating a curve about an axis.</p>
 <aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO/CD 10303-42:1992
-A surface of revolution is the surface obtained by rotating a curve one complete revolution about an axis. The data shall be interpreted as below.</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>surface_of_revolution</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x.</aside>
+A surface of revolution is the surface obtained by rotating a curve one complete revolution about an axis. The data shall be interpreted as below.</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>surface_of_revolution</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x.</aside><blockquote>
+<p>The parameterization is as follows where the curve has a parameterization λ(<em>u</em>):</p>
+<blockquote>
+<p><strong>C</strong> = AxisPosition.Location
+<strong>V</strong> = AxisPosition.Z</p>
+<figure><a id="Figure-8.9.3.71.A"></a><img alt="Image" src="../figures/ifcsurfaceofresolution-math1.gif"/>
+ In order to produce a single-valued surface with a complete revolution, the curve shall be such that when expressed in a cylindrical coordinate system (<em>r,φ ,z</em>) centred at <strong>C</strong> with an axis <strong>V</strong>, no two distinct parametric points on the curve shall have the same values for (<em>r, z</em>). For a surface of revolution the parametric range is 0 &lt; <em>u</em> &lt; 360 degree. The parameterization range for <em>v</em> is defined by referenced curve.<figcaption>Figure 8.9.3.71.A<a href="IfcSurfaceOfRevolution.htm#Figure-8.9.3.71.A"><i data-feather="link"></i></a></figcaption></figure>
+</blockquote>
+</blockquote>
 <p>Informal Propositions:</p>
 <ol>
 <li>The surface shall not self-intersect</li>
@@ -233,7 +243,7 @@ A surface of revolution is the surface obtained by rotating a curve one complete
     8.9.3.71.3 Attributes
 <a href="IfcSurfaceOfRevolution.htm#8.9.3.71.3-Attributes"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a id="Table-8.9.3.71.A"></a><table class="striped grouped attributes">
+<figure><a id="Table-8.9.3.71.B"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -375,7 +385,7 @@ A surface of revolution is the surface obtained by rotating a curve one complete
 </td>
 </tr>
 </tbody>
-</table><figcaption>Table 8.9.3.71.A<a href="IfcSurfaceOfRevolution.htm#Table-8.9.3.71.A"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>Table 8.9.3.71.B<a href="IfcSurfaceOfRevolution.htm#Table-8.9.3.71.B"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a id="8.9.3.71.4-Formal-representation"></a>
     8.9.3.71.4 Formal representation
 <a href="IfcSurfaceOfRevolution.htm#8.9.3.71.4-Formal-representation"><i data-feather="link"></i></a></h2>

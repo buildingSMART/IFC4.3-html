@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.3.10 IfcDraughtingPreDefinedCurveFont - IFC4.3.0.0 Documentation</title>
+<title>8.12.3.10 IfcDraughtingPreDefinedCurveFont - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -266,7 +268,7 @@
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">SELF\IfcPredefinedItem.Name IN
+<pre><code class="language-express hljs">SELF\<a href="IfcPreDefinedItem.htm">IfcPredefinedItem</a>.Name IN
        ['continuous',
         'chain',
         'chain double dash',
@@ -283,7 +285,7 @@
 <pre><code class="language-express hljs">ENTITY <a href="IfcDraughtingPreDefinedCurveFont.htm">IfcDraughtingPreDefinedCurveFont</a>
  SUBTYPE OF (<a href="IfcPreDefinedCurveFont.htm">IfcPreDefinedCurveFont</a>);
  WHERE
-	PreDefinedCurveFontNames : SELF\IfcPredefinedItem.Name IN
+	PreDefinedCurveFontNames : SELF\<a href="IfcPreDefinedItem.htm">IfcPredefinedItem</a>.Name IN
        ['continuous',
         'chain',
         'chain double dash',
@@ -308,7 +310,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.12.3.10.7-Changelog"></a>
                         8.12.3.10.7 Changelog
                     <a href="IfcDraughtingPreDefinedCurveFont.htm#8.12.3.10.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.12.3.10.7.1-IFC4"></a>
+<h4><a id="8.12.3.10.7.1-IFC4"></a>
                         8.12.3.10.7.1 IFC4
                     <a href="IfcDraughtingPreDefinedCurveFont.htm#8.12.3.10.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -318,7 +320,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 PreDefinedCurveFontNames
                                 
                             </small>
@@ -328,7 +330,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR31
                                 
                             </small>

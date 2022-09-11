@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.4 IfcBooleanClippingResult - IFC4.3.0.0 Documentation</title>
+<title>8.8.3.4 IfcBooleanClippingResult - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -351,9 +353,9 @@
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">('IFC4X3.IFCSWEPTAREASOLID' IN TYPEOF(FirstOperand)) OR 
-('IFC4X3.IFCSWEPTDISCSOLID' IN TYPEOF(FirstOperand)) OR 
-('IFC4X3.IFCBOOLEANCLIPPINGRESULT' IN TYPEOF(FirstOperand))</code></pre>
+<pre><code class="language-express hljs">('IFC4X3_TC1.<a href="IfcSweptAreaSolid.htm">IFCSWEPTAREASOLID</a>' IN TYPEOF(FirstOperand)) OR 
+('IFC4X3_TC1.IFCSWEPTDISCSOLID' IN TYPEOF(FirstOperand)) OR 
+('IFC4X3_TC1.<a href="IfcBooleanClippingResult.htm">IFCBOOLEANCLIPPINGRESULT</a>' IN TYPEOF(FirstOperand))</code></pre>
 </td>
 </tr>
 <tr>
@@ -375,7 +377,7 @@
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">('IFC4X3.IFCHALFSPACESOLID' IN TYPEOF(SecondOperand))</code></pre>
+<pre><code class="language-express hljs">('IFC4X3_TC1.<a href="IfcHalfSpaceSolid.htm">IFCHALFSPACESOLID</a>' IN TYPEOF(SecondOperand))</code></pre>
 </td>
 </tr>
 </tbody>
@@ -386,11 +388,11 @@
 <pre><code class="language-express hljs">ENTITY <a href="IfcBooleanClippingResult.htm">IfcBooleanClippingResult</a>
  SUBTYPE OF (<a href="IfcBooleanResult.htm">IfcBooleanResult</a>);
  WHERE
-	FirstOperandType : ('IFC4X3.IFCSWEPTAREASOLID' IN TYPEOF(FirstOperand)) OR 
-('IFC4X3.IFCSWEPTDISCSOLID' IN TYPEOF(FirstOperand)) OR 
-('IFC4X3.IFCBOOLEANCLIPPINGRESULT' IN TYPEOF(FirstOperand));
+	FirstOperandType : ('IFC4X3_TC1.<a href="IfcSweptAreaSolid.htm">IFCSWEPTAREASOLID</a>' IN TYPEOF(FirstOperand)) OR 
+('IFC4X3_TC1.IFCSWEPTDISCSOLID' IN TYPEOF(FirstOperand)) OR 
+('IFC4X3_TC1.<a href="IfcBooleanClippingResult.htm">IFCBOOLEANCLIPPINGRESULT</a>' IN TYPEOF(FirstOperand));
 	OperatorType : Operator = DIFFERENCE;
-	SecondOperandType : ('IFC4X3.IFCHALFSPACESOLID' IN TYPEOF(SecondOperand));
+	SecondOperandType : ('IFC4X3_TC1.<a href="IfcHalfSpaceSolid.htm">IFCHALFSPACESOLID</a>' IN TYPEOF(SecondOperand));
 END_ENTITY;</code></pre>
 <h2><a id="8.8.3.4.6-References"></a>
     8.8.3.4.6 References
@@ -409,7 +411,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.8.3.4.7-Changelog"></a>
                         8.8.3.4.7 Changelog
                     <a href="IfcBooleanClippingResult.htm#8.8.3.4.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.8.3.4.7.1-IFC4"></a>
+<h4><a id="8.8.3.4.7.1-IFC4"></a>
                         8.8.3.4.7.1 IFC4
                     <a href="IfcBooleanClippingResult.htm#8.8.3.4.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -419,7 +421,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 FirstOperandType
                                 
                             </small>
@@ -430,7 +432,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 OperatorType
                                 
                             </small>
@@ -441,7 +443,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 SecondOperandType
                                 
                             </small>
@@ -451,7 +453,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR1
                                 
                             </small>
@@ -461,7 +463,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR2
                                 
                             </small>
@@ -471,7 +473,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR3
                                 
                             </small>

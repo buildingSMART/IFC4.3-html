@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>Annex E Examples - SpatialStructure_2 - IFC4.3.0.0 Documentation</title>
+<title>Annex E Examples - SpatialStructure_2 - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -107,7 +109,7 @@
   - <code><a href="../lexical/IfcFacilityPart.htm">IfcFacilityPart</a></code> with correct <code>PredefinedType</code></p>
 <h3><a id="Supporting-files"></a>Supporting files<a href="SpatialStructure_2.html#Supporting-files"><i data-feather="link"></i></a></h3>
 <p>Following files correspond to this scenario:</p>
-<figure><a id="Table-8e9f74ec-e70c-4742-820e-c625952343cb"></a><table>
+<figure><a id="Table-f320f910-9d3f-4044-a090-a3ff4c700d14"></a><table>
 <thead>
 <tr>
 <th>Filename</th>
@@ -128,13 +130,13 @@
 <td>diagram showing the structure</td>
 </tr>
 </tbody>
-</table><figcaption>Table 8e9f74ec-e70c-4742-820e-c625952343cb<a href="SpatialStructure_2.html#Table-8e9f74ec-e70c-4742-820e-c625952343cb"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>Table f320f910-9d3f-4044-a090-a3ff4c700d14<a href="SpatialStructure_2.html#Table-f320f910-9d3f-4044-a090-a3ff4c700d14"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a id="Images"></a>
     Images
 <a href="SpatialStructure_2.html#Images"><i data-feather="link"></i></a></h2>
 <ul class="thumbnails">
-<li><figure><a id="Figure-56b051ea-e249-4692-99d7-2d4860200579"></a><a href="../examples/SpatialStructure_2/SpatialStructure_2.png"><img src="../examples/SpatialStructure_2/SpatialStructure_2.png"/></a><figcaption>Figure 56b051ea-e249-4692-99d7-2d4860200579<a href="SpatialStructure_2.html#Figure-56b051ea-e249-4692-99d7-2d4860200579"><i data-feather="link"></i></a></figcaption></figure></li>
-<li><figure><a id="Figure-8f5815b8-e4b1-4201-a2fa-e5ad10741ae1"></a><a href="../examples/SpatialStructure_2/thumb.png"><img src="../examples/SpatialStructure_2/thumb.png"/></a><figcaption>Figure 8f5815b8-e4b1-4201-a2fa-e5ad10741ae1<a href="SpatialStructure_2.html#Figure-8f5815b8-e4b1-4201-a2fa-e5ad10741ae1"><i data-feather="link"></i></a></figcaption></figure></li>
+<li><figure><a id="Figure-7b9808c7-9c3a-40f6-a0a8-0c52c7e5acd4"></a><a href="../examples/SpatialStructure_2/SpatialStructure_2.png"><img src="../examples/SpatialStructure_2/SpatialStructure_2.png"/></a><figcaption>Figure 7b9808c7-9c3a-40f6-a0a8-0c52c7e5acd4<a href="SpatialStructure_2.html#Figure-7b9808c7-9c3a-40f6-a0a8-0c52c7e5acd4"><i data-feather="link"></i></a></figcaption></figure></li>
+<li><figure><a id="Figure-4b55f00c-487b-455e-8d04-635544feb2f3"></a><a href="../examples/SpatialStructure_2/thumb.png"><img src="../examples/SpatialStructure_2/thumb.png"/></a><figcaption>Figure 4b55f00c-487b-455e-8d04-635544feb2f3<a href="SpatialStructure_2.html#Figure-4b55f00c-487b-455e-8d04-635544feb2f3"><i data-feather="link"></i></a></figcaption></figure></li>
 </ul>
 <h2><a id="IFC-SPF-source"></a>
     IFC-SPF source
@@ -155,37 +157,37 @@ FILE_SCHEMA (('IFC4X3_RC2'));
 ENDSEC;
 
 DATA;
-#1= IFCCARTESIANPOINT((0.0,0.0,0.0));
-#2= IFCAXIS2PLACEMENT3D(#1,$,$);
-#3= IFCLOCALPLACEMENT($,#2);
-#4= IFCSITE('3aVxnycuTFhuaONkykPgUe',#10,'Sk\X2\00E4\X0\rholmen (Delomrade)',$,$,#3,$,$,$,$,$,$,$,$);
-#5= IFCPERSON('Sebastian Esser','Sebastian Esser',$,$,$,$,$,$);
-#6= IFCORGANIZATION($,'Unknown',$,$,$);
-#7= IFCPERSONANDORGANIZATION(#5,#6,$);
-#8= IFCAPPLICATION(#9,'0.1.3.0','ConsoleCreateSpatialBridgeStructure v1.0.0.0','ConsoleCreateSpatialBridgeStructure v1.0.0.0');
-#9= IFCORGANIZATION($,'Geometry Gym Pty Ltd',$,$,$);
-#10= IFCOWNERHISTORY(#7,#8,$,.ADDED.,1605016780,$,$,1605016780);
-#11= IFCPROJECT('04hBSiSzPC5fsYypg9Mn7y',#10,'E4 F\X2\00F6\X0\rbifart Stockholm (Program)',$,$,$,$,$,$);
-#12= IFCRELAGGREGATES('126DVi$Y1CQBQPJbmTLwOO',#10,$,$,#11,(#4));
-#13= IFCBRIDGE('3_8eV586P0muvFD5A3Fzqn',#10,$,$,$,$,$,$,$,$);
-#14= IFCRELAGGREGATES('1eBmiEUmT4AAaH4Sa1qai8',#10,$,$,#4,(#13));
-#23= IFCCARTESIANPOINT((0.0,0.0,0.0));
-#24= IFCAXIS2PLACEMENT3D(#23,$,$);
-#25= IFCLOCALPLACEMENT($,#24);
-#26= IFCFACILITYPART('2r6fGfMerF2OJ6dLEL409U',#10,'\X2\00F6\X0\verbyggnad (31--)',$,$,#25,$,$,$,IFCBRIDGEPARTTYPEENUM(.SUPERSTRUCTURE.),.VERTICAL.);
-#27= IFCRELAGGREGATES('3PW0X8qQvFm9ofrOQAdkBe',#10,$,$,#13,(#26,#31,#35,#39));
-#28= IFCCARTESIANPOINT((0.0,0.0,0.0));
-#29= IFCAXIS2PLACEMENT3D(#28,$,$);
-#30= IFCLOCALPLACEMENT($,#29);
-#31= IFCFACILITYPART('0fTB94WKX2dgrmqTEjB5J6',#10,'underbyggnad (12--)',$,$,#30,$,$,$,IFCBRIDGEPARTTYPEENUM(.SUBSTRUCTURE.),.VERTICAL.);
-#32= IFCCARTESIANPOINT((0.0,0.0,0.0));
-#33= IFCAXIS2PLACEMENT3D(#32,$,$);
-#34= IFCLOCALPLACEMENT($,#33);
-#35= IFCFACILITYPART('0fTB94WKX2dgrmqTEjB5J4',#10,'undergrund (11--)',$,$,#34,$,$,$,IFCBRIDGEPARTTYPEENUM(.FOUNDATION.),.VERTICAL.);
-#36= IFCCARTESIANPOINT((0.0,0.0,0.0));
-#37= IFCAXIS2PLACEMENT3D(#36,$,$);
-#38= IFCLOCALPLACEMENT($,#37);
-#39= IFCFACILITYPART('0i3NlGsbb3XRylMEwXSI1b',#10,'Anl\X2\00E4\X0\ggningskomplettering (..--)',$,$,#38,$,$,$,IFCFACILITYPARTCOMMONTYPEENUM(.BELOWGROUND.),.VERTICAL.);
+#1= <a href="../lexical/IfcCartesianPoint.htm">IFCCARTESIANPOINT</a>((0.0,0.0,0.0));
+#2= <a href="../lexical/IfcAxis2Placement3D.htm">IFCAXIS2PLACEMENT3D</a>(#1,$,$);
+#3= <a href="../lexical/IfcLocalPlacement.htm">IFCLOCALPLACEMENT</a>($,#2);
+#4= <a href="../lexical/IfcSite.htm">IFCSITE</a>('3aVxnycuTFhuaONkykPgUe',#10,'Sk\X2\00E4\X0\rholmen (Delomrade)',$,$,#3,$,$,$,$,$,$,$,$);
+#5= <a href="../lexical/IfcPerson.htm">IFCPERSON</a>('Sebastian Esser','Sebastian Esser',$,$,$,$,$,$);
+#6= <a href="../lexical/IfcOrganization.htm">IFCORGANIZATION</a>($,'Unknown',$,$,$);
+#7= <a href="../lexical/IfcPersonAndOrganization.htm">IFCPERSONANDORGANIZATION</a>(#5,#6,$);
+#8= <a href="../lexical/IfcApplication.htm">IFCAPPLICATION</a>(#9,'0.1.3.0','ConsoleCreateSpatialBridgeStructure v1.0.0.0','ConsoleCreateSpatialBridgeStructure v1.0.0.0');
+#9= <a href="../lexical/IfcOrganization.htm">IFCORGANIZATION</a>($,'Geometry Gym Pty Ltd',$,$,$);
+#10= <a href="../lexical/IfcOwnerHistory.htm">IFCOWNERHISTORY</a>(#7,#8,$,.ADDED.,1605016780,$,$,1605016780);
+#11= <a href="../lexical/IfcProject.htm">IFCPROJECT</a>('04hBSiSzPC5fsYypg9Mn7y',#10,'E4 F\X2\00F6\X0\rbifart Stockholm (Program)',$,$,$,$,$,$);
+#12= <a href="../lexical/IfcRelAggregates.htm">IFCRELAGGREGATES</a>('126DVi$Y1CQBQPJbmTLwOO',#10,$,$,#11,(#4));
+#13= <a href="../lexical/IfcBridge.htm">IFCBRIDGE</a>('3_8eV586P0muvFD5A3Fzqn',#10,$,$,$,$,$,$,$,$);
+#14= <a href="../lexical/IfcRelAggregates.htm">IFCRELAGGREGATES</a>('1eBmiEUmT4AAaH4Sa1qai8',#10,$,$,#4,(#13));
+#23= <a href="../lexical/IfcCartesianPoint.htm">IFCCARTESIANPOINT</a>((0.0,0.0,0.0));
+#24= <a href="../lexical/IfcAxis2Placement3D.htm">IFCAXIS2PLACEMENT3D</a>(#23,$,$);
+#25= <a href="../lexical/IfcLocalPlacement.htm">IFCLOCALPLACEMENT</a>($,#24);
+#26= <a href="../lexical/IfcFacilityPart.htm">IFCFACILITYPART</a>('2r6fGfMerF2OJ6dLEL409U',#10,'\X2\00F6\X0\verbyggnad (31--)',$,$,#25,$,$,$,<a href="../lexical/IfcBridgePartTypeEnum.htm">IFCBRIDGEPARTTYPEENUM</a>(.SUPERSTRUCTURE.),.VERTICAL.);
+#27= <a href="../lexical/IfcRelAggregates.htm">IFCRELAGGREGATES</a>('3PW0X8qQvFm9ofrOQAdkBe',#10,$,$,#13,(#26,#31,#35,#39));
+#28= <a href="../lexical/IfcCartesianPoint.htm">IFCCARTESIANPOINT</a>((0.0,0.0,0.0));
+#29= <a href="../lexical/IfcAxis2Placement3D.htm">IFCAXIS2PLACEMENT3D</a>(#28,$,$);
+#30= <a href="../lexical/IfcLocalPlacement.htm">IFCLOCALPLACEMENT</a>($,#29);
+#31= <a href="../lexical/IfcFacilityPart.htm">IFCFACILITYPART</a>('0fTB94WKX2dgrmqTEjB5J6',#10,'underbyggnad (12--)',$,$,#30,$,$,$,<a href="../lexical/IfcBridgePartTypeEnum.htm">IFCBRIDGEPARTTYPEENUM</a>(.SUBSTRUCTURE.),.VERTICAL.);
+#32= <a href="../lexical/IfcCartesianPoint.htm">IFCCARTESIANPOINT</a>((0.0,0.0,0.0));
+#33= <a href="../lexical/IfcAxis2Placement3D.htm">IFCAXIS2PLACEMENT3D</a>(#32,$,$);
+#34= <a href="../lexical/IfcLocalPlacement.htm">IFCLOCALPLACEMENT</a>($,#33);
+#35= <a href="../lexical/IfcFacilityPart.htm">IFCFACILITYPART</a>('0fTB94WKX2dgrmqTEjB5J4',#10,'undergrund (11--)',$,$,#34,$,$,$,<a href="../lexical/IfcBridgePartTypeEnum.htm">IFCBRIDGEPARTTYPEENUM</a>(.FOUNDATION.),.VERTICAL.);
+#36= <a href="../lexical/IfcCartesianPoint.htm">IFCCARTESIANPOINT</a>((0.0,0.0,0.0));
+#37= <a href="../lexical/IfcAxis2Placement3D.htm">IFCAXIS2PLACEMENT3D</a>(#36,$,$);
+#38= <a href="../lexical/IfcLocalPlacement.htm">IFCLOCALPLACEMENT</a>($,#37);
+#39= <a href="../lexical/IfcFacilityPart.htm">IFCFACILITYPART</a>('0i3NlGsbb3XRylMEwXSI1b',#10,'Anl\X2\00E4\X0\ggningskomplettering (..--)',$,$,#38,$,$,$,<a href="../lexical/IfcFacilityPartCommonTypeEnum.htm">IFCFACILITYPARTCOMMONTYPEENUM</a>(.BELOWGROUND.),.VERTICAL.);
 ENDSEC;
 
 END-ISO-10303-21;

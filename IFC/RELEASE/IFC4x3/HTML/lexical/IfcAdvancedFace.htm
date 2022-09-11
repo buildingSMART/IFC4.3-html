@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.20.3.1 IfcAdvancedFace - IFC4.3.0.0 Documentation</title>
+<title>8.20.3.1 IfcAdvancedFace - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -358,12 +360,12 @@
 <td colspan="2">
 <pre><code class="language-express hljs">SIZEOF(QUERY (ElpFbnds &lt;* 
   QUERY (Bnds &lt;* SELF\<a href="IfcFace.htm">IfcFace</a>.Bounds |
-    'IFC4X3.IFCEDGELOOP' IN TYPEOF(Bnds.Bound)) |
+    'IFC4X3_TC1.<a href="IfcEdgeLoop.htm">IFCEDGELOOP</a>' IN TYPEOF(Bnds.Bound)) |
      NOT (SIZEOF (QUERY (Oe &lt;* ElpFbnds.Bound\<a href="IfcEdgeLoop.htm">IfcEdgeLoop</a>.EdgeList |
-       NOT (SIZEOF (['IFC4X3.IFCLINE',
-                     'IFC4X3.IFCCONIC',
-                     'IFC4X3.IFCPOLYLINE',
-                     'IFC4X3.IFCBSPLINECURVE'] *
+       NOT (SIZEOF (['IFC4X3_TC1.<a href="IfcLine.htm">IFCLINE</a>',
+                     'IFC4X3_TC1.<a href="IfcConic.htm">IFCCONIC</a>',
+                     'IFC4X3_TC1.<a href="IfcPolyline.htm">IFCPOLYLINE</a>',
+                     'IFC4X3_TC1.<a href="IfcBSplineCurve.htm">IFCBSPLINECURVE</a>'] *
          TYPEOF(Oe\<a href="IfcOrientedEdge.htm">IfcOrientedEdge</a>.EdgeElement\<a href="IfcEdgeCurve.htm">IfcEdgeCurve</a>.EdgeGeometry)) = 1 )
   )) = 0
 ))) = 0</code></pre>
@@ -378,9 +380,9 @@
 <tr>
 <td colspan="2">
 <pre><code class="language-express hljs">SIZEOF (
-['IFC4X3.IFCELEMENTARYSURFACE',
- 'IFC4X3.IFCSWEPTSURFACE',
- 'IFC4X3.IFCBSPLINESURFACE'] *
+['IFC4X3_TC1.<a href="IfcElementarySurface.htm">IFCELEMENTARYSURFACE</a>',
+ 'IFC4X3_TC1.<a href="IfcSweptSurface.htm">IFCSWEPTSURFACE</a>',
+ 'IFC4X3_TC1.<a href="IfcBSplineSurface.htm">IFCBSPLINESURFACE</a>'] *
 TYPEOF(SELF\<a href="IfcFaceSurface.htm">IfcFaceSurface</a>.FaceSurface)) = 1</code></pre>
 </td>
 </tr>
@@ -394,9 +396,9 @@ TYPEOF(SELF\<a href="IfcFaceSurface.htm">IfcFaceSurface</a>.FaceSurface)) = 1</c
 <td colspan="2">
 <pre><code class="language-express hljs">SIZEOF(QUERY (ElpFbnds &lt;* 
   QUERY (Bnds &lt;* SELF\<a href="IfcFace.htm">IfcFace</a>.Bounds |
-    'IFC4X3.IFCEDGELOOP' IN TYPEOF(Bnds.Bound)) |
+    'IFC4X3_TC1.<a href="IfcEdgeLoop.htm">IFCEDGELOOP</a>' IN TYPEOF(Bnds.Bound)) |
      NOT (SIZEOF (QUERY (Oe &lt;* ElpFbnds.Bound\<a href="IfcEdgeLoop.htm">IfcEdgeLoop</a>.EdgeList |
-       NOT('IFC4X3.IFCEDGECURVE' IN 
+       NOT('IFC4X3_TC1.<a href="IfcEdgeCurve.htm">IFCEDGECURVE</a>' IN 
        TYPEOF(Oe\<a href="IfcOrientedEdge.htm">IfcOrientedEdge</a>.EdgeElement)
   ))) = 0
 ))) = 0</code></pre>
@@ -412,25 +414,25 @@ TYPEOF(SELF\<a href="IfcFaceSurface.htm">IfcFaceSurface</a>.FaceSurface)) = 1</c
  WHERE
 	ApplicableEdgeCurves : SIZEOF(QUERY (ElpFbnds &lt;* 
   QUERY (Bnds &lt;* SELF\<a href="IfcFace.htm">IfcFace</a>.Bounds |
-    'IFC4X3.IFCEDGELOOP' IN TYPEOF(Bnds.Bound)) |
+    'IFC4X3_TC1.<a href="IfcEdgeLoop.htm">IFCEDGELOOP</a>' IN TYPEOF(Bnds.Bound)) |
      NOT (SIZEOF (QUERY (Oe &lt;* ElpFbnds.Bound\<a href="IfcEdgeLoop.htm">IfcEdgeLoop</a>.EdgeList |
-       NOT (SIZEOF (['IFC4X3.IFCLINE',
-                     'IFC4X3.IFCCONIC',
-                     'IFC4X3.IFCPOLYLINE',
-                     'IFC4X3.IFCBSPLINECURVE'] *
+       NOT (SIZEOF (['IFC4X3_TC1.<a href="IfcLine.htm">IFCLINE</a>',
+                     'IFC4X3_TC1.<a href="IfcConic.htm">IFCCONIC</a>',
+                     'IFC4X3_TC1.<a href="IfcPolyline.htm">IFCPOLYLINE</a>',
+                     'IFC4X3_TC1.<a href="IfcBSplineCurve.htm">IFCBSPLINECURVE</a>'] *
          TYPEOF(Oe\<a href="IfcOrientedEdge.htm">IfcOrientedEdge</a>.EdgeElement\<a href="IfcEdgeCurve.htm">IfcEdgeCurve</a>.EdgeGeometry)) = 1 )
   )) = 0
 ))) = 0;
 	ApplicableSurface : SIZEOF (
-['IFC4X3.IFCELEMENTARYSURFACE',
- 'IFC4X3.IFCSWEPTSURFACE',
- 'IFC4X3.IFCBSPLINESURFACE'] *
+['IFC4X3_TC1.<a href="IfcElementarySurface.htm">IFCELEMENTARYSURFACE</a>',
+ 'IFC4X3_TC1.<a href="IfcSweptSurface.htm">IFCSWEPTSURFACE</a>',
+ 'IFC4X3_TC1.<a href="IfcBSplineSurface.htm">IFCBSPLINESURFACE</a>'] *
 TYPEOF(SELF\<a href="IfcFaceSurface.htm">IfcFaceSurface</a>.FaceSurface)) = 1;
 	RequiresEdgeCurve : SIZEOF(QUERY (ElpFbnds &lt;* 
   QUERY (Bnds &lt;* SELF\<a href="IfcFace.htm">IfcFace</a>.Bounds |
-    'IFC4X3.IFCEDGELOOP' IN TYPEOF(Bnds.Bound)) |
+    'IFC4X3_TC1.<a href="IfcEdgeLoop.htm">IFCEDGELOOP</a>' IN TYPEOF(Bnds.Bound)) |
      NOT (SIZEOF (QUERY (Oe &lt;* ElpFbnds.Bound\<a href="IfcEdgeLoop.htm">IfcEdgeLoop</a>.EdgeList |
-       NOT('IFC4X3.IFCEDGECURVE' IN 
+       NOT('IFC4X3_TC1.<a href="IfcEdgeCurve.htm">IFCEDGECURVE</a>' IN 
        TYPEOF(Oe\<a href="IfcOrientedEdge.htm">IfcOrientedEdge</a>.EdgeElement)
   ))) = 0
 ))) = 0;
@@ -452,7 +454,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.20.3.1.7-Changelog"></a>
                         8.20.3.1.7 Changelog
                     <a href="IfcAdvancedFace.htm#8.20.3.1.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.20.3.1.7.1-IFC4"></a>
+<h4><a id="8.20.3.1.7.1-IFC4"></a>
                         8.20.3.1.7.1 IFC4
                     <a href="IfcAdvancedFace.htm#8.20.3.1.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">

@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.12 IfcCartesianPoint - IFC4.3.0.0 Documentation</title>
+<title>8.9.3.12 IfcCartesianPoint - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -265,22 +267,42 @@ A cartesian_point is a point defined by its coordinates in a rectangular Cartesi
 <aside class="aside-change"><mark>IFC2x3-CHANGE</mark>  The inverse attribute <em>StyledByItem</em> has been added.</aside>
 </td>
 </tr>
+<tr class="group-inherited">
+<td colspan="4">
+<a href="IfcPoint.htm">IfcPoint</a>
+<small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>Dim</em>
+</td>
+<td data-label="Type"><a href="IfcDimensionCount.htm">IfcDimensionCount</a></td>
+<td data-label="Description">
+<p>
+                    This attribute is formally derived.
+                </p>
+<pre><code class="language-express hljs"><a href="IfcPointDim.htm">IfcPointDim</a>(SELF)</code></pre>
+<p>The space dimensionality of this abstract class, handled by a function specific for concrete subtypes. Determined by the number of coordinate components in case of <a href="IfcCartesianPoint.htm">IfcCartesianPoint</a> or by the dimensionality of the basis curve or surface in other cases.</p>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
 <i data-feather="eye-off"></i>
-                    Click to show 2 hidden inherited attributes
+                    Click to show 3 hidden inherited attributes
                 </small>
 <small class="hide-inherited" data-type="attribute">
 <i data-feather="eye-off"></i>
-                    Click to hide 2 inherited attributes
+                    Click to hide 3 inherited attributes
                 </small>
 </td>
 </tr>
 <tr class="group">
 <td colspan="4">
 <a href="IfcCartesianPoint.htm">IfcCartesianPoint</a>
-<small>(2)</small>
+<small>(1)</small>
 </td>
 </tr>
 <tr>
@@ -293,20 +315,6 @@ A cartesian_point is a point defined by its coordinates in a rectangular Cartesi
 <td data-label="Type">LIST [1:3] OF <a href="IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
 <td data-label="Description">
 <p>The first, second, and third coordinate of the point location. If placed in a two or three dimensional rectangular Cartesian coordinate system, Coordinates[1] is the X coordinate, Coordinates[2] is the Y coordinate, and Coordinates[3] is the Z coordinate.</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">*</td>
-<td data-label="Name">
-<em>Dim</em>
-</td>
-<td data-label="Type"><a href="IfcDimensionCount.htm">IfcDimensionCount</a></td>
-<td data-label="Description">
-<p>
-                    This attribute is formally derived.
-                </p>
-<pre><code class="language-express hljs">HIINDEX(Coordinates)</code></pre>
-<p>The space dimensionality of this class, determined by the number of coordinates in the List of Coordinates.</p>
 </td>
 </tr>
 </tbody>
@@ -340,84 +348,84 @@ A cartesian_point is a point defined by its coordinates in a rectangular Cartesi
 <a href="IfcCartesianPoint.htm#8.9.3.12.5-Examples"><i data-feather="link"></i></a></h2>
 <ul class="examples">
 <li>
-<figure><a id="Figure-8.9.3.12.A"></a><a href="../annex_e/Tin_2.html"><img src="../examples/Tin_2/thumb.png"/></a><figcaption>Figure 8.9.3.12.A<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.A"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/Tin_2.html">Tin_2</a></p>
+<figure><a id="Figure-8.9.3.12.A"></a><a href="../annex_e/Georeferencing_Tin_4.html"><img src="../examples/Georeferencing_Tin_4/thumb.png"/></a><figcaption>Figure 8.9.3.12.A<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.A"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Georeferencing_Tin_4.html">Georeferencing_Tin_4</a></p>
 </li>
 <li>
-<figure><a id="Figure-8.9.3.12.B"></a><a href="../annex_e/Tin_3.html"><img src="../examples/Tin_3/thumb.png"/></a><figcaption>Figure 8.9.3.12.B<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.B"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/Tin_3.html">Tin_3</a></p>
-</li>
-<li>
-<figure><a id="Figure-8.9.3.12.C"></a><a href="../annex_e/UT_Alignment_12d_11.html"><img src="../examples/UT_Alignment_12d_11/thumb.png"/></a><figcaption>Figure 8.9.3.12.C<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.C"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/UT_Alignment_12d_11.html">UT_Alignment_12d_11</a></p>
-</li>
-<li>
-<figure><a id="Figure-8.9.3.12.D"></a><a href="../annex_e/Georeferencing_Tin_5.html"><img src="../examples/Georeferencing_Tin_5/thumb.png"/></a><figcaption>Figure 8.9.3.12.D<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.D"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/Georeferencing_Tin_5.html">Georeferencing_Tin_5</a></p>
-</li>
-<li>
-<figure><a id="Figure-8.9.3.12.E"></a><a href="../annex_e/LinearPlacement_1.html"><img src="../examples/LinearPlacement_1/thumb.png"/></a><figcaption>Figure 8.9.3.12.E<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.E"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/LinearPlacement_1.html">LinearPlacement_1</a></p>
-</li>
-<li>
-<figure><a id="Figure-8.9.3.12.F"></a><a href="../annex_e/Tin_1.html"><img src="../examples/Tin_1/thumb.png"/></a><figcaption>Figure 8.9.3.12.F<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.F"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/Tin_1.html">Tin_1</a></p>
-</li>
-<li>
-<figure><a id="Figure-8.9.3.12.G"></a><a href="../annex_e/Georeferencing_Tin_1.html"><img src="../examples/Georeferencing_Tin_1/thumb.png"/></a><figcaption>Figure 8.9.3.12.G<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.G"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/Georeferencing_Tin_1.html">Georeferencing_Tin_1</a></p>
-</li>
-<li>
-<figure><a id="Figure-8.9.3.12.H"></a><a href="../annex_e/ProjectSetup_1.html"><img src="http://localhost/IFC/RELEASE/IFC4x3/HTML/examples/ProjectSetup_1/thumb.png"/></a><figcaption>Figure 8.9.3.12.H<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.H"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/ProjectSetup_1.html">ProjectSetup_1</a></p>
-</li>
-<li>
-<figure><a id="Figure-8.9.3.12.I"></a><a href="../annex_e/Georeferencing_Tin_2.html"><img src="../examples/Georeferencing_Tin_2/thumb.png"/></a><figcaption>Figure 8.9.3.12.I<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.I"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/Georeferencing_Tin_2.html">Georeferencing_Tin_2</a></p>
-</li>
-<li>
-<figure><a id="Figure-8.9.3.12.J"></a><a href="../annex_e/Georeferencing_Tiny_Survey_1.html"><img src="../examples/Georeferencing_Tiny_Survey_1/thumb.png"/></a><figcaption>Figure 8.9.3.12.J<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.J"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/Georeferencing_Tiny_Survey_1.html">Georeferencing_Tiny_Survey_1</a></p>
-</li>
-<li>
-<figure><a id="Figure-8.9.3.12.K"></a><a href="../annex_e/UT_SpatialStructure_4.html"><img src="../examples/UT_SpatialStructure_4/thumb.png"/></a><figcaption>Figure 8.9.3.12.K<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.K"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/UT_SpatialStructure_4.html">UT_SpatialStructure_4</a></p>
-</li>
-<li>
-<figure><a id="Figure-8.9.3.12.L"></a><a href="../annex_e/Tin_4.html"><img src="../examples/Tin_4/thumb.png"/></a><figcaption>Figure 8.9.3.12.L<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.L"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/Tin_4.html">Tin_4</a></p>
-</li>
-<li>
-<figure><a id="Figure-8.9.3.12.M"></a><a href="../annex_e/Georeferencing_Tin_3.html"><img src="../examples/Georeferencing_Tin_3/thumb.png"/></a><figcaption>Figure 8.9.3.12.M<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.M"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/Georeferencing_Tin_3.html">Georeferencing_Tin_3</a></p>
-</li>
-<li>
-<figure><a id="Figure-8.9.3.12.N"></a><a href="../annex_e/Georeferencing-1.html"><img src="../examples/Georeferencing-1/thumb.png"/></a><figcaption>Figure 8.9.3.12.N<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.N"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/Georeferencing-1.html">Georeferencing-1</a></p>
-</li>
-<li>
-<figure><a id="Figure-8.9.3.12.O"></a><a href="../annex_e/ProjectSetup_2.html"><img src="../examples/ProjectSetup_2/thumb.png"/></a><figcaption>Figure 8.9.3.12.O<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.O"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a id="Figure-8.9.3.12.B"></a><a href="../annex_e/ProjectSetup_2.html"><img src="../examples/ProjectSetup_2/thumb.png"/></a><figcaption>Figure 8.9.3.12.B<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.B"><i data-feather="link"></i></a></figcaption></figure>
 <p><a href="../annex_e/ProjectSetup_2.html">ProjectSetup_2</a></p>
 </li>
 <li>
-<figure><a id="Figure-8.9.3.12.P"></a><a href="../annex_e/LinearPlacement_2.html"><img src="../examples/LinearPlacement_2/thumb.png"/></a><figcaption>Figure 8.9.3.12.P<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.P"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/LinearPlacement_2.html">LinearPlacement_2</a></p>
-</li>
-<li>
-<figure><a id="Figure-8.9.3.12.Q"></a><a href="../annex_e/SpatialStructure_3.html"><img src="../examples/SpatialStructure_3/thumb.png"/></a><figcaption>Figure 8.9.3.12.Q<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.Q"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/SpatialStructure_3.html">SpatialStructure_3</a></p>
-</li>
-<li>
-<figure><a id="Figure-8.9.3.12.R"></a><a href="../annex_e/SpatialDecomposition_1.html"><img src="../examples/SpatialDecomposition_1/thumb.png"/></a><figcaption>Figure 8.9.3.12.R<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.R"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/SpatialDecomposition_1.html">SpatialDecomposition_1</a></p>
-</li>
-<li>
-<figure><a id="Figure-8.9.3.12.S"></a><a href="../annex_e/SpatialStructure_2.html"><img src="../examples/SpatialStructure_2/thumb.png"/></a><figcaption>Figure 8.9.3.12.S<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.S"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a id="Figure-8.9.3.12.C"></a><a href="../annex_e/SpatialStructure_2.html"><img src="../examples/SpatialStructure_2/thumb.png"/></a><figcaption>Figure 8.9.3.12.C<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.C"><i data-feather="link"></i></a></figcaption></figure>
 <p><a href="../annex_e/SpatialStructure_2.html">SpatialStructure_2</a></p>
 </li>
 <li>
-<figure><a id="Figure-8.9.3.12.T"></a><a href="../annex_e/Georeferencing_Tin_4.html"><img src="../examples/Georeferencing_Tin_4/thumb.png"/></a><figcaption>Figure 8.9.3.12.T<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.T"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/Georeferencing_Tin_4.html">Georeferencing_Tin_4</a></p>
+<figure><a id="Figure-8.9.3.12.D"></a><a href="../annex_e/LinearPlacement_1.html"><img src="../examples/LinearPlacement_1/thumb.png"/></a><figcaption>Figure 8.9.3.12.D<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.D"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/LinearPlacement_1.html">LinearPlacement_1</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.9.3.12.E"></a><a href="../annex_e/Georeferencing-1.html"><img src="../examples/Georeferencing-1/thumb.png"/></a><figcaption>Figure 8.9.3.12.E<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.E"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Georeferencing-1.html">Georeferencing-1</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.9.3.12.F"></a><a href="../annex_e/Georeferencing_Tin_5.html"><img src="../examples/Georeferencing_Tin_5/thumb.png"/></a><figcaption>Figure 8.9.3.12.F<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.F"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Georeferencing_Tin_5.html">Georeferencing_Tin_5</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.9.3.12.G"></a><a href="../annex_e/Georeferencing_Tin_2.html"><img src="../examples/Georeferencing_Tin_2/thumb.png"/></a><figcaption>Figure 8.9.3.12.G<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.G"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Georeferencing_Tin_2.html">Georeferencing_Tin_2</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.9.3.12.H"></a><a href="../annex_e/Tin_4.html"><img src="../examples/Tin_4/thumb.png"/></a><figcaption>Figure 8.9.3.12.H<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.H"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Tin_4.html">Tin_4</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.9.3.12.I"></a><a href="../annex_e/Tin_1.html"><img src="../examples/Tin_1/thumb.png"/></a><figcaption>Figure 8.9.3.12.I<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.I"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Tin_1.html">Tin_1</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.9.3.12.J"></a><a href="../annex_e/LinearPlacement_2.html"><img src="../examples/LinearPlacement_2/thumb.png"/></a><figcaption>Figure 8.9.3.12.J<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.J"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/LinearPlacement_2.html">LinearPlacement_2</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.9.3.12.K"></a><a href="../annex_e/UT_Alignment_12d_11.html"><img src="../examples/UT_Alignment_12d_11/thumb.png"/></a><figcaption>Figure 8.9.3.12.K<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.K"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/UT_Alignment_12d_11.html">UT_Alignment_12d_11</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.9.3.12.L"></a><a href="../annex_e/Tin_2.html"><img src="../examples/Tin_2/thumb.png"/></a><figcaption>Figure 8.9.3.12.L<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.L"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Tin_2.html">Tin_2</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.9.3.12.M"></a><a href="../annex_e/Georeferencing_Tin_1.html"><img src="../examples/Georeferencing_Tin_1/thumb.png"/></a><figcaption>Figure 8.9.3.12.M<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.M"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Georeferencing_Tin_1.html">Georeferencing_Tin_1</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.9.3.12.N"></a><a href="../annex_e/SpatialDecomposition_1.html"><img src="../examples/SpatialDecomposition_1/thumb.png"/></a><figcaption>Figure 8.9.3.12.N<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.N"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/SpatialDecomposition_1.html">SpatialDecomposition_1</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.9.3.12.O"></a><a href="../annex_e/SpatialStructure_3.html"><img src="../examples/SpatialStructure_3/thumb.png"/></a><figcaption>Figure 8.9.3.12.O<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.O"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/SpatialStructure_3.html">SpatialStructure_3</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.9.3.12.P"></a><a href="../annex_e/Tin_3.html"><img src="../examples/Tin_3/thumb.png"/></a><figcaption>Figure 8.9.3.12.P<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.P"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Tin_3.html">Tin_3</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.9.3.12.Q"></a><a href="../annex_e/UT_SpatialStructure_4.html"><img src="../examples/UT_SpatialStructure_4/thumb.png"/></a><figcaption>Figure 8.9.3.12.Q<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.Q"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/UT_SpatialStructure_4.html">UT_SpatialStructure_4</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.9.3.12.R"></a><a href="../annex_e/ProjectSetup_1.html"><img src="../examples/ProjectSetup_1/thumb.png"/></a><figcaption>Figure 8.9.3.12.R<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.R"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/ProjectSetup_1.html">ProjectSetup_1</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.9.3.12.S"></a><a href="../annex_e/Georeferencing_Tin_3.html"><img src="../examples/Georeferencing_Tin_3/thumb.png"/></a><figcaption>Figure 8.9.3.12.S<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.S"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Georeferencing_Tin_3.html">Georeferencing_Tin_3</a></p>
+</li>
+<li>
+<figure><a id="Figure-8.9.3.12.T"></a><a href="../annex_e/Georeferencing_Tiny_Survey_1.html"><img src="../examples/Georeferencing_Tiny_Survey_1/thumb.png"/></a><figcaption>Figure 8.9.3.12.T<a href="IfcCartesianPoint.htm#Figure-8.9.3.12.T"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Georeferencing_Tiny_Survey_1.html">Georeferencing_Tiny_Survey_1</a></p>
 </li>
 </ul>
 <h2><a id="8.9.3.12.6-Formal-representation"></a>
@@ -426,8 +434,6 @@ A cartesian_point is a point defined by its coordinates in a rectangular Cartesi
 <pre><code class="language-express hljs">ENTITY <a href="IfcCartesianPoint.htm">IfcCartesianPoint</a>
  SUBTYPE OF (<a href="IfcPoint.htm">IfcPoint</a>);
 	Coordinates : LIST [1:3] OF <a href="IfcLengthMeasure.htm">IfcLengthMeasure</a>;
- DERIVE
-	 Dim : <a href="IfcDimensionCount.htm">IfcDimensionCount</a> := HIINDEX(Coordinates);
  WHERE
 	CP2Dor3D : HIINDEX(Coordinates) &gt;= 2;
 END_ENTITY;</code></pre>
@@ -446,8 +452,10 @@ END_ENTITY;</code></pre>
 <li><i data-feather="paperclip"></i><a href="IfcMirroredProfileDef.htm">IfcMirroredProfileDef</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcOpenCrossProfileDef.htm">IfcOpenCrossProfileDef</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcPoint.htm">IfcPoint</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcPointDim.htm">IfcPointDim</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcPolyLoop.htm">IfcPolyLoop</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcPolyline.htm">IfcPolyline</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcRevolvedAreaSolid.htm">IfcRevolvedAreaSolid</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcSameCartesianPoint.htm">IfcSameCartesianPoint</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcTrimmingSelect.htm">IfcTrimmingSelect</a></li>
 </ul>
@@ -462,7 +470,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.9.3.12.8-Changelog"></a>
                         8.9.3.12.8 Changelog
                     <a href="IfcCartesianPoint.htm#8.9.3.12.8-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.9.3.12.8.1-IFC4"></a>
+<h4><a id="8.9.3.12.8.1-IFC4"></a>
                         8.9.3.12.8.1 IFC4
                     <a href="IfcCartesianPoint.htm#8.9.3.12.8.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -472,7 +480,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 CP2Dor3D
                                 
                             </small>
@@ -482,7 +490,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR1
                                 
                             </small>

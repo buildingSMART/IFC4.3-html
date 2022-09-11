@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.6.3.9 IfcLibraryInformation - IFC4.3.0.0 Documentation</title>
+<title>8.6.3.9 IfcLibraryInformation - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -336,7 +338,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.6.3.9.6-Changelog"></a>
                         8.6.3.9.6 Changelog
                     <a href="IfcLibraryInformation.htm#8.6.3.9.6-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.6.3.9.6.1-IFC4"></a>
+<h4><a id="8.6.3.9.6.1-IFC4"></a>
                         8.6.3.9.6.1 IFC4
                     <a href="IfcLibraryInformation.htm#8.6.3.9.6.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -346,7 +348,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 Description
                                 
                             </small>
@@ -357,7 +359,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 HasLibraryReferences
                                 
                             </small>
@@ -368,7 +370,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 LibraryInfoForObjects
                                 
                             </small>
@@ -377,16 +379,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes LibraryReference definition,
-                                Changed from set[1:?] of <a href="IfcLibraryReference.htm">IfcLibraryReference</a> to <a href="IfcURIReference.htm">IfcURIReference</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                attributes LibraryReference name,
-                                Changed from LibraryReference to Location
+                                attribute LibraryReference name,
+                                Changed from
+"LibraryReference"
+to
+"Location"
                                 
                             </small>
 </li>
@@ -394,17 +391,37 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes Publisher definition,
-                                Changed from <a href="IfcOrganization.htm">IfcOrganization</a> to <a href="IfcActorSelect.htm">IfcActorSelect</a>
-</small>
+                                attribute LibraryReference type,
+                                Changed from
+"set[1:?] of <a href="IfcLibraryReference.htm">IfcLibraryReference</a>"
+to
+"<a href="IfcURIReference.htm">IfcURIReference</a>"
+                                
+                            </small>
 </li>
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes VersionDate definition,
-                                Changed from IfcCalendarDate to <a href="IfcDateTime.htm">IfcDateTime</a>
-</small>
+                                attribute Publisher type,
+                                Changed from
+"<a href="IfcOrganization.htm">IfcOrganization</a>"
+to
+"<a href="IfcActorSelect.htm">IfcActorSelect</a>"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attribute VersionDate type,
+                                Changed from
+"IfcCalendarDate"
+to
+"<a href="IfcDateTime.htm">IfcDateTime</a>"
+                                
+                            </small>
 </li>
 </ul>
 </div>

@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.20.3.7 IfcFace - IFC4.3.0.0 Documentation</title>
+<title>8.20.3.7 IfcFace - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -157,7 +159,15 @@
 <a href="IfcFace.htm#8.20.3.7.1-Semantic-definition"><i data-feather="link"></i></a></h2>
 <p>An <em><a href="IfcFace.htm">IfcFace</a></em> is topological entity used to define surface, bounded by loops, of a shell.</p>
 <aside class="aside-note"><mark>NOTE</mark>  In a correctly constructed boundary representation model the face normals will point out of the solid and every single edge is used twice once forwards and once backwards. The face normal is solely defined by the consequitive orientations of the <em><a href="IfcEdge.htm">IfcEdge</a></em>'s and <em><a href="IfcOrientedEdge.htm">IfcOrientedEdge</a></em>'s that bound the face. If all the edges of the face are connected in a counter clockwise manner following the edge orientations the face normal will point outward. The orientation of the <em><a href="IfcFaceSurface.htm">IfcFaceSurface</a></em>, or the value of the <em><a href="IfcFaceSurface.htm">IfcFaceSurface</a>.SameSense</em> attribute have no effect on the orientation of the face.</aside><aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO/CD 10303-42:1992
-A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2-manifold in <em>R^m^</em>. A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 &lt; Ξ &lt; ∞.</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>face</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC1.0</aside>
+A face is a topological entity of dimensionality 2 corresponding to the intuitive notion of a piece of surface bounded by loops. Its domain, if present, is an oriented, connected, finite 2-manifold in <em>R^m^</em>. A face domain shall not have handles but it may have holes, each hole bounded by a loop. The domain of the underlying geometry of the face, if present, does not contain its bounds, and 0 &lt; Ξ &lt; ∞.</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>face</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC1.0</aside><blockquote>
+<p>A face is represented by its bounding loops, which are defined as face bounds. A face has a topological normal n and the tangent to a loop is t. For a loop bounding a face with defined geometry, the cross product n x t points toward the interior of the face. That is, each loop runs counter-clockwise around the face when viewed from above, if we consider the normal n to point up. With each loop is associated a BOOLEAN flag to signify whether the loop direction is oriented with respect to the face normal (TRUE) or should be reversed (FALSE).</p>
+<p>A face shall have at least one bound, and the loops shall not intersect. One loop is optionally distinguished as the outer loop of the face. If so, it establishes a preferred way of embedding the face domain in the plane, in which the other bounding loops of the face are inside the outer bound. Because the face domain is arcwise connected, no inner loop will contain any other loop. This is true regardless of which embedding in the plane is chosen.</p>
+<p>The edges and vertices referenced by the loops of a face form a graph, of which the individual loops are the connected components. The Euler equation (1) for this graph becomes:</p>
+<blockquote>
+<figure><a id="Figure-8.20.3.7.A"></a><img alt="Image" src="../figures/ifcface-math1.gif"/>
+ where <em>G^l^~i~</em> is the graph genus of the_i_^th^ loop.<figcaption>Figure 8.20.3.7.A<a href="IfcFace.htm#Figure-8.20.3.7.A"><i data-feather="link"></i></a></figcaption></figure>
+</blockquote>
+</blockquote>
 <p>Informal Propositions:</p>
 <ol>
 <li>No edge shall be referenced by the face more than twice.</li>
@@ -207,7 +217,7 @@ A face is a topological entity of dimensionality 2 corresponding to the intuitiv
     8.20.3.7.3 Attributes
 <a href="IfcFace.htm#8.20.3.7.3-Attributes"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a id="Table-8.20.3.7.B"></a><table class="striped grouped attributes">
+<figure><a id="Table-8.20.3.7.C"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -294,11 +304,11 @@ A face is a topological entity of dimensionality 2 corresponding to the intuitiv
 </td>
 </tr>
 </tbody>
-</table><figcaption>Table 8.20.3.7.B<a href="IfcFace.htm#Table-8.20.3.7.B"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>Table 8.20.3.7.C<a href="IfcFace.htm#Table-8.20.3.7.C"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a id="8.20.3.7.4-Formal-propositions"></a>
     8.20.3.7.4 Formal propositions
 <a href="IfcFace.htm#8.20.3.7.4-Formal-propositions"><i data-feather="link"></i></a></h2>
-<figure><a id="Table-8.20.3.7.C"></a><table>
+<figure><a id="Table-8.20.3.7.D"></a><table>
 <thead>
 <tr>
 <th>Name</th>
@@ -315,17 +325,17 @@ A face is a topological entity of dimensionality 2 corresponding to the intuitiv
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">SIZEOF(QUERY(temp &lt;* Bounds | 'IFC4X3.IFCFACEOUTERBOUND' IN TYPEOF(temp))) &lt;= 1</code></pre>
+<pre><code class="language-express hljs">SIZEOF(QUERY(temp &lt;* Bounds | 'IFC4X3_TC1.<a href="IfcFaceOuterBound.htm">IFCFACEOUTERBOUND</a>' IN TYPEOF(temp))) &lt;= 1</code></pre>
 </td>
 </tr>
 </tbody>
-</table><figcaption>Table 8.20.3.7.C<a href="IfcFace.htm#Table-8.20.3.7.C"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>Table 8.20.3.7.D<a href="IfcFace.htm#Table-8.20.3.7.D"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a id="8.20.3.7.5-Examples"></a>
     8.20.3.7.5 Examples
 <a href="IfcFace.htm#8.20.3.7.5-Examples"><i data-feather="link"></i></a></h2>
 <ul class="examples">
 <li>
-<figure><a id="Figure-8.20.3.7.A"></a><a href="../annex_e/LinearPlacement_2.html"><img src="../examples/LinearPlacement_2/thumb.png"/></a><figcaption>Figure 8.20.3.7.A<a href="IfcFace.htm#Figure-8.20.3.7.A"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a id="Figure-8.20.3.7.B"></a><a href="../annex_e/LinearPlacement_2.html"><img src="../examples/LinearPlacement_2/thumb.png"/></a><figcaption>Figure 8.20.3.7.B<a href="IfcFace.htm#Figure-8.20.3.7.B"><i data-feather="link"></i></a></figcaption></figure>
 <p><a href="../annex_e/LinearPlacement_2.html">LinearPlacement_2</a></p>
 </li>
 </ul>
@@ -340,7 +350,7 @@ A face is a topological entity of dimensionality 2 corresponding to the intuitiv
  INVERSE
 	HasTextureMaps : SET [0:?] OF <a href="IfcTextureMap.htm">IfcTextureMap</a> FOR MappedTo;
  WHERE
-	HasOuterBound : SIZEOF(QUERY(temp &lt;* Bounds | 'IFC4X3.IFCFACEOUTERBOUND' IN TYPEOF(temp))) &lt;= 1;
+	HasOuterBound : SIZEOF(QUERY(temp &lt;* Bounds | 'IFC4X3_TC1.<a href="IfcFaceOuterBound.htm">IFCFACEOUTERBOUND</a>' IN TYPEOF(temp))) &lt;= 1;
 END_ENTITY;</code></pre>
 <h2><a id="8.20.3.7.7-References"></a>
     8.20.3.7.7 References
@@ -363,7 +373,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.20.3.7.8-Changelog"></a>
                         8.20.3.7.8 Changelog
                     <a href="IfcFace.htm#8.20.3.7.8-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.20.3.7.8.1-IFC4"></a>
+<h4><a id="8.20.3.7.8.1-IFC4"></a>
                         8.20.3.7.8.1 IFC4
                     <a href="IfcFace.htm#8.20.3.7.8.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -373,7 +383,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 HasTextureMaps
                                 
                             </small>
@@ -384,7 +394,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 HasOuterBound
                                 
                             </small>
@@ -394,7 +404,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR1
                                 
                             </small>

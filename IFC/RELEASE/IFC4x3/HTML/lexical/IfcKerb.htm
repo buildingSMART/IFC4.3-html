@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>7.9.3.1 IfcKerb - IFC4.3.0.0 Documentation</title>
+<title>7.9.3.1 IfcKerb - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -400,7 +402,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED.</p>
+<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED or when the concrete entity instantiated does not have a PredefinedType attribute. The latter is the case in some exceptional leaf classes and when instantiating <a href="IfcBuiltElement.htm">IfcBuiltElement</a> directly. </p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -673,19 +675,62 @@
 <td data-label="#">9</td>
 <td data-label="Name">
                 
-                Mountable
+                PredefinedType
                 
             </td>
-<td data-label="Type"><a href="IfcBoolean.htm">IfcBoolean</a></td>
+<td data-label="Type">OPTIONAL <a href="IfcKerbTypeEnum.htm">IfcKerbTypeEnum</a></td>
 <td data-label="Description">
-<p>Specifies whether the kerb can be readily climbed by a vehicle or not.</p>
+<p>A list of types to further identify the object. Some property sets may be specifically applicable to one of these types.</p>
+<aside class="aside-note"><mark>NOTE</mark>  If the object has an associated <a href="IfcTypeObject.htm">IfcTypeObject</a> with a <em>PredefinedType</em>, then this attribute shall not be used.</aside>
 </td>
 </tr>
 </tbody>
 </table><figcaption>Table 7.9.3.1.D<a href="IfcKerb.htm#Table-7.9.3.1.D"><i data-feather="link"></i></a></figcaption></figure>
-<h2><a id="7.9.3.1.4-Property-sets"></a>
-    7.9.3.1.4 Property sets
-<a href="IfcKerb.htm#7.9.3.1.4-Property-sets"><i data-feather="link"></i></a></h2>
+<h2><a id="7.9.3.1.4-Formal-propositions"></a>
+    7.9.3.1.4 Formal propositions
+<a href="IfcKerb.htm#7.9.3.1.4-Formal-propositions"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-7.9.3.1.E"></a><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CorrectPredefinedType</td>
+<td>
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType &lt;&gt; <a href="IfcKerbTypeEnum.htm">IfcKerbTypeEnum</a>.USERDEFINED) OR
+ ((PredefinedType = <a href="IfcKerbTypeEnum.htm">IfcKerbTypeEnum</a>.USERDEFINED) AND EXISTS (SELF\<a href="IfcObject.htm">IfcObject</a>.ObjectType))</code></pre>
+</td>
+</tr>
+<tr>
+<td>CorrectTypeAssigned</td>
+<td>
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">(SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_TC1.<a href="IfcKerbType.htm">IFCKERBTYPE</a>' IN TYPEOF(SELF\<a href="IfcObject.htm">IfcObject</a>.IsTypedBy[1].RelatingType))</code></pre>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 7.9.3.1.E<a href="IfcKerb.htm#Table-7.9.3.1.E"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="7.9.3.1.5-Property-sets"></a>
+    7.9.3.1.5 Property sets
+<a href="IfcKerb.htm#7.9.3.1.5-Property-sets"><i data-feather="link"></i></a></h2>
 <p>
 </p><ul class="psets">
 <li>
@@ -710,24 +755,12 @@
 </ul>
 </li>
 <li>
-<a href="Pset_ConstructionOccurance.htm">Pset_ConstructionOccurance</a>
+<a href="Pset_ConstructionOccurence.htm">Pset_ConstructionOccurence</a>
 <ul>
 <li>InstallationDate</li>
 <li>ModelNumber</li>
 <li>TagNumber</li>
 <li>AssetIdentifier</li>
-</ul>
-</li>
-<li>
-<a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
-<ul>
-<li>CyclicPath</li>
-<li>CyclicRange</li>
-<li>LinearPath</li>
-<li>LinearRange</li>
-<li>MaximumAngularVelocity</li>
-<li>MaximumConstantSpeed</li>
-<li>MinimumTime</li>
 </ul>
 </li>
 <li>
@@ -817,6 +850,7 @@
 <ul>
 <li>CombinedKerbGutter</li>
 <li>Upstand</li>
+<li>Mountable</li>
 </ul>
 </li>
 <li>
@@ -1020,10 +1054,10 @@
 </li>
 </ul>
 <p>
-</p><h2><a id="7.9.3.1.5-Concept-usage"></a>
-    7.9.3.1.5 Concept usage
-<a href="IfcKerb.htm#7.9.3.1.5-Concept-usage"><i data-feather="link"></i></a></h2>
-<figure><a id="Table-7.9.3.1.E"></a><table class="striped grouped concepts">
+</p><h2><a id="7.9.3.1.6-Concept-usage"></a>
+    7.9.3.1.6 Concept usage
+<a href="IfcKerb.htm#7.9.3.1.6-Concept-usage"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-7.9.3.1.F"></a><table class="striped grouped concepts">
 <thead>
 <tr>
 <th>Concept</th>
@@ -1255,7 +1289,7 @@
 <tr class="group-inherited">
 <td colspan="3">
 <a href="IfcProduct.htm">IfcProduct</a>
-<small>(17)</small>
+<small>(18)</small>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1310,6 +1344,28 @@
 <p>
 <em>No description available.</em>
 </p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Object_Typing/content.html">Object Typing</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        This is a further elaboration on an inherited concept.
+                    </small>
+</aside>
+<p>This concept can be applied to the following resources:</p>
+<ul>
+<li>
+<a href="IfcTypeProduct.htm">IfcTypeProduct</a>
+</li>
+</ul>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -2041,10 +2097,7 @@ shape.</aside>
 <a href="Pset_ConstructionAdministration.htm">Pset_ConstructionAdministration</a>
 </li>
 <li>
-<a href="Pset_ConstructionOccurance.htm">Pset_ConstructionOccurance</a>
-</li>
-<li>
-<a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
+<a href="Pset_ConstructionOccurence.htm">Pset_ConstructionOccurence</a>
 </li>
 <li>
 <a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
@@ -2213,11 +2266,11 @@ shape.</aside>
 <td colspan="4">
 <small class="show-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    Click to show 81 hidden inherited concepts
+                    Click to show 82 hidden inherited concepts
                 </small>
 <small class="hide-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    Click to hide 81 inherited concepts
+                    Click to hide 82 inherited concepts
                 </small>
 </td>
 </tr>
@@ -2300,17 +2353,23 @@ shape.</aside>
 </td>
 </tr>
 </tbody>
-</table><figcaption>Table 7.9.3.1.E<a href="IfcKerb.htm#Table-7.9.3.1.E"><i data-feather="link"></i></a></figcaption></figure>
-<h2><a id="7.9.3.1.6-Formal-representation"></a>
-    7.9.3.1.6 Formal representation
-<a href="IfcKerb.htm#7.9.3.1.6-Formal-representation"><i data-feather="link"></i></a></h2>
+</table><figcaption>Table 7.9.3.1.F<a href="IfcKerb.htm#Table-7.9.3.1.F"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="7.9.3.1.7-Formal-representation"></a>
+    7.9.3.1.7 Formal representation
+<a href="IfcKerb.htm#7.9.3.1.7-Formal-representation"><i data-feather="link"></i></a></h2>
 <pre><code class="language-express hljs">ENTITY <a href="IfcKerb.htm">IfcKerb</a>
  SUBTYPE OF (<a href="IfcBuiltElement.htm">IfcBuiltElement</a>);
-	Mountable : <a href="IfcBoolean.htm">IfcBoolean</a>;
+	PredefinedType : OPTIONAL <a href="IfcKerbTypeEnum.htm">IfcKerbTypeEnum</a>;
+ WHERE
+	CorrectPredefinedType : NOT(EXISTS(PredefinedType)) OR
+ (PredefinedType &lt;&gt; <a href="IfcKerbTypeEnum.htm">IfcKerbTypeEnum</a>.USERDEFINED) OR
+ ((PredefinedType = <a href="IfcKerbTypeEnum.htm">IfcKerbTypeEnum</a>.USERDEFINED) AND EXISTS (SELF\<a href="IfcObject.htm">IfcObject</a>.ObjectType));
+	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
+  ('IFC4X3_TC1.<a href="IfcKerbType.htm">IFCKERBTYPE</a>' IN TYPEOF(SELF\<a href="IfcObject.htm">IfcObject</a>.IsTypedBy[1].RelatingType));
 END_ENTITY;</code></pre>
-<h2><a id="7.9.3.1.7-References"></a>
-    7.9.3.1.7 References
-<a href="IfcKerb.htm#7.9.3.1.7-References"><i data-feather="link"></i></a></h2>
+<h2><a id="7.9.3.1.8-References"></a>
+    7.9.3.1.8 References
+<a href="IfcKerb.htm#7.9.3.1.8-References"><i data-feather="link"></i></a></h2>
 <ul class="references">
 <li><i data-feather="paperclip"></i><a href="IfcBuiltElement.htm">IfcBuiltElement</a></li>
 </ul>
@@ -2322,12 +2381,12 @@ END_ENTITY;</code></pre>
 <ol class="referenced-list small"></ol>
 </div>
 <div class="changelog">
-<h3><a id="7.9.3.1.8-Changelog"></a>
-                        7.9.3.1.8 Changelog
-                    <a href="IfcKerb.htm#7.9.3.1.8-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="7.9.3.1.8.1-IFC4.3"></a>
-                        7.9.3.1.8.1 IFC4.3
-                    <a href="IfcKerb.htm#7.9.3.1.8.1-IFC4.3"><i data-feather="link"></i></a></h4>
+<h3><a id="7.9.3.1.9-Changelog"></a>
+                        7.9.3.1.9 Changelog
+                    <a href="IfcKerb.htm#7.9.3.1.9-Changelog"><i data-feather="link"></i></a></h3>
+<h4><a id="7.9.3.1.9.1-IFC4.3-TC1"></a>
+                        7.9.3.1.9.1 IFC4.3_TC1
+                    <a href="IfcKerb.htm#7.9.3.1.9.1-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>

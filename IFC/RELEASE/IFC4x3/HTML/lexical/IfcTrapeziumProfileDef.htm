@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.15.3.26 IfcTrapeziumProfileDef - IFC4.3.0.0 Documentation</title>
+<title>8.15.3.26 IfcTrapeziumProfileDef - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -153,9 +155,11 @@
 <div class="col-md-8" id="main-content">
 <h1>8.15.3.26 IfcTrapeziumProfileDef</h1>
 <div class="row">
-<div class="card fluid error">
+<div class="card fluid error deprecation">
 <p>
-<mark class="secondary">DEPRECATED</mark> This definition may be imported, but shall not be exported by applications
+<mark class="secondary">DEPRECATED
+            <a href="../content/terms_and_definitions.htm#3.1.30-deprecation"><i data-feather="link"></i></a></mark>
+            This definition will be removed in a future major release of this standard
         </p>
 </div>
 </div>
@@ -163,7 +167,7 @@
     8.15.3.26.1 Semantic definition
 <a href="IfcTrapeziumProfileDef.htm#8.15.3.26.1-Semantic-definition"><i data-feather="link"></i></a></h2>
 <p><em><a href="IfcTrapeziumProfileDef.htm">IfcTrapeziumProfileDef</a></em> defines a trapezium as the profile definition used by the swept surface geometry or the swept area solid. It is given by its Top X and Bottom X extent and its Y extent as well as by the offset of the Top X extend, and placed within the 2D position coordinate system, established by the <em>Position</em> attribute. It is placed centric within the position coordinate system, that is, in the center of the bounding box.</p>
-<aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC1.5. The use definition has changed in IFC2x.</aside>
+<aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC1.5. The use definition has changed in IFC2x.</aside><aside class="aside-deprecation"><mark>IFC4.3.0.0-DEPRECATION<a href="../content/terms_and_definitions.htm#3.1.30-deprecation"><i data-feather="link"></i></a></mark> This entity is deprecated. Use <a href="IfcArbitraryClosedProfileDef.htm">IfcArbitraryClosedProfileDef</a> instead to define the trapezium by means of an explicit outer boundary.</aside>
 <p>Figure 8.15.3.26.A illustrates parameters of the trapezium profile definition.</p>
 <figure><a id="Figure-8.15.3.26.A-Trapezium-profile"></a><img alt="trapezium profile" src="../figures/ifctrapeziumprofiledef-layout1.gif"/><figcaption>Figure 8.15.3.26.A — Trapezium profile<a href="IfcTrapeziumProfileDef.htm#Figure-8.15.3.26.A-Trapezium-profile"><i data-feather="link"></i></a></figcaption></figure>
 <p><u>Position</u></p>
@@ -487,16 +491,16 @@ END_ENTITY;</code></pre>
 <h3><a id="8.15.3.26.8-Changelog"></a>
                         8.15.3.26.8 Changelog
                     <a href="IfcTrapeziumProfileDef.htm#8.15.3.26.8-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.15.3.26.8.1-IFC4.3"></a>
-                        8.15.3.26.8.1 IFC4.3
-                    <a href="IfcTrapeziumProfileDef.htm#8.15.3.26.8.1-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="8.15.3.26.8.1-IFC4.3-TC1"></a>
+                        8.15.3.26.8.1 IFC4.3_TC1
+                    <a href="IfcTrapeziumProfileDef.htm#8.15.3.26.8.1-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
                                 deprecated,
-                                Changed from False to True
+                                Is now deprecated. Use <a href="IfcArbitraryClosedProfileDef.htm">IfcArbitraryClosedProfileDef</a> instead to define the trapezium by means of an explicit outer boundary.
                                 
                             </small>
 </li>

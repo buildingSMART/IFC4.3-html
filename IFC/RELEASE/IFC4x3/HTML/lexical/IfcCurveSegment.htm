@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.28 IfcCurveSegment - IFC4.3.0.0 Documentation</title>
+<title>8.9.3.28 IfcCurveSegment - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -155,7 +157,7 @@
 <h2><a id="8.9.3.28.1-Semantic-definition"></a>
     8.9.3.28.1 Semantic definition
 <a href="IfcCurveSegment.htm#8.9.3.28.1-Semantic-definition"><i data-feather="link"></i></a></h2>
-<p>A type of segment positioned along a curve cutting a segment from the parent curve. If the segment is placed through <a href="IfcAxis2PlacementLinear.htm">IfcAxis2PlacementLinear</a>, the positioning curve (Placement.Location.BasisCurve) does not neccessarily correspond with the ParentCurve.</p>
+<p>A type of segment positioned along a curve cutting a segment from the parent curve. If the segment is placed through <a href="IfcAxis2PlacementLinear.htm">IfcAxis2PlacementLinear</a>, the positioning curve (Placement.Location.BasisCurve) does not necessarily correspond with the ParentCurve.</p>
 <h2><a id="8.9.3.28.2-Entity-inheritance"></a>
     8.9.3.28.2 Entity inheritance
 <a href="IfcCurveSegment.htm#8.9.3.28.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
@@ -264,7 +266,7 @@
 <tr class="group-inherited">
 <td colspan="4">
 <a href="IfcSegment.htm">IfcSegment</a>
-<small>(2)</small>
+<small>(3)</small>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -289,22 +291,36 @@
 <p>The set of composite curves which use this composite curve segment as a segment. This set shall not be empty.</p>
 </td>
 </tr>
+<tr class="inherited" data-type="attribute">
+<td data-label="#">*</td>
+<td data-label="Name">
+<em>Dim</em>
+</td>
+<td data-label="Type"><a href="IfcDimensionCount.htm">IfcDimensionCount</a></td>
+<td data-label="Description">
+<p>
+                    This attribute is formally derived.
+                </p>
+<pre><code class="language-express hljs"><a href="IfcSegmentDim.htm">IfcSegmentDim</a>(SELF)</code></pre>
+<p>The space dimensionality of this abstract class, handled by a function specific for concrete subtypes which returns the dimensionality of the ParentCurve attribute (defined on both subtypes).</p>
+</td>
+</tr>
 <tr class="preview">
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
 <i data-feather="eye-off"></i>
-                    Click to show 4 hidden inherited attributes
+                    Click to show 5 hidden inherited attributes
                 </small>
 <small class="hide-inherited" data-type="attribute">
 <i data-feather="eye-off"></i>
-                    Click to hide 4 inherited attributes
+                    Click to hide 5 inherited attributes
                 </small>
 </td>
 </tr>
 <tr class="group">
 <td colspan="4">
 <a href="IfcCurveSegment.htm">IfcCurveSegment</a>
-<small>(5)</small>
+<small>(4)</small>
 </td>
 </tr>
 <tr>
@@ -355,20 +371,6 @@
 <p>Curve to be used as base for the segment definition.</p>
 </td>
 </tr>
-<tr>
-<td data-label="#">*</td>
-<td data-label="Name">
-<em>Dim</em>
-</td>
-<td data-label="Type"><a href="IfcDimensionCount.htm">IfcDimensionCount</a></td>
-<td data-label="Description">
-<p>
-                    This attribute is formally derived.
-                </p>
-<pre><code class="language-express hljs">ParentCurve.Dim</code></pre>
-<p>The space dimensionality of this class, defined by the dimensionality of the first ParentCurve.</p>
-</td>
-</tr>
 </tbody>
 </table><figcaption>Table 8.9.3.28.B<a href="IfcCurveSegment.htm#Table-8.9.3.28.B"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a id="8.9.3.28.4-Examples"></a>
@@ -389,14 +391,14 @@
 	SegmentStart : <a href="IfcCurveMeasureSelect.htm">IfcCurveMeasureSelect</a>;
 	SegmentLength : <a href="IfcCurveMeasureSelect.htm">IfcCurveMeasureSelect</a>;
 	ParentCurve : <a href="IfcCurve.htm">IfcCurve</a>;
- DERIVE
-	 Dim : <a href="IfcDimensionCount.htm">IfcDimensionCount</a> := ParentCurve.Dim;
 END_ENTITY;</code></pre>
 <h2><a id="8.9.3.28.6-References"></a>
     8.9.3.28.6 References
 <a href="IfcCurveSegment.htm#8.9.3.28.6-References"><i data-feather="link"></i></a></h2>
 <ul class="references">
+<li><i data-feather="paperclip"></i><a href="IfcGetBasisSurface.htm">IfcGetBasisSurface</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcSegment.htm">IfcSegment</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcSegmentDim.htm">IfcSegmentDim</a></li>
 </ul>
 </div>
 <div class="col-md-2">
@@ -409,9 +411,9 @@ END_ENTITY;</code></pre>
 <h3><a id="8.9.3.28.7-Changelog"></a>
                         8.9.3.28.7 Changelog
                     <a href="IfcCurveSegment.htm#8.9.3.28.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.9.3.28.7.1-IFC4.3"></a>
-                        8.9.3.28.7.1 IFC4.3
-                    <a href="IfcCurveSegment.htm#8.9.3.28.7.1-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="8.9.3.28.7.1-IFC4.3-TC1"></a>
+                        8.9.3.28.7.1 IFC4.3_TC1
+                    <a href="IfcCurveSegment.htm#8.9.3.28.7.1-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>

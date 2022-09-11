@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.3.35 IfcSurfaceTexture - IFC4.3.0.0 Documentation</title>
+<title>8.12.3.35 IfcSurfaceTexture - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -376,7 +378,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="IfcCartesianTransformationOperator2D.htm">IfcCartesianTransformationOperator2D</a></td>
 <td data-label="Description">
-<p>The <em>TextureTransform</em> defines a 2D transformation that is applied to the texture coordinates. It affects the way texture coordinates are applied to the surfaces of geometric representation itesm. The 2D transformation supports changes to the size, orientation, and position of textures on shapes. Mirroring is not allowed to be used in the <em><a href="IfcCartesianTransformationOperator.htm">IfcCartesianTransformationOperator</a></em></p>
+<p>The <em>TextureTransform</em> defines a 2D transformation that is applied to the texture coordinates. It affects the way texture coordinates are applied to the surfaces of geometric representation items. The 2D transformation supports changes to the size, orientation, and position of textures on shapes. Mirroring is not allowed to be used in the <em><a href="IfcCartesianTransformationOperator.htm">IfcCartesianTransformationOperator</a></em></p>
 </td>
 </tr>
 <tr>
@@ -388,7 +390,7 @@
             </td>
 <td data-label="Type">OPTIONAL LIST [1:?] OF <a href="IfcIdentifier.htm">IfcIdentifier</a></td>
 <td data-label="Description">
-<aside class="aside-deprecation"><mark>IFC4.3.0.0-DEPRECATION</mark> This attribute is deprecated and shall no longer be used.</aside>
+<aside class="aside-deprecation"><mark>IFC4.3.0.0-DEPRECATION<a href="../content/terms_and_definitions.htm#3.1.30-deprecation"><i data-feather="link"></i></a></mark> This attribute is deprecated and shall no longer be used.</aside>
 </td>
 </tr>
 <tr>
@@ -456,7 +458,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.12.3.35.6-Changelog"></a>
                         8.12.3.35.6 Changelog
                     <a href="IfcSurfaceTexture.htm#8.12.3.35.6-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.12.3.35.6.1-IFC4"></a>
+<h4><a id="8.12.3.35.6.1-IFC4"></a>
                         8.12.3.35.6.1 IFC4
                     <a href="IfcSurfaceTexture.htm#8.12.3.35.6.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -466,7 +468,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 Parameter
                                 
                             </small>
@@ -477,7 +479,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 IsMappedBy
                                 
                             </small>
@@ -488,7 +490,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 UsedInStyles
                                 
                             </small>
@@ -497,32 +499,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes RepeatS definition,
-                                Changed from boolean to <a href="IfcBoolean.htm">IfcBoolean</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                attributes RepeatT definition,
-                                Changed from boolean to <a href="IfcBoolean.htm">IfcBoolean</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                attributes TextureType definition,
-                                Changed from IfcSurfaceTextureEnum to <a href="IfcIdentifier.htm">IfcIdentifier</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                attributes TextureType is_optional,
-                                Changed from False to True
+                                attribute RepeatS type,
+                                Changed from
+"boolean"
+to
+"<a href="IfcBoolean.htm">IfcBoolean</a>"
                                 
                             </small>
 </li>
@@ -530,8 +511,61 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes TextureType name,
-                                Changed from TextureType to Mode
+                                attribute RepeatT type,
+                                Changed from
+"boolean"
+to
+"<a href="IfcBoolean.htm">IfcBoolean</a>"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attribute TextureType name,
+                                Changed from
+"TextureType"
+to
+"Mode"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attribute TextureType optional,
+                                Changed from
+"False"
+to
+"True"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attribute TextureType type,
+                                Changed from
+"IfcSurfaceTextureEnum"
+to
+"<a href="IfcIdentifier.htm">IfcIdentifier</a>"
+                                
+                            </small>
+</li>
+</ul>
+<h4><a id="8.12.3.35.6.2-IFC4.3-TC1"></a>
+                        8.12.3.35.6.2 IFC4.3_TC1
+                    <a href="IfcSurfaceTexture.htm#8.12.3.35.6.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attribute Parameter,
+                                Is now deprecated
                                 
                             </small>
 </li>

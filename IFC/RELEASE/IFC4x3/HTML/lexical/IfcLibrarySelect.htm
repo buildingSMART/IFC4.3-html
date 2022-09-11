@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.6.2.7 IfcLibrarySelect - IFC4.3.0.0 Documentation</title>
+<title>8.6.2.7 IfcLibrarySelect - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -156,7 +158,9 @@
     8.6.2.7.1 Semantic definition
 <a href="IfcLibrarySelect.htm#8.6.2.7.1-Semantic-definition"><i data-feather="link"></i></a></h2>
 <p>The <em><a href="IfcLibrarySelect.htm">IfcLibrarySelect</a></em> enables selection of whether library information is to be contained within an IFC model or is to be referenced from an external source.</p>
-<aside class="aside-history"><mark>HISTORY</mark>  New select type in IFC2x</aside>
+<aside class="aside-history"><mark>HISTORY</mark>  New select type in IFC2x</aside><blockquote>
+<p>It is expected that selection will be <em><a href="IfcLibraryReference.htm">IfcLibraryReference</a></em> and only rarely <em><a href="IfcLibraryInformation.htm">IfcLibraryInformation</a></em>. <em><a href="IfcLibraryInformation.htm">IfcLibraryInformation</a></em> should only be selected in circumstances where there could be a need to indicate the libraries that will be used without making individual references. This may occur for higher level objects such as a <em><a href="IfcProject.htm">IfcProject</a></em> or <em><a href="IfcBuilding.htm">IfcBuilding</a></em>.</p>
+</blockquote>
 <h2><a id="8.6.2.7.2-Type-values"></a>
     8.6.2.7.2 Type values
 <a href="IfcLibrarySelect.htm#8.6.2.7.2-Type-values"><i data-feather="link"></i></a></h2>

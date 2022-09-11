@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.35 IfcGradientCurve - IFC4.3.0.0 Documentation</title>
+<title>8.9.3.35 IfcGradientCurve - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -380,7 +382,7 @@
 <tr class="group">
 <td colspan="4">
 <a href="IfcGradientCurve.htm">IfcGradientCurve</a>
-<small>(3)</small>
+<small>(2)</small>
 </td>
 </tr>
 <tr>
@@ -407,19 +409,6 @@
 <p>End point of gradient curve.</p>
 </td>
 </tr>
-<tr>
-<td data-label="#">*</td>
-<td data-label="Name">
-<em>RelativeElevation</em>
-</td>
-<td data-label="Type"><a href="IfcLengthMeasure.htm">IfcLengthMeasure</a></td>
-<td data-label="Description">
-<p>
-                    This attribute is formally derived.
-                </p>
-<pre><code class="language-express hljs"><a href="IfcGradient.htm">IfcGradient</a>(SELF)</code></pre>
-</td>
-</tr>
 </tbody>
 </table><figcaption>Table 8.9.3.35.B<a href="IfcGradientCurve.htm#Table-8.9.3.35.B"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a id="8.9.3.35.4-Examples"></a>
@@ -438,15 +427,12 @@
  SUBTYPE OF (<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>);
 	BaseCurve : <a href="IfcBoundedCurve.htm">IfcBoundedCurve</a>;
 	EndPoint : OPTIONAL <a href="IfcPlacement.htm">IfcPlacement</a>;
- DERIVE
-	 RelativeElevation : <a href="IfcLengthMeasure.htm">IfcLengthMeasure</a> := <a href="IfcGradient.htm">IfcGradient</a>(SELF);
 END_ENTITY;</code></pre>
 <h2><a id="8.9.3.35.6-References"></a>
     8.9.3.35.6 References
 <a href="IfcGradientCurve.htm#8.9.3.35.6-References"><i data-feather="link"></i></a></h2>
 <ul class="references">
 <li><i data-feather="paperclip"></i><a href="IfcCompositeCurve.htm">IfcCompositeCurve</a></li>
-<li><i data-feather="paperclip"></i><a href="IfcGradient.htm">IfcGradient</a></li>
 </ul>
 </div>
 <div class="col-md-2">
@@ -459,9 +445,9 @@ END_ENTITY;</code></pre>
 <h3><a id="8.9.3.35.7-Changelog"></a>
                         8.9.3.35.7 Changelog
                     <a href="IfcGradientCurve.htm#8.9.3.35.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.9.3.35.7.1-IFC4.3"></a>
-                        8.9.3.35.7.1 IFC4.3
-                    <a href="IfcGradientCurve.htm#8.9.3.35.7.1-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="8.9.3.35.7.1-IFC4.3-TC1"></a>
+                        8.9.3.35.7.1 IFC4.3_TC1
+                    <a href="IfcGradientCurve.htm#8.9.3.35.7.1-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>

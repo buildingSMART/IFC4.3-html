@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.36 IfcIndexedPolyCurve - IFC4.3.0.0 Documentation</title>
+<title>8.9.3.36 IfcIndexedPolyCurve - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -366,7 +368,7 @@
                 SelfIntersect
                 
             </td>
-<td data-label="Type"><a href="IfcLogical.htm">IfcLogical</a></td>
+<td data-label="Type">OPTIONAL <a href="IfcBoolean.htm">IfcBoolean</a></td>
 <td data-label="Description">
 <p>Indication of whether the curve intersects itself or not; this is for information only.</p>
 </td>
@@ -404,7 +406,7 @@
  SUBTYPE OF (<a href="IfcBoundedCurve.htm">IfcBoundedCurve</a>);
 	Points : <a href="IfcCartesianPointList.htm">IfcCartesianPointList</a>;
 	Segments : OPTIONAL LIST [1:?] OF <a href="IfcSegmentIndexSelect.htm">IfcSegmentIndexSelect</a>;
-	SelfIntersect : <a href="IfcLogical.htm">IfcLogical</a>;
+	SelfIntersect : OPTIONAL <a href="IfcBoolean.htm">IfcBoolean</a>;
  WHERE
 	Consecutive : NOT(EXISTS(Segments)) OR <a href="IfcConsecutiveSegments.htm">IfcConsecutiveSegments</a>(Segments);
 END_ENTITY;</code></pre>
@@ -415,6 +417,7 @@ END_ENTITY;</code></pre>
 <li><i data-feather="paperclip"></i><a href="IfcBoundedCurve.htm">IfcBoundedCurve</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcCurveDim.htm">IfcCurveDim</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcPolygonalBoundedHalfSpace.htm">IfcPolygonalBoundedHalfSpace</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcSweptDiskSolidPolygonal.htm">IfcSweptDiskSolidPolygonal</a></li>
 </ul>
 </div>
 <div class="col-md-2">
@@ -427,7 +430,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.9.3.36.7-Changelog"></a>
                         8.9.3.36.7 Changelog
                     <a href="IfcIndexedPolyCurve.htm#8.9.3.36.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.9.3.36.7.1-IFC4"></a>
+<h4><a id="8.9.3.36.7.1-IFC4"></a>
                         8.9.3.36.7.1 IFC4
                     <a href="IfcIndexedPolyCurve.htm#8.9.3.36.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -442,9 +445,9 @@ END_ENTITY;</code></pre>
                             </small>
 </li>
 </ul>
-<h4 class="collapsed"><a id="8.9.3.36.7.2-IFC4.3"></a>
-                        8.9.3.36.7.2 IFC4.3
-                    <a href="IfcIndexedPolyCurve.htm#8.9.3.36.7.2-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="8.9.3.36.7.2-IFC4.3-TC1"></a>
+                        8.9.3.36.7.2 IFC4.3_TC1
+                    <a href="IfcIndexedPolyCurve.htm#8.9.3.36.7.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>
@@ -452,7 +455,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 Consecutive
                                 
                             </small>
@@ -462,25 +465,8 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 Consecutive
-                                
-                            </small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                attributes SelfIntersect definition,
-                                Changed from <a href="IfcBoolean.htm">IfcBoolean</a> to <a href="IfcLogical.htm">IfcLogical</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                attributes SelfIntersect is_optional,
-                                Changed from True to False
                                 
                             </small>
 </li>

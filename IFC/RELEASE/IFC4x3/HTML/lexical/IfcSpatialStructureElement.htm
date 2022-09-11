@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.4.3.68 IfcSpatialStructureElement - IFC4.3.0.0 Documentation</title>
+<title>5.4.3.68 IfcSpatialStructureElement - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -394,7 +396,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED.</p>
+<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED or when the concrete entity instantiated does not have a PredefinedType attribute. The latter is the case in some exceptional leaf classes and when instantiating <a href="IfcBuiltElement.htm">IfcBuiltElement</a> directly. </p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -634,10 +636,10 @@
 <td colspan="2">
 <pre><code class="language-express hljs">(HIINDEX(SELF\<a href="IfcObjectDefinition.htm">IfcObjectDefinition</a>.Decomposes) = 1) 
 AND
-('IFC4X3.IFCRELAGGREGATES' IN TYPEOF(SELF\<a href="IfcObjectDefinition.htm">IfcObjectDefinition</a>.Decomposes[1])) 
+('IFC4X3_TC1.<a href="IfcRelAggregates.htm">IFCRELAGGREGATES</a>' IN TYPEOF(SELF\<a href="IfcObjectDefinition.htm">IfcObjectDefinition</a>.Decomposes[1])) 
 AND
-(('IFC4X3.IFCPROJECT' IN TYPEOF (SELF\<a href="IfcObjectDefinition.htm">IfcObjectDefinition</a>.Decomposes[1].RelatingObject)) OR
- ('IFC4X3.IFCSPATIALSTRUCTUREELEMENT' IN TYPEOF (SELF\<a href="IfcObjectDefinition.htm">IfcObjectDefinition</a>.Decomposes[1].RelatingObject))
+(('IFC4X3_TC1.<a href="IfcProject.htm">IFCPROJECT</a>' IN TYPEOF (SELF\<a href="IfcObjectDefinition.htm">IfcObjectDefinition</a>.Decomposes[1].RelatingObject)) OR
+ ('IFC4X3_TC1.<a href="IfcSpatialStructureElement.htm">IFCSPATIALSTRUCTUREELEMENT</a>' IN TYPEOF (SELF\<a href="IfcObjectDefinition.htm">IfcObjectDefinition</a>.Decomposes[1].RelatingObject))
 )</code></pre>
 </td>
 </tr>
@@ -666,16 +668,6 @@ AND
 <li>CoolingTemperatureDelta</li>
 <li>Ventilation</li>
 <li>FanPower</li>
-</ul>
-</li>
-<li>
-<a href="Pset_ProcessCapacity.htm">Pset_ProcessCapacity</a>
-<ul>
-<li>ProcessItem</li>
-<li>ProcessCapacity</li>
-<li>ProcessPerformance</li>
-<li>DownstreamConnections</li>
-<li>UpstreamConnections</li>
 </ul>
 </li>
 <li>
@@ -1167,7 +1159,7 @@ AND
 <tr class="group-inherited">
 <td colspan="3">
 <a href="IfcProduct.htm">IfcProduct</a>
-<small>(17)</small>
+<small>(18)</small>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1222,6 +1214,28 @@ AND
 <p>
 <em>No description available.</em>
 </p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Object_Typing/content.html">Object Typing</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        This is a further elaboration on an inherited concept.
+                    </small>
+</aside>
+<p>This concept can be applied to the following resources:</p>
+<ul>
+<li>
+<a href="IfcTypeProduct.htm">IfcTypeProduct</a>
+</li>
+</ul>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1481,11 +1495,14 @@ AND
                 General
             </td>
 <td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        This is a further elaboration on an inherited concept.
+                    </small>
+</aside>
 <p>This concept can be applied to the following resources:</p>
 <ul>
-<li>
-<a href="Pset_ProcessCapacity.htm">Pset_ProcessCapacity</a>
-</li>
 <li>
 <a href="Pset_AirSideSystemInformation.htm">Pset_AirSideSystemInformation</a>
 </li>
@@ -1619,11 +1636,11 @@ AND
 <td colspan="4">
 <small class="show-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    Click to show 44 hidden inherited concepts
+                    Click to show 45 hidden inherited concepts
                 </small>
 <small class="hide-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    Click to hide 44 inherited concepts
+                    Click to hide 45 inherited concepts
                 </small>
 </td>
 </tr>
@@ -1694,10 +1711,10 @@ AND
  WHERE
 	WR41 : (HIINDEX(SELF\<a href="IfcObjectDefinition.htm">IfcObjectDefinition</a>.Decomposes) = 1) 
 AND
-('IFC4X3.IFCRELAGGREGATES' IN TYPEOF(SELF\<a href="IfcObjectDefinition.htm">IfcObjectDefinition</a>.Decomposes[1])) 
+('IFC4X3_TC1.<a href="IfcRelAggregates.htm">IFCRELAGGREGATES</a>' IN TYPEOF(SELF\<a href="IfcObjectDefinition.htm">IfcObjectDefinition</a>.Decomposes[1])) 
 AND
-(('IFC4X3.IFCPROJECT' IN TYPEOF (SELF\<a href="IfcObjectDefinition.htm">IfcObjectDefinition</a>.Decomposes[1].RelatingObject)) OR
- ('IFC4X3.IFCSPATIALSTRUCTUREELEMENT' IN TYPEOF (SELF\<a href="IfcObjectDefinition.htm">IfcObjectDefinition</a>.Decomposes[1].RelatingObject))
+(('IFC4X3_TC1.<a href="IfcProject.htm">IFCPROJECT</a>' IN TYPEOF (SELF\<a href="IfcObjectDefinition.htm">IfcObjectDefinition</a>.Decomposes[1].RelatingObject)) OR
+ ('IFC4X3_TC1.<a href="IfcSpatialStructureElement.htm">IFCSPATIALSTRUCTUREELEMENT</a>' IN TYPEOF (SELF\<a href="IfcObjectDefinition.htm">IfcObjectDefinition</a>.Decomposes[1].RelatingObject))
 );
 END_ENTITY;</code></pre>
 <h2><a id="5.4.3.68.8-References"></a>
@@ -1722,7 +1739,7 @@ END_ENTITY;</code></pre>
 <h3><a id="5.4.3.68.9-Changelog"></a>
                         5.4.3.68.9 Changelog
                     <a href="IfcSpatialStructureElement.htm#5.4.3.68.9-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="5.4.3.68.9.1-IFC4"></a>
+<h4><a id="5.4.3.68.9.1-IFC4"></a>
                         5.4.3.68.9.1 IFC4
                     <a href="IfcSpatialStructureElement.htm#5.4.3.68.9.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -1731,7 +1748,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                attributes,
+                                attribute,
                                 CompositionType
                                 
                             </small>
@@ -1741,7 +1758,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 ContainsElements
                                 
                             </small>
@@ -1751,7 +1768,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 ReferencesElements
                                 
                             </small>
@@ -1761,7 +1778,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 ServicedBySystems
                                 
                             </small>
@@ -1770,16 +1787,23 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes LongName definition,
-                                Changed from <a href="IfcLabel.htm">IfcLabel</a> to <a href="IfcElementCompositionEnum.htm">IfcElementCompositionEnum</a>
-</small>
+                                attribute LongName name,
+                                Changed from
+"LongName"
+to
+"CompositionType"
+                                
+                            </small>
 </li>
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes LongName name,
-                                Changed from LongName to CompositionType
+                                attribute LongName type,
+                                Changed from
+"<a href="IfcLabel.htm">IfcLabel</a>"
+to
+"<a href="IfcElementCompositionEnum.htm">IfcElementCompositionEnum</a>"
                                 
                             </small>
 </li>
@@ -1788,8 +1812,12 @@ END_ENTITY;</code></pre>
 <i data-feather="edit"></i>
                                 
                                 supertype,
-                                Changed from <a href="IfcProduct.htm">IfcProduct</a> to <a href="IfcSpatialElement.htm">IfcSpatialElement</a>
-</small>
+                                Changed from
+"<a href="IfcProduct.htm">IfcProduct</a>"
+to
+"<a href="IfcSpatialElement.htm">IfcSpatialElement</a>"
+                                
+                            </small>
 </li>
 </ul>
 </div>

@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.6.3.10 IfcLibraryReference - IFC4.3.0.0 Documentation</title>
+<title>8.6.3.10 IfcLibraryReference - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -175,7 +177,7 @@
 <tr>
 <td>Brick Development Team</td>
 <td>Brick</td>
-<td>Full URI with no namespace (e.g. 'http://example.org/digitaltwin#AHU01')</td>
+<td>Full URI with no abbreviation (e.g. 'http://example.org/digitaltwin#AHU01', not 'digitaltwin:AHU01')</td>
 </tr>
 <tr>
 <td>IETF</td>
@@ -413,7 +415,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.6.3.10.6-Changelog"></a>
                         8.6.3.10.6 Changelog
                     <a href="IfcLibraryReference.htm#8.6.3.10.6-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.6.3.10.6.1-IFC4"></a>
+<h4><a id="8.6.3.10.6.1-IFC4"></a>
                         8.6.3.10.6.1 IFC4
                     <a href="IfcLibraryReference.htm#8.6.3.10.6.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -423,7 +425,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 Description
                                 
                             </small>
@@ -434,7 +436,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 Language
                                 
                             </small>
@@ -445,7 +447,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 ReferencedLibrary
                                 
                             </small>
@@ -454,8 +456,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                inverses ReferenceIntoLibrary definition,
-                                Changed from SET OF [0:1] <a href="IfcLibraryInformation.htm">IfcLibraryInformation</a> FOR LibraryReference to SET OF [0:?] <a href="IfcRelAssociatesLibrary.htm">IfcRelAssociatesLibrary</a> FOR RelatingLibrary
+                                inverse attribute ReferenceIntoLibrary name,
+                                Changed from
+"ReferenceIntoLibrary"
+to
+"LibraryRefForObjects"
                                 
                             </small>
 </li>
@@ -463,8 +468,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                inverses ReferenceIntoLibrary name,
-                                Changed from ReferenceIntoLibrary to LibraryRefForObjects
+                                inverse attribute ReferenceIntoLibrary type,
+                                Changed from
+"SET OF [0:1] <a href="IfcLibraryInformation.htm">IfcLibraryInformation</a> FOR LibraryReference"
+to
+"SET OF [0:?] <a href="IfcRelAssociatesLibrary.htm">IfcRelAssociatesLibrary</a> FOR RelatingLibrary"
                                 
                             </small>
 </li>

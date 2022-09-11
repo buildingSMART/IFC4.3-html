@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>Annex E Examples - UT_Alignment_12d_11 - IFC4.3.0.0 Documentation</title>
+<title>Annex E Examples - UT_Alignment_12d_11 - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -112,7 +114,7 @@ In the ifc file there is the seamantic definition of the alignment but no ifc ge
 <p>the vertical geometry starts after the HG and stops before the end of the HG   </p>
 <h3><a id="Supporting-files"></a>Supporting files<a href="UT_Alignment_12d_11.html#Supporting-files"><i data-feather="link"></i></a></h3>
 <p>Following files correspond to this scenario:</p>
-<figure><a id="Table-a35937c2-38ad-4102-85a3-3596038f639f"></a><table>
+<figure><a id="Table-56abd40b-0124-4dcf-b200-a71b3194bc80"></a><table>
 <thead>
 <tr>
 <th>Filename</th>
@@ -129,13 +131,13 @@ In the ifc file there is the seamantic definition of the alignment but no ifc ge
 <td>plan view and section view of the alignment, and the segment parameters (with Civil radius)</td>
 </tr>
 </tbody>
-</table><figcaption>Table a35937c2-38ad-4102-85a3-3596038f639f<a href="UT_Alignment_12d_11.html#Table-a35937c2-38ad-4102-85a3-3596038f639f"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>Table 56abd40b-0124-4dcf-b200-a71b3194bc80<a href="UT_Alignment_12d_11.html#Table-56abd40b-0124-4dcf-b200-a71b3194bc80"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a id="Images"></a>
     Images
 <a href="UT_Alignment_12d_11.html#Images"><i data-feather="link"></i></a></h2>
 <ul class="thumbnails">
-<li><figure><a id="Figure-bce27ca6-7368-477a-a11b-b8d3ec346e85"></a><a href="../examples/UT_Alignment_12d_11/UT_Alignment_12d_11.png"><img src="../examples/UT_Alignment_12d_11/UT_Alignment_12d_11.png"/></a><figcaption>Figure bce27ca6-7368-477a-a11b-b8d3ec346e85<a href="UT_Alignment_12d_11.html#Figure-bce27ca6-7368-477a-a11b-b8d3ec346e85"><i data-feather="link"></i></a></figcaption></figure></li>
-<li><figure><a id="Figure-08036f34-ed1a-4b4b-989f-629e090296c6"></a><a href="../examples/UT_Alignment_12d_11/thumb.png"><img src="../examples/UT_Alignment_12d_11/thumb.png"/></a><figcaption>Figure 08036f34-ed1a-4b4b-989f-629e090296c6<a href="UT_Alignment_12d_11.html#Figure-08036f34-ed1a-4b4b-989f-629e090296c6"><i data-feather="link"></i></a></figcaption></figure></li>
+<li><figure><a id="Figure-4c5eb409-bcce-45a5-b885-0bc85f33e6ed"></a><a href="../examples/UT_Alignment_12d_11/UT_Alignment_12d_11.png"><img src="../examples/UT_Alignment_12d_11/UT_Alignment_12d_11.png"/></a><figcaption>Figure 4c5eb409-bcce-45a5-b885-0bc85f33e6ed<a href="UT_Alignment_12d_11.html#Figure-4c5eb409-bcce-45a5-b885-0bc85f33e6ed"><i data-feather="link"></i></a></figcaption></figure></li>
+<li><figure><a id="Figure-5e0959b0-9cf4-422d-9154-f4455100cc83"></a><a href="../examples/UT_Alignment_12d_11/thumb.png"><img src="../examples/UT_Alignment_12d_11/thumb.png"/></a><figcaption>Figure 5e0959b0-9cf4-422d-9154-f4455100cc83<a href="UT_Alignment_12d_11.html#Figure-5e0959b0-9cf4-422d-9154-f4455100cc83"><i data-feather="link"></i></a></figcaption></figure></li>
 </ul>
 <h2><a id="IFC-SPF-source"></a>
     IFC-SPF source
@@ -147,46 +149,46 @@ FILE_NAME ('UT_Alignment_12d_11.ifc', '2021-01-04T12:57:46', ('Lee Gregory'), ('
 FILE_SCHEMA (('IFC4X3_RC2'));
 ENDSEC;
 DATA;
-#1 = IFCPROJECT('2LJesmETv6W9jWXnI$q1Aj', #2, 'UT Alignment 12d - 11', 'Alignment with VG shorter than HG', $, $, $, (#14), #9);
-#2 = IFCOWNERHISTORY(#3, #8, $, .ADDED., $, $, $, 1609725466);
-#3 = IFCPERSONANDORGANIZATION(#4, #6, $);
-#4 = IFCPERSON($, 'Gregory', 'Lee', $, $, $, (#5), $);
-#5 = IFCACTORROLE(.CIVILENGINEER., 'Designer', $);
-#6 = IFCORGANIZATION($, '12d Solutions - Ranch', $, (#7), $);
-#7 = IFCACTORROLE(.CONSULTANT., 'Engineering', $);
-#8 = IFCAPPLICATION(#6, '15.0 Alpha 429', '12d Model', '12d Model');
-#9 = IFCUNITASSIGNMENT((#10, #11, #12, #13));
-#10 = IFCSIUNIT(*, .LENGTHUNIT., $, .METRE.);
-#11 = IFCSIUNIT(*, .AREAUNIT., $, .SQUARE_METRE.);
-#12 = IFCSIUNIT(*, .VOLUMEUNIT., $, .CUBIC_METRE.);
-#13 = IFCSIUNIT(*, .PLANEANGLEUNIT., $, .RADIAN.);
-#14 = IFCGEOMETRICREPRESENTATIONCONTEXT($, 'Model', 3, 1.E-6, #16, #20);
-#15 = IFCLOCALPLACEMENT($, #16);
-#16 = IFCAXIS2PLACEMENT3D(#17, #18, #19);
-#17 = IFCCARTESIANPOINT((0., 0., 0.));
-#18 = IFCDIRECTION((0., 0., 1.));
-#19 = IFCDIRECTION((1., 0., 0.));
-#20 = IFCDIRECTION((0., 1., 0.));
-#21 = IFCSITE('23OrcROlv6ef$jDQbwIpr9', #2, 'Default Site', 'Description of Default Site', $, #15, $, $, .ELEMENT., $, $, $, $, $);
-#22 = IFCRELAGGREGATES('1J0h6uSJfDIuU9QkSC_rDA', #2, 'ProjectContainer', 'ProjectContainer for Sites', #1, (#21));
-#23 = IFCFACILITY('1wGm8Rr4z2dh$bVgCEYWBN', #2, 'SA HG partial clothoid VG short', 'Description of SA HG partial clothoid VG short', $, #15, $, $, .ELEMENT.);
-#24 = IFCRELAGGREGATES('3p_Y3fsb131fKenteql0ei', #2, 'SiteContainer', 'SiteContainer For All Models', #21, (#23));
-#25 = IFCRELCONTAINEDINSPATIALSTRUCTURE('3VCtYbcerErfIRHAdWBof3', #2, 'Building Container', 'BuildingContainer for Elements', (#26), #23);
-#26 = IFCALIGNMENT('0y2hQsQKfAqxEufY7Z_1jL', $, 'RS02 short VG', '12d Alignment String', 'natural clothoid', $, $, $, $);
-#27 = IFCRELAGGREGATES('2msdk43Yz6HAcHmIJQOfXL', #2, '', '', #26, (#28, #35));
-#28 = IFCALIGNMENTHORIZONTAL('1FahSvf2z8YeREQCzieDuo', #2, 'Horizontal Alignment', '12d Horizontal Alignment', $, $, $, 0., (#29, #31, #33));
-#29 = IFCALIGNMENTHORIZONTALSEGMENT($, $, #30, 6.24106894875598, 101.791055, 101.791055, 50.5274104694524, $, .CIRCULARARC.);
-#30 = IFCCARTESIANPOINT((1138.440322, 1024.871003));
-#31 = IFCALIGNMENTHORIZONTALSEGMENT($, $, #32, 4.5426724295916E-1, 101.791055, 56.597258, 29.524811874303, $, .CLOTHOID.);
-#32 = IFCCARTESIANPOINT((1187.3924442348, 1035.1041016478));
-#33 = IFCALIGNMENTHORIZONTALSEGMENT($, $, #34, 8.60126325938072E-1, 56.597258, 56.597258, 59.0722127429004, $, .CIRCULARARC.);
-#34 = IFCCARTESIANPOINT((1210.94881919183, 1052.56398618789));
-#35 = IFCALIGNMENTVERTICAL('3gA2mMqFX0xfZWiXfZxgI6', #2, 'Vertical Alignment', '12d Vertical Alignment', $, $, $, (#36, #37, #38, #39, #40));
-#36 = IFCALIGNMENTVERTICALSEGMENT($, $, 25., 22.1775718912935, 500.2564, 8.07402171512695E-2, 8.07402171512695E-2, $, .CONSTANTGRADIENT.);
-#37 = IFCALIGNMENTVERTICALSEGMENT($, $, 47.1775718912935, 20., 502.047021970391, 8.07402171512308E-2, -9.12280701755666E-2, 116.300512791602, .PARABOLICARC.);
-#38 = IFCALIGNMENTVERTICALSEGMENT($, $, 67.1775718912935, 8.0492098531853, 501.942143440148, -9.12280701752541E-2, -9.12280701752541E-2, $, .CONSTANTGRADIENT.);
-#39 = IFCALIGNMENTVERTICALSEGMENT($, $, 75.2267817444788, 30., 501.207829558806, -9.12280701754341E-2, 4.4056649648193E-2, 221.754533986629, .PARABOLICARC.);
-#40 = IFCALIGNMENTVERTICALSEGMENT($, $, 105.226781744479, 19.7732182555212, 500.500258250897, 4.40566496482954E-2, 4.40566496482954E-2, $, .CONSTANTGRADIENT.);
+#1 = <a href="../lexical/IfcProject.htm">IFCPROJECT</a>('2LJesmETv6W9jWXnI$q1Aj', #2, 'UT Alignment 12d - 11', 'Alignment with VG shorter than HG', $, $, $, (#14), #9);
+#2 = <a href="../lexical/IfcOwnerHistory.htm">IFCOWNERHISTORY</a>(#3, #8, $, .ADDED., $, $, $, 1609725466);
+#3 = <a href="../lexical/IfcPersonAndOrganization.htm">IFCPERSONANDORGANIZATION</a>(#4, #6, $);
+#4 = <a href="../lexical/IfcPerson.htm">IFCPERSON</a>($, 'Gregory', 'Lee', $, $, $, (#5), $);
+#5 = <a href="../lexical/IfcActorRole.htm">IFCACTORROLE</a>(.CIVILENGINEER., 'Designer', $);
+#6 = <a href="../lexical/IfcOrganization.htm">IFCORGANIZATION</a>($, '12d Solutions - Ranch', $, (#7), $);
+#7 = <a href="../lexical/IfcActorRole.htm">IFCACTORROLE</a>(.CONSULTANT., 'Engineering', $);
+#8 = <a href="../lexical/IfcApplication.htm">IFCAPPLICATION</a>(#6, '15.0 Alpha 429', '12d Model', '12d Model');
+#9 = <a href="../lexical/IfcUnitAssignment.htm">IFCUNITASSIGNMENT</a>((#10, #11, #12, #13));
+#10 = <a href="../lexical/IfcSIUnit.htm">IFCSIUNIT</a>(*, .LENGTHUNIT., $, .METRE.);
+#11 = <a href="../lexical/IfcSIUnit.htm">IFCSIUNIT</a>(*, .AREAUNIT., $, .SQUARE_METRE.);
+#12 = <a href="../lexical/IfcSIUnit.htm">IFCSIUNIT</a>(*, .VOLUMEUNIT., $, .CUBIC_METRE.);
+#13 = <a href="../lexical/IfcSIUnit.htm">IFCSIUNIT</a>(*, .PLANEANGLEUNIT., $, .RADIAN.);
+#14 = <a href="../lexical/IfcGeometricRepresentationContext.htm">IFCGEOMETRICREPRESENTATIONCONTEXT</a>($, 'Model', 3, 1.E-6, #16, #20);
+#15 = <a href="../lexical/IfcLocalPlacement.htm">IFCLOCALPLACEMENT</a>($, #16);
+#16 = <a href="../lexical/IfcAxis2Placement3D.htm">IFCAXIS2PLACEMENT3D</a>(#17, #18, #19);
+#17 = <a href="../lexical/IfcCartesianPoint.htm">IFCCARTESIANPOINT</a>((0., 0., 0.));
+#18 = <a href="../lexical/IfcDirection.htm">IFCDIRECTION</a>((0., 0., 1.));
+#19 = <a href="../lexical/IfcDirection.htm">IFCDIRECTION</a>((1., 0., 0.));
+#20 = <a href="../lexical/IfcDirection.htm">IFCDIRECTION</a>((0., 1., 0.));
+#21 = <a href="../lexical/IfcSite.htm">IFCSITE</a>('23OrcROlv6ef$jDQbwIpr9', #2, 'Default Site', 'Description of Default Site', $, #15, $, $, .ELEMENT., $, $, $, $, $);
+#22 = <a href="../lexical/IfcRelAggregates.htm">IFCRELAGGREGATES</a>('1J0h6uSJfDIuU9QkSC_rDA', #2, 'ProjectContainer', 'ProjectContainer for Sites', #1, (#21));
+#23 = <a href="../lexical/IfcFacility.htm">IFCFACILITY</a>('1wGm8Rr4z2dh$bVgCEYWBN', #2, 'SA HG partial clothoid VG short', 'Description of SA HG partial clothoid VG short', $, #15, $, $, .ELEMENT.);
+#24 = <a href="../lexical/IfcRelAggregates.htm">IFCRELAGGREGATES</a>('3p_Y3fsb131fKenteql0ei', #2, 'SiteContainer', 'SiteContainer For All Models', #21, (#23));
+#25 = <a href="../lexical/IfcRelContainedInSpatialStructure.htm">IFCRELCONTAINEDINSPATIALSTRUCTURE</a>('3VCtYbcerErfIRHAdWBof3', #2, 'Building Container', 'BuildingContainer for Elements', (#26), #23);
+#26 = <a href="../lexical/IfcAlignment.htm">IFCALIGNMENT</a>('0y2hQsQKfAqxEufY7Z_1jL', $, 'RS02 short VG', '12d Alignment String', 'natural clothoid', $, $, $, $);
+#27 = <a href="../lexical/IfcRelAggregates.htm">IFCRELAGGREGATES</a>('2msdk43Yz6HAcHmIJQOfXL', #2, '', '', #26, (#28, #35));
+#28 = <a href="../lexical/IfcAlignmentHorizontal.htm">IFCALIGNMENTHORIZONTAL</a>('1FahSvf2z8YeREQCzieDuo', #2, 'Horizontal Alignment', '12d Horizontal Alignment', $, $, $, 0., (#29, #31, #33));
+#29 = <a href="../lexical/IfcAlignmentHorizontalSegment.htm">IFCALIGNMENTHORIZONTALSEGMENT</a>($, $, #30, 6.24106894875598, 101.791055, 101.791055, 50.5274104694524, $, .CIRCULARARC.);
+#30 = <a href="../lexical/IfcCartesianPoint.htm">IFCCARTESIANPOINT</a>((1138.440322, 1024.871003));
+#31 = <a href="../lexical/IfcAlignmentHorizontalSegment.htm">IFCALIGNMENTHORIZONTALSEGMENT</a>($, $, #32, 4.5426724295916E-1, 101.791055, 56.597258, 29.524811874303, $, .CLOTHOID.);
+#32 = <a href="../lexical/IfcCartesianPoint.htm">IFCCARTESIANPOINT</a>((1187.3924442348, 1035.1041016478));
+#33 = <a href="../lexical/IfcAlignmentHorizontalSegment.htm">IFCALIGNMENTHORIZONTALSEGMENT</a>($, $, #34, 8.60126325938072E-1, 56.597258, 56.597258, 59.0722127429004, $, .CIRCULARARC.);
+#34 = <a href="../lexical/IfcCartesianPoint.htm">IFCCARTESIANPOINT</a>((1210.94881919183, 1052.56398618789));
+#35 = <a href="../lexical/IfcAlignmentVertical.htm">IFCALIGNMENTVERTICAL</a>('3gA2mMqFX0xfZWiXfZxgI6', #2, 'Vertical Alignment', '12d Vertical Alignment', $, $, $, (#36, #37, #38, #39, #40));
+#36 = <a href="../lexical/IfcAlignmentVerticalSegment.htm">IFCALIGNMENTVERTICALSEGMENT</a>($, $, 25., 22.1775718912935, 500.2564, 8.07402171512695E-2, 8.07402171512695E-2, $, .CONSTANTGRADIENT.);
+#37 = <a href="../lexical/IfcAlignmentVerticalSegment.htm">IFCALIGNMENTVERTICALSEGMENT</a>($, $, 47.1775718912935, 20., 502.047021970391, 8.07402171512308E-2, -9.12280701755666E-2, 116.300512791602, .PARABOLICARC.);
+#38 = <a href="../lexical/IfcAlignmentVerticalSegment.htm">IFCALIGNMENTVERTICALSEGMENT</a>($, $, 67.1775718912935, 8.0492098531853, 501.942143440148, -9.12280701752541E-2, -9.12280701752541E-2, $, .CONSTANTGRADIENT.);
+#39 = <a href="../lexical/IfcAlignmentVerticalSegment.htm">IFCALIGNMENTVERTICALSEGMENT</a>($, $, 75.2267817444788, 30., 501.207829558806, -9.12280701754341E-2, 4.4056649648193E-2, 221.754533986629, .PARABOLICARC.);
+#40 = <a href="../lexical/IfcAlignmentVerticalSegment.htm">IFCALIGNMENTVERTICALSEGMENT</a>($, $, 105.226781744479, 19.7732182555212, 500.500258250897, 4.40566496482954E-2, 4.40566496482954E-2, $, .CONSTANTGRADIENT.);
 ENDSEC;
 END-ISO-10303-21;
 </code></pre>

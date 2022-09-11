@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.15.3.9 IfcCompositeProfileDef - IFC4.3.0.0 Documentation</title>
+<title>8.15.3.9 IfcCompositeProfileDef - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -348,7 +350,7 @@
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">SIZEOF(QUERY(temp &lt;* Profiles | 'IFC4X3.IFCCOMPOSITEPROFILEDEF' IN TYPEOF(temp))) = 0</code></pre>
+<pre><code class="language-express hljs">SIZEOF(QUERY(temp &lt;* Profiles | 'IFC4X3_TC1.<a href="IfcCompositeProfileDef.htm">IFCCOMPOSITEPROFILEDEF</a>' IN TYPEOF(temp))) = 0</code></pre>
 </td>
 </tr>
 </tbody>
@@ -447,7 +449,7 @@
 	Label : OPTIONAL <a href="IfcLabel.htm">IfcLabel</a>;
  WHERE
 	InvariantProfileType : SIZEOF(QUERY(temp &lt;* Profiles | temp.ProfileType &lt;&gt; Profiles[1].ProfileType)) = 0;
-	NoRecursion : SIZEOF(QUERY(temp &lt;* Profiles | 'IFC4X3.IFCCOMPOSITEPROFILEDEF' IN TYPEOF(temp))) = 0;
+	NoRecursion : SIZEOF(QUERY(temp &lt;* Profiles | 'IFC4X3_TC1.<a href="IfcCompositeProfileDef.htm">IFCCOMPOSITEPROFILEDEF</a>' IN TYPEOF(temp))) = 0;
 END_ENTITY;</code></pre>
 <h2><a id="8.15.3.9.8-References"></a>
     8.15.3.9.8 References
@@ -467,7 +469,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.15.3.9.9-Changelog"></a>
                         8.15.3.9.9 Changelog
                     <a href="IfcCompositeProfileDef.htm#8.15.3.9.9-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.15.3.9.9.1-IFC4"></a>
+<h4><a id="8.15.3.9.9.1-IFC4"></a>
                         8.15.3.9.9.1 IFC4
                     <a href="IfcCompositeProfileDef.htm#8.15.3.9.9.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -477,7 +479,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 InvariantProfileType
                                 
                             </small>
@@ -488,7 +490,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 NoRecursion
                                 
                             </small>
@@ -498,7 +500,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR1
                                 
                             </small>
@@ -508,7 +510,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR2
                                 
                             </small>

@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.14.3.10 IfcPresentationLayerWithStyle - IFC4.3.0.0 Documentation</title>
+<title>8.14.3.10 IfcPresentationLayerWithStyle - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -338,7 +340,7 @@
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">SIZEOF(QUERY(temp &lt;* AssignedItems | (SIZEOF(TYPEOF(temp) * ['IFC4X3.<a href="IfcGeometricRepresentationItem.htm">IfcGeometricRepresentationItem</a>','IFC4X3.<a href="IfcMappedItem.htm">IfcMappedItem</a>']) &gt;= 1))) = SIZEOF(AssignedItems)</code></pre>
+<pre><code class="language-express hljs">SIZEOF(QUERY(temp &lt;* AssignedItems | (SIZEOF(TYPEOF(temp) * ['IFC4X3_TC1.<a href="IfcGeometricRepresentationItem.htm">IfcGeometricRepresentationItem</a>','IFC4X3_TC1.<a href="IfcMappedItem.htm">IfcMappedItem</a>']) &gt;= 1))) = SIZEOF(AssignedItems)</code></pre>
 </td>
 </tr>
 </tbody>
@@ -353,7 +355,7 @@
 	LayerBlocked : <a href="IfcLogical.htm">IfcLogical</a>;
 	LayerStyles : SET [0:?] OF <a href="IfcPresentationStyle.htm">IfcPresentationStyle</a>;
  WHERE
-	ApplicableOnlyToItems : SIZEOF(QUERY(temp &lt;* AssignedItems | (SIZEOF(TYPEOF(temp) * ['IFC4X3.<a href="IfcGeometricRepresentationItem.htm">IfcGeometricRepresentationItem</a>','IFC4X3.<a href="IfcMappedItem.htm">IfcMappedItem</a>']) &gt;= 1))) = SIZEOF(AssignedItems);
+	ApplicableOnlyToItems : SIZEOF(QUERY(temp &lt;* AssignedItems | (SIZEOF(TYPEOF(temp) * ['IFC4X3_TC1.<a href="IfcGeometricRepresentationItem.htm">IfcGeometricRepresentationItem</a>','IFC4X3_TC1.<a href="IfcMappedItem.htm">IfcMappedItem</a>']) &gt;= 1))) = SIZEOF(AssignedItems);
 END_ENTITY;</code></pre>
 <h2><a id="8.14.3.10.6-References"></a>
     8.14.3.10.6 References
@@ -372,7 +374,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.14.3.10.7-Changelog"></a>
                         8.14.3.10.7 Changelog
                     <a href="IfcPresentationLayerWithStyle.htm#8.14.3.10.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.14.3.10.7.1-IFC4"></a>
+<h4><a id="8.14.3.10.7.1-IFC4"></a>
                         8.14.3.10.7.1 IFC4
                     <a href="IfcPresentationLayerWithStyle.htm#8.14.3.10.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -382,7 +384,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 ApplicableOnlyToItems
                                 
                             </small>
@@ -391,38 +393,54 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes LayerBlocked definition,
-                                Changed from logical to <a href="IfcLogical.htm">IfcLogical</a>
-</small>
+                                attribute LayerBlocked type,
+                                Changed from
+"logical"
+to
+"<a href="IfcLogical.htm">IfcLogical</a>"
+                                
+                            </small>
 </li>
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes LayerFrozen definition,
-                                Changed from logical to <a href="IfcLogical.htm">IfcLogical</a>
-</small>
+                                attribute LayerFrozen type,
+                                Changed from
+"logical"
+to
+"<a href="IfcLogical.htm">IfcLogical</a>"
+                                
+                            </small>
 </li>
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes LayerOn definition,
-                                Changed from logical to <a href="IfcLogical.htm">IfcLogical</a>
-</small>
+                                attribute LayerOn type,
+                                Changed from
+"logical"
+to
+"<a href="IfcLogical.htm">IfcLogical</a>"
+                                
+                            </small>
 </li>
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes LayerStyles definition,
-                                Changed from set[0:?] of IfcPresentationStyleSelect to set[0:?] of <a href="IfcPresentationStyle.htm">IfcPresentationStyle</a>
-</small>
+                                attribute LayerStyles type,
+                                Changed from
+"set[0:?] of IfcPresentationStyleSelect"
+to
+"set[0:?] of <a href="IfcPresentationStyle.htm">IfcPresentationStyle</a>"
+                                
+                            </small>
 </li>
 </ul>
-<h4 class="collapsed"><a id="8.14.3.10.7.2-IFC4.3"></a>
-                        8.14.3.10.7.2 IFC4.3
-                    <a href="IfcPresentationLayerWithStyle.htm#8.14.3.10.7.2-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="8.14.3.10.7.2-IFC4.3-TC1"></a>
+                        8.14.3.10.7.2 IFC4.3_TC1
+                    <a href="IfcPresentationLayerWithStyle.htm#8.14.3.10.7.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>
@@ -430,7 +448,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 ApplicableOnlyToItems
                                 
                             </small>
@@ -440,7 +458,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 ApplicableOnlyToItems
                                 
                             </small>

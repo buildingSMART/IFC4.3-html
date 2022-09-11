@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.18.3.4 IfcGeometricRepresentationSubContext - IFC4.3.0.0 Documentation</title>
+<title>8.18.3.4 IfcGeometricRepresentationSubContext - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -482,7 +484,7 @@ If multiple instances of <em><a href="IfcGeometricRepresentationSubContext.htm">
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">NOT('IFC4X3.IFCGEOMETRICREPRESENTATIONSUBCONTEXT' IN TYPEOF(ParentContext))</code></pre>
+<pre><code class="language-express hljs">NOT('IFC4X3_TC1.<a href="IfcGeometricRepresentationSubContext.htm">IFCGEOMETRICREPRESENTATIONSUBCONTEXT</a>' IN TYPEOF(ParentContext))</code></pre>
 </td>
 </tr>
 <tr>
@@ -515,7 +517,7 @@ If multiple instances of <em><a href="IfcGeometricRepresentationSubContext.htm">
 	 SELF\<a href="IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a>.Precision : <a href="IfcReal.htm">IfcReal</a> := NVL(ParentContext.Precision,1.E-5);
  WHERE
 	NoCoordOperation : SIZEOF(SELF\<a href="IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a>.HasCoordinateOperation) = 0;
-	ParentNoSub : NOT('IFC4X3.IFCGEOMETRICREPRESENTATIONSUBCONTEXT' IN TYPEOF(ParentContext));
+	ParentNoSub : NOT('IFC4X3_TC1.<a href="IfcGeometricRepresentationSubContext.htm">IFCGEOMETRICREPRESENTATIONSUBCONTEXT</a>' IN TYPEOF(ParentContext));
 	UserTargetProvided :  (TargetView &lt;&gt; <a href="IfcGeometricProjectionEnum.htm">IfcGeometricProjectionEnum</a>.USERDEFINED) OR 
 ((TargetView =  <a href="IfcGeometricProjectionEnum.htm">IfcGeometricProjectionEnum</a>.USERDEFINED) AND EXISTS(UserDefinedTargetView)) ;
 END_ENTITY;</code></pre>
@@ -536,7 +538,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.18.3.4.7-Changelog"></a>
                         8.18.3.4.7 Changelog
                     <a href="IfcGeometricRepresentationSubContext.htm#8.18.3.4.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.18.3.4.7.1-IFC4"></a>
+<h4><a id="8.18.3.4.7.1-IFC4"></a>
                         8.18.3.4.7.1 IFC4
                     <a href="IfcGeometricRepresentationSubContext.htm#8.18.3.4.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -546,7 +548,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 NoCoordOperation
                                 
                             </small>
@@ -557,7 +559,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 ParentNoSub
                                 
                             </small>
@@ -568,7 +570,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 UserTargetProvided
                                 
                             </small>
@@ -578,7 +580,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR31
                                 
                             </small>
@@ -588,7 +590,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR32
                                 
                             </small>

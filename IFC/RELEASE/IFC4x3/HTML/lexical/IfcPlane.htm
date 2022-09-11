@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.47 IfcPlane - IFC4.3.0.0 Documentation</title>
+<title>8.9.3.47 IfcPlane - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -157,7 +159,18 @@
 <a href="IfcPlane.htm#8.9.3.47.1-Semantic-definition"><i data-feather="link"></i></a></h2>
 <p>The planar surface is an unbounded surface in the direction of <em>x</em> and <em>y</em>. Bounded planar surfaces are defined by using a subtype of <em><a href="IfcBoundedSurface.htm">IfcBoundedSurface</a></em> with <em>BasisSurface</em> being a plane.</p>
 <aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO/CD 10303-42:1992
-A plane is an unbounded surface with a constant normal. A plane is defined by a point on the plane and the normal direction to the plane. The data is to be interpreted as follows: </aside><aside class="aside-note"><mark>NOTE</mark>  A rectangular bounded planar surface can be defined by an <em><a href="IfcRectangularTrimmedSurface.htm">IfcRectangularTrimmedSurface</a></em> with <em>BasisSurface</em> being the plane and <em>U1</em> = left bound in <strong>x</strong>, <em>U2</em> = right bound in <strong>x</strong>, <em>V_1 = lower bound in <strong>y</strong>, _V2</em> = upper bound in <strong>y</strong> if viewed into the direction of the negative normal. (assuming the <em>Usense</em> and <em>Vsense</em> agree to the sense of the basis surface).</aside>
+A plane is an unbounded surface with a constant normal. A plane is defined by a point on the plane and the normal direction to the plane. The data is to be interpreted as follows: </aside><aside class="aside-note"><mark>NOTE</mark>  A rectangular bounded planar surface can be defined by an <em><a href="IfcRectangularTrimmedSurface.htm">IfcRectangularTrimmedSurface</a></em> with <em>BasisSurface</em> being the plane and <em>U1</em> = left bound in <strong>x</strong>, <em>U2</em> = right bound in <strong>x</strong>, <em>V_1 = lower bound in <strong>y</strong>, _V2</em> = upper bound in <strong>y</strong> if viewed into the direction of the negative normal. (assuming the <em>Usense</em> and <em>Vsense</em> agree to the sense of the basis surface).</aside><blockquote>
+<pre>
+   C = Position.Location
+   x = Position.P[1]
+   y = Position.P[2]
+   z = Position.P[3] =&gt; normal to plane
+</pre> and the surface is parameterized as:
+<blockquote>
+<figure><a id="Figure-8.9.3.47.A"></a><img alt="formula" src="../figures/ifcplane-math1.gif.gif"/>
+ where the parametric range is -∞ &lt; <em>u,v</em> &lt; ∞. In the above parameterization the length unit for the unit vectors <strong>x</strong> and <strong>y</strong> is derived from the context of the plane.<figcaption>Figure 8.9.3.47.A<a href="IfcPlane.htm#Figure-8.9.3.47.A"><i data-feather="link"></i></a></figcaption></figure>
+</blockquote>
+</blockquote>
 <p>The inherited attributes are interpreted as</p>
 <ul>
 <li><em>SELF\<a href="IfcElementarySurface.htm">IfcElementarySurface</a>.Position</em> defines the location and orientation of the planar surface.</li>
@@ -237,7 +250,7 @@ A plane is an unbounded surface with a constant normal. A plane is defined by a 
     8.9.3.47.3 Attributes
 <a href="IfcPlane.htm#8.9.3.47.3-Attributes"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a id="Table-8.9.3.47.A"></a><table class="striped grouped attributes">
+<figure><a id="Table-8.9.3.47.B"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -333,7 +346,7 @@ A plane is an unbounded surface with a constant normal. A plane is defined by a 
 </td>
 </tr>
 </tbody>
-</table><figcaption>Table 8.9.3.47.A<a href="IfcPlane.htm#Table-8.9.3.47.A"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>Table 8.9.3.47.B<a href="IfcPlane.htm#Table-8.9.3.47.B"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a id="8.9.3.47.4-Formal-representation"></a>
     8.9.3.47.4 Formal representation
 <a href="IfcPlane.htm#8.9.3.47.4-Formal-representation"><i data-feather="link"></i></a></h2>

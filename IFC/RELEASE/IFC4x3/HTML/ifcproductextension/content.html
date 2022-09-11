@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.4 IfcProductExtension - IFC4.3.0.0 Documentation</title>
+<title>5.4 IfcProductExtension - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -115,8 +117,8 @@
 <p>The spatial project structure defines</p>
 <ul>
 <li>the site, </li>
-<li>the building, </li>
-<li>the building storey, and </li>
+<li>the facility (building, bridge, marine, railway, road),</li>
+<li>the facility part (building storey and parts of the above), and </li>
 <li>the space </li>
 </ul>
 <p>and its decomposition structure. In addition the concepts of system and zone are introduced within the <em>IfcProductExtension</em>. Relationships between the spatial structure and the elements are defined, such as spatial containment and space boundaries.</p>
@@ -131,6 +133,8 @@
 <p>The other concepts introduced are</p>
 <ul>
 <li>a grid, providing a constraint placement for elements, </li>
+<li>an alignment, providing a linear positioning element to position geographic and civil elements,<br/>
+  with project geo referencing provided by means of entities from the IfcRepresentationResource domain,</li>
 <li>an annotation to capture any additional annotations to a building model or plan (such as explanatory text, dimensioning, etc.), and</li>
 <li>a port, providing connectivity between elements.</li>
 </ul>

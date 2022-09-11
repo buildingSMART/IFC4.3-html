@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.56 IfcRectangularTrimmedSurface - IFC4.3.0.0 Documentation</title>
+<title>8.9.3.56 IfcRectangularTrimmedSurface - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -433,9 +435,9 @@ The trimmed surface is a simple bounded surface in which the boundaries are the 
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">(('IFC4X3.IFCELEMENTARYSURFACE' IN TYPEOF(BasisSurface)) AND
-         (NOT ('IFC4X3.IFCPLANE' IN TYPEOF(BasisSurface)))) OR
-         ('IFC4X3.IFCSURFACEOFREVOLUTION' IN TYPEOF(BasisSurface)) OR
+<pre><code class="language-express hljs">(('IFC4X3_TC1.<a href="IfcElementarySurface.htm">IFCELEMENTARYSURFACE</a>' IN TYPEOF(BasisSurface)) AND
+         (NOT ('IFC4X3_TC1.<a href="IfcPlane.htm">IFCPLANE</a>' IN TYPEOF(BasisSurface)))) OR
+         ('IFC4X3_TC1.<a href="IfcSurfaceOfRevolution.htm">IFCSURFACEOFREVOLUTION</a>' IN TYPEOF(BasisSurface)) OR
          (Usense = (U2 &gt; U1))</code></pre>
 </td>
 </tr>
@@ -477,9 +479,9 @@ The trimmed surface is a simple bounded surface in which the boundaries are the 
 	Vsense : <a href="IfcBoolean.htm">IfcBoolean</a>;
  WHERE
 	U1AndU2Different : U1 &lt;&gt; U2;
-	UsenseCompatible : (('IFC4X3.IFCELEMENTARYSURFACE' IN TYPEOF(BasisSurface)) AND
-         (NOT ('IFC4X3.IFCPLANE' IN TYPEOF(BasisSurface)))) OR
-         ('IFC4X3.IFCSURFACEOFREVOLUTION' IN TYPEOF(BasisSurface)) OR
+	UsenseCompatible : (('IFC4X3_TC1.<a href="IfcElementarySurface.htm">IFCELEMENTARYSURFACE</a>' IN TYPEOF(BasisSurface)) AND
+         (NOT ('IFC4X3_TC1.<a href="IfcPlane.htm">IFCPLANE</a>' IN TYPEOF(BasisSurface)))) OR
+         ('IFC4X3_TC1.<a href="IfcSurfaceOfRevolution.htm">IFCSURFACEOFREVOLUTION</a>' IN TYPEOF(BasisSurface)) OR
          (Usense = (U2 &gt; U1));
 	V1AndV2Different : V1 &lt;&gt; V2;
 	VsenseCompatible : Vsense = (V2 &gt; V1);
@@ -501,7 +503,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.9.3.56.7-Changelog"></a>
                         8.9.3.56.7 Changelog
                     <a href="IfcRectangularTrimmedSurface.htm#8.9.3.56.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.9.3.56.7.1-IFC4"></a>
+<h4><a id="8.9.3.56.7.1-IFC4"></a>
                         8.9.3.56.7.1 IFC4
                     <a href="IfcRectangularTrimmedSurface.htm#8.9.3.56.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -511,7 +513,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 U1AndU2Different
                                 
                             </small>
@@ -522,7 +524,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 UsenseCompatible
                                 
                             </small>
@@ -533,7 +535,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 V1AndV2Different
                                 
                             </small>
@@ -544,7 +546,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 VsenseCompatible
                                 
                             </small>
@@ -554,7 +556,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR1
                                 
                             </small>
@@ -564,7 +566,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR2
                                 
                             </small>
@@ -574,7 +576,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR3
                                 
                             </small>
@@ -584,7 +586,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR4
                                 
                             </small>
@@ -593,17 +595,25 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes Usense definition,
-                                Changed from boolean to <a href="IfcBoolean.htm">IfcBoolean</a>
-</small>
+                                attribute Usense type,
+                                Changed from
+"boolean"
+to
+"<a href="IfcBoolean.htm">IfcBoolean</a>"
+                                
+                            </small>
 </li>
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes Vsense definition,
-                                Changed from boolean to <a href="IfcBoolean.htm">IfcBoolean</a>
-</small>
+                                attribute Vsense type,
+                                Changed from
+"boolean"
+to
+"<a href="IfcBoolean.htm">IfcBoolean</a>"
+                                
+                            </small>
 </li>
 </ul>
 </div>

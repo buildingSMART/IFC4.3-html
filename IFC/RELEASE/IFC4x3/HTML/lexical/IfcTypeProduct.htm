@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.1.3.48 IfcTypeProduct - IFC4.3.0.0 Documentation</title>
+<title>5.1.3.48 IfcTypeProduct - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -433,7 +435,7 @@
 <td colspan="2">
 <pre><code class="language-express hljs">NOT(EXISTS(SELF\<a href="IfcTypeObject.htm">IfcTypeObject</a>.Types[1])) OR
 (SIZEOF(QUERY(temp &lt;* SELF\<a href="IfcTypeObject.htm">IfcTypeObject</a>.Types[1].RelatedObjects |
-  NOT('IFC4X3.IFCPRODUCT' IN TYPEOF(temp)))
+  NOT('IFC4X3_TC1.<a href="IfcProduct.htm">IFCPRODUCT</a>' IN TYPEOF(temp)))
 ) = 0)</code></pre>
 </td>
 </tr>
@@ -816,7 +818,7 @@
  WHERE
 	ApplicableOccurrence : NOT(EXISTS(SELF\<a href="IfcTypeObject.htm">IfcTypeObject</a>.Types[1])) OR
 (SIZEOF(QUERY(temp &lt;* SELF\<a href="IfcTypeObject.htm">IfcTypeObject</a>.Types[1].RelatedObjects |
-  NOT('IFC4X3.IFCPRODUCT' IN TYPEOF(temp)))
+  NOT('IFC4X3_TC1.<a href="IfcProduct.htm">IFCPRODUCT</a>' IN TYPEOF(temp)))
 ) = 0);
 END_ENTITY;</code></pre>
 <h2><a id="5.1.3.48.8-References"></a>
@@ -839,7 +841,7 @@ END_ENTITY;</code></pre>
 <h3><a id="5.1.3.48.9-Changelog"></a>
                         5.1.3.48.9 Changelog
                     <a href="IfcTypeProduct.htm#5.1.3.48.9-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="5.1.3.48.9.1-IFC4"></a>
+<h4><a id="5.1.3.48.9.1-IFC4"></a>
                         5.1.3.48.9.1 IFC4
                     <a href="IfcTypeProduct.htm#5.1.3.48.9.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -849,7 +851,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 ReferencedBy
                                 
                             </small>
@@ -860,7 +862,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 ApplicableOccurrence
                                 
                             </small>
@@ -870,7 +872,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR41
                                 
                             </small>

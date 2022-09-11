@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.3.3.9 IfcWorkControl - IFC4.3.0.0 Documentation</title>
+<title>5.3.3.9 IfcWorkControl - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -112,7 +114,9 @@
     5.3.3.9.1 Semantic definition
 <a href="IfcWorkControl.htm#5.3.3.9.1-Semantic-definition"><i data-feather="link"></i></a></h2>
 <p>An <em><a href="IfcWorkControl.htm">IfcWorkControl</a></em> is an abstract supertype which captures information that is common to both <em><a href="IfcWorkPlan.htm">IfcWorkPlan</a></em> and <em><a href="IfcWorkSchedule.htm">IfcWorkSchedule</a></em>.</p>
-<aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x</aside>
+<aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x</aside><blockquote>
+<p>CHANGE IFC4  Corrected assignment of resources to work control in documentation. Assignment of tasks to work control updated based on changes of task time definitions and the introduction of a summary task. Identifier has been renamed (now Identification) and promoted to supertype <em><a href="IfcControl.htm">IfcControl</a></em></p>
+</blockquote>
 <p>A work control may have resources assigned to it. This is handled by the <em><a href="IfcRelAssignsToControl.htm">IfcRelAssignsToControl</a></em> relationship. A work control should also define a context that gives further information about its usage. If no special context information is required then the <em><a href="IfcProject.htm">IfcProject</a></em> instance as a global context should be used instead. An explicit link between the work control and the <em><a href="IfcProject.htm">IfcProject</a></em> via <em><a href="IfcRelDeclares.htm">IfcRelDeclares</a></em> should then be provided.</p>
 <p>The attribute <em><a href="IfcWorkControl.htm">IfcWorkControl</a>.Purpose</em> is used to define the purpose of either a work schedule or a work plan. In the case of <em><a href="IfcWorkPlan.htm">IfcWorkPlan</a></em>, the purpose attribute can be used to determine if the work plan is for cost estimating, task scheduling or some other defined purpose.</p>
 <h2><a id="5.3.3.9.2-Entity-inheritance"></a>
@@ -344,7 +348,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED.</p>
+<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED or when the concrete entity instantiated does not have a PredefinedType attribute. The latter is the case in some exceptional leaf classes and when instantiating <a href="IfcBuiltElement.htm">IfcBuiltElement</a> directly. </p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -891,7 +895,7 @@ END_ENTITY;</code></pre>
 <h3><a id="5.3.3.9.8-Changelog"></a>
                         5.3.3.9.8 Changelog
                     <a href="IfcWorkControl.htm#5.3.3.9.8-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="5.3.3.9.8.1-IFC4"></a>
+<h4><a id="5.3.3.9.8.1-IFC4"></a>
                         5.3.3.9.8.1 IFC4
                     <a href="IfcWorkControl.htm#5.3.3.9.8.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -901,7 +905,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 Duration
                                 
                             </small>
@@ -911,7 +915,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                attributes,
+                                attribute,
                                 CreationDate
                                 
                             </small>
@@ -921,7 +925,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                attributes,
+                                attribute,
                                 FinishTime
                                 
                             </small>
@@ -931,7 +935,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                attributes,
+                                attribute,
                                 UserDefinedControlType
                                 
                             </small>
@@ -941,7 +945,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                attributes,
+                                attribute,
                                 WorkControlType
                                 
                             </small>
@@ -951,7 +955,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR1
                                 
                             </small>
@@ -960,16 +964,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes Duration definition,
-                                Changed from <a href="IfcTimeMeasure.htm">IfcTimeMeasure</a> to <a href="IfcDuration.htm">IfcDuration</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                attributes Duration name,
-                                Changed from Duration to TotalFloat
+                                attribute Duration name,
+                                Changed from
+"Duration"
+to
+"TotalFloat"
                                 
                             </small>
 </li>
@@ -977,16 +976,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes Identifier definition,
-                                Changed from <a href="IfcIdentifier.htm">IfcIdentifier</a> to <a href="IfcDateTime.htm">IfcDateTime</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                attributes Identifier name,
-                                Changed from Identifier to CreationDate
+                                attribute Duration type,
+                                Changed from
+"<a href="IfcTimeMeasure.htm">IfcTimeMeasure</a>"
+to
+"<a href="IfcDuration.htm">IfcDuration</a>"
                                 
                             </small>
 </li>
@@ -994,16 +988,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes StartTime definition,
-                                Changed from IfcDateTimeSelect to <a href="IfcDateTime.htm">IfcDateTime</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                attributes StartTime is_optional,
-                                Changed from False to True
+                                attribute Identifier name,
+                                Changed from
+"Identifier"
+to
+"CreationDate"
                                 
                             </small>
 </li>
@@ -1011,8 +1000,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes StartTime name,
-                                Changed from StartTime to FinishTime
+                                attribute Identifier type,
+                                Changed from
+"<a href="IfcIdentifier.htm">IfcIdentifier</a>"
+to
+"<a href="IfcDateTime.htm">IfcDateTime</a>"
                                 
                             </small>
 </li>
@@ -1020,16 +1012,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes TotalFloat definition,
-                                Changed from <a href="IfcTimeMeasure.htm">IfcTimeMeasure</a> to <a href="IfcDateTime.htm">IfcDateTime</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                attributes TotalFloat is_optional,
-                                Changed from True to False
+                                attribute StartTime name,
+                                Changed from
+"StartTime"
+to
+"FinishTime"
                                 
                             </small>
 </li>
@@ -1037,8 +1024,59 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes TotalFloat name,
-                                Changed from TotalFloat to StartTime
+                                attribute StartTime optional,
+                                Changed from
+"False"
+to
+"True"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attribute StartTime type,
+                                Changed from
+"IfcDateTimeSelect"
+to
+"<a href="IfcDateTime.htm">IfcDateTime</a>"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attribute TotalFloat name,
+                                Changed from
+"TotalFloat"
+to
+"StartTime"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attribute TotalFloat optional,
+                                Changed from
+"True"
+to
+"False"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attribute TotalFloat type,
+                                Changed from
+"<a href="IfcTimeMeasure.htm">IfcTimeMeasure</a>"
+to
+"<a href="IfcDateTime.htm">IfcDateTime</a>"
                                 
                             </small>
 </li>

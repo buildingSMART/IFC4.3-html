@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>6.3.3.9 IfcMechanicalFastener - IFC4.3.0.0 Documentation</title>
+<title>6.3.3.9 IfcMechanicalFastener - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -364,7 +366,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED.</p>
+<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED or when the concrete entity instantiated does not have a PredefinedType attribute. The latter is the case in some exceptional leaf classes and when instantiating <a href="IfcBuiltElement.htm">IfcBuiltElement</a> directly. </p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -706,7 +708,7 @@
 <tr>
 <td colspan="2">
 <pre><code class="language-express hljs">(SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3.IFCMECHANICALFASTENERTYPE' IN TYPEOF(SELF\<a href="IfcObject.htm">IfcObject</a>.IsTypedBy[1].RelatingType))</code></pre>
+  ('IFC4X3_TC1.<a href="IfcMechanicalFastenerType.htm">IFCMECHANICALFASTENERTYPE</a>' IN TYPEOF(SELF\<a href="IfcObject.htm">IfcObject</a>.IsTypedBy[1].RelatingType))</code></pre>
 </td>
 </tr>
 </tbody>
@@ -738,7 +740,7 @@
 </ul>
 </li>
 <li>
-<a href="Pset_ConstructionOccurance.htm">Pset_ConstructionOccurance</a>
+<a href="Pset_ConstructionOccurence.htm">Pset_ConstructionOccurence</a>
 <ul>
 <li>InstallationDate</li>
 <li>ModelNumber</li>
@@ -753,18 +755,6 @@
 <li>Status</li>
 <li>DeliveryType</li>
 <li>CorrosionTreatment</li>
-</ul>
-</li>
-<li>
-<a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
-<ul>
-<li>CyclicPath</li>
-<li>CyclicRange</li>
-<li>LinearPath</li>
-<li>LinearRange</li>
-<li>MaximumAngularVelocity</li>
-<li>MaximumConstantSpeed</li>
-<li>MinimumTime</li>
 </ul>
 </li>
 <li>
@@ -1056,25 +1046,6 @@
 </ul>
 </li>
 <li>
-<a href="Pset_VesselLineCommon.htm">Pset_VesselLineCommon</a>
-<code>ROPE</code>
-<ul>
-<li>LineIdentifier</li>
-<li>MidshipToFairLead</li>
-<li>CentreLineToFairlead</li>
-<li>HeightAboveMainDeck</li>
-<li>FairleadToTermination</li>
-<li>WinchBreakLimit</li>
-<li>PreTensionAim</li>
-<li>LineType</li>
-<li>LineStrength</li>
-<li>TailLength</li>
-<li>TailDiameter</li>
-<li>TailType</li>
-<li>TailStrength</li>
-</ul>
-</li>
-<li>
 <a href="Pset_Warranty.htm">Pset_Warranty</a>
 <ul>
 <li>WarrantyIdentifier</li>
@@ -1334,7 +1305,7 @@
 <tr class="group-inherited">
 <td colspan="3">
 <a href="IfcProduct.htm">IfcProduct</a>
-<small>(17)</small>
+<small>(18)</small>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1389,6 +1360,28 @@
 <p>
 <em>No description available.</em>
 </p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Object_Typing/content.html">Object Typing</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        This is a further elaboration on an inherited concept.
+                    </small>
+</aside>
+<p>This concept can be applied to the following resources:</p>
+<ul>
+<li>
+<a href="IfcTypeProduct.htm">IfcTypeProduct</a>
+</li>
+</ul>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -2120,10 +2113,7 @@ shape.</aside>
 <a href="Pset_ConstructionAdministration.htm">Pset_ConstructionAdministration</a>
 </li>
 <li>
-<a href="Pset_ConstructionOccurance.htm">Pset_ConstructionOccurance</a>
-</li>
-<li>
-<a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
+<a href="Pset_ConstructionOccurence.htm">Pset_ConstructionOccurence</a>
 </li>
 <li>
 <a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
@@ -2307,11 +2297,11 @@ element components in the <a href="IfcElementQuantity.htm">IfcElementQuantity</a
 <td colspan="4">
 <small class="show-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    Click to show 81 hidden inherited concepts
+                    Click to show 82 hidden inherited concepts
                 </small>
 <small class="hide-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    Click to hide 81 inherited concepts
+                    Click to hide 82 inherited concepts
                 </small>
 </td>
 </tr>
@@ -2414,13 +2404,6 @@ element components in the <a href="IfcElementQuantity.htm">IfcElementQuantity</a
                         
                         
                     </code></li>
-<li>
-<a href="Pset_VesselLineCommon.htm">Pset_VesselLineCommon</a>
-                        
-                        (only applies to <code>ROPE)
-                        
-                        
-                    </code></li>
 </ul>
 </td>
 </tr>
@@ -2439,7 +2422,7 @@ element components in the <a href="IfcElementQuantity.htm">IfcElementQuantity</a
  (PredefinedType &lt;&gt; <a href="IfcMechanicalFastenerTypeEnum.htm">IfcMechanicalFastenerTypeEnum</a>.USERDEFINED) OR
  ((PredefinedType = <a href="IfcMechanicalFastenerTypeEnum.htm">IfcMechanicalFastenerTypeEnum</a>.USERDEFINED) AND EXISTS (SELF\<a href="IfcObject.htm">IfcObject</a>.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3.IFCMECHANICALFASTENERTYPE' IN TYPEOF(SELF\<a href="IfcObject.htm">IfcObject</a>.IsTypedBy[1].RelatingType));
+  ('IFC4X3_TC1.<a href="IfcMechanicalFastenerType.htm">IFCMECHANICALFASTENERTYPE</a>' IN TYPEOF(SELF\<a href="IfcObject.htm">IfcObject</a>.IsTypedBy[1].RelatingType));
 END_ENTITY;</code></pre>
 <h2><a id="6.3.3.9.8-References"></a>
     6.3.3.9.8 References
@@ -2458,7 +2441,7 @@ END_ENTITY;</code></pre>
 <h3><a id="6.3.3.9.9-Changelog"></a>
                         6.3.3.9.9 Changelog
                     <a href="IfcMechanicalFastener.htm#6.3.3.9.9-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="6.3.3.9.9.1-IFC4"></a>
+<h4><a id="6.3.3.9.9.1-IFC4"></a>
                         6.3.3.9.9.1 IFC4
                     <a href="IfcMechanicalFastener.htm#6.3.3.9.9.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -2468,7 +2451,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 PredefinedType
                                 
                             </small>
@@ -2479,7 +2462,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 CorrectPredefinedType
                                 
                             </small>
@@ -2490,7 +2473,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 CorrectTypeAssigned
                                 
                             </small>
@@ -2500,8 +2483,12 @@ END_ENTITY;</code></pre>
 <i data-feather="edit"></i>
                                 
                                 supertype,
-                                Changed from <a href="IfcFastener.htm">IfcFastener</a> to <a href="IfcElementComponent.htm">IfcElementComponent</a>
-</small>
+                                Changed from
+"<a href="IfcFastener.htm">IfcFastener</a>"
+to
+"<a href="IfcElementComponent.htm">IfcElementComponent</a>"
+                                
+                            </small>
 </li>
 </ul>
 </div>

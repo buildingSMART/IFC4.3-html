@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.3.45 IfcTextureVertex - IFC4.3.0.0 Documentation</title>
+<title>8.12.3.45 IfcTextureVertex - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -156,7 +158,16 @@
     8.12.3.45.1 Semantic definition
 <a href="IfcTextureVertex.htm#8.12.3.45.1-Semantic-definition"><i data-feather="link"></i></a></h2>
 <p>An <em><a href="IfcTextureVertex.htm">IfcTextureVertex</a></em> is a list of 2 (S, T) texture coordinates.</p>
-<aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO/IEC 19775-1 :</aside><aside class="aside-note"><mark>NOTE</mark>  Texture coordinates may be transformed (scaled, rotated, translated) by supplying a TextureTransform as a component of the texture's definition.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x2.</aside>
+<aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO/IEC 19775-1 :</aside><aside class="aside-note"><mark>NOTE</mark>  Texture coordinates may be transformed (scaled, rotated, translated) by supplying a TextureTransform as a component of the texture's definition.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x2.</aside><blockquote>
+<p>Each vertex-based geometry node uses a set of 2D texture coordinates that map textures to vertices. Texture map values ( ImageTexture, PixelTexture) range from [0.0, 1.0] along the S-axis and T-axis. However, texture coordinate values may be in the range (-∞,∞). Texture coordinates identify a location (and thus a colour value) in the texture map. The horizontal coordinate S is specified first, followed by the vertical coordinate T. If the texture map is repeated in a given direction (S-axis or T-axis), a texture coordinate C (s or t) is mapped into a texture map that has N pixels in the given direction as follows: </p><pre style=" font-size:larger;">
+<b>Texture map location = (C - floor(C)) × N</b>
+</pre>
+<p>If the texture map is not repeated, the texture coordinates are clamped to the 0.0 to 1.0 range as follows: </p><pre style=" font-size:larger;">
+<b>Texture map location = N,     if C &gt; 1.0,
+<br/>                     = 0.0,   if C &lt; 0.0,
+<br/>                     = C × N, if 0.0 ≤ C ≤ 1.0.</b>
+</pre>
+</blockquote>
 <h2><a id="8.12.3.45.2-Entity-inheritance"></a>
     8.12.3.45.2 Entity inheritance
 <a href="IfcTextureVertex.htm#8.12.3.45.2-Entity-inheritance"><i data-feather="link"></i></a></h2>

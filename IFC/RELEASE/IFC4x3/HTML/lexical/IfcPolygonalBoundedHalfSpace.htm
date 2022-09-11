@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.26 IfcPolygonalBoundedHalfSpace - IFC4.3.0.0 Documentation</title>
+<title>8.8.3.26 IfcPolygonalBoundedHalfSpace - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -400,9 +402,9 @@
 <tr>
 <td colspan="2">
 <pre><code class="language-express hljs">SIZEOF(TYPEOF(PolygonalBoundary) * [
-    'IFC4X3.<a href="IfcPolyline.htm">IfcPolyline</a>',
-    'IFC4X3.<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>',
-    'IFC4X3.<a href="IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a>'
+    'IFC4X3_TC1.<a href="IfcPolyline.htm">IfcPolyline</a>',
+    'IFC4X3_TC1.<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>',
+    'IFC4X3_TC1.<a href="IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a>'
   ]) = 1</code></pre>
 </td>
 </tr>
@@ -418,9 +420,9 @@
  WHERE
 	BoundaryDim : PolygonalBoundary.Dim = 2;
 	BoundaryType : SIZEOF(TYPEOF(PolygonalBoundary) * [
-    'IFC4X3.<a href="IfcPolyline.htm">IfcPolyline</a>',
-    'IFC4X3.<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>',
-    'IFC4X3.<a href="IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a>'
+    'IFC4X3_TC1.<a href="IfcPolyline.htm">IfcPolyline</a>',
+    'IFC4X3_TC1.<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>',
+    'IFC4X3_TC1.<a href="IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a>'
   ]) = 1;
 END_ENTITY;</code></pre>
 <h2><a id="8.8.3.26.6-References"></a>
@@ -440,7 +442,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.8.3.26.7-Changelog"></a>
                         8.8.3.26.7 Changelog
                     <a href="IfcPolygonalBoundedHalfSpace.htm#8.8.3.26.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.8.3.26.7.1-IFC4"></a>
+<h4><a id="8.8.3.26.7.1-IFC4"></a>
                         8.8.3.26.7.1 IFC4
                     <a href="IfcPolygonalBoundedHalfSpace.htm#8.8.3.26.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -450,7 +452,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 BoundaryDim
                                 
                             </small>
@@ -461,7 +463,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 BoundaryType
                                 
                             </small>
@@ -471,7 +473,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR41
                                 
                             </small>
@@ -481,22 +483,25 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR42
                                 
                             </small>
 </li>
 </ul>
-<h4 class="collapsed"><a id="8.8.3.26.7.2-IFC4.3"></a>
-                        8.8.3.26.7.2 IFC4.3
-                    <a href="IfcPolygonalBoundedHalfSpace.htm#8.8.3.26.7.2-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="8.8.3.26.7.2-IFC4.3-TC1"></a>
+                        8.8.3.26.7.2 IFC4.3_TC1
+                    <a href="IfcPolygonalBoundedHalfSpace.htm#8.8.3.26.7.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
-                                where_rules BoundaryType definition,
-                                Changed from sizeof(typeof(PolygonalBoundary)*[ifcpolyline,ifccompositecurve]) = 1 to sizeof(typeof(PolygonalBoundary)*[ifcpolyline,ifccompositecurve,ifcindexedpolycurve]) = 1
+                                where rule BoundaryType definition,
+                                Changed from
+"sizeof(typeof(PolygonalBoundary)*[ifcpolyline,ifccompositecurve]) = 1"
+to
+"sizeof(typeof(PolygonalBoundary)*[ifcpolyline,ifccompositecurve,ifcindexedpolycurve]) = 1"
                                 
                             </small>
 </li>

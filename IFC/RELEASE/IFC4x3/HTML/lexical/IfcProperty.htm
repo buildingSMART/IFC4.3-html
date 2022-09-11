@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.16.3.4 IfcProperty - IFC4.3.0.0 Documentation</title>
+<title>8.16.3.4 IfcProperty - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -186,7 +188,7 @@
 <li>
 <i data-feather="arrow-up"></i>
 <ul class="classes">
-<li class="deprecated"><a href="IfcComplexProperty.htm">IfcComplexProperty</a></li>
+<li class=""><a href="IfcComplexProperty.htm">IfcComplexProperty</a></li>
 <li class="abstract"><a href="IfcSimpleProperty.htm">IfcSimpleProperty</a></li>
 </ul>
 </li>
@@ -375,7 +377,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.16.3.4.6-Changelog"></a>
                         8.16.3.4.6 Changelog
                     <a href="IfcProperty.htm#8.16.3.4.6-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.16.3.4.6.1-IFC4"></a>
+<h4><a id="8.16.3.4.6.1-IFC4"></a>
                         8.16.3.4.6.1 IFC4
                     <a href="IfcProperty.htm#8.16.3.4.6.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -385,7 +387,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 HasApprovals
                                 
                             </small>
@@ -396,7 +398,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 HasConstraints
                                 
                             </small>
@@ -407,7 +409,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 PartOfPset
                                 
                             </small>
@@ -416,22 +418,28 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                inverses PartOfComplex definition,
-                                Changed from SET OF [0:1] <a href="IfcComplexProperty.htm">IfcComplexProperty</a> FOR HasProperties to SET OF [0:?] <a href="IfcComplexProperty.htm">IfcComplexProperty</a> FOR HasProperties
+                                inverse attribute PartOfComplex type,
+                                Changed from
+"SET OF [0:1] <a href="IfcComplexProperty.htm">IfcComplexProperty</a> FOR HasProperties"
+to
+"SET OF [0:?] <a href="IfcComplexProperty.htm">IfcComplexProperty</a> FOR HasProperties"
                                 
                             </small>
 </li>
 </ul>
-<h4 class="collapsed"><a id="8.16.3.4.6.2-IFC4.3"></a>
-                        8.16.3.4.6.2 IFC4.3
-                    <a href="IfcProperty.htm#8.16.3.4.6.2-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="8.16.3.4.6.2-IFC4.3-TC1"></a>
+                        8.16.3.4.6.2 IFC4.3_TC1
+                    <a href="IfcProperty.htm#8.16.3.4.6.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes Description name,
-                                Changed from Description to Specification
+                                attribute Description name,
+                                Changed from
+"Description"
+to
+"Specification"
                                 
                             </small>
 </li>

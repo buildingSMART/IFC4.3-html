@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.20 IfcCompositeCurve - IFC4.3.0.0 Documentation</title>
+<title>8.9.3.20 IfcCompositeCurve - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -171,7 +173,17 @@
 <li><em><a href="IfcCompositeCurve.htm">IfcCompositeCurve</a></em> with 0. ≤ T ≤ 1. (line segment) and 1. ≤ T ≤ 91. (arc segment), parametric length = 91.</li>
 </ul>
 <aside class="aside-note"><mark>NOTE</mark> Definition according to ISO 10303-42:
-A composite curve is a collection of curves joined end-to-end. The individual segments of the curve are themselves defined as composite curve segments. The parameterization of the composite curve is an accumulation of the parametric ranges of the referenced bounded curves. The first segment is parameterized from <em>0</em> to <em>l~<small>1</small>~</em> and for <em>i__≤__2</em>, the <em>i^<small>th</small>^</em> segment is parameterized from:</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>composite_curve</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC1.0</aside>
+A composite curve is a collection of curves joined end-to-end. The individual segments of the curve are themselves defined as composite curve segments. The parameterization of the composite curve is an accumulation of the parametric ranges of the referenced bounded curves. The first segment is parameterized from <em>0</em> to <em>l~<small>1</small>~</em> and for <em>i__≤__2</em>, the <em>i^<small>th</small>^</em> segment is parameterized from:</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>composite_curve</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC1.0</aside><blockquote>
+<blockquote>
+<figure><a id="Figure-8.9.3.20.B"></a><img alt="formula" src="../figures/ifccompositecurve-math1.gif"/>
+where <em>l~<small>k</small>~</em> is the parametric length (i.e., difference between maximum and minimum parameter values) of the curve underlying the <em>k^<small>th</small>^</em> segment. Let <em>T</em> denote the parameter for the composite curve. Then, if the <em>i_th segment is not a reparameterised composite curve segment, _T</em> is related to the parameter <em>t~i~</em>; <em>t~i0~__≤__t~i~__≤__t~i1~</em>; for the _i_th segment by the equation:<figcaption>Figure 8.9.3.20.B<a href="IfcCompositeCurve.htm#Figure-8.9.3.20.B"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a id="Figure-8.9.3.20.C"></a><img alt="formula" src="../figures/ifccompositecurve-math2.gif"/> if <em>Segments[i].SameSense</em> = TRUE;
+or by the equation:<figcaption>Figure 8.9.3.20.C<a href="IfcCompositeCurve.htm#Figure-8.9.3.20.C"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a id="Figure-8.9.3.20.D"></a><img alt="formula" src="../figures/ifccompositecurve-math3.gif"/> if <em>Segments[i].SameSense</em> = FALSE;
+If the segments[i] is of type reparameterised composite curve segment,<figcaption>Figure 8.9.3.20.D<a href="IfcCompositeCurve.htm#Figure-8.9.3.20.D"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a id="Figure-8.9.3.20.E"></a><img alt="formula" src="../figures/ifccompositecurve-math4.gif"/> where <em>τ</em> is defined at reparameterized composite curve segment (see <em>IfcReparameterizedCompositeCurveSegment</em>).<figcaption>Figure 8.9.3.20.E<a href="IfcCompositeCurve.htm#Figure-8.9.3.20.E"><i data-feather="link"></i></a></figcaption></figure>
+</blockquote>
+</blockquote>
 <p>Informal Propositions:</p>
 <ol>
 <li>The <em>SameSense</em> attribute of each segment correctly specifies the senses of the component curves. When traversed in the direction indicated by <em>SameSense</em>, the segments shall join end-to-end.</li>
@@ -261,7 +273,7 @@ A composite curve is a collection of curves joined end-to-end. The individual se
     8.9.3.20.3 Attributes
 <a href="IfcCompositeCurve.htm#8.9.3.20.3-Attributes"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a id="Table-8.9.3.20.C"></a><table class="striped grouped attributes">
+<figure><a id="Table-8.9.3.20.G"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -397,11 +409,11 @@ A composite curve is a collection of curves joined end-to-end. The individual se
 </td>
 </tr>
 </tbody>
-</table><figcaption>Table 8.9.3.20.C<a href="IfcCompositeCurve.htm#Table-8.9.3.20.C"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>Table 8.9.3.20.G<a href="IfcCompositeCurve.htm#Table-8.9.3.20.G"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a id="8.9.3.20.4-Formal-propositions"></a>
     8.9.3.20.4 Formal propositions
 <a href="IfcCompositeCurve.htm#8.9.3.20.4-Formal-propositions"><i data-feather="link"></i></a></h2>
-<figure><a id="Table-8.9.3.20.D"></a><table>
+<figure><a id="Table-8.9.3.20.H"></a><table>
 <thead>
 <tr>
 <th>Name</th>
@@ -432,13 +444,13 @@ A composite curve is a collection of curves joined end-to-end. The individual se
 </td>
 </tr>
 </tbody>
-</table><figcaption>Table 8.9.3.20.D<a href="IfcCompositeCurve.htm#Table-8.9.3.20.D"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>Table 8.9.3.20.H<a href="IfcCompositeCurve.htm#Table-8.9.3.20.H"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a id="8.9.3.20.5-Examples"></a>
     8.9.3.20.5 Examples
 <a href="IfcCompositeCurve.htm#8.9.3.20.5-Examples"><i data-feather="link"></i></a></h2>
 <ul class="examples">
 <li>
-<figure><a id="Figure-8.9.3.20.B"></a><a href="../annex_e/LinearPlacement_2.html"><img src="../examples/LinearPlacement_2/thumb.png"/></a><figcaption>Figure 8.9.3.20.B<a href="IfcCompositeCurve.htm#Figure-8.9.3.20.B"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a id="Figure-8.9.3.20.F"></a><a href="../annex_e/LinearPlacement_2.html"><img src="../examples/LinearPlacement_2/thumb.png"/></a><figcaption>Figure 8.9.3.20.F<a href="IfcCompositeCurve.htm#Figure-8.9.3.20.F"><i data-feather="link"></i></a></figcaption></figure>
 <p><a href="../annex_e/LinearPlacement_2.html">LinearPlacement_2</a></p>
 </li>
 </ul>
@@ -486,7 +498,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.9.3.20.8-Changelog"></a>
                         8.9.3.20.8 Changelog
                     <a href="IfcCompositeCurve.htm#8.9.3.20.8-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.9.3.20.8.1-IFC4"></a>
+<h4><a id="8.9.3.20.8.1-IFC4"></a>
                         8.9.3.20.8.1 IFC4
                     <a href="IfcCompositeCurve.htm#8.9.3.20.8.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -496,7 +508,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 CurveContinuous
                                 
                             </small>
@@ -507,7 +519,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 SameDim
                                 
                             </small>
@@ -517,7 +529,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR41
                                 
                             </small>
@@ -527,7 +539,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR42
                                 
                             </small>
@@ -536,22 +548,30 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes SelfIntersect definition,
-                                Changed from logical to <a href="IfcLogical.htm">IfcLogical</a>
-</small>
+                                attribute SelfIntersect type,
+                                Changed from
+"logical"
+to
+"<a href="IfcLogical.htm">IfcLogical</a>"
+                                
+                            </small>
 </li>
 </ul>
-<h4 class="collapsed"><a id="8.9.3.20.8.2-IFC4.3"></a>
-                        8.9.3.20.8.2 IFC4.3
-                    <a href="IfcCompositeCurve.htm#8.9.3.20.8.2-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="8.9.3.20.8.2-IFC4.3-TC1"></a>
+                        8.9.3.20.8.2 IFC4.3_TC1
+                    <a href="IfcCompositeCurve.htm#8.9.3.20.8.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes Segments definition,
-                                Changed from list[1:?] of <a href="IfcCompositeCurveSegment.htm">IfcCompositeCurveSegment</a> to list[1:?] of <a href="IfcSegment.htm">IfcSegment</a>
-</small>
+                                attribute Segments type,
+                                Changed from
+"list[1:?] of <a href="IfcCompositeCurveSegment.htm">IfcCompositeCurveSegment</a>"
+to
+"list[1:?] of <a href="IfcSegment.htm">IfcSegment</a>"
+                                
+                            </small>
 </li>
 </ul>
 </div>

@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.15.3.18 IfcProfileProperties - IFC4.3.0.0 Documentation</title>
+<title>8.15.3.18 IfcProfileProperties - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -320,7 +322,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.15.3.18.6-Changelog"></a>
                         8.15.3.18.6 Changelog
                     <a href="IfcProfileProperties.htm#8.15.3.18.6-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.15.3.18.6.1-IFC4"></a>
+<h4><a id="8.15.3.18.6.1-IFC4"></a>
                         8.15.3.18.6.1 IFC4
                     <a href="IfcProfileProperties.htm#8.15.3.18.6.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -329,7 +331,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                attributes,
+                                attribute,
                                 ProfileDefinition
                                 
                             </small>
@@ -339,7 +341,7 @@ END_ENTITY;</code></pre>
 <i data-feather="edit"></i>
                                 
                                 abstract,
-                                Changed from True to False
+                                Is no longer abstract
                                 
                             </small>
 </li>
@@ -347,16 +349,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes ProfileName definition,
-                                Changed from <a href="IfcLabel.htm">IfcLabel</a> to <a href="IfcProfileDef.htm">IfcProfileDef</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                attributes ProfileName is_optional,
-                                Changed from True to False
+                                attribute ProfileName name,
+                                Changed from
+"ProfileName"
+to
+"ProfileDefinition"
                                 
                             </small>
 </li>
@@ -364,8 +361,23 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes ProfileName name,
-                                Changed from ProfileName to ProfileDefinition
+                                attribute ProfileName optional,
+                                Changed from
+"True"
+to
+"False"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attribute ProfileName type,
+                                Changed from
+"<a href="IfcLabel.htm">IfcLabel</a>"
+to
+"<a href="IfcProfileDef.htm">IfcProfileDef</a>"
                                 
                             </small>
 </li>

@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.1.3.24 IfcRelAssignsToGroup - IFC4.3.0.0 Documentation</title>
+<title>5.1.3.24 IfcRelAssignsToGroup - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -260,10 +262,10 @@
                 RelatedObjectsType
                 
             </td>
-<td data-label="Type">OPTIONAL <a href="IfcObjectTypeEnum.htm">IfcObjectTypeEnum</a></td>
+<td data-label="Type">OPTIONAL <a href="IfcStrippedOptional.htm">IfcStrippedOptional</a></td>
 <td data-label="Description">
 <p>Particular type of the assignment relationship. It can constrain the applicable object types, used within the role of <em>RelatedObjects</em>.</p>
-<aside class="aside-change"><mark>IFC4-CHANGE</mark>  The attribute is deprecated and shall no longer be used. A NIL value should always be assigned.</aside>
+<aside class="aside-deprecation"><mark>IFC4-DEPRECATION<a href="../content/terms_and_definitions.htm#3.1.30-deprecation"><i data-feather="link"></i></a></mark> The attribute is deprecated and shall no longer be used. A NIL value should always be assigned.</aside><aside class="aside-change"><mark>IFC4.3.0.1-CHANGE</mark> The attribute type has been changed to <a href="IfcStrippedOptional.htm">IfcStrippedOptional</a> given that IfcObjectTypeEnum has been deleted.</aside>
 </td>
 </tr>
 <tr class="preview">
@@ -406,7 +408,7 @@ END_ENTITY;</code></pre>
 <h3><a id="5.1.3.24.8-Changelog"></a>
                         5.1.3.24.8 Changelog
                     <a href="IfcRelAssignsToGroup.htm#5.1.3.24.8-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="5.1.3.24.8.1-IFC4"></a>
+<h4><a id="5.1.3.24.8.1-IFC4"></a>
                         5.1.3.24.8.1 IFC4
                     <a href="IfcRelAssignsToGroup.htm#5.1.3.24.8.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -416,7 +418,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 NoSelfReference
                                 
                             </small>
@@ -426,7 +428,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR1
                                 
                             </small>

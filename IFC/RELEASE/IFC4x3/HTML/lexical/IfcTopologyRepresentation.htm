@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.18.3.17 IfcTopologyRepresentation - IFC4.3.0.0 Documentation</title>
+<title>8.18.3.17 IfcTopologyRepresentation - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -375,7 +377,7 @@ The supported values for context type are to be specified by implementers agreem
 <tr>
 <td colspan="2">
 <pre><code class="language-express hljs">SIZEOF(QUERY(temp &lt;* SELF\<a href="IfcRepresentation.htm">IfcRepresentation</a>.Items | 
-  NOT('IFC4X3.IFCTOPOLOGICALREPRESENTATIONITEM' IN TYPEOF(temp))
+  NOT('IFC4X3_TC1.<a href="IfcTopologicalRepresentationItem.htm">IFCTOPOLOGICALREPRESENTATIONITEM</a>' IN TYPEOF(temp))
 )) = 0
 
 </code></pre>
@@ -412,7 +414,7 @@ The supported values for context type are to be specified by implementers agreem
  SUBTYPE OF (<a href="IfcShapeModel.htm">IfcShapeModel</a>);
  WHERE
 	WR21 : SIZEOF(QUERY(temp &lt;* SELF\<a href="IfcRepresentation.htm">IfcRepresentation</a>.Items | 
-  NOT('IFC4X3.IFCTOPOLOGICALREPRESENTATIONITEM' IN TYPEOF(temp))
+  NOT('IFC4X3_TC1.<a href="IfcTopologicalRepresentationItem.htm">IFCTOPOLOGICALREPRESENTATIONITEM</a>' IN TYPEOF(temp))
 )) = 0
 
 ;

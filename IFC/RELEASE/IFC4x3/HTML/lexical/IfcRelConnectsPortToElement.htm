@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.4.3.49 IfcRelConnectsPortToElement - IFC4.3.0.0 Documentation</title>
+<title>5.4.3.49 IfcRelConnectsPortToElement - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -102,9 +104,11 @@
 <div class="col-md-8" id="main-content">
 <h1>5.4.3.49 IfcRelConnectsPortToElement</h1>
 <div class="row">
-<div class="card fluid error">
+<div class="card fluid error deprecation">
 <p>
-<mark class="secondary">DEPRECATED</mark> This definition may be imported, but shall not be exported by applications
+<mark class="secondary">DEPRECATED
+            <a href="../content/terms_and_definitions.htm#3.1.30-deprecation"><i data-feather="link"></i></a></mark>
+            This definition will be removed in a future major release of this standard
         </p>
 </div>
 </div>
@@ -113,7 +117,7 @@
 <a href="IfcRelConnectsPortToElement.htm#5.4.3.49.1-Semantic-definition"><i data-feather="link"></i></a></h2>
 <p><em><a href="IfcRelConnectsPortToElement.htm">IfcRelConnectsPortToElement</a></em> is a relationship between a distribution element and dynamically connected ports where connections are realised to other distribution elements.</p>
 <p>Ports contained in different elements are connected to each other using the <em><a href="IfcRelConnectsPorts.htm">IfcRelConnectsPorts</a></em> relationship.</p>
-<aside class="aside-note"><mark>NOTE</mark>  See <em><a href="IfcRelNests.htm">IfcRelNests</a></em> for its usages to represent an ordered collection of ports that are contained by an element and relevant subtypes of <em><a href="IfcDistributionElement.htm">IfcDistributionElement</a></em> for examples and port use definition sections.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x2.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The objectified relation <em><a href="IfcRelConnectsPortToElement.htm">IfcRelConnectsPortToElement</a></em> is now specialized for use of dynamically connected ports. For fixed ports, use <em><a href="IfcRelNests.htm">IfcRelNests</a></em> instead. Previously this objectified relationship <em><a href="IfcRelConnectsPortToElement.htm">IfcRelConnectsPortToElement</a></em> defined the relationship that is made between a port and the <em><a href="IfcElement.htm">IfcElement</a></em> in which it is contained. It is a 1 to 1 relationship. The <em><a href="IfcRelConnectsPortToElement.htm">IfcRelConnectsPortToElement</a></em> established a whole part relationship between the element and its port. The port is used as the means to connect to other ports in other elements.</aside>
+<aside class="aside-note"><mark>NOTE</mark>  See <em><a href="IfcRelNests.htm">IfcRelNests</a></em> for its usages to represent an ordered collection of ports that are contained by an element and relevant subtypes of <em><a href="IfcDistributionElement.htm">IfcDistributionElement</a></em> for examples and port use definition sections.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x2.</aside><aside class="aside-deprecation"><mark>IFC4.3.0.0-DEPRECATION<a href="../content/terms_and_definitions.htm#3.1.30-deprecation"><i data-feather="link"></i></a></mark> The relationship <a href="IfcRelConnectsPortToElement.htm">IfcRelConnectsPortToElement</a> shall not be used anymore, use <a href="IfcRelNests.htm">IfcRelNests</a> instead for specifying the element to which any kind of port belongs.</aside>
 <h2><a id="5.4.3.49.2-Entity-inheritance"></a>
     5.4.3.49.2 Entity inheritance
 <a href="IfcRelConnectsPortToElement.htm#5.4.3.49.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
@@ -153,7 +157,7 @@
 <li class=""><a href="IfcRelConnectsStructuralMember.htm">IfcRelConnectsStructuralMember</a></li>
 <li class=""><a href="IfcRelContainedInSpatialStructure.htm">IfcRelContainedInSpatialStructure</a></li>
 <li class=""><a href="IfcRelCoversBldgElements.htm">IfcRelCoversBldgElements</a></li>
-<li class=""><a href="IfcRelCoversSpaces.htm">IfcRelCoversSpaces</a></li>
+<li class="deprecated"><a href="IfcRelCoversSpaces.htm">IfcRelCoversSpaces</a></li>
 <li class=""><a href="IfcRelFillsElement.htm">IfcRelFillsElement</a></li>
 <li class=""><a href="IfcRelFlowControlElements.htm">IfcRelFlowControlElements</a></li>
 <li class=""><a href="IfcRelInterferesElements.htm">IfcRelInterferesElements</a></li>
@@ -366,7 +370,7 @@ END_ENTITY;</code></pre>
 <h3><a id="5.4.3.49.7-Changelog"></a>
                         5.4.3.49.7 Changelog
                     <a href="IfcRelConnectsPortToElement.htm#5.4.3.49.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="5.4.3.49.7.1-IFC4"></a>
+<h4><a id="5.4.3.49.7.1-IFC4"></a>
                         5.4.3.49.7.1 IFC4
                     <a href="IfcRelConnectsPortToElement.htm#5.4.3.49.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -374,21 +378,25 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes RelatedElement definition,
-                                Changed from <a href="IfcElement.htm">IfcElement</a> to <a href="IfcDistributionElement.htm">IfcDistributionElement</a>
-</small>
+                                attribute RelatedElement type,
+                                Changed from
+"<a href="IfcElement.htm">IfcElement</a>"
+to
+"<a href="IfcDistributionElement.htm">IfcDistributionElement</a>"
+                                
+                            </small>
 </li>
 </ul>
-<h4 class="collapsed"><a id="5.4.3.49.7.2-IFC4.3"></a>
-                        5.4.3.49.7.2 IFC4.3
-                    <a href="IfcRelConnectsPortToElement.htm#5.4.3.49.7.2-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="5.4.3.49.7.2-IFC4.3-TC1"></a>
+                        5.4.3.49.7.2 IFC4.3_TC1
+                    <a href="IfcRelConnectsPortToElement.htm#5.4.3.49.7.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
                                 deprecated,
-                                Changed from False to True
+                                Is now deprecated. The relationship <a href="IfcRelConnectsPortToElement.htm">IfcRelConnectsPortToElement</a> shall not be used anymore, use <a href="IfcRelNests.htm">IfcRelNests</a> instead for specifying the element to which any kind of port belongs.
                                 
                             </small>
 </li>

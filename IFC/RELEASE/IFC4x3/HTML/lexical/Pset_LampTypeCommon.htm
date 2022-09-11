@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>7.4.4.38 Pset_LampTypeCommon - IFC4.3.0.0 Documentation</title>
+<title>7.4.4.38 Pset_LampTypeCommon - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -160,7 +162,7 @@ property set with same name at subtypes of <a href="IfcObject.htm">IfcObject</a>
 <td><a href="IfcIdentifier.htm">IfcIdentifier</a></td>
 <td>
 <p>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as "construction type". It should be provided as an alternative to the name of the "object type", if the software does not support object types and no classification reference to a recognized classification system used.</p>
-<aside class="aside-deprecation"><mark>IFC4.3.0.0-DEPRECATION</mark>  The Reference property is deprecated and shall no longer be used, use attribute <em>Name</em> on the relating type instead.</aside>
+<aside class="aside-deprecation"><mark>IFC4.3.0.0-DEPRECATION<a href="../content/terms_and_definitions.htm#3.1.30-deprecation"><i data-feather="link"></i></a></mark>  The Reference property is deprecated and shall no longer be used, use attribute <em>Name</em> on the relating type instead.</aside>
 </td>
 <td><a class="button" href="../property/Reference.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -224,9 +226,7 @@ Magnetic ballasts are chokes which limit the current passing through a lamp conn
 <td><a href="IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="IfcLabel.htm">IfcLabel</a></td>
 <td>
-<p>
-<em>No description available.</em>
-</p>
+<p>In both the DIN and CIE standards, artificial light sources are classified in terms of their colour appearance. To the human eye they all appear to be white; the difference can only be detected by direct comparison. Visual performance is not directly affected by differences in colour appearance.</p>
 </td>
 <td><a class="button" href="../property/ColourAppearance.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -244,9 +244,7 @@ Magnetic ballasts are chokes which limit the current passing through a lamp conn
 <td><a href="IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="IfcThermodynamicTemperatureMeasure.htm">IfcThermodynamicTemperatureMeasure</a></td>
 <td>
-<p>
-<em>No description available.</em>
-</p>
+<p>The colour temperature of any source of radiation is defined as the temperature (in Kelvin) of a black-body or Planckian radiator whose radiation has the same chromaticity as the source of radiation. Often the values are only approximate colour temperatures as the black-body radiator cannot emit radiation of every chromaticity value. The colour temperatures of the commonest artificial light sources range from less than 3000K (warm white) to 4000K (intermediate) and over 5000K (daylight).</p>
 </td>
 <td><a class="button" href="../property/ColourTemperature.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -255,9 +253,7 @@ Magnetic ballasts are chokes which limit the current passing through a lamp conn
 <td><a href="IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="IfcInteger.htm">IfcInteger</a></td>
 <td>
-<p>
-<em>No description available.</em>
-</p>
+<p>The CRI indicates how well a light source renders eight standard colours compared to perfect reference lamp with the same colour temperature. The CRI scale ranges from 1 to 100, with 100 representing perfect rendering properties.</p>
 </td>
 <td><a class="button" href="../property/ColourRenderingIndex.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -274,7 +270,7 @@ Magnetic ballasts are chokes which limit the current passing through a lamp conn
 <h3><a id="7.4.4.38.4-Changelog"></a>
                         7.4.4.38.4 Changelog
                     <a href="Pset_LampTypeCommon.htm#7.4.4.38.4-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="7.4.4.38.4.1-IFC4"></a>
+<h4><a id="7.4.4.38.4.1-IFC4"></a>
                         7.4.4.38.4.1 IFC4
                     <a href="Pset_LampTypeCommon.htm#7.4.4.38.4.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -324,7 +320,10 @@ Magnetic ballasts are chokes which limit the current passing through a lamp conn
 <i data-feather="edit"></i>
                                 
                                 property LampBallastType,
-                                Changed from enumerated <a href="PEnum_LampBallastType.htm">PEnum_LampBallastType</a> to enumerated invalid
+                                Changed from
+"enumerated <a href="PEnum_LampBallastType.htm">PEnum_LampBallastType</a>"
+to
+"enumerated invalid"
                                 
                             </small>
 </li>
@@ -333,14 +332,17 @@ Magnetic ballasts are chokes which limit the current passing through a lamp conn
 <i data-feather="edit"></i>
                                 
                                 property LampCompensationType,
-                                Changed from enumerated <a href="PEnum_LampCompensationType.htm">PEnum_LampCompensationType</a> to enumerated invalid
+                                Changed from
+"enumerated <a href="PEnum_LampCompensationType.htm">PEnum_LampCompensationType</a>"
+to
+"enumerated invalid"
                                 
                             </small>
 </li>
 </ul>
-<h4 class="collapsed"><a id="7.4.4.38.4.2-IFC4.3"></a>
-                        7.4.4.38.4.2 IFC4.3
-                    <a href="Pset_LampTypeCommon.htm#7.4.4.38.4.2-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="7.4.4.38.4.2-IFC4.3-TC1"></a>
+                        7.4.4.38.4.2 IFC4.3_TC1
+                    <a href="Pset_LampTypeCommon.htm#7.4.4.38.4.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>
@@ -420,16 +422,24 @@ Magnetic ballasts are chokes which limit the current passing through a lamp conn
 <i data-feather="edit"></i>
                                 
                                 property LampBallastType,
-                                Changed from enumerated invalid to enumerated <a href="PEnum_LampBallastType.htm">PEnum_LampBallastType</a>
-</small>
+                                Changed from
+"enumerated invalid"
+to
+"enumerated <a href="PEnum_LampBallastType.htm">PEnum_LampBallastType</a>"
+                                
+                            </small>
 </li>
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
                                 property LampCompensationType,
-                                Changed from enumerated invalid to enumerated <a href="PEnum_LampCompensationType.htm">PEnum_LampCompensationType</a>
-</small>
+                                Changed from
+"enumerated invalid"
+to
+"enumerated <a href="PEnum_LampCompensationType.htm">PEnum_LampCompensationType</a>"
+                                
+                            </small>
 </li>
 </ul>
 </div>

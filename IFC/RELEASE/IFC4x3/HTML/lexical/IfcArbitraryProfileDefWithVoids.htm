@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.15.3.3 IfcArbitraryProfileDefWithVoids - IFC4.3.0.0 Documentation</title>
+<title>8.15.3.3 IfcArbitraryProfileDefWithVoids - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -361,7 +363,7 @@
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">SIZEOF(QUERY(temp &lt;* InnerCurves | 'IFC4X3.IFCLINE' IN TYPEOF(temp))) = 0</code></pre>
+<pre><code class="language-express hljs">SIZEOF(QUERY(temp &lt;* InnerCurves | 'IFC4X3_TC1.<a href="IfcLine.htm">IFCLINE</a>' IN TYPEOF(temp))) = 0</code></pre>
 </td>
 </tr>
 </tbody>
@@ -558,7 +560,7 @@
  WHERE
 	WR1 : SELF\<a href="IfcProfileDef.htm">IfcProfileDef</a>.ProfileType = AREA;
 	WR2 : SIZEOF(QUERY(temp &lt;* InnerCurves | temp.Dim &lt;&gt; 2)) = 0;
-	WR3 : SIZEOF(QUERY(temp &lt;* InnerCurves | 'IFC4X3.IFCLINE' IN TYPEOF(temp))) = 0;
+	WR3 : SIZEOF(QUERY(temp &lt;* InnerCurves | 'IFC4X3_TC1.<a href="IfcLine.htm">IFCLINE</a>' IN TYPEOF(temp))) = 0;
 END_ENTITY;</code></pre>
 <h2><a id="8.15.3.3.8-References"></a>
     8.15.3.3.8 References

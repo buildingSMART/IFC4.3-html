@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.4.3.14 IfcCivilElement - IFC4.3.0.0 Documentation</title>
+<title>5.4.3.14 IfcCivilElement - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -102,9 +104,11 @@
 <div class="col-md-8" id="main-content">
 <h1>5.4.3.14 IfcCivilElement</h1>
 <div class="row">
-<div class="card fluid error">
+<div class="card fluid error deprecation">
 <p>
-<mark class="secondary">DEPRECATED</mark> This definition may be imported, but shall not be exported by applications
+<mark class="secondary">DEPRECATED
+            <a href="../content/terms_and_definitions.htm#3.1.30-deprecation"><i data-feather="link"></i></a></mark>
+            This definition will be removed in a future major release of this standard
         </p>
 </div>
 </div>
@@ -114,7 +118,7 @@
 <p>An <em><a href="IfcCivilElement.htm">IfcCivilElement</a></em> is a generalization of all elements within a civil engineering works that cannot be represented as BuildingElements, DistributionElements or GeographicElements. Depending on the context of the construction project, included building work, such as buildings or factories, are represented as a collection of <em>IfcBuildingElement</em>'s, distribution systems, such as piping or drainage, are represented as a collection of <em><a href="IfcDistributionElement.htm">IfcDistributionElement</a></em>'s, and other geographic elements, such as trees, light posts, traffic signs etc. are represented as <em><a href="IfcGeographicElement.htm">IfcGeographicElement</a></em>'s.</p>
 <aside class="aside-note"><mark>NOTE</mark>  The <em><a href="IfcCivilElement.htm">IfcCivilElement</a></em> has been introduced as a stub for future extensions of this specification to include an object model for civil engineering works.</aside>
 <p>Civil elements are typically horizontally organized using a spatial structure expressed by spatial zones, therefore <em><a href="IfcCivilElement.htm">IfcCivilElement</a></em> is spatially contained by default within an <em><a href="IfcSpatialZone.htm">IfcSpatialZone</a></em>.</p>
-<aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC4.</aside>
+<aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC4.</aside><aside class="aside-deprecation"><mark>IFC4.3.0.0-DEPRECATION<a href="../content/terms_and_definitions.htm#3.1.30-deprecation"><i data-feather="link"></i></a></mark> This entity is deprecated. Usage of a generic element for civil engineering works is no longer desirable with specific types now provided as subtypes of <a href="IfcBuiltElement.htm">IfcBuiltElement</a>, <a href="IfcEarthworksElement.htm">IfcEarthworksElement</a>, <a href="IfcFacility.htm">IfcFacility</a> and <a href="IfcGeotechnicalElement.htm">IfcGeotechnicalElement</a>.</aside>
 <h2><a id="5.4.3.14.2-Entity-inheritance"></a>
     5.4.3.14.2 Entity inheritance
 <a href="IfcCivilElement.htm#5.4.3.14.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
@@ -353,7 +357,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED.</p>
+<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED or when the concrete entity instantiated does not have a PredefinedType attribute. The latter is the case in some exceptional leaf classes and when instantiating <a href="IfcBuiltElement.htm">IfcBuiltElement</a> directly. </p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -670,24 +674,12 @@
 </ul>
 </li>
 <li>
-<a href="Pset_ConstructionOccurance.htm">Pset_ConstructionOccurance</a>
+<a href="Pset_ConstructionOccurence.htm">Pset_ConstructionOccurence</a>
 <ul>
 <li>InstallationDate</li>
 <li>ModelNumber</li>
 <li>TagNumber</li>
 <li>AssetIdentifier</li>
-</ul>
-</li>
-<li>
-<a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
-<ul>
-<li>CyclicPath</li>
-<li>CyclicRange</li>
-<li>LinearPath</li>
-<li>LinearRange</li>
-<li>MaximumAngularVelocity</li>
-<li>MaximumConstantSpeed</li>
-<li>MinimumTime</li>
 </ul>
 </li>
 <li>
@@ -1201,7 +1193,7 @@
 <tr class="group-inherited">
 <td colspan="3">
 <a href="IfcProduct.htm">IfcProduct</a>
-<small>(17)</small>
+<small>(18)</small>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1256,6 +1248,28 @@
 <p>
 <em>No description available.</em>
 </p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Object_Typing/content.html">Object Typing</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        This is a further elaboration on an inherited concept.
+                    </small>
+</aside>
+<p>This concept can be applied to the following resources:</p>
+<ul>
+<li>
+<a href="IfcTypeProduct.htm">IfcTypeProduct</a>
+</li>
+</ul>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1987,10 +2001,7 @@ shape.</aside>
 <a href="Pset_ConstructionAdministration.htm">Pset_ConstructionAdministration</a>
 </li>
 <li>
-<a href="Pset_ConstructionOccurance.htm">Pset_ConstructionOccurance</a>
-</li>
-<li>
-<a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
+<a href="Pset_ConstructionOccurence.htm">Pset_ConstructionOccurence</a>
 </li>
 <li>
 <a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
@@ -2104,11 +2115,11 @@ shape.</aside>
 <td colspan="4">
 <small class="show-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    Click to show 78 hidden inherited concepts
+                    Click to show 79 hidden inherited concepts
                 </small>
 <small class="hide-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    Click to hide 78 inherited concepts
+                    Click to hide 79 inherited concepts
                 </small>
 </td>
 </tr>
@@ -2190,7 +2201,7 @@ END_ENTITY;</code></pre>
 <h3><a id="5.4.3.14.8-Changelog"></a>
                         5.4.3.14.8 Changelog
                     <a href="IfcCivilElement.htm#5.4.3.14.8-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="5.4.3.14.8.1-IFC4"></a>
+<h4><a id="5.4.3.14.8.1-IFC4"></a>
                         5.4.3.14.8.1 IFC4
                     <a href="IfcCivilElement.htm#5.4.3.14.8.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -2205,16 +2216,16 @@ END_ENTITY;</code></pre>
                             </small>
 </li>
 </ul>
-<h4 class="collapsed"><a id="5.4.3.14.8.2-IFC4.3"></a>
-                        5.4.3.14.8.2 IFC4.3
-                    <a href="IfcCivilElement.htm#5.4.3.14.8.2-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="5.4.3.14.8.2-IFC4.3-TC1"></a>
+                        5.4.3.14.8.2 IFC4.3_TC1
+                    <a href="IfcCivilElement.htm#5.4.3.14.8.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
                                 deprecated,
-                                Changed from False to True
+                                Is now deprecated. Usage of a generic element for civil engineering works is no longer desirable with specific types now provided as subtypes of <a href="IfcBuiltElement.htm">IfcBuiltElement</a>, <a href="IfcEarthworksElement.htm">IfcEarthworksElement</a>, <a href="IfcFacility.htm">IfcFacility</a> and <a href="IfcGeotechnicalElement.htm">IfcGeotechnicalElement</a>.
                                 
                             </small>
 </li>

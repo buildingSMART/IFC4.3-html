@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>Annex E Examples - Georeferencing-1 - IFC4.3.0.0 Documentation</title>
+<title>Annex E Examples - Georeferencing-1 - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -119,7 +121,7 @@
 </ul>
 <h3><a id="Supporting-files"></a>Supporting files<a href="Georeferencing-1.html#Supporting-files"><i data-feather="link"></i></a></h3>
 <p>Following files correspond to this scenario:</p>
-<figure><a id="Table-3fac183c-ba34-4211-b609-6ec52b3f3994"></a><table>
+<figure><a id="Table-ac47369a-285f-48ec-953a-3cdbb0f3aad7"></a><table>
 <thead>
 <tr>
 <th>Filename</th>
@@ -140,14 +142,14 @@
 <td>schematic representation of georeferencing entities</td>
 </tr>
 </tbody>
-</table><figcaption>Table 3fac183c-ba34-4211-b609-6ec52b3f3994<a href="Georeferencing-1.html#Table-3fac183c-ba34-4211-b609-6ec52b3f3994"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>Table ac47369a-285f-48ec-953a-3cdbb0f3aad7<a href="Georeferencing-1.html#Table-ac47369a-285f-48ec-953a-3cdbb0f3aad7"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a id="Images"></a>
     Images
 <a href="Georeferencing-1.html#Images"><i data-feather="link"></i></a></h2>
 <ul class="thumbnails">
-<li><figure><a id="Figure-589f9dbe-aba8-49f3-9ddf-0672dc5e3f00"></a><a href="../examples/Georeferencing-1/UT_GeoRef_1_1.PNG"><img src="../examples/Georeferencing-1/UT_GeoRef_1_1.PNG"/></a><figcaption>Figure 589f9dbe-aba8-49f3-9ddf-0672dc5e3f00<a href="Georeferencing-1.html#Figure-589f9dbe-aba8-49f3-9ddf-0672dc5e3f00"><i data-feather="link"></i></a></figcaption></figure></li>
-<li><figure><a id="Figure-17011312-fc2b-4e9c-b0b0-43779be7db44"></a><a href="../examples/Georeferencing-1/UT_GeoRef_1_2.jpg"><img src="../examples/Georeferencing-1/UT_GeoRef_1_2.jpg"/></a><figcaption>Figure 17011312-fc2b-4e9c-b0b0-43779be7db44<a href="Georeferencing-1.html#Figure-17011312-fc2b-4e9c-b0b0-43779be7db44"><i data-feather="link"></i></a></figcaption></figure></li>
-<li><figure><a id="Figure-14c33ce0-2c5f-48e3-a8f7-e9e0ad64a32b"></a><a href="../examples/Georeferencing-1/thumb.png"><img src="../examples/Georeferencing-1/thumb.png"/></a><figcaption>Figure 14c33ce0-2c5f-48e3-a8f7-e9e0ad64a32b<a href="Georeferencing-1.html#Figure-14c33ce0-2c5f-48e3-a8f7-e9e0ad64a32b"><i data-feather="link"></i></a></figcaption></figure></li>
+<li><figure><a id="Figure-aea77d1a-d77a-4201-9632-3f17826f6ae7"></a><a href="../examples/Georeferencing-1/UT_GeoRef_1_1.PNG"><img src="../examples/Georeferencing-1/UT_GeoRef_1_1.PNG"/></a><figcaption>Figure aea77d1a-d77a-4201-9632-3f17826f6ae7<a href="Georeferencing-1.html#Figure-aea77d1a-d77a-4201-9632-3f17826f6ae7"><i data-feather="link"></i></a></figcaption></figure></li>
+<li><figure><a id="Figure-7c65117a-b37e-4197-acb6-971a9d58b195"></a><a href="../examples/Georeferencing-1/UT_GeoRef_1_2.jpg"><img src="../examples/Georeferencing-1/UT_GeoRef_1_2.jpg"/></a><figcaption>Figure 7c65117a-b37e-4197-acb6-971a9d58b195<a href="Georeferencing-1.html#Figure-7c65117a-b37e-4197-acb6-971a9d58b195"><i data-feather="link"></i></a></figcaption></figure></li>
+<li><figure><a id="Figure-2c7dc3ff-d5f4-4421-95bc-4796fc2dfb27"></a><a href="../examples/Georeferencing-1/thumb.png"><img src="../examples/Georeferencing-1/thumb.png"/></a><figcaption>Figure 2c7dc3ff-d5f4-4421-95bc-4796fc2dfb27<a href="Georeferencing-1.html#Figure-2c7dc3ff-d5f4-4421-95bc-4796fc2dfb27"><i data-feather="link"></i></a></figcaption></figure></li>
 </ul>
 <h2><a id="IFC-SPF-source"></a>
     IFC-SPF source
@@ -167,60 +169,60 @@ ENDSEC;
 DATA;
 
 /* ------- UT ProjectSetup_1 ------------------------------------------------------------------- */
-#1 = IFCDIMENSIONALEXPONENTS(0, 0, 0, 0, 0, 0, 0);
-#2 = IFCDIRECTION((1., 0., 0.));
-#3 = IFCDIRECTION((0., 1., 0.));
-#4 = IFCDIRECTION((0., 0., 1.));
-#5 = IFCCARTESIANPOINT((0., 0., 0.));
-#16 = IFCPROJECT('2DAvEupIz0HQr73cMaawtY', $, 'GeoRef_1', 'The bare minimum of an IFC file exchange with only georeferencing meta data.', $, $, $, (#28), #17);
-#17 = IFCUNITASSIGNMENT((#18, #19, #20, #24, #25, #26, #27));
-#18 = IFCSIUNIT(*, .LENGTHUNIT., $, .METRE.);
-#19 = IFCSIUNIT(*, .AREAUNIT., $, .SQUARE_METRE.);
-#20 = IFCSIUNIT(*, .VOLUMEUNIT., $, .CUBIC_METRE.);
-#22 = IFCSIUNIT(*, .PLANEANGLEUNIT., $, .RADIAN.);
-#23 = IFCMEASUREWITHUNIT(IFCPLANEANGLEMEASURE(0.017453292519943295), #22);
-#24 = IFCCONVERSIONBASEDUNIT(#1, .PLANEANGLEUNIT., 'degree', #23);
-#25 = IFCSIUNIT(*, .MASSUNIT., .KILO., .GRAM.);
-#26 = IFCSIUNIT(*, .TIMEUNIT., $, .SECOND.);
-#27 = IFCMONETARYUNIT('EUR');
-#28 = IFCGEOMETRICREPRESENTATIONCONTEXT($, 'Model', 3, 1.E-6, #29, #54);
-#29 = IFCAXIS2PLACEMENT3D(#5, #4, #2);
+#1 = <a href="../lexical/IfcDimensionalExponents.htm">IFCDIMENSIONALEXPONENTS</a>(0, 0, 0, 0, 0, 0, 0);
+#2 = <a href="../lexical/IfcDirection.htm">IFCDIRECTION</a>((1., 0., 0.));
+#3 = <a href="../lexical/IfcDirection.htm">IFCDIRECTION</a>((0., 1., 0.));
+#4 = <a href="../lexical/IfcDirection.htm">IFCDIRECTION</a>((0., 0., 1.));
+#5 = <a href="../lexical/IfcCartesianPoint.htm">IFCCARTESIANPOINT</a>((0., 0., 0.));
+#16 = <a href="../lexical/IfcProject.htm">IFCPROJECT</a>('2DAvEupIz0HQr73cMaawtY', $, 'GeoRef_1', 'The bare minimum of an IFC file exchange with only georeferencing meta data.', $, $, $, (#28), #17);
+#17 = <a href="../lexical/IfcUnitAssignment.htm">IFCUNITASSIGNMENT</a>((#18, #19, #20, #24, #25, #26, #27));
+#18 = <a href="../lexical/IfcSIUnit.htm">IFCSIUNIT</a>(*, .LENGTHUNIT., $, .METRE.);
+#19 = <a href="../lexical/IfcSIUnit.htm">IFCSIUNIT</a>(*, .AREAUNIT., $, .SQUARE_METRE.);
+#20 = <a href="../lexical/IfcSIUnit.htm">IFCSIUNIT</a>(*, .VOLUMEUNIT., $, .CUBIC_METRE.);
+#22 = <a href="../lexical/IfcSIUnit.htm">IFCSIUNIT</a>(*, .PLANEANGLEUNIT., $, .RADIAN.);
+#23 = <a href="../lexical/IfcMeasureWithUnit.htm">IFCMEASUREWITHUNIT</a>(<a href="../lexical/IfcPlaneAngleMeasure.htm">IFCPLANEANGLEMEASURE</a>(0.017453292519943295), #22);
+#24 = <a href="../lexical/IfcConversionBasedUnit.htm">IFCCONVERSIONBASEDUNIT</a>(#1, .PLANEANGLEUNIT., 'degree', #23);
+#25 = <a href="../lexical/IfcSIUnit.htm">IFCSIUNIT</a>(*, .MASSUNIT., .KILO., .GRAM.);
+#26 = <a href="../lexical/IfcSIUnit.htm">IFCSIUNIT</a>(*, .TIMEUNIT., $, .SECOND.);
+#27 = <a href="../lexical/IfcMonetaryUnit.htm">IFCMONETARYUNIT</a>('EUR');
+#28 = <a href="../lexical/IfcGeometricRepresentationContext.htm">IFCGEOMETRICREPRESENTATIONCONTEXT</a>($, 'Model', 3, 1.E-6, #29, #54);
+#29 = <a href="../lexical/IfcAxis2Placement3D.htm">IFCAXIS2PLACEMENT3D</a>(#5, #4, #2);
 
 /* ------- UT GeoRef_1 ------------------------------------------------------------------------- */
 /* ------- ProjectedCRS provides information about the underlying geodetic --------------------- */
 /* ------- coordinate reference system --------------------------------------------------------- */
-#30 = IFCPROJECTEDCRS('EPSG:5834', 'DB_REF / 3-degree Gauss-Kruger zone 4 (E-N) + DHHN92 height', 'EPSG:5684', 'EPSG:5783', 'Gauss-Kruger', '4', #18);
+#30 = <a href="../lexical/IfcProjectedCRS.htm">IFCPROJECTEDCRS</a>('EPSG:5834', 'DB_REF / 3-degree Gauss-Kruger zone 4 (E-N) + DHHN92 height', 'EPSG:5684', 'EPSG:5783', 'Gauss-Kruger', '4', #18);
 /* ------- MapConversion provides information about the global-to-local transformation --------- */
-#31 = IFCMAPCONVERSION(#28, #30, 4468005., 5334600., 515., 1., 0., 1.);
+#31 = <a href="../lexical/IfcMapConversion.htm">IFCMAPCONVERSION</a>(#28, #30, 4468005., 5334600., 515., 1., 0., 1.);
 
 /* ------- UT Tin_1 ---------------------------------------------------------------------------- */
 /* ------- <a href="../lexical/IfcSite.htm">IfcSite</a> is the top most element in the spatial structure ---------------------------- */
-#32 = IFCSITE('27H$neCQf1NwtmczxBInPR', $, $, $, $, #33, #40, $, .ELEMENT., $, $, $, $, $);
+#32 = <a href="../lexical/IfcSite.htm">IFCSITE</a>('27H$neCQf1NwtmczxBInPR', $, $, $, $, #33, #40, $, .ELEMENT., $, $, $, $, $);
 /* ------- The <a href="../lexical/IfcSite.htm">IfcSite</a>'s placement is the top-most placement and uses the same ----------------- */
 /* ------- <a href="../lexical/IfcAxis2Placement.htm">IfcAxis2Placement</a> as <a href="../lexical/IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a> does ------------------------- */
-#33 = IFCLOCALPLACEMENT($, #29);
+#33 = <a href="../lexical/IfcLocalPlacement.htm">IFCLOCALPLACEMENT</a>($, #29);
 /* ------- Project/Spatial structure ----------------------------------------------------------- */
-#35 = IFCRELAGGREGATES('3Hu7f6BmT14B_XS9yS78Jr', $, $, $, #16, (#32));
+#35 = <a href="../lexical/IfcRelAggregates.htm">IFCRELAGGREGATES</a>('3Hu7f6BmT14B_XS9yS78Jr', $, $, $, #16, (#32));
 
 /* ------- Simple representation of the construction site: ------------------------------------- */
 /* ------- Square with side=1km centred at (0,0,0) (local coordinates) ------------------------- */
 /* ------- or centred at (4468005., 5334600., 515.) (global coordinates) ----------------------- */
-#40= IFCPRODUCTDEFINITIONSHAPE($,$,(#41));
-#41= IFCSHAPEREPRESENTATION(#28,'Surface','Tessellation',(#42));
-#42= IFCTRIANGULATEDFACESET(#43,$,.F.,((1,2,3),(1,3,4)),$);
-#43= IFCCARTESIANPOINTLIST3D(((-500.,-500.,0.),(500.,-500.,0.),(500.,500.,0.),(-500.,500.,0.)),$);
+#40= <a href="../lexical/IfcProductDefinitionShape.htm">IFCPRODUCTDEFINITIONSHAPE</a>($,$,(#41));
+#41= <a href="../lexical/IfcShapeRepresentation.htm">IFCSHAPEREPRESENTATION</a>(#28,'Surface','Tessellation',(#42));
+#42= <a href="../lexical/IfcTriangulatedFaceSet.htm">IFCTRIANGULATEDFACESET</a>(#43,$,.F.,((1,2,3),(1,3,4)),$);
+#43= <a href="../lexical/IfcCartesianPointList3D.htm">IFCCARTESIANPOINTLIST3D</a>(((-500.,-500.,0.),(500.,-500.,0.),(500.,500.,0.),(-500.,500.,0.)),$);
 
 /* ------ IfcSolidStratum represents the top most layer of terrain ----------------------------- */
 #50 = IFCSOLIDSTRATUM('28H$neCQf1NwtmczxBInPR', $, $, $, $, #53, #40, $);
 /* ------ Spatial inclusion in the project ----------------------------------------------------- */
-#51 = IFCRELCONTAINEDINSPATIALSTRUCTURE('3Hu7f6BmT14B_XS9yS78Jq', $, $, $, (#50), #32);
+#51 = <a href="../lexical/IfcRelContainedInSpatialStructure.htm">IFCRELCONTAINEDINSPATIALSTRUCTURE</a>('3Hu7f6BmT14B_XS9yS78Jq', $, $, $, (#50), #32);
 /* ------ Placement is relative to that of <a href="../lexical/IfcSite.htm">IfcSite</a> according to the spatial structure ---------- */
 /* ------ The way it is modelled, there is no offset and no rotation. -------------------------- */
-#52 = IFCAXIS2PLACEMENT3D(#5, #4, #2);
-#53 = IFCLOCALPLACEMENT(#33, #52);
+#52 = <a href="../lexical/IfcAxis2Placement3D.htm">IFCAXIS2PLACEMENT3D</a>(#5, #4, #2);
+#53 = <a href="../lexical/IfcLocalPlacement.htm">IFCLOCALPLACEMENT</a>(#33, #52);
 
 /* ------ TrueNorth of the geometric context must be a 2D vector ------------------------------- */
-#54 = IFCDIRECTION((0.,1.));
+#54 = <a href="../lexical/IfcDirection.htm">IFCDIRECTION</a>((0.,1.));
 
 ENDSEC;
 END-ISO-10303-21;

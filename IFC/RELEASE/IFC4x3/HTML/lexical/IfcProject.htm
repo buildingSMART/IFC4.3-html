@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.1.3.11 IfcProject - IFC4.3.0.0 Documentation</title>
+<title>5.1.3.11 IfcProject - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -438,7 +440,7 @@
 <td colspan="2">
 <pre><code class="language-express hljs">NOT(EXISTS(SELF\<a href="IfcContext.htm">IfcContext</a>.RepresentationContexts)) OR
 (SIZEOF(QUERY(Temp &lt;* SELF\<a href="IfcContext.htm">IfcContext</a>.RepresentationContexts |
- 'IFC4X3.IFCGEOMETRICREPRESENTATIONSUBCONTEXT' IN TYPEOF(Temp)
+ 'IFC4X3_TC1.<a href="IfcGeometricRepresentationSubContext.htm">IFCGEOMETRICREPRESENTATIONSUBCONTEXT</a>' IN TYPEOF(Temp)
   )) = 0)</code></pre>
 </td>
 </tr>
@@ -1034,84 +1036,84 @@
 <a href="IfcProject.htm#5.1.3.11.7-Examples"><i data-feather="link"></i></a></h2>
 <ul class="examples">
 <li>
-<figure><a id="Figure-5.1.3.11.A"></a><a href="../annex_e/Tin_2.html"><img src="../examples/Tin_2/thumb.png"/></a><figcaption>Figure 5.1.3.11.A<a href="IfcProject.htm#Figure-5.1.3.11.A"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/Tin_2.html">Tin_2</a></p>
+<figure><a id="Figure-5.1.3.11.A"></a><a href="../annex_e/Georeferencing_Tin_4.html"><img src="../examples/Georeferencing_Tin_4/thumb.png"/></a><figcaption>Figure 5.1.3.11.A<a href="IfcProject.htm#Figure-5.1.3.11.A"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Georeferencing_Tin_4.html">Georeferencing_Tin_4</a></p>
 </li>
 <li>
-<figure><a id="Figure-5.1.3.11.C"></a><a href="../annex_e/Tin_3.html"><img src="../examples/Tin_3/thumb.png"/></a><figcaption>Figure 5.1.3.11.C<a href="IfcProject.htm#Figure-5.1.3.11.C"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/Tin_3.html">Tin_3</a></p>
-</li>
-<li>
-<figure><a id="Figure-5.1.3.11.D"></a><a href="../annex_e/UT_Alignment_12d_11.html"><img src="../examples/UT_Alignment_12d_11/thumb.png"/></a><figcaption>Figure 5.1.3.11.D<a href="IfcProject.htm#Figure-5.1.3.11.D"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/UT_Alignment_12d_11.html">UT_Alignment_12d_11</a></p>
-</li>
-<li>
-<figure><a id="Figure-5.1.3.11.E"></a><a href="../annex_e/Georeferencing_Tin_5.html"><img src="../examples/Georeferencing_Tin_5/thumb.png"/></a><figcaption>Figure 5.1.3.11.E<a href="IfcProject.htm#Figure-5.1.3.11.E"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/Georeferencing_Tin_5.html">Georeferencing_Tin_5</a></p>
-</li>
-<li>
-<figure><a id="Figure-5.1.3.11.F"></a><a href="../annex_e/LinearPlacement_1.html"><img src="../examples/LinearPlacement_1/thumb.png"/></a><figcaption>Figure 5.1.3.11.F<a href="IfcProject.htm#Figure-5.1.3.11.F"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/LinearPlacement_1.html">LinearPlacement_1</a></p>
-</li>
-<li>
-<figure><a id="Figure-5.1.3.11.G"></a><a href="../annex_e/Tin_1.html"><img src="../examples/Tin_1/thumb.png"/></a><figcaption>Figure 5.1.3.11.G<a href="IfcProject.htm#Figure-5.1.3.11.G"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/Tin_1.html">Tin_1</a></p>
-</li>
-<li>
-<figure><a id="Figure-5.1.3.11.H"></a><a href="../annex_e/Georeferencing_Tin_1.html"><img src="../examples/Georeferencing_Tin_1/thumb.png"/></a><figcaption>Figure 5.1.3.11.H<a href="IfcProject.htm#Figure-5.1.3.11.H"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/Georeferencing_Tin_1.html">Georeferencing_Tin_1</a></p>
-</li>
-<li>
-<figure><a id="Figure-5.1.3.11.I"></a><a href="../annex_e/ProjectSetup_1.html"><img src="http://localhost/IFC/RELEASE/IFC4x3/HTML/examples/ProjectSetup_1/thumb.png"/></a><figcaption>Figure 5.1.3.11.I<a href="IfcProject.htm#Figure-5.1.3.11.I"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/ProjectSetup_1.html">ProjectSetup_1</a></p>
-</li>
-<li>
-<figure><a id="Figure-5.1.3.11.J"></a><a href="../annex_e/Georeferencing_Tin_2.html"><img src="../examples/Georeferencing_Tin_2/thumb.png"/></a><figcaption>Figure 5.1.3.11.J<a href="IfcProject.htm#Figure-5.1.3.11.J"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/Georeferencing_Tin_2.html">Georeferencing_Tin_2</a></p>
-</li>
-<li>
-<figure><a id="Figure-5.1.3.11.K"></a><a href="../annex_e/Georeferencing_Tiny_Survey_1.html"><img src="../examples/Georeferencing_Tiny_Survey_1/thumb.png"/></a><figcaption>Figure 5.1.3.11.K<a href="IfcProject.htm#Figure-5.1.3.11.K"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/Georeferencing_Tiny_Survey_1.html">Georeferencing_Tiny_Survey_1</a></p>
-</li>
-<li>
-<figure><a id="Figure-5.1.3.11.L"></a><a href="../annex_e/UT_SpatialStructure_4.html"><img src="../examples/UT_SpatialStructure_4/thumb.png"/></a><figcaption>Figure 5.1.3.11.L<a href="IfcProject.htm#Figure-5.1.3.11.L"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/UT_SpatialStructure_4.html">UT_SpatialStructure_4</a></p>
-</li>
-<li>
-<figure><a id="Figure-5.1.3.11.M"></a><a href="../annex_e/Tin_4.html"><img src="../examples/Tin_4/thumb.png"/></a><figcaption>Figure 5.1.3.11.M<a href="IfcProject.htm#Figure-5.1.3.11.M"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/Tin_4.html">Tin_4</a></p>
-</li>
-<li>
-<figure><a id="Figure-5.1.3.11.N"></a><a href="../annex_e/Georeferencing_Tin_3.html"><img src="../examples/Georeferencing_Tin_3/thumb.png"/></a><figcaption>Figure 5.1.3.11.N<a href="IfcProject.htm#Figure-5.1.3.11.N"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/Georeferencing_Tin_3.html">Georeferencing_Tin_3</a></p>
-</li>
-<li>
-<figure><a id="Figure-5.1.3.11.O"></a><a href="../annex_e/Georeferencing-1.html"><img src="../examples/Georeferencing-1/thumb.png"/></a><figcaption>Figure 5.1.3.11.O<a href="IfcProject.htm#Figure-5.1.3.11.O"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/Georeferencing-1.html">Georeferencing-1</a></p>
-</li>
-<li>
-<figure><a id="Figure-5.1.3.11.P"></a><a href="../annex_e/ProjectSetup_2.html"><img src="../examples/ProjectSetup_2/thumb.png"/></a><figcaption>Figure 5.1.3.11.P<a href="IfcProject.htm#Figure-5.1.3.11.P"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a id="Figure-5.1.3.11.C"></a><a href="../annex_e/ProjectSetup_2.html"><img src="../examples/ProjectSetup_2/thumb.png"/></a><figcaption>Figure 5.1.3.11.C<a href="IfcProject.htm#Figure-5.1.3.11.C"><i data-feather="link"></i></a></figcaption></figure>
 <p><a href="../annex_e/ProjectSetup_2.html">ProjectSetup_2</a></p>
 </li>
 <li>
-<figure><a id="Figure-5.1.3.11.Q"></a><a href="../annex_e/LinearPlacement_2.html"><img src="../examples/LinearPlacement_2/thumb.png"/></a><figcaption>Figure 5.1.3.11.Q<a href="IfcProject.htm#Figure-5.1.3.11.Q"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/LinearPlacement_2.html">LinearPlacement_2</a></p>
-</li>
-<li>
-<figure><a id="Figure-5.1.3.11.R"></a><a href="../annex_e/SpatialStructure_3.html"><img src="../examples/SpatialStructure_3/thumb.png"/></a><figcaption>Figure 5.1.3.11.R<a href="IfcProject.htm#Figure-5.1.3.11.R"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/SpatialStructure_3.html">SpatialStructure_3</a></p>
-</li>
-<li>
-<figure><a id="Figure-5.1.3.11.S"></a><a href="../annex_e/SpatialDecomposition_1.html"><img src="../examples/SpatialDecomposition_1/thumb.png"/></a><figcaption>Figure 5.1.3.11.S<a href="IfcProject.htm#Figure-5.1.3.11.S"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/SpatialDecomposition_1.html">SpatialDecomposition_1</a></p>
-</li>
-<li>
-<figure><a id="Figure-5.1.3.11.T"></a><a href="../annex_e/SpatialStructure_2.html"><img src="../examples/SpatialStructure_2/thumb.png"/></a><figcaption>Figure 5.1.3.11.T<a href="IfcProject.htm#Figure-5.1.3.11.T"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a id="Figure-5.1.3.11.D"></a><a href="../annex_e/SpatialStructure_2.html"><img src="../examples/SpatialStructure_2/thumb.png"/></a><figcaption>Figure 5.1.3.11.D<a href="IfcProject.htm#Figure-5.1.3.11.D"><i data-feather="link"></i></a></figcaption></figure>
 <p><a href="../annex_e/SpatialStructure_2.html">SpatialStructure_2</a></p>
 </li>
 <li>
-<figure><a id="Figure-5.1.3.11.U"></a><a href="../annex_e/Georeferencing_Tin_4.html"><img src="../examples/Georeferencing_Tin_4/thumb.png"/></a><figcaption>Figure 5.1.3.11.U<a href="IfcProject.htm#Figure-5.1.3.11.U"><i data-feather="link"></i></a></figcaption></figure>
-<p><a href="../annex_e/Georeferencing_Tin_4.html">Georeferencing_Tin_4</a></p>
+<figure><a id="Figure-5.1.3.11.E"></a><a href="../annex_e/LinearPlacement_1.html"><img src="../examples/LinearPlacement_1/thumb.png"/></a><figcaption>Figure 5.1.3.11.E<a href="IfcProject.htm#Figure-5.1.3.11.E"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/LinearPlacement_1.html">LinearPlacement_1</a></p>
+</li>
+<li>
+<figure><a id="Figure-5.1.3.11.F"></a><a href="../annex_e/Georeferencing-1.html"><img src="../examples/Georeferencing-1/thumb.png"/></a><figcaption>Figure 5.1.3.11.F<a href="IfcProject.htm#Figure-5.1.3.11.F"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Georeferencing-1.html">Georeferencing-1</a></p>
+</li>
+<li>
+<figure><a id="Figure-5.1.3.11.G"></a><a href="../annex_e/Georeferencing_Tin_5.html"><img src="../examples/Georeferencing_Tin_5/thumb.png"/></a><figcaption>Figure 5.1.3.11.G<a href="IfcProject.htm#Figure-5.1.3.11.G"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Georeferencing_Tin_5.html">Georeferencing_Tin_5</a></p>
+</li>
+<li>
+<figure><a id="Figure-5.1.3.11.H"></a><a href="../annex_e/Georeferencing_Tin_2.html"><img src="../examples/Georeferencing_Tin_2/thumb.png"/></a><figcaption>Figure 5.1.3.11.H<a href="IfcProject.htm#Figure-5.1.3.11.H"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Georeferencing_Tin_2.html">Georeferencing_Tin_2</a></p>
+</li>
+<li>
+<figure><a id="Figure-5.1.3.11.I"></a><a href="../annex_e/Tin_4.html"><img src="../examples/Tin_4/thumb.png"/></a><figcaption>Figure 5.1.3.11.I<a href="IfcProject.htm#Figure-5.1.3.11.I"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Tin_4.html">Tin_4</a></p>
+</li>
+<li>
+<figure><a id="Figure-5.1.3.11.J"></a><a href="../annex_e/Tin_1.html"><img src="../examples/Tin_1/thumb.png"/></a><figcaption>Figure 5.1.3.11.J<a href="IfcProject.htm#Figure-5.1.3.11.J"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Tin_1.html">Tin_1</a></p>
+</li>
+<li>
+<figure><a id="Figure-5.1.3.11.K"></a><a href="../annex_e/LinearPlacement_2.html"><img src="../examples/LinearPlacement_2/thumb.png"/></a><figcaption>Figure 5.1.3.11.K<a href="IfcProject.htm#Figure-5.1.3.11.K"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/LinearPlacement_2.html">LinearPlacement_2</a></p>
+</li>
+<li>
+<figure><a id="Figure-5.1.3.11.L"></a><a href="../annex_e/UT_Alignment_12d_11.html"><img src="../examples/UT_Alignment_12d_11/thumb.png"/></a><figcaption>Figure 5.1.3.11.L<a href="IfcProject.htm#Figure-5.1.3.11.L"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/UT_Alignment_12d_11.html">UT_Alignment_12d_11</a></p>
+</li>
+<li>
+<figure><a id="Figure-5.1.3.11.M"></a><a href="../annex_e/Tin_2.html"><img src="../examples/Tin_2/thumb.png"/></a><figcaption>Figure 5.1.3.11.M<a href="IfcProject.htm#Figure-5.1.3.11.M"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Tin_2.html">Tin_2</a></p>
+</li>
+<li>
+<figure><a id="Figure-5.1.3.11.N"></a><a href="../annex_e/Georeferencing_Tin_1.html"><img src="../examples/Georeferencing_Tin_1/thumb.png"/></a><figcaption>Figure 5.1.3.11.N<a href="IfcProject.htm#Figure-5.1.3.11.N"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Georeferencing_Tin_1.html">Georeferencing_Tin_1</a></p>
+</li>
+<li>
+<figure><a id="Figure-5.1.3.11.O"></a><a href="../annex_e/SpatialDecomposition_1.html"><img src="../examples/SpatialDecomposition_1/thumb.png"/></a><figcaption>Figure 5.1.3.11.O<a href="IfcProject.htm#Figure-5.1.3.11.O"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/SpatialDecomposition_1.html">SpatialDecomposition_1</a></p>
+</li>
+<li>
+<figure><a id="Figure-5.1.3.11.P"></a><a href="../annex_e/SpatialStructure_3.html"><img src="../examples/SpatialStructure_3/thumb.png"/></a><figcaption>Figure 5.1.3.11.P<a href="IfcProject.htm#Figure-5.1.3.11.P"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/SpatialStructure_3.html">SpatialStructure_3</a></p>
+</li>
+<li>
+<figure><a id="Figure-5.1.3.11.Q"></a><a href="../annex_e/Tin_3.html"><img src="../examples/Tin_3/thumb.png"/></a><figcaption>Figure 5.1.3.11.Q<a href="IfcProject.htm#Figure-5.1.3.11.Q"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Tin_3.html">Tin_3</a></p>
+</li>
+<li>
+<figure><a id="Figure-5.1.3.11.R"></a><a href="../annex_e/UT_SpatialStructure_4.html"><img src="../examples/UT_SpatialStructure_4/thumb.png"/></a><figcaption>Figure 5.1.3.11.R<a href="IfcProject.htm#Figure-5.1.3.11.R"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/UT_SpatialStructure_4.html">UT_SpatialStructure_4</a></p>
+</li>
+<li>
+<figure><a id="Figure-5.1.3.11.S"></a><a href="../annex_e/ProjectSetup_1.html"><img src="../examples/ProjectSetup_1/thumb.png"/></a><figcaption>Figure 5.1.3.11.S<a href="IfcProject.htm#Figure-5.1.3.11.S"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/ProjectSetup_1.html">ProjectSetup_1</a></p>
+</li>
+<li>
+<figure><a id="Figure-5.1.3.11.T"></a><a href="../annex_e/Georeferencing_Tin_3.html"><img src="../examples/Georeferencing_Tin_3/thumb.png"/></a><figcaption>Figure 5.1.3.11.T<a href="IfcProject.htm#Figure-5.1.3.11.T"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Georeferencing_Tin_3.html">Georeferencing_Tin_3</a></p>
+</li>
+<li>
+<figure><a id="Figure-5.1.3.11.U"></a><a href="../annex_e/Georeferencing_Tiny_Survey_1.html"><img src="../examples/Georeferencing_Tiny_Survey_1/thumb.png"/></a><figcaption>Figure 5.1.3.11.U<a href="IfcProject.htm#Figure-5.1.3.11.U"><i data-feather="link"></i></a></figcaption></figure>
+<p><a href="../annex_e/Georeferencing_Tiny_Survey_1.html">Georeferencing_Tiny_Survey_1</a></p>
 </li>
 </ul>
 <h2><a id="5.1.3.11.8-Formal-representation"></a>
@@ -1122,7 +1124,7 @@
  WHERE
 	CorrectContext : NOT(EXISTS(SELF\<a href="IfcContext.htm">IfcContext</a>.RepresentationContexts)) OR
 (SIZEOF(QUERY(Temp &lt;* SELF\<a href="IfcContext.htm">IfcContext</a>.RepresentationContexts |
- 'IFC4X3.IFCGEOMETRICREPRESENTATIONSUBCONTEXT' IN TYPEOF(Temp)
+ 'IFC4X3_TC1.<a href="IfcGeometricRepresentationSubContext.htm">IFCGEOMETRICREPRESENTATIONSUBCONTEXT</a>' IN TYPEOF(Temp)
   )) = 0);
 	HasName : EXISTS(SELF\<a href="IfcRoot.htm">IfcRoot</a>.Name);
 	NoDecomposition : SIZEOF(SELF\<a href="IfcObjectDefinition.htm">IfcObjectDefinition</a>.Decomposes) = 0;
@@ -1145,7 +1147,7 @@ END_ENTITY;</code></pre>
 <h3><a id="5.1.3.11.10-Changelog"></a>
                         5.1.3.11.10 Changelog
                     <a href="IfcProject.htm#5.1.3.11.10-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="5.1.3.11.10.1-IFC4"></a>
+<h4><a id="5.1.3.11.10.1-IFC4"></a>
                         5.1.3.11.10.1 IFC4
                     <a href="IfcProject.htm#5.1.3.11.10.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -1155,7 +1157,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 CorrectContext
                                 
                             </small>
@@ -1166,7 +1168,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 HasName
                                 
                             </small>
@@ -1177,7 +1179,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 NoDecomposition
                                 
                             </small>
@@ -1187,7 +1189,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                attributes,
+                                attribute,
                                 LongName
                                 
                             </small>
@@ -1197,7 +1199,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                attributes,
+                                attribute,
                                 Phase
                                 
                             </small>
@@ -1207,7 +1209,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                attributes,
+                                attribute,
                                 RepresentationContexts
                                 
                             </small>
@@ -1217,7 +1219,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                attributes,
+                                attribute,
                                 UnitsInContext
                                 
                             </small>
@@ -1227,7 +1229,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR31
                                 
                             </small>
@@ -1237,7 +1239,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR32
                                 
                             </small>
@@ -1247,7 +1249,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR33
                                 
                             </small>
@@ -1257,8 +1259,12 @@ END_ENTITY;</code></pre>
 <i data-feather="edit"></i>
                                 
                                 supertype,
-                                Changed from <a href="IfcObject.htm">IfcObject</a> to <a href="IfcContext.htm">IfcContext</a>
-</small>
+                                Changed from
+"<a href="IfcObject.htm">IfcObject</a>"
+to
+"<a href="IfcContext.htm">IfcContext</a>"
+                                
+                            </small>
 </li>
 </ul>
 </div>

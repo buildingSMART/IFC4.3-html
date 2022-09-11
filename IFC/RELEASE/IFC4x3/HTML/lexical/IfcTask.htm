@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.3.3.6 IfcTask - IFC4.3.0.0 Documentation</title>
+<title>5.3.3.6 IfcTask - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -342,7 +344,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED.</p>
+<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED or when the concrete entity instantiated does not have a PredefinedType attribute. The latter is the case in some exceptional leaf classes and when instantiating <a href="IfcBuiltElement.htm">IfcBuiltElement</a> directly. </p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -859,7 +861,29 @@
 <tr class="group-inherited">
 <td colspan="3">
 <a href="IfcProcess.htm">IfcProcess</a>
-<small>(3)</small>
+<small>(4)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Object_Typing/content.html">Object Typing</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        This is a further elaboration on an inherited concept.
+                    </small>
+</aside>
+<p>This concept can be applied to the following resources:</p>
+<ul>
+<li>
+<a href="IfcTypeProcess.htm">IfcTypeProcess</a>
+</li>
+</ul>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -908,11 +932,11 @@
 <td colspan="4">
 <small class="show-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    Click to show 19 hidden inherited concepts
+                    Click to show 20 hidden inherited concepts
                 </small>
 <small class="hide-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    Click to hide 19 inherited concepts
+                    Click to hide 20 inherited concepts
                 </small>
 </td>
 </tr>
@@ -962,7 +986,7 @@
 <!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTask.htm'>IfcTask</a> -->
 <g class="node" id="node1">
 <title><a href="IfcTask.htm">IfcTask</a></title>
-<g id="a_node1"><a xlink:href="http://localhost/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTask.htm" xlink:title="IfcTask">
+<g id="a_node1"><a xlink:href="IfcTask.htm" xlink:title="IfcTask">
 <polygon fill="#1976d2" points="144,-251.5 0,-251.5 0,-215.5 144,-215.5 144,-251.5" stroke="#000000"></polygon>
 <text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="72" y="-229.8"><a href="IfcTask.htm">IfcTask</a></text>
 </a>
@@ -971,7 +995,7 @@
 <!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTaskTime.htm'>IfcTaskTime</a> -->
 <g class="node" id="node2">
 <title><a href="IfcTaskTime.htm">IfcTaskTime</a></title>
-<g id="a_node2"><a xlink:href="http://localhost/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTaskTime.htm" xlink:title="IfcTaskTime">
+<g id="a_node2"><a xlink:href="IfcTaskTime.htm" xlink:title="IfcTaskTime">
 <polygon fill="#1976d2" points="144,-181.5 0,-181.5 0,-145.5 144,-145.5 144,-181.5" stroke="#000000" stroke-width=".2"></polygon>
 <text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="72" y="-159.8"><a href="IfcTaskTime.htm">IfcTaskTime</a></text>
 </a>
@@ -1100,7 +1124,7 @@
 <!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTask.htm'>IfcTask</a> -->
 <g class="node" id="node1">
 <title><a href="IfcTask.htm">IfcTask</a></title>
-<g id="a_node1"><a xlink:href="http://localhost/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTask.htm" xlink:title="IfcTask">
+<g id="a_node1"><a xlink:href="IfcTask.htm" xlink:title="IfcTask">
 <polygon fill="#1976d2" points="144,-251.5 0,-251.5 0,-215.5 144,-215.5 144,-251.5" stroke="#000000"></polygon>
 <text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="72" y="-229.8"><a href="IfcTask.htm">IfcTask</a></text>
 </a>
@@ -1109,7 +1133,7 @@
 <!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTaskTime.htm'>IfcTaskTime</a> -->
 <g class="node" id="node2">
 <title><a href="IfcTaskTime.htm">IfcTaskTime</a></title>
-<g id="a_node2"><a xlink:href="http://localhost/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTaskTime.htm" xlink:title="IfcTaskTime">
+<g id="a_node2"><a xlink:href="IfcTaskTime.htm" xlink:title="IfcTaskTime">
 <polygon fill="#1976d2" points="144,-181.5 0,-181.5 0,-145.5 144,-145.5 144,-181.5" stroke="#000000" stroke-width=".2"></polygon>
 <text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="72" y="-159.8"><a href="IfcTaskTime.htm">IfcTaskTime</a></text>
 </a>
@@ -1238,7 +1262,7 @@
 <!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTask.htm'>IfcTask</a> -->
 <g class="node" id="node1">
 <title><a href="IfcTask.htm">IfcTask</a></title>
-<g id="a_node1"><a xlink:href="http://localhost/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTask.htm" xlink:title="IfcTask">
+<g id="a_node1"><a xlink:href="IfcTask.htm" xlink:title="IfcTask">
 <polygon fill="#1976d2" points="144,-251.5 0,-251.5 0,-215.5 144,-215.5 144,-251.5" stroke="#000000"></polygon>
 <text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="72" y="-229.8"><a href="IfcTask.htm">IfcTask</a></text>
 </a>
@@ -1247,7 +1271,7 @@
 <!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTaskTime.htm'>IfcTaskTime</a> -->
 <g class="node" id="node2">
 <title><a href="IfcTaskTime.htm">IfcTaskTime</a></title>
-<g id="a_node2"><a xlink:href="http://localhost/IFC/RELEASE/IFC4x3/HTML/lexical/IfcTaskTime.htm" xlink:title="IfcTaskTime">
+<g id="a_node2"><a xlink:href="IfcTaskTime.htm" xlink:title="IfcTaskTime">
 <polygon fill="#1976d2" points="144,-181.5 0,-181.5 0,-145.5 144,-145.5 144,-181.5" stroke="#000000" stroke-width=".2"></polygon>
 <text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="72" y="-159.8"><a href="IfcTaskTime.htm">IfcTaskTime</a></text>
 </a>
@@ -1486,7 +1510,7 @@ END_ENTITY;</code></pre>
 <h3><a id="5.3.3.6.9-Changelog"></a>
                         5.3.3.6.9 Changelog
                     <a href="IfcTask.htm#5.3.3.6.9-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="5.3.3.6.9.1-IFC4"></a>
+<h4><a id="5.3.3.6.9.1-IFC4"></a>
                         5.3.3.6.9.1 IFC4
                     <a href="IfcTask.htm#5.3.3.6.9.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -1496,7 +1520,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 IsMilestone
                                 
                             </small>
@@ -1507,7 +1531,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 PredefinedType
                                 
                             </small>
@@ -1518,7 +1542,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 CorrectPredefinedType
                                 
                             </small>
@@ -1529,7 +1553,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 HasName
                                 
                             </small>
@@ -1539,7 +1563,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                attributes,
+                                attribute,
                                 TaskId
                                 
                             </small>
@@ -1549,7 +1573,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR1
                                 
                             </small>
@@ -1559,7 +1583,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR2
                                 
                             </small>
@@ -1569,7 +1593,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR3
                                 
                             </small>
@@ -1578,16 +1602,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes IsMilestone definition,
-                                Changed from boolean to <a href="IfcInteger.htm">IfcInteger</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                attributes IsMilestone is_optional,
-                                Changed from False to True
+                                attribute IsMilestone name,
+                                Changed from
+"IsMilestone"
+to
+"Priority"
                                 
                             </small>
 </li>
@@ -1595,8 +1614,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes IsMilestone name,
-                                Changed from IsMilestone to Priority
+                                attribute IsMilestone optional,
+                                Changed from
+"False"
+to
+"True"
                                 
                             </small>
 </li>
@@ -1604,16 +1626,35 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes Priority definition,
-                                Changed from integer to <a href="IfcTaskTime.htm">IfcTaskTime</a>
-</small>
+                                attribute IsMilestone type,
+                                Changed from
+"boolean"
+to
+"<a href="IfcInteger.htm">IfcInteger</a>"
+                                
+                            </small>
 </li>
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes Priority name,
-                                Changed from Priority to TaskTime
+                                attribute Priority name,
+                                Changed from
+"Priority"
+to
+"TaskTime"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attribute Priority type,
+                                Changed from
+"integer"
+to
+"<a href="IfcTaskTime.htm">IfcTaskTime</a>"
                                 
                             </small>
 </li>

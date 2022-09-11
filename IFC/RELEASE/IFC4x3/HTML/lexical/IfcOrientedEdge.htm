@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.20.3.13 IfcOrientedEdge - IFC4.3.0.0 Documentation</title>
+<title>8.20.3.13 IfcOrientedEdge - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -160,7 +162,9 @@
 <p>The reused edge with a geometric representation as <em><a href="IfcEdgeCurve.htm">IfcEdgeCurve</a></em> defines the edge in 3D coordinate space. In some cases, particularly when using elementary or swept surfaces, there is the risk of imprecise mapping of the 3D (x, y, z) <em><a href="IfcEdgeCurve.htm">IfcEdgeCurve</a></em> onto the adjacent surfaces to determine the boundaries of these surfaces. The optional <em>CurveOnSurface</em> defines the 2D (u, v) edge within the parametric space of the surface. It could be used to determine the correctness of the mapping of the 3D <em><a href="IfcEdgeCurve.htm">IfcEdgeCurve</a></em> onto this surface.</p>
 <figure><a id="Figure-8.20.3.13.A-Curve-on-surface-representation-of-an"></a><img alt="example" src="../figures/ifcadvancedbrep_02.png"/><figcaption>Figure 8.20.3.13.A — Curve on surface representation of an<a href="IfcOrientedEdge.htm#Figure-8.20.3.13.A-Curve-on-surface-representation-of-an"><i data-feather="link"></i></a></figcaption></figure>
 <aside class="aside-example"><mark>EXAMPLE</mark> Figure 8.20.3.13.A illustrates an example where the <em>CurveOnSurface</em> is provided in addition to the curve geometry of the <em><a href="IfcEdgeCurve.htm">IfcEdgeCurve</a></em>.</aside><aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO/CD 10303-42:1992
-An oriented edge is an edge constructed from another edge and contains a BOOLEAN direction flag to indicate whether or not the orientation of the constructed edge agrees with the orientation of the original edge. Except for perhaps orientation, the oriented edge is equivalent to the original edge.</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>oriented_edge</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2.0.</aside><aside class="aside-ifc4-add2"><mark>IFC4-Add2</mark> CHANGE  The attribute <em>CurveOnSurface</em> has been added.</aside>
+An oriented edge is an edge constructed from another edge and contains a BOOLEAN direction flag to indicate whether or not the orientation of the constructed edge agrees with the orientation of the original edge. Except for perhaps orientation, the oriented edge is equivalent to the original edge.</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>oriented_edge</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2.0.</aside><aside class="aside-ifc4-add2"><mark>IFC4-Add2</mark> CHANGE  The attribute <em>CurveOnSurface</em> has been added.</aside><blockquote>
+<p>A common practice is solid modelling systems is to have an entity that represents the "use" or "traversal" of an edge. This "use" entity explicitly represents the requirement in a manifold solid that each edge must be traversed exactly twice, once in each direction. The "use" functionality is provided by the edge subtype oriented edge.</p>
+</blockquote>
 <h2><a id="8.20.3.13.2-Entity-inheritance"></a>
     8.20.3.13.2 Entity inheritance
 <a href="IfcOrientedEdge.htm#8.20.3.13.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
@@ -376,7 +380,7 @@ An oriented edge is an edge constructed from another edge and contains a BOOLEAN
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">NOT('IFC4X3.IFCORIENTEDEDGE' IN TYPEOF(EdgeElement))</code></pre>
+<pre><code class="language-express hljs">NOT('IFC4X3_TC1.<a href="IfcOrientedEdge.htm">IFCORIENTEDEDGE</a>' IN TYPEOF(EdgeElement))</code></pre>
 </td>
 </tr>
 </tbody>
@@ -394,7 +398,7 @@ An oriented edge is an edge constructed from another edge and contains a BOOLEAN
 	 SELF\<a href="IfcEdge.htm">IfcEdge</a>.EdgeEnd : <a href="IfcVertex.htm">IfcVertex</a> := <a href="IfcBooleanChoose.htm">IfcBooleanChoose</a> 
 (Orientation, EdgeElement.EdgeEnd, EdgeElement.EdgeStart);
  WHERE
-	EdgeElementNotOriented : NOT('IFC4X3.IFCORIENTEDEDGE' IN TYPEOF(EdgeElement));
+	EdgeElementNotOriented : NOT('IFC4X3_TC1.<a href="IfcOrientedEdge.htm">IFCORIENTEDEDGE</a>' IN TYPEOF(EdgeElement));
 END_ENTITY;</code></pre>
 <h2><a id="8.20.3.13.6-References"></a>
     8.20.3.13.6 References
@@ -416,7 +420,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.20.3.13.7-Changelog"></a>
                         8.20.3.13.7 Changelog
                     <a href="IfcOrientedEdge.htm#8.20.3.13.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.20.3.13.7.1-IFC4"></a>
+<h4><a id="8.20.3.13.7.1-IFC4"></a>
                         8.20.3.13.7.1 IFC4
                     <a href="IfcOrientedEdge.htm#8.20.3.13.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -426,7 +430,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 EdgeElementNotOriented
                                 
                             </small>
@@ -436,7 +440,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR1
                                 
                             </small>
@@ -445,9 +449,13 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes Orientation definition,
-                                Changed from boolean to <a href="IfcBoolean.htm">IfcBoolean</a>
-</small>
+                                attribute Orientation type,
+                                Changed from
+"boolean"
+to
+"<a href="IfcBoolean.htm">IfcBoolean</a>"
+                                
+                            </small>
 </li>
 </ul>
 </div>

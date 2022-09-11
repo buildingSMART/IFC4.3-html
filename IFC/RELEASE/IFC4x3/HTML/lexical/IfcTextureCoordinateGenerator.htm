@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.3.41 IfcTextureCoordinateGenerator - IFC4.3.0.0 Documentation</title>
+<title>8.12.3.41 IfcTextureCoordinateGenerator - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -281,7 +283,7 @@
 <td data-label="Type">OPTIONAL LIST [1:?] OF <a href="IfcReal.htm">IfcReal</a></td>
 <td data-label="Description">
 <p>The parameters used as arguments by the function as specified by <em>Mode</em>.</p>
-<aside class="aside-change"><mark>IFC4-CHANGE&amp;nbsp:</mark>IFC4 CHANGE&amp;nbsp: Data type restricted to REAL.</aside><aside class="aside-deprecation"><mark>IFC4.3.0.0-DEPRECATION</mark> This attribute is deprecated and shall no longer be used.</aside>
+<aside class="aside-change"><mark>IFC4-CHANGE&amp;nbsp:</mark>IFC4 CHANGE&amp;nbsp: Data type restricted to REAL.</aside><aside class="aside-deprecation"><mark>IFC4.3.0.0-DEPRECATION<a href="../content/terms_and_definitions.htm#3.1.30-deprecation"><i data-feather="link"></i></a></mark> This attribute is deprecated and shall no longer be used.</aside>
 </td>
 </tr>
 </tbody>
@@ -311,7 +313,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.12.3.41.6-Changelog"></a>
                         8.12.3.41.6 Changelog
                     <a href="IfcTextureCoordinateGenerator.htm#8.12.3.41.6-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.12.3.41.6.1-IFC4"></a>
+<h4><a id="8.12.3.41.6.1-IFC4"></a>
                         8.12.3.41.6.1 IFC4
                     <a href="IfcTextureCoordinateGenerator.htm#8.12.3.41.6.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -319,16 +321,34 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes Parameter definition,
-                                Changed from list[1:?] of <a href="IfcSimpleValue.htm">IfcSimpleValue</a> to list[1:?] of <a href="IfcReal.htm">IfcReal</a>
-</small>
+                                attribute Parameter optional,
+                                Is now optional
+                                
+                            </small>
 </li>
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes Parameter is_optional,
-                                Changed from False to True
+                                attribute Parameter type,
+                                Changed from
+"list[1:?] of <a href="IfcSimpleValue.htm">IfcSimpleValue</a>"
+to
+"list[1:?] of <a href="IfcReal.htm">IfcReal</a>"
+                                
+                            </small>
+</li>
+</ul>
+<h4><a id="8.12.3.41.6.2-IFC4.3-TC1"></a>
+                        8.12.3.41.6.2 IFC4.3_TC1
+                    <a href="IfcTextureCoordinateGenerator.htm#8.12.3.41.6.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attribute Parameter,
+                                Is now deprecated
                                 
                             </small>
 </li>

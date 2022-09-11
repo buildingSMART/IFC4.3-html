@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.3.44 IfcTextureMap - IFC4.3.0.0 Documentation</title>
+<title>8.12.3.44 IfcTextureMap - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -296,7 +298,7 @@ The TextureCoordinate node is a geometry property node that specifies a set of 2
 <td data-label="Type"><a href="IfcFace.htm">IfcFace</a></td>
 <td data-label="Description">
 <p>The face that defines the corresponding list of points along the bounding poly loop of the face outer bound.</p>
-<aside class="aside-note"><mark>NOTE</mark>  The face may have additional inner loops. The <em><a href="IfcTextureMap.htm">IfcTextureMap</a></em> and its <em>Vertices</em> only correspond with the coordinates of the <em>IfcPolyloop</em> representing the outer bound.</aside>
+<aside class="aside-note"><mark>NOTE</mark>  The face may have additional inner loops. The <em><a href="IfcTextureMap.htm">IfcTextureMap</a></em> and its <em>Vertices</em> only correspond with the coordinates of the <em><a href="IfcPolyLoop.htm">IfcPolyloop</a></em> representing the outer bound.</aside>
 </td>
 </tr>
 </tbody>
@@ -327,7 +329,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.12.3.44.6-Changelog"></a>
                         8.12.3.44.6 Changelog
                     <a href="IfcTextureMap.htm#8.12.3.44.6-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.12.3.44.6.1-IFC4"></a>
+<h4><a id="8.12.3.44.6.1-IFC4"></a>
                         8.12.3.44.6.1 IFC4
                     <a href="IfcTextureMap.htm#8.12.3.44.6.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -337,7 +339,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 MappedTo
                                 
                             </small>
@@ -347,7 +349,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR11
                                 
                             </small>
@@ -356,16 +358,23 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes TextureMaps definition,
-                                Changed from set[1:?] of IfcVertexBasedTextureMap to list[3:?] of <a href="IfcTextureVertex.htm">IfcTextureVertex</a>
-</small>
+                                attribute TextureMaps name,
+                                Changed from
+"TextureMaps"
+to
+"Vertices"
+                                
+                            </small>
 </li>
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes TextureMaps name,
-                                Changed from TextureMaps to Vertices
+                                attribute TextureMaps type,
+                                Changed from
+"set[1:?] of IfcVertexBasedTextureMap"
+to
+"list[3:?] of <a href="IfcTextureVertex.htm">IfcTextureVertex</a>"
                                 
                             </small>
 </li>

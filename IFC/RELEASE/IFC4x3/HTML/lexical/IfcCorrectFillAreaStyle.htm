@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.6.1 IfcCorrectFillAreaStyle - IFC4.3.0.0 Documentation</title>
+<title>8.12.6.1 IfcCorrectFillAreaStyle - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -182,19 +184,19 @@ END_LOCAL;
 
 
 External := SIZEOF(QUERY(Style &lt;* Styles |
-  'IFC4X3.IFCEXTERNALLYDEFINEDHATCHSTYLE' IN
+  'IFC4X3_TC1.<a href="IfcExternallyDefinedHatchStyle.htm">IFCEXTERNALLYDEFINEDHATCHSTYLE</a>' IN
    TYPEOF(Style)));
 
 Hatching  := SIZEOF(QUERY(Style &lt;* Styles |
-  'IFC4X3.IFCFILLAREASTYLEHATCHING' IN
+  'IFC4X3_TC1.<a href="IfcFillAreaStyleHatching.htm">IFCFILLAREASTYLEHATCHING</a>' IN
    TYPEOF(Style)));
 
 Tiles     := SIZEOF(QUERY(Style &lt;* Styles |
-  'IFC4X3.IFCFILLAREASTYLETILES' IN
+  'IFC4X3_TC1.<a href="IfcFillAreaStyleTiles.htm">IFCFILLAREASTYLETILES</a>' IN
    TYPEOF(Style)));
 
 Colour    := SIZEOF(QUERY(Style &lt;* Styles |
-  'IFC4X3.IFCCOLOUR' IN
+  'IFC4X3_TC1.<a href="IfcColour.htm">IFCCOLOUR</a>' IN
    TYPEOF(Style)));
 
 

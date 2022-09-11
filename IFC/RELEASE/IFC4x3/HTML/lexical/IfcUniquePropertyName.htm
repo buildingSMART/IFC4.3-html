@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.1.6.3 IfcUniquePropertyName - IFC4.3.0.0 Documentation</title>
+<title>5.1.6.2 IfcUniquePropertyName - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -100,17 +102,17 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>5.1.6.3 IfcUniquePropertyName</h1>
-<h2><a id="5.1.6.3.1-Semantic-definition"></a>
-    5.1.6.3.1 Semantic definition
-<a href="IfcUniquePropertyName.htm#5.1.6.3.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<h1>5.1.6.2 IfcUniquePropertyName</h1>
+<h2><a id="5.1.6.2.1-Semantic-definition"></a>
+    5.1.6.2.1 Semantic definition
+<a href="IfcUniquePropertyName.htm#5.1.6.2.1-Semantic-definition"><i data-feather="link"></i></a></h2>
 <p>The function gets the set of <em><a href="IfcProperty.htm">IfcProperty</a></em>'s.
 It iterates through the <em>Name</em> attribute of the <em><a href="IfcProperty.htm">IfcProperty</a></em>'s
 and verifies that no <em>Name</em> appears twice.</p>
 <aside class="aside-history"><mark>HISTORY</mark>  New function in IFC4</aside>
-<h2><a id="5.1.6.3.2-Formal-representation"></a>
-    5.1.6.3.2 Formal representation
-<a href="IfcUniquePropertyName.htm#5.1.6.3.2-Formal-representation"><i data-feather="link"></i></a></h2>
+<h2><a id="5.1.6.2.2-Formal-representation"></a>
+    5.1.6.2.2 Formal representation
+<a href="IfcUniquePropertyName.htm#5.1.6.2.2-Formal-representation"><i data-feather="link"></i></a></h2>
 <pre><code class="language-express hljs">FUNCTION <a href="IfcUniquePropertyName.htm">IfcUniquePropertyName</a>
 (Properties : SET [1:?] OF <a href="IfcProperty.htm">IfcProperty</a>)
  :LOGICAL;
@@ -126,9 +128,9 @@ and verifies that no <em>Name</em> appears twice.</p>
  RETURN (SIZEOF(Names) = SIZEOF(Properties));
 
 END_FUNCTION;</code></pre>
-<h2><a id="5.1.6.3.3-References"></a>
-    5.1.6.3.3 References
-<a href="IfcUniquePropertyName.htm#5.1.6.3.3-References"><i data-feather="link"></i></a></h2>
+<h2><a id="5.1.6.2.3-References"></a>
+    5.1.6.2.3 References
+<a href="IfcUniquePropertyName.htm#5.1.6.2.3-References"><i data-feather="link"></i></a></h2>
 <ul class="references">
 <li><i data-feather="paperclip"></i><a href="IfcComplexProperty.htm">IfcComplexProperty</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcPropertySet.htm">IfcPropertySet</a></li>

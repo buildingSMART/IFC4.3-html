@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.7.3.12 IfcGridPlacement - IFC4.3.0.0 Documentation</title>
+<title>8.7.3.12 IfcGridPlacement - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -253,7 +255,9 @@
 <td data-label="Description">
 <p>The <em><a href="IfcObjectPlacement.htm">IfcObjectPlacement</a></em> shall be used to provide a placement and
 an object coordinate system for instances of <em><a href="IfcProduct.htm">IfcProduct</a></em>.</p>
-<aside class="aside-change"><mark>IFC2x3-CHANGE</mark>  New inverse attribute.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The cardinality has changed to 0..n to allow reuse of instances of <em><a href="IfcObjectPlacement.htm">IfcObjectPlacement</a></em> as placement object in one to many products. It takes also into account that it can act as a placement for <em><a href="IfcStructuralAnalysisModel.htm">IfcStructuralAnalysisModel</a></em>.</aside>
+<aside class="aside-change"><mark>IFC2x3-CHANGE</mark>  New inverse attribute.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The cardinality has changed to 0..n to allow reuse of instances of <em><a href="IfcObjectPlacement.htm">IfcObjectPlacement</a></em> as placement object in one to many products. It takes also into account that it can act as a placement for <em><a href="IfcStructuralAnalysisModel.htm">IfcStructuralAnalysisModel</a></em>.</aside><blockquote>
+<p>If an <em><a href="IfcObjectPlacement.htm">IfcObjectPlacement</a></em> is shared by many instances of <em><a href="IfcProduct.htm">IfcProduct</a></em> it does not apply a semantic meaning of being a shared placement that needs to be maintained. The same instance of <em><a href="IfcObjectPlacement.htm">IfcObjectPlacement</a></em> could simply be used to reduce exchange file size.</p>
+</blockquote>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -338,7 +342,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.7.3.12.6-Changelog"></a>
                         8.7.3.12.6 Changelog
                     <a href="IfcGridPlacement.htm#8.7.3.12.6-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.7.3.12.6.1-IFC4"></a>
+<h4><a id="8.7.3.12.6.1-IFC4"></a>
                         8.7.3.12.6.1 IFC4
                     <a href="IfcGridPlacement.htm#8.7.3.12.6.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -346,9 +350,13 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes PlacementRefDirection definition,
-                                Changed from <a href="IfcVirtualGridIntersection.htm">IfcVirtualGridIntersection</a> to <a href="IfcGridPlacementDirectionSelect.htm">IfcGridPlacementDirectionSelect</a>
-</small>
+                                attribute PlacementRefDirection type,
+                                Changed from
+"<a href="IfcVirtualGridIntersection.htm">IfcVirtualGridIntersection</a>"
+to
+"<a href="IfcGridPlacementDirectionSelect.htm">IfcGridPlacementDirectionSelect</a>"
+                                
+                            </small>
 </li>
 </ul>
 </div>

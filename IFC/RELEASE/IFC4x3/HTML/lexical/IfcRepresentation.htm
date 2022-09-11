@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.18.3.10 IfcRepresentation - IFC4.3.0.0 Documentation</title>
+<title>8.18.3.10 IfcRepresentation - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -164,7 +166,7 @@
 <a href="IfcRepresentation.htm#8.18.3.10.1-Semantic-definition"><i data-feather="link"></i></a></h2>
 <p>The <em><a href="IfcRepresentation.htm">IfcRepresentation</a></em> defines the general concept of representing product properties and in particular the product shape.</p>
 <aside class="aside-note"><mark>NOTE</mark>  Definition from ISO 10303-43:
-A representation is a collection of one or more representation items that are related in a specified representation context. The relationship of representation item to representation context is the basis for distinguishing which representation item entities are related.</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>representation</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2.0</aside><aside class="aside-change"><mark>IFC2x3-CHANGE</mark>  The inverse attributes <em>LayerAssignments</em> and_RepresentationMap_ have been added with upward compatibility.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  Entity <em><a href="IfcRepresentation.htm">IfcRepresentation</a></em> has been changed into an ABSTRACT supertype.</aside>
+A representation is a collection of one or more representation items that are related in a specified representation context. The relationship of representation item to representation context is the basis for distinguishing which representation item entities are related. A representation item can be related to a representation context directly, when it occurs as an element is a representation, or indirectly, when it is referenced through any number of intervening entities, each of type representation item.</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>representation</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2.0</aside><aside class="aside-change"><mark>IFC2x3-CHANGE</mark>  The inverse attributes <em>LayerAssignments</em> and_RepresentationMap_ have been added with upward compatibility.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  Entity <em><a href="IfcRepresentation.htm">IfcRepresentation</a></em> has been changed into an ABSTRACT supertype.</aside>
 <p>Representation Use Definition</p>
 <p>Each representation, either <em><a href="IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em>, or <em><a href="IfcTopologyRepresentation.htm">IfcTopologyRepresentation</a></em> shall have a well defined:</p>
 <ul>
@@ -342,7 +344,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.18.3.10.6-Changelog"></a>
                         8.18.3.10.6 Changelog
                     <a href="IfcRepresentation.htm#8.18.3.10.6-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.18.3.10.6.1-IFC4"></a>
+<h4><a id="8.18.3.10.6.1-IFC4"></a>
                         8.18.3.10.6.1 IFC4
                     <a href="IfcRepresentation.htm#8.18.3.10.6.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -351,7 +353,7 @@ END_ENTITY;</code></pre>
 <i data-feather="edit"></i>
                                 
                                 abstract,
-                                Changed from False to True
+                                Is now abstract
                                 
                             </small>
 </li>
@@ -359,8 +361,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                inverses OfProductRepresentation definition,
-                                Changed from SET OF [0:1] <a href="IfcProductRepresentation.htm">IfcProductRepresentation</a> FOR Representations to SET OF [0:?] <a href="IfcProductRepresentation.htm">IfcProductRepresentation</a> FOR Representations
+                                inverse attribute OfProductRepresentation type,
+                                Changed from
+"SET OF [0:1] <a href="IfcProductRepresentation.htm">IfcProductRepresentation</a> FOR Representations"
+to
+"SET OF [0:?] <a href="IfcProductRepresentation.htm">IfcProductRepresentation</a> FOR Representations"
                                 
                             </small>
 </li>

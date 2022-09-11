@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.12 IfcCsgSolid - IFC4.3.0.0 Documentation</title>
+<title>8.8.3.12 IfcCsgSolid - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -158,14 +160,17 @@
 <p>An <em><a href="IfcCsgSolid.htm">IfcCsgSolid</a></em> is the representation of a 3D shape using constructive solid geometry model. It is represented by a single 3D CSG primitive, or as a result of a Boolean operation. The operants of a Boolean operation can be Boolean operations themselves forming a CSG tree. The following volumes can be parts of the CSG tree:</p>
 <ul>
 <li>Boundary representation models, such as <em><a href="IfcFacetedBrep.htm">IfcFacetedBrep</a></em>, <em><a href="IfcFacetedBrepWithVoids.htm">IfcFacetedBrepWithVoids</a></em>,</li>
-<li>Closed tesselated representation modles, such as <em><a href="IfcPolygonalFaceSet.htm">IfcPolygonalFaceSet</a></em>, <em><a href="IfcTriangulatedFaceSet.htm">IfcTriangulatedFaceSet</a></em>,</li>
+<li>Closed tessellated representation modles, such as <em><a href="IfcPolygonalFaceSet.htm">IfcPolygonalFaceSet</a></em>, <em><a href="IfcTriangulatedFaceSet.htm">IfcTriangulatedFaceSet</a></em>,</li>
 <li>Swept area solids, such as <em><a href="IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></em>, <em><a href="IfcRevolvedAreaSolid.htm">IfcRevolvedAreaSolid</a></em>, and their subtypes for tapering,</li>
 <li>Advanced swept area solids, such as <em><a href="IfcSurfaceCurveSweptAreaSolid.htm">IfcSurfaceCurveSweptAreaSolid</a></em>), <em><a href="IfcFixedReferenceSweptAreaSolid.htm">IfcFixedReferenceSweptAreaSolid</a></em>, <em><a href="IfcSweptDiskSolid.htm">IfcSweptDiskSolid</a></em></li>
 <li>Half space solids, such as <em><a href="IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a></em> and its subtypes), and</li>
 <li>CSG primitives, the subtypes of <em><a href="IfcCsgPrimitive3D.htm">IfcCsgPrimitive3D</a></em>.</li>
 </ul>
 <aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO/CD 10303-42:1992
-A solid represented as a CSG model is defined by a collection of so-called primitive solids, combined using regularized Boolean operations. The allowed operations are intersection, union, and difference. As a special case a CSG solid can also consists of a single CSG primitive.</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>csg_solid</strong> is defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC1.5.1</aside>
+A solid represented as a CSG model is defined by a collection of so-called primitive solids, combined using regularized Boolean operations. The allowed operations are intersection, union, and difference. As a special case a CSG solid can also consists of a single CSG primitive.</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>csg_solid</strong> is defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC1.5.1</aside><blockquote>
+<p>A CSG solid requires two kinds of information for its complete definition: geometric and structural. &gt; * The geometric information is conveyed by solid models. These typically primitive volumes such as cylinders, wedges and extrusions, but can include general B-Rep models. Solid models can also be half space solids.
+* The structural information is in a tree (strictly an acyclic directed graph) of Boolean result and CSG solids, which represent a ‘recipe’ for building the solid. The terminal nodes are the geometric primitives and other solids. Every CSG solid has precisely one Boolean result associated with it which is the root of the tree that defines the solid. (There may be further Boolean results within the tree as operands). The significance of a CSG solid entity is that the solid defined by the associated tree is thus identified as a significant object itself, and in this way it is distinguished from other Boolean result entities representing intermediate results during the construction process.</p>
+</blockquote>
 <h2><a id="8.8.3.12.2-Entity-inheritance"></a>
     8.8.3.12.2 Entity inheritance
 <a href="IfcCsgSolid.htm#8.8.3.12.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
@@ -321,7 +326,7 @@ A solid represented as a CSG model is defined by a collection of so-called primi
             </td>
 <td data-label="Type"><a href="IfcCsgSelect.htm">IfcCsgSelect</a></td>
 <td data-label="Description">
-<p>Boolean expression of primitives and regularized operators describing the solid. The root of the tree of Boolean expressions is given explicitly as an <em><a href="IfcBooleanResult.htm">IfcBooleanResult</a></em> entitiy or as a primitive (subtypes of <em><a href="IfcCsgPrimitive3D.htm">IfcCsgPrimitive3D</a></em>).</p>
+<p>Boolean expression of primitives and regularized operators describing the solid. The root of the tree of Boolean expressions is given explicitly as an <em><a href="IfcBooleanResult.htm">IfcBooleanResult</a></em> entity or as a primitive (subtypes of <em><a href="IfcCsgPrimitive3D.htm">IfcCsgPrimitive3D</a></em>).</p>
 </td>
 </tr>
 </tbody>

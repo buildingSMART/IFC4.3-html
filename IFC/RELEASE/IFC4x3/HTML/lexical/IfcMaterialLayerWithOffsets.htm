@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.10.3.9 IfcMaterialLayerWithOffsets - IFC4.3.0.0 Documentation</title>
+<title>8.10.3.9 IfcMaterialLayerWithOffsets - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -157,7 +159,11 @@
 <a href="IfcMaterialLayerWithOffsets.htm#8.10.3.9.1-Semantic-definition"><i data-feather="link"></i></a></h2>
 <p><em><a href="IfcMaterialLayerWithOffsets.htm">IfcMaterialLayerWithOffsets</a></em> is a specialization of <em><a href="IfcMaterialLayer.htm">IfcMaterialLayer</a></em> enabling definition of offset values along edges (within the material layer set usage in parent layer set).</p>
 <p>It defines the assignment of two offset values for a material layer in its intended use within a material layer set. Offsets are applied to the edges of layered elements (that is, in directions perpendicular to the layer set direction). Offsets shall not be used in layer set direction, that is, for modelling gaps (or overlaps) between layers; gaps shall be modeled as layers with appropriate material assignment for the void.</p>
-<aside class="aside-example"><mark>EXAMPLE</mark>  At the top of a layered wall, with shape representation 'SweptSolid', offset of a given layer can be specified in the direction of the extrusion (positive Z axis), applied at the start or end (extruded from bottom to top), and with a positive (extending above extrusion) or negative (ending below extrusion).</aside><aside class="aside-note"><mark>NOTE</mark>  The 'Body' shape representation of an <em><a href="IfcWall.htm">IfcWall</a></em> may have multiple <em>Items</em> each being an <em><a href="IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></em> corresponding to the <em><a href="IfcMaterialLayer.htm">IfcMaterialLayer</a></em> and <em><a href="IfcMaterialLayerWithOffsets.htm">IfcMaterialLayerWithOffsets</a></em>.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC4.</aside>
+<aside class="aside-example"><mark>EXAMPLE</mark>  At the top of a layered wall, with shape representation 'SweptSolid', offset of a given layer can be specified in the direction of the extrusion (positive Z axis), applied at the start or end (extruded from bottom to top), and with a positive (extending above extrusion) or negative (ending below extrusion).</aside><aside class="aside-note"><mark>NOTE</mark>  The 'Body' shape representation of an <em><a href="IfcWall.htm">IfcWall</a></em> may have multiple <em>Items</em> each being an <em><a href="IfcExtrudedAreaSolid.htm">IfcExtrudedAreaSolid</a></em> corresponding to the <em><a href="IfcMaterialLayer.htm">IfcMaterialLayer</a></em> and <em><a href="IfcMaterialLayerWithOffsets.htm">IfcMaterialLayerWithOffsets</a></em>.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC4.</aside><blockquote>
+<p>Take a layered wall with the outer material layer for the external isolation extending above extrusion by 100mm, but starting at the same base height. In this case the following values are set: &gt; * <em>OffsetDirection</em> = .AXIS3.
+* <em>OffsetValues[1]</em> = 0.0
+* <em>OffsetValues[2]</em> = 100.0 (default unit assumed to be mm)</p>
+</blockquote>
 <p>Informal Propositions:</p>
 <ol>
 <li>
@@ -435,7 +441,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.10.3.9.6-Changelog"></a>
                         8.10.3.9.6 Changelog
                     <a href="IfcMaterialLayerWithOffsets.htm#8.10.3.9.6-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.10.3.9.6.1-IFC4"></a>
+<h4><a id="8.10.3.9.6.1-IFC4"></a>
                         8.10.3.9.6.1 IFC4
                     <a href="IfcMaterialLayerWithOffsets.htm#8.10.3.9.6.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">

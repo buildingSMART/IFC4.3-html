@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.74 IfcToroidalSurface - IFC4.3.0.0 Documentation</title>
+<title>8.9.3.74 IfcToroidalSurface - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -162,7 +164,14 @@
 <li><em>SELF\<a href="IfcElementarySurface.htm">IfcElementarySurface</a>.Position.Position[3]:</em> The axis of revolution of the toroidal surface</li>
 </ul>
 <aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO/CD 10303-42:1992
-An <em><a href="IfcToroidalSurface.htm">IfcToroidalSurface</a></em> is a type of elementary surface, which could be produced by revolving a circle about a line in its plane. The radius of the circle being revolved is referred to here as the <em>MinorRadius</em> and the <em>MajorRadius</em> is the distance from the centre of this circle to the axis of revolution. A toroidal surface is defined by the major and minor radii and the position and orientation of the surface.</aside>
+An <em><a href="IfcToroidalSurface.htm">IfcToroidalSurface</a></em> is a type of elementary surface, which could be produced by revolving a circle about a line in its plane. The radius of the circle being revolved is referred to here as the <em>MinorRadius</em> and the <em>MajorRadius</em> is the distance from the centre of this circle to the axis of revolution. A toroidal surface is defined by the major and minor radii and the position and orientation of the surface.</aside><blockquote>
+<p>C = Position.Location
+x = Position.P[1]
+y = Position.P[2]
+z = Position.P[3] (axis of toroidal_surface)
+<em>R</em> = MajorRadius
+<em>r</em> = MinorRadius</p>
+</blockquote>
 <p><em><strong>σ</strong>(u,v)</em> = <strong>C</strong> + <em>(R + r_cos _v</em>)((cos_u_)<strong>x</strong> + (sin <em>u</em>))<strong>y</strong>) + <em>r</em>(sin_v_))<strong>z</strong></p>
 <p>where the parametrisation range is <em>0 ≤ u, v ≤ 360</em> degrees. <em>u</em> and <em>v</em> are angular parameters and when numerical values are specified they shall use the current units for plane angle measure.</p>
 <p>In the placement coordinate system defined above, the surface is represented by the equation <em>S</em> = 0, where</p>
@@ -429,7 +438,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.9.3.74.7-Changelog"></a>
                         8.9.3.74.7 Changelog
                     <a href="IfcToroidalSurface.htm#8.9.3.74.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.9.3.74.7.1-IFC4"></a>
+<h4><a id="8.9.3.74.7.1-IFC4"></a>
                         8.9.3.74.7.1 IFC4
                     <a href="IfcToroidalSurface.htm#8.9.3.74.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">

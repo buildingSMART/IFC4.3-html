@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.13 IfcCartesianTransformationOperator - IFC4.3.0.0 Documentation</title>
+<title>8.9.3.13 IfcCartesianTransformationOperator - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -164,7 +166,20 @@
 <a href="IfcCartesianTransformationOperator.htm#8.9.3.13.1-Semantic-definition"><i data-feather="link"></i></a></h2>
 <p>An <em><a href="IfcCartesianTransformationOperator.htm">IfcCartesianTransformationOperator</a></em> defines an abstract supertype of different kinds of geometric transformations.</p>
 <aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO/CD 10303-42:1992
-A Cartesian transformation operator defines a geometric transformation composed of translation, rotation, mirroring and uniform scaling. The list of normalized vectors u defines the columns of an orthogonal matrix T. These vectors are computed, by the base axis function, from the direction attributes axis1, axis2 and, in Cartesian transformation operator 3d, axis3. If <strong>|T|= -1</strong>, the transformation includes mirroring. The local origin point <strong>A</strong>, the scale value <strong><em>S</em></strong> and the matrix <strong>T</strong> together define a transformation.</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>cartesian_transformation_operator</strong> defined in ISO10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x.</aside>
+A Cartesian transformation operator defines a geometric transformation composed of translation, rotation, mirroring and uniform scaling. The list of normalized vectors u defines the columns of an orthogonal matrix T. These vectors are computed, by the base axis function, from the direction attributes axis1, axis2 and, in Cartesian transformation operator 3d, axis3. If <strong>|T|= -1</strong>, the transformation includes mirroring. The local origin point <strong>A</strong>, the scale value <strong><em>S</em></strong> and the matrix <strong>T</strong> together define a transformation.</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>cartesian_transformation_operator</strong> defined in ISO10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x.</aside><blockquote>
+<p>The transformation for a point with position vector P is defined by</p>
+<blockquote>
+<p>P -&gt; A + _S_TP
+The transformation for a direction d is defined by</p>
+<p>d -&gt; Td
+The transformation for a vector with orientation d and magnitude k is defined by</p>
+<p>d -&gt; Td, and
+<em>k -&gt; Sk</em>
+For those entities whose attributes include an axis2 placement, the transformation is applied, after the derivation, to the derived attributes p defining the placement coordinate directions. For a transformed surface, the direction of the surface normal at any point is obtained by transforming the normal, at the corresponding point, to the original surface. For geometric entities with attributes (such as the radius of a circle) which have the dimensionality of length, the values will be multiplied by <em>S</em>.</p>
+</blockquote>
+<p>For curves on surface the p curve.reference to curve will be unaffected by any transformation. The Cartesian transformation operator shall only be applied to geometry defined in a consistent system of units with the same units on each axis. With all optional attributes omitted, the transformation defaults to the identity transformation. The Cartesian transformation operator shall only be instantiated as one of its subtypes.
+</p>
+</blockquote>
 <h2><a id="8.9.3.13.2-Entity-inheritance"></a>
     8.9.3.13.2 Entity inheritance
 <a href="IfcCartesianTransformationOperator.htm#8.9.3.13.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
@@ -433,7 +448,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.9.3.13.7-Changelog"></a>
                         8.9.3.13.7 Changelog
                     <a href="IfcCartesianTransformationOperator.htm#8.9.3.13.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.9.3.13.7.1-IFC4"></a>
+<h4><a id="8.9.3.13.7.1-IFC4"></a>
                         8.9.3.13.7.1 IFC4
                     <a href="IfcCartesianTransformationOperator.htm#8.9.3.13.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -443,7 +458,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 ScaleGreaterZero
                                 
                             </small>
@@ -453,7 +468,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR1
                                 
                             </small>
@@ -462,9 +477,13 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes Scale definition,
-                                Changed from real to <a href="IfcReal.htm">IfcReal</a>
-</small>
+                                attribute Scale type,
+                                Changed from
+"real"
+to
+"<a href="IfcReal.htm">IfcReal</a>"
+                                
+                            </small>
 </li>
 </ul>
 </div>

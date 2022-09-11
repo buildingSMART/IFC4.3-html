@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.18.6.3 IfcShapeRepresentationTypes - IFC4.3.0.0 Documentation</title>
+<title>8.18.6.3 IfcShapeRepresentationTypes - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -170,103 +172,103 @@
     CASE RepType OF 
     'Point' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3.IFCPOINT' IN TYPEOF(temp))));
+        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3_TC1.<a href="IfcPoint.htm">IFCPOINT</a>' IN TYPEOF(temp))));
       END;
 
     'PointCloud' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3.IFCCARTESIANPOINTLIST3D' IN TYPEOF(temp))));
+        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3_TC1.<a href="IfcCartesianPointList3D.htm">IFCCARTESIANPOINTLIST3D</a>' IN TYPEOF(temp))));
       END;
 
     'Curve' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3.IFCCURVE' IN TYPEOF(temp))));
+        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3_TC1.<a href="IfcCurve.htm">IFCCURVE</a>' IN TYPEOF(temp))));
       END;
 
     'Curve2D' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3.IFCCURVE' IN TYPEOF(temp)) 
+        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3_TC1.<a href="IfcCurve.htm">IFCCURVE</a>' IN TYPEOF(temp)) 
                  AND (temp\<a href="IfcCurve.htm">IfcCurve</a>.Dim = 2)));
       END;
 
     'Curve3D' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3.IFCCURVE' IN TYPEOF(temp)) 
+        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3_TC1.<a href="IfcCurve.htm">IFCCURVE</a>' IN TYPEOF(temp)) 
                  AND (temp\<a href="IfcCurve.htm">IfcCurve</a>.Dim = 3)));
       END;
 
     'Segment' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3.IFCSEGMENT' IN TYPEOF(temp))));
+        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3_TC1.<a href="IfcSegment.htm">IFCSEGMENT</a>' IN TYPEOF(temp))));
       END;
 
     'Surface' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3.IFCSURFACE' IN TYPEOF(temp))));
+        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3_TC1.<a href="IfcSurface.htm">IFCSURFACE</a>' IN TYPEOF(temp))));
       END;
 
     'Surface2D' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3.IFCSURFACE' IN TYPEOF(temp)) 
+        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3_TC1.<a href="IfcSurface.htm">IFCSURFACE</a>' IN TYPEOF(temp)) 
                  AND (temp\<a href="IfcSurface.htm">IfcSurface</a>.Dim = 2)));
       END;
 
     'Surface3D' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3.IFCSURFACE' IN TYPEOF(temp)) 
+        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3_TC1.<a href="IfcSurface.htm">IFCSURFACE</a>' IN TYPEOF(temp)) 
                  AND (temp\<a href="IfcSurface.htm">IfcSurface</a>.Dim = 3)));
       END;
 
     'SectionedSurface' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp &lt;* Items | 'IFC4X3.IFCSECTIONEDSURFACE' IN TYPEOF(temp)));
+        Count := SIZEOF(QUERY(temp &lt;* Items | 'IFC4X3_TC1.<a href="IfcSectionedSurface.htm">IFCSECTIONEDSURFACE</a>' IN TYPEOF(temp)));
       END;
 
     'FillArea' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3.IFCANNOTATIONFILLAREA' IN TYPEOF(temp))));
+        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3_TC1.<a href="IfcAnnotationFillArea.htm">IFCANNOTATIONFILLAREA</a>' IN TYPEOF(temp))));
       END;
 
     'Text' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3.IFCTEXTLITERAL' IN TYPEOF(temp))));
+        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3_TC1.<a href="IfcTextLiteral.htm">IFCTEXTLITERAL</a>' IN TYPEOF(temp))));
       END;
 
     'AdvancedSurface' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp &lt;* Items | 'IFC4X3.IFCBSPLINESURFACE' IN TYPEOF(temp)));
+        Count := SIZEOF(QUERY(temp &lt;* Items | 'IFC4X3_TC1.<a href="IfcBSplineSurface.htm">IFCBSPLINESURFACE</a>' IN TYPEOF(temp)));
       END;
 
     'Annotation2D' :
       BEGIN
         Count := SIZEOF(QUERY(temp &lt;* Items | (
                   SIZEOF(TYPEOF(temp) * [
-                   'IFC4X3.IFCPOINT',
-                   'IFC4X3.IFCCURVE',
-                   'IFC4X3.IFCGEOMETRICCURVESET',
-                   'IFC4X3.IFCANNOTATIONFILLAREA',
-                   'IFC4X3.IFCTEXTLITERAL']) = 1)
+                   'IFC4X3_TC1.<a href="IfcPoint.htm">IFCPOINT</a>',
+                   'IFC4X3_TC1.<a href="IfcCurve.htm">IFCCURVE</a>',
+                   'IFC4X3_TC1.<a href="IfcGeometricCurveSet.htm">IFCGEOMETRICCURVESET</a>',
+                   'IFC4X3_TC1.<a href="IfcAnnotationFillArea.htm">IFCANNOTATIONFILLAREA</a>',
+                   'IFC4X3_TC1.<a href="IfcTextLiteral.htm">IFCTEXTLITERAL</a>']) = 1)
                  ));
       END;
 
     'GeometricSet' : 
       BEGIN 
-        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3.IFCGEOMETRICSET' IN TYPEOF(temp))
-                 OR ('IFC4X3.IFCPOINT' IN TYPEOF(temp))
-                 OR ('IFC4X3.IFCCURVE' IN TYPEOF(temp))
-                 OR ('IFC4X3.IFCSURFACE' IN TYPEOF(temp))));
+        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3_TC1.<a href="IfcGeometricSet.htm">IFCGEOMETRICSET</a>' IN TYPEOF(temp))
+                 OR ('IFC4X3_TC1.<a href="IfcPoint.htm">IFCPOINT</a>' IN TYPEOF(temp))
+                 OR ('IFC4X3_TC1.<a href="IfcCurve.htm">IFCCURVE</a>' IN TYPEOF(temp))
+                 OR ('IFC4X3_TC1.<a href="IfcSurface.htm">IFCSURFACE</a>' IN TYPEOF(temp))));
       END;
 
     'GeometricCurveSet' :
       BEGIN
-        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3.IFCGEOMETRICCURVESET' IN TYPEOF(temp))
-                 OR ('IFC4X3.IFCGEOMETRICSET' IN TYPEOF(temp))
-                 OR ('IFC4X3.IFCPOINT' IN TYPEOF(temp))
-                 OR ('IFC4X3.IFCCURVE' IN TYPEOF(temp))));
+        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3_TC1.<a href="IfcGeometricCurveSet.htm">IFCGEOMETRICCURVESET</a>' IN TYPEOF(temp))
+                 OR ('IFC4X3_TC1.<a href="IfcGeometricSet.htm">IFCGEOMETRICSET</a>' IN TYPEOF(temp))
+                 OR ('IFC4X3_TC1.<a href="IfcPoint.htm">IFCPOINT</a>' IN TYPEOF(temp))
+                 OR ('IFC4X3_TC1.<a href="IfcCurve.htm">IFCCURVE</a>' IN TYPEOF(temp))));
          REPEAT i:=1 TO HIINDEX(Items);  
-           IF ('IFC4X3.IFCGEOMETRICSET' IN TYPEOF(Items[i]))
+           IF ('IFC4X3_TC1.<a href="IfcGeometricSet.htm">IFCGEOMETRICSET</a>' IN TYPEOF(Items[i]))
            THEN
-             IF (SIZEOF(QUERY(temp &lt;* Items[i]\<a href="IfcGeometricSet.htm">IfcGeometricSet</a>.Elements | 'IFC4X3.IFCSURFACE' IN TYPEOF(temp))) &gt; 0)
+             IF (SIZEOF(QUERY(temp &lt;* Items[i]\<a href="IfcGeometricSet.htm">IfcGeometricSet</a>.Elements | 'IFC4X3_TC1.<a href="IfcSurface.htm">IFCSURFACE</a>' IN TYPEOF(temp))) &gt; 0)
              THEN
                Count := Count - 1;
              END_IF;
@@ -276,41 +278,41 @@
 
     'Tessellation' :
       BEGIN 
-        Count := SIZEOF(QUERY(temp &lt;* Items | 'IFC4X3.IFCTESSELLATEDITEM' IN TYPEOF(temp)));
+        Count := SIZEOF(QUERY(temp &lt;* Items | 'IFC4X3_TC1.<a href="IfcTessellatedItem.htm">IFCTESSELLATEDITEM</a>' IN TYPEOF(temp)));
       END;
 
     'SurfaceOrSolidModel' :
       BEGIN
         Count := SIZEOF(QUERY(temp &lt;* Items | SIZEOF([
-                   'IFC4X3.IFCTESSELLATEDITEM',
-                   'IFC4X3.IFCSHELLBASEDSURFACEMODEL',
-                   'IFC4X3.IFCFACEBASEDSURFACEMODEL',
-                   'IFC4X3.IFCSOLIDMODEL'] * TYPEOF(temp)) &gt;= 1
+                   'IFC4X3_TC1.<a href="IfcTessellatedItem.htm">IFCTESSELLATEDITEM</a>',
+                   'IFC4X3_TC1.<a href="IfcShellBasedSurfaceModel.htm">IFCSHELLBASEDSURFACEMODEL</a>',
+                   'IFC4X3_TC1.<a href="IfcFaceBasedSurfaceModel.htm">IFCFACEBASEDSURFACEMODEL</a>',
+                   'IFC4X3_TC1.<a href="IfcSolidModel.htm">IFCSOLIDMODEL</a>'] * TYPEOF(temp)) &gt;= 1
                  ));      
       END;
 
     'SurfaceModel' :
       BEGIN
         Count := SIZEOF(QUERY(temp &lt;* Items | SIZEOF([
-                   'IFC4X3.IFCTESSELLATEDITEM',
-                   'IFC4X3.IFCSHELLBASEDSURFACEMODEL',
-                   'IFC4X3.IFCFACEBASEDSURFACEMODEL'] * TYPEOF(temp)) &gt;= 1
+                   'IFC4X3_TC1.<a href="IfcTessellatedItem.htm">IFCTESSELLATEDITEM</a>',
+                   'IFC4X3_TC1.<a href="IfcShellBasedSurfaceModel.htm">IFCSHELLBASEDSURFACEMODEL</a>',
+                   'IFC4X3_TC1.<a href="IfcFaceBasedSurfaceModel.htm">IFCFACEBASEDSURFACEMODEL</a>'] * TYPEOF(temp)) &gt;= 1
                  ));      
       END;
 
     'SolidModel' :
       BEGIN
-        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3.IFCSOLIDMODEL' IN TYPEOF(temp))));            
+        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3_TC1.<a href="IfcSolidModel.htm">IFCSOLIDMODEL</a>' IN TYPEOF(temp))));            
       END;
 
     'SweptSolid' :
       BEGIN
         Count := SIZEOF(QUERY(temp &lt;* Items | (SIZEOF([
-                   'IFC4X3.IFCEXTRUDEDAREASOLID',
-                   'IFC4X3.IFCREVOLVEDAREASOLID'] * TYPEOF(temp)) &gt;= 1
+                   'IFC4X3_TC1.<a href="IfcExtrudedAreaSolid.htm">IFCEXTRUDEDAREASOLID</a>',
+                   'IFC4X3_TC1.<a href="IfcRevolvedAreaSolid.htm">IFCREVOLVEDAREASOLID</a>'] * TYPEOF(temp)) &gt;= 1
                    ) AND (SIZEOF([
-                   'IFC4X3.IFCEXTRUDEDAREASOLIDTAPERED',
-                   'IFC4X3.IFCREVOLVEDAREASOLIDTAPERED'] * TYPEOF(temp)) = 0
+                   'IFC4X3_TC1.<a href="IfcExtrudedAreaSolidTapered.htm">IFCEXTRUDEDAREASOLIDTAPERED</a>',
+                   'IFC4X3_TC1.<a href="IfcRevolvedAreaSolidTapered.htm">IFCREVOLVEDAREASOLIDTAPERED</a>'] * TYPEOF(temp)) = 0
                    )
                  ));                             
       END;
@@ -318,42 +320,42 @@
     'AdvancedSweptSolid' :
       BEGIN
         Count := SIZEOF(QUERY(temp &lt;* Items | SIZEOF([
-                   'IFC4X3.IFCSWEPTAREASOLID',
-                   'IFC4X3.IFCSWEPTDISKSOLID',
-                   'IFC4X3.IFCSECTIONEDSOLIDHORIZONTAL'] *  TYPEOF(temp)) &gt;= 1
+                   'IFC4X3_TC1.<a href="IfcSweptAreaSolid.htm">IFCSWEPTAREASOLID</a>',
+                   'IFC4X3_TC1.<a href="IfcSweptDiskSolid.htm">IFCSWEPTDISKSOLID</a>',
+                   'IFC4X3_TC1.<a href="IfcSectionedSolidHorizontal.htm">IFCSECTIONEDSOLIDHORIZONTAL</a>'] *  TYPEOF(temp)) &gt;= 1
                  ));      
       END;
 
     'CSG' :
       BEGIN
         Count := SIZEOF(QUERY(temp &lt;* Items | SIZEOF([
-                   'IFC4X3.IFCBOOLEANRESULT',
-                   'IFC4X3.IFCCSGPRIMITIVE3D',
-                   'IFC4X3.IFCCSGSOLID'] *  TYPEOF(temp)) &gt;= 1
+                   'IFC4X3_TC1.<a href="IfcBooleanResult.htm">IFCBOOLEANRESULT</a>',
+                   'IFC4X3_TC1.<a href="IfcCsgPrimitive3D.htm">IFCCSGPRIMITIVE3D</a>',
+                   'IFC4X3_TC1.<a href="IfcCsgSolid.htm">IFCCSGSOLID</a>'] *  TYPEOF(temp)) &gt;= 1
                  ));            
       END;
 
     'Clipping' :
       BEGIN
         Count := SIZEOF(QUERY(temp &lt;* Items | SIZEOF([
-                   'IFC4X3.IFCCSGSOLID',
-                   'IFC4X3.IFCBOOLEANCLIPPINGRESULT'] * TYPEOF(temp)) &gt;= 1
+                   'IFC4X3_TC1.<a href="IfcCsgSolid.htm">IFCCSGSOLID</a>',
+                   'IFC4X3_TC1.<a href="IfcBooleanClippingResult.htm">IFCBOOLEANCLIPPINGRESULT</a>'] * TYPEOF(temp)) &gt;= 1
                  )); 
       END;
 
     'Brep' :
       BEGIN
-        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3.IFCFACETEDBREP' IN TYPEOF(temp))));      
+        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3_TC1.<a href="IfcFacetedBrep.htm">IFCFACETEDBREP</a>' IN TYPEOF(temp))));      
       END;
 
     'AdvancedBrep' :
       BEGIN
-        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3.IFCMANIFOLDSOLIDBREP' IN TYPEOF(temp))));      
+        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3_TC1.<a href="IfcManifoldSolidBrep.htm">IFCMANIFOLDSOLIDBREP</a>' IN TYPEOF(temp))));      
       END;
 
     'BoundingBox' :
       BEGIN
-        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3.IFCBOUNDINGBOX' IN TYPEOF(temp))));
+        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3_TC1.<a href="IfcBoundingBox.htm">IFCBOUNDINGBOX</a>' IN TYPEOF(temp))));
         IF (SIZEOF(Items) &gt; 1)
         THEN
           Count := 0;
@@ -362,17 +364,17 @@
 
     'SectionedSpine' :
       BEGIN
-        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3.IFCSECTIONEDSPINE' IN TYPEOF(temp))));      
+        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3_TC1.<a href="IfcSectionedSpine.htm">IFCSECTIONEDSPINE</a>' IN TYPEOF(temp))));      
       END;
 
     'LightSource' :
       BEGIN
-        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3.IFCLIGHTSOURCE' IN TYPEOF(temp))));      
+        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3_TC1.<a href="IfcLightSource.htm">IFCLIGHTSOURCE</a>' IN TYPEOF(temp))));      
       END;
 
     'MappedRepresentation' :
       BEGIN
-        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3.IFCMAPPEDITEM' IN TYPEOF(temp))));  
+        Count := SIZEOF(QUERY(temp &lt;* Items | ('IFC4X3_TC1.<a href="IfcMappedItem.htm">IFCMAPPEDITEM</a>' IN TYPEOF(temp))));  
       END;
 
      OTHERWISE : RETURN(?);
@@ -392,6 +394,39 @@ END_FUNCTION;</code></pre>
 <p>
 </p><center><small>Jump to section</small></center>
 <ol class="referenced-list small"></ol>
+</div>
+<div class="changelog">
+<h3><a id="8.18.6.3.4-Changelog"></a>
+                        8.18.6.3.4 Changelog
+                    <a href="IfcShapeRepresentationTypes.htm#8.18.6.3.4-Changelog"><i data-feather="link"></i></a></h3>
+<h4><a id="8.18.6.3.4.1-IFC4"></a>
+                        8.18.6.3.4.1 IFC4
+                    <a href="IfcShapeRepresentationTypes.htm#8.18.6.3.4.1-IFC4"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                ,
+                                
+                                
+                            </small>
+</li>
+</ul>
+<h4><a id="8.18.6.3.4.2-IFC4.3-TC1"></a>
+                        8.18.6.3.4.2 IFC4.3_TC1
+                    <a href="IfcShapeRepresentationTypes.htm#8.18.6.3.4.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                ,
+                                
+                                
+                            </small>
+</li>
+</ul>
 </div>
 </div>
 </div>

@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.3.3.2 IfcMetric - IFC4.3.0.0 Documentation</title>
+<title>8.3.3.2 IfcMetric - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -208,7 +210,7 @@
 <!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementQuantity.htm'>IfcElementQuantity</a> -->
 <g class="node" id="node2">
 <title><a href="IfcElementQuantity.htm">IfcElementQuantity</a></title>
-<g id="a_node2"><a xlink:href="http://localhost/IFC/RELEASE/IFC4x3/HTML/lexical/IfcElementQuantity.htm" xlink:title="IfcElementQuantity">
+<g id="a_node2"><a xlink:href="IfcElementQuantity.htm" xlink:title="IfcElementQuantity">
 <polygon fill="#1976d2" points="144,-311.5 0,-311.5 0,-275.5 144,-275.5 144,-311.5" stroke="#000000" stroke-width=".2"></polygon>
 <text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="72" y="-289.8"><a href="IfcElementQuantity.htm">IfcElementQuantity</a></text>
 </a>
@@ -476,7 +478,7 @@ When a value is provided for attribute UserDefinedGrade in parallel the attribut
 <td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
 <p>Reference source for data values.</p>
-<p>If <em>DataValue</em> refers to an <em><a href="IfcTable.htm">IfcTable</a></em>, this attribute identifies the relevent column identified by <em><a href="IfcTableColumn.htm">IfcTableColumn</a></em>.<em>Identifier</em>.</p>
+<p>If <em>DataValue</em> refers to an <em><a href="IfcTable.htm">IfcTable</a></em>, this attribute identifies the relevant column identified by <em><a href="IfcTableColumn.htm">IfcTableColumn</a></em>.<em>Identifier</em>.</p>
 </td>
 </tr>
 <tr>
@@ -534,7 +536,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.3.3.2.6-Changelog"></a>
                         8.3.3.2.6 Changelog
                     <a href="IfcMetric.htm#8.3.3.2.6-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.3.3.2.6.1-IFC4"></a>
+<h4><a id="8.3.3.2.6.1-IFC4"></a>
                         8.3.3.2.6.1 IFC4
                     <a href="IfcMetric.htm#8.3.3.2.6.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -544,7 +546,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 ReferencePath
                                 
                             </small>
@@ -553,8 +555,8 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes DataValue is_optional,
-                                Changed from False to True
+                                attribute DataValue optional,
+                                Is now optional
                                 
                             </small>
 </li>

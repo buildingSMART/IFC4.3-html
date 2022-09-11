@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.20.3.4 IfcEdge - IFC4.3.0.0 Documentation</title>
+<title>8.20.3.4 IfcEdge - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -158,7 +160,14 @@
 <p>An <em><a href="IfcEdge.htm">IfcEdge</a></em> defines two vertices being connected topologically. The geometric representation of the connection between the two vertices defaults to a straight line if no curve geometry is assigned using the subtype <em><a href="IfcEdgeCurve.htm">IfcEdgeCurve</a></em>. The <em><a href="IfcEdge.htm">IfcEdge</a></em> can therefore be used to exchange straight edges without an associated geometry provided by <em><a href="IfcLine.htm">IfcLine</a></em> or <em><a href="IfcPolyline.htm">IfcPolyline</a></em> thought <em><a href="IfcEdgeCurve.htm">IfcEdgeCurve</a>.EdgeGeometry</em>.</p>
 <figure><a id="Figure-8.20.3.4.A-Edge-representation"></a><img alt="edge representation" src="../figures/ifcedge.png"/><figcaption>Figure 8.20.3.4.A — Edge representation<a href="IfcEdge.htm#Figure-8.20.3.4.A-Edge-representation"><i data-feather="link"></i></a></figcaption></figure>
 <aside class="aside-example"><mark>EXAMPLE</mark> Figure 8.20.3.4.A illustrates an example where the bounds of the <em><a href="IfcEdge.htm">IfcEdge</a></em> are given by the <em>EdgeStart</em> and <em>EdgeEnd</em>; this also determines the direction of the edge. The location within a coordinate space is determined by the <em><a href="IfcVertexPoint.htm">IfcVertexPoint</a></em> type for <em>EdgeStart</em> and <em>EdgeEnd</em>. Since no edge geometry is assigned, it defaults to a straight line agreeing to the direction sense.</aside><aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO/CD 10303-42:1992
-An edge is the topological construct corresponding to the connection of two vertices. More abstractly, it may stand for a logical relationship between two vertices. The domain of an edge, if present, is a finite, non-self-intersecting open curve in <em>R^M^</em>, that is, a connected 1-dimensional manifold. The bounds of an edge are two vertices, which need not be distinct. The edge is oriented by choosing its traversal direction to run from the first to the second vertex. If the two vertices are the same, the edge is a self loop. The domain of the edge does not include its bounds, and 0 ≤ Ξ ≤ ∞. Associated with an edge may be a geometric curve to locate the edge in a coordinate space; this is represented by the edge curve subtype. The curve shall be finite and non-self-intersecting within the domain of the edge. An edge is a graph, so its multiplicity M and graph genus <em>G^e^</em> may be determined by the graph traversal algorithm. Since <em>M</em> = <em>E</em> = 1, the Euler equation (1) reduces in the case to:</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>edge</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2.0</aside>
+An edge is the topological construct corresponding to the connection of two vertices. More abstractly, it may stand for a logical relationship between two vertices. The domain of an edge, if present, is a finite, non-self-intersecting open curve in <em>R^M^</em>, that is, a connected 1-dimensional manifold. The bounds of an edge are two vertices, which need not be distinct. The edge is oriented by choosing its traversal direction to run from the first to the second vertex. If the two vertices are the same, the edge is a self loop. The domain of the edge does not include its bounds, and 0 ≤ Ξ ≤ ∞. Associated with an edge may be a geometric curve to locate the edge in a coordinate space; this is represented by the edge curve subtype. The curve shall be finite and non-self-intersecting within the domain of the edge. An edge is a graph, so its multiplicity M and graph genus <em>G^e^</em> may be determined by the graph traversal algorithm. Since <em>M</em> = <em>E</em> = 1, the Euler equation (1) reduces in the case to:</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>edge</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2.0</aside><blockquote>
+<blockquote>
+<figure><a id="Figure-8.20.3.4.B"></a><img alt="Image" src="../figures/ifcedge-math1.gif"/>
+ where <em>V</em> = 1 or 2, and <em>G^e^</em> = 1 or 0. Specifically, the topological edge defining data shall satisfy: &gt; * an edge has two vertices   <img alt="Image" src="../figures/ifcedge-math2.gif"/>
+* the vertices need not be distinct   <img alt="Image" src="../figures/ifcedge-math3.gif"/>
+* Equation shall hold   <img alt="Image" src="../figures/ifcedge-math4.gif"/><figcaption>Figure 8.20.3.4.B<a href="IfcEdge.htm#Figure-8.20.3.4.B"><i data-feather="link"></i></a></figcaption><figcaption>Figure 8.20.3.4.C</figcaption><figcaption>Figure 8.20.3.4.D</figcaption><figcaption>Figure 8.20.3.4.E</figcaption></figure>
+</blockquote>
+</blockquote>
 <p>Informal Propositions:</p>
 <ol>
 <li>The edge has dimensionality 1.</li>
@@ -208,7 +217,7 @@ An edge is the topological construct corresponding to the connection of two vert
     8.20.3.4.3 Attributes
 <a href="IfcEdge.htm#8.20.3.4.3-Attributes"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a id="Table-8.20.3.4.B"></a><table class="striped grouped attributes">
+<figure><a id="Table-8.20.3.4.F"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -295,7 +304,7 @@ An edge is the topological construct corresponding to the connection of two vert
 </td>
 </tr>
 </tbody>
-</table><figcaption>Table 8.20.3.4.B<a href="IfcEdge.htm#Table-8.20.3.4.B"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>Table 8.20.3.4.F<a href="IfcEdge.htm#Table-8.20.3.4.F"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a id="8.20.3.4.4-Formal-representation"></a>
     8.20.3.4.4 Formal representation
 <a href="IfcEdge.htm#8.20.3.4.4-Formal-representation"><i data-feather="link"></i></a></h2>

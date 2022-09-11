@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.6.8 IfcCurveDim - IFC4.3.0.0 Documentation</title>
+<title>8.9.6.8 IfcCurveDim - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -164,52 +166,52 @@ This function checks the dimensionality of various subtypes of curve. It returns
 (Curve : <a href="IfcCurve.htm">IfcCurve</a>)
        : <a href="IfcDimensionCount.htm">IfcDimensionCount</a>;
 
-  IF ('IFC4X3.IFCLINE' IN TYPEOF(Curve))
+  IF ('IFC4X3_TC1.<a href="IfcLine.htm">IFCLINE</a>' IN TYPEOF(Curve))
     THEN RETURN(Curve\<a href="IfcLine.htm">IfcLine</a>.Pnt.Dim);
   END_IF;
-  IF ('IFC4X3.IFCCONIC' IN TYPEOF(Curve))
+  IF ('IFC4X3_TC1.<a href="IfcConic.htm">IFCCONIC</a>' IN TYPEOF(Curve))
     THEN RETURN(Curve\<a href="IfcConic.htm">IfcConic</a>.Position.Dim);
   END_IF;
-  IF ('IFC4X3.IFCPOLYLINE' IN TYPEOF(Curve))
+  IF ('IFC4X3_TC1.<a href="IfcPolyline.htm">IFCPOLYLINE</a>' IN TYPEOF(Curve))
     THEN RETURN(Curve\<a href="IfcPolyline.htm">IfcPolyline</a>.Points[1].Dim);
   END_IF;
-  IF ('IFC4X3.IFCTRIMMEDCURVE' IN TYPEOF(Curve))
+  IF ('IFC4X3_TC1.<a href="IfcTrimmedCurve.htm">IFCTRIMMEDCURVE</a>' IN TYPEOF(Curve))
     THEN RETURN(<a href="IfcCurveDim.htm">IfcCurveDim</a>(Curve\<a href="IfcTrimmedCurve.htm">IfcTrimmedCurve</a>.BasisCurve));
   END_IF;
-  IF ('IFC4X3.IFCGRADIENTCURVE' IN TYPEOF(Curve))
+  IF ('IFC4X3_TC1.<a href="IfcGradientCurve.htm">IFCGRADIENTCURVE</a>' IN TYPEOF(Curve))
     THEN RETURN(3);
   END_IF;
-  IF ('IFC4X3.IFCSEGMENTEDREFERENCECURVE' IN TYPEOF(Curve))
+  IF ('IFC4X3_TC1.<a href="IfcSegmentedReferenceCurve.htm">IFCSEGMENTEDREFERENCECURVE</a>' IN TYPEOF(Curve))
     THEN RETURN(3);
   END_IF;
-  IF ('IFC4X3.IFCCOMPOSITECURVE' IN TYPEOF(Curve))
+  IF ('IFC4X3_TC1.<a href="IfcCompositeCurve.htm">IFCCOMPOSITECURVE</a>' IN TYPEOF(Curve))
     THEN RETURN(Curve\<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>.Segments[1].Dim);
   END_IF;
-  IF ('IFC4X3.IFCBSPLINECURVE' IN TYPEOF(Curve))
+  IF ('IFC4X3_TC1.<a href="IfcBSplineCurve.htm">IFCBSPLINECURVE</a>' IN TYPEOF(Curve))
     THEN RETURN(Curve\<a href="IfcBSplineCurve.htm">IfcBSplineCurve</a>.ControlPointsList[1].Dim);
   END_IF;
-  IF ('IFC4X3.IFCOFFSETCURVE2D' IN TYPEOF(Curve))
+  IF ('IFC4X3_TC1.<a href="IfcOffsetCurve2D.htm">IFCOFFSETCURVE2D</a>' IN TYPEOF(Curve))
     THEN RETURN(2); 
   END_IF;
-  IF ('IFC4X3.IFCOFFSETCURVE3D' IN TYPEOF(Curve))
+  IF ('IFC4X3_TC1.<a href="IfcOffsetCurve3D.htm">IFCOFFSETCURVE3D</a>' IN TYPEOF(Curve))
     THEN RETURN(3);
   END_IF;
-  IF ('IFC4X3.IFCOFFSETCURVEBYDISTANCES' IN TYPEOF(Curve))
+  IF ('IFC4X3_TC1.<a href="IfcOffsetCurveByDistances.htm">IFCOFFSETCURVEBYDISTANCES</a>' IN TYPEOF(Curve))
     THEN RETURN(3);
   END_IF;
-  IF ('IFC4X3.IFCCURVESEGMENT2D' IN TYPEOF(Curve))
+  IF ('IFC4X3_TC1.IFCCURVESEGMENT2D' IN TYPEOF(Curve))
     THEN RETURN(2);
   END_IF;
-  IF ('IFC4X3.IFCPOLYNOMIALCURVE' IN TYPEOF(Curve)) THEN
+  IF ('IFC4X3_TC1.<a href="IfcPolynomialCurve.htm">IFCPOLYNOMIALCURVE</a>' IN TYPEOF(Curve)) THEN
     IF ( NOT EXISTS(Curve\<a href="IfcPolynomialCurve.htm">IfcPolynomialCurve</a>.CoefficientsZ) AND (Curve\<a href="IfcPolynomialCurve.htm">IfcPolynomialCurve</a>.Position.Dim = 2 ))
         THEN RETURN(2);
     END_IF;
     RETURN(3);
   END_IF;
-  IF ('IFC4X3.IFCPCURVE' IN TYPEOF(Curve))
+  IF ('IFC4X3_TC1.<a href="IfcPcurve.htm">IFCPCURVE</a>' IN TYPEOF(Curve))
     THEN RETURN(3);
   END_IF;
-  IF ('IFC4X3.IFCINDEXEDPOLYCURVE' IN TYPEOF(Curve))
+  IF ('IFC4X3_TC1.<a href="IfcIndexedPolyCurve.htm">IFCINDEXEDPOLYCURVE</a>' IN TYPEOF(Curve))
     THEN RETURN(Curve\<a href="IfcIndexedPolyCurve.htm">IfcIndexedPolyCurve</a>.Points.Dim);
   END_IF;
 RETURN (?);
@@ -227,6 +229,39 @@ END_FUNCTION;</code></pre>
 <p>
 </p><center><small>Jump to section</small></center>
 <ol class="referenced-list small"></ol>
+</div>
+<div class="changelog">
+<h3><a id="8.9.6.8.4-Changelog"></a>
+                        8.9.6.8.4 Changelog
+                    <a href="IfcCurveDim.htm#8.9.6.8.4-Changelog"><i data-feather="link"></i></a></h3>
+<h4><a id="8.9.6.8.4.1-IFC4"></a>
+                        8.9.6.8.4.1 IFC4
+                    <a href="IfcCurveDim.htm#8.9.6.8.4.1-IFC4"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                ,
+                                
+                                
+                            </small>
+</li>
+</ul>
+<h4><a id="8.9.6.8.4.2-IFC4.3-TC1"></a>
+                        8.9.6.8.4.2 IFC4.3_TC1
+                    <a href="IfcCurveDim.htm#8.9.6.8.4.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                ,
+                                
+                                
+                            </small>
+</li>
+</ul>
 </div>
 </div>
 </div>

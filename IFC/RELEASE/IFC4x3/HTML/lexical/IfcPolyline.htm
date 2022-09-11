@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.52 IfcPolyline - IFC4.3.0.0 Documentation</title>
+<title>8.9.3.52 IfcPolyline - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -159,7 +161,12 @@
 <aside class="aside-example"><mark>EXAMPLE</mark>  Figure 8.9.3.52.A illustrates a bounded <em><a href="IfcPolyline.htm">IfcPolyline</a></em> and shows the parametric length of each segment and of the total polyline.</aside>
 <figure><a id="Figure-8.9.3.52.A-Bounded-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm'&gt;IfcPolyline&lt;/a&gt;-with-parametric-length"></a><img alt="polyline examples" src="../figures/ifcpolyline-fig1.png" title="Figure 8.9.3.52.A — Bounded _IfcPolyline_ with parametric length"/><figcaption>Figure 8.9.3.52.A — Bounded _IfcPolyline_ with parametric length<a href="IfcPolyline.htm#Figure-8.9.3.52.A-Bounded-&lt;a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcPolyline.htm'&gt;IfcPolyline&lt;/a&gt;-with-parametric-length"><i data-feather="link"></i></a></figcaption></figure>
 <aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO/CD 10303-42:1992
-A polyline is a bounded curve of <em>n</em> - 1 linear segments, defined by a list of <em>n</em> points, P~1~, P~2~ ... P~n~. The _i_th segment of the curve is parameterized as follows:</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>polyline</strong> in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC1.0</aside>
+A polyline is a bounded curve of <em>n</em> - 1 linear segments, defined by a list of <em>n</em> points, P~1~, P~2~ ... P~n~. The _i_th segment of the curve is parameterized as follows:</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>polyline</strong> in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC1.0</aside><blockquote>
+<blockquote>
+<figure><a id="Figure-8.9.3.52.B"></a><img alt="Image" src="../figures/ifcpolyline-math1.gif"/> <em>for</em> 1 ≤ <em>i</em> ≤ <em>n</em> - 1
+ where <em>i</em> - 1 ≤ <em>u</em> ≤ <em>i</em> and with parametric range of 0 &lt;≤ <em>u</em> ≤ <em>n</em> - 1.<figcaption>Figure 8.9.3.52.B<a href="IfcPolyline.htm#Figure-8.9.3.52.B"><i data-feather="link"></i></a></figcaption></figure>
+</blockquote>
+</blockquote>
 <h2><a id="8.9.3.52.2-Entity-inheritance"></a>
     8.9.3.52.2 Entity inheritance
 <a href="IfcPolyline.htm#8.9.3.52.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
@@ -237,7 +244,7 @@ A polyline is a bounded curve of <em>n</em> - 1 linear segments, defined by a li
     8.9.3.52.3 Attributes
 <a href="IfcPolyline.htm#8.9.3.52.3-Attributes"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a id="Table-8.9.3.52.D"></a><table class="striped grouped attributes">
+<figure><a id="Table-8.9.3.52.E"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -332,11 +339,11 @@ A polyline is a bounded curve of <em>n</em> - 1 linear segments, defined by a li
 </td>
 </tr>
 </tbody>
-</table><figcaption>Table 8.9.3.52.D<a href="IfcPolyline.htm#Table-8.9.3.52.D"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>Table 8.9.3.52.E<a href="IfcPolyline.htm#Table-8.9.3.52.E"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a id="8.9.3.52.4-Formal-propositions"></a>
     8.9.3.52.4 Formal propositions
 <a href="IfcPolyline.htm#8.9.3.52.4-Formal-propositions"><i data-feather="link"></i></a></h2>
-<figure><a id="Table-8.9.3.52.E"></a><table>
+<figure><a id="Table-8.9.3.52.F"></a><table>
 <thead>
 <tr>
 <th>Name</th>
@@ -356,17 +363,17 @@ A polyline is a bounded curve of <em>n</em> - 1 linear segments, defined by a li
 </td>
 </tr>
 </tbody>
-</table><figcaption>Table 8.9.3.52.E<a href="IfcPolyline.htm#Table-8.9.3.52.E"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>Table 8.9.3.52.F<a href="IfcPolyline.htm#Table-8.9.3.52.F"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a id="8.9.3.52.5-Examples"></a>
     8.9.3.52.5 Examples
 <a href="IfcPolyline.htm#8.9.3.52.5-Examples"><i data-feather="link"></i></a></h2>
 <ul class="examples">
 <li>
-<figure><a id="Figure-8.9.3.52.B"></a><a href="../annex_e/UT_SpatialStructure_4.html"><img src="../examples/UT_SpatialStructure_4/thumb.png"/></a><figcaption>Figure 8.9.3.52.B<a href="IfcPolyline.htm#Figure-8.9.3.52.B"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a id="Figure-8.9.3.52.C"></a><a href="../annex_e/UT_SpatialStructure_4.html"><img src="../examples/UT_SpatialStructure_4/thumb.png"/></a><figcaption>Figure 8.9.3.52.C<a href="IfcPolyline.htm#Figure-8.9.3.52.C"><i data-feather="link"></i></a></figcaption></figure>
 <p><a href="../annex_e/UT_SpatialStructure_4.html">UT_SpatialStructure_4</a></p>
 </li>
 <li>
-<figure><a id="Figure-8.9.3.52.C"></a><a href="../annex_e/Georeferencing_Tiny_Survey_1.html"><img src="../examples/Georeferencing_Tiny_Survey_1/thumb.png"/></a><figcaption>Figure 8.9.3.52.C<a href="IfcPolyline.htm#Figure-8.9.3.52.C"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a id="Figure-8.9.3.52.D"></a><a href="../annex_e/Georeferencing_Tiny_Survey_1.html"><img src="../examples/Georeferencing_Tiny_Survey_1/thumb.png"/></a><figcaption>Figure 8.9.3.52.D<a href="IfcPolyline.htm#Figure-8.9.3.52.D"><i data-feather="link"></i></a></figcaption></figure>
 <p><a href="../annex_e/Georeferencing_Tiny_Survey_1.html">Georeferencing_Tiny_Survey_1</a></p>
 </li>
 </ul>
@@ -398,7 +405,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.9.3.52.8-Changelog"></a>
                         8.9.3.52.8 Changelog
                     <a href="IfcPolyline.htm#8.9.3.52.8-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.9.3.52.8.1-IFC4"></a>
+<h4><a id="8.9.3.52.8.1-IFC4"></a>
                         8.9.3.52.8.1 IFC4
                     <a href="IfcPolyline.htm#8.9.3.52.8.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -408,7 +415,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 SameDim
                                 
                             </small>
@@ -418,7 +425,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR41
                                 
                             </small>

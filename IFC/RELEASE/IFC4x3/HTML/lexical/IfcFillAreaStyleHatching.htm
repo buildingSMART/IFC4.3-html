@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.3.15 IfcFillAreaStyleHatching - IFC4.3.0.0 Documentation</title>
+<title>8.12.3.15 IfcFillAreaStyleHatching - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -159,7 +161,9 @@
 <aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO 10303-46:
 The fill area style hatching defines a styled pattern of curves for hatching an annotation fill area or a surface.</aside><aside class="aside-note"><mark>NOTE</mark>  If the hatch pattern involves two (potentially crossing) rows of hatch lines, then two instances of <em><a href="IfcFillAreaStyleHatching.htm">IfcFillAreaStyleHatching</a></em> should be assigned to the <em><a href="IfcFillAreaStyle.htm">IfcFillAreaStyle</a></em>. Both share the same (virtual) point of origin of the hatching that is used by the reference hatch line (or the <em>PointOfReferenceHatchLine</em> if there is an offset).</aside>
 <p>For better control of the hatching appearance, when using hatch lines with other fonts then continuous, the <em>PatternStart</em> allows to offset the start of the curve font pattern along the reference hatch line (if not given, the <em>PatternStart</em> is at zero distance from the virtual point of origin). If the reference hatch line does not go through the origin (of the virtual hatching coordinate system), it can be offset by using the <em>PatternStart</em> .</p>
-<aside class="aside-note"><mark>NOTE</mark>  The coordinates of the <em>PatternStart</em> are given relative to the origin of the object coordinate of <em><a href="IfcAnnotationFillArea.htm">IfcAnnotationFillArea</a></em>, or if present, the <em>FillAreaTarget</em> attribute of <em><a href="IfcAnnotationFillArea.htm">IfcAnnotationFillArea</a></em>. The measure values are given in global drawing length units, representing a model hatching, and can be translated into drawing units by the <em>TargetScale</em> for a scale depended <em>IfcGeometricRepresentationSubcontext</em>, if provided.</aside>
+<aside class="aside-note"><mark>NOTE</mark>  The coordinates of the <em>PatternStart</em> are given relative to the origin of the object coordinate of <em><a href="IfcAnnotationFillArea.htm">IfcAnnotationFillArea</a></em>, or if present, the <em>FillAreaTarget</em> attribute of <em><a href="IfcAnnotationFillArea.htm">IfcAnnotationFillArea</a></em>. The measure values are given in global drawing length units, representing a model hatching, and can be translated into drawing units by the <em>TargetScale</em> for a scale depended <em><a href="IfcGeometricRepresentationSubContext.htm">IfcGeometricRepresentationSubcontext</a></em>, if provided.</aside><blockquote>
+<p>DEPRECATION  The use of <em>PointOfReferenceHatchLine</em> is deprecated.</p>
+</blockquote>
 <figure><a id="Figure-8.12.3.15.A-Example-1"></a><img alt="hatch example 1" src="../figures/ifcfillareastylehatching_fig1.gif"/><figcaption>Figure 8.12.3.15.A — Example 1<a href="IfcFillAreaStyleHatching.htm#Figure-8.12.3.15.A-Example-1"><i data-feather="link"></i></a></figcaption></figure>
 <p>Figure 8.12.3.15.A shows simple hatching given by using a curve font "continuous" at <em>HatchLineAppearance</em>.</p>
 <p>The distance of hatch lines is given by a positive length measure. The angle (here 45' if measures in degree) is provided by <em>HatchLineAngle</em>.</p>
@@ -433,7 +437,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.12.3.15.7-Changelog"></a>
                         8.12.3.15.7 Changelog
                     <a href="IfcFillAreaStyleHatching.htm#8.12.3.15.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.12.3.15.7.1-IFC4"></a>
+<h4><a id="8.12.3.15.7.1-IFC4"></a>
                         8.12.3.15.7.1 IFC4
                     <a href="IfcFillAreaStyleHatching.htm#8.12.3.15.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -443,7 +447,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 PatternStart2D
                                 
                             </small>
@@ -454,7 +458,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 RefHatchLine2D
                                 
                             </small>
@@ -464,7 +468,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR21
                                 
                             </small>
@@ -474,7 +478,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR22
                                 
                             </small>
@@ -484,7 +488,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR23
                                 
                             </small>

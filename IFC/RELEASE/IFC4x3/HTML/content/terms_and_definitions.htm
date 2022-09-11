@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>3 Terms, definitions, and abbreviated terms - IFC4.3.0.0 Documentation</title>
+<title>3 Terms, definitions, and abbreviated terms - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="terms-and-definitions">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -211,6 +213,19 @@
 <h2><a id="3.1.29.2-enumeration"></a>3.1.29.2 enumeration<a href="terms_and_definitions.htm#3.1.29.2-enumeration"><i data-feather="link"></i></a></h2>
 <p>construct that allows an attribute value to be one of multiple predefined values identified by name</p>
 <aside class="aside-note"><mark>NOTE</mark> Similar to the "Enumeration" construct as defined in ISO 10303-11.</aside><aside class="aside-note"><mark>NOTE</mark> Similar in concept to "enum" in common programming languages.</aside>
+<h2><a id="3.1.30-deprecation"></a>3.1.30 deprecation<a href="terms_and_definitions.htm#3.1.30-deprecation"><i data-feather="link"></i></a></h2>
+<p>The act of marking a schema construct to be deleted in a future major release of this standard</p>
+<aside class="aside-note"><mark>NOTE</mark> Complying interpreters shall still be able to import deprecated definitions.</aside><aside class="aside-note"><mark>NOTE</mark> Complying interpreters shall consider to modify export using the proposed alternative definitions instead of the deprecated ones.</aside>
+<h2><a id="3.1.31-compatibility"></a>3.1.31 compatibility<a href="terms_and_definitions.htm#3.1.31-compatibility"><i data-feather="link"></i></a></h2>
+<h2><a id="3.1.31.1-backward-compatibility"></a>3.1.31.1 backward compatibility<a href="terms_and_definitions.htm#3.1.31.1-backward-compatibility"><i data-feather="link"></i></a></h2>
+<p>The ability for a data file, written against a previous release of the standard, to be readable by an application supporting a later version.</p>
+<h2><a id="3.1.31.2-forward-compatibility"></a>3.1.31.2 forward compatibility<a href="terms_and_definitions.htm#3.1.31.2-forward-compatibility"><i data-feather="link"></i></a></h2>
+<p>The ability for a data file, written against a new release of the
+standard, to still be readable by an application supporting a previous
+version of the standard and for the reading application in this scenario not to lose functionality
+provided by the earlier version of the standard.</p>
+<aside class="aside-note"><mark>NOTE</mark> Forward compatibility is not explicitly considered in the development of this release, but seen as a desirable property where possible.</aside>
+<h1>3.2 Abbreviated terms</h1>
 <ul>
 <li>AEC: Architecture, Engineering, and Construction</li>
 <li>AEC-FM: Architecture, Engineering, Construction, and Facilities Management</li>

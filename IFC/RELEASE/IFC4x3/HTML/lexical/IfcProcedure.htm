@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.3.3.3 IfcProcedure - IFC4.3.0.0 Documentation</title>
+<title>5.3.3.3 IfcProcedure - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -327,7 +329,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED.</p>
+<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED or when the concrete entity instantiated does not have a PredefinedType attribute. The latter is the case in some exceptional leaf classes and when instantiating <a href="IfcBuiltElement.htm">IfcBuiltElement</a> directly. </p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -768,7 +770,29 @@
 <tr class="group-inherited">
 <td colspan="3">
 <a href="IfcProcess.htm">IfcProcess</a>
-<small>(3)</small>
+<small>(4)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Object_Typing/content.html">Object Typing</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        This is a further elaboration on an inherited concept.
+                    </small>
+</aside>
+<p>This concept can be applied to the following resources:</p>
+<ul>
+<li>
+<a href="IfcTypeProcess.htm">IfcTypeProcess</a>
+</li>
+</ul>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -817,11 +841,11 @@
 <td colspan="4">
 <small class="show-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    Click to show 19 hidden inherited concepts
+                    Click to show 20 hidden inherited concepts
                 </small>
 <small class="hide-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    Click to hide 19 inherited concepts
+                    Click to hide 20 inherited concepts
                 </small>
 </td>
 </tr>
@@ -935,7 +959,7 @@ END_ENTITY;</code></pre>
 <h3><a id="5.3.3.3.9-Changelog"></a>
                         5.3.3.3.9 Changelog
                     <a href="IfcProcedure.htm#5.3.3.3.9-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="5.3.3.3.9.1-IFC4"></a>
+<h4><a id="5.3.3.3.9.1-IFC4"></a>
                         5.3.3.3.9.1 IFC4
                     <a href="IfcProcedure.htm#5.3.3.3.9.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -945,7 +969,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 CorrectPredefinedType
                                 
                             </small>
@@ -956,7 +980,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 HasName
                                 
                             </small>
@@ -966,7 +990,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                attributes,
+                                attribute,
                                 ProcedureType
                                 
                             </small>
@@ -976,7 +1000,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                attributes,
+                                attribute,
                                 UserDefinedProcedureType
                                 
                             </small>
@@ -986,7 +1010,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR1
                                 
                             </small>
@@ -996,7 +1020,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR2
                                 
                             </small>
@@ -1006,7 +1030,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR3
                                 
                             </small>
@@ -1016,7 +1040,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR4
                                 
                             </small>
@@ -1025,16 +1049,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes ProcedureID definition,
-                                Changed from <a href="IfcIdentifier.htm">IfcIdentifier</a> to <a href="IfcProcedureTypeEnum.htm">IfcProcedureTypeEnum</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                attributes ProcedureID is_optional,
-                                Changed from False to True
+                                attribute ProcedureID name,
+                                Changed from
+"ProcedureID"
+to
+"PredefinedType"
                                 
                             </small>
 </li>
@@ -1042,8 +1061,23 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes ProcedureID name,
-                                Changed from ProcedureID to PredefinedType
+                                attribute ProcedureID optional,
+                                Changed from
+"False"
+to
+"True"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attribute ProcedureID type,
+                                Changed from
+"<a href="IfcIdentifier.htm">IfcIdentifier</a>"
+to
+"<a href="IfcProcedureTypeEnum.htm">IfcProcedureTypeEnum</a>"
                                 
                             </small>
 </li>

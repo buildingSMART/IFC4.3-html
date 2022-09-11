@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>1 Scope - IFC4.3.0.0 Documentation</title>
+<title>1 Scope - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="scope">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -89,12 +91,13 @@
 </div>
 <div class="col-md-8" id="main-content">
 <h1>1 Scope</h1>
-<p>The Industry Foundation Classes, IFC, are an open international standard for Building Information Model (BIM) data that are exchanged and shared among software applications used by the various participants in the construction or facility management industry sector. The standard includes definitions that cover data required for buildings and bridges over their life cycle. This release, and upcoming releases, extend the scope to include data definitions for infrastructure assets over their life cycle as well.</p>
+<p>The Industry Foundation Classes, IFC, are an open international standard for Building Information Model (BIM) data that are exchanged and shared among software applications used by the various participants in the construction or facility management industry sector. The standard includes definitions that cover data required for buildings and infrastructure works over their life cycle.
+The coverage of infrastructure facilities now incorporated into IFC includes bridges, roads, railways, waterways and port facilities.</p>
 <p>The Industry Foundation Classes specify a data schema and an exchange file format structure.
-The data schema is defined in a UML Class diagram, <a href="https://github.com/buildingSMART/IFC4.3.x-development/tree/master/schemas">available as XMI file</a>.
-Computer interpretable <a href="https://github.com/buildingSMART/IFC4.3.x-output">schemas are being generated</a> as:</p>
+The schema, property sets and usage constraints are internally authored as a UML Class diagram, <a href="https://github.com/buildingSMART/IFC4.3.x-development/tree/master/schemas">available as XMI file</a>
+and published as <a href="https://github.com/buildingSMART/IFC4.3.x-output">computer interpretable schemas</a>, including:</p>
 <ul>
-<li><a href="https://github.com/buildingSMART/IFC4.3.x-output/blob/master/IFC.exp">EXPRESS data specification language</a>, defined in ISO 10303-11,</li>
+<li><a href="../annex-a-express.html">EXPRESS data specification language</a>, defined in ISO 10303-11,</li>
 <li>XML Schema definition language (XSD) (under development),</li>
 <li>RDF/OWL Schema  (under development),</li>
 <li>JavaScript Object Notation Schema (under development),</li>
@@ -107,15 +110,15 @@ Computer interpretable <a href="https://github.com/buildingSMART/IFC4.3.x-output
 <li>RDF/OWL, defined by W3C and the buildingSMART projects,</li>
 <li>JSON JavaScript Object Notation, defined by the buildingSMART projects.</li>
 </ul>
-<p>An overview of the file formats can be seen on <a href="https://technical.buildingsmart.org/standards/ifc/ifc-formats/">the technical website</a>,
+<p>An overview of the file formats can be seen on <a href="https://technical.buildingsmart.org/standards/ifc/ifc-formats/">the technical website</a>.
 Alternative exchange file formats may be used if they conform to the data schemas.</p>
 <p>This release of IFC consists of the data schemas (represented in different formats), and reference data, represented as definitions of property and quantity names, and formal and informative descriptions (available in Markdown and HTML).</p>
-<p>The full IFC standard is used to define one or many recognized workflows in the construction and facility management industry sector. Such an exchange scenario definition of the IFC data schema and referenced data is referred to as a Model View Definition (MVD). Each MVD identifies data exchange requirements for software applications. Conforming software applications need to identity the model view definition they conform to to apply for Software Certification.</p>
+<p>The full IFC standard is used to define one or many recognized workflows in the construction and facility management industry sector. Such an exchange scenario definition of the IFC data schema and referenced data is referred to as a Model View Definition (MVD). Each MVD identifies data exchange requirements for software applications. Conforming software applications need to identify the model view definition they conform to when applying for Software Certification.</p>
 <h2><a id="General-use"></a>General use<a href="scope.htm#General-use"><i data-feather="link"></i></a></h2>
 <p>The following are within the entire scope of this release of IFC:</p>
 <ol>
 <li>
-<p>BIM exchange format definitions that are required during the life cycle phases of buildings:</p>
+<p>BIM exchange format definitions that are required during the life cycle phases of buildings and infrastructure:</p>
 <ul>
 <li>demonstrating the need;</li>
 <li>conception of need;</li>
@@ -133,16 +136,20 @@ Alternative exchange file formats may be used if they conform to the data schema
 <li>
 <p>BIM exchange format definitions that are required by the various disciplines involved within the life cycle phases:</p>
 <ul>
-<li>architecture;</li>
-<li>building service;</li>
+<li>architecture and civil engineering design;</li>
+<li>service and utilities engineering;</li>
 <li>structural engineering;</li>
 <li>procurement;</li>
 <li>construction planning;</li>
-<li>facility management;</li>
+<li>facility and utility management;</li>
 <li>project management;</li>
 <li>client requirement management;</li>
-<li>building authority for permits and approval.</li>
-<li>BIM exchange format definitions including:</li>
+<li>industry authorities for permits and approval.</li>
+</ul>
+</li>
+<li>
+<p>BIM exchange format definitions including:</p>
+<ul>
 <li>project structure;</li>
 <li>physical components;</li>
 <li>spatial components;</li>
@@ -155,12 +162,6 @@ Alternative exchange file formats may be used if they conform to the data schema
 </ul>
 </li>
 </ol>
-<p>The following are outside the scope of this release of IFC:</p>
-<ul>
-<li>exchange format definitions outside of the domain of construction and facility maintenance;</li>
-<li>full project structure and component breakdown structures outside of building engineering, but providing a baseline for civil engineering to be extended in future releases;</li>
-<li>behavioral aspects of components and other information items.</li>
-</ul>
 </div>
 <div class="col-md-2">
 <div class="card fluid shadowed hidden" id="section-navigation">

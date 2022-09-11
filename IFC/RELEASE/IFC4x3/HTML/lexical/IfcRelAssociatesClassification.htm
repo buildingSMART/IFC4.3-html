@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.1.3.30 IfcRelAssociatesClassification - IFC4.3.0.0 Documentation</title>
+<title>5.1.3.30 IfcRelAssociatesClassification - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -110,7 +112,7 @@
 <li>a reference to an classification item within an external classification system, or</li>
 <li>a reference to the classification system itself</li>
 </ul>
-<aside class="aside-note"><mark>NOTE</mark>  The reference to a classification item includes a link to the classification system within which the item is declared. It assigns the meaning of the classification item to the object (ocurrence or type). The reference to the classification system provides the information that the object (occurrence or type) is governed by the classification system but no assignment of a particular items has been done yet.</aside>
+<aside class="aside-note"><mark>NOTE</mark>  The reference to a classification item includes a link to the classification system within which the item is declared. It assigns the meaning of the classification item to the object (occurrence or type). The reference to the classification system provides the information that the object (occurrence or type) is governed by the classification system but no assignment of a particular items has been done yet.</aside>
 <p>The inherited attribute <em>RelatedObjects</em> define the objects or object types to which the classification is applied. The attribute <em>RelatingClassification</em> is the reference to a classification, applied to the object(s). A single <em>RelatingClassification</em> can thereby be applied to one or multiple objects.</p>
 <aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x.</aside>
 <h2><a id="5.1.3.30.2-Entity-inheritance"></a>
@@ -361,7 +363,7 @@ END_ENTITY;</code></pre>
 <h3><a id="5.1.3.30.7-Changelog"></a>
                         5.1.3.30.7 Changelog
                     <a href="IfcRelAssociatesClassification.htm#5.1.3.30.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="5.1.3.30.7.1-IFC4"></a>
+<h4><a id="5.1.3.30.7.1-IFC4"></a>
                         5.1.3.30.7.1 IFC4
                     <a href="IfcRelAssociatesClassification.htm#5.1.3.30.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -369,9 +371,13 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes RelatingClassification definition,
-                                Changed from IfcClassificationNotationSelect to <a href="IfcClassificationSelect.htm">IfcClassificationSelect</a>
-</small>
+                                attribute RelatingClassification type,
+                                Changed from
+"IfcClassificationNotationSelect"
+to
+"<a href="IfcClassificationSelect.htm">IfcClassificationSelect</a>"
+                                
+                            </small>
 </li>
 </ul>
 </div>

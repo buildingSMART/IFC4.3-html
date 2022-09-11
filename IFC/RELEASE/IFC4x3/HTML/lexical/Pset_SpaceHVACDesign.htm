@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.4.4.24 Pset_SpaceHVACDesign - IFC4.3.0.0 Documentation</title>
+<title>5.4.4.24 Pset_SpaceHVACDesign - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -203,7 +205,7 @@ property set with same name at subtypes of <a href="IfcObject.htm">IfcObject</a>
 <td><a href="IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="IfcPositiveRatioMeasure.htm">IfcPositiveRatioMeasure</a></td>
 <td>
-<p>Required Humidity Set Point.</p>
+<p>Humidity of the space or zone that is required from user/designer view point.  If no summer or winter space humidity requirements are given, it applies all year, otherwise for the intermediate period. Provide this property, if no humidity range (Min-Max) is available.</p>
 </td>
 <td><a class="button" href="../property/HumiditySetPoint.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -212,7 +214,7 @@ property set with same name at subtypes of <a href="IfcObject.htm">IfcObject</a>
 <td><a href="IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="IfcPositiveRatioMeasure.htm">IfcPositiveRatioMeasure</a></td>
 <td>
-<p>Maximum allowed humidity.</p>
+<p>Maximal permitted humidity of the space or zone that is required from user/designer view point.  If no summer or winter space humidity requirements are given, it applies all year, otherwise for the intermediate period.</p>
 </td>
 <td><a class="button" href="../property/HumidityMax.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -221,7 +223,7 @@ property set with same name at subtypes of <a href="IfcObject.htm">IfcObject</a>
 <td><a href="IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="IfcPositiveRatioMeasure.htm">IfcPositiveRatioMeasure</a></td>
 <td>
-<p>Minimum required humidity.</p>
+<p>Minimal permitted humidity of the space or zone that is required from user/designer view point.  If no summer or winter space humidity requirements are given, it applies all year, otherwise for the intermediate period.</p>
 </td>
 <td><a class="button" href="../property/HumidityMin.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -230,7 +232,7 @@ property set with same name at subtypes of <a href="IfcObject.htm">IfcObject</a>
 <td><a href="IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="IfcPositiveRatioMeasure.htm">IfcPositiveRatioMeasure</a></td>
 <td>
-<p>Required humidity in summer.</p>
+<p>Humidity of the space or zone for the hot (summer) period, that is required from user/designer view point and provided as requirement for cooling.</p>
 </td>
 <td><a class="button" href="../property/HumiditySummer.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -239,7 +241,7 @@ property set with same name at subtypes of <a href="IfcObject.htm">IfcObject</a>
 <td><a href="IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="IfcPositiveRatioMeasure.htm">IfcPositiveRatioMeasure</a></td>
 <td>
-<p>Required humidity in winter.</p>
+<p>Humidity of the space or zone for the cold (winter) period that is required from user/designer view point and provided as requirement for heating.</p>
 </td>
 <td><a class="button" href="../property/HumidityWinter.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -257,7 +259,7 @@ property set with same name at subtypes of <a href="IfcObject.htm">IfcObject</a>
 <td><a href="IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>Indication whether the space is required to have natural ventilation (TRUE) or mechanical ventilation (FALSE).</p>
+<p>Indication whether the space is required to have natural ventilation (TRUE)</p>
 </td>
 <td><a class="button" href="../property/NaturalVentilation.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -275,7 +277,7 @@ property set with same name at subtypes of <a href="IfcObject.htm">IfcObject</a>
 <td><a href="IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="IfcBoolean.htm">IfcBoolean</a></td>
 <td>
-<p>Mechanical Ventilation</p>
+<p>Indication whether the space is required to have mechanical ventilation (TRUE).</p>
 </td>
 <td><a class="button" href="../property/MechanicalVentilation.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -312,7 +314,8 @@ It should only be given, if the property "AirConditioning" is set to TRUE.</p>
 <td><a href="IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="IfcLabel.htm">IfcLabel</a></td>
 <td>
-<p>Name of the Air Handling unit or system.</p>
+<p>The name of the air side system.</p>
+<p><a href="IfcRelServicesBuildings.htm">IfcRelServicesBuildings</a> should be used to reference the correct AirHandlingSystem (<a href="IfcSystem.htm">IfcSystem</a>)</p>
 </td>
 <td><a class="button" href="../property/AirHandlingName.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -329,9 +332,9 @@ It should only be given, if the property "AirConditioning" is set to TRUE.</p>
 <h3><a id="5.4.4.24.4-Changelog"></a>
                         5.4.4.24.4 Changelog
                     <a href="Pset_SpaceHVACDesign.htm#5.4.4.24.4-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="5.4.4.24.4.1-IFC4.3"></a>
-                        5.4.4.24.4.1 IFC4.3
-                    <a href="Pset_SpaceHVACDesign.htm#5.4.4.24.4.1-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="5.4.4.24.4.1-IFC4.3-TC1"></a>
+                        5.4.4.24.4.1 IFC4.3_TC1
+                    <a href="Pset_SpaceHVACDesign.htm#5.4.4.24.4.1-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>

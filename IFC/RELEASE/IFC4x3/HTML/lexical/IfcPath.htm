@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.20.3.14 IfcPath - IFC4.3.0.0 Documentation</title>
+<title>8.20.3.14 IfcPath - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -156,7 +158,9 @@
     8.20.3.14.1 Semantic definition
 <a href="IfcPath.htm#8.20.3.14.1-Semantic-definition"><i data-feather="link"></i></a></h2>
 <aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO/CD 10303-42:1992
-A path is a topological entity consisting of an ordered collection of oriented edges, such that the edge start vertex of each edge coincides with the edge end of its predecessor. The path is ordered from the edge start of the first oriented edge to the edge end of the last edge. The BOOLEAN value sense in the oriented edge indicates whether the edge direction agrees with the direction of the path (TRUE) or is the opposite direction (FALSE).</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>path</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2.0</aside>
+A path is a topological entity consisting of an ordered collection of oriented edges, such that the edge start vertex of each edge coincides with the edge end of its predecessor. The path is ordered from the edge start of the first oriented edge to the edge end of the last edge. The BOOLEAN value sense in the oriented edge indicates whether the edge direction agrees with the direction of the path (TRUE) or is the opposite direction (FALSE).</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>path</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2.0</aside><blockquote>
+<p>An individual edge can only be referenced once by an individual path. An edge can be referenced by multiple paths. An edge can exist independently of a path.</p>
+</blockquote>
 <p>Informal Propositions:</p>
 <ol>
 <li>A path has dimensionality 1.</li>
@@ -327,7 +331,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.20.3.14.7-Changelog"></a>
                         8.20.3.14.7 Changelog
                     <a href="IfcPath.htm#8.20.3.14.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.20.3.14.7.1-IFC4"></a>
+<h4><a id="8.20.3.14.7.1-IFC4"></a>
                         8.20.3.14.7.1 IFC4
                     <a href="IfcPath.htm#8.20.3.14.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -337,7 +341,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 IsContinuous
                                 
                             </small>
@@ -347,7 +351,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR1
                                 
                             </small>

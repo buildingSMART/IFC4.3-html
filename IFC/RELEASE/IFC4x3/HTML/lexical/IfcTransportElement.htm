@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.4.3.73 IfcTransportElement - IFC4.3.0.0 Documentation</title>
+<title>5.4.3.73 IfcTransportElement - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -356,7 +358,7 @@ In the case of operational assets, instances of <em><a href="IfcTransportElement
             </td>
 <td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED.</p>
+<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED or when the concrete entity instantiated does not have a PredefinedType attribute. The latter is the case in some exceptional leaf classes and when instantiating <a href="IfcBuiltElement.htm">IfcBuiltElement</a> directly. </p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -673,7 +675,7 @@ In the case of operational assets, instances of <em><a href="IfcTransportElement
 <tr>
 <td colspan="2">
 <pre><code class="language-express hljs">(SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3.IFCTRANSPORTELEMENTTYPE' IN TYPEOF(SELF\<a href="IfcObject.htm">IfcObject</a>.IsTypedBy[1].RelatingType))</code></pre>
+  ('IFC4X3_TC1.<a href="IfcTransportElementType.htm">IFCTRANSPORTELEMENTTYPE</a>' IN TYPEOF(SELF\<a href="IfcObject.htm">IfcObject</a>.IsTypedBy[1].RelatingType))</code></pre>
 </td>
 </tr>
 </tbody>
@@ -705,7 +707,7 @@ In the case of operational assets, instances of <em><a href="IfcTransportElement
 </ul>
 </li>
 <li>
-<a href="Pset_ConstructionOccurance.htm">Pset_ConstructionOccurance</a>
+<a href="Pset_ConstructionOccurence.htm">Pset_ConstructionOccurence</a>
 <ul>
 <li>InstallationDate</li>
 <li>ModelNumber</li>
@@ -723,27 +725,6 @@ In the case of operational assets, instances of <em><a href="IfcTransportElement
 <li>MaximumAngularVelocity</li>
 <li>MaximumConstantSpeed</li>
 <li>MinimumTime</li>
-</ul>
-</li>
-<li>
-<a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
-<ul>
-<li>CyclicPath</li>
-<li>CyclicRange</li>
-<li>LinearPath</li>
-<li>LinearRange</li>
-<li>MaximumAngularVelocity</li>
-<li>MaximumConstantSpeed</li>
-<li>MinimumTime</li>
-</ul>
-</li>
-<li>
-<a href="Pset_EnergyRequirements.htm">Pset_EnergyRequirements</a>
-<ul>
-<li>EnergyConsumption</li>
-<li>PowerDemand</li>
-<li>EnergySourceLabel</li>
-<li>EnergyConversionEfficiency</li>
 </ul>
 </li>
 <li>
@@ -769,16 +750,6 @@ In the case of operational assets, instances of <em><a href="IfcTransportElement
 <li>SeismicResistance</li>
 <li>SmokeLevel</li>
 <li>MaximumSolarRadiation</li>
-</ul>
-</li>
-<li>
-<a href="Pset_EnvironmentalEmissions.htm">Pset_EnvironmentalEmissions</a>
-<ul>
-<li>CarbonDioxideEmissions</li>
-<li>SulphurDioxideEmissions</li>
-<li>NitrogenOxidesEmissions</li>
-<li>ParticulateMatterEmissions</li>
-<li>NoiseEmissions</li>
 </ul>
 </li>
 <li>
@@ -919,16 +890,6 @@ In the case of operational assets, instances of <em><a href="IfcTransportElement
 </ul>
 </li>
 <li>
-<a href="Pset_ProcessCapacity.htm">Pset_ProcessCapacity</a>
-<ul>
-<li>ProcessItem</li>
-<li>ProcessCapacity</li>
-<li>ProcessPerformance</li>
-<li>DownstreamConnections</li>
-<li>UpstreamConnections</li>
-</ul>
-</li>
-<li>
 <a href="Pset_RepairOccurrence.htm">Pset_RepairOccurrence</a>
 <ul>
 <li>RepairContent</li>
@@ -998,6 +959,7 @@ In the case of operational assets, instances of <em><a href="IfcTransportElement
 </li>
 <li>
 <a href="Pset_TransportElementElevator.htm">Pset_TransportElementElevator</a>
+<code>ELEVATOR</code>
 <ul>
 <li>FireFightingLift</li>
 <li>ClearWidth</li>
@@ -1276,7 +1238,7 @@ In the case of operational assets, instances of <em><a href="IfcTransportElement
 <tr class="group-inherited">
 <td colspan="3">
 <a href="IfcProduct.htm">IfcProduct</a>
-<small>(17)</small>
+<small>(18)</small>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1331,6 +1293,28 @@ In the case of operational assets, instances of <em><a href="IfcTransportElement
 <p>
 <em>No description available.</em>
 </p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Object_Typing/content.html">Object Typing</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        This is a further elaboration on an inherited concept.
+                    </small>
+</aside>
+<p>This concept can be applied to the following resources:</p>
+<ul>
+<li>
+<a href="IfcTypeProduct.htm">IfcTypeProduct</a>
+</li>
+</ul>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -2062,10 +2046,7 @@ shape.</aside>
 <a href="Pset_ConstructionAdministration.htm">Pset_ConstructionAdministration</a>
 </li>
 <li>
-<a href="Pset_ConstructionOccurance.htm">Pset_ConstructionOccurance</a>
-</li>
-<li>
-<a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
+<a href="Pset_ConstructionOccurence.htm">Pset_ConstructionOccurence</a>
 </li>
 <li>
 <a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
@@ -2223,25 +2204,13 @@ shape.</aside>
 <a href="Pset_ProcessCapacity.htm">Pset_ProcessCapacity</a>
 </li>
 <li>
-<a href="Pset_ProcessCapacity.htm">Pset_ProcessCapacity</a>
-</li>
-<li>
 <a href="Pset_EnergyRequirements.htm">Pset_EnergyRequirements</a>
-</li>
-<li>
-<a href="Pset_EnergyRequirements.htm">Pset_EnergyRequirements</a>
-</li>
-<li>
-<a href="Pset_EnvironmentalEmissions.htm">Pset_EnvironmentalEmissions</a>
 </li>
 <li>
 <a href="Pset_EnvironmentalEmissions.htm">Pset_EnvironmentalEmissions</a>
 </li>
 <li>
 <a href="Pset_TransportElementCommon.htm">Pset_TransportElementCommon</a>
-</li>
-<li>
-<a href="Pset_TransportElementElevator.htm">Pset_TransportElementElevator</a>
 </li>
 </ul>
 </td>
@@ -2250,18 +2219,18 @@ shape.</aside>
 <td colspan="4">
 <small class="show-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    Click to show 80 hidden inherited concepts
+                    Click to show 81 hidden inherited concepts
                 </small>
 <small class="hide-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    Click to hide 80 inherited concepts
+                    Click to hide 81 inherited concepts
                 </small>
 </td>
 </tr>
 <tr class="group">
 <td colspan="3">
 <a href="IfcTransportElement.htm">IfcTransportElement</a>
-<small>(2)</small>
+<small>(3)</small>
 </td>
 </tr>
 <tr>
@@ -2285,6 +2254,32 @@ shape.</aside>
 <li>
 <a href="IfcTransportElementType.htm">IfcTransportElementType</a>
 </li>
+</ul>
+</td>
+</tr>
+<tr>
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Property_Sets/Property_Sets_for_Objects/content.html">Property Sets for Objects</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        This is a further elaboration on an inherited concept.
+                    </small>
+</aside>
+<p>This concept can be applied to the following resources:</p>
+<ul>
+<li>
+<a href="Pset_TransportElementElevator.htm">Pset_TransportElementElevator</a>
+                        
+                        (only applies to <code>ELEVATOR)
+                        
+                        
+                    </code></li>
 </ul>
 </td>
 </tr>
@@ -2320,7 +2315,7 @@ shape.</aside>
  (PredefinedType &lt;&gt; <a href="IfcTransportElementTypeEnum.htm">IfcTransportElementTypeEnum</a>.USERDEFINED) OR
  ((PredefinedType = <a href="IfcTransportElementTypeEnum.htm">IfcTransportElementTypeEnum</a>.USERDEFINED) AND EXISTS (SELF\<a href="IfcObject.htm">IfcObject</a>.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3.IFCTRANSPORTELEMENTTYPE' IN TYPEOF(SELF\<a href="IfcObject.htm">IfcObject</a>.IsTypedBy[1].RelatingType));
+  ('IFC4X3_TC1.<a href="IfcTransportElementType.htm">IFCTRANSPORTELEMENTTYPE</a>' IN TYPEOF(SELF\<a href="IfcObject.htm">IfcObject</a>.IsTypedBy[1].RelatingType));
 END_ENTITY;</code></pre>
 <h2><a id="5.4.3.73.8-References"></a>
     5.4.3.73.8 References
@@ -2339,7 +2334,7 @@ END_ENTITY;</code></pre>
 <h3><a id="5.4.3.73.9-Changelog"></a>
                         5.4.3.73.9 Changelog
                     <a href="IfcTransportElement.htm#5.4.3.73.9-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="5.4.3.73.9.1-IFC4"></a>
+<h4><a id="5.4.3.73.9.1-IFC4"></a>
                         5.4.3.73.9.1 IFC4
                     <a href="IfcTransportElement.htm#5.4.3.73.9.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -2349,7 +2344,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 CorrectPredefinedType
                                 
                             </small>
@@ -2360,7 +2355,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 CorrectTypeAssigned
                                 
                             </small>
@@ -2370,7 +2365,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                attributes,
+                                attribute,
                                 CapacityByNumber
                                 
                             </small>
@@ -2380,7 +2375,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                attributes,
+                                attribute,
                                 CapacityByWeight
                                 
                             </small>
@@ -2389,23 +2384,30 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes OperationType name,
-                                Changed from OperationType to PredefinedType
+                                attribute OperationType name,
+                                Changed from
+"OperationType"
+to
+"PredefinedType"
                                 
                             </small>
 </li>
 </ul>
-<h4 class="collapsed"><a id="5.4.3.73.9.2-IFC4.3"></a>
-                        5.4.3.73.9.2 IFC4.3
-                    <a href="IfcTransportElement.htm#5.4.3.73.9.2-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="5.4.3.73.9.2-IFC4.3-TC1"></a>
+                        5.4.3.73.9.2 IFC4.3_TC1
+                    <a href="IfcTransportElement.htm#5.4.3.73.9.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
                                 supertype,
-                                Changed from <a href="IfcElement.htm">IfcElement</a> to <a href="IfcTransportationDevice.htm">IfcTransportationDevice</a>
-</small>
+                                Changed from
+"<a href="IfcElement.htm">IfcElement</a>"
+to
+"<a href="IfcTransportationDevice.htm">IfcTransportationDevice</a>"
+                                
+                            </small>
 </li>
 </ul>
 </div>

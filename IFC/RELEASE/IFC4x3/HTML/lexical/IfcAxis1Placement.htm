@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.1 IfcAxis1Placement - IFC4.3.0.0 Documentation</title>
+<title>8.9.3.1 IfcAxis1Placement - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -388,7 +390,7 @@ The direction and location in three dimensional space of a single axis. An axis1
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">'IFC4X3.IFCCARTESIANPOINT' IN TYPEOF(SELF\<a href="IfcPlacement.htm">IfcPlacement</a>.Location)</code></pre>
+<pre><code class="language-express hljs">'IFC4X3_TC1.<a href="IfcCartesianPoint.htm">IFCCARTESIANPOINT</a>' IN TYPEOF(SELF\<a href="IfcPlacement.htm">IfcPlacement</a>.Location)</code></pre>
 </td>
 </tr>
 </tbody>
@@ -404,7 +406,7 @@ The direction and location in three dimensional space of a single axis. An axis1
  WHERE
 	AxisIs3D : (NOT (EXISTS (Axis))) OR (Axis.Dim = 3);
 	LocationIs3D : SELF\<a href="IfcPlacement.htm">IfcPlacement</a>.Location.Dim = 3;
-	LocationIsCP : 'IFC4X3.IFCCARTESIANPOINT' IN TYPEOF(SELF\<a href="IfcPlacement.htm">IfcPlacement</a>.Location);
+	LocationIsCP : 'IFC4X3_TC1.<a href="IfcCartesianPoint.htm">IFCCARTESIANPOINT</a>' IN TYPEOF(SELF\<a href="IfcPlacement.htm">IfcPlacement</a>.Location);
 END_ENTITY;</code></pre>
 </div>
 <div class="col-md-2">
@@ -417,7 +419,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.9.3.1.6-Changelog"></a>
                         8.9.3.1.6 Changelog
                     <a href="IfcAxis1Placement.htm#8.9.3.1.6-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.9.3.1.6.1-IFC4"></a>
+<h4><a id="8.9.3.1.6.1-IFC4"></a>
                         8.9.3.1.6.1 IFC4
                     <a href="IfcAxis1Placement.htm#8.9.3.1.6.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -427,7 +429,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 AxisIs3D
                                 
                             </small>
@@ -438,7 +440,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 LocationIs3D
                                 
                             </small>
@@ -448,7 +450,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR1
                                 
                             </small>
@@ -458,15 +460,15 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR2
                                 
                             </small>
 </li>
 </ul>
-<h4 class="collapsed"><a id="8.9.3.1.6.2-IFC4.3"></a>
-                        8.9.3.1.6.2 IFC4.3
-                    <a href="IfcAxis1Placement.htm#8.9.3.1.6.2-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="8.9.3.1.6.2-IFC4.3-TC1"></a>
+                        8.9.3.1.6.2 IFC4.3_TC1
+                    <a href="IfcAxis1Placement.htm#8.9.3.1.6.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>
@@ -474,7 +476,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 LocationIsCP
                                 
                             </small>

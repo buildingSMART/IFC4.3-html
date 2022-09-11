@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>7.1.3.4 IfcWindowLiningProperties - IFC4.3.0.0 Documentation</title>
+<title>7.1.3.4 IfcWindowLiningProperties - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -582,11 +584,7 @@ If the <em>MullionThickness</em> is set to zero (and the <em>MullionOffset</em> 
 <td colspan="2">
 <pre><code class="language-express hljs">(EXISTS(SELF\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])) 
 AND 
-(
- ('IFC4X3.IFCWINDOWTYPE' IN TYPEOF(SELF\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]))
-  OR
- ('IFC4X3.IFCWINDOWSTYLE' IN TYPEOF(SELF\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]))
-)</code></pre>
+('IFC4X3_TC1.<a href="IfcWindowType.htm">IFCWINDOWTYPE</a>' IN TYPEOF(SELF\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]))</code></pre>
 </td>
 </tr>
 </tbody>
@@ -668,11 +666,7 @@ AND
 	WR33 : NOT(NOT(EXISTS(FirstMullionOffset)) AND EXISTS(SecondMullionOffset));
 	WR34 : (EXISTS(SELF\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])) 
 AND 
-(
- ('IFC4X3.IFCWINDOWTYPE' IN TYPEOF(SELF\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]))
-  OR
- ('IFC4X3.IFCWINDOWSTYLE' IN TYPEOF(SELF\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]))
-);
+('IFC4X3_TC1.<a href="IfcWindowType.htm">IFCWINDOWTYPE</a>' IN TYPEOF(SELF\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]));
 END_ENTITY;</code></pre>
 <h2><a id="7.1.3.4.7-References"></a>
     7.1.3.4.7 References
@@ -691,7 +685,7 @@ END_ENTITY;</code></pre>
 <h3><a id="7.1.3.4.8-Changelog"></a>
                         7.1.3.4.8 Changelog
                     <a href="IfcWindowLiningProperties.htm#7.1.3.4.8-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="7.1.3.4.8.1-IFC4"></a>
+<h4><a id="7.1.3.4.8.1-IFC4"></a>
                         7.1.3.4.8.1 IFC4
                     <a href="IfcWindowLiningProperties.htm#7.1.3.4.8.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -701,7 +695,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 LiningOffset
                                 
                             </small>
@@ -712,7 +706,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 LiningToPanelOffsetX
                                 
                             </small>
@@ -723,7 +717,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 LiningToPanelOffsetY
                                 
                             </small>
@@ -732,40 +726,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes LiningThickness definition,
-                                Changed from <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a> to <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                attributes MullionThickness definition,
-                                Changed from <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a> to <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                attributes TransomThickness definition,
-                                Changed from <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a> to <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                supertype,
-                                Changed from <a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a> to <a href="IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                where_rules WR31 definition,
-                                Changed from not(not(exists(LiningDepth)) and exists(LiningThickness)) to not(exists(LiningDepth) and not(exists(LiningThickness)))
+                                attribute LiningThickness type,
+                                Changed from
+"<a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a>"
+to
+"<a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>"
                                 
                             </small>
 </li>
@@ -773,8 +738,76 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                where_rules WR34 definition,
-                                Changed from exists(self\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]) and (ifcwindowstyle in typeof(self\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])) to (exists(self\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])) and ((ifcwindowtype in typeof(self\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])) or (ifcwindowstyle in typeof(self\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])))
+                                attribute MullionThickness type,
+                                Changed from
+"<a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a>"
+to
+"<a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attribute TransomThickness type,
+                                Changed from
+"<a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a>"
+to
+"<a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                supertype,
+                                Changed from
+"<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>"
+to
+"<a href="IfcPreDefinedPropertySet.htm">IfcPreDefinedPropertySet</a>"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                where rule WR31 definition,
+                                Changed from
+"not(not(exists(LiningDepth)) and exists(LiningThickness))"
+to
+"not(exists(LiningDepth) and not(exists(LiningThickness)))"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                where rule WR34 definition,
+                                Changed from
+"exists(self\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]) and (ifcwindowstyle in typeof(self\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]))"
+to
+"(exists(self\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])) and ((ifcwindowtype in typeof(self\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])) or (ifcwindowstyle in typeof(self\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])))"
+                                
+                            </small>
+</li>
+</ul>
+<h4><a id="7.1.3.4.8.2-IFC4.3-TC1"></a>
+                        7.1.3.4.8.2 IFC4.3_TC1
+                    <a href="IfcWindowLiningProperties.htm#7.1.3.4.8.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                where rule WR34 definition,
+                                Changed from
+"(exists(self\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])) and ((ifcwindowtype in typeof(self\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])) or (ifcwindowstyle in typeof(self\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])))"
+to
+"(exists(self\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1])) and (ifcwindowtype in typeof(self\<a href="IfcPropertySetDefinition.htm">IfcPropertySetDefinition</a>.DefinesType[1]))"
                                 
                             </small>
 </li>

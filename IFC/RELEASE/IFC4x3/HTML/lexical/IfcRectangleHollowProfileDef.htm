@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.15.3.19 IfcRectangleHollowProfileDef - IFC4.3.0.0 Documentation</title>
+<title>8.15.3.19 IfcRectangleHollowProfileDef - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -158,7 +160,7 @@
 <p><em><a href="IfcRectangleHollowProfileDef.htm">IfcRectangleHollowProfileDef</a></em> defines a section profile that provides the defining parameters of a rectangular (or square) hollow section to be used by the swept surface geometry or the swept area solid. Its parameters and orientation relative to the position coordinate system are according to the following illustration. A square hollow section can be defined by equal values for h and b. The centre of the position coordinate system is in the profiles centre of the bounding box (for symmetric profiles identical with the centre of gravity). Normally, the longer sides are parallel to the y-axis, the shorter sides parallel to the x-axis.</p>
 <aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x2.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  Types of <em>InnerFilletRadius</em> and <em>OuterFilletRadius</em> relaxed to allow for zero values.</aside>
 <p>Figure 8.15.3.19.A illustrates parameters of a rectangular or square hollow profile definition.</p>
-<figure><a id="Figure-8.15.3.19.A-Rectangle-hollow-profile"></a><img alt="hollow rectange shape profile" src="../figures/ifcrectanglehollowprofiledef.gif"/><figcaption>Figure 8.15.3.19.A — Rectangle hollow profile<a href="IfcRectangleHollowProfileDef.htm#Figure-8.15.3.19.A-Rectangle-hollow-profile"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a id="Figure-8.15.3.19.A-Rectangle-hollow-profile"></a><img alt="hollow rectangle shape profile" src="../figures/ifcrectanglehollowprofiledef.gif"/><figcaption>Figure 8.15.3.19.A — Rectangle hollow profile<a href="IfcRectangleHollowProfileDef.htm#Figure-8.15.3.19.A-Rectangle-hollow-profile"><i data-feather="link"></i></a></figcaption></figure>
 <p><u>Position</u></p>
 <p>The parameterized profile defines its own position coordinate system.  The underlying coordinate system is defined by the swept area solid that uses the profile definition. It is the xy plane of:</p>
 <ul>
@@ -559,7 +561,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.15.3.19.9-Changelog"></a>
                         8.15.3.19.9 Changelog
                     <a href="IfcRectangleHollowProfileDef.htm#8.15.3.19.9-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.15.3.19.9.1-IFC4"></a>
+<h4><a id="8.15.3.19.9.1-IFC4"></a>
                         8.15.3.19.9.1 IFC4
                     <a href="IfcRectangleHollowProfileDef.htm#8.15.3.19.9.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -569,7 +571,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 ValidInnerRadius
                                 
                             </small>
@@ -580,7 +582,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 ValidOuterRadius
                                 
                             </small>
@@ -591,7 +593,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 ValidWallThickness
                                 
                             </small>
@@ -601,7 +603,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR31
                                 
                             </small>
@@ -611,7 +613,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR32
                                 
                             </small>
@@ -621,7 +623,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR33
                                 
                             </small>
@@ -630,17 +632,25 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes InnerFilletRadius definition,
-                                Changed from <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a> to <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>
-</small>
+                                attribute InnerFilletRadius type,
+                                Changed from
+"<a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a>"
+to
+"<a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>"
+                                
+                            </small>
 </li>
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes OuterFilletRadius definition,
-                                Changed from <a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a> to <a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>
-</small>
+                                attribute OuterFilletRadius type,
+                                Changed from
+"<a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a>"
+to
+"<a href="IfcNonNegativeLengthMeasure.htm">IfcNonNegativeLengthMeasure</a>"
+                                
+                            </small>
 </li>
 </ul>
 </div>

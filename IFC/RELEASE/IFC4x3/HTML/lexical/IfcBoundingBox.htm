@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.6 IfcBoundingBox - IFC4.3.0.0 Documentation</title>
+<title>8.8.3.6 IfcBoundingBox - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -156,7 +158,7 @@
     8.8.3.6.1 Semantic definition
 <a href="IfcBoundingBox.htm#8.8.3.6.1-Semantic-definition"><i data-feather="link"></i></a></h2>
 <p>The <em><a href="IfcBoundingBox.htm">IfcBoundingBox</a></em> defines an orthogonal box oriented parallel to the axes of the object coordinate system in which it is defined. It is defined by a <em>Corner</em> being a three-dimensional Cartesian point and three length measures defining the X, Y and Z parameters of the box in the direction of the positive axes.</p>
-<aside class="aside-note"><mark>NOTE</mark>  Any subtype of <em><a href="IfcProduct.htm">IfcProduct</a></em> having a product shape representation may have a bounding box representation. The 'Box' representation identifier defined at <a href="IfcShapeRepresentation.htm">IfcShapeRepresentation</a> utilizes the <em><a href="IfcBoundingBox.htm">IfcBoundingBox</a></em> as the simpliest 3D shape representation.</aside>
+<aside class="aside-note"><mark>NOTE</mark>  Any subtype of <em><a href="IfcProduct.htm">IfcProduct</a></em> having a product shape representation may have a bounding box representation. The 'Box' representation identifier defined at <a href="IfcShapeRepresentation.htm">IfcShapeRepresentation</a> utilizes the <em><a href="IfcBoundingBox.htm">IfcBoundingBox</a></em> as the simplest 3D shape representation.</aside>
 <figure><a id="Figure-8.8.3.6.A-Bounding-box"></a><img alt="bounding box" src="../figures/ifcboundingbox-layout1.gif"/><figcaption>Figure 8.8.3.6.A — Bounding box<a href="IfcBoundingBox.htm#Figure-8.8.3.6.A-Bounding-box"><i data-feather="link"></i></a></figcaption></figure>
 <p>As shown in Figure 8.8.3.6.A, the <em><a href="IfcBoundingBox.htm">IfcBoundingBox</a></em> is defined with its own location which can be used to place the <em><a href="IfcBoundingBox.htm">IfcBoundingBox</a></em> relative to the geometric coordinate system. The <em><a href="IfcBoundingBox.htm">IfcBoundingBox</a></em> is defined by the lower left corner (<em>Corner</em>) and the upper right corner (<em>XDim, YDim, ZDim</em> measured within the parent co-ordinate system).</p>
 <aside class="aside-note"><mark>NOTE</mark>  Corresponding STEP type <strong>box_domain</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC1.0.</aside>

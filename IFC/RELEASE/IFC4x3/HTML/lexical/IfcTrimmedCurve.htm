@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.75 IfcTrimmedCurve - IFC4.3.0.0 Documentation</title>
+<title>8.9.3.75 IfcTrimmedCurve - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -418,7 +420,7 @@ A trimmed curve is a bounded curve which is created by taking a selected portion
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">NOT('IFC4X3.IFCBOUNDEDCURVE' IN TYPEOF(BasisCurve))</code></pre>
+<pre><code class="language-express hljs">NOT('IFC4X3_TC1.<a href="IfcBoundedCurve.htm">IFCBOUNDEDCURVE</a>' IN TYPEOF(BasisCurve))</code></pre>
 </td>
 </tr>
 <tr>
@@ -456,7 +458,7 @@ A trimmed curve is a bounded curve which is created by taking a selected portion
 	SenseAgreement : <a href="IfcBoolean.htm">IfcBoolean</a>;
 	MasterRepresentation : <a href="IfcTrimmingPreference.htm">IfcTrimmingPreference</a>;
  WHERE
-	NoTrimOfBoundedCurves : NOT('IFC4X3.IFCBOUNDEDCURVE' IN TYPEOF(BasisCurve));
+	NoTrimOfBoundedCurves : NOT('IFC4X3_TC1.<a href="IfcBoundedCurve.htm">IFCBOUNDEDCURVE</a>' IN TYPEOF(BasisCurve));
 	Trim1ValuesConsistent : (HIINDEX(Trim1) = 1) OR (TYPEOF(Trim1[1]) &lt;&gt; TYPEOF(Trim1[2]));
 	Trim2ValuesConsistent : (HIINDEX(Trim2) = 1) OR (TYPEOF(Trim2[1]) &lt;&gt; TYPEOF(Trim2[2]));
 END_ENTITY;</code></pre>
@@ -478,7 +480,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.9.3.75.7-Changelog"></a>
                         8.9.3.75.7 Changelog
                     <a href="IfcTrimmedCurve.htm#8.9.3.75.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.9.3.75.7.1-IFC4"></a>
+<h4><a id="8.9.3.75.7.1-IFC4"></a>
                         8.9.3.75.7.1 IFC4
                     <a href="IfcTrimmedCurve.htm#8.9.3.75.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -488,7 +490,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 NoTrimOfBoundedCurves
                                 
                             </small>
@@ -499,7 +501,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 Trim1ValuesConsistent
                                 
                             </small>
@@ -510,7 +512,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 Trim2ValuesConsistent
                                 
                             </small>
@@ -520,7 +522,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR41
                                 
                             </small>
@@ -530,7 +532,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR42
                                 
                             </small>
@@ -540,7 +542,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR43
                                 
                             </small>
@@ -549,9 +551,13 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes SenseAgreement definition,
-                                Changed from boolean to <a href="IfcBoolean.htm">IfcBoolean</a>
-</small>
+                                attribute SenseAgreement type,
+                                Changed from
+"boolean"
+to
+"<a href="IfcBoolean.htm">IfcBoolean</a>"
+                                
+                            </small>
 </li>
 </ul>
 </div>

@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>7.3.3.13 IfcSubContractResource - IFC4.3.0.0 Documentation</title>
+<title>7.3.3.13 IfcSubContractResource - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -362,7 +364,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED.</p>
+<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED or when the concrete entity instantiated does not have a PredefinedType attribute. The latter is the case in some exceptional leaf classes and when instantiating <a href="IfcBuiltElement.htm">IfcBuiltElement</a> directly. </p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -815,6 +817,34 @@
 </tr>
 <tr class="group-inherited">
 <td colspan="3">
+<a href="IfcResource.htm">IfcResource</a>
+<small>(1)</small>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Object_Typing/content.html">Object Typing</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        This is a further elaboration on an inherited concept.
+                    </small>
+</aside>
+<p>This concept can be applied to the following resources:</p>
+<ul>
+<li>
+<a href="IfcTypeResource.htm">IfcTypeResource</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="group-inherited">
+<td colspan="3">
 <a href="IfcConstructionResource.htm">IfcConstructionResource</a>
 <small>(5)</small>
 </td>
@@ -842,7 +872,7 @@
 <!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLaborResource.htm'>IfcLaborResource</a> -->
 <g class="node" id="node1">
 <title><a href="IfcLaborResource.htm">IfcLaborResource</a></title>
-<g id="a_node1"><a xlink:href="http://localhost/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLaborResource.htm" xlink:title="IfcLaborResource">
+<g id="a_node1"><a xlink:href="IfcLaborResource.htm" xlink:title="IfcLaborResource">
 <polygon fill="#1976d2" points="144,-251.5 0,-251.5 0,-215.5 144,-215.5 144,-251.5" stroke="#000000" stroke-width=".2"></polygon>
 <text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="72" y="-229.8"><a href="IfcLaborResource.htm">IfcLaborResource</a></text>
 </a>
@@ -949,7 +979,7 @@
 <!-- <a href='/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLaborResource.htm'>IfcLaborResource</a> -->
 <g class="node" id="node1">
 <title><a href="IfcLaborResource.htm">IfcLaborResource</a></title>
-<g id="a_node1"><a xlink:href="http://localhost/IFC/RELEASE/IFC4x3/HTML/lexical/IfcLaborResource.htm" xlink:title="IfcLaborResource">
+<g id="a_node1"><a xlink:href="IfcLaborResource.htm" xlink:title="IfcLaborResource">
 <polygon fill="#1976d2" points="144,-251.5 0,-251.5 0,-215.5 144,-215.5 144,-251.5" stroke="#000000" stroke-width=".2"></polygon>
 <text fill="#000000" font-family="Times,serif" font-size="14.00" text-anchor="middle" x="72" y="-229.8"><a href="IfcLaborResource.htm">IfcLaborResource</a></text>
 </a>
@@ -1127,11 +1157,11 @@
 <td colspan="4">
 <small class="show-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    Click to show 21 hidden inherited concepts
+                    Click to show 22 hidden inherited concepts
                 </small>
 <small class="hide-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    Click to hide 21 inherited concepts
+                    Click to hide 22 inherited concepts
                 </small>
 </td>
 </tr>
@@ -1213,7 +1243,7 @@ END_ENTITY;</code></pre>
 <h3><a id="7.3.3.13.9-Changelog"></a>
                         7.3.3.13.9 Changelog
                     <a href="IfcSubContractResource.htm#7.3.3.13.9-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="7.3.3.13.9.1-IFC4"></a>
+<h4><a id="7.3.3.13.9.1-IFC4"></a>
                         7.3.3.13.9.1 IFC4
                     <a href="IfcSubContractResource.htm#7.3.3.13.9.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -1223,7 +1253,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 CorrectPredefinedType
                                 
                             </small>
@@ -1233,7 +1263,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                attributes,
+                                attribute,
                                 JobDescription
                                 
                             </small>
@@ -1242,16 +1272,23 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes SubContractor definition,
-                                Changed from <a href="IfcActorSelect.htm">IfcActorSelect</a> to <a href="IfcSubContractResourceTypeEnum.htm">IfcSubContractResourceTypeEnum</a>
-</small>
+                                attribute SubContractor name,
+                                Changed from
+"SubContractor"
+to
+"PredefinedType"
+                                
+                            </small>
 </li>
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes SubContractor name,
-                                Changed from SubContractor to PredefinedType
+                                attribute SubContractor type,
+                                Changed from
+"<a href="IfcActorSelect.htm">IfcActorSelect</a>"
+to
+"<a href="IfcSubContractResourceTypeEnum.htm">IfcSubContractResourceTypeEnum</a>"
                                 
                             </small>
 </li>

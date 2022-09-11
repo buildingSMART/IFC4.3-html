@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.3.32 IfcSurfaceStyleRendering - IFC4.3.0.0 Documentation</title>
+<title>8.12.3.32 IfcSurfaceStyleRendering - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -294,9 +296,9 @@
 <td data-label="Type">OPTIONAL <a href="IfcColourOrFactor.htm">IfcColourOrFactor</a></td>
 <td data-label="Description">
 <p>The transmissive part of the reflectance equation can be given as either a colour or a scalar factor. It only applies to materials which Transparency field is greater than zero.
-The transmissive colour field specifies the colour that passes through a transparant material (like the colour that shines through a glass).
+The transmissive colour field specifies the colour that passes through a transparent material (like the colour that shines through a glass).
 The transmissive factor defines the transmissive part, the transmissive colour is then defined by surface colour * transmissive factor.</p>
-<aside class="aside-deprecation"><mark>IFC4.3.0.0-DEPRECATION</mark> This attribute is deprecated and shall no longer be used.</aside>
+<aside class="aside-deprecation"><mark>IFC4.3.0.0-DEPRECATION<a href="../content/terms_and_definitions.htm#3.1.30-deprecation"><i data-feather="link"></i></a></mark> This attribute is deprecated and shall no longer be used.</aside>
 </td>
 </tr>
 <tr>
@@ -311,7 +313,7 @@ The transmissive factor defines the transmissive part, the transmissive colour i
 <p>The diffuse transmission part of the reflectance equation can be given as either a colour or a scalar factor. It only applies to materials whose Transparency field is greater than zero.
 The diffuse transmission colour specifies how much diffuse light is reflected at the opposite side of the material surface.
 The diffuse transmission factor field specifies how much diffuse light from light sources this surface shall reflect on the opposite side of the material surface. The diffuse transmissive colour is then defined by surface colour * diffuse transmissive factor.</p>
-<aside class="aside-deprecation"><mark>IFC4.3.0.0-DEPRECATION</mark> This attribute is deprecated and shall no longer be used.</aside>
+<aside class="aside-deprecation"><mark>IFC4.3.0.0-DEPRECATION<a href="../content/terms_and_definitions.htm#3.1.30-deprecation"><i data-feather="link"></i></a></mark> This attribute is deprecated and shall no longer be used.</aside>
 </td>
 </tr>
 <tr>
@@ -326,7 +328,7 @@ The diffuse transmission factor field specifies how much diffuse light from ligh
 <p>The reflection (or mirror) part of the reflectance equation can be given as either a colour or a scalar factor. Applies to "glass" and "mirror" reflection models.
 The reflection colour specifies the contribution made by light from the mirror direction, i.e. light being reflected from the surface.
 The reflection factor specifies the amount of contribution made by light from the mirror direction. The reflection colour is then defined by surface colour * reflection factor.</p>
-<aside class="aside-deprecation"><mark>IFC4.3.0.0-DEPRECATION</mark> This attribute is deprecated and shall no longer be used.</aside>
+<aside class="aside-deprecation"><mark>IFC4.3.0.0-DEPRECATION<a href="../content/terms_and_definitions.htm#3.1.30-deprecation"><i data-feather="link"></i></a></mark> This attribute is deprecated and shall no longer be used.</aside>
 </td>
 </tr>
 <tr>
@@ -409,7 +411,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.12.3.32.7-Changelog"></a>
                         8.12.3.32.7 Changelog
                     <a href="IfcSurfaceStyleRendering.htm#8.12.3.32.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.12.3.32.7.1-IFC4"></a>
+<h4><a id="8.12.3.32.7.1-IFC4"></a>
                         8.12.3.32.7.1 IFC4
                     <a href="IfcSurfaceStyleRendering.htm#8.12.3.32.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -418,8 +420,40 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                attributes,
+                                attribute,
                                 Transparency
+                                
+                            </small>
+</li>
+</ul>
+<h4><a id="8.12.3.32.7.2-IFC4.3-TC1"></a>
+                        8.12.3.32.7.2 IFC4.3_TC1
+                    <a href="IfcSurfaceStyleRendering.htm#8.12.3.32.7.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attribute DiffuseTransmissionColour,
+                                Is now deprecated
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attribute ReflectionColour,
+                                Is now deprecated
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attribute TransmissionColour,
+                                Is now deprecated
                                 
                             </small>
 </li>

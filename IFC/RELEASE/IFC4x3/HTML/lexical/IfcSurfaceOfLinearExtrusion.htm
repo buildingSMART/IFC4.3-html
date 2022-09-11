@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.70 IfcSurfaceOfLinearExtrusion - IFC4.3.0.0 Documentation</title>
+<title>8.9.3.70 IfcSurfaceOfLinearExtrusion - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -157,7 +159,11 @@
 <a href="IfcSurfaceOfLinearExtrusion.htm#8.9.3.70.1-Semantic-definition"><i data-feather="link"></i></a></h2>
 <p>The <em><a href="IfcSurfaceOfLinearExtrusion.htm">IfcSurfaceOfLinearExtrusion</a></em> is a surface derived by sweeping a curve along a vector.</p>
 <aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO/CD 10303-42:1992
-This surface is a simple swept surface or a generalized cylinder obtained by sweeping a curve in a given direction. The parameterization is as follows where the curve has a parameterization λ(<em>u</em>):</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>surface_of_linear_extrusion</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x.</aside>
+This surface is a simple swept surface or a generalized cylinder obtained by sweeping a curve in a given direction. The parameterization is as follows where the curve has a parameterization λ(<em>u</em>):</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>surface_of_linear_extrusion</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x.</aside><blockquote>
+<p>V = ExtrusionAxis</p>
+<figure><a id="Figure-8.9.3.70.A"></a><img alt="Image" src="../figures/ifcsurfaceoflinearextrusion-math1.gif"/>
+ The parameterization range for <em>v</em> is -∞ &lt; <em>v</em> &lt; ∞ and for <em>u</em> it is defined by the curve parameterization.<figcaption>Figure 8.9.3.70.A<a href="IfcSurfaceOfLinearExtrusion.htm#Figure-8.9.3.70.A"><i data-feather="link"></i></a></figcaption></figure>
+</blockquote>
 <p>Informal Propositions:</p>
 <ol>
 <li>The surface shall not self-intersect</li>
@@ -232,7 +238,7 @@ This surface is a simple swept surface or a generalized cylinder obtained by swe
     8.9.3.70.3 Attributes
 <a href="IfcSurfaceOfLinearExtrusion.htm#8.9.3.70.3-Attributes"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a id="Table-8.9.3.70.A"></a><table class="striped grouped attributes">
+<figure><a id="Table-8.9.3.70.B"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -385,11 +391,11 @@ This surface is a simple swept surface or a generalized cylinder obtained by swe
 </td>
 </tr>
 </tbody>
-</table><figcaption>Table 8.9.3.70.A<a href="IfcSurfaceOfLinearExtrusion.htm#Table-8.9.3.70.A"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>Table 8.9.3.70.B<a href="IfcSurfaceOfLinearExtrusion.htm#Table-8.9.3.70.B"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a id="8.9.3.70.4-Formal-propositions"></a>
     8.9.3.70.4 Formal propositions
 <a href="IfcSurfaceOfLinearExtrusion.htm#8.9.3.70.4-Formal-propositions"><i data-feather="link"></i></a></h2>
-<figure><a id="Table-8.9.3.70.B"></a><table>
+<figure><a id="Table-8.9.3.70.C"></a><table>
 <thead>
 <tr>
 <th>Name</th>
@@ -411,7 +417,7 @@ This surface is a simple swept surface or a generalized cylinder obtained by swe
 </td>
 </tr>
 </tbody>
-</table><figcaption>Table 8.9.3.70.B<a href="IfcSurfaceOfLinearExtrusion.htm#Table-8.9.3.70.B"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>Table 8.9.3.70.C<a href="IfcSurfaceOfLinearExtrusion.htm#Table-8.9.3.70.C"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a id="8.9.3.70.5-Formal-representation"></a>
     8.9.3.70.5 Formal representation
 <a href="IfcSurfaceOfLinearExtrusion.htm#8.9.3.70.5-Formal-representation"><i data-feather="link"></i></a></h2>
@@ -441,7 +447,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.9.3.70.7-Changelog"></a>
                         8.9.3.70.7 Changelog
                     <a href="IfcSurfaceOfLinearExtrusion.htm#8.9.3.70.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.9.3.70.7.1-IFC4"></a>
+<h4><a id="8.9.3.70.7.1-IFC4"></a>
                         8.9.3.70.7.1 IFC4
                     <a href="IfcSurfaceOfLinearExtrusion.htm#8.9.3.70.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -451,7 +457,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 DepthGreaterZero
                                 
                             </small>
@@ -461,7 +467,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR41
                                 
                             </small>

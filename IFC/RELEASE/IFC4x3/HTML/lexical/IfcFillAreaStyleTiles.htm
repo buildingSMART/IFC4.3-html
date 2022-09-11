@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.3.16 IfcFillAreaStyleTiles - IFC4.3.0.0 Documentation</title>
+<title>8.12.3.16 IfcFillAreaStyleTiles - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -156,9 +158,13 @@
     8.12.3.16.1 Semantic definition
 <a href="IfcFillAreaStyleTiles.htm#8.12.3.16.1-Semantic-definition"><i data-feather="link"></i></a></h2>
 <p>The <em><a href="IfcFillAreaStyleTiles.htm">IfcFillAreaStyleTiles</a></em> defines the filling of an <em><a href="IfcAnnotationFillArea.htm">IfcAnnotationFillArea</a></em> by recurring patterns of styled two dimensional geometry, called a tile. The recurrence pattern is determined by two vectors, that multiply the tile in regular form.</p>
-<p>The two vectors act as a two dimensional repeat factor that determins eight new positions for the tiles.</p>
+<p>The two vectors act as a two dimensional repeat factor that determines eight new positions for the tiles.</p>
 <aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO 10303-46:
-The fill area style tiles defines a two dimensional tile to be used for the filling of annotation fill areas or other closed regions. The content of a tile is defined by the tile set, and the placement of each tile determined by the filling pattern which indicates how to place tiles next to each other. Tiles or parts of tiles outside of the annotation fill area or closed region shall be clipped at the of the area or region.</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>fill_area_style_tiles</strong> defined in ISO10303-46</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x2.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark> <em>TilingPattern</em> changed to list of two <em><a href="IfcVector.htm">IfcVector</a></em>, <em>Tiles</em> refer directly to <em><a href="IfcStyledItem.htm">IfcStyledItem</a></em>.</aside>
+The fill area style tiles defines a two dimensional tile to be used for the filling of annotation fill areas or other closed regions. The content of a tile is defined by the tile set, and the placement of each tile determined by the filling pattern which indicates how to place tiles next to each other. Tiles or parts of tiles outside of the annotation fill area or closed region shall be clipped at the of the area or region.</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>fill_area_style_tiles</strong> defined in ISO10303-46</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x2.</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark> <em>TilingPattern</em> changed to list of two <em><a href="IfcVector.htm">IfcVector</a></em>, <em>Tiles</em> refer directly to <em><a href="IfcStyledItem.htm">IfcStyledItem</a></em>.</aside><blockquote>
+<figure><a id="Figure-8.12.3.16.B-shows-the-use-of-a-vector-for-hatch-line-distances"></a><em>I + k~1~* R~1~ +
+k~2~* R~2~</em> <em>k~1~,k~2~</em>= -1,0,1 , <img alt="formula" src="../figures/ifcfillareastyletilesymbolwithstyle_fig1.gif"/><figcaption>Figure 8.12.3.16.B shows the use of a vector for hatch line distances<a href="IfcFillAreaStyleTiles.htm#Figure-8.12.3.16.B-shows-the-use-of-a-vector-for-hatch-line-distances"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a id="Figure-8.12.3.16.B-two-vectors-as-two-direction-repeat-factor"></a><img alt="IfcFillAreaStyleTiles_Fig1.gif 12,9 KB" src="../figures/ifcfillareastyletiles_fig1.gif" title="Figure 8.12.3.16.B — two vectors as two direction repeat factor"/><figcaption>Figure 8.12.3.16.B — two vectors as two direction repeat factor<a href="IfcFillAreaStyleTiles.htm#Figure-8.12.3.16.B-two-vectors-as-two-direction-repeat-factor"><i data-feather="link"></i></a></figcaption></figure>
+</blockquote>
 <h2><a id="8.12.3.16.2-Entity-inheritance"></a>
     8.12.3.16.2 Entity inheritance
 <a href="IfcFillAreaStyleTiles.htm#8.12.3.16.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
@@ -342,7 +348,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.12.3.16.6-Changelog"></a>
                         8.12.3.16.6 Changelog
                     <a href="IfcFillAreaStyleTiles.htm#8.12.3.16.6-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.12.3.16.6.1-IFC4"></a>
+<h4><a id="8.12.3.16.6.1-IFC4"></a>
                         8.12.3.16.6.1 IFC4
                     <a href="IfcFillAreaStyleTiles.htm#8.12.3.16.6.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -350,17 +356,25 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes Tiles definition,
-                                Changed from set[1:?] of IfcFillAreaStyleTileShapeSelect to set[1:?] of <a href="IfcStyledItem.htm">IfcStyledItem</a>
-</small>
+                                attribute Tiles type,
+                                Changed from
+"set[1:?] of IfcFillAreaStyleTileShapeSelect"
+to
+"set[1:?] of <a href="IfcStyledItem.htm">IfcStyledItem</a>"
+                                
+                            </small>
 </li>
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes TilingPattern definition,
-                                Changed from IfcOneDirectionRepeatFactor to list[2:2] of <a href="IfcVector.htm">IfcVector</a>
-</small>
+                                attribute TilingPattern type,
+                                Changed from
+"IfcOneDirectionRepeatFactor"
+to
+"list[2:2] of <a href="IfcVector.htm">IfcVector</a>"
+                                
+                            </small>
 </li>
 </ul>
 </div>

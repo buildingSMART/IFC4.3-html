@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.59 IfcRepresentationMap - IFC4.3.0.0 Documentation</title>
+<title>8.9.3.59 IfcRepresentationMap - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -158,7 +160,7 @@
 <p>An <em><a href="IfcRepresentationMap.htm">IfcRepresentationMap</a></em> defines the base definition (also referred to as block, cell or macro) called <em>MappedRepresentation</em> within the <em>MappingOrigin</em>. The <em>MappingOrigin</em> defines the coordinate system in which the <em>MappedRepresentation</em> is defined.</p>
 <aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO/CD 10303-43:1992
 A representation map is the identification of a representation and a representation item in that representation for the purpose of mapping. The representation item defines the origin of the mapping. The representation map is used as the source of a mapping by a mapped item.</aside>
-<p>The <em>RepresentationMap</em> is used through an <em>IfcMappeditem</em> in one or several <em><a href="IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em>'s. An Cartesian transformation operator can be applied to transform the <em>MappedRepresentation</em> into the placement coordinate system of the shape representation. The transformation of the representation map is restricted to be a Cartesian transformation mapping (translation, rotation, mirroring and scaling).</p>
+<p>The <em>RepresentationMap</em> is used through an <em><a href="IfcMappedItem.htm">IfcMappeditem</a></em> in one or several <em><a href="IfcShapeRepresentation.htm">IfcShapeRepresentation</a></em>'s. An Cartesian transformation operator can be applied to transform the <em>MappedRepresentation</em> into the placement coordinate system of the shape representation. The transformation of the representation map is restricted to be a Cartesian transformation mapping (translation, rotation, mirroring and scaling).</p>
 <aside class="aside-note"><mark>NOTE</mark>  The definition of a mapping which is used to specify a new representation item comprises a representation map and a mapped item entity. Without both entities, the mapping is not fully defined. Two entities are specified to allow the same source representation to be mapped into multiple new representations.</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>representation_map</strong> defined in ISO 10303-43.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x.</aside>
 <h2><a id="8.9.3.59.2-Entity-inheritance"></a>
     8.9.3.59.2 Entity inheritance
@@ -266,7 +268,7 @@ representation is mapped.</p>
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">'IFC4X3.IFCSHAPEMODEL' IN TYPEOF(MappedRepresentation)</code></pre>
+<pre><code class="language-express hljs">'IFC4X3_TC1.<a href="IfcShapeModel.htm">IFCSHAPEMODEL</a>' IN TYPEOF(MappedRepresentation)</code></pre>
 </td>
 </tr>
 </tbody>
@@ -281,7 +283,7 @@ representation is mapped.</p>
 	HasShapeAspects : SET [0:?] OF <a href="IfcShapeAspect.htm">IfcShapeAspect</a> FOR PartOfProductDefinitionShape;
 	MapUsage : SET [0:?] OF <a href="IfcMappedItem.htm">IfcMappedItem</a> FOR MappingSource;
  WHERE
-	ApplicableMappedRepr : 'IFC4X3.IFCSHAPEMODEL' IN TYPEOF(MappedRepresentation);
+	ApplicableMappedRepr : 'IFC4X3_TC1.<a href="IfcShapeModel.htm">IFCSHAPEMODEL</a>' IN TYPEOF(MappedRepresentation);
 END_ENTITY;</code></pre>
 <h2><a id="8.9.3.59.6-References"></a>
     8.9.3.59.6 References
@@ -303,7 +305,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.9.3.59.7-Changelog"></a>
                         8.9.3.59.7 Changelog
                     <a href="IfcRepresentationMap.htm#8.9.3.59.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.9.3.59.7.1-IFC4"></a>
+<h4><a id="8.9.3.59.7.1-IFC4"></a>
                         8.9.3.59.7.1 IFC4
                     <a href="IfcRepresentationMap.htm#8.9.3.59.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -313,7 +315,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 HasShapeAspects
                                 
                             </small>
@@ -324,7 +326,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 ApplicableMappedRepr
                                 
                             </small>

@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.5 IfcBooleanResult - IFC4.3.0.0 Documentation</title>
+<title>8.8.3.5 IfcBooleanResult - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -353,7 +355,7 @@ A Boolean result is the result of a regularized operation on two solids to creat
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">NOT('IFC4X3.IFCTESSELLATEDFACESET' IN TYPEOF(FirstOperand)) OR (EXISTS(FirstOperand.Closed) AND FirstOperand.Closed)</code></pre>
+<pre><code class="language-express hljs">NOT('IFC4X3_TC1.<a href="IfcTessellatedFaceSet.htm">IFCTESSELLATEDFACESET</a>' IN TYPEOF(FirstOperand)) OR (EXISTS(FirstOperand.Closed) AND FirstOperand.Closed)</code></pre>
 </td>
 </tr>
 <tr>
@@ -375,7 +377,7 @@ A Boolean result is the result of a regularized operation on two solids to creat
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">NOT('IFC4X3.IFCTESSELLATEDFACESET' IN TYPEOF(SecondOperand)) OR (EXISTS(SecondOperand.Closed) AND SecondOperand.Closed)</code></pre>
+<pre><code class="language-express hljs">NOT('IFC4X3_TC1.<a href="IfcTessellatedFaceSet.htm">IFCTESSELLATEDFACESET</a>' IN TYPEOF(SecondOperand)) OR (EXISTS(SecondOperand.Closed) AND SecondOperand.Closed)</code></pre>
 </td>
 </tr>
 </tbody>
@@ -393,9 +395,9 @@ A Boolean result is the result of a regularized operation on two solids to creat
  DERIVE
 	 Dim : <a href="IfcDimensionCount.htm">IfcDimensionCount</a> := FirstOperand.Dim;
  WHERE
-	FirstOperandClosed : NOT('IFC4X3.IFCTESSELLATEDFACESET' IN TYPEOF(FirstOperand)) OR (EXISTS(FirstOperand.Closed) AND FirstOperand.Closed);
+	FirstOperandClosed : NOT('IFC4X3_TC1.<a href="IfcTessellatedFaceSet.htm">IFCTESSELLATEDFACESET</a>' IN TYPEOF(FirstOperand)) OR (EXISTS(FirstOperand.Closed) AND FirstOperand.Closed);
 	SameDim : FirstOperand.Dim = SecondOperand.Dim;
-	SecondOperandClosed : NOT('IFC4X3.IFCTESSELLATEDFACESET' IN TYPEOF(SecondOperand)) OR (EXISTS(SecondOperand.Closed) AND SecondOperand.Closed);
+	SecondOperandClosed : NOT('IFC4X3_TC1.<a href="IfcTessellatedFaceSet.htm">IFCTESSELLATEDFACESET</a>' IN TYPEOF(SecondOperand)) OR (EXISTS(SecondOperand.Closed) AND SecondOperand.Closed);
 END_ENTITY;</code></pre>
 <h2><a id="8.8.3.5.6-References"></a>
     8.8.3.5.6 References
@@ -417,7 +419,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.8.3.5.7-Changelog"></a>
                         8.8.3.5.7 Changelog
                     <a href="IfcBooleanResult.htm#8.8.3.5.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.8.3.5.7.1-IFC4"></a>
+<h4><a id="8.8.3.5.7.1-IFC4"></a>
                         8.8.3.5.7.1 IFC4
                     <a href="IfcBooleanResult.htm#8.8.3.5.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -427,7 +429,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 FirstOperandClosed
                                 
                             </small>
@@ -438,7 +440,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 SameDim
                                 
                             </small>
@@ -449,7 +451,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 SecondOperandClosed
                                 
                             </small>
@@ -459,7 +461,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR1
                                 
                             </small>

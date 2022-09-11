@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.29 IfcCylindricalSurface - IFC4.3.0.0 Documentation</title>
+<title>8.9.3.29 IfcCylindricalSurface - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -160,11 +162,33 @@
 <p>The inherited attributes are interpreted as</p>
 <ul>
 <li><em>SELF\<a href="IfcElementarySurface.htm">IfcElementarySurface</a>.Position</em> defines the location and orientation of the cylindrical surface.</li>
-<li><em>SELF\<a href="IfcElementarySurface.htm">IfcElementarySurface</a>.Position.Location</em> definesd a point on the axis of the cylindrical surface.</li>
+<li><em>SELF\<a href="IfcElementarySurface.htm">IfcElementarySurface</a>.Position.Location</em> defines a point on the axis of the cylindrical surface.</li>
 <li><em>SELF\<a href="IfcElementarySurface.htm">IfcElementarySurface</a>.Position.P[3]</em> defines the direction of the axis of the cylindrical surface.</li>
 </ul>
 <aside class="aside-note"><mark>NOTE</mark> Definition according to ISO/CD 10303-42:1992
-A cylindrical surface is a surface at a constant distance (the radius) from a straight line. A cylindrical surface is defined by its radius and its orientation and location. The data is to be interpreted as follows:</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>cylindrical_surface</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC4.</aside>
+A cylindrical surface is a surface at a constant distance (the radius) from a straight line. A cylindrical surface is defined by its radius and its orientation and location. The data is to be interpreted as follows:</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>cylindrical_surface</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC4.</aside><blockquote>
+<blockquote>
+<p></p><pre style=" font-size:x-small;">
+C = Position.Location
+x = Position.P[1]
+y = Position.P[2]
+z = Position.P[3]
+<em>R</em> = Radius
+</pre>
+and the surface is parameterized as:
+<figure><a id="Figure-8.9.3.29.A"></a><img alt="formula" src="../figures/ifccylindricalsurface-math1.gif"/>
+where the parametric range is -∞ &lt; <em>u,v</em> &lt; ∞ .<figcaption>Figure 8.9.3.29.A<a href="IfcCylindricalSurface.htm#Figure-8.9.3.29.A"><i data-feather="link"></i></a></figcaption></figure>
+</blockquote>
+<p>In the above parameterization the length unit for the unit vectors <strong>z</strong> is equal to that of the radius <strong><em>R</em></strong>. In the placement coordinate system defined above, the surface is represented by the equation <em>S</em> = 0, where</p>
+<blockquote>
+<figure><a id="Figure-8.9.3.29.B"></a><img alt="formula" src="../figures/ifccylindricalsurface-math2.gif"/>
+The positive direction of the normal to the surface at any point on the surface is given by<figcaption>Figure 8.9.3.29.B<a href="IfcCylindricalSurface.htm#Figure-8.9.3.29.B"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a id="Figure-8.9.3.29.C"></a><img alt="formula" src="../figures/ifccylindricalsurface-math3.gif"/>, or as unit normal by<figcaption>Figure 8.9.3.29.C<a href="IfcCylindricalSurface.htm#Figure-8.9.3.29.C"><i data-feather="link"></i></a></figcaption></figure>
+<figure><a id="Figure-8.9.3.29.D"></a><img alt="formula" src="../figures/ifccylindricalsurface-math4.gif"/><figcaption>Figure 8.9.3.29.D<a href="IfcCylindricalSurface.htm#Figure-8.9.3.29.D"><i data-feather="link"></i></a></figcaption></figure>
+<p>The direction of the normal is away from the axis of the cylinder.
+</p>
+</blockquote>
+</blockquote>
 <h2><a id="8.9.3.29.2-Entity-inheritance"></a>
     8.9.3.29.2 Entity inheritance
 <a href="IfcCylindricalSurface.htm#8.9.3.29.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
@@ -237,7 +261,7 @@ A cylindrical surface is a surface at a constant distance (the radius) from a st
     8.9.3.29.3 Attributes
 <a href="IfcCylindricalSurface.htm#8.9.3.29.3-Attributes"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a id="Table-8.9.3.29.A"></a><table class="striped grouped attributes">
+<figure><a id="Table-8.9.3.29.E"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -351,7 +375,7 @@ A cylindrical surface is a surface at a constant distance (the radius) from a st
 </td>
 </tr>
 </tbody>
-</table><figcaption>Table 8.9.3.29.A<a href="IfcCylindricalSurface.htm#Table-8.9.3.29.A"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>Table 8.9.3.29.E<a href="IfcCylindricalSurface.htm#Table-8.9.3.29.E"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a id="8.9.3.29.4-Formal-representation"></a>
     8.9.3.29.4 Formal representation
 <a href="IfcCylindricalSurface.htm#8.9.3.29.4-Formal-representation"><i data-feather="link"></i></a></h2>
@@ -376,7 +400,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.9.3.29.6-Changelog"></a>
                         8.9.3.29.6 Changelog
                     <a href="IfcCylindricalSurface.htm#8.9.3.29.6-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.9.3.29.6.1-IFC4"></a>
+<h4><a id="8.9.3.29.6.1-IFC4"></a>
                         8.9.3.29.6.1 IFC4
                     <a href="IfcCylindricalSurface.htm#8.9.3.29.6.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">

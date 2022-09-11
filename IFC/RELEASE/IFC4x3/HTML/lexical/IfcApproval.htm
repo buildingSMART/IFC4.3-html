@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.2.3.1 IfcApproval - IFC4.3.0.0 Documentation</title>
+<title>8.2.3.1 IfcApproval - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -424,7 +426,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.2.3.1.7-Changelog"></a>
                         8.2.3.1.7 Changelog
                     <a href="IfcApproval.htm#8.2.3.1.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.2.3.1.7.1-IFC4"></a>
+<h4><a id="8.2.3.1.7.1-IFC4"></a>
                         8.2.3.1.7.1 IFC4
                     <a href="IfcApproval.htm#8.2.3.1.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -434,7 +436,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 GivingApproval
                                 
                             </small>
@@ -445,7 +447,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 Identifier
                                 
                             </small>
@@ -456,7 +458,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 RequestingApproval
                                 
                             </small>
@@ -467,7 +469,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 ApprovedResources
                                 
                             </small>
@@ -478,7 +480,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 IsRelatedWith
                                 
                             </small>
@@ -489,7 +491,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 HasIdentifierOrName
                                 
                             </small>
@@ -499,7 +501,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                attributes,
+                                attribute,
                                 ApprovalStatus
                                 
                             </small>
@@ -508,16 +510,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes ApprovalDateTime definition,
-                                Changed from IfcDateTimeSelect to <a href="IfcLabel.htm">IfcLabel</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                attributes ApprovalDateTime is_optional,
-                                Changed from False to True
+                                attribute ApprovalDateTime name,
+                                Changed from
+"ApprovalDateTime"
+to
+"Name"
                                 
                             </small>
 </li>
@@ -525,8 +522,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes ApprovalDateTime name,
-                                Changed from ApprovalDateTime to Name
+                                attribute ApprovalDateTime optional,
+                                Changed from
+"False"
+to
+"True"
                                 
                             </small>
 </li>
@@ -534,16 +534,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes ApprovalLevel definition,
-                                Changed from <a href="IfcLabel.htm">IfcLabel</a> to <a href="IfcDateTime.htm">IfcDateTime</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                attributes ApprovalLevel name,
-                                Changed from ApprovalLevel to TimeOfApproval
+                                attribute ApprovalDateTime type,
+                                Changed from
+"IfcDateTimeSelect"
+to
+"<a href="IfcLabel.htm">IfcLabel</a>"
                                 
                             </small>
 </li>
@@ -551,16 +546,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes ApprovalQualifier definition,
-                                Changed from <a href="IfcText.htm">IfcText</a> to <a href="IfcLabel.htm">IfcLabel</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                attributes ApprovalQualifier name,
-                                Changed from ApprovalQualifier to Status
+                                attribute ApprovalLevel name,
+                                Changed from
+"ApprovalLevel"
+to
+"TimeOfApproval"
                                 
                             </small>
 </li>
@@ -568,16 +558,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes Identifier definition,
-                                Changed from <a href="IfcIdentifier.htm">IfcIdentifier</a> to <a href="IfcText.htm">IfcText</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                attributes Identifier is_optional,
-                                Changed from False to True
+                                attribute ApprovalLevel type,
+                                Changed from
+"<a href="IfcLabel.htm">IfcLabel</a>"
+to
+"<a href="IfcDateTime.htm">IfcDateTime</a>"
                                 
                             </small>
 </li>
@@ -585,8 +570,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes Identifier name,
-                                Changed from Identifier to Qualifier
+                                attribute ApprovalQualifier name,
+                                Changed from
+"ApprovalQualifier"
+to
+"Status"
                                 
                             </small>
 </li>
@@ -594,8 +582,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes Name is_optional,
-                                Changed from False to True
+                                attribute ApprovalQualifier type,
+                                Changed from
+"<a href="IfcText.htm">IfcText</a>"
+to
+"<a href="IfcLabel.htm">IfcLabel</a>"
                                 
                             </small>
 </li>
@@ -603,8 +594,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes Name name,
-                                Changed from Name to Level
+                                attribute Identifier name,
+                                Changed from
+"Identifier"
+to
+"Qualifier"
                                 
                             </small>
 </li>
@@ -612,8 +606,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                inverses Actors definition,
-                                Changed from SET OF [0:?] IfcApprovalActorRelationship FOR Approval to SET OF [0:?] <a href="IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects
+                                attribute Identifier optional,
+                                Changed from
+"False"
+to
+"True"
                                 
                             </small>
 </li>
@@ -621,8 +618,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                inverses Actors name,
-                                Changed from Actors to HasExternalReferences
+                                attribute Identifier type,
+                                Changed from
+"<a href="IfcIdentifier.htm">IfcIdentifier</a>"
+to
+"<a href="IfcText.htm">IfcText</a>"
                                 
                             </small>
 </li>
@@ -630,8 +630,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                inverses IsRelatedWith definition,
-                                Changed from SET OF [0:?] <a href="IfcApprovalRelationship.htm">IfcApprovalRelationship</a> FOR RelatedApproval to SET OF [0:?] <a href="IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a> FOR RelatingApproval
+                                attribute Name name,
+                                Changed from
+"Name"
+to
+"Level"
                                 
                             </small>
 </li>
@@ -639,8 +642,59 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                inverses IsRelatedWith name,
-                                Changed from IsRelatedWith to ApprovedObjects
+                                attribute Name optional,
+                                Changed from
+"False"
+to
+"True"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                inverse attribute Actors name,
+                                Changed from
+"Actors"
+to
+"HasExternalReferences"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                inverse attribute Actors type,
+                                Changed from
+"SET OF [0:?] IfcApprovalActorRelationship FOR Approval"
+to
+"SET OF [0:?] <a href="IfcExternalReferenceRelationship.htm">IfcExternalReferenceRelationship</a> FOR RelatedResourceObjects"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                inverse attribute IsRelatedWith name,
+                                Changed from
+"IsRelatedWith"
+to
+"ApprovedObjects"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                inverse attribute IsRelatedWith type,
+                                Changed from
+"SET OF [0:?] <a href="IfcApprovalRelationship.htm">IfcApprovalRelationship</a> FOR RelatedApproval"
+to
+"SET OF [0:?] <a href="IfcRelAssociatesApproval.htm">IfcRelAssociatesApproval</a> FOR RelatingApproval"
                                 
                             </small>
 </li>

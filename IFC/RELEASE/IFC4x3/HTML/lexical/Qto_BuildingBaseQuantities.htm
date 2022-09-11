@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.4.5.1 Qto_BuildingBaseQuantities - IFC4.3.0.0 Documentation</title>
+<title>5.4.5.1 Qto_BuildingBaseQuantities - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -109,10 +111,9 @@
     5.4.5.1.2 Applicable entities
 <a href="Qto_BuildingBaseQuantities.htm#5.4.5.1.2-Applicable-entities"><i data-feather="link"></i></a></h2>
 <aside>
-<mark>QTO_TYPEDRIVENOVERRIDE</mark>
-    The element quantity defined by this <a href="IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> can be
-assigned to subtypes of <a href="IfcTypeObject.htm">IfcTypeObject</a> and can be overridden
-by an element quantity with same name at subtypes of <a href="IfcObject.htm">IfcObject</a>.
+<mark>QTO_OCCURRENCEDRIVEN</mark>
+    The element quantity defined by this <a href="IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> can only be
+assigned to subtypes of <a href="IfcObject.htm">IfcObject</a>.
 </aside>
 <ul>
 <li><a href="IfcBuilding.htm">IfcBuilding</a></li>
@@ -134,7 +135,7 @@ by an element quantity with same name at subtypes of <a href="IfcObject.htm">Ifc
 <td>Height</td>
 <td><a href="IfcQuantityLength.htm">IfcQuantityLength</a></td>
 <td>
-<p>Characteristic height.</p><p>Standard gross height of this building, from the top surface of the construction floor, to the top surface of the construction floor or roof above. Only provided is there is a constant height.</p>
+<p>Characteristic height</p><p>Standard gross height of this building, from the top surface of the construction floor, to the top surface of the construction floor or roof above. Only provided is there is a constant height.</p>
 </td>
 <td><a class="button" href="../property/Height.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -158,7 +159,7 @@ by an element quantity with same name at subtypes of <a href="IfcObject.htm">Ifc
 <td>GrossFloorArea</td>
 <td><a href="IfcQuantityArea.htm">IfcQuantityArea</a></td>
 <td>
-<p>Sum of all gross floor areas covered by the spaces within the spatial structure element.</p><p>Includes the area of construction elements within the building. May be provided in addition to the quantities of the spaces and the construction elements assigend to the building. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence.</p>
+<p>Sum of all gross floor areas covered by the spaces within the spatial structure element.</p><p>Includes the area of construction elements within the building. May be provided in addition to the quantities of the spaces and the construction elements assigned to the building. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence.</p>
 </td>
 <td><a class="button" href="../property/GrossFloorArea.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -166,7 +167,7 @@ by an element quantity with same name at subtypes of <a href="IfcObject.htm">Ifc
 <td>NetFloorArea</td>
 <td><a href="IfcQuantityArea.htm">IfcQuantityArea</a></td>
 <td>
-<p>Sum of all net usable floor areas.</p><p>It excludes the area of construction elements within the building. May be provided in addition to the quantities of the spaces assigend to the building. In case of inconsistencies, the individual quantities of spaces take precedence.</p>
+<p>Sum of all net usable floor areas.</p><p>It excludes the area of construction elements within the building. May be provided in addition to the quantities of the spaces assigned to the building. In case of inconsistencies, the individual quantities of spaces take precedence.</p>
 </td>
 <td><a class="button" href="../property/NetFloorArea.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -174,7 +175,7 @@ by an element quantity with same name at subtypes of <a href="IfcObject.htm">Ifc
 <td>GrossVolume</td>
 <td><a href="IfcQuantityVolume.htm">IfcQuantityVolume</a></td>
 <td>
-<p>Total gross volume of the object. Openings, recesses, enclosed objects and projections are not taken into account.</p><p>Sum of all gross volumes of spaces enclosed. It includes the volumes of construction elements within the element. May be provided in addition to the quantities of the spaces and the construction elements assigend to the element. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence.</p>
+<p>Total gross volume of the object. Openings, recesses, enclosed objects and projections are not taken into account.</p><p>Sum of all gross volumes of spaces enclosed. It includes the volumes of construction elements within the element. May be provided in addition to the quantities of the spaces and the construction elements assigned to the element. In case of inconsistencies, the individual quantities of spaces and construction elements take precedence.</p>
 </td>
 <td><a class="button" href="../property/GrossVolume.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -182,7 +183,7 @@ by an element quantity with same name at subtypes of <a href="IfcObject.htm">Ifc
 <td>NetVolume</td>
 <td><a href="IfcQuantityVolume.htm">IfcQuantityVolume</a></td>
 <td>
-<p>Total net volume of the object, taking into account possible processing features (cut-out's, etc.) or openings and recesses.</p><p>Sum of all net volumes of spaces enclosed by the building. It excludes the volumes of construction elements within the building. May be provided in addition to the quantities of the spaces assigend to the building. In case of inconsistencies, the individual quantities of spaces take precedence.</p>
+<p>Total net volume of the object, taking into account possible processing features (cut-out's, etc.) or openings and recesses.</p><p>Sum of all net volumes of spaces enclosed by the building. It excludes the volumes of construction elements within the building. May be provided in addition to the quantities of the spaces assigned to the building. In case of inconsistencies, the individual quantities of spaces take precedence.</p>
 </td>
 <td><a class="button" href="../property/NetVolume.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -199,7 +200,7 @@ by an element quantity with same name at subtypes of <a href="IfcObject.htm">Ifc
 <h3><a id="5.4.5.1.4-Changelog"></a>
                         5.4.5.1.4 Changelog
                     <a href="Qto_BuildingBaseQuantities.htm#5.4.5.1.4-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="5.4.5.1.4.1-IFC4"></a>
+<h4><a id="5.4.5.1.4.1-IFC4"></a>
                         5.4.5.1.4.1 IFC4
                     <a href="Qto_BuildingBaseQuantities.htm#5.4.5.1.4.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -214,9 +215,9 @@ by an element quantity with same name at subtypes of <a href="IfcObject.htm">Ifc
                             </small>
 </li>
 </ul>
-<h4 class="collapsed"><a id="5.4.5.1.4.2-IFC4.3"></a>
-                        5.4.5.1.4.2 IFC4.3
-                    <a href="Qto_BuildingBaseQuantities.htm#5.4.5.1.4.2-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="5.4.5.1.4.2-IFC4.3-TC1"></a>
+                        5.4.5.1.4.2 IFC4.3_TC1
+                    <a href="Qto_BuildingBaseQuantities.htm#5.4.5.1.4.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>

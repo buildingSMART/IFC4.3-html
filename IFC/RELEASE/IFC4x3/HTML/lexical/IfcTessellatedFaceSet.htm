@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.44 IfcTessellatedFaceSet - IFC4.3.0.0 Documentation</title>
+<title>8.8.3.44 IfcTessellatedFaceSet - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -164,7 +166,7 @@
 <a href="IfcTessellatedFaceSet.htm#8.8.3.44.1-Semantic-definition"><i data-feather="link"></i></a></h2>
 <p>The <em><a href="IfcTessellatedFaceSet.htm">IfcTessellatedFaceSet</a></em> is a boundary representation topological model limited to planar faces and straight edges. It may represent an approximation of an analytical surface or solid that may be provided in addition to its tessellation as a separate shape representation. The <em><a href="IfcTessellatedFaceSet.htm">IfcTessellatedFaceSet</a></em> provides a compact data representation of an connected face set using indices into ordered lists of vertices, normals, colours, and texture maps.</p>
 <aside class="aside-note"><mark>NOTE</mark>  The compact representation has been chosen to enable small data sets despite potentially large sets of faces, edges and vertices needed to represent tessellations of analyticals surfaces and solids, and despite large sets of colour and texture information to annotate the tessellated faces.</aside>
-<p>The <em><a href="IfcTessellatedFaceSet.htm">IfcTessellatedFaceSet</a></em> is an abstract supertype of tesselated face sets each imposing specific constraints on face generation for tessellation, such as triangulation (with or without strip and fans), or quadrilaterals, or polygonal faces (with or without inner loops).</p>
+<p>The <em><a href="IfcTessellatedFaceSet.htm">IfcTessellatedFaceSet</a></em> is an abstract supertype of tessellated face sets each imposing specific constraints on face generation for tessellation, such as triangulation (with or without strip and fans), or quadrilaterals, or polygonal faces (with or without inner loops).</p>
 <aside class="aside-note"><mark>NOTE</mark>  Not all different constraints on face sets are included as specific subtypes in this release of the specification.</aside>
 <p>The following attributes apply to all subtypes:</p>
 <ul>
@@ -306,7 +308,7 @@
 <tr class="group">
 <td colspan="4">
 <a href="IfcTessellatedFaceSet.htm">IfcTessellatedFaceSet</a>
-<small>(5)</small>
+<small>(4)</small>
 </td>
 </tr>
 <tr>
@@ -319,18 +321,6 @@
 <td data-label="Type"><a href="IfcCartesianPointList3D.htm">IfcCartesianPointList3D</a></td>
 <td data-label="Description">
 <p>An ordered list of Cartesian points used by the coordinate index defined at the subtypes of <em><a href="IfcTessellatedFaceSet.htm">IfcTessellatedFaceSet</a></em>.</p>
-</td>
-</tr>
-<tr>
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                Closed
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="IfcBoolean.htm">IfcBoolean</a></td>
-<td data-label="Description">
-<p>Indication whether the <em><a href="IfcTessellatedFaceSet.htm">IfcTessellatedFaceSet</a></em> is a closed shell (TRUE) or an open shell (FALSE). If omitted no such information can be asserted.</p>
 </td>
 </tr>
 <tr>
@@ -378,7 +368,6 @@
 	,<a href="IfcTriangulatedFaceSet.htm">IfcTriangulatedFaceSet</a>))
  SUBTYPE OF (<a href="IfcTessellatedItem.htm">IfcTessellatedItem</a>);
 	Coordinates : <a href="IfcCartesianPointList3D.htm">IfcCartesianPointList3D</a>;
-	Closed : OPTIONAL <a href="IfcBoolean.htm">IfcBoolean</a>;
  DERIVE
 	 Dim : <a href="IfcDimensionCount.htm">IfcDimensionCount</a> := 3;
  INVERSE
@@ -407,7 +396,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.8.3.44.6-Changelog"></a>
                         8.8.3.44.6 Changelog
                     <a href="IfcTessellatedFaceSet.htm#8.8.3.44.6-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.8.3.44.6.1-IFC4"></a>
+<h4><a id="8.8.3.44.6.1-IFC4"></a>
                         8.8.3.44.6.1 IFC4
                     <a href="IfcTessellatedFaceSet.htm#8.8.3.44.6.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -418,22 +407,6 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 New resource
-                                
-                            </small>
-</li>
-</ul>
-<h4 class="collapsed"><a id="8.8.3.44.6.2-IFC4.3"></a>
-                        8.8.3.44.6.2 IFC4.3
-                    <a href="IfcTessellatedFaceSet.htm#8.8.3.44.6.2-IFC4.3"><i data-feather="link"></i></a></h4>
-<ul class="changelog">
-<li>
-<small>
-<i data-feather="plus-square"></i>
-                                
-                                
-                                
-                                attributes,
-                                Closed
                                 
                             </small>
 </li>

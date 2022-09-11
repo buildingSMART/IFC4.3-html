@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.25 IfcManifoldSolidBrep - IFC4.3.0.0 Documentation</title>
+<title>8.8.3.25 IfcManifoldSolidBrep - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -165,7 +167,17 @@
 <p>The <em><a href="IfcManifoldSolidBrep.htm">IfcManifoldSolidBrep</a></em> is a solid represented as a collection of connected surfaces that delimit the solid from the surrounding non-solid.</p>
 <p>Instances of type <em><a href="IfcManifoldSolidBrep.htm">IfcManifoldSolidBrep</a></em> shall be of type <em><a href="IfcFacetedBrep.htm">IfcFacetedBrep</a></em>, using only <em><a href="IfcPolyLoop.htm">IfcPolyLoop</a></em> for the bounds of <em><a href="IfcFaceBound.htm">IfcFaceBound</a></em>, or of type <em><a href="IfcAdvancedBrep.htm">IfcAdvancedBrep</a></em>, using only <em><a href="IfcAdvancedFace.htm">IfcAdvancedFace</a></em> for the face geometry, and <em><a href="IfcEdgeCurve.htm">IfcEdgeCurve</a></em> for the edges.</p>
 <aside class="aside-note"><mark>NOTE</mark> Definition according to ISO/CD 10303-42:1992
-A manifold solid b-rep is a finite, arcwise connected volume bounded by one or more surfaces, each of which is a connected, oriented, finite, closed 2-manifold. There is no restriction on the genus of the volume, nor on the number of voids within the volume.</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>manifold_solid_brep</strong> defined in ISO 10303-42.</aside><aside class="aside-history:"><mark>HISTORY:</mark> New entity in IFC Release 1.0</aside>
+A manifold solid b-rep is a finite, arcwise connected volume bounded by one or more surfaces, each of which is a connected, oriented, finite, closed 2-manifold. There is no restriction on the genus of the volume, nor on the number of voids within the volume.</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>manifold_solid_brep</strong> defined in ISO 10303-42.</aside><aside class="aside-history:"><mark>HISTORY:</mark> New entity in IFC Release 1.0</aside><blockquote>
+<p>The Boundary Representation (B-rep) of a manifold solid utilizes a graph of edges and vertices embedded in a connected, oriented, finite, closed two manifold surface. The embedded graph divides the surface into arcwise connected areas known as faces. The edges and vertices, therefore, form the boundaries of the face and the domain of a face does not include its boundaries. The embedded graph may be disconnected and may be a pseudo graph. The graph is labeled; that is, each entity in the graph has a unique identity. The geometric surface definition used to specify the geometry of a face shall be 2-manifold embeddable in the plane within the domain of the face. In other words, it shall be connected, oriented, finite, non-self-intersecting, and of surface genus 0.</p>
+<p>Faces do not intersect except along their boundaries. Each edge along the boundary of a face is shared by at most one other face in the assemblage. The assemblage of edges in the B-rep do not intersect except at their boundaries (i.e., vertices). The geometry curve definition used to specify the geometry of an edge shall be arcwise connected and shall not self intersect or overlap within the domain of the edge. The geometry of an edge shall be consistent with the geometry of the faces of which it forms a partial bound. The geometry used to define a vertex shall be consistent with the geometry of the faces and edges of which it forms a partial bound.</p>
+<p>The geometry used to define a vertex shall be consistent with the geometry of the faces and edges of which it forms a partial bound.</p>
+<p>A B-rep is represented by one or more closed shells which shall be disjoint. One shell, the outer, shall completely enclose all the other shells and no other shell may enclose a shell. The facility to define a B-rep with one or more internal voids is provided by a subtype. The following version of the Euler formula shall be satisfied,</p>
+<blockquote>
+<figure><a id="Figure-8.8.3.25.A"></a><img alt="math" src="../figures/ifcmanifoldsolidbrep-math1.gif"/>
+where V, E, F, L~l~ and S are the numbers of unique vertices, edges, faces, loop uses and shells in the model and G^s^ is the sum of the genus of the shells.
+<figcaption>Figure 8.8.3.25.A<a href="IfcManifoldSolidBrep.htm#Figure-8.8.3.25.A"><i data-feather="link"></i></a></figcaption></figure>
+</blockquote>
+</blockquote>
 <p><strong>Informal proposition</strong>:</p>
 <ol>
 <li>The dimensionality of a manifold solid brep shall be 3.</li>
@@ -246,7 +258,7 @@ A manifold solid b-rep is a finite, arcwise connected volume bounded by one or m
     8.8.3.25.3 Attributes
 <a href="IfcManifoldSolidBrep.htm#8.8.3.25.3-Attributes"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a id="Table-8.8.3.25.A"></a><table class="striped grouped attributes">
+<figure><a id="Table-8.8.3.25.B"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -341,7 +353,7 @@ A manifold solid b-rep is a finite, arcwise connected volume bounded by one or m
 </td>
 </tr>
 </tbody>
-</table><figcaption>Table 8.8.3.25.A<a href="IfcManifoldSolidBrep.htm#Table-8.8.3.25.A"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>Table 8.8.3.25.B<a href="IfcManifoldSolidBrep.htm#Table-8.8.3.25.B"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a id="8.8.3.25.4-Formal-representation"></a>
     8.8.3.25.4 Formal representation
 <a href="IfcManifoldSolidBrep.htm#8.8.3.25.4-Formal-representation"><i data-feather="link"></i></a></h2>

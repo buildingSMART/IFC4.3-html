@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>7.10.3.15 IfcStructuralLoadCase - IFC4.3.0.0 Documentation</title>
+<title>7.10.3.15 IfcStructuralLoadCase - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -352,7 +354,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED.</p>
+<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED or when the concrete entity instantiated does not have a PredefinedType attribute. The latter is the case in some exceptional leaf classes and when instantiating <a href="IfcBuiltElement.htm">IfcBuiltElement</a> directly. </p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -423,9 +425,7 @@
 </td>
 <td data-label="Type">SET [0:?] OF <a href="IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a> FOR RelatedElements</td>
 <td data-label="Description">
-<p>
-<em>No description available.</em>
-</p>
+<p>Reference to the relationship <em><a href="IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a></em> that relates the group to a spatial element.</p>
 </td>
 </tr>
 <tr class="group-inherited">
@@ -904,7 +904,7 @@ END_ENTITY;</code></pre>
 <h3><a id="7.10.3.15.9-Changelog"></a>
                         7.10.3.15.9 Changelog
                     <a href="IfcStructuralLoadCase.htm#7.10.3.15.9-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="7.10.3.15.9.1-IFC4"></a>
+<h4><a id="7.10.3.15.9.1-IFC4"></a>
                         7.10.3.15.9.1 IFC4
                     <a href="IfcStructuralLoadCase.htm#7.10.3.15.9.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">

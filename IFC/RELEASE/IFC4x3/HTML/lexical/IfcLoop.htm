@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.20.3.11 IfcLoop - IFC4.3.0.0 Documentation</title>
+<title>8.20.3.11 IfcLoop - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -156,7 +158,12 @@
     8.20.3.11.1 Semantic definition
 <a href="IfcLoop.htm#8.20.3.11.1-Semantic-definition"><i data-feather="link"></i></a></h2>
 <aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO/CD 10303-42:1992
-A loop is a topological entity constructed from a single vertex, or by stringing together connected (oriented) edges, or linear segments beginning and ending at the same vertex. It is typically used to bound a face lying on a surface. A loop has dimensionality of 0 or 1. The domain of a 0-dimensional loop is a single point. The domain of a 1-dimensional loop is a connected, oriented curve, but need not to be manifold. As the loop is a circle, the location of its beginning/ending point is arbitrary. The domain of the loop includes its bounds, an 0 ≤ Ξ &lt; ∞. A loop is represented by a single vertex, or by an ordered collection of oriented edges, or by an ordered collection of points. A loop is a graph, so <em>M</em> and the graph genus <em>G^l^</em> may be determined by the graph traversal algorithm. Since <em>M</em> = 1, the Euler equation (1) reduces in this case to</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>loop</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x.</aside>
+A loop is a topological entity constructed from a single vertex, or by stringing together connected (oriented) edges, or linear segments beginning and ending at the same vertex. It is typically used to bound a face lying on a surface. A loop has dimensionality of 0 or 1. The domain of a 0-dimensional loop is a single point. The domain of a 1-dimensional loop is a connected, oriented curve, but need not to be manifold. As the loop is a circle, the location of its beginning/ending point is arbitrary. The domain of the loop includes its bounds, an 0 ≤ Ξ &lt; ∞. A loop is represented by a single vertex, or by an ordered collection of oriented edges, or by an ordered collection of points. A loop is a graph, so <em>M</em> and the graph genus <em>G^l^</em> may be determined by the graph traversal algorithm. Since <em>M</em> = 1, the Euler equation (1) reduces in this case to</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>loop</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x.</aside><blockquote>
+<blockquote>
+<figure><a id="Figure-8.20.3.11.A"></a><img alt="Image" src="../figures/ifcloop-math1.gif"/>
+ where <em>V</em> and <em>E~l~</em> are the number of unique vertices and oriented edges in the loop and <em>G^l^</em> is the genus of the loop.<figcaption>Figure 8.20.3.11.A<a href="IfcLoop.htm#Figure-8.20.3.11.A"><i data-feather="link"></i></a></figcaption></figure>
+</blockquote>
+</blockquote>
 <p>Informal Propositions:</p>
 <ol>
 <li>A loop has a finite extent.</li>
@@ -206,7 +213,7 @@ A loop is a topological entity constructed from a single vertex, or by stringing
     8.20.3.11.3 Attributes
 <a href="IfcLoop.htm#8.20.3.11.3-Attributes"><i data-feather="link"></i></a></h2>
 <!-- <a class="button primary hide-inverse"><i data-feather="eye-off"></i> Hide inverse</a> -->
-<figure><a id="Table-8.20.3.11.A"></a><table class="striped grouped attributes">
+<figure><a id="Table-8.20.3.11.B"></a><table class="striped grouped attributes">
 <colgroup>
 <col style="width: 20px;"/>
 <col/>
@@ -251,7 +258,7 @@ A loop is a topological entity constructed from a single vertex, or by stringing
 </td>
 </tr>
 </tbody>
-</table><figcaption>Table 8.20.3.11.A<a href="IfcLoop.htm#Table-8.20.3.11.A"><i data-feather="link"></i></a></figcaption></figure>
+</table><figcaption>Table 8.20.3.11.B<a href="IfcLoop.htm#Table-8.20.3.11.B"><i data-feather="link"></i></a></figcaption></figure>
 <h2><a id="8.20.3.11.4-Formal-representation"></a>
     8.20.3.11.4 Formal representation
 <a href="IfcLoop.htm#8.20.3.11.4-Formal-representation"><i data-feather="link"></i></a></h2>

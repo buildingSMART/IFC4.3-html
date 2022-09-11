@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.16.3.11 IfcPropertyReferenceValue - IFC4.3.0.0 Documentation</title>
+<title>8.16.3.11 IfcPropertyReferenceValue - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -180,7 +182,7 @@
 <i data-feather="arrow-up"></i>
 <ul class="classes classes-in-chain">
 <li class="abstract ancestor"><a href="IfcSimpleProperty.htm">IfcSimpleProperty</a></li>
-<li class="deprecated"><a href="IfcComplexProperty.htm">IfcComplexProperty</a></li>
+<li class=""><a href="IfcComplexProperty.htm">IfcComplexProperty</a></li>
 </ul>
 </li>
 <li>
@@ -394,7 +396,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.16.3.11.6-Changelog"></a>
                         8.16.3.11.6 Changelog
                     <a href="IfcPropertyReferenceValue.htm#8.16.3.11.6-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.16.3.11.6.1-IFC4"></a>
+<h4><a id="8.16.3.11.6.1-IFC4"></a>
                         8.16.3.11.6.1 IFC4
                     <a href="IfcPropertyReferenceValue.htm#8.16.3.11.6.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -402,8 +404,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes PropertyReference is_optional,
-                                Changed from False to True
+                                attribute PropertyReference optional,
+                                Changed from
+"False"
+to
+"True"
                                 
                             </small>
 </li>
@@ -411,9 +416,13 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes UsageName definition,
-                                Changed from <a href="IfcLabel.htm">IfcLabel</a> to <a href="IfcText.htm">IfcText</a>
-</small>
+                                attribute UsageName type,
+                                Changed from
+"<a href="IfcLabel.htm">IfcLabel</a>"
+to
+"<a href="IfcText.htm">IfcText</a>"
+                                
+                            </small>
 </li>
 </ul>
 </div>

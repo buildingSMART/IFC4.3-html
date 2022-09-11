@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>6.5.3.4 IfcPermit - IFC4.3.0.0 Documentation</title>
+<title>6.5.3.4 IfcPermit - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -334,7 +336,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED.</p>
+<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED or when the concrete entity instantiated does not have a PredefinedType attribute. The latter is the case in some exceptional leaf classes and when instantiating <a href="IfcBuiltElement.htm">IfcBuiltElement</a> directly. </p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -872,7 +874,7 @@ END_ENTITY;</code></pre>
 <h3><a id="6.5.3.4.8-Changelog"></a>
                         6.5.3.4.8 Changelog
                     <a href="IfcPermit.htm#6.5.3.4.8-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="6.5.3.4.8.1-IFC4"></a>
+<h4><a id="6.5.3.4.8.1-IFC4"></a>
                         6.5.3.4.8.1 IFC4
                     <a href="IfcPermit.htm#6.5.3.4.8.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -882,7 +884,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 LongDescription
                                 
                             </small>
@@ -893,7 +895,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                attributes,
+                                attribute,
                                 Status
                                 
                             </small>
@@ -903,7 +905,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                unique_rules,
+                                unique rule,
                                 UR2
                                 
                             </small>
@@ -912,16 +914,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes PermitID definition,
-                                Changed from <a href="IfcIdentifier.htm">IfcIdentifier</a> to <a href="IfcPermitTypeEnum.htm">IfcPermitTypeEnum</a>
-</small>
-</li>
-<li>
-<small>
-<i data-feather="edit"></i>
-                                
-                                attributes PermitID is_optional,
-                                Changed from False to True
+                                attribute PermitID name,
+                                Changed from
+"PermitID"
+to
+"PredefinedType"
                                 
                             </small>
 </li>
@@ -929,8 +926,23 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes PermitID name,
-                                Changed from PermitID to PredefinedType
+                                attribute PermitID optional,
+                                Changed from
+"False"
+to
+"True"
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attribute PermitID type,
+                                Changed from
+"<a href="IfcIdentifier.htm">IfcIdentifier</a>"
+to
+"<a href="IfcPermitTypeEnum.htm">IfcPermitTypeEnum</a>"
                                 
                             </small>
 </li>

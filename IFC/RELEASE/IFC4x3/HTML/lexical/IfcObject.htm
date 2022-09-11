@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.1.3.6 IfcObject - IFC4.3.0.0 Documentation</title>
+<title>5.1.3.6 IfcObject - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -124,7 +126,7 @@
 <li><strong>Assignment of other objects</strong> - an assignment relationship that refers to other types of objects. See supertype <em><a href="IfcObjectDefinition.htm">IfcObjectDefinition</a></em> for more information.</li>
 <li><strong>Aggregation of other objects</strong> - an aggregation relationship that establishes a whole/part relation. Objects can either be a whole, or a part, or both. See supertype <em><a href="IfcObjectDefinition.htm">IfcObjectDefinition</a></em> for more information.</li>
 <li><strong>Assignment of a type</strong> : <em>IsTypedBy</em> - a definition relationship <em><a href="IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> that uses a type definition to define the common characteristics of this occurrences, potentially including the common shape representation and common properties of all object occurrences assigned to this type. It is a specific - occurrence relationship with implied dependencies (as the occurrence properties depend on the properties of the type, but may override them).</li>
-<li><strong>Assignment of a partial type</strong> : <em>IsDeclaredBy</em>, <em>Declares</em> - a definition relationship <em><a href="IfcRelDefinesByObject.htm">IfcRelDefinesByObject</a></em> that uses a component of a type definition (a part of a type, called the "declaring part") to define a component of an occurence (part of occurrence, called the "reflected part"). This is also referred to as a "deep copy". The common characteristics of all parts in the occurrence are defined by parts in the type. It is a specific - occurrence relationship with implied dependencies (as the occurrence properties depend on the properties of the type, but may override them).</li>
+<li><strong>Assignment of a partial type</strong> : <em>IsDeclaredBy</em>, <em>Declares</em> - a definition relationship <em><a href="IfcRelDefinesByObject.htm">IfcRelDefinesByObject</a></em> that uses a component of a type definition (a part of a type, called the "declaring part") to define a component of an occurrence (part of occurrence, called the "reflected part"). This is also referred to as a "deep copy". The common characteristics of all parts in the occurrence are defined by parts in the type. It is a specific - occurrence relationship with implied dependencies (as the occurrence properties depend on the properties of the type, but may override them).</li>
 <li><strong>Assignment of property sets</strong> : <em>IsDefinedBy</em> - a definition relationship <em><a href="IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a></em> that assigns property set definitions to the object occurrence.</li>
 </ul>
 <aside class="aside-note"><mark>NOTE</mark>  See <em><a href="IfcRelDefinesByType.htm">IfcRelDefinesByType</a></em> for an explanatory figure. Also see there for how to override type properties by occurrence properties. See <em><a href="IfcRelDefinesByObject.htm">IfcRelDefinesByObject</a></em> for an explanatory figure for the assignment of a partial type.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC1.0</aside><aside class="aside-change"><mark>IFC4-CHANGE</mark>  The inverse relationships <em>Declares</em>, <em>IsDeclaredBy</em>, and <em>IsTypedBy</em> have been added, types are not longer included in the <em>IsDefinesBy</em> relationship. <em><a href="IfcProject.htm">IfcProject</a></em> has been promoted to be a subtype of <em><a href="IfcObjectDefinition.htm">IfcObjectDefinition</a></em> -&gt; <em><a href="IfcContext.htm">IfcContext</a></em>.</aside>
@@ -353,7 +355,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED.</p>
+<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED or when the concrete entity instantiated does not have a PredefinedType attribute. The latter is the case in some exceptional leaf classes and when instantiating <a href="IfcBuiltElement.htm">IfcBuiltElement</a> directly. </p>
 </td>
 </tr>
 <tr>
@@ -781,6 +783,7 @@ END_ENTITY;</code></pre>
 <li><i data-feather="paperclip"></i><a href="IfcImpactProtectionDevice.htm">IfcImpactProtectionDevice</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcInterceptor.htm">IfcInterceptor</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcJunctionBox.htm">IfcJunctionBox</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcKerb.htm">IfcKerb</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcLaborResource.htm">IfcLaborResource</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcLamp.htm">IfcLamp</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcLightFixture.htm">IfcLightFixture</a></li>
@@ -886,7 +889,7 @@ END_ENTITY;</code></pre>
 <h3><a id="5.1.3.6.8-Changelog"></a>
                         5.1.3.6.8 Changelog
                     <a href="IfcObject.htm#5.1.3.6.8-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="5.1.3.6.8.1-IFC4"></a>
+<h4><a id="5.1.3.6.8.1-IFC4"></a>
                         5.1.3.6.8.1 IFC4
                     <a href="IfcObject.htm#5.1.3.6.8.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -896,7 +899,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 Declares
                                 
                             </small>
@@ -907,7 +910,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 IsDefinedBy
                                 
                             </small>
@@ -918,7 +921,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 IsTypedBy
                                 
                             </small>
@@ -929,7 +932,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 UniquePropertySetNames
                                 
                             </small>
@@ -939,7 +942,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR1
                                 
                             </small>
@@ -948,8 +951,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                inverses IsDefinedBy definition,
-                                Changed from SET OF [0:?] <a href="IfcRelDefines.htm">IfcRelDefines</a> FOR RelatedObjects to SET OF [0:1] <a href="IfcRelDefinesByObject.htm">IfcRelDefinesByObject</a> FOR RelatedObjects
+                                inverse attribute IsDefinedBy name,
+                                Changed from
+"IsDefinedBy"
+to
+"IsDeclaredBy"
                                 
                             </small>
 </li>
@@ -957,8 +963,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                inverses IsDefinedBy name,
-                                Changed from IsDefinedBy to IsDeclaredBy
+                                inverse attribute IsDefinedBy type,
+                                Changed from
+"SET OF [0:?] <a href="IfcRelDefines.htm">IfcRelDefines</a> FOR RelatedObjects"
+to
+"SET OF [0:1] <a href="IfcRelDefinesByObject.htm">IfcRelDefinesByObject</a> FOR RelatedObjects"
                                 
                             </small>
 </li>

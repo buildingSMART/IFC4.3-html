@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.4.3.46 IfcRelAssociatesMaterial - IFC4.3.0.0 Documentation</title>
+<title>5.4.3.46 IfcRelAssociatesMaterial - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -331,19 +333,17 @@
 <tr>
 <td>AllowedElements</td>
 <td>
-<p>The material information, using <em><a href="IfcMaterialSelect.htm">IfcMaterialSelect</a></em> should be associated to an element occurrence (including structural members) or an element type (including the door and window styles). Also port can have assigned materials, here indicating the fluid flowing from the port.</p>
+<p>The material information, using <em><a href="IfcMaterialSelect.htm">IfcMaterialSelect</a></em> should be associated to an element occurrence (including structural members) or an element type. Also port can have assigned materials, here indicating the fluid flowing from the port.</p>
 </td>
 </tr>
 <tr>
 <td colspan="2">
 <pre><code class="language-express hljs">SIZEOF(QUERY(temp &lt;* SELF\<a href="IfcRelAssociates.htm">IfcRelAssociates</a>.RelatedObjects | (
   SIZEOF(TYPEOF(temp) * [   
-    'IFC4X3.IFCELEMENT', 
-    'IFC4X3.IFCELEMENTTYPE',
-    'IFC4X3.IFCWINDOWSTYLE',
-    'IFC4X3.IFCDOORSTYLE',
-    'IFC4X3.IFCSTRUCTURALMEMBER',
-    'IFC4X3.IFCPORT']) = 0) 
+    'IFC4X3_TC1.<a href="IfcElement.htm">IFCELEMENT</a>', 
+    'IFC4X3_TC1.<a href="IfcElementType.htm">IFCELEMENTTYPE</a>',
+    'IFC4X3_TC1.<a href="IfcStructuralMember.htm">IFCSTRUCTURALMEMBER</a>',
+    'IFC4X3_TC1.<a href="IfcPort.htm">IFCPORT</a>']) = 0) 
 )) = 0</code></pre>
 </td>
 </tr>
@@ -356,8 +356,8 @@
 <tr>
 <td colspan="2">
 <pre><code class="language-express hljs">SIZEOF(QUERY(temp &lt;* SELF\<a href="IfcRelAssociates.htm">IfcRelAssociates</a>.RelatedObjects | 
-  ('IFC4X3.IFCFEATUREELEMENTSUBTRACTION' IN TYPEOF(temp)) OR 
-  ('IFC4X3.IFCVIRTUALELEMENT' IN TYPEOF(temp)) 
+  ('IFC4X3_TC1.<a href="IfcFeatureElementSubtraction.htm">IFCFEATUREELEMENTSUBTRACTION</a>' IN TYPEOF(temp)) OR 
+  ('IFC4X3_TC1.<a href="IfcVirtualElement.htm">IFCVIRTUALELEMENT</a>' IN TYPEOF(temp)) 
 )) = 0</code></pre>
 </td>
 </tr>
@@ -426,16 +426,14 @@
  WHERE
 	AllowedElements : SIZEOF(QUERY(temp &lt;* SELF\<a href="IfcRelAssociates.htm">IfcRelAssociates</a>.RelatedObjects | (
   SIZEOF(TYPEOF(temp) * [   
-    'IFC4X3.IFCELEMENT', 
-    'IFC4X3.IFCELEMENTTYPE',
-    'IFC4X3.IFCWINDOWSTYLE',
-    'IFC4X3.IFCDOORSTYLE',
-    'IFC4X3.IFCSTRUCTURALMEMBER',
-    'IFC4X3.IFCPORT']) = 0) 
+    'IFC4X3_TC1.<a href="IfcElement.htm">IFCELEMENT</a>', 
+    'IFC4X3_TC1.<a href="IfcElementType.htm">IFCELEMENTTYPE</a>',
+    'IFC4X3_TC1.<a href="IfcStructuralMember.htm">IFCSTRUCTURALMEMBER</a>',
+    'IFC4X3_TC1.<a href="IfcPort.htm">IFCPORT</a>']) = 0) 
 )) = 0;
 	NoVoidElement : SIZEOF(QUERY(temp &lt;* SELF\<a href="IfcRelAssociates.htm">IfcRelAssociates</a>.RelatedObjects | 
-  ('IFC4X3.IFCFEATUREELEMENTSUBTRACTION' IN TYPEOF(temp)) OR 
-  ('IFC4X3.IFCVIRTUALELEMENT' IN TYPEOF(temp)) 
+  ('IFC4X3_TC1.<a href="IfcFeatureElementSubtraction.htm">IFCFEATUREELEMENTSUBTRACTION</a>' IN TYPEOF(temp)) OR 
+  ('IFC4X3_TC1.<a href="IfcVirtualElement.htm">IFCVIRTUALELEMENT</a>' IN TYPEOF(temp)) 
 )) = 0;
 END_ENTITY;</code></pre>
 <h2><a id="5.4.3.46.7-References"></a>
@@ -457,7 +455,7 @@ END_ENTITY;</code></pre>
 <h3><a id="5.4.3.46.8-Changelog"></a>
                         5.4.3.46.8 Changelog
                     <a href="IfcRelAssociatesMaterial.htm#5.4.3.46.8-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="5.4.3.46.8.1-IFC4"></a>
+<h4><a id="5.4.3.46.8.1-IFC4"></a>
                         5.4.3.46.8.1 IFC4
                     <a href="IfcRelAssociatesMaterial.htm#5.4.3.46.8.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -467,7 +465,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 AllowedElements
                                 
                             </small>
@@ -478,7 +476,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 NoVoidElement
                                 
                             </small>
@@ -488,7 +486,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR21
                                 
                             </small>
@@ -498,8 +496,25 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR22
+                                
+                            </small>
+</li>
+</ul>
+<h4><a id="5.4.3.46.8.2-IFC4.3-TC1"></a>
+                        5.4.3.46.8.2 IFC4.3_TC1
+                    <a href="IfcRelAssociatesMaterial.htm#5.4.3.46.8.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                where rule AllowedElements definition,
+                                Changed from
+"sizeof(query(temp &lt;* self\<a href="IfcRelAssociates.htm">IfcRelAssociates</a>.RelatedObjects | (sizeof(typeof(temp)*[ifcelement,ifcelementtype,ifcwindowstyle,ifcdoorstyle,ifcstructuralmember,ifcport]) = 0))) = 0"
+to
+"sizeof(query(temp &lt;* self\<a href="IfcRelAssociates.htm">IfcRelAssociates</a>.RelatedObjects | (sizeof(typeof(temp)*[ifcelement,ifcelementtype,ifcstructuralmember,ifcport]) = 0))) = 0"
                                 
                             </small>
 </li>

@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.27 IfcPolygonalFaceSet - IFC4.3.0.0 Documentation</title>
+<title>8.8.3.27 IfcPolygonalFaceSet - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -303,7 +305,7 @@
 <tr class="group-inherited">
 <td colspan="4">
 <a href="IfcTessellatedFaceSet.htm">IfcTessellatedFaceSet</a>
-<small>(5)</small>
+<small>(4)</small>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -316,18 +318,6 @@
 <td data-label="Type"><a href="IfcCartesianPointList3D.htm">IfcCartesianPointList3D</a></td>
 <td data-label="Description">
 <p>An ordered list of Cartesian points used by the coordinate index defined at the subtypes of <em><a href="IfcTessellatedFaceSet.htm">IfcTessellatedFaceSet</a></em>.</p>
-</td>
-</tr>
-<tr class="inherited" data-type="attribute">
-<td data-label="#">2</td>
-<td data-label="Name">
-                
-                Closed
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="IfcBoolean.htm">IfcBoolean</a></td>
-<td data-label="Description">
-<p>Indication whether the <em><a href="IfcTessellatedFaceSet.htm">IfcTessellatedFaceSet</a></em> is a closed shell (TRUE) or an open shell (FALSE). If omitted no such information can be asserted.</p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -368,18 +358,30 @@
 <td colspan="4">
 <small class="show-inherited" data-type="attribute">
 <i data-feather="eye-off"></i>
-                    Click to show 7 hidden inherited attributes
+                    Click to show 6 hidden inherited attributes
                 </small>
 <small class="hide-inherited" data-type="attribute">
 <i data-feather="eye-off"></i>
-                    Click to hide 7 inherited attributes
+                    Click to hide 6 inherited attributes
                 </small>
 </td>
 </tr>
 <tr class="group">
 <td colspan="4">
 <a href="IfcPolygonalFaceSet.htm">IfcPolygonalFaceSet</a>
-<small>(2)</small>
+<small>(3)</small>
+</td>
+</tr>
+<tr>
+<td data-label="#">2</td>
+<td data-label="Name">
+                
+                Closed
+                
+            </td>
+<td data-label="Type">OPTIONAL <a href="IfcBoolean.htm">IfcBoolean</a></td>
+<td data-label="Description">
+<p>Indication whether the face set is a closed shell (TRUE) or an open shell (FALSE). If omitted no such information can be asserted.</p>
 </td>
 </tr>
 <tr>
@@ -389,7 +391,7 @@
                 Faces
                 
             </td>
-<td data-label="Type">LIST [1:?] OF <a href="IfcIndexedPolygonalFace.htm">IfcIndexedPolygonalFace</a></td>
+<td data-label="Type">LIST [1:?] OF UNIQUE <a href="IfcIndexedPolygonalFace.htm">IfcIndexedPolygonalFace</a></td>
 <td data-label="Description">
 <p>The list of polygonal faces, with or without inner loops, that bound the faceted face set.</p>
 </td>
@@ -413,7 +415,8 @@
 <a href="IfcPolygonalFaceSet.htm#8.8.3.27.4-Formal-representation"><i data-feather="link"></i></a></h2>
 <pre><code class="language-express hljs">ENTITY <a href="IfcPolygonalFaceSet.htm">IfcPolygonalFaceSet</a>
  SUBTYPE OF (<a href="IfcTessellatedFaceSet.htm">IfcTessellatedFaceSet</a>);
-	Faces : LIST [1:?] OF <a href="IfcIndexedPolygonalFace.htm">IfcIndexedPolygonalFace</a>;
+	Closed : OPTIONAL <a href="IfcBoolean.htm">IfcBoolean</a>;
+	Faces : LIST [1:?] OF UNIQUE <a href="IfcIndexedPolygonalFace.htm">IfcIndexedPolygonalFace</a>;
 	PnIndex : OPTIONAL LIST [1:?] OF <a href="IfcPositiveInteger.htm">IfcPositiveInteger</a>;
 END_ENTITY;</code></pre>
 <h2><a id="8.8.3.27.5-References"></a>
@@ -434,7 +437,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.8.3.27.6-Changelog"></a>
                         8.8.3.27.6 Changelog
                     <a href="IfcPolygonalFaceSet.htm#8.8.3.27.6-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.8.3.27.6.1-IFC4"></a>
+<h4><a id="8.8.3.27.6.1-IFC4"></a>
                         8.8.3.27.6.1 IFC4
                     <a href="IfcPolygonalFaceSet.htm#8.8.3.27.6.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -449,17 +452,19 @@ END_ENTITY;</code></pre>
                             </small>
 </li>
 </ul>
-<h4 class="collapsed"><a id="8.8.3.27.6.2-IFC4.3"></a>
-                        8.8.3.27.6.2 IFC4.3
-                    <a href="IfcPolygonalFaceSet.htm#8.8.3.27.6.2-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="8.8.3.27.6.2-IFC4.3-TC1"></a>
+                        8.8.3.27.6.2 IFC4.3_TC1
+                    <a href="IfcPolygonalFaceSet.htm#8.8.3.27.6.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>
-<i data-feather="x-square"></i>
+<i data-feather="edit"></i>
                                 
-                                
-                                attributes,
-                                Closed
+                                attribute Faces type,
+                                Changed from
+"list[1:?] of <a href="IfcIndexedPolygonalFace.htm">IfcIndexedPolygonalFace</a>"
+to
+"list[1:?] of unique <a href="IfcIndexedPolygonalFace.htm">IfcIndexedPolygonalFace</a>"
                                 
                             </small>
 </li>

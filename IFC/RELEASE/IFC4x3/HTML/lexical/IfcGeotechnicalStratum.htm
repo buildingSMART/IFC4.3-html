@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>6.6.3.11 IfcGeotechnicalStratum - IFC4.3.0.0 Documentation</title>
+<title>6.6.3.11 IfcGeotechnicalStratum - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -107,17 +109,10 @@
 </div>
 <div class="col-md-8" id="main-content">
 <h1>6.6.3.11 IfcGeotechnicalStratum</h1>
-<div class="row">
-<div class="card fluid warning">
-<p>
-<mark class="secondary">ABSTRACT</mark> This definition may not be instantiated
-        </p>
-</div>
-</div>
 <h2><a id="6.6.3.11.1-Semantic-definition"></a>
     6.6.3.11.1 Semantic definition
 <a href="IfcGeotechnicalStratum.htm#6.6.3.11.1-Semantic-definition"><i data-feather="link"></i></a></h2>
-<p>Representation of the concept of an identified discrete almost homogenous geological feature with either an irregular solid or 'Yabuki' top surface shape or a regular voxel cubic shape. A stratum is represented as a discrete entity, specialised (sub typed) from <em><a href="IfcElement.htm">IfcElement</a></em>. A stratum may be broken down into smaller entities if properties vary across the stratum or alternatively properties may be described with bounded numeric ranges. A stratum may carry information about the physical form and its interpretation as a Geological Item (GML).
+<p>Representation of the concept of an identified discrete almost homogeneous geological feature with either an irregular solid or 'Yabuki' top surface shape or a regular voxel cubic shape. A stratum is represented as a discrete entity, specialised (sub typed) from <em><a href="IfcElement.htm">IfcElement</a></em>. A stratum may be broken down into smaller entities if properties vary across the stratum or alternatively properties may be described with bounded numeric ranges. A stratum may carry information about the physical form and its interpretation as a Geological Item (GML).
 The shape representations used should correspond to the sub-type of <em><a href="IfcGeotechnicalAssembly.htm">IfcGeotechnicalAssembly</a></em> in which it occurs</p>
 <h2><a id="6.6.3.11.2-Entity-inheritance"></a>
     6.6.3.11.2 Entity inheritance
@@ -188,7 +183,7 @@ The shape representations used should correspond to the sub-type of <em><a href=
 <li>
 <i data-feather="arrow-up"></i>
 <ul class="classes classes-in-chain">
-<li class="abstract current ancestor"><a href="IfcGeotechnicalStratum.htm">IfcGeotechnicalStratum</a></li>
+<li class="current ancestor"><a href="IfcGeotechnicalStratum.htm">IfcGeotechnicalStratum</a></li>
 <li class="abstract"><a href="IfcGeotechnicalAssembly.htm">IfcGeotechnicalAssembly</a></li>
 </ul>
 </li>
@@ -364,7 +359,7 @@ The shape representations used should correspond to the sub-type of <em><a href=
             </td>
 <td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED.</p>
+<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED or when the concrete entity instantiated does not have a PredefinedType attribute. The latter is the case in some exceptional leaf classes and when instantiating <a href="IfcBuiltElement.htm">IfcBuiltElement</a> directly. </p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -703,24 +698,12 @@ The shape representations used should correspond to the sub-type of <em><a href=
 </ul>
 </li>
 <li>
-<a href="Pset_ConstructionOccurance.htm">Pset_ConstructionOccurance</a>
+<a href="Pset_ConstructionOccurence.htm">Pset_ConstructionOccurence</a>
 <ul>
 <li>InstallationDate</li>
 <li>ModelNumber</li>
 <li>TagNumber</li>
 <li>AssetIdentifier</li>
-</ul>
-</li>
-<li>
-<a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
-<ul>
-<li>CyclicPath</li>
-<li>CyclicRange</li>
-<li>LinearPath</li>
-<li>LinearRange</li>
-<li>MaximumAngularVelocity</li>
-<li>MaximumConstantSpeed</li>
-<li>MinimumTime</li>
 </ul>
 </li>
 <li>
@@ -1282,7 +1265,7 @@ The shape representations used should correspond to the sub-type of <em><a href=
 <tr class="group-inherited">
 <td colspan="3">
 <a href="IfcProduct.htm">IfcProduct</a>
-<small>(17)</small>
+<small>(18)</small>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -1337,6 +1320,28 @@ The shape representations used should correspond to the sub-type of <em><a href=
 <p>
 <em>No description available.</em>
 </p>
+</td>
+</tr>
+<tr class="inherited" data-type="concept">
+<td data-label="Name">
+<a href="../concepts/Object_Definition/Object_Typing/content.html">Object Typing</a>
+</td>
+<td data-label="Usage">
+                General
+            </td>
+<td data-label="Description">
+<aside class="inherited">
+<small>
+<i data-feather="paperclip"></i>
+                        This is a further elaboration on an inherited concept.
+                    </small>
+</aside>
+<p>This concept can be applied to the following resources:</p>
+<ul>
+<li>
+<a href="IfcTypeProduct.htm">IfcTypeProduct</a>
+</li>
+</ul>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -2068,10 +2073,7 @@ shape.</aside>
 <a href="Pset_ConstructionAdministration.htm">Pset_ConstructionAdministration</a>
 </li>
 <li>
-<a href="Pset_ConstructionOccurance.htm">Pset_ConstructionOccurance</a>
-</li>
-<li>
-<a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
+<a href="Pset_ConstructionOccurence.htm">Pset_ConstructionOccurence</a>
 </li>
 <li>
 <a href="Pset_ElementKinematics.htm">Pset_ElementKinematics</a>
@@ -2204,11 +2206,11 @@ shape.</aside>
 <td colspan="4">
 <small class="show-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    Click to show 79 hidden inherited concepts
+                    Click to show 80 hidden inherited concepts
                 </small>
 <small class="hide-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    Click to hide 79 inherited concepts
+                    Click to hide 80 inherited concepts
                 </small>
 </td>
 </tr>
@@ -2326,9 +2328,9 @@ END_ENTITY;</code></pre>
 <h3><a id="6.6.3.11.9-Changelog"></a>
                         6.6.3.11.9 Changelog
                     <a href="IfcGeotechnicalStratum.htm#6.6.3.11.9-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="6.6.3.11.9.1-IFC4.3"></a>
-                        6.6.3.11.9.1 IFC4.3
-                    <a href="IfcGeotechnicalStratum.htm#6.6.3.11.9.1-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="6.6.3.11.9.1-IFC4.3-TC1"></a>
+                        6.6.3.11.9.1 IFC4.3_TC1
+                    <a href="IfcGeotechnicalStratum.htm#6.6.3.11.9.1-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>

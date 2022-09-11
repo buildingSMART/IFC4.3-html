@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.20 IfcGeometricCurveSet - IFC4.3.0.0 Documentation</title>
+<title>8.8.3.20 IfcGeometricCurveSet - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -328,7 +330,7 @@ A geometric curve set is a collection of two or three dimensional points and cur
 <tr>
 <td colspan="2">
 <pre><code class="language-express hljs">SIZEOF(QUERY(Temp &lt;* SELF\<a href="IfcGeometricSet.htm">IfcGeometricSet</a>.Elements |
-'IFC4X3.IFCSURFACE' IN TYPEOF(Temp))) = 0</code></pre>
+'IFC4X3_TC1.<a href="IfcSurface.htm">IFCSURFACE</a>' IN TYPEOF(Temp))) = 0</code></pre>
 </td>
 </tr>
 </tbody>
@@ -349,7 +351,7 @@ A geometric curve set is a collection of two or three dimensional points and cur
  SUBTYPE OF (<a href="IfcGeometricSet.htm">IfcGeometricSet</a>);
  WHERE
 	NoSurfaces : SIZEOF(QUERY(Temp &lt;* SELF\<a href="IfcGeometricSet.htm">IfcGeometricSet</a>.Elements |
-'IFC4X3.IFCSURFACE' IN TYPEOF(Temp))) = 0;
+'IFC4X3_TC1.<a href="IfcSurface.htm">IFCSURFACE</a>' IN TYPEOF(Temp))) = 0;
 END_ENTITY;</code></pre>
 <h2><a id="8.8.3.20.7-References"></a>
     8.8.3.20.7 References
@@ -368,7 +370,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.8.3.20.8-Changelog"></a>
                         8.8.3.20.8 Changelog
                     <a href="IfcGeometricCurveSet.htm#8.8.3.20.8-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.8.3.20.8.1-IFC4"></a>
+<h4><a id="8.8.3.20.8.1-IFC4"></a>
                         8.8.3.20.8.1 IFC4
                     <a href="IfcGeometricCurveSet.htm#8.8.3.20.8.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -378,7 +380,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 NoSurfaces
                                 
                             </small>
@@ -388,7 +390,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR1
                                 
                             </small>

@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.18.3.16 IfcStyledRepresentation - IFC4.3.0.0 Documentation</title>
+<title>8.18.3.16 IfcStyledRepresentation - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -314,7 +316,7 @@ The supported values for context type are to be specified by implementers agreem
 <tr>
 <td colspan="2">
 <pre><code class="language-express hljs">SIZEOF(QUERY(temp &lt;* SELF\<a href="IfcRepresentation.htm">IfcRepresentation</a>.Items | 
-  (NOT('IFC4X3.IFCSTYLEDITEM' IN TYPEOF(temp)))
+  (NOT('IFC4X3_TC1.<a href="IfcStyledItem.htm">IFCSTYLEDITEM</a>' IN TYPEOF(temp)))
 )) = 0</code></pre>
 </td>
 </tr>
@@ -327,7 +329,7 @@ The supported values for context type are to be specified by implementers agreem
  SUBTYPE OF (<a href="IfcStyleModel.htm">IfcStyleModel</a>);
  WHERE
 	OnlyStyledItems : SIZEOF(QUERY(temp &lt;* SELF\<a href="IfcRepresentation.htm">IfcRepresentation</a>.Items | 
-  (NOT('IFC4X3.IFCSTYLEDITEM' IN TYPEOF(temp)))
+  (NOT('IFC4X3_TC1.<a href="IfcStyledItem.htm">IFCSTYLEDITEM</a>' IN TYPEOF(temp)))
 )) = 0;
 END_ENTITY;</code></pre>
 <h2><a id="8.18.3.16.6-References"></a>
@@ -347,7 +349,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.18.3.16.7-Changelog"></a>
                         8.18.3.16.7 Changelog
                     <a href="IfcStyledRepresentation.htm#8.18.3.16.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.18.3.16.7.1-IFC4"></a>
+<h4><a id="8.18.3.16.7.1-IFC4"></a>
                         8.18.3.16.7.1 IFC4
                     <a href="IfcStyledRepresentation.htm#8.18.3.16.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -357,7 +359,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 OnlyStyledItems
                                 
                             </small>
@@ -367,7 +369,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR21
                                 
                             </small>

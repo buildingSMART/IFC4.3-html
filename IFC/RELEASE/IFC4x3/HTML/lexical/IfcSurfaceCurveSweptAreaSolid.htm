@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.40 IfcSurfaceCurveSweptAreaSolid - IFC4.3.0.0 Documentation</title>
+<title>8.8.3.40 IfcSurfaceCurveSweptAreaSolid - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -162,10 +164,15 @@
 <p>At any point of the directrix, a plane can be constructed. The origin of the position coordinate system of the implicit plane lies at the directrix. The Axis3 (the z-axis, or normal) of the position coordinate system is identical to the tangent of the directrix at this point, the Axis1 (the x axis, or u) of the position coordinate system is identical to the normal of the reference surface at this point. The Axis2 (the y axis, or v) is constructed.</p>
 <p>The resulting body of the swept solid is not repositioned if the inherited <em>Position</em> attribute is omitted. Otherwise the coordinate system established by the <em>Position</em> attribute is used to reposition the body relative to the object coordinate system.</p>
 <figure><a id="Figure-8.8.3.40.A-Surface-curve-wept-area-solid-parameter"></a><img alt="surface curve wept area solid" src="../figures/ifcsurfacecurvesweptareasolid_01.png"/><figcaption>Figure 8.8.3.40.A — Surface curve wept area solid parameter<a href="IfcSurfaceCurveSweptAreaSolid.htm#Figure-8.8.3.40.A-Surface-curve-wept-area-solid-parameter"><i data-feather="link"></i></a></figcaption></figure>
-<aside class="aside-example"><mark>EXAMPLE</mark> Figure 8.8.3.40.A illustrates an example using a cylindrical reference surface and a p-curve for sweeping a rectangle. The <em>Postion</em> is not provided and therefore it does not reposition the resulting swept solid. Figure 8.8.3.40.B shows the expected result.</aside><aside class="aside-note"><mark>NOTE</mark> The start of the directrix lies at the origin of the object coordinate system, as shown in the illustration,<br/>only by coincidence. The start of the directrix and thereby the start of the sweeping operation might be at any point within the object coordinate system and only depends on the position of the directrix.</aside>
+<aside class="aside-example"><mark>EXAMPLE</mark> Figure 8.8.3.40.A illustrates an example using a cylindrical reference surface and a p-curve for sweeping a rectangle. The <em>Position</em> is not provided and therefore it does not reposition the resulting swept solid. Figure 8.8.3.40.B shows the expected result.</aside><aside class="aside-note"><mark>NOTE</mark> The start of the directrix lies at the origin of the object coordinate system, as shown in the illustration,<br/>only by coincidence. The start of the directrix and thereby the start of the sweeping operation might be at any point within the object coordinate system and only depends on the position of the directrix.</aside>
 <figure><a id="Figure-8.8.3.40.B-Surface-curve-wept-area-solid-results"></a><img alt="surface curve wept area solid" src="../figures/ifcsurfacecurvesweptareasolid_02.png"/><figcaption>Figure 8.8.3.40.B — Surface curve wept area solid results<a href="IfcSurfaceCurveSweptAreaSolid.htm#Figure-8.8.3.40.B-Surface-curve-wept-area-solid-results"><i data-feather="link"></i></a></figcaption></figure>
 <aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO/CD 10303-42:1992
-A surface curve swept area solid is a type of swept area solid which is the result of sweeping a face along a <em>Directrix</em> lying on a <em>ReferenceSurface</em>. The orientation of the <em>SweptArea</em> is related to the direction of the surface normal.</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from **surface_curve_swept_area_solid** defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x2.</aside>
+A surface curve swept area solid is a type of swept area solid which is the result of sweeping a face along a <em>Directrix</em> lying on a <em>ReferenceSurface</em>. The orientation of the <em>SweptArea</em> is related to the direction of the surface normal.</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from **surface_curve_swept_area_solid** defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC2x2.</aside><blockquote>
+<p>The <em>SweptArea</em> is required to be a curve bounded surface lying in the plane z = 0 and this is swept along the <em>Directrix</em> in such a way that the origin of the local coordinate system used to define the <em>SweptArea</em> is on the <em>Directrix</em> and the local x-axis is in the direction of the normal to the <em>ReferenceSurface</em> at the current point. The resulting solid has the property that the cross section of the surface by the normal plane to the <em>Directrix</em> at any point is a copy of the <em>SweptArea</em>.</p>
+<p>The orientation of the <em>SweptArea</em> as it sweeps along the <em>Directrix</em> is precisely defined by a Cartesian Transformation Operator 3D with attributes: &gt; * Local origin as point (0., 0., 0),
+* Axis 1 as the normal N to the reference surface at the point of the directrix with parameter u.
+* Axis 3 as the direction of the tangent vector t at the point of the directrix with parameter u.   The remaining attributes are defaulted to define a corresponding transformation matrix T(u), which varies with the directrix parameter u.</p>
+</blockquote>
 <p>Informal Propositions:</p>
 <ol>
 <li>The <em>SweptArea</em> shall lie in the implicit plane z = 0.</li>
@@ -445,7 +452,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.8.3.40.6-Changelog"></a>
                         8.8.3.40.6 Changelog
                     <a href="IfcSurfaceCurveSweptAreaSolid.htm#8.8.3.40.6-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.8.3.40.6.1-IFC4"></a>
+<h4><a id="8.8.3.40.6.1-IFC4"></a>
                         8.8.3.40.6.1 IFC4
                     <a href="IfcSurfaceCurveSweptAreaSolid.htm#8.8.3.40.6.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -455,7 +462,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 DirectrixBounded
                                 
                             </small>
@@ -464,8 +471,8 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes EndParam is_optional,
-                                Changed from False to True
+                                attribute EndParam optional,
+                                Is now optional
                                 
                             </small>
 </li>
@@ -473,22 +480,22 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes StartParam is_optional,
-                                Changed from False to True
+                                attribute StartParam optional,
+                                Is now optional
                                 
                             </small>
 </li>
 </ul>
-<h4 class="collapsed"><a id="8.8.3.40.6.2-IFC4.3"></a>
-                        8.8.3.40.6.2 IFC4.3
-                    <a href="IfcSurfaceCurveSweptAreaSolid.htm#8.8.3.40.6.2-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="8.8.3.40.6.2-IFC4.3-TC1"></a>
+                        8.8.3.40.6.2 IFC4.3_TC1
+                    <a href="IfcSurfaceCurveSweptAreaSolid.htm#8.8.3.40.6.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>
 <i data-feather="x-square"></i>
                                 
                                 
-                                attributes,
+                                attribute,
                                 Directrix
                                 
                             </small>
@@ -498,7 +505,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                attributes,
+                                attribute,
                                 EndParam
                                 
                             </small>
@@ -508,7 +515,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                attributes,
+                                attribute,
                                 StartParam
                                 
                             </small>
@@ -518,7 +525,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 DirectrixBounded
                                 
                             </small>
@@ -528,8 +535,12 @@ END_ENTITY;</code></pre>
 <i data-feather="edit"></i>
                                 
                                 supertype,
-                                Changed from <a href="IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a> to <a href="IfcDirectrixCurveSweptAreaSolid.htm">IfcDirectrixCurveSweptAreaSolid</a>
-</small>
+                                Changed from
+"<a href="IfcSweptAreaSolid.htm">IfcSweptAreaSolid</a>"
+to
+"<a href="IfcDirectrixCurveSweptAreaSolid.htm">IfcDirectrixCurveSweptAreaSolid</a>"
+                                
+                            </small>
 </li>
 </ul>
 </div>

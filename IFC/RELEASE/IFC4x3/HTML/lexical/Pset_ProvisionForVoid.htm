@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.4.4.19 Pset_ProvisionForVoid - IFC4.3.0.0 Documentation</title>
+<title>5.4.4.19 Pset_ProvisionForVoid - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -113,6 +115,7 @@
     The property sets defined by this <a href="IfcPropertySetTemplate.htm">IfcPropertySetTemplate</a> can only be assigned to subtypes of <a href="IfcObject.htm">IfcObject</a>.
 </aside>
 <ul>
+<li><a href="IfcBuildingElementProxy.htm">IfcBuildingElementProxy</a>/PROVISIONFORVOID</li>
 <li><a href="IfcVirtualElement.htm">IfcVirtualElement</a>/PROVISIONFORVOID</li>
 </ul>
 <h2><a id="5.4.4.19.3-Properties"></a>
@@ -134,7 +137,7 @@
 <td><a href="IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="IfcLabel.htm">IfcLabel</a></td>
 <td>
-<p>Shape of the void.</p>
+<p>The shape form of the provision for void, the minimum set of agreed values includes 'Rectangle', 'Round', and 'Undefined'.</p>
 </td>
 <td><a class="button" href="../property/VoidShape.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -152,7 +155,7 @@
 <td><a href="IfcPropertySingleValue.htm">IfcPropertySingleValue</a></td>
 <td><a href="IfcPositiveLengthMeasure.htm">IfcPositiveLengthMeasure</a></td>
 <td>
-<p>Characteristic height.</p>
+<p>Characteristic height</p><p>Vertical extension in elevation. Only provided if the Shape property is set to "rectangle".</p>
 </td>
 <td><a class="button" href="../property/Height.htm" style="padding:0;margin:0 0.5em"><span class="icon-edit"></span></a></td>
 </tr>
@@ -196,9 +199,9 @@
 <h3><a id="5.4.4.19.4-Changelog"></a>
                         5.4.4.19.4 Changelog
                     <a href="Pset_ProvisionForVoid.htm#5.4.4.19.4-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="5.4.4.19.4.1-IFC4.3"></a>
-                        5.4.4.19.4.1 IFC4.3
-                    <a href="Pset_ProvisionForVoid.htm#5.4.4.19.4.1-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="5.4.4.19.4.1-IFC4.3-TC1"></a>
+                        5.4.4.19.4.1 IFC4.3_TC1
+                    <a href="Pset_ProvisionForVoid.htm#5.4.4.19.4.1-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>

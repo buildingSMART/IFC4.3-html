@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.4.3.58 IfcRelServicesBuildings - IFC4.3.0.0 Documentation</title>
+<title>5.4.3.58 IfcRelServicesBuildings - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -102,9 +104,11 @@
 <div class="col-md-8" id="main-content">
 <h1>5.4.3.58 IfcRelServicesBuildings</h1>
 <div class="row">
-<div class="card fluid error">
+<div class="card fluid error deprecation">
 <p>
-<mark class="secondary">DEPRECATED</mark> This definition may be imported, but shall not be exported by applications
+<mark class="secondary">DEPRECATED
+            <a href="../content/terms_and_definitions.htm#3.1.30-deprecation"><i data-feather="link"></i></a></mark>
+            This definition will be removed in a future major release of this standard
         </p>
 </div>
 </div>
@@ -118,7 +122,7 @@
 <li>zones as collection of logically grouped spaces represented by instances of <em><a href="IfcZone.htm">IfcZone</a></em></li>
 <li>idealized structural analysis systems represented by instances of <em><a href="IfcStructuralAnalysisModel.htm">IfcStructuralAnalysisModel</a></em>.</li>
 </ul>
-<aside class="aside-note"><mark>NOTE</mark>  The name <em><a href="IfcRelServicesBuildings.htm">IfcRelServicesBuildings</a></em> is a known anomaly, as the relationship is not restricted to buildings anymore.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC1.0.</aside><aside class="aside-change"><mark>IFC2x-CHANGE</mark>  The data type of the attribute <em>RelatedBuildings</em> has been changed from <em><a href="IfcBuilding.htm">IfcBuilding</a></em> to its supertype <em><a href="IfcSpatialStructureElement.htm">IfcSpatialStructureElement</a></em> with upward compatibility for file based exchange.</aside>
+<aside class="aside-note"><mark>NOTE</mark>  The name <em><a href="IfcRelServicesBuildings.htm">IfcRelServicesBuildings</a></em> is a known anomaly, as the relationship is not restricted to buildings anymore.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC1.0.</aside><aside class="aside-change"><mark>IFC2x-CHANGE</mark>  The data type of the attribute <em>RelatedBuildings</em> has been changed from <em><a href="IfcBuilding.htm">IfcBuilding</a></em> to its supertype <em><a href="IfcSpatialStructureElement.htm">IfcSpatialStructureElement</a></em> with upward compatibility for file based exchange.</aside><aside class="aside-deprecation"><mark>IFC4.3.0.0-DEPRECATION<a href="../content/terms_and_definitions.htm#3.1.30-deprecation"><i data-feather="link"></i></a></mark> Use <a href="IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a> instead.</aside>
 <h2><a id="5.4.3.58.2-Entity-inheritance"></a>
     5.4.3.58.2 Entity inheritance
 <a href="IfcRelServicesBuildings.htm#5.4.3.58.2-Entity-inheritance"><i data-feather="link"></i></a></h2>
@@ -159,7 +163,7 @@
 <li class=""><a href="IfcRelConnectsStructuralMember.htm">IfcRelConnectsStructuralMember</a></li>
 <li class=""><a href="IfcRelContainedInSpatialStructure.htm">IfcRelContainedInSpatialStructure</a></li>
 <li class=""><a href="IfcRelCoversBldgElements.htm">IfcRelCoversBldgElements</a></li>
-<li class=""><a href="IfcRelCoversSpaces.htm">IfcRelCoversSpaces</a></li>
+<li class="deprecated"><a href="IfcRelCoversSpaces.htm">IfcRelCoversSpaces</a></li>
 <li class=""><a href="IfcRelFillsElement.htm">IfcRelFillsElement</a></li>
 <li class=""><a href="IfcRelFlowControlElements.htm">IfcRelFlowControlElements</a></li>
 <li class=""><a href="IfcRelInterferesElements.htm">IfcRelInterferesElements</a></li>
@@ -371,7 +375,7 @@ END_ENTITY;</code></pre>
 <h3><a id="5.4.3.58.7-Changelog"></a>
                         5.4.3.58.7 Changelog
                     <a href="IfcRelServicesBuildings.htm#5.4.3.58.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="5.4.3.58.7.1-IFC4"></a>
+<h4><a id="5.4.3.58.7.1-IFC4"></a>
                         5.4.3.58.7.1 IFC4
                     <a href="IfcRelServicesBuildings.htm#5.4.3.58.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -379,21 +383,25 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes RelatedBuildings definition,
-                                Changed from set[1:?] of <a href="IfcSpatialStructureElement.htm">IfcSpatialStructureElement</a> to set[1:?] of <a href="IfcSpatialElement.htm">IfcSpatialElement</a>
-</small>
+                                attribute RelatedBuildings type,
+                                Changed from
+"set[1:?] of <a href="IfcSpatialStructureElement.htm">IfcSpatialStructureElement</a>"
+to
+"set[1:?] of <a href="IfcSpatialElement.htm">IfcSpatialElement</a>"
+                                
+                            </small>
 </li>
 </ul>
-<h4 class="collapsed"><a id="5.4.3.58.7.2-IFC4.3"></a>
-                        5.4.3.58.7.2 IFC4.3
-                    <a href="IfcRelServicesBuildings.htm#5.4.3.58.7.2-IFC4.3"><i data-feather="link"></i></a></h4>
+<h4><a id="5.4.3.58.7.2-IFC4.3-TC1"></a>
+                        5.4.3.58.7.2 IFC4.3_TC1
+                    <a href="IfcRelServicesBuildings.htm#5.4.3.58.7.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>
 <i data-feather="edit"></i>
                                 
                                 deprecated,
-                                Changed from False to True
+                                Is now deprecated. Use <a href="IfcRelReferencedInSpatialStructure.htm">IfcRelReferencedInSpatialStructure</a> instead.
                                 
                             </small>
 </li>

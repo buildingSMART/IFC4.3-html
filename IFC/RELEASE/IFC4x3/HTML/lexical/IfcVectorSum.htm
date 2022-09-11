@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.6.26 IfcVectorSum - IFC4.3.0.0 Documentation</title>
+<title>8.9.6.27 IfcVectorSum - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -151,15 +153,15 @@
 </nav>
 </div>
 <div class="col-md-8" id="main-content">
-<h1>8.9.6.26 IfcVectorSum</h1>
-<h2><a id="8.9.6.26.1-Semantic-definition"></a>
-    8.9.6.26.1 Semantic definition
-<a href="IfcVectorSum.htm#8.9.6.26.1-Semantic-definition"><i data-feather="link"></i></a></h2>
+<h1>8.9.6.27 IfcVectorSum</h1>
+<h2><a id="8.9.6.27.1-Semantic-definition"></a>
+    8.9.6.27.1 Semantic definition
+<a href="IfcVectorSum.htm#8.9.6.27.1-Semantic-definition"><i data-feather="link"></i></a></h2>
 <aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO/CD 10303-42:1992
 This function returns the sum of the input arguments as (Arg1 - Arg2). The function returns as a vector the vector difference of the two input vectors. The input arguments shall both be of the same dimensionality but may be either directions or vectors. If both input arguments are vectors they must be expressed in the same units, if both are directions a unitless result is produced. A zero sum vector produces a vector of zero magnitude. If both input arguments are directions the result is unitless.</aside><aside class="aside-note"><mark>NOTE</mark>  Function adapted from <strong>vector_sum</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New function in IFC2x</aside>
-<h2><a id="8.9.6.26.2-Formal-representation"></a>
-    8.9.6.26.2 Formal representation
-<a href="IfcVectorSum.htm#8.9.6.26.2-Formal-representation"><i data-feather="link"></i></a></h2>
+<h2><a id="8.9.6.27.2-Formal-representation"></a>
+    8.9.6.27.2 Formal representation
+<a href="IfcVectorSum.htm#8.9.6.27.2-Formal-representation"><i data-feather="link"></i></a></h2>
 <pre><code class="language-express hljs">FUNCTION <a href="IfcVectorSum.htm">IfcVectorSum</a>
   (Arg1, Arg2 : <a href="IfcVectorOrDirection.htm">IfcVectorOrDirection</a>) 
     : <a href="IfcVector.htm">IfcVector</a>;
@@ -174,14 +176,14 @@ END_LOCAL;
     RETURN (?) ;
   ELSE
     BEGIN
-      IF 'IFC4X3.IFCVECTOR' IN TYPEOF(Arg1) THEN
+      IF 'IFC4X3_TC1.<a href="IfcVector.htm">IFCVECTOR</a>' IN TYPEOF(Arg1) THEN
         Mag1 := Arg1\<a href="IfcVector.htm">IfcVector</a>.Magnitude;
         Vec1 := Arg1\<a href="IfcVector.htm">IfcVector</a>.Orientation;
       ELSE
         Mag1 := 1.0;
         Vec1 := Arg1;
       END_IF;
-      IF 'IFC4X3.IFCVECTOR' IN TYPEOF(Arg2) THEN
+      IF 'IFC4X3_TC1.<a href="IfcVector.htm">IFCVECTOR</a>' IN TYPEOF(Arg2) THEN
         Mag2 := Arg2\<a href="IfcVector.htm">IfcVector</a>.Magnitude;
         Vec2 := Arg2\<a href="IfcVector.htm">IfcVector</a>.Orientation;
       ELSE

@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.3.29 IfcSurfaceStyle - IFC4.3.0.0 Documentation</title>
+<title>8.12.3.29 IfcSurfaceStyle - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -279,7 +281,7 @@
 <tr>
 <td colspan="2">
 <pre><code class="language-express hljs">SIZEOF(QUERY(Style &lt;* SELF.Styles |
-  'IFC4X3.IFCEXTERNALLYDEFINEDSURFACESTYLE' IN
+  'IFC4X3_TC1.<a href="IfcExternallyDefinedSurfaceStyle.htm">IFCEXTERNALLYDEFINEDSURFACESTYLE</a>' IN
    TYPEOF(Style)
   )) &lt;= 1</code></pre>
 </td>
@@ -293,7 +295,7 @@
 <tr>
 <td colspan="2">
 <pre><code class="language-express hljs">SIZEOF(QUERY(Style &lt;* SELF.Styles |
-  'IFC4X3.IFCSURFACESTYLELIGHTING' IN
+  'IFC4X3_TC1.<a href="IfcSurfaceStyleLighting.htm">IFCSURFACESTYLELIGHTING</a>' IN
    TYPEOF(Style)
   )) &lt;= 1</code></pre>
 </td>
@@ -307,7 +309,7 @@
 <tr>
 <td colspan="2">
 <pre><code class="language-express hljs">SIZEOF(QUERY(Style &lt;* SELF.Styles |
-  'IFC4X3.IFCSURFACESTYLEREFRACTION' IN
+  'IFC4X3_TC1.<a href="IfcSurfaceStyleRefraction.htm">IFCSURFACESTYLEREFRACTION</a>' IN
    TYPEOF(Style)
   )) &lt;= 1</code></pre>
 </td>
@@ -321,7 +323,7 @@
 <tr>
 <td colspan="2">
 <pre><code class="language-express hljs">SIZEOF(QUERY(Style &lt;* SELF.Styles |
-  'IFC4X3.IFCSURFACESTYLESHADING' IN
+  'IFC4X3_TC1.<a href="IfcSurfaceStyleShading.htm">IFCSURFACESTYLESHADING</a>' IN
    TYPEOF(Style)
   )) &lt;= 1</code></pre>
 </td>
@@ -335,7 +337,7 @@
 <tr>
 <td colspan="2">
 <pre><code class="language-express hljs">SIZEOF(QUERY(Style &lt;* SELF.Styles |
-  'IFC4X3.IFCSURFACESTYLEWITHTEXTURES' IN
+  'IFC4X3_TC1.<a href="IfcSurfaceStyleWithTextures.htm">IFCSURFACESTYLEWITHTEXTURES</a>' IN
    TYPEOF(Style)
   )) &lt;= 1</code></pre>
 </td>
@@ -360,23 +362,23 @@
 	Styles : SET [1:5] OF <a href="IfcSurfaceStyleElementSelect.htm">IfcSurfaceStyleElementSelect</a>;
  WHERE
 	MaxOneExtDefined : SIZEOF(QUERY(Style &lt;* SELF.Styles |
-  'IFC4X3.IFCEXTERNALLYDEFINEDSURFACESTYLE' IN
+  'IFC4X3_TC1.<a href="IfcExternallyDefinedSurfaceStyle.htm">IFCEXTERNALLYDEFINEDSURFACESTYLE</a>' IN
    TYPEOF(Style)
   )) &lt;= 1;
 	MaxOneLighting : SIZEOF(QUERY(Style &lt;* SELF.Styles |
-  'IFC4X3.IFCSURFACESTYLELIGHTING' IN
+  'IFC4X3_TC1.<a href="IfcSurfaceStyleLighting.htm">IFCSURFACESTYLELIGHTING</a>' IN
    TYPEOF(Style)
   )) &lt;= 1;
 	MaxOneRefraction : SIZEOF(QUERY(Style &lt;* SELF.Styles |
-  'IFC4X3.IFCSURFACESTYLEREFRACTION' IN
+  'IFC4X3_TC1.<a href="IfcSurfaceStyleRefraction.htm">IFCSURFACESTYLEREFRACTION</a>' IN
    TYPEOF(Style)
   )) &lt;= 1;
 	MaxOneShading : SIZEOF(QUERY(Style &lt;* SELF.Styles |
-  'IFC4X3.IFCSURFACESTYLESHADING' IN
+  'IFC4X3_TC1.<a href="IfcSurfaceStyleShading.htm">IFCSURFACESTYLESHADING</a>' IN
    TYPEOF(Style)
   )) &lt;= 1;
 	MaxOneTextures : SIZEOF(QUERY(Style &lt;* SELF.Styles |
-  'IFC4X3.IFCSURFACESTYLEWITHTEXTURES' IN
+  'IFC4X3_TC1.<a href="IfcSurfaceStyleWithTextures.htm">IFCSURFACESTYLEWITHTEXTURES</a>' IN
    TYPEOF(Style)
   )) &lt;= 1;
 END_ENTITY;</code></pre>
@@ -397,7 +399,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.12.3.29.8-Changelog"></a>
                         8.12.3.29.8 Changelog
                     <a href="IfcSurfaceStyle.htm#8.12.3.29.8-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.12.3.29.8.1-IFC4"></a>
+<h4><a id="8.12.3.29.8.1-IFC4"></a>
                         8.12.3.29.8.1 IFC4
                     <a href="IfcSurfaceStyle.htm#8.12.3.29.8.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -407,7 +409,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 MaxOneExtDefined
                                 
                             </small>
@@ -418,7 +420,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 MaxOneLighting
                                 
                             </small>
@@ -429,7 +431,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 MaxOneRefraction
                                 
                             </small>
@@ -440,7 +442,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 MaxOneShading
                                 
                             </small>
@@ -451,7 +453,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 MaxOneTextures
                                 
                             </small>
@@ -461,7 +463,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR11
                                 
                             </small>
@@ -471,7 +473,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR12
                                 
                             </small>
@@ -481,7 +483,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR13
                                 
                             </small>
@@ -491,7 +493,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR14
                                 
                             </small>
@@ -501,7 +503,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR15
                                 
                             </small>

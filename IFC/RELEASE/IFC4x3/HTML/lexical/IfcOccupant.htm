@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>6.4.3.5 IfcOccupant - IFC4.3.0.0 Documentation</title>
+<title>6.4.3.5 IfcOccupant - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -328,7 +330,7 @@
             </td>
 <td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
-<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED.</p>
+<p>The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <em>PredefinedType</em> is set to USERDEFINED or when the concrete entity instantiated does not have a PredefinedType attribute. The latter is the case in some exceptional leaf classes and when instantiating <a href="IfcBuiltElement.htm">IfcBuiltElement</a> directly. </p>
 </td>
 </tr>
 <tr class="inherited" data-type="attribute">
@@ -732,7 +734,7 @@ OR EXISTS(SELF\<a href="IfcObject.htm">IfcObject</a>.ObjectType)</code></pre>
 <tr class="group-inherited">
 <td colspan="3">
 <a href="IfcActor.htm">IfcActor</a>
-<small>(3)</small>
+<small>(2)</small>
 </td>
 </tr>
 <tr class="inherited" data-type="concept">
@@ -765,22 +767,6 @@ OR EXISTS(SELF\<a href="IfcObject.htm">IfcObject</a>.ObjectType)</code></pre>
 </tr>
 <tr class="inherited" data-type="concept">
 <td data-label="Name">
-<a href="../concepts/Object_Assignment/Actor_Assignment/content.html">Actor Assignment</a>
-</td>
-<td data-label="Usage">
-                Reference View
-            </td>
-<td data-label="Description">
-<p>This concept can be applied to the following resources:</p>
-<ul>
-<li>
-<a href="IfcProcess.htm">IfcProcess</a>
-</li>
-</ul>
-</td>
-</tr>
-<tr class="inherited" data-type="concept">
-<td data-label="Name">
 <a href="../concepts/Object_Definition/Property_Sets/Property_Sets_for_Objects/content.html">Property Sets for Objects</a>
 </td>
 <td data-label="Usage">
@@ -802,11 +788,11 @@ OR EXISTS(SELF\<a href="IfcObject.htm">IfcObject</a>.ObjectType)</code></pre>
 <td colspan="4">
 <small class="show-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    Click to show 19 hidden inherited concepts
+                    Click to show 18 hidden inherited concepts
                 </small>
 <small class="hide-inherited" data-type="concept">
 <i data-feather="eye-off"></i>
-                    Click to hide 19 inherited concepts
+                    Click to hide 18 inherited concepts
                 </small>
 </td>
 </tr>
@@ -871,7 +857,7 @@ END_ENTITY;</code></pre>
 <h3><a id="6.4.3.5.9-Changelog"></a>
                         6.4.3.5.9 Changelog
                     <a href="IfcOccupant.htm#6.4.3.5.9-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="6.4.3.5.9.1-IFC4"></a>
+<h4><a id="6.4.3.5.9.1-IFC4"></a>
                         6.4.3.5.9.1 IFC4
                     <a href="IfcOccupant.htm#6.4.3.5.9.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -879,8 +865,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes PredefinedType is_optional,
-                                Changed from False to True
+                                attribute PredefinedType optional,
+                                Changed from
+"False"
+to
+"True"
                                 
                             </small>
 </li>

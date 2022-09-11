@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.29 IfcRevolvedAreaSolid - IFC4.3.0.0 Documentation</title>
+<title>8.8.3.29 IfcRevolvedAreaSolid - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -451,7 +453,7 @@ the left shows the texture where the S axis points to the right and the T axis p
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">Axis.Location.Coordinates[3] = 0.0</code></pre>
+<pre><code class="language-express hljs">('IFC4X3_TC1.<a href="IfcCartesianPoint.htm">IFCCARTESIANPOINT</a>' IN TYPEOF(Axis.Location)) AND (Axis.Location\<a href="IfcCartesianPoint.htm">IfcCartesianPoint</a>.Coordinates[3] = 0.0)</code></pre>
 </td>
 </tr>
 </tbody>
@@ -470,7 +472,7 @@ the left shows the texture where the S axis points to the right and the T axis p
   <a href="IfcRepresentationItem.htm">IfcRepresentationItem</a>() || <a href="IfcGeometricRepresentationItem.htm">IfcGeometricRepresentationItem</a> () || <a href="IfcVector.htm">IfcVector</a>(Axis.Z,1.0));
  WHERE
 	AxisDirectionInXY : Axis.Z.DirectionRatios[3] = 0.0;
-	AxisStartInXY : Axis.Location.Coordinates[3] = 0.0;
+	AxisStartInXY : ('IFC4X3_TC1.<a href="IfcCartesianPoint.htm">IFCCARTESIANPOINT</a>' IN TYPEOF(Axis.Location)) AND (Axis.Location\<a href="IfcCartesianPoint.htm">IfcCartesianPoint</a>.Coordinates[3] = 0.0);
 END_ENTITY;</code></pre>
 <h2><a id="8.8.3.29.6-References"></a>
     8.8.3.29.6 References
@@ -490,7 +492,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.8.3.29.7-Changelog"></a>
                         8.8.3.29.7 Changelog
                     <a href="IfcRevolvedAreaSolid.htm#8.8.3.29.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.8.3.29.7.1-IFC4"></a>
+<h4><a id="8.8.3.29.7.1-IFC4"></a>
                         8.8.3.29.7.1 IFC4
                     <a href="IfcRevolvedAreaSolid.htm#8.8.3.29.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -500,7 +502,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 AxisDirectionInXY
                                 
                             </small>
@@ -511,7 +513,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                where_rules,
+                                where rule,
                                 AxisStartInXY
                                 
                             </small>
@@ -521,7 +523,7 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR31
                                 
                             </small>
@@ -531,8 +533,25 @@ END_ENTITY;</code></pre>
 <i data-feather="x-square"></i>
                                 
                                 
-                                where_rules,
+                                where rule,
                                 WR32
+                                
+                            </small>
+</li>
+</ul>
+<h4><a id="8.8.3.29.7.2-IFC4.3-TC1"></a>
+                        8.8.3.29.7.2 IFC4.3_TC1
+                    <a href="IfcRevolvedAreaSolid.htm#8.8.3.29.7.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                where rule AxisStartInXY definition,
+                                Changed from
+"Axis.Location.Coordinates[3] = 0.0"
+to
+"(ifccartesianpoint in typeof(Axis.Location)) and (Axis.Location\<a href="IfcCartesianPoint.htm">IfcCartesianPoint</a>.Coordinates[3] = 0.0)"
                                 
                             </small>
 </li>

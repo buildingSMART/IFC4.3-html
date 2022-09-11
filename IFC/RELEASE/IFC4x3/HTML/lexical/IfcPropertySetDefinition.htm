@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.1.3.15 IfcPropertySetDefinition - IFC4.3.0.0 Documentation</title>
+<title>5.1.3.15 IfcPropertySetDefinition - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -410,7 +412,7 @@ END_ENTITY;</code></pre>
 <h3><a id="5.1.3.15.7-Changelog"></a>
                         5.1.3.15.7 Changelog
                     <a href="IfcPropertySetDefinition.htm#5.1.3.15.7-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="5.1.3.15.7.1-IFC4"></a>
+<h4><a id="5.1.3.15.7.1-IFC4"></a>
                         5.1.3.15.7.1 IFC4
                     <a href="IfcPropertySetDefinition.htm#5.1.3.15.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -420,7 +422,7 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 
-                                inverses,
+                                inverse attribute,
                                 DefinesOccurrence
                                 
                             </small>
@@ -429,8 +431,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                inverses DefinesType definition,
-                                Changed from SET OF [0:1] <a href="IfcTypeObject.htm">IfcTypeObject</a> FOR HasPropertySets to SET OF [0:?] <a href="IfcRelDefinesByTemplate.htm">IfcRelDefinesByTemplate</a> FOR RelatedPropertySets
+                                inverse attribute DefinesType name,
+                                Changed from
+"DefinesType"
+to
+"IsDefinedBy"
                                 
                             </small>
 </li>
@@ -438,8 +443,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                inverses DefinesType name,
-                                Changed from DefinesType to IsDefinedBy
+                                inverse attribute DefinesType type,
+                                Changed from
+"SET OF [0:1] <a href="IfcTypeObject.htm">IfcTypeObject</a> FOR HasPropertySets"
+to
+"SET OF [0:?] <a href="IfcRelDefinesByTemplate.htm">IfcRelDefinesByTemplate</a> FOR RelatedPropertySets"
                                 
                             </small>
 </li>
@@ -447,8 +455,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                inverses PropertyDefinitionOf definition,
-                                Changed from SET OF [0:1] <a href="IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a> FOR RelatingPropertyDefinition to SET OF [0:?] <a href="IfcTypeObject.htm">IfcTypeObject</a> FOR HasPropertySets
+                                inverse attribute PropertyDefinitionOf name,
+                                Changed from
+"PropertyDefinitionOf"
+to
+"DefinesType"
                                 
                             </small>
 </li>
@@ -456,8 +467,11 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                inverses PropertyDefinitionOf name,
-                                Changed from PropertyDefinitionOf to DefinesType
+                                inverse attribute PropertyDefinitionOf type,
+                                Changed from
+"SET OF [0:1] <a href="IfcRelDefinesByProperties.htm">IfcRelDefinesByProperties</a> FOR RelatingPropertyDefinition"
+to
+"SET OF [0:?] <a href="IfcTypeObject.htm">IfcTypeObject</a> FOR HasPropertySets"
                                 
                             </small>
 </li>

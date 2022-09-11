@@ -4,14 +4,16 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.22 IfcHalfSpaceSolid - IFC4.3.0.0 Documentation</title>
+<title>8.8.3.22 IfcHalfSpaceSolid - IFC4.3.0.1 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
+<body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.0 (IFC4X3) <small>development</small></p>
+<p>IFC 4.3.0.1 (IFC4X3_TC1)
+                
+                </p>
 </header>
 </div>
 <div class="row">
@@ -159,7 +161,9 @@
 <p>Figure 8.8.3.22.A illustrates the definition of the <em><a href="IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a></em> within a given coordinate system. The base surface is given by an unbounded plane, the red boundary is shown for visualization purposes only.</p>
 <figure><a id="Figure-8.8.3.22.A-Half-space-solid-geometry"></a><img alt="half space solid" src="../figures/ifchalfspacesolid-layout1.gif" title="Figure 8.8.3.22.A — Half space solid geometry"/><figcaption>Figure 8.8.3.22.A — Half space solid geometry<a href="IfcHalfSpaceSolid.htm#Figure-8.8.3.22.A-Half-space-solid-geometry"><i data-feather="link"></i></a></figcaption></figure>
 <aside class="aside-note"><mark>NOTE</mark>  Definition according to ISO/CD 10303-42:1992
-A half space solid is defined by the half space which is the regular subset of the domain which lies on one side of an unbounded surface. The side of the surface which is in the half space is determined by the surface normal and the agreement flag. If the agreement flag is TRUE, then the subset is the one the normal points away from. If the agreement flag is FALSE, then the subset is the one the normal points into.</aside><aside class="aside-note"><mark>NOTE</mark>  A half space is not a subtype of solid model, half space solids are only useful as operands in Boolean expressions.</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>half_space_solid</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC1.5</aside>
+A half space solid is defined by the half space which is the regular subset of the domain which lies on one side of an unbounded surface. The side of the surface which is in the half space is determined by the surface normal and the agreement flag. If the agreement flag is TRUE, then the subset is the one the normal points away from. If the agreement flag is FALSE, then the subset is the one the normal points into.</aside><aside class="aside-note"><mark>NOTE</mark>  A half space is not a subtype of solid model, half space solids are only useful as operands in Boolean expressions.</aside><aside class="aside-note"><mark>NOTE</mark>  Entity adapted from <strong>half_space_solid</strong> defined in ISO 10303-42.</aside><aside class="aside-history"><mark>HISTORY</mark>  New entity in IFC1.5</aside><blockquote>
+<p>For a valid half space solid the surface shall divide the domain into exactly two subsets. Also, within the domain the surface shall be manifold and all surface normals shall point into the same subset.</p>
+</blockquote>
 <p>Informal Propositions:</p>
 <ol>
 <li>The base surface shall divide the domain into exactly two subsets. If the half space solid is of subtype boxed half space (<em><a href="IfcBoxedHalfSpace.htm">IfcBoxedHalfSpace</a></em>), the domain in question is that of the attribute enclosure. In all other cases the domain is all of space and the base surface shall be unbounded.</li>
@@ -361,7 +365,7 @@ END_ENTITY;</code></pre>
 <h3><a id="8.8.3.22.6-Changelog"></a>
                         8.8.3.22.6 Changelog
                     <a href="IfcHalfSpaceSolid.htm#8.8.3.22.6-Changelog"><i data-feather="link"></i></a></h3>
-<h4 class="collapsed"><a id="8.8.3.22.6.1-IFC4"></a>
+<h4><a id="8.8.3.22.6.1-IFC4"></a>
                         8.8.3.22.6.1 IFC4
                     <a href="IfcHalfSpaceSolid.htm#8.8.3.22.6.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
@@ -369,9 +373,13 @@ END_ENTITY;</code></pre>
 <small>
 <i data-feather="edit"></i>
                                 
-                                attributes AgreementFlag definition,
-                                Changed from boolean to <a href="IfcBoolean.htm">IfcBoolean</a>
-</small>
+                                attribute AgreementFlag type,
+                                Changed from
+"boolean"
+to
+"<a href="IfcBoolean.htm">IfcBoolean</a>"
+                                
+                            </small>
 </li>
 </ul>
 </div>
