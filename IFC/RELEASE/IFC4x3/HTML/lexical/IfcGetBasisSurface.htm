@@ -187,19 +187,19 @@ This function returns the basis surface for a curve as a a set of surfaces. For 
 
     N := SIZEOF(C\<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>.Segments);
     
-    IF ('IFC4X3_TC1.<a href="IfcCurveSegment.htm">IFCCURVESEGMENT</a>' IN TYPEOF(Segment)) THEN
+    IF ('IFC4X3_TC1.<a href="IfcCurveSegment.htm">IFCCURVESEGMENT</a>' IN TYPEOF(C\<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>.Segments[1])) THEN
       Surfs := <a href="IfcGetBasisSurface.htm">IfcGetBasisSurface</a>(C\<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>.Segments[1]\<a href="IfcCurveSegment.htm">IfcCurveSegment</a>.ParentCurve);
     END_IF;
-    IF ('IFC4X3_TC1.<a href="IfcCompositeCurveSegment.htm">IFCCOMPOSITECURVESEGMENT</a>' IN TYPEOF(Segment)) THEN
+    IF ('IFC4X3_TC1.<a href="IfcCompositeCurveSegment.htm">IFCCOMPOSITECURVESEGMENT</a>' IN TYPEOF(C\<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>.Segments[1])) THEN
       Surfs := <a href="IfcGetBasisSurface.htm">IfcGetBasisSurface</a>(C\<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>.Segments[1]\<a href="IfcCompositeCurveSegment.htm">IfcCompositeCurveSegment</a>.ParentCurve);
     END_IF;
     
     IF N &gt; 1 THEN
       REPEAT i := 2 TO N;       
-        IF ('IFC4X3_TC1.<a href="IfcCurveSegment.htm">IFCCURVESEGMENT</a>' IN TYPEOF(Segment)) THEN
+        IF ('IFC4X3_TC1.<a href="IfcCurveSegment.htm">IFCCURVESEGMENT</a>' IN TYPEOF(C\<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>.Segments[i])) THEN
           Surfs := Surfs * <a href="IfcGetBasisSurface.htm">IfcGetBasisSurface</a>(C\<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>.Segments[i]\<a href="IfcCurveSegment.htm">IfcCurveSegment</a>.ParentCurve);
         END_IF;
-        IF ('IFC4X3_TC1.<a href="IfcCompositeCurveSegment.htm">IFCCOMPOSITECURVESEGMENT</a>' IN TYPEOF(Segment)) THEN
+        IF ('IFC4X3_TC1.<a href="IfcCompositeCurveSegment.htm">IFCCOMPOSITECURVESEGMENT</a>' IN TYPEOF(C\<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>.Segments[i])) THEN
           Surfs := Surfs * <a href="IfcGetBasisSurface.htm">IfcGetBasisSurface</a>(C\<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>.Segments[i]\<a href="IfcCompositeCurveSegment.htm">IfcCompositeCurveSegment</a>.ParentCurve);
         END_IF;
       END_REPEAT;

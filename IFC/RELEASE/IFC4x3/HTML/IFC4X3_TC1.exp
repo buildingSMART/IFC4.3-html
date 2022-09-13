@@ -12998,19 +12998,19 @@ FUNCTION IfcGetBasisSurface
 
     N := SIZEOF(C\IfcCompositeCurve.Segments);
     
-    IF ('IFC4X3_TC1.IFCCURVESEGMENT' IN TYPEOF(Segment)) THEN
+    IF ('IFC4X3_TC1.IFCCURVESEGMENT' IN TYPEOF(C\IfcCompositeCurve.Segments[1])) THEN
       Surfs := IfcGetBasisSurface(C\IfcCompositeCurve.Segments[1]\IfcCurveSegment.ParentCurve);
     END_IF;
-    IF ('IFC4X3_TC1.IFCCOMPOSITECURVESEGMENT' IN TYPEOF(Segment)) THEN
+    IF ('IFC4X3_TC1.IFCCOMPOSITECURVESEGMENT' IN TYPEOF(C\IfcCompositeCurve.Segments[1])) THEN
       Surfs := IfcGetBasisSurface(C\IfcCompositeCurve.Segments[1]\IfcCompositeCurveSegment.ParentCurve);
     END_IF;
     
     IF N > 1 THEN
       REPEAT i := 2 TO N;       
-        IF ('IFC4X3_TC1.IFCCURVESEGMENT' IN TYPEOF(Segment)) THEN
+        IF ('IFC4X3_TC1.IFCCURVESEGMENT' IN TYPEOF(C\IfcCompositeCurve.Segments[i])) THEN
           Surfs := Surfs * IfcGetBasisSurface(C\IfcCompositeCurve.Segments[i]\IfcCurveSegment.ParentCurve);
         END_IF;
-        IF ('IFC4X3_TC1.IFCCOMPOSITECURVESEGMENT' IN TYPEOF(Segment)) THEN
+        IF ('IFC4X3_TC1.IFCCOMPOSITECURVESEGMENT' IN TYPEOF(C\IfcCompositeCurve.Segments[i])) THEN
           Surfs := Surfs * IfcGetBasisSurface(C\IfcCompositeCurve.Segments[i]\IfcCompositeCurveSegment.ParentCurve);
         END_IF;
       END_REPEAT;
