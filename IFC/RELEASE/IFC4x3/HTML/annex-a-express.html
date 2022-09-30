@@ -7185,7 +7185,7 @@ ENTITY <a href="lexical/IfcGeographicCRS.htm">IfcGeographicCRS</a>
 	PrimeMeridian : OPTIONAL <a href="lexical/IfcIdentifier.htm">IfcIdentifier</a>;
 	Unit : OPTIONAL <a href="lexical/IfcNamedUnit.htm">IfcNamedUnit</a>;
  WHERE
-	IsPlaneAngleUnit : NOT(EXISTS(Unit)) OR(Unit.UnitType=<a href="lexical/IfcUnitEnum.htm">IfcUnitEnum</a>.PLANEANGLEUNIT);
+	IsPlaneAngleUnit : NOT(EXISTS(Unit)) OR (Unit.UnitType=<a href="lexical/IfcUnitEnum.htm">IfcUnitEnum</a>.PLANEANGLEUNIT);
 END_ENTITY;
 
 ENTITY <a href="lexical/IfcGeographicElement.htm">IfcGeographicElement</a>

@@ -7091,7 +7091,7 @@ ENTITY IfcGeographicCRS
 	PrimeMeridian : OPTIONAL IfcIdentifier;
 	Unit : OPTIONAL IfcNamedUnit;
  WHERE
-	IsPlaneAngleUnit : NOT(EXISTS(Unit)) OR(Unit.UnitType=IfcUnitEnum.PLANEANGLEUNIT);
+	IsPlaneAngleUnit : NOT(EXISTS(Unit)) OR (Unit.UnitType=IfcUnitEnum.PLANEANGLEUNIT);
 END_ENTITY;
 
 ENTITY IfcGeographicElement

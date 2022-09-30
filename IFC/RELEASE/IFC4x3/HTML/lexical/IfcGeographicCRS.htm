@@ -326,7 +326,7 @@ ELLIPSOID[<name>,<major axis="">,<inverse flattening="">,<length unit="">]</leng
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">NOT(EXISTS(Unit)) OR(Unit.UnitType=<a href="IfcUnitEnum.htm">IfcUnitEnum</a>.PLANEANGLEUNIT)</code></pre>
+<pre><code class="language-express hljs">NOT(EXISTS(Unit)) OR (Unit.UnitType=<a href="IfcUnitEnum.htm">IfcUnitEnum</a>.PLANEANGLEUNIT)</code></pre>
 </td>
 </tr>
 </tbody>
@@ -340,7 +340,7 @@ ELLIPSOID[<name>,<major axis="">,<inverse flattening="">,<length unit="">]</leng
 	PrimeMeridian : OPTIONAL <a href="IfcIdentifier.htm">IfcIdentifier</a>;
 	Unit : OPTIONAL <a href="IfcNamedUnit.htm">IfcNamedUnit</a>;
  WHERE
-	IsPlaneAngleUnit : NOT(EXISTS(Unit)) OR(Unit.UnitType=<a href="IfcUnitEnum.htm">IfcUnitEnum</a>.PLANEANGLEUNIT);
+	IsPlaneAngleUnit : NOT(EXISTS(Unit)) OR (Unit.UnitType=<a href="IfcUnitEnum.htm">IfcUnitEnum</a>.PLANEANGLEUNIT);
 END_ENTITY;</code></pre>
 <h2><a id="8.18.3.3.6-References"></a>
     8.18.3.3.6 References
