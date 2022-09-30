@@ -4,14 +4,14 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>5.1.6.3 IfcUniquePropertySetNames - IFC4.3.0.1 Documentation</title>
+<title>5.1.6.3 IfcUniquePropertySetNames - IFC4.3.1.0 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.1 (IFC4X3_TC1)
+<p>IFC 4.3.1.0 (IFC4X3_ADD1)
                 
                 </p>
 </header>
@@ -122,7 +122,7 @@ LOCAL
 END_LOCAL;
 
 REPEAT i:=1 TO HIINDEX(Properties);
-  IF 'IFC4X3_TC1.<a href="IfcPropertySet.htm">IFCPROPERTYSET</a>' IN TYPEOF(Properties[i]) THEN
+  IF 'IFC4X3_ADD1.<a href="IfcPropertySet.htm">IFCPROPERTYSET</a>' IN TYPEOF(Properties[i]) THEN
     Names := Names + Properties[i]\<a href="IfcRoot.htm">IfcRoot</a>.Name;
   ELSE
     Unnamed := Unnamed + 1;

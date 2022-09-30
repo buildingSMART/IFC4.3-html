@@ -4,14 +4,14 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.56 IfcRectangularTrimmedSurface - IFC4.3.0.1 Documentation</title>
+<title>8.9.3.56 IfcRectangularTrimmedSurface - IFC4.3.1.0 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.1 (IFC4X3_TC1)
+<p>IFC 4.3.1.0 (IFC4X3_ADD1)
                 
                 </p>
 </header>
@@ -435,9 +435,9 @@ The trimmed surface is a simple bounded surface in which the boundaries are the 
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">(('IFC4X3_TC1.<a href="IfcElementarySurface.htm">IFCELEMENTARYSURFACE</a>' IN TYPEOF(BasisSurface)) AND
-         (NOT ('IFC4X3_TC1.<a href="IfcPlane.htm">IFCPLANE</a>' IN TYPEOF(BasisSurface)))) OR
-         ('IFC4X3_TC1.<a href="IfcSurfaceOfRevolution.htm">IFCSURFACEOFREVOLUTION</a>' IN TYPEOF(BasisSurface)) OR
+<pre><code class="language-express hljs">(('IFC4X3_ADD1.<a href="IfcElementarySurface.htm">IFCELEMENTARYSURFACE</a>' IN TYPEOF(BasisSurface)) AND
+         (NOT ('IFC4X3_ADD1.<a href="IfcPlane.htm">IFCPLANE</a>' IN TYPEOF(BasisSurface)))) OR
+         ('IFC4X3_ADD1.<a href="IfcSurfaceOfRevolution.htm">IFCSURFACEOFREVOLUTION</a>' IN TYPEOF(BasisSurface)) OR
          (Usense = (U2 &gt; U1))</code></pre>
 </td>
 </tr>
@@ -479,9 +479,9 @@ The trimmed surface is a simple bounded surface in which the boundaries are the 
 	Vsense : <a href="IfcBoolean.htm">IfcBoolean</a>;
  WHERE
 	U1AndU2Different : U1 &lt;&gt; U2;
-	UsenseCompatible : (('IFC4X3_TC1.<a href="IfcElementarySurface.htm">IFCELEMENTARYSURFACE</a>' IN TYPEOF(BasisSurface)) AND
-         (NOT ('IFC4X3_TC1.<a href="IfcPlane.htm">IFCPLANE</a>' IN TYPEOF(BasisSurface)))) OR
-         ('IFC4X3_TC1.<a href="IfcSurfaceOfRevolution.htm">IFCSURFACEOFREVOLUTION</a>' IN TYPEOF(BasisSurface)) OR
+	UsenseCompatible : (('IFC4X3_ADD1.<a href="IfcElementarySurface.htm">IFCELEMENTARYSURFACE</a>' IN TYPEOF(BasisSurface)) AND
+         (NOT ('IFC4X3_ADD1.<a href="IfcPlane.htm">IFCPLANE</a>' IN TYPEOF(BasisSurface)))) OR
+         ('IFC4X3_ADD1.<a href="IfcSurfaceOfRevolution.htm">IFCSURFACEOFREVOLUTION</a>' IN TYPEOF(BasisSurface)) OR
          (Usense = (U2 &gt; U1));
 	V1AndV2Different : V1 &lt;&gt; V2;
 	VsenseCompatible : Vsense = (V2 &gt; V1);

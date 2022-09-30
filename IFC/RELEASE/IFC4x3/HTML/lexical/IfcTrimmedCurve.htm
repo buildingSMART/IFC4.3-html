@@ -4,14 +4,14 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.3.75 IfcTrimmedCurve - IFC4.3.0.1 Documentation</title>
+<title>8.9.3.75 IfcTrimmedCurve - IFC4.3.1.0 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.1 (IFC4X3_TC1)
+<p>IFC 4.3.1.0 (IFC4X3_ADD1)
                 
                 </p>
 </header>
@@ -420,7 +420,7 @@ A trimmed curve is a bounded curve which is created by taking a selected portion
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">NOT('IFC4X3_TC1.<a href="IfcBoundedCurve.htm">IFCBOUNDEDCURVE</a>' IN TYPEOF(BasisCurve))</code></pre>
+<pre><code class="language-express hljs">NOT('IFC4X3_ADD1.<a href="IfcBoundedCurve.htm">IFCBOUNDEDCURVE</a>' IN TYPEOF(BasisCurve))</code></pre>
 </td>
 </tr>
 <tr>
@@ -458,7 +458,7 @@ A trimmed curve is a bounded curve which is created by taking a selected portion
 	SenseAgreement : <a href="IfcBoolean.htm">IfcBoolean</a>;
 	MasterRepresentation : <a href="IfcTrimmingPreference.htm">IfcTrimmingPreference</a>;
  WHERE
-	NoTrimOfBoundedCurves : NOT('IFC4X3_TC1.<a href="IfcBoundedCurve.htm">IFCBOUNDEDCURVE</a>' IN TYPEOF(BasisCurve));
+	NoTrimOfBoundedCurves : NOT('IFC4X3_ADD1.<a href="IfcBoundedCurve.htm">IFCBOUNDEDCURVE</a>' IN TYPEOF(BasisCurve));
 	Trim1ValuesConsistent : (HIINDEX(Trim1) = 1) OR (TYPEOF(Trim1[1]) &lt;&gt; TYPEOF(Trim1[2]));
 	Trim2ValuesConsistent : (HIINDEX(Trim2) = 1) OR (TYPEOF(Trim2[1]) &lt;&gt; TYPEOF(Trim2[2]));
 END_ENTITY;</code></pre>

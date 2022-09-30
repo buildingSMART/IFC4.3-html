@@ -4,14 +4,14 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>7.11.3.17 IfcTendon - IFC4.3.0.1 Documentation</title>
+<title>7.11.3.17 IfcTendon - IFC4.3.1.0 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.1 (IFC4X3_TC1)
+<p>IFC 4.3.1.0 (IFC4X3_ADD1)
                 
                 </p>
 </header>
@@ -813,7 +813,7 @@
 <tr>
 <td colspan="2">
 <pre><code class="language-express hljs">(SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_TC1.<a href="IfcTendonType.htm">IFCTENDONTYPE</a>' IN TYPEOF(SELF\<a href="IfcObject.htm">IfcObject</a>.IsTypedBy[1].RelatingType))</code></pre>
+  ('IFC4X3_ADD1.<a href="IfcTendonType.htm">IFCTENDONTYPE</a>' IN TYPEOF(SELF\<a href="IfcObject.htm">IfcObject</a>.IsTypedBy[1].RelatingType))</code></pre>
 </td>
 </tr>
 </tbody>
@@ -2472,7 +2472,7 @@ element components in the <a href="IfcElementQuantity.htm">IfcElementQuantity</a
  (PredefinedType &lt;&gt; <a href="IfcTendonTypeEnum.htm">IfcTendonTypeEnum</a>.USERDEFINED) OR
  ((PredefinedType = <a href="IfcTendonTypeEnum.htm">IfcTendonTypeEnum</a>.USERDEFINED) AND EXISTS (SELF\<a href="IfcObject.htm">IfcObject</a>.ObjectType));
 	CorrectTypeAssigned : (SIZEOF(IsTypedBy) = 0) OR
-  ('IFC4X3_TC1.<a href="IfcTendonType.htm">IFCTENDONTYPE</a>' IN TYPEOF(SELF\<a href="IfcObject.htm">IfcObject</a>.IsTypedBy[1].RelatingType));
+  ('IFC4X3_ADD1.<a href="IfcTendonType.htm">IFCTENDONTYPE</a>' IN TYPEOF(SELF\<a href="IfcObject.htm">IfcObject</a>.IsTypedBy[1].RelatingType));
 END_ENTITY;</code></pre>
 <h2><a id="7.11.3.17.8-References"></a>
     7.11.3.17.8 References

@@ -4,14 +4,14 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.3.29 IfcSurfaceStyle - IFC4.3.0.1 Documentation</title>
+<title>8.12.3.29 IfcSurfaceStyle - IFC4.3.1.0 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.1 (IFC4X3_TC1)
+<p>IFC 4.3.1.0 (IFC4X3_ADD1)
                 
                 </p>
 </header>
@@ -281,7 +281,7 @@
 <tr>
 <td colspan="2">
 <pre><code class="language-express hljs">SIZEOF(QUERY(Style &lt;* SELF.Styles |
-  'IFC4X3_TC1.<a href="IfcExternallyDefinedSurfaceStyle.htm">IFCEXTERNALLYDEFINEDSURFACESTYLE</a>' IN
+  'IFC4X3_ADD1.<a href="IfcExternallyDefinedSurfaceStyle.htm">IFCEXTERNALLYDEFINEDSURFACESTYLE</a>' IN
    TYPEOF(Style)
   )) &lt;= 1</code></pre>
 </td>
@@ -295,7 +295,7 @@
 <tr>
 <td colspan="2">
 <pre><code class="language-express hljs">SIZEOF(QUERY(Style &lt;* SELF.Styles |
-  'IFC4X3_TC1.<a href="IfcSurfaceStyleLighting.htm">IFCSURFACESTYLELIGHTING</a>' IN
+  'IFC4X3_ADD1.<a href="IfcSurfaceStyleLighting.htm">IFCSURFACESTYLELIGHTING</a>' IN
    TYPEOF(Style)
   )) &lt;= 1</code></pre>
 </td>
@@ -309,7 +309,7 @@
 <tr>
 <td colspan="2">
 <pre><code class="language-express hljs">SIZEOF(QUERY(Style &lt;* SELF.Styles |
-  'IFC4X3_TC1.<a href="IfcSurfaceStyleRefraction.htm">IFCSURFACESTYLEREFRACTION</a>' IN
+  'IFC4X3_ADD1.<a href="IfcSurfaceStyleRefraction.htm">IFCSURFACESTYLEREFRACTION</a>' IN
    TYPEOF(Style)
   )) &lt;= 1</code></pre>
 </td>
@@ -323,7 +323,7 @@
 <tr>
 <td colspan="2">
 <pre><code class="language-express hljs">SIZEOF(QUERY(Style &lt;* SELF.Styles |
-  'IFC4X3_TC1.<a href="IfcSurfaceStyleShading.htm">IFCSURFACESTYLESHADING</a>' IN
+  'IFC4X3_ADD1.<a href="IfcSurfaceStyleShading.htm">IFCSURFACESTYLESHADING</a>' IN
    TYPEOF(Style)
   )) &lt;= 1</code></pre>
 </td>
@@ -337,7 +337,7 @@
 <tr>
 <td colspan="2">
 <pre><code class="language-express hljs">SIZEOF(QUERY(Style &lt;* SELF.Styles |
-  'IFC4X3_TC1.<a href="IfcSurfaceStyleWithTextures.htm">IFCSURFACESTYLEWITHTEXTURES</a>' IN
+  'IFC4X3_ADD1.<a href="IfcSurfaceStyleWithTextures.htm">IFCSURFACESTYLEWITHTEXTURES</a>' IN
    TYPEOF(Style)
   )) &lt;= 1</code></pre>
 </td>
@@ -362,23 +362,23 @@
 	Styles : SET [1:5] OF <a href="IfcSurfaceStyleElementSelect.htm">IfcSurfaceStyleElementSelect</a>;
  WHERE
 	MaxOneExtDefined : SIZEOF(QUERY(Style &lt;* SELF.Styles |
-  'IFC4X3_TC1.<a href="IfcExternallyDefinedSurfaceStyle.htm">IFCEXTERNALLYDEFINEDSURFACESTYLE</a>' IN
+  'IFC4X3_ADD1.<a href="IfcExternallyDefinedSurfaceStyle.htm">IFCEXTERNALLYDEFINEDSURFACESTYLE</a>' IN
    TYPEOF(Style)
   )) &lt;= 1;
 	MaxOneLighting : SIZEOF(QUERY(Style &lt;* SELF.Styles |
-  'IFC4X3_TC1.<a href="IfcSurfaceStyleLighting.htm">IFCSURFACESTYLELIGHTING</a>' IN
+  'IFC4X3_ADD1.<a href="IfcSurfaceStyleLighting.htm">IFCSURFACESTYLELIGHTING</a>' IN
    TYPEOF(Style)
   )) &lt;= 1;
 	MaxOneRefraction : SIZEOF(QUERY(Style &lt;* SELF.Styles |
-  'IFC4X3_TC1.<a href="IfcSurfaceStyleRefraction.htm">IFCSURFACESTYLEREFRACTION</a>' IN
+  'IFC4X3_ADD1.<a href="IfcSurfaceStyleRefraction.htm">IFCSURFACESTYLEREFRACTION</a>' IN
    TYPEOF(Style)
   )) &lt;= 1;
 	MaxOneShading : SIZEOF(QUERY(Style &lt;* SELF.Styles |
-  'IFC4X3_TC1.<a href="IfcSurfaceStyleShading.htm">IFCSURFACESTYLESHADING</a>' IN
+  'IFC4X3_ADD1.<a href="IfcSurfaceStyleShading.htm">IFCSURFACESTYLESHADING</a>' IN
    TYPEOF(Style)
   )) &lt;= 1;
 	MaxOneTextures : SIZEOF(QUERY(Style &lt;* SELF.Styles |
-  'IFC4X3_TC1.<a href="IfcSurfaceStyleWithTextures.htm">IFCSURFACESTYLEWITHTEXTURES</a>' IN
+  'IFC4X3_ADD1.<a href="IfcSurfaceStyleWithTextures.htm">IFCSURFACESTYLEWITHTEXTURES</a>' IN
    TYPEOF(Style)
   )) &lt;= 1;
 END_ENTITY;</code></pre>

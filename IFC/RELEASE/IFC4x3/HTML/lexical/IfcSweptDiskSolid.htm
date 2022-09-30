@@ -4,14 +4,14 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.42 IfcSweptDiskSolid - IFC4.3.0.1 Documentation</title>
+<title>8.8.3.42 IfcSweptDiskSolid - IFC4.3.1.0 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.1 (IFC4X3_TC1)
+<p>IFC 4.3.1.0 (IFC4X3_ADD1)
                 
                 </p>
 </header>
@@ -413,7 +413,7 @@ A swept disk solid is the solid produced by sweeping a circular disk along a thr
 <tr>
 <td colspan="2">
 <pre><code class="language-express hljs">(EXISTS(StartParam) AND EXISTS(EndParam)) OR 
-(SIZEOF(['IFC4X3_TC1.<a href="IfcConic.htm">IFCCONIC</a>', 'IFC4X3_TC1.<a href="IfcBoundedCurve.htm">IFCBOUNDEDCURVE</a>'] * TYPEOF(Directrix)) = 1)</code></pre>
+(SIZEOF(['IFC4X3_ADD1.<a href="IfcConic.htm">IFCCONIC</a>', 'IFC4X3_ADD1.<a href="IfcBoundedCurve.htm">IFCBOUNDEDCURVE</a>'] * TYPEOF(Directrix)) = 1)</code></pre>
 </td>
 </tr>
 <tr>
@@ -454,7 +454,7 @@ A swept disk solid is the solid produced by sweeping a circular disk along a thr
 	EndParam : OPTIONAL <a href="IfcParameterValue.htm">IfcParameterValue</a>;
  WHERE
 	DirectrixBounded : (EXISTS(StartParam) AND EXISTS(EndParam)) OR 
-(SIZEOF(['IFC4X3_TC1.<a href="IfcConic.htm">IFCCONIC</a>', 'IFC4X3_TC1.<a href="IfcBoundedCurve.htm">IFCBOUNDEDCURVE</a>'] * TYPEOF(Directrix)) = 1);
+(SIZEOF(['IFC4X3_ADD1.<a href="IfcConic.htm">IFCCONIC</a>', 'IFC4X3_ADD1.<a href="IfcBoundedCurve.htm">IFCBOUNDEDCURVE</a>'] * TYPEOF(Directrix)) = 1);
 	DirectrixDim : Directrix.Dim = 3;
 	InnerRadiusSize : (NOT EXISTS(InnerRadius)) OR (Radius &gt; InnerRadius);
 END_ENTITY;</code></pre>

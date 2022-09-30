@@ -4,14 +4,14 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.20.3.13 IfcOrientedEdge - IFC4.3.0.1 Documentation</title>
+<title>8.20.3.13 IfcOrientedEdge - IFC4.3.1.0 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.1 (IFC4X3_TC1)
+<p>IFC 4.3.1.0 (IFC4X3_ADD1)
                 
                 </p>
 </header>
@@ -380,7 +380,7 @@ An oriented edge is an edge constructed from another edge and contains a BOOLEAN
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">NOT('IFC4X3_TC1.<a href="IfcOrientedEdge.htm">IFCORIENTEDEDGE</a>' IN TYPEOF(EdgeElement))</code></pre>
+<pre><code class="language-express hljs">NOT('IFC4X3_ADD1.<a href="IfcOrientedEdge.htm">IFCORIENTEDEDGE</a>' IN TYPEOF(EdgeElement))</code></pre>
 </td>
 </tr>
 </tbody>
@@ -398,7 +398,7 @@ An oriented edge is an edge constructed from another edge and contains a BOOLEAN
 	 SELF\<a href="IfcEdge.htm">IfcEdge</a>.EdgeEnd : <a href="IfcVertex.htm">IfcVertex</a> := <a href="IfcBooleanChoose.htm">IfcBooleanChoose</a> 
 (Orientation, EdgeElement.EdgeEnd, EdgeElement.EdgeStart);
  WHERE
-	EdgeElementNotOriented : NOT('IFC4X3_TC1.<a href="IfcOrientedEdge.htm">IFCORIENTEDEDGE</a>' IN TYPEOF(EdgeElement));
+	EdgeElementNotOriented : NOT('IFC4X3_ADD1.<a href="IfcOrientedEdge.htm">IFCORIENTEDEDGE</a>' IN TYPEOF(EdgeElement));
 END_ENTITY;</code></pre>
 <h2><a id="8.20.3.13.6-References"></a>
     8.20.3.13.6 References

@@ -4,14 +4,14 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.6.12 IfcGetBasisSurface - IFC4.3.0.1 Documentation</title>
+<title>8.9.6.12 IfcGetBasisSurface - IFC4.3.1.0 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.1 (IFC4X3_TC1)
+<p>IFC 4.3.1.0 (IFC4X3_ADD1)
                 
                 </p>
 </header>
@@ -171,35 +171,35 @@ This function returns the basis surface for a curve as a a set of surfaces. For 
   END_LOCAL;
 
   Surfs := [];
-  IF 'IFC4X3_TC1.<a href="IfcPcurve.htm">IFCPCURVE</a>' IN TYPEOF (C) THEN
+  IF 'IFC4X3_ADD1.<a href="IfcPcurve.htm">IFCPCURVE</a>' IN TYPEOF (C) THEN
     Surfs := [C\<a href="IfcPcurve.htm">IfcPCurve</a>.BasisSurface];
   ELSE
-    IF 'IFC4X3_TC1.<a href="IfcSurfaceCurve.htm">IFCSURFACECURVE</a>' IN TYPEOF (C) THEN
+    IF 'IFC4X3_ADD1.<a href="IfcSurfaceCurve.htm">IFCSURFACECURVE</a>' IN TYPEOF (C) THEN
       N := SIZEOF(C\<a href="IfcSurfaceCurve.htm">IfcSurfaceCurve</a>.AssociatedGeometry);
       REPEAT i := 1 TO N;
       Surfs := Surfs + <a href="IfcAssociatedSurface.htm">IfcAssociatedSurface</a>(C\<a href="IfcSurfaceCurve.htm">IfcSurfaceCurve</a>.AssociatedGeometry[i]);
       END_REPEAT;
     END_IF;
   END_IF;
-  IF 'IFC4X3_TC1.<a href="IfcCompositeCurveOnSurface.htm">IFCCOMPOSITECURVEONSURFACE</a>' IN TYPEOF (C) THEN
+  IF 'IFC4X3_ADD1.<a href="IfcCompositeCurveOnSurface.htm">IFCCOMPOSITECURVEONSURFACE</a>' IN TYPEOF (C) THEN
 
     (* For an <a href="IfcCompositeCurveOnSurface.htm">IfcCompositeCurveOnSurface</a> the BasisSurface is the intersection of the BasisSurface of all the segments. *)
 
     N := SIZEOF(C\<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>.Segments);
     
-    IF ('IFC4X3_TC1.<a href="IfcCurveSegment.htm">IFCCURVESEGMENT</a>' IN TYPEOF(C\<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>.Segments[1])) THEN
+    IF ('IFC4X3_ADD1.<a href="IfcCurveSegment.htm">IFCCURVESEGMENT</a>' IN TYPEOF(C\<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>.Segments[1])) THEN
       Surfs := <a href="IfcGetBasisSurface.htm">IfcGetBasisSurface</a>(C\<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>.Segments[1]\<a href="IfcCurveSegment.htm">IfcCurveSegment</a>.ParentCurve);
     END_IF;
-    IF ('IFC4X3_TC1.<a href="IfcCompositeCurveSegment.htm">IFCCOMPOSITECURVESEGMENT</a>' IN TYPEOF(C\<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>.Segments[1])) THEN
+    IF ('IFC4X3_ADD1.<a href="IfcCompositeCurveSegment.htm">IFCCOMPOSITECURVESEGMENT</a>' IN TYPEOF(C\<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>.Segments[1])) THEN
       Surfs := <a href="IfcGetBasisSurface.htm">IfcGetBasisSurface</a>(C\<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>.Segments[1]\<a href="IfcCompositeCurveSegment.htm">IfcCompositeCurveSegment</a>.ParentCurve);
     END_IF;
     
     IF N &gt; 1 THEN
       REPEAT i := 2 TO N;       
-        IF ('IFC4X3_TC1.<a href="IfcCurveSegment.htm">IFCCURVESEGMENT</a>' IN TYPEOF(C\<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>.Segments[i])) THEN
+        IF ('IFC4X3_ADD1.<a href="IfcCurveSegment.htm">IFCCURVESEGMENT</a>' IN TYPEOF(C\<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>.Segments[i])) THEN
           Surfs := Surfs * <a href="IfcGetBasisSurface.htm">IfcGetBasisSurface</a>(C\<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>.Segments[i]\<a href="IfcCurveSegment.htm">IfcCurveSegment</a>.ParentCurve);
         END_IF;
-        IF ('IFC4X3_TC1.<a href="IfcCompositeCurveSegment.htm">IFCCOMPOSITECURVESEGMENT</a>' IN TYPEOF(C\<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>.Segments[i])) THEN
+        IF ('IFC4X3_ADD1.<a href="IfcCompositeCurveSegment.htm">IFCCOMPOSITECURVESEGMENT</a>' IN TYPEOF(C\<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>.Segments[i])) THEN
           Surfs := Surfs * <a href="IfcGetBasisSurface.htm">IfcGetBasisSurface</a>(C\<a href="IfcCompositeCurve.htm">IfcCompositeCurve</a>.Segments[i]\<a href="IfcCompositeCurveSegment.htm">IfcCompositeCurveSegment</a>.ParentCurve);
         END_IF;
       END_REPEAT;
@@ -241,9 +241,9 @@ END_FUNCTION;</code></pre>
                             </small>
 </li>
 </ul>
-<h4><a id="8.9.6.12.4.2-IFC4.3-TC1"></a>
-                        8.9.6.12.4.2 IFC4.3_TC1
-                    <a href="IfcGetBasisSurface.htm#8.9.6.12.4.2-IFC4.3-TC1"><i data-feather="link"></i></a></h4>
+<h4><a id="8.9.6.12.4.2-IFC4.3-ADD1"></a>
+                        8.9.6.12.4.2 IFC4.3_ADD1
+                    <a href="IfcGetBasisSurface.htm#8.9.6.12.4.2-IFC4.3-ADD1"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>

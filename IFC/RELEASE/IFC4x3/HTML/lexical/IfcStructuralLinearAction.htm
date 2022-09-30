@@ -4,14 +4,14 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>7.10.3.14 IfcStructuralLinearAction - IFC4.3.0.1 Documentation</title>
+<title>7.10.3.14 IfcStructuralLinearAction - IFC4.3.1.0 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.1 (IFC4X3_TC1)
+<p>IFC 4.3.1.0 (IFC4X3_ADD1)
                 
                 </p>
 </header>
@@ -620,7 +620,7 @@ an explicit or implied representation and its parameter space).</p>
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">SIZEOF(['IFC4X3_TC1.<a href="IfcStructuralLoadLinearForce.htm">IFCSTRUCTURALLOADLINEARFORCE</a>', 'IFC4X3_TC1.<a href="IfcStructuralLoadTemperature.htm">IFCSTRUCTURALLOADTEMPERATURE</a>'] * TYPEOF(SELF\<a href="IfcStructuralActivity.htm">IfcStructuralActivity</a>.AppliedLoad)) = 1</code></pre>
+<pre><code class="language-express hljs">SIZEOF(['IFC4X3_ADD1.<a href="IfcStructuralLoadLinearForce.htm">IFCSTRUCTURALLOADLINEARFORCE</a>', 'IFC4X3_ADD1.<a href="IfcStructuralLoadTemperature.htm">IFCSTRUCTURALLOADTEMPERATURE</a>'] * TYPEOF(SELF\<a href="IfcStructuralActivity.htm">IfcStructuralActivity</a>.AppliedLoad)) = 1</code></pre>
 </td>
 </tr>
 </tbody>
@@ -1210,7 +1210,7 @@ an explicit or implied representation and its parameter space).</p>
  SUBTYPE OF (<a href="IfcStructuralCurveAction.htm">IfcStructuralCurveAction</a>);
  WHERE
 	ConstPredefinedType : SELF\<a href="IfcStructuralCurveAction.htm">IfcStructuralCurveAction</a>.PredefinedType = <a href="IfcStructuralCurveActivityTypeEnum.htm">IfcStructuralCurveActivityTypeEnum</a>.CONST;
-	SuitableLoadType : SIZEOF(['IFC4X3_TC1.<a href="IfcStructuralLoadLinearForce.htm">IFCSTRUCTURALLOADLINEARFORCE</a>', 'IFC4X3_TC1.<a href="IfcStructuralLoadTemperature.htm">IFCSTRUCTURALLOADTEMPERATURE</a>'] * TYPEOF(SELF\<a href="IfcStructuralActivity.htm">IfcStructuralActivity</a>.AppliedLoad)) = 1;
+	SuitableLoadType : SIZEOF(['IFC4X3_ADD1.<a href="IfcStructuralLoadLinearForce.htm">IFCSTRUCTURALLOADLINEARFORCE</a>', 'IFC4X3_ADD1.<a href="IfcStructuralLoadTemperature.htm">IFCSTRUCTURALLOADTEMPERATURE</a>'] * TYPEOF(SELF\<a href="IfcStructuralActivity.htm">IfcStructuralActivity</a>.AppliedLoad)) = 1;
 END_ENTITY;</code></pre>
 <h2><a id="7.10.3.14.8-References"></a>
     7.10.3.14.8 References

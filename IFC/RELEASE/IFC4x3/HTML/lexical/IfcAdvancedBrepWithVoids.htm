@@ -4,14 +4,14 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.2 IfcAdvancedBrepWithVoids - IFC4.3.0.1 Documentation</title>
+<title>8.8.3.2 IfcAdvancedBrepWithVoids - IFC4.3.1.0 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.1 (IFC4X3_TC1)
+<p>IFC 4.3.1.0 (IFC4X3_ADD1)
                 
                 </p>
 </header>
@@ -380,7 +380,7 @@
 <td colspan="2">
 <pre><code class="language-express hljs">SIZEOF (QUERY (Vsh &lt;* Voids |
   SIZEOF (QUERY (Afs &lt;* Vsh.CfsFaces |
-  (NOT ('IFC4X3_TC1.<a href="IfcAdvancedFace.htm">IFCADVANCEDFACE</a>' IN TYPEOF(Afs)))
+  (NOT ('IFC4X3_ADD1.<a href="IfcAdvancedFace.htm">IFCADVANCEDFACE</a>' IN TYPEOF(Afs)))
   )) = 0
 )) = 0</code></pre>
 </td>
@@ -396,7 +396,7 @@
  WHERE
 	VoidsHaveAdvancedFaces : SIZEOF (QUERY (Vsh &lt;* Voids |
   SIZEOF (QUERY (Afs &lt;* Vsh.CfsFaces |
-  (NOT ('IFC4X3_TC1.<a href="IfcAdvancedFace.htm">IFCADVANCEDFACE</a>' IN TYPEOF(Afs)))
+  (NOT ('IFC4X3_ADD1.<a href="IfcAdvancedFace.htm">IFCADVANCEDFACE</a>' IN TYPEOF(Afs)))
   )) = 0
 )) = 0;
 END_ENTITY;</code></pre>

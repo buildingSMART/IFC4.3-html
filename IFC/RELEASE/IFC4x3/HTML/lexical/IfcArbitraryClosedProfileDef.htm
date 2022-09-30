@@ -4,14 +4,14 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.15.3.1 IfcArbitraryClosedProfileDef - IFC4.3.0.1 Documentation</title>
+<title>8.15.3.1 IfcArbitraryClosedProfileDef - IFC4.3.1.0 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.1 (IFC4X3_TC1)
+<p>IFC 4.3.1.0 (IFC4X3_ADD1)
                 
                 </p>
 </header>
@@ -333,7 +333,7 @@
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">NOT('IFC4X3_TC1.<a href="IfcLine.htm">IFCLINE</a>' IN TYPEOF(OuterCurve))</code></pre>
+<pre><code class="language-express hljs">NOT('IFC4X3_ADD1.<a href="IfcLine.htm">IFCLINE</a>' IN TYPEOF(OuterCurve))</code></pre>
 </td>
 </tr>
 <tr>
@@ -344,7 +344,7 @@
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">NOT('IFC4X3_TC1.<a href="IfcOffsetCurve2D.htm">IFCOFFSETCURVE2D</a>' IN TYPEOF(OuterCurve))</code></pre>
+<pre><code class="language-express hljs">NOT('IFC4X3_ADD1.<a href="IfcOffsetCurve2D.htm">IFCOFFSETCURVE2D</a>' IN TYPEOF(OuterCurve))</code></pre>
 </td>
 </tr>
 </tbody>
@@ -495,8 +495,8 @@
 	OuterCurve : <a href="IfcCurve.htm">IfcCurve</a>;
  WHERE
 	WR1 : OuterCurve.Dim = 2;
-	WR2 : NOT('IFC4X3_TC1.<a href="IfcLine.htm">IFCLINE</a>' IN TYPEOF(OuterCurve));
-	WR3 : NOT('IFC4X3_TC1.<a href="IfcOffsetCurve2D.htm">IFCOFFSETCURVE2D</a>' IN TYPEOF(OuterCurve));
+	WR2 : NOT('IFC4X3_ADD1.<a href="IfcLine.htm">IFCLINE</a>' IN TYPEOF(OuterCurve));
+	WR3 : NOT('IFC4X3_ADD1.<a href="IfcOffsetCurve2D.htm">IFCOFFSETCURVE2D</a>' IN TYPEOF(OuterCurve));
 END_ENTITY;</code></pre>
 <h2><a id="8.15.3.1.9-References"></a>
     8.15.3.1.9 References

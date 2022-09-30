@@ -4,14 +4,14 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.6.1 IfcPointListDim - IFC4.3.0.1 Documentation</title>
+<title>8.8.6.1 IfcPointListDim - IFC4.3.1.0 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.1 (IFC4X3_TC1)
+<p>IFC 4.3.1.0 (IFC4X3_ADD1)
                 
                 </p>
 </header>
@@ -165,10 +165,10 @@
 (PointList : <a href="IfcCartesianPointList.htm">IfcCartesianPointList</a>)
            : <a href="IfcDimensionCount.htm">IfcDimensionCount</a>;
 
-  IF ('IFC4X3_TC1.<a href="IfcCartesianPointList2D.htm">IFCCARTESIANPOINTLIST2D</a>' IN TYPEOF(PointList))
+  IF ('IFC4X3_ADD1.<a href="IfcCartesianPointList2D.htm">IFCCARTESIANPOINTLIST2D</a>' IN TYPEOF(PointList))
     THEN RETURN(2);
   END_IF;     
-  IF ('IFC4X3_TC1.<a href="IfcCartesianPointList3D.htm">IFCCARTESIANPOINTLIST3D</a>' IN TYPEOF(PointList))
+  IF ('IFC4X3_ADD1.<a href="IfcCartesianPointList3D.htm">IFCCARTESIANPOINTLIST3D</a>' IN TYPEOF(PointList))
     THEN RETURN(3);
   END_IF;     
   RETURN (?);

@@ -4,14 +4,14 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.18.3.2 IfcCoordinateReferenceSystem - IFC4.3.0.1 Documentation</title>
+<title>8.18.3.2 IfcCoordinateReferenceSystem - IFC4.3.1.0 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.1 (IFC4X3_TC1)
+<p>IFC 4.3.1.0 (IFC4X3_ADD1)
                 
                 </p>
 </header>
@@ -182,6 +182,7 @@ A coordinate reference system is a coordinate system which is related to the rea
 <li>
 <i data-feather="arrow-up"></i>
 <ul class="classes">
+<li class=""><a href="IfcGeographicCRS.htm">IfcGeographicCRS</a></li>
 <li class=""><a href="IfcProjectedCRS.htm">IfcProjectedCRS</a></li>
 </ul>
 </li>
@@ -209,7 +210,7 @@ A coordinate reference system is a coordinate system which is related to the rea
 <tr class="group">
 <td colspan="4">
 <a href="IfcCoordinateReferenceSystem.htm">IfcCoordinateReferenceSystem</a>
-<small>(5)</small>
+<small>(4)</small>
 </td>
 </tr>
 <tr>
@@ -219,7 +220,7 @@ A coordinate reference system is a coordinate system which is related to the rea
                 Name
                 
             </td>
-<td data-label="Type"><a href="IfcLabel.htm">IfcLabel</a></td>
+<td data-label="Type">OPTIONAL <a href="IfcLabel.htm">IfcLabel</a></td>
 <td data-label="Description">
 <p>Name by which the coordinate reference system is identified.</p>
 <aside class="aside-note"><mark>NOTE</mark> 1  The name shall be taken from the list recognized by the European Petroleum Survey Group EPSG. It should then be qualified by the EPSG name space, for example as 'EPSG:5555'.</aside><aside class="aside-note"><mark>NOTE</mark> 2  The name shall be 'WKT' if an EPSG code does not exist for the CRS.</aside>
@@ -241,37 +242,6 @@ ELLIPSOID[<name>,<major axis="">,<inverse flattening="">,<length unit="">]</leng
 </td>
 </tr>
 <tr>
-<td data-label="#">3</td>
-<td data-label="Name">
-                
-                GeodeticDatum
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="IfcIdentifier.htm">IfcIdentifier</a></td>
-<td data-label="Description">
-<p>Name by which this datum is identified. The geodetic datum is associated with the coordinate reference system and indicates the shape and size of the rotation ellipsoid and this ellipsoid's connection and orientation to the actual globe/earth. It needs to be provided, if the <em>Name</em> identifier does not unambiguously define the geodetic datum as well.</p>
-<aside class="aside-example"><mark>EXAMPLE</mark>  geodetic datums include: 
-* ED50
-* EUREF89
-* WSG84</aside>
-</td>
-</tr>
-<tr>
-<td data-label="#">4</td>
-<td data-label="Name">
-                
-                VerticalDatum
-                
-            </td>
-<td data-label="Type">OPTIONAL <a href="IfcIdentifier.htm">IfcIdentifier</a></td>
-<td data-label="Description">
-<p>Name by which the vertical datum is identified. The vertical datum is associated with the height axis of the coordinate reference system and indicates the reference plane and fundamental point defining the origin of a height system. It needs to be provided, if the <em>Name</em> identifier does not unambiguously define the vertical datum as well and if the coordinate reference system is a 3D reference system.</p>
-<aside class="aside-example"><mark>EXAMPLE</mark>  vertical datums include: 
-* DHHN92: the German 'Haupthöhennetz'
-* EVRS2007; the European Vertical Reference System</aside>
-</td>
-</tr>
-<tr>
 <td data-label="#"></td>
 <td data-label="Name">
 <em>HasCoordinateOperation</em>
@@ -281,28 +251,68 @@ ELLIPSOID[<name>,<major axis="">,<inverse flattening="">,<length unit="">]</leng
 <p>Indicates conversion between coordinate systems. In particular it refers to an <em><a href="IfcCoordinateOperation.htm">IfcCoordinateOperation</a></em> between this coordinate reference system, and another Geographic coordinate reference system.</p>
 </td>
 </tr>
+<tr>
+<td data-label="#"></td>
+<td data-label="Name">
+<em>WellKnownText</em>
+</td>
+<td data-label="Type">SET [0:1] OF <a href="IfcWellKnownText.htm">IfcWellKnownText</a> FOR CoordinateReferenceSystem</td>
+<td data-label="Description">
+<p>Well Known Text (WKT) definition for this Coordinate Reference System inversely associated as a <a href="IfcWellKnownText.htm">IfcWellKnownText</a> entity.</p>
+</td>
+</tr>
 </tbody>
 </table><figcaption>Table 8.18.3.2.A<a href="IfcCoordinateReferenceSystem.htm#Table-8.18.3.2.A"><i data-feather="link"></i></a></figcaption></figure>
-<h2><a id="8.18.3.2.4-Formal-representation"></a>
-    8.18.3.2.4 Formal representation
-<a href="IfcCoordinateReferenceSystem.htm#8.18.3.2.4-Formal-representation"><i data-feather="link"></i></a></h2>
+<h2><a id="8.18.3.2.4-Formal-propositions"></a>
+    8.18.3.2.4 Formal propositions
+<a href="IfcCoordinateReferenceSystem.htm#8.18.3.2.4-Formal-propositions"><i data-feather="link"></i></a></h2>
+<figure><a id="Table-8.18.3.2.B"></a><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NameOrWKT</td>
+<td>
+<p>
+<em>No description available.</em>
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<pre><code class="language-express hljs">(HIINDEX(WellKnownText) = 1) OR EXISTS(Name)</code></pre>
+</td>
+</tr>
+</tbody>
+</table><figcaption>Table 8.18.3.2.B<a href="IfcCoordinateReferenceSystem.htm#Table-8.18.3.2.B"><i data-feather="link"></i></a></figcaption></figure>
+<h2><a id="8.18.3.2.5-Formal-representation"></a>
+    8.18.3.2.5 Formal representation
+<a href="IfcCoordinateReferenceSystem.htm#8.18.3.2.5-Formal-representation"><i data-feather="link"></i></a></h2>
 <pre><code class="language-express hljs">ENTITY <a href="IfcCoordinateReferenceSystem.htm">IfcCoordinateReferenceSystem</a>
  ABSTRACT SUPERTYPE OF (ONEOF
-	(<a href="IfcProjectedCRS.htm">IfcProjectedCRS</a>));
-	Name : <a href="IfcLabel.htm">IfcLabel</a>;
+	(<a href="IfcGeographicCRS.htm">IfcGeographicCRS</a>
+	,<a href="IfcProjectedCRS.htm">IfcProjectedCRS</a>));
+	Name : OPTIONAL <a href="IfcLabel.htm">IfcLabel</a>;
 	Description : OPTIONAL <a href="IfcText.htm">IfcText</a>;
-	GeodeticDatum : OPTIONAL <a href="IfcIdentifier.htm">IfcIdentifier</a>;
-	VerticalDatum : OPTIONAL <a href="IfcIdentifier.htm">IfcIdentifier</a>;
  INVERSE
 	HasCoordinateOperation : SET [0:1] OF <a href="IfcCoordinateOperation.htm">IfcCoordinateOperation</a> FOR SourceCRS;
+	WellKnownText : SET [0:1] OF <a href="IfcWellKnownText.htm">IfcWellKnownText</a> FOR CoordinateReferenceSystem;
+ WHERE
+	NameOrWKT : (HIINDEX(WellKnownText) = 1) OR EXISTS(Name);
 END_ENTITY;</code></pre>
-<h2><a id="8.18.3.2.5-References"></a>
-    8.18.3.2.5 References
-<a href="IfcCoordinateReferenceSystem.htm#8.18.3.2.5-References"><i data-feather="link"></i></a></h2>
+<h2><a id="8.18.3.2.6-References"></a>
+    8.18.3.2.6 References
+<a href="IfcCoordinateReferenceSystem.htm#8.18.3.2.6-References"><i data-feather="link"></i></a></h2>
 <ul class="references">
 <li><i data-feather="paperclip"></i><a href="IfcCoordinateOperation.htm">IfcCoordinateOperation</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcCoordinateReferenceSystemSelect.htm">IfcCoordinateReferenceSystemSelect</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcGeographicCRS.htm">IfcGeographicCRS</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcProjectedCRS.htm">IfcProjectedCRS</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcWellKnownText.htm">IfcWellKnownText</a></li>
 </ul>
 </div>
 <div class="col-md-2">
@@ -312,12 +322,12 @@ END_ENTITY;</code></pre>
 <ol class="referenced-list small"></ol>
 </div>
 <div class="changelog">
-<h3><a id="8.18.3.2.6-Changelog"></a>
-                        8.18.3.2.6 Changelog
-                    <a href="IfcCoordinateReferenceSystem.htm#8.18.3.2.6-Changelog"><i data-feather="link"></i></a></h3>
-<h4><a id="8.18.3.2.6.1-IFC4"></a>
-                        8.18.3.2.6.1 IFC4
-                    <a href="IfcCoordinateReferenceSystem.htm#8.18.3.2.6.1-IFC4"><i data-feather="link"></i></a></h4>
+<h3><a id="8.18.3.2.7-Changelog"></a>
+                        8.18.3.2.7 Changelog
+                    <a href="IfcCoordinateReferenceSystem.htm#8.18.3.2.7-Changelog"><i data-feather="link"></i></a></h3>
+<h4><a id="8.18.3.2.7.1-IFC4"></a>
+                        8.18.3.2.7.1 IFC4
+                    <a href="IfcCoordinateReferenceSystem.htm#8.18.3.2.7.1-IFC4"><i data-feather="link"></i></a></h4>
 <ul class="changelog">
 <li>
 <small>
@@ -326,6 +336,65 @@ END_ENTITY;</code></pre>
                                 
                                 
                                 New resource
+                                
+                            </small>
+</li>
+</ul>
+<h4><a id="8.18.3.2.7.2-IFC4.3-ADD1"></a>
+                        8.18.3.2.7.2 IFC4.3_ADD1
+                    <a href="IfcCoordinateReferenceSystem.htm#8.18.3.2.7.2-IFC4.3-ADD1"><i data-feather="link"></i></a></h4>
+<ul class="changelog">
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                inverse attribute,
+                                WellKnownText
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="plus-square"></i>
+                                
+                                
+                                
+                                where rule,
+                                NameOrWKT
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="x-square"></i>
+                                
+                                
+                                attribute,
+                                GeodeticDatum
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="x-square"></i>
+                                
+                                
+                                attribute,
+                                VerticalDatum
+                                
+                            </small>
+</li>
+<li>
+<small>
+<i data-feather="edit"></i>
+                                
+                                attribute Name optional,
+                                Changed from
+"False"
+to
+"True"
                                 
                             </small>
 </li>

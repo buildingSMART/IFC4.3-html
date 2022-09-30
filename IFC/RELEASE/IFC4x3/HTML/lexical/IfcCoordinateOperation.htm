@@ -4,14 +4,14 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.18.3.1 IfcCoordinateOperation - IFC4.3.0.1 Documentation</title>
+<title>8.18.3.1 IfcCoordinateOperation - IFC4.3.1.0 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.1 (IFC4X3_TC1)
+<p>IFC 4.3.1.0 (IFC4X3_ADD1)
                 
                 </p>
 </header>
@@ -184,6 +184,7 @@ If the relationship between any two coordinate reference systems is known, coord
 <i data-feather="arrow-up"></i>
 <ul class="classes">
 <li class=""><a href="IfcMapConversion.htm">IfcMapConversion</a></li>
+<li class=""><a href="IfcRigidOperation.htm">IfcRigidOperation</a></li>
 </ul>
 </li>
 </ol>
@@ -244,7 +245,8 @@ If the relationship between any two coordinate reference systems is known, coord
 <a href="IfcCoordinateOperation.htm#8.18.3.1.4-Formal-representation"><i data-feather="link"></i></a></h2>
 <pre><code class="language-express hljs">ENTITY <a href="IfcCoordinateOperation.htm">IfcCoordinateOperation</a>
  ABSTRACT SUPERTYPE OF (ONEOF
-	(<a href="IfcMapConversion.htm">IfcMapConversion</a>));
+	(<a href="IfcMapConversion.htm">IfcMapConversion</a>
+	,<a href="IfcRigidOperation.htm">IfcRigidOperation</a>));
 	SourceCRS : <a href="IfcCoordinateReferenceSystemSelect.htm">IfcCoordinateReferenceSystemSelect</a>;
 	TargetCRS : <a href="IfcCoordinateReferenceSystem.htm">IfcCoordinateReferenceSystem</a>;
 END_ENTITY;</code></pre>
@@ -255,6 +257,7 @@ END_ENTITY;</code></pre>
 <li><i data-feather="paperclip"></i><a href="IfcCoordinateReferenceSystem.htm">IfcCoordinateReferenceSystem</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcGeometricRepresentationContext.htm">IfcGeometricRepresentationContext</a></li>
 <li><i data-feather="paperclip"></i><a href="IfcMapConversion.htm">IfcMapConversion</a></li>
+<li><i data-feather="paperclip"></i><a href="IfcRigidOperation.htm">IfcRigidOperation</a></li>
 </ul>
 </div>
 <div class="col-md-2">

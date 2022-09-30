@@ -4,14 +4,14 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.8.3.7 IfcBoxedHalfSpace - IFC4.3.0.1 Documentation</title>
+<title>8.8.3.7 IfcBoxedHalfSpace - IFC4.3.1.0 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.1 (IFC4X3_TC1)
+<p>IFC 4.3.1.0 (IFC4X3_ADD1)
                 
                 </p>
 </header>
@@ -366,7 +366,7 @@ The purpose of the box is to facilitate CSG computations by producing a solid of
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">NOT ('IFC4X3_TC1.<a href="IfcCurveBoundedPlane.htm">IFCCURVEBOUNDEDPLANE</a>' IN TYPEOF(SELF\<a href="IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a>.BaseSurface))</code></pre>
+<pre><code class="language-express hljs">NOT ('IFC4X3_ADD1.<a href="IfcCurveBoundedPlane.htm">IFCCURVEBOUNDEDPLANE</a>' IN TYPEOF(SELF\<a href="IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a>.BaseSurface))</code></pre>
 </td>
 </tr>
 </tbody>
@@ -378,7 +378,7 @@ The purpose of the box is to facilitate CSG computations by producing a solid of
  SUBTYPE OF (<a href="IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a>);
 	Enclosure : <a href="IfcBoundingBox.htm">IfcBoundingBox</a>;
  WHERE
-	UnboundedSurface : NOT ('IFC4X3_TC1.<a href="IfcCurveBoundedPlane.htm">IFCCURVEBOUNDEDPLANE</a>' IN TYPEOF(SELF\<a href="IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a>.BaseSurface));
+	UnboundedSurface : NOT ('IFC4X3_ADD1.<a href="IfcCurveBoundedPlane.htm">IFCCURVEBOUNDEDPLANE</a>' IN TYPEOF(SELF\<a href="IfcHalfSpaceSolid.htm">IfcHalfSpaceSolid</a>.BaseSurface));
 END_ENTITY;</code></pre>
 <h2><a id="8.8.3.7.6-References"></a>
     8.8.3.7.6 References

@@ -4,14 +4,14 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.9.6.27 IfcVectorSum - IFC4.3.0.1 Documentation</title>
+<title>8.9.6.27 IfcVectorSum - IFC4.3.1.0 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.1 (IFC4X3_TC1)
+<p>IFC 4.3.1.0 (IFC4X3_ADD1)
                 
                 </p>
 </header>
@@ -176,14 +176,14 @@ END_LOCAL;
     RETURN (?) ;
   ELSE
     BEGIN
-      IF 'IFC4X3_TC1.<a href="IfcVector.htm">IFCVECTOR</a>' IN TYPEOF(Arg1) THEN
+      IF 'IFC4X3_ADD1.<a href="IfcVector.htm">IFCVECTOR</a>' IN TYPEOF(Arg1) THEN
         Mag1 := Arg1\<a href="IfcVector.htm">IfcVector</a>.Magnitude;
         Vec1 := Arg1\<a href="IfcVector.htm">IfcVector</a>.Orientation;
       ELSE
         Mag1 := 1.0;
         Vec1 := Arg1;
       END_IF;
-      IF 'IFC4X3_TC1.<a href="IfcVector.htm">IFCVECTOR</a>' IN TYPEOF(Arg2) THEN
+      IF 'IFC4X3_ADD1.<a href="IfcVector.htm">IFCVECTOR</a>' IN TYPEOF(Arg2) THEN
         Mag2 := Arg2\<a href="IfcVector.htm">IfcVector</a>.Magnitude;
         Vec2 := Arg2\<a href="IfcVector.htm">IfcVector</a>.Orientation;
       ELSE

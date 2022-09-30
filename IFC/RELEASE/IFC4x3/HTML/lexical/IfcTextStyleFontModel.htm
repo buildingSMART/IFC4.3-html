@@ -4,14 +4,14 @@
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
-<title>8.12.3.37 IfcTextStyleFontModel - IFC4.3.0.1 Documentation</title>
+<title>8.12.3.37 IfcTextStyleFontModel - IFC4.3.1.0 Documentation</title>
 <link href="../assets/img/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body class="">
 <div class="container">
 <div class="row">
 <header>
-<p>IFC 4.3.0.1 (IFC4X3_TC1)
+<p>IFC 4.3.1.0 (IFC4X3_ADD1)
                 
                 </p>
 </header>
@@ -368,7 +368,7 @@ Because there is no accepted, universal taxonomy of font properties, matching of
 </tr>
 <tr>
 <td colspan="2">
-<pre><code class="language-express hljs">('IFC4X3_TC1.<a href="IfcLengthMeasure.htm">IFCLENGTHMEASURE</a>' IN TYPEOF(SELF.FontSize)) AND
+<pre><code class="language-express hljs">('IFC4X3_ADD1.<a href="IfcLengthMeasure.htm">IFCLENGTHMEASURE</a>' IN TYPEOF(SELF.FontSize)) AND
 (SELF.FontSize &gt; 0.)</code></pre>
 </td>
 </tr>
@@ -385,7 +385,7 @@ Because there is no accepted, universal taxonomy of font properties, matching of
 	FontWeight : OPTIONAL <a href="IfcFontWeight.htm">IfcFontWeight</a>;
 	FontSize : <a href="IfcSizeSelect.htm">IfcSizeSelect</a>;
  WHERE
-	MeasureOfFontSize : ('IFC4X3_TC1.<a href="IfcLengthMeasure.htm">IFCLENGTHMEASURE</a>' IN TYPEOF(SELF.FontSize)) AND
+	MeasureOfFontSize : ('IFC4X3_ADD1.<a href="IfcLengthMeasure.htm">IFCLENGTHMEASURE</a>' IN TYPEOF(SELF.FontSize)) AND
 (SELF.FontSize &gt; 0.);
 END_ENTITY;</code></pre>
 <h2><a id="8.12.3.37.6-References"></a>
